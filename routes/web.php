@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\Auth\loginController;
+use App\Http\Controllers\Admin\dashboardController;
+use App\Http\Controllers\Client\clientDashboardController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +18,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('client.index');
 });

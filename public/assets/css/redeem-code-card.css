@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+    --primary: #7739A3;
+    --secondary: #1A75FF;
+    --bawaan-gradient-1:rgb(240,65,255); /*Base Color*/
+    --bawaan-gradient-2: rgb(119,57,163); /*Text Color*/
+    --gradient-1: linear-gradient(90deg, rgb(240, 65, 255) 0%, rgba(130,165,234,1) 100%);
+    --gradient-2: linear-gradient(90deg, rgba(119,57,163,1) 0%, rgba(26,117,255,1) 100%);
+    --white: #fff;
+    --black: #000;
+    --grey: #C4C4C4;
+    --primary-color-1: #110f58;
+    --primary-color-2: rgba(91, 207, 197, 0.2);
+    --font-family-title: Poppins, 'open sans';
+    --font-family-body: Poppins, 'open sans';
+    --font-color-primary: #174461; 
+    --font-color-primary-2: #FFFFFF;
+    --font-color-subheadline: #071D2C; 
+    --font-color-secondary: #686868;
+    --font-color-call-to-act-2:#4a4a4a;
+    --page-background-1: #F9FAFB;
+    --page-background-2: #f6f6f6;
+}
+body{
+    background-image: url(../assets/bacground-2.png);
+    background-size: cover;
+    background-position: 50% 5%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-bottom: 6rem;
+    box-shadow: inset rgba(41, 1, 53, 0.66) 0px 1000rem 100px;
+    width: 100%;
+}
+.landing-page{
+    background-image: url(../assets/Rectangle.png);
+    background-size: cover;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    /* min-height: 45rem; */
+    /* background-attachment: fixed; */
+    /* background: rgb(11,10,60);
+    background: linear-gradient(90deg, rgba(11,10,60,1) 0%, rgba(50,25,67,1) 100%); */
+}
+
+.card-list{
+    transform: translateY(-12%);
+}
+.title-text{
+    font-family: var(--font-family-title);
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0;
+}
+.line-indikator{
+    display: block;
+    width: 18%;
+    height: 4px;
+    background: var(--bawaan-gradient-2);
+    background: var(--gradient-2);
+    margin-bottom: 2.5rem;
+}
+.text-conten{
+    width: 60%;
+    margin-bottom: 3rem;
+}
+.btn {
+    border: none !important;
+    width: 33%;
+  }  
+
+.btn .card {
+    background: linear-gradient(90deg, rgb(240, 65, 255) 0%, rgba(130, 165, 234, 1) 100%) !important;
+    width: 100%;
+  }
+
+.card-text {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.btn .card:hover {
+    background: whitesmoke;
+    color: linear-gradient(90deg, rgb(240, 65, 255) 0%, rgba(130, 165, 234, 1) 100%) !important;
+    transform: translate(0, -10px);
+    color: #000;
+    box-shadow: 0 8px 12px rgba(255, 255, 255, 0.75);
+  }
+
+.img-box{
+    object-fit: cover;
+    object-position: 50% 0%;
+}
+
+
+@media screen and (max-width: 700px) {
+    .landing-page{
+        min-height: auto;
+        padding-bottom: 4rem;
+    }
+    .text-conten{
+        width: 90%;
+        margin-bottom: 2rem;
+    }
+    .card-list{
+        transform: translateY(-4.5rem);
+    }
+    .box{
+        width: 50%!important;
+    }
+    .btn {
+        width: 50%;
+        margin: 5px 0;
+    }
+    .card-text {
+        font-weight: bold;
+        font-size: 80%;
+    }
+}
+    
