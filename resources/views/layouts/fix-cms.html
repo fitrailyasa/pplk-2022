@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>CMS PPLK 2022 | @yield</title>
+
+        <!-- Sans Pro Backup -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+        <!-- Font Awesome Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../css/adminlte.css">
+        <link rel="stylesheet" href="../css/fix-cms.css">
+        <link rel="stylesheet" href="../css/bootstrap.css">
+    </head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light" id="main-navbar">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav align-items-center">
+        <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+        <li class="nav-item d-sm-inline-block">
+          <div href="#" class="brand-link text-decoration-none d-flex align-items-center p-1" id="logo-dan-judul">
+            <img src="../assets/logo-pplk-minified.png" alt="Logo PPLK" class="pplk-logo">
+            <div>
+              <span class="brand-link" id="judul-pplk">PPLK 2022</span>
+            </div>
+          </div>
+        </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Fullscreen and Rightbar -->
+      <li class="nav-item" id="icon-fullscreen">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+          <i class="fas fa-th-large"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" role="button" style="color:red;">
+          <i class="fa-solid fa-arrow-right-to-bracket"></i>
+        </a>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a class="nav-link" href="#" role="button" style="color:red;">
+            Logout
+          </a>
+        </li>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4" id="left-sidebar">
+    <!-- Brand Logo -->
+    <a href="#" class="brand-link text-decoration-none d-flex justify-content-center">
+      <span class="brand-text font-weight-light">
+        C<span style="font-size:.8rem;">ontent</span>
+        M<span style="font-size:.8rem;">anagement</span>
+        S<span style="font-size:.8rem;">ystem</span>
+      </span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex align-items-center">
+        <div class="image">
+          <img src="../assets/user-profile.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block text-decoration-none">Adi Sulaksono</a>
+          <a class="d-block text-decoration-none">adi@gg.com</a>
+        </div>
+      </div>
+
+      <!-- SidebarSearch Form -->
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!--Pakai class active utk mengaktifkan button-->
+          <!--Sama class menu-open supaya dropdown otomatis terbuka di awal load page-->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fas fa-rocket nav-icon"></i>
+              <p>
+                Dashboard
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa-solid fa-earth-asia nav-icon"></i>
+              <p>
+                Home PPLK 2022
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa-solid fa-user-astronaut"></i>
+              <p>
+                User
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tambah User</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Kelola Data User</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!--Barcode-->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa-solid fa-users-viewfinder"></i>
+              <p>
+                Barcode
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Barcode Panitia</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Barcode Maba</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!--ITERA-->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa-solid fa-building nav-icon"></i>
+              <p>
+                ITERA
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tambah UPT</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Kelola Data UPT</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!--Jurusan-->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa-solid fa-graduation-cap"></i>
+              <p>
+                Jurusan
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tambah Jurusan</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Kelola Data Jurusan</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!--Prodi-->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa-solid fa-satellite"></i>
+              <p>
+                Prodi
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tambah Prodi</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Kelola Data Prodi</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!--Himpunan-->
+          <li class="nav-item">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fa-solid fa-people-roof"></i>
+              <p>
+                Himpunan
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tambah Himpunan</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link active">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p style="font-size:0.9rem;">Kelola Data Himpunan</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!--KM ITERA-->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa-solid fa-hands-holding-circle"></i>
+              <p>
+                KM ITERA
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Kelola Data Kabinet</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Kelola Data Senat</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!--UKM/Komunitas-->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa-solid fa-people-carry-box"></i>
+              <p>
+                UKM/Komunitas
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p style="font-size:0.8rem;">Tambah UKM/Komunitas</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p style="font-size:0.8rem;">Kelola UKM/Komunitas</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!--Funfact-->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa-solid fa-newspaper"></i>
+              <p>
+                Funfact
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tambah Funfact</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Kelola Data funfact</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!--Begalin-->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa-brands fa-evernote"></i>
+              <p>
+                Begalin
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tambah Begalin</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Kelola Data Begalin</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!--Kamus Gaul-->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa-brands fa-rocketchat"></i>
+              <p>
+                Kamus Gaul
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tambah Kamus</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Kelola Kamus Gaul</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!--Games-->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa-solid fa-gamepad"></i>
+              <p>
+                Games
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p style="font-size:0.8rem;">Tambah Redeem Code</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p style="font-size:0.8rem;">Kelola Redeem Code</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p style="font-size:0.8rem;">Tambah Tebak Bangunan</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p style="font-size:0.8rem;">Kelola Tebak Bangunan</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!--Gform-->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa-solid fa-receipt"></i>
+              <p>
+                Gform
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tambah Link Gform</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Kelola Link Gform</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!--Booklet-->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa-solid fa-book-open"></i>
+              <p>
+                Booklet
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tambah Booklet</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Kelola Data Booklet</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!--Scanner-->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa-solid fa-camera"></i>
+              <p>
+                Scanner
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Scanner Panitia</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Scanner Maba</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Himpunan</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Himpunan</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    
+    <!--Create Data-->
+    <div class="col-lg-12 col-lg-12 form-wrapper">
+      <div class="card">
+      <div class="card-header">
+      <h4 class="card-title">Himpunan</h4>
+      </div>
+      <div class="card-body">
+        <form method="POST" action="{{ route('dashboard.himpunan.store') }}" enctype='multipart/form-data'>
+        @csrf
+          <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Nama Lengkap</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" placeholder="Nama Lengkap" name="namaLengkap" id="namaLengkap" required>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Nama Singkat</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" placeholder="Nama Singkat" name="namaSingkat" id="namaSingkat" required>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Pembina</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" placeholder="Pembina" name="pembina" id="pembina" >
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Ketua Himpunan</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" placeholder="Ketua Heimpunan" name="ketuaHimpunan" id="ketuaHimpunan"  >
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Tahun Berdiri</label>
+            <div class="col-sm-9">
+              <input type="number" class="form-control" name="tahunBerdiri" id="tahunBerdiri"  >
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Kode Warna</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" placeholder="Kode Warna" name="kodeWarna" id="kodeWarna"  >
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Visi</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" placeholder="Visi" name="visi" id="visi" >
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Misi</label>
+            <div class="col-sm-9">
+              <textarea class="form-control custom-txt-area misi" placeholder="Misi" name="misi" id="misi"  ></textarea>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Logo</label>
+            <div class="col-sm-9">
+              <input type="file" accept="image/*" class="form-control" name="logo" id="logo" >
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Filosofi Logo</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" placeholder="Filosofi Logo" name="filosofiLogo" id="filosofiLogo" >
+            </div>
+          </div>                                    
+          <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Deskripsi</label>
+            <div class="col-sm-9 ">
+              <textarea class="form-control custom-txt-area" placeholder="Deskripsi" name="deskripsi" id="deskripsi"  ></textarea>
+            </div>
+          </div>
+          <div class="accordion accordion-danger-solid" id="accordion-two">
+          </div>
+          <div class="mb-3 row">
+            <div class="col-sm-9">
+              <button type="submit" class="btn btn-primary ">Tambah</button>
+            </div>
+          </div>
+          </form>			
+        </div>
+      </div>
+  </div>
+    <!--./Create Data-->
+
+    <!--Read & Delete Data-->
+    <div class="col-lg-12col-lg-12 form-wrapper">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Kelola Data Himpunan</h4>
+        </div>
+        <div class="card-body">
+          @if (session('sukses'))
+          <div class="alert alert-success">
+            {{ session('sukses') }}
+          </div>
+          @elseif (session('error'))
+          <div class="alert alert-danger">
+            {{ session('error') }}
+          </div>
+          @endif
+          <div class="table-responsive">
+            <table id="example4" class="display" style="min-width: 845px">
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Nama Singkat</th>
+                  <th>Nama Lengkap</th>
+                  <th>Pembina</th>
+                  <th>Ketua Himpunan</th>
+                  <th>Logo</th>
+                  <th>Filosofi Logo</th>
+                  <th>Kode Warna</th>
+                  <th>Tahun Berdiri</th>
+                  <th>More</th>
+                </tr>
+              </thead>
+              <tbody>
+                @foreach ($himpunans as $himpunan )
+                <tr>
+                  <td>1</td>
+                  <td>HMIF</td>
+                  <td>Himpunan Mahasiswa Informatika</td>
+                  <td>Fitra Sindi</td>
+                  <td>Fitra Ilyasa</td>
+                  <td><img src="{{$himpunan->logo}}" widht="100" height="100"/></td>
+                  <td>{{Str::limit($himpunan->filosofiLogo, 10)}}</td>
+                  <td>{{Str::limit($himpunan->kodeWarna, 10)}}</td>
+                  <td>{{$himpunan->tahunBerdiri}}</td>
+                  <td class="manage-row">
+                    <a href="{{route('dashboard.himpunan.edit', ['himpunan' => $himpunan->ormawas])}}" class="edit-button">
+                      <i class="fa fa-pencil" aria-hidden="true"></i>
+                    </a>
+                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm{{$himpunan->ormawas->id}}">
+                      <i class="fa fa-trash" aria-hidden="true"></i>
+                    </a>
+                    <div class="modal fade bd-example-modal-sm{{$himpunan->ormawas->id}}" tabindex="-1" role="dialog" aria-hidden="true">
+                      <div class="modal-dialog modal-sm">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title"><strong>Hapus Data</strong></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal">
+                            </button>
+                          </div>
+                          <div class="modal-body">Apakah anda yakin ingin menghapus data?</div>
+                          <div class="modal-footer">
+                            <form action="{{route('dashboard.himpunan.destroy', $himpunan->ormawas->id)}}" method="POST">
+                              @method('DELETE')
+                              @csrf
+                              <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
+                              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                @endforeach
+              </tbody>
+              {{-- link paginate --}}
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--./Read & Delete Data-->
+
+    <!--Update Data-->
+    <div class="col-lg-12col-lg-12 form-wrapper">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Kelola Data Himpunan</h4>
+        </div>
+        <div class="card-body">
+          @if (Auth::user()->roles_id == '1')
+          <form method="POST" action="{{ route('dashboard.himpunan.update', $himpunan->id) }}" enctype='multipart/form-data'>
+            @else
+            @if (session('sukses'))
+            <div class="alert alert-success">
+              {{ session('sukses') }}
+            </div>
+            @elseif (session('error'))
+            <div class="alert alert-danger">
+              {{ session('error') }}
+            </div>
+            @endif
+            <form method="POST" action="{{ route('dashboardOrmawa.himpunan.update', $himpunan->id) }}" enctype='multipart/form-data'>
+              @endif
+    
+              @method('PUT')
+              @csrf
+              <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label">Nama Lengkap</label>
+                <div class="col-sm-9">
+                  <label for="">{{ $himpunan->namaLengkap }}</label>
+                  
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label">Nama Singkat</label>
+                <div class="col-sm-9">
+                  <label for="">{{ $himpunan->namaSingkat }}</label>
+                  
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label">Pembina</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" placeholder="Pembina" name="pembina" id="pembina" value="{{ $dataHimpunan->pembina }}" disabled>
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label">Ketua Himpunan</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" placeholder="Ketua Heimpunan" name="ketuaHimpunan" id="ketuaHimpunan" value="{{ $dataHimpunan->ketuaHimpunan }}" disabled>
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label">Tahun Berdiri</label>
+                <div class="col-sm-9">
+                  <input type="number" class="form-control" name="tahunBerdiri" id="tahunBerdiri" value="{{ $dataHimpunan->tahunBerdiri }}" disabled>
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label">Kode Warna</label>
+                <div class="col-sm-9">
+                  <input type="text" name="kodeWarna" class="form-control" value="{{ $dataHimpunan->kodeWarna }}" id="kodeWarna" disabled>
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label">Visi</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" placeholder="Visi" name="visi" id="visi" value="{{ $himpunan->visimisis->visi }}" disabled>
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label">Misi</label>
+                <div class="col-sm-9">
+                  <textarea class="form-control custom-txt-area misi" placeholder="Misi" name="misi" id="misi" rows="4" disabled>{{ $himpunan->visimisis->misi }}</textarea>
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label">Logo</label>
+                <img class="img-thumbnail w-25" src="{{ $dataHimpunan->logo ?? asset('assets/images/LogoItera.png') }}" alt="" height="300" width="300">
+                <div class="col-sm-6">
+                  <input type="file" accept="image/*" class="form-control" name="logo" id="logo" value="{{ $dataHimpunan->logo }}" disabled>
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label">Filosofi Logo</label>
+                <div class="col-sm-9">
+                  <textarea type="text" class="form-control" placeholder="Filosofi Logo" name="filosofiLogo" id="filosofiLogo" disabled>{{ $dataHimpunan->filosofiLogo }}</textarea>
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label">Deskripsi</label>
+                <div class="col-sm-9 ">
+                  <textarea class="form-control custom-txt-area" placeholder="Deskripsi" name="deskripsi" id="deskripsi" rows="4" disabled>{{ $himpunan->artikels->body }}</textarea>
+                </div>
+              </div>
+              
+              <div class="mb-3 row">
+                <div class="col-sm-9">
+                  <button type="submit" class="btn btn-primary ">Simpan</button>
+                  <button type="button" class="btn btn-outline-primary " onclick="editData()">Edit</button>
+                </div>
+              </div>
+            </form>
+        </div>
+      </div>
+    </div>
+    <!--/.Update Data-->
+    
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+    <div class="p-3">
+      <h5>Shortcut Link</h5>
+      <a href="#" class="text-decoration-none">Content</a>
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- Tagline PPLK 2022 -->
+    <div class="float-right d-none d-sm-inline">
+      <i>#Merakit Cita Dari Kita Untuk Sumatera</i>
+    </div>
+    <!-- Copyright href ke page Our Team -->
+    <strong>Copyright &copy; 2022 <a href="#" class=" text-decoration-none">IMTEK PPLK-2022</a>.</strong> All rights reserved.
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- Tempat Scripts -->
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- AdminLTE App js-->
+<script src="../js/adminlte.js"></script>
+<script src="../js/bootstrap.js"></script>
+</body>
+</html>
