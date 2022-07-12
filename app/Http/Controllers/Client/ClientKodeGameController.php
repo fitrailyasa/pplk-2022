@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Client;
 
-use App\Models\Funfact;
-use App\Http\Requests\StoreFunfactRequest;
-use App\Http\Requests\UpdateFunfactRequest;
+use App\Models\Kode_game;
+use App\Http\Requests\StoreKode_gameRequest;
+use App\Http\Requests\UpdateKode_gameRequest;
 
-class FunfactController extends Controller
+class ClientKodeGameController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class FunfactController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreFunfactRequest  $request
+     * @param  \App\Http\Requests\StoreKode_gameRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreFunfactRequest $request)
+    public function store(StoreKode_gameRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class FunfactController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Funfact  $funfact
+     * @param  \App\Models\Kode_game  $kode_game
      * @return \Illuminate\Http\Response
      */
-    public function show(Funfact $funfact)
+    public function show(Kode_game $kode_game)
     {
         //
     }
@@ -53,10 +53,10 @@ class FunfactController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Funfact  $funfact
+     * @param  \App\Models\Kode_game  $kode_game
      * @return \Illuminate\Http\Response
      */
-    public function edit(Funfact $funfact)
+    public function edit(Kode_game $kode_game)
     {
         //
     }
@@ -64,11 +64,11 @@ class FunfactController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateFunfactRequest  $request
-     * @param  \App\Models\Funfact  $funfact
+     * @param  \App\Http\Requests\UpdateKode_gameRequest  $request
+     * @param  \App\Models\Kode_game  $kode_game
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateFunfactRequest $request, Funfact $funfact)
+    public function update(UpdateKode_gameRequest $request, Kode_game $kode_game)
     {
         //
     }
@@ -76,10 +76,10 @@ class FunfactController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Funfact  $funfact
+     * @param  \App\Models\Kode_game  $kode_game
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Funfact $funfact)
+    public function destroy(Kode_game $kode_game)
     {
         //
     }

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Client;
 
-use App\Models\Kode_game;
-use App\Http\Requests\StoreKode_gameRequest;
-use App\Http\Requests\UpdateKode_gameRequest;
+use App\Models\Himpunan;
+use App\Http\Requests\StoreHimpunanRequest;
+use App\Http\Requests\UpdateHimpunanRequest;
 
-class KodeGameController extends Controller
+class ClientHimpunanController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class KodeGameController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreKode_gameRequest  $request
+     * @param  \App\Http\Requests\StoreHimpunanRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreKode_gameRequest $request)
+    public function store(StoreHimpunanRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class KodeGameController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Kode_game  $kode_game
+     * @param  \App\Models\Himpunan  $himpunan
      * @return \Illuminate\Http\Response
      */
-    public function show(Kode_game $kode_game)
+    public function show(Himpunan $himpunan)
     {
         //
     }
@@ -53,10 +53,10 @@ class KodeGameController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Kode_game  $kode_game
+     * @param  \App\Models\Himpunan  $himpunan
      * @return \Illuminate\Http\Response
      */
-    public function edit(Kode_game $kode_game)
+    public function edit(Himpunan $himpunan)
     {
         //
     }
@@ -64,11 +64,11 @@ class KodeGameController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateKode_gameRequest  $request
-     * @param  \App\Models\Kode_game  $kode_game
+     * @param  \App\Http\Requests\UpdateHimpunanRequest  $request
+     * @param  \App\Models\Himpunan  $himpunan
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateKode_gameRequest $request, Kode_game $kode_game)
+    public function update(UpdateHimpunanRequest $request, Himpunan $himpunan)
     {
         //
     }
@@ -76,10 +76,10 @@ class KodeGameController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Kode_game  $kode_game
+     * @param  \App\Models\Himpunan  $himpunan
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Kode_game $kode_game)
+    public function destroy(Himpunan $himpunan)
     {
         //
     }
