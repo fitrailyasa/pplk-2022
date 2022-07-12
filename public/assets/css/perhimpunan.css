@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+    --primary: #7739A3;
+    --secondary: #1A75FF;
+    --bawaan-gradient-1:rgb(240,65,255); /*Base Color*/
+    --bawaan-gradient-2: rgb(119,57,163); /*Text Color*/
+    --gradient-1: linear-gradient(90deg, rgb(240, 65, 255) 0%, rgba(130,165,234,1) 100%);
+    --gradient-2: linear-gradient(90deg, rgba(119,57,163,1) 0%, rgba(26,117,255,1) 100%);
+    --white: #fff;
+    --black: #000;
+    --grey: #C4C4C4;
+    --primary-color-1: #110f58;
+    --primary-color-2: rgba(91, 207, 197, 0.2);
+    --font-family-title: Poppins, 'open sans';
+    --font-family-body: Poppins, 'open sans';
+    --font-color-primary: #174461; 
+    --font-color-primary-2: #FFFFFF;
+    --font-color-subheadline: #071D2C; 
+    --font-color-secondary: #686868;
+    --font-color-call-to-act-2:#4a4a4a;
+    --page-background-1: #F9FAFB;
+    --page-background-2: #f6f6f6;
+    
+}
+body{
+    padding-bottom: 500px;
+    background: rgb(11,10,60);
+    background: linear-gradient(90deg, rgba(11,10,60,1) 0%, rgba(50,25,67,1) 100%);
+}
+.card{
+    background-color: rgba(255, 255, 255, 0.212)!important;
+    border-color: #ffffff6c!important;
+    box-shadow: #ffffff6c 0px 20px 60px!important;
+    border-radius: 30px!important;
+    width: 20rem;
+}
+.card-title{
+    font-family:"poppins";
+    font-weight: bold;
+    color: white;
+}
+.card-text{
+    font-family: sans-serif;
+    color: white;
+}
+.box{
+    height: 10rem;
+    width: 100%;
+
+}
+.box .box-img{
+    height: 100%;
+    width: 10rem;
+    object-fit: cover;
+    object-position: 50% 0%;
+}
+.tombol{
+    position: inherit;
+    border: none;
+    border-radius: 15px;
+    width: 12rem;
+    height: 3.5rem;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    left: 37%;
+    bottom: -15px;
+    text-align: center;
+}
+.tombol{
+    position: inherit;
+    border: none;
+    border-radius: 15px;
+    width: 12rem;
+    height: 3.5rem;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    left: 37%;
+    bottom: -15px;
+    text-align: center;
+}
+.tombol:hover{
+    transform: translate(-35px, 0px);
+    color: #000;
+}
+.himpunan {
+padding:0 3%;
+}
+img{
+    display: block;
+    margin: 0 auto;
+}
+p, h5 {
+    line-height: 1em;
+    text-align: center;
+    color: #fff;
+}
+h2{
+    line-height: 1em;
+    text-align: center;
+    color: #fff;
+    padding-top: 20px;
+}
+.details{
+    background-color: var(--gradient-2);
+    background-color: var(--bawaan-gradient-2);
+    position: relative;
+    z-index: 1;
+    width: 320px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border: 10px solid gray;
+    text-align: center;
+    margin: 0;   
+}
+.details h2{
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #fff;
+}
+.details p{
+    font-size: 16px;
+    color: #fff;
+}
+.booklet{
+    width: 100%;
+
+}
+.booklet img{
+    width: 100%;
+    z-index: 6;
+    align-items: center;
+}
+.page{
+    background-color: var(--gradient-2);
+    background-color: var(--bawaan-gradient-2);
+    position: relative;
+    z-index: 7;
+    width: 520px;
+    height: 520px;
+    padding-right: 30px;
+    padding-left: 30px;
+    text-align: center;
+    margin: 0;
+    
+}
+.row{
+    align-items: center;
+    margin-left: 35%;
+}
