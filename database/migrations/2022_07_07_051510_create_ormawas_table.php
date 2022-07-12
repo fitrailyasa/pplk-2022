@@ -15,8 +15,8 @@ class CreateOrmawasTable extends Migration
     {
         Schema::create('ormawas', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_lengkap')->unique();
-            $table->string('nama_singkat')->unique();
+            $table->string('namaLengkap')->unique();
+            $table->string('namaSingkat')->unique();
             $table->foreignId('kategoris_id');
             $table->foreign('kategoris_id')->references('id')->on('kategoris');
             $table->text('visi');

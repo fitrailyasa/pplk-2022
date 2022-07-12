@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('nim')->nullable()->unique();
             $table->integer('kelompok')->nullable();
             $table->string('instagram')->nullable();
+            $table->string('qrCode');
             $table->integer('prodis_id')->nullable();
             $table->foreignId('roles_id')->constrained('roles')->onDelete('cascade')->onUpdate('cascade');
         });
