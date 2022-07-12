@@ -14,7 +14,7 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        User::query()->create([
+        User::query()->insert([
             'nama' => 'Backend',
             'email' => 'backend@test.com',
             'password' => '$2y$10$7iK48lGNngPIoMboAb1i5.PuiNGgIK9EheODiKCNBXu4.kx1pk.9.',
