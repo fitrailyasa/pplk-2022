@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Client;
 
-use App\Models\Ormawa;
-use App\Http\Requests\StoreOrmawaRequest;
-use App\Http\Requests\UpdateOrmawaRequest;
+use App\Models\PPLK;
+use App\Http\Requests\StorePPLKRequest;
+use App\Http\Requests\UpdatePPLKRequest;
 
-class OrmawaController extends Controller
+class PPLKController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class OrmawaController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreOrmawaRequest  $request
+     * @param  \App\Http\Requests\StorePPLKRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreOrmawaRequest $request)
+    public function store(StorePPLKRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class OrmawaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Ormawa  $ormawa
+     * @param  \App\Models\PPLK  $pPLK
      * @return \Illuminate\Http\Response
      */
-    public function show(Ormawa $ormawa)
+    public function show(PPLK $pPLK)
     {
         //
     }
@@ -53,10 +53,10 @@ class OrmawaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Ormawa  $ormawa
+     * @param  \App\Models\PPLK  $pPLK
      * @return \Illuminate\Http\Response
      */
-    public function edit(Ormawa $ormawa)
+    public function edit(PPLK $pPLK)
     {
         //
     }
@@ -64,11 +64,11 @@ class OrmawaController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateOrmawaRequest  $request
-     * @param  \App\Models\Ormawa  $ormawa
+     * @param  \App\Http\Requests\UpdatePPLKRequest  $request
+     * @param  \App\Models\PPLK  $pPLK
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateOrmawaRequest $request, Ormawa $ormawa)
+    public function update(UpdatePPLKRequest $request, PPLK $pPLK)
     {
         //
     }
@@ -76,10 +76,10 @@ class OrmawaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Ormawa  $ormawa
+     * @param  \App\Models\PPLK  $pPLK
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Ormawa $ormawa)
+    public function destroy(PPLK $pPLK)
     {
         //
     }
