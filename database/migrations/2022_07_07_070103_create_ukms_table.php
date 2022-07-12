@@ -20,10 +20,10 @@ class CreateUkmsTable extends Migration
             $table->integer('tahunBerdiri')->nullable();
             $table->string('logo')->nullable();
             $table->text('filosofiLogo')->nullable();
-            $table->string('barcode')->nullable();
-            $table->string('Dokumentasi1')->nullable();
-            $table->string('Dokumentasi2')->nullable();
-            $table->string('Dokumentasi3')->nullable();
+            $table->string('qrCode')->nullable();
+            $table->string('dokumentasi1')->nullable();
+            $table->string('dokumentasi2')->nullable();
+            $table->string('dokumentasi3')->nullable();
             $table->foreignId('ormawas_id');
             $table->foreign('ormawas_id')->references('id')->on('ormawas')->onDelete('cascade');
         });
