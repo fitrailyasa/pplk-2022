@@ -1,0 +1,99 @@
+@import 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet';
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Metal&family=Open+Sans&display=swap');
+
+:root {
+	--dk-gray-100: #F3F4F6;
+	--dk-gray-200: #E5E7EB;
+	--dk-gray-300: #D1D5DB;
+	--dk-gray-400: #9CA3AF;
+	--dk-gray-500: #6B7280;
+	--dk-gray-600: #4B5563;
+	--dk-gray-700: #374151;
+	--dk-gray-800: #1F2937;
+	--dk-gray-900: #111827;
+	--dk-dark-bg: #313348;
+	--dk-darker-bg: #2a2b3d;
+	--navbar-bg-color: #6f6486;
+	--sidebar-bg-color: #252636;
+	--sidebar-width: 250px;
+    --primary: #7739A3;
+    --secondary: #1A75FF;
+    --bawaan-gradient-1:rgb(240,65,255); /*Base Color*/
+    --bawaan-gradient-2: rgb(119,57,163); /*Text Color*/
+    --bawaan-gradient-3: rgb(11,10,60);
+    --gradient-1: linear-gradient(90deg, rgb(240, 65, 255) 0%, rgba(130,165,234,1) 100%);
+    --gradient-2: linear-gradient(90deg, rgba(119,57,163,1) 0%, rgba(26,117,255,1) 100%);
+    --gradient-3: linear-gradient(90deg, rgba(11,10,60,1) 0%, rgba(50,25,67,1) 100%);
+    --white: #fff;
+    --black: #000;
+    --grey: #C4C4C4;
+    --primary-color-1: #110f58;
+    --primary-color-2: rgba(91, 207, 197, 0.2);
+    --font-family-title: 'Metal', 'open sans';
+    --font-family-body: 'Poppins', 'open sans';
+    --font-color-primary: #174461; 
+    --font-color-primary-2: #FFFFFF;
+    --font-color-subheadline: #071D2C; 
+    --font-color-secondary: #686868;
+    --font-color-call-to-act-2:#4a4a4a;
+    --page-background-1: #F9FAFB;
+    --page-background-2: #f6f6f6;
+}
+
+html{
+    background: var(--gradient-3);
+    background: var(--bawaan-gradient-3);
+}
+
+body {
+	font-family: var(--font-family-body) !important;
+}
+
+/* Navbar Utama*/
+.main-header{
+    padding:0px 0px !important;
+}
+.brand-link .pplk-logo{
+    width:3.5rem;
+    height:3.5rem;
+}
+
+#logo-dan-judul{
+    padding: 0px 0px !important;
+}
+
+#judul-pplk{
+    font-family: var(--font-family-title) !important;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--font-color-primary);
+}
+
+#tagline-pplk{
+    font-family: var(--font-family-body) !important;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--font-color-primary);
+}
+
+/* Left Sidebar*/
+#left-sidebar{
+    background: var(--bawaan-gradient-3);
+    background: var(--gradient-3);
+}
+.mt-2 .nav .nav-item .active{
+    background:var(--bawaan-gradient-2) !important;
+    background: var(--gradient-2) !important;
+}
+
+.nav-treeview .nav-item .active p{
+    color: white;
+}
+
+@media screen and (max-width:290px) {
+    #icon-fullscreen{
+        display:none;
+    }
+}
