@@ -4,8 +4,8 @@
 @section('title', 'Prodi')
 
 @section('style')
-<link rel="stylesheet" href="{{ asset('assets') }}/css/main-style.css">
-<link rel="stylesheet" href="{{ asset('assets') }}/css/bootstrap.css">
+<link rel="stylesheet" href="{{ asset('assets/css/main-style.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}">
 <link rel="stylesheet" href="{{ asset('assets') }}/css/styling.css">
 <link rel="stylesheet" href="{{ asset('assets/css/swiper-bundle.min.css') }}">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<link rel="stylesheet" href="{{ asset('assets') }}/css/prodi.css">
+<link rel="stylesheet" href="{{ asset('assets/css/prodi.css') }}">
 @endsection
 
 @section('content')
