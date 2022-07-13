@@ -10,9 +10,9 @@
         <!-- Font Awesome Icons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!-- Theme style -->
-        <link rel="stylesheet" href="../css/adminlte.css">
-        <link rel="stylesheet" href="../css/fix-cms.css">
-        <link rel="stylesheet" href="../css/bootstrap.css">
+        <link rel="stylesheet" href="{{ asset('css/adminlte.css') }}" defer>
+        <link rel="stylesheet" href="{{ asset('css/fix-cms.css') }}" defer>
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.css')}}" defer>
     </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -128,7 +128,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah User</p>
                 </a>
