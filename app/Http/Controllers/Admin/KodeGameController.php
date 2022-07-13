@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\PPLK;
-use App\Http\Requests\StorePPLKRequest;
-use App\Http\Requests\UpdatePPLKRequest;
+use App\Models\Kode_game;
+use App\Http\Requests\StoreKode_gameRequest;
+use App\Http\Requests\UpdateKode_gameRequest;
 
-class PPLKController extends Controller
+class KodeGameController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class PPLKController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StorePPLKRequest  $request
+     * @param  \App\Http\Requests\StoreKode_gameRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StorePPLKRequest $request)
+    public function store(StoreKode_gameRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class PPLKController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\PPLK  $pPLK
+     * @param  \App\Models\Kode_game  $kode_game
      * @return \Illuminate\Http\Response
      */
-    public function show(PPLK $pPLK)
+    public function show(Kode_game $kode_game)
     {
         //
     }
@@ -53,10 +53,10 @@ class PPLKController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\PPLK  $pPLK
+     * @param  \App\Models\Kode_game  $kode_game
      * @return \Illuminate\Http\Response
      */
-    public function edit(PPLK $pPLK)
+    public function edit(Kode_game $kode_game)
     {
         //
     }
@@ -64,11 +64,11 @@ class PPLKController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdatePPLKRequest  $request
-     * @param  \App\Models\PPLK  $pPLK
+     * @param  \App\Http\Requests\UpdateKode_gameRequest  $request
+     * @param  \App\Models\Kode_game  $kode_game
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdatePPLKRequest $request, PPLK $pPLK)
+    public function update(UpdateKode_gameRequest $request, Kode_game $kode_game)
     {
         //
     }
@@ -76,10 +76,10 @@ class PPLKController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\PPLK  $pPLK
+     * @param  \App\Models\Kode_game  $kode_game
      * @return \Illuminate\Http\Response
      */
-    public function destroy(PPLK $pPLK)
+    public function destroy(Kode_game $kode_game)
     {
         //
     }

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\Upt;
-use App\Http\Requests\StoreUptRequest;
-use App\Http\Requests\UpdateUptRequest;
+use App\Models\Ormawa;
+use App\Http\Requests\StoreOrmawaRequest;
+use App\Http\Requests\UpdateOrmawaRequest;
 
-class UptController extends Controller
+class OrmawaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class UptController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreUptRequest  $request
+     * @param  \App\Http\Requests\StoreOrmawaRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreUptRequest $request)
+    public function store(StoreOrmawaRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class UptController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Upt  $upt
+     * @param  \App\Models\Ormawa  $ormawa
      * @return \Illuminate\Http\Response
      */
-    public function show(Upt $upt)
+    public function show(Ormawa $ormawa)
     {
         //
     }
@@ -53,10 +53,10 @@ class UptController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Upt  $upt
+     * @param  \App\Models\Ormawa  $ormawa
      * @return \Illuminate\Http\Response
      */
-    public function edit(Upt $upt)
+    public function edit(Ormawa $ormawa)
     {
         //
     }
@@ -64,11 +64,11 @@ class UptController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateUptRequest  $request
-     * @param  \App\Models\Upt  $upt
+     * @param  \App\Http\Requests\UpdateOrmawaRequest  $request
+     * @param  \App\Models\Ormawa  $ormawa
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateUptRequest $request, Upt $upt)
+    public function update(UpdateOrmawaRequest $request, Ormawa $ormawa)
     {
         //
     }
@@ -76,10 +76,10 @@ class UptController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Upt  $upt
+     * @param  \App\Models\Ormawa  $ormawa
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Upt $upt)
+    public function destroy(Ormawa $ormawa)
     {
         //
     }

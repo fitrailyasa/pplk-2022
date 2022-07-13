@@ -1,12 +1,12 @@
-text<?php
+<?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Client;
 
-use App\Models\begalin;
-use App\Http\Requests\StorebegalinRequest;
-use App\Http\Requests\UpdatebegalinRequest;
+use App\Models\Jurusan;
+use App\Http\Requests\StoreJurusanRequest;
+use App\Http\Requests\UpdateJurusanRequest;
 
-class BegalinController extends Controller
+class ClientJurusanController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class BegalinController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StorebegalinRequest  $request
+     * @param  \App\Http\Requests\StoreJurusanRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StorebegalinRequest $request)
+    public function store(StoreJurusanRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class BegalinController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\begalin  $begalin
+     * @param  \App\Models\Jurusan  $jurusan
      * @return \Illuminate\Http\Response
      */
-    public function show(begalin $begalin)
+    public function show(Jurusan $jurusan)
     {
         //
     }
@@ -53,10 +53,10 @@ class BegalinController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\begalin  $begalin
+     * @param  \App\Models\Jurusan  $jurusan
      * @return \Illuminate\Http\Response
      */
-    public function edit(begalin $begalin)
+    public function edit(Jurusan $jurusan)
     {
         //
     }
@@ -64,11 +64,11 @@ class BegalinController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdatebegalinRequest  $request
-     * @param  \App\Models\begalin  $begalin
+     * @param  \App\Http\Requests\UpdateJurusanRequest  $request
+     * @param  \App\Models\Jurusan  $jurusan
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdatebegalinRequest $request, begalin $begalin)
+    public function update(UpdateJurusanRequest $request, Jurusan $jurusan)
     {
         //
     }
@@ -76,10 +76,10 @@ class BegalinController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\begalin  $begalin
+     * @param  \App\Models\Jurusan  $jurusan
      * @return \Illuminate\Http\Response
      */
-    public function destroy(begalin $begalin)
+    public function destroy(Jurusan $jurusan)
     {
         //
     }

@@ -1,3 +1,4 @@
+
 <?php
 
 namespace App\Models;
@@ -54,3 +55,5 @@ class User extends Model
         return $this->belongsTo(Prodi::class, 'prodis_id');
     }
 }
+
+

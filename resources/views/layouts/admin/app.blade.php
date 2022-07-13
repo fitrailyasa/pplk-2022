@@ -11,13 +11,13 @@
         <meta name="copyright" content="PPLK 2022" />
         <meta name="robots" content="follow" />
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Website PPLK 2022" />
+        <meta property="og:type" content="cms website" />
+        <meta property="og:title" content="CMS Website PPLK 2022" />
         <meta property="og:url" content="URL" />
         <link rel="manifest" href="./manifest.webmanifest" />
 
         <!-- JUDUL -->
-        <title>@yield('title') - PPLK 2022</title>
+        <title>@yield('title') - CMS PPLK 2022</title>
 
         <!-- CSS -->
         <link rel="stylesheet" href="{{ asset('assets') }}/css/main-style.css">
@@ -40,7 +40,7 @@
     </head>
     <body>
 
-        @include('layouts.menu')
+        @include('layouts.admin.menu')
         
         @yield('content')
 

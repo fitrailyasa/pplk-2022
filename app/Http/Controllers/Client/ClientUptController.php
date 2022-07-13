@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Client;
 
-use App\Models\Himpunan;
-use App\Http\Requests\StoreHimpunanRequest;
-use App\Http\Requests\UpdateHimpunanRequest;
+use App\Models\Upt;
+use App\Http\Requests\StoreUptRequest;
+use App\Http\Requests\UpdateUptRequest;
 
-class HimpunanController extends Controller
+class UptController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class HimpunanController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreHimpunanRequest  $request
+     * @param  \App\Http\Requests\StoreUptRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreHimpunanRequest $request)
+    public function store(StoreUptRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class HimpunanController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Himpunan  $himpunan
+     * @param  \App\Models\Upt  $upt
      * @return \Illuminate\Http\Response
      */
-    public function show(Himpunan $himpunan)
+    public function show(Upt $upt)
     {
         //
     }
@@ -53,10 +53,10 @@ class HimpunanController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Himpunan  $himpunan
+     * @param  \App\Models\Upt  $upt
      * @return \Illuminate\Http\Response
      */
-    public function edit(Himpunan $himpunan)
+    public function edit(Upt $upt)
     {
         //
     }
@@ -64,11 +64,11 @@ class HimpunanController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateHimpunanRequest  $request
-     * @param  \App\Models\Himpunan  $himpunan
+     * @param  \App\Http\Requests\UpdateUptRequest  $request
+     * @param  \App\Models\Upt  $upt
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateHimpunanRequest $request, Himpunan $himpunan)
+    public function update(UpdateUptRequest $request, Upt $upt)
     {
         //
     }
@@ -76,10 +76,10 @@ class HimpunanController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Himpunan  $himpunan
+     * @param  \App\Models\Upt  $upt
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Himpunan $himpunan)
+    public function destroy(Upt $upt)
     {
         //
     }
