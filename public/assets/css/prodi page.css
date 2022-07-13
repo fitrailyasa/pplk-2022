@@ -1,0 +1,14 @@
+.prestasi-card {
+  width: 80%;
+  height: 12rem;
+  background: linear-gradient(90deg, rgb(240, 65, 255) 0%, rgba(130, 165, 234, 1) 100%) !important;
+}
+
+.carousel .card {
+  transition: 0.5s;
+  transform: scale(0.8);
+}
+.carousel .active .card {
+  transition: 0.5s;
+  transform: scale(1);
+}
