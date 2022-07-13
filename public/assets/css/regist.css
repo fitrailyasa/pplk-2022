@@ -1,0 +1,35 @@
+@media screen and (max-width: 600px) {
+  #image {
+    width: 50%;
+  }
+}
+
+.input-size {
+  width: 58.95%;
+  height: 50px;
+}
+
+@media (max-width: 768px) {
+  .input-size {
+    width: 80%;
+    height: 50px;
+  }
+}
+
+body {
+  background-image: url(../assets/login-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#login {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#masuk {
+  width: 58.95%;
+  height: 50px;
+  background: rgb(113, 12, 111);
+  background: linear-gradient(180deg, rgba(113, 12, 111, 1) 12%, rgba(140, 51, 138, 1) 61%, rgba(200, 137, 198, 1) 100%);
+  font-size: 20px;
+}
