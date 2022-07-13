@@ -35,3 +35,13 @@ Route::get('/ukm', function () {
 Route::get('/himpunan', function () {
     return view('client.ormawa.himpunan');
 });
+Route::get('/jurusan', function () {
+    return view('client.jurusan.jurusan');
+});
+Route::get('/detail-produk', function () {
+    return view('client.jurusan.detail-produk');
+});
+Route::get('/prodi', function () {
+    return view('client.jurusan.prodi');
+});
+
