@@ -26,3 +26,12 @@ Route::get('/admin', function () {
 Route::get('/detail-himpunan', function () {
     return view('client.ormawa.detail-himpunan');
 });
+Route::get('/detail-himpunan', function () {
+    return view('client.ormawa.detail-himpunan');
+});
+Route::get('/ukm', function () {
+    return view('client.ormawa.ukm');
+});
+Route::get('/himpunan', function () {
+    return view('client.ormawa.himpunan');
+});
