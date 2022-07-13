@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 :root {
@@ -15,16 +15,16 @@
     --primary-color-2: rgba(91, 207, 197, 0.2);
     --font-family-title: Poppins, 'open sans';
     --font-family-body: Poppins, 'open sans';
-    --font-color-primary: #174461; 
+    --font-color-primary: #174461;
     --font-color-primary-2: #FFFFFF;
-    --font-color-subheadline: #071D2C; 
+    --font-color-subheadline: #071D2C;
     --font-color-secondary: #686868;
     --font-color-call-to-act-2:#4a4a4a;
     --page-background-1: #F9FAFB;
-    --page-background-2: #f6f6f6; 
+    --page-background-2: #f6f6f6;
 }
 body{
-    background-image: url(../assets/bacground-2.png);
+    background-image: url(../background-2.png);
     background-size: cover;
     background-position: 50% 5%;
     background-repeat: no-repeat;
@@ -195,7 +195,7 @@ h2{
     padding-left: 30px;
     border: 20px solid gray;
     text-align: center;
-    margin: 0 20px; 
+    margin: 0 20px;
 }
 .details h2{
     font-size: 22px;
@@ -220,7 +220,7 @@ h2{
     padding-left: 30px;
     text-align: center;
     margin: 0;
-    
+
 }
 .booklet-text{
     transform: translateY(-20rem);
@@ -244,7 +244,7 @@ h2{
     background-color: var(--gradient-2);
     background-color: var(--bawaan-gradient-2);
     text-align: center;
-    margin: 0; 
+    margin: 0;
     border: 10px solid gray;
     border-radius: 10px;
 }
@@ -332,7 +332,7 @@ h2{
     .fun-fact-card{
 
         margin-top: 0rem;
-    
+
     }
-    
+
 }
