@@ -35,8 +35,8 @@ Route::get('/himpunan', function () {               // ===> himpunan
 Route::get('/jurusan', function () {                // ===> jurusan
     return view('client.jurusan.jurusan');
 });
-Route::get('/detail-produk', function () {          // ===> detail produk
-    return view('client.jurusan.detail-produk');
+Route::get('/detail-prodi', function () {          // ===> detail prodi
+    return view('client.jurusan.detail-prodi');
 });
 Route::get('/prodi', function () {                  // ===> prodi
     return view('client.jurusan.prodi');
@@ -44,35 +44,33 @@ Route::get('/prodi', function () {                  // ===> prodi
 Route::get('/biodata', function () {                // ===> biodata
     return view('client.biodata.biodata');
 });
-Route::get('/edit-biodata', function ()   {          // ===> edit biodata
+Route::get('/edit-biodata', function () {          // ===> edit biodata
     return view('client.biodata.edit-biodata');
 });
-Route::get('/beranda', function ()   {               // ===> beranda
+Route::get('/beranda', function () {               // ===> beranda
     return view('client.beranda');
 });
-Route::get('/booklet', function ()   {              // ===> booklet
+Route::get('/booklet', function () {              // ===> booklet
     return view('client.booklet');
 });
-Route::get('/div-pplk', function ()   {             // ===> divisi pplk
+Route::get('/div-pplk', function () {             // ===> divisi pplk
     return view('client.div-pplk');
 });
-Route::get('/form-keluhan', function ()   {         // ===> form keluhan
+Route::get('/form-keluhan', function () {         // ===> form keluhan
     return view('client.form-keluhan');
 });
-Route::get('/kabinet', function ()   {              // ===> kabinet
+Route::get('/kabinet', function () {              // ===> kabinet
     return view('client.kabinet');
 });
-Route::get('/kamus-gaul', function ()   {           // ===> kamus gaul
+Route::get('/kamus-gaul', function () {           // ===> kamus gaul
     return view('client.kamus-gaul');
 });
-Route::get('/pplk', function ()   {                 // ===> pplk
+Route::get('/pplk', function () {                 // ===> pplk
     return view('client.pplk');
 });
-Route::get('/scanner', function ()   {              // ===> scanner
+Route::get('/scanner', function () {              // ===> scanner
     return view('client.scanner');
 });
-Route::get('/upt', function ()   {                  // ===> unit pengelolaan terpadu UPT
+Route::get('/upt', function () {                  // ===> unit pengelolaan terpadu UPT
     return view('client.upt');
 });
-
-
