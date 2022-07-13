@@ -18,12 +18,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('client.index');
+    return view('client.index');                   // ===> default
 });
-Route::get('/admin', function () {
+Route::get('/admin', function () {                 // ===> index admin
     return view('admin.index');
 });
-Route::get('/detail-himpunan', function () {        // ===> detail himpunan
+Route::get('/detail-himpunan', function () {       // ===> detail himpunan
     return view('client.ormawa.detail-himpunan');
 });
 Route::get('/ukm', function () {                    // ===> ukm
