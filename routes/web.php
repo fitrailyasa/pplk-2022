@@ -23,3 +23,6 @@ Route::get('/', function () {
 Route::get('/admin', function () {
     return view('admin.index');
 });
+Route::get('/detail-himpunan', function () {
+    return view('client.ormawa.detail-himpunan');
+});
