@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\PPLK;
-use App\Http\Requests\StorePPLKRequest;
-use App\Http\Requests\UpdatePPLKRequest;
+use App\Models\Jurusan;
+use App\Http\Requests\StoreJurusanRequest;
+use App\Http\Requests\UpdateJurusanRequest;
 
-class PPLKController extends Controller
+class JurusanController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class PPLKController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StorePPLKRequest  $request
+     * @param  \App\Http\Requests\StoreJurusanRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StorePPLKRequest $request)
+    public function store(StoreJurusanRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class PPLKController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\PPLK  $pPLK
+     * @param  \App\Models\Jurusan  $jurusan
      * @return \Illuminate\Http\Response
      */
-    public function show(PPLK $pPLK)
+    public function show(Jurusan $jurusan)
     {
         //
     }
@@ -53,10 +53,10 @@ class PPLKController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\PPLK  $pPLK
+     * @param  \App\Models\Jurusan  $jurusan
      * @return \Illuminate\Http\Response
      */
-    public function edit(PPLK $pPLK)
+    public function edit(Jurusan $jurusan)
     {
         //
     }
@@ -64,11 +64,11 @@ class PPLKController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdatePPLKRequest  $request
-     * @param  \App\Models\PPLK  $pPLK
+     * @param  \App\Http\Requests\UpdateJurusanRequest  $request
+     * @param  \App\Models\Jurusan  $jurusan
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdatePPLKRequest $request, PPLK $pPLK)
+    public function update(UpdateJurusanRequest $request, Jurusan $jurusan)
     {
         //
     }
@@ -76,10 +76,10 @@ class PPLKController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\PPLK  $pPLK
+     * @param  \App\Models\Jurusan  $jurusan
      * @return \Illuminate\Http\Response
      */
-    public function destroy(PPLK $pPLK)
+    public function destroy(Jurusan $jurusan)
     {
         //
     }

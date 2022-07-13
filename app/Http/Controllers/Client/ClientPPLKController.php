@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Client;
 
-use App\Models\Senat;
-use App\Http\Requests\StoreSenatRequest;
-use App\Http\Requests\UpdateSenatRequest;
+use App\Models\PPLK;
+use App\Http\Requests\StorePPLKRequest;
+use App\Http\Requests\UpdatePPLKRequest;
 
-class SenatController extends Controller
+class PPLKController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class SenatController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreSenatRequest  $request
+     * @param  \App\Http\Requests\StorePPLKRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreSenatRequest $request)
+    public function store(StorePPLKRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class SenatController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Senat  $senat
+     * @param  \App\Models\PPLK  $pPLK
      * @return \Illuminate\Http\Response
      */
-    public function show(Senat $senat)
+    public function show(PPLK $pPLK)
     {
         //
     }
@@ -53,10 +53,10 @@ class SenatController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Senat  $senat
+     * @param  \App\Models\PPLK  $pPLK
      * @return \Illuminate\Http\Response
      */
-    public function edit(Senat $senat)
+    public function edit(PPLK $pPLK)
     {
         //
     }
@@ -64,11 +64,11 @@ class SenatController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateSenatRequest  $request
-     * @param  \App\Models\Senat  $senat
+     * @param  \App\Http\Requests\UpdatePPLKRequest  $request
+     * @param  \App\Models\PPLK  $pPLK
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateSenatRequest $request, Senat $senat)
+    public function update(UpdatePPLKRequest $request, PPLK $pPLK)
     {
         //
     }
@@ -76,10 +76,10 @@ class SenatController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Senat  $senat
+     * @param  \App\Models\PPLK  $pPLK
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Senat $senat)
+    public function destroy(PPLK $pPLK)
     {
         //
     }

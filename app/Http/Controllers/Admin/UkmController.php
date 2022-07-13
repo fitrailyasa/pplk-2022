@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\Kabinet;
-use App\Http\Requests\StoreKabinetRequest;
-use App\Http\Requests\UpdateKabinetRequest;
+use App\Models\Ukm;
+use App\Http\Requests\StoreUkmRequest;
+use App\Http\Requests\UpdateUkmRequest;
 
-class KabinetController extends Controller
+class UkmController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class KabinetController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreKabinetRequest  $request
+     * @param  \App\Http\Requests\StoreUkmRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreKabinetRequest $request)
+    public function store(StoreUkmRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class KabinetController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Kabinet  $kabinet
+     * @param  \App\Models\Ukm  $ukm
      * @return \Illuminate\Http\Response
      */
-    public function show(Kabinet $kabinet)
+    public function show(Ukm $ukm)
     {
         //
     }
@@ -53,10 +53,10 @@ class KabinetController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Kabinet  $kabinet
+     * @param  \App\Models\Ukm  $ukm
      * @return \Illuminate\Http\Response
      */
-    public function edit(Kabinet $kabinet)
+    public function edit(Ukm $ukm)
     {
         //
     }
@@ -64,11 +64,11 @@ class KabinetController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateKabinetRequest  $request
-     * @param  \App\Models\Kabinet  $kabinet
+     * @param  \App\Http\Requests\UpdateUkmRequest  $request
+     * @param  \App\Models\Ukm  $ukm
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateKabinetRequest $request, Kabinet $kabinet)
+    public function update(UpdateUkmRequest $request, Ukm $ukm)
     {
         //
     }
@@ -76,10 +76,10 @@ class KabinetController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Kabinet  $kabinet
+     * @param  \App\Models\Ukm  $ukm
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Kabinet $kabinet)
+    public function destroy(Ukm $ukm)
     {
         //
     }

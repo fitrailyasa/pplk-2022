@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\Kamusgaul;
-use App\Http\Requests\StoreKamusgaulRequest;
-use App\Http\Requests\UpdateKamusgaulRequest;
+use App\Models\Kode_game;
+use App\Http\Requests\StoreKode_gameRequest;
+use App\Http\Requests\UpdateKode_gameRequest;
 
-class KamusgaulController extends Controller
+class KodeGameController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class KamusgaulController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreKamusgaulRequest  $request
+     * @param  \App\Http\Requests\StoreKode_gameRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreKamusgaulRequest $request)
+    public function store(StoreKode_gameRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class KamusgaulController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Kamusgaul  $kamusgaul
+     * @param  \App\Models\Kode_game  $kode_game
      * @return \Illuminate\Http\Response
      */
-    public function show(Kamusgaul $kamusgaul)
+    public function show(Kode_game $kode_game)
     {
         //
     }
@@ -53,10 +53,10 @@ class KamusgaulController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Kamusgaul  $kamusgaul
+     * @param  \App\Models\Kode_game  $kode_game
      * @return \Illuminate\Http\Response
      */
-    public function edit(Kamusgaul $kamusgaul)
+    public function edit(Kode_game $kode_game)
     {
         //
     }
@@ -64,11 +64,11 @@ class KamusgaulController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateKamusgaulRequest  $request
-     * @param  \App\Models\Kamusgaul  $kamusgaul
+     * @param  \App\Http\Requests\UpdateKode_gameRequest  $request
+     * @param  \App\Models\Kode_game  $kode_game
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateKamusgaulRequest $request, Kamusgaul $kamusgaul)
+    public function update(UpdateKode_gameRequest $request, Kode_game $kode_game)
     {
         //
     }
@@ -76,10 +76,10 @@ class KamusgaulController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Kamusgaul  $kamusgaul
+     * @param  \App\Models\Kode_game  $kode_game
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Kamusgaul $kamusgaul)
+    public function destroy(Kode_game $kode_game)
     {
         //
     }

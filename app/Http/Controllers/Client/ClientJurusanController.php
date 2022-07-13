@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Client;
 
-use App\Models\Prodi;
-use App\Http\Requests\StoreProdiRequest;
-use App\Http\Requests\UpdateProdiRequest;
+use App\Models\Jurusan;
+use App\Http\Requests\StoreJurusanRequest;
+use App\Http\Requests\UpdateJurusanRequest;
 
-class ProdiController extends Controller
+class ClientJurusanController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class ProdiController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreProdiRequest  $request
+     * @param  \App\Http\Requests\StoreJurusanRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreProdiRequest $request)
+    public function store(StoreJurusanRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class ProdiController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Prodi  $prodi
+     * @param  \App\Models\Jurusan  $jurusan
      * @return \Illuminate\Http\Response
      */
-    public function show(Prodi $prodi)
+    public function show(Jurusan $jurusan)
     {
         //
     }
@@ -53,10 +53,10 @@ class ProdiController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Prodi  $prodi
+     * @param  \App\Models\Jurusan  $jurusan
      * @return \Illuminate\Http\Response
      */
-    public function edit(Prodi $prodi)
+    public function edit(Jurusan $jurusan)
     {
         //
     }
@@ -64,11 +64,11 @@ class ProdiController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateProdiRequest  $request
-     * @param  \App\Models\Prodi  $prodi
+     * @param  \App\Http\Requests\UpdateJurusanRequest  $request
+     * @param  \App\Models\Jurusan  $jurusan
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateProdiRequest $request, Prodi $prodi)
+    public function update(UpdateJurusanRequest $request, Jurusan $jurusan)
     {
         //
     }
@@ -76,10 +76,10 @@ class ProdiController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Prodi  $prodi
+     * @param  \App\Models\Jurusan  $jurusan
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Prodi $prodi)
+    public function destroy(Jurusan $jurusan)
     {
         //
     }

@@ -1,4 +1,4 @@
-<!-- Desktop Navabar top -->
+<!-- Desktop Navbar top -->
 <div class="navbar navbar-expand-sm background-gradient navbar-dark sticky-top d-xl-block d-xxl-block" id="navbar-desktop">
         <div class="container-fluid">
             <div class="navbar-brand d-inline-flex">

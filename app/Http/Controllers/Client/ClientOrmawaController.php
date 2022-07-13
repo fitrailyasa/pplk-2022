@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Client;
 
 use App\Models\Ormawa;
 use App\Http\Requests\StoreOrmawaRequest;
 use App\Http\Requests\UpdateOrmawaRequest;
 
-class OrmawaController extends Controller
+class ClientOrmawaController extends Controller
 {
     /**
      * Display a listing of the resource.

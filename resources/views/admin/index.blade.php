@@ -1,5 +1,5 @@
-@extends('layouts.client.modal')
-@extends('layouts.client.app')
+@extends('layouts.admin.modal')
+@extends('layouts.admin.app')
 
 @section('title', 'Beranda')
 

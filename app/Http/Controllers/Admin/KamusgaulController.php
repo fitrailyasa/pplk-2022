@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\Funfact;
-use App\Http\Requests\StoreFunfactRequest;
-use App\Http\Requests\UpdateFunfactRequest;
+use App\Models\Kamusgaul;
+use App\Http\Requests\StoreKamusgaulRequest;
+use App\Http\Requests\UpdateKamusgaulRequest;
 
-class FunfactController extends Controller
+class KamusgaulController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class FunfactController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreFunfactRequest  $request
+     * @param  \App\Http\Requests\StoreKamusgaulRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreFunfactRequest $request)
+    public function store(StoreKamusgaulRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class FunfactController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Funfact  $funfact
+     * @param  \App\Models\Kamusgaul  $kamusgaul
      * @return \Illuminate\Http\Response
      */
-    public function show(Funfact $funfact)
+    public function show(Kamusgaul $kamusgaul)
     {
         //
     }
@@ -53,10 +53,10 @@ class FunfactController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Funfact  $funfact
+     * @param  \App\Models\Kamusgaul  $kamusgaul
      * @return \Illuminate\Http\Response
      */
-    public function edit(Funfact $funfact)
+    public function edit(Kamusgaul $kamusgaul)
     {
         //
     }
@@ -64,11 +64,11 @@ class FunfactController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateFunfactRequest  $request
-     * @param  \App\Models\Funfact  $funfact
+     * @param  \App\Http\Requests\UpdateKamusgaulRequest  $request
+     * @param  \App\Models\Kamusgaul  $kamusgaul
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateFunfactRequest $request, Funfact $funfact)
+    public function update(UpdateKamusgaulRequest $request, Kamusgaul $kamusgaul)
     {
         //
     }
@@ -76,10 +76,10 @@ class FunfactController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Funfact  $funfact
+     * @param  \App\Models\Kamusgaul  $kamusgaul
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Funfact $funfact)
+    public function destroy(Kamusgaul $kamusgaul)
     {
         //
     }

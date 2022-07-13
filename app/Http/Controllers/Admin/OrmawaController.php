@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\Ukm;
-use App\Http\Requests\StoreUkmRequest;
-use App\Http\Requests\UpdateUkmRequest;
+use App\Models\Ormawa;
+use App\Http\Requests\StoreOrmawaRequest;
+use App\Http\Requests\UpdateOrmawaRequest;
 
-class UkmController extends Controller
+class OrmawaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class UkmController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreUkmRequest  $request
+     * @param  \App\Http\Requests\StoreOrmawaRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreUkmRequest $request)
+    public function store(StoreOrmawaRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class UkmController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Ukm  $ukm
+     * @param  \App\Models\Ormawa  $ormawa
      * @return \Illuminate\Http\Response
      */
-    public function show(Ukm $ukm)
+    public function show(Ormawa $ormawa)
     {
         //
     }
@@ -53,10 +53,10 @@ class UkmController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Ukm  $ukm
+     * @param  \App\Models\Ormawa  $ormawa
      * @return \Illuminate\Http\Response
      */
-    public function edit(Ukm $ukm)
+    public function edit(Ormawa $ormawa)
     {
         //
     }
@@ -64,11 +64,11 @@ class UkmController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateUkmRequest  $request
-     * @param  \App\Models\Ukm  $ukm
+     * @param  \App\Http\Requests\UpdateOrmawaRequest  $request
+     * @param  \App\Models\Ormawa  $ormawa
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateUkmRequest $request, Ukm $ukm)
+    public function update(UpdateOrmawaRequest $request, Ormawa $ormawa)
     {
         //
     }
@@ -76,10 +76,10 @@ class UkmController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Ukm  $ukm
+     * @param  \App\Models\Ormawa  $ormawa
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Ukm $ukm)
+    public function destroy(Ormawa $ormawa)
     {
         //
     }

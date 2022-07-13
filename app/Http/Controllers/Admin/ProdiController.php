@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\Upt;
-use App\Http\Requests\StoreUptRequest;
-use App\Http\Requests\UpdateUptRequest;
+use App\Models\Prodi;
+use App\Http\Requests\StoreProdiRequest;
+use App\Http\Requests\UpdateProdiRequest;
 
-class UptController extends Controller
+class ProdiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class UptController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreUptRequest  $request
+     * @param  \App\Http\Requests\StoreProdiRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreUptRequest $request)
+    public function store(StoreProdiRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class UptController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Upt  $upt
+     * @param  \App\Models\Prodi  $prodi
      * @return \Illuminate\Http\Response
      */
-    public function show(Upt $upt)
+    public function show(Prodi $prodi)
     {
         //
     }
@@ -53,10 +53,10 @@ class UptController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Upt  $upt
+     * @param  \App\Models\Prodi  $prodi
      * @return \Illuminate\Http\Response
      */
-    public function edit(Upt $upt)
+    public function edit(Prodi $prodi)
     {
         //
     }
@@ -64,11 +64,11 @@ class UptController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateUptRequest  $request
-     * @param  \App\Models\Upt  $upt
+     * @param  \App\Http\Requests\UpdateProdiRequest  $request
+     * @param  \App\Models\Prodi  $prodi
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateUptRequest $request, Upt $upt)
+    public function update(UpdateProdiRequest $request, Prodi $prodi)
     {
         //
     }
@@ -76,10 +76,10 @@ class UptController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Upt  $upt
+     * @param  \App\Models\Prodi  $prodi
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Upt $upt)
+    public function destroy(Prodi $prodi)
     {
         //
     }
