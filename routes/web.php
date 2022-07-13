@@ -74,5 +74,27 @@ Route::get('/scanner', function ()   {              // ===> scanner
 Route::get('/upt', function ()   {                  // ===> unit pengelolaan terpadu UPT
     return view('client.upt');
 });
+Route::get('/card-list', function ()   {            // ===> redeem code card list
+    return view('client.games.redeem-code.card-listt');
+});
+Route::get('/redeem-failed', function ()   {        // ===> redeem code failed
+    return view('client.games.redeem-code.failed');
+});
+Route::get('/redeem', function ()   {               // ===> redeem page
+    return view('client.games.redeem-code.redeem');
+});
+Route::get('/redeem-success', function ()   {       // ===> redeem code success
+    return view('client.upt');
+});
+Route::get('/tebak-bangunan', function ()   {       // ===> tebak bangunan home
+    return view('client.games.tebak-bangunan.home');
+});
+Route::get('/tebak-bangunan-game', function ()   {  // ===> tebak bangunan game
+    return view('client.games.tebak-bangunan.game');
+});
+Route::get('/game-home', function ()   {  // ===> home games
+    return view('client.games.games');
+});
+
 
 
