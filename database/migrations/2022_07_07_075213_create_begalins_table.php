@@ -17,6 +17,7 @@ class CreateBegalinsTable extends Migration
             $table->id();
             $table->string('judul');
             $table->text('isi');
+            $table->timestamps();
         });
     }
 
