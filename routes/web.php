@@ -38,8 +38,8 @@ Route::get('/himpunan', function () {
 Route::get('/jurusan', function () {
     return view('client.jurusan.jurusan');
 });
-Route::get('/detail-produk', function () {
-    return view('client.jurusan.detail-produk');
+Route::get('/detail-prodi', function () {          // ===> detail prodi
+    return view('client.jurusan.detail-prodi');
 });
 Route::get('/prodi', function () {
     return view('client.jurusan.prodi');
