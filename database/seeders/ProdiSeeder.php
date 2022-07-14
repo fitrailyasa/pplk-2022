@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Prodi;
 use Illuminate\Database\Seeder;
 
 class ProdiSeeder extends Seeder
@@ -13,7 +14,7 @@ class ProdiSeeder extends Seeder
      */
     public function run()
     {
-        
+        Prodi::factory(1)->create();
         //
     }
 }
