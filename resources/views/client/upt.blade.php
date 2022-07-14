@@ -1,32 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.client.app')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UPT Itera</title>
+<!-- TITLE -->
+@section('title', 'Unit Pelaksana Teknis')
 
-    <!-- b5 -->
-    <link rel="stylesheet" href="../css/bootstrap.css">
+@section('style')
+    <!-- STYLES -->
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
 
     <!-- owl caorusel -->
-    <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.carousel.css">
-    <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/OwlCarousel2-2.3.4/dist/assets/owl.carousel.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css') }}"">
 
     <!-- css lokal -->
-    <link rel="stylesheet" href="../css/UPT.css">
-    <link rel="stylesheet" href="../css/style.css">
-</head>
+    <link rel="stylesheet" href="{{ asset('assets/css/UPT.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+@endsection
 
-<body>
-    <!-- jumbotron -->
-    <div class="jumbotron  ratio ratio-16x9 my-auto">
-    </div>
-
-    <!-- konten -->
+@section('content')
+    <!-- CONTENT -->
     <div class="container-fluid">
         <div class="row">
             <h2 class="text-center display-3 px-5 py-5 text-light animasi"><strong>UPT ITERA</strong></h2>
@@ -87,16 +80,18 @@
         </div>
     </div>
 
+@endsection
 
-    <!-- script -->
-    <script src="../js/bootstrap.js"></script>
+@section('script')
+    <!-- SCRIPTS -->
+    <script src="{{ asset('assets/js/bootstrap.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 
     <!-- owl script -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="../OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script src="{{ asset('assets/js/') }}../OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
     <script>
         $(".carousel").owlCarousel({
             loop: true,
@@ -122,6 +117,4 @@
             }
         });
     </script>
-</body>
-
-</html>
+@endsection

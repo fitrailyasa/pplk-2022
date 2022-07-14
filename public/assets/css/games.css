@@ -1,63 +1,77 @@
-body{
-    background-image: url(../assets/bacground-2.png);
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+
+
+body {
+    background-image: url(../background-2.png);
     background-size: cover;
     background-position: 50% 5%;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding-bottom: 6rem;
     box-shadow: inset rgba(41, 1, 53, 0.66) 0px 1000rem 100px;
     width: 100%;
-}
 
-@media (min-width: 1200px) {
-    .main-landing-page {
-        width: auto;
-        height: 684px;
-    }
-
-    .games-display {
-        margin-left: 40%;
-        margin-top: 27%;
-
-        font-family: 'Open Sans';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 64px;
-        line-height: 87px;
-        text-align: center;
-        letter-spacing: 0.1em;
-
-        color: #FFFFFF;
-    }
-}
-
-.content-bg {
-    background: linear-gradient(90deg, #321943 0%, #0B0A3C 100%);
 }
 
 .main-landing-page {
-    background-image: url("../assets/jumbotron-games.png");
-    background-position: center;
-    background-repeat: no-repeat;
+    aspect-ratio: 16/9;
+    height: 30%;
+    background-image: url(../Rectangle.png);
     background-size: cover;
-    text-align: center;
+    background-position: 50% 0%;
+    /* box-shadow:rgba(50,25,67,1) 0px 50px 10px; */
+}
+
+.games-logo-container {
+    position: relative;
+}
+
+.games-logo {
+    aspect-ratio: 1/1;
+    width: 285px;
+    height: 285px;
+
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 536px; left: 0; bottom: 0; right: 0;
 }
 
 .games-display {
     position: absolute;
-}
+    overflow: auto;
+    margin: auto;
+    top: 410px;
 
-.btn-get-started {
-    width: 31%;
-    height: 18%;
-
-    margin-top: 41%;
-    margin-left: 0.6%;
-    padding-top: 1.8%;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 250%;
+    font-size: 64px;
+    line-height: 87px;
+    text-align: center;
+    letter-spacing: 0.1em;
+
+    color: #FFFFFF;
+}
+
+.btn-get-started {
+    position: absolute;
+    width: 556px;
+    height: 120px;
+    /*
+    margin-top: 41%;
+    margin-left: 0.6%;*/
+
+    overflow: auto;
+    margin: auto;
+    top: 694px;
+    padding-top: 23px;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
     line-height: 68px;
     /* identical to box height */
 
@@ -463,21 +477,38 @@ body{
     border: 2.5px solid #3991C9;
 }
 
-@media (max-width: 780px) {
-    .main-landing-page {
-        width: auto;
-        height: 88.2%;
-    }
+
+@media screen and (max-width: 1400px) {
 
     .games-display {
-        margin-top: 44.45%;
-        margin-left: 25.67%;
-        margin-right: auto;
+        top: 410px; left: 0; bottom: 0; right: 0;
+    }
 
-        font-family: 'Open Sans';
+    .btn-get-started {
+        top: 540px;
+
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .main-landing-page{
+        aspect-ratio: 1/1;
+        /* height: 23rem; */
+    }
+
+    .games-logo {
+        top: 310px; left: 0; bottom: 0; right: 0;
+
+        width: 155px;
+        height: 155px;
+    }
+    .games-display {
+        top: 270px; left: 0; bottom: 0; right: 0;
+
+        font-family: 'Lemon';
         font-style: normal;
         font-weight: 400;
-        font-size: 54px;
+        font-size: 24px;
         line-height: 31px;
         text-align: center;
         letter-spacing: 0.1em;
@@ -491,11 +522,7 @@ body{
     }
 
     .games-title {
-        font-weight: 0;
-        font-size: 0;
-        line-height: 0;
-        letter-spacing: 0;
-        visibility: hidden !important;
+        display: none;
     }
 
     .games-menu-container {
@@ -678,6 +705,10 @@ body{
         margin-left: 27px;
     }
 
+    .top-rank-container {
+        display: none;
+    }
+
     .leaderboarad-header-container {
         padding-left: 59px;
         margin-bottom: 32px;
@@ -849,7 +880,7 @@ body{
     .list-active {
         border: 2.5px solid #3991C9;
     }
-    
+
     .list-rank-col1 {
         margin-top: 17px;
     }

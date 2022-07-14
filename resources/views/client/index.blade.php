@@ -4,7 +4,7 @@
 @section('title', 'Beranda')
 
 @section('style')
-    <link rel="stylesheet" href="{{ asset('assets') }}/css/beranda.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/beranda.css') }}">
 @endsection
 
 @section('content')
@@ -20,17 +20,17 @@
                             <div class="modal-carousel owl-carousel">
                                 <div class="modal-carousel-item justify-content-center w-100">
                                     <div class="ratio ratio-1x1">
-                                        <img class="opacity-100 rounded-3" src="{{ asset('assets') }}/media/alley 5.png" alt="">
+                                        <img class="opacity-100 rounded-3" src="{{ asset('assets/media/alley 5.png') }}" alt="">
                                     </div>
                                 </div>
                                 <div class="modal-carousel-item justify-content-center w-100">
                                     <div class="ratio ratio-1x1">
-                                        <img class="opacity-100 rounded-3" src="{{ asset('assets') }}/media/alley 5.png" alt="">
+                                        <img class="opacity-100 rounded-3" src="{{ asset('assets/media/alley 5.png') }}" alt="">
                                     </div>
                                 </div>
                                 <div class="modal-carousel-item justify-content-center w-100">
                                     <div class="ratio ratio-1x1">
-                                        <img class="opacity-100 rounded-3" src="{{ asset('assets') }}/media/alley 5.png" alt="">
+                                        <img class="opacity-100 rounded-3" src="{{ asset('assets/media/alley 5.png') }}" alt="">
                                     </div>
                                 </div>
                             </div> 
@@ -48,7 +48,7 @@
         <div class="container-fluid landing-page">
             <div class="row justify-content-center">
                 <div class="box ratio ratio-1x1 mt-5">
-                    <img src="{{ asset('assets') }}/Logo-PPLK.png" alt="">
+                    <img src="{{ asset('assets/Logo-PPLK.png') }}" alt="">
                 </div>
                 <!-- <div class="col-lg-4 justify-content-center">
                 </div> -->
@@ -70,7 +70,7 @@
             <div class="row justify-content-between p-4">
                 <div class="col-lg-5 col-md-4 align-self-center">
                     <div class="d-flex justify-content-center">
-                        <img class="mt-md-5 maskot maskot-awal" src="{{ asset('assets') }}/space-cat.png" alt="">
+                        <img class="mt-md-5 maskot maskot-awal" src="{{ asset('assets/space-cat.png') }}" alt="">
                     </div>
                     
                 </div>
@@ -354,7 +354,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <img class="maskot"src="{{ asset('assets') }}/space-cat.png" alt="">
+                    <img class="maskot"src="{{ asset('assets/space-cat.png') }}" alt="">
                     
                 </div>
             </div>
@@ -453,7 +453,7 @@
                    <div class="medpatr-card">
                         <div class="d-flex justify-content-center">
                             <div class="ratio ratio-1x1">
-                                <img src="{{ asset('assets') }}/space-cat.png" alt="">
+                                <img src="{{ asset('assets/space-cat.png') }}" alt="">
                             </div>
                         </div>
                       
@@ -461,7 +461,7 @@
                    <div class="medpatr-card">
                         <div class="d-flex justify-content-center">
                             <div class="ratio ratio-1x1">
-                                <img src="{{ asset('assets') }}/space-cat.png" alt="">
+                                <img src="{{ asset('assets/space-cat.png') }}" alt="">
                             </div>
                         </div>
                       
@@ -469,7 +469,7 @@
                    <div class="medpatr-card">
                         <div class="d-flex justify-content-center">
                             <div class="ratio ratio-1x1">
-                                <img src="{{ asset('assets') }}/space-cat.png" alt="">
+                                <img src="{{ asset('assets/space-cat.png') }}" alt="">
                             </div>
                         </div>
                       
@@ -477,7 +477,7 @@
                    <div class="medpatr-card">
                         <div class="d-flex justify-content-center">
                             <div class="ratio ratio-1x1">
-                                <img src="{{ asset('assets') }}/space-cat.png" alt="">
+                                <img src="{{ asset('assets/space-cat.png') }}" alt="">
                             </div>
                         </div>
                       
