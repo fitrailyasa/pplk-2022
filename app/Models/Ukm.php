@@ -12,7 +12,4 @@ class Ukm extends Model
     protected $table = 'ukms';
     protected $fillable = ['pembina', 'ketuaUmum', 'tahunBerdiri', 'logo', 'filosofiLogo', 'barcode', 'ormawas_id'];
 
-    public function ormawas(){
-        return $this->belongsTo(Ormawa::class, 'ormawas_id');
-    }
 }

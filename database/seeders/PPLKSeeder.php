@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\PPLK;
 use Illuminate\Database\Seeder;
 
 class PPLKSeeder extends Seeder
@@ -13,6 +14,7 @@ class PPLKSeeder extends Seeder
      */
     public function run()
     {
+        PPLK::factory(1)->create();
         //
     }
 }

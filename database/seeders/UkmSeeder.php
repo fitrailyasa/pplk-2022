@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Ukm;
 use Illuminate\Database\Seeder;
 
 class UkmSeeder extends Seeder
@@ -13,6 +14,6 @@ class UkmSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Ukm::factory(10)->create();
     }
 }

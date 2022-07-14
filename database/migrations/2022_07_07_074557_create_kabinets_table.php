@@ -22,6 +22,7 @@ class CreateKabinetsTable extends Migration
             $table->string('logo')->nullable();
             $table->text('filosofiLogo')->nullable();
             $table->text('deskripsi')->nullable();
+            $table->timestamps();
 
         });
     }

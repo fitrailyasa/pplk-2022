@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Himpunan;
 use Illuminate\Database\Seeder;
 
 class HimpunanSeeder extends Seeder
@@ -13,6 +14,6 @@ class HimpunanSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Himpunan::factory(5)->create();
     }
 }
