@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 :root {
@@ -15,16 +15,16 @@
     --primary-color-2: rgba(91, 207, 197, 0.2);
     --font-family-title: Poppins, 'open sans';
     --font-family-body: Poppins, 'open sans';
-    --font-color-primary: #174461; 
+    --font-color-primary: #174461;
     --font-color-primary-2: #FFFFFF;
-    --font-color-subheadline: #071D2C; 
+    --font-color-subheadline: #071D2C;
     --font-color-secondary: #686868;
     --font-color-call-to-act-2:#4a4a4a;
     --page-background-1: #F9FAFB;
     --page-background-2: #f6f6f6;
 }
 body{
-    background-image: url(../assets/bacground-2.png);
+    background-image: url(../bacground-2.png);
     background-size: cover;
     background-position: 50% 5%;
     background-repeat: no-repeat;
@@ -34,7 +34,7 @@ body{
     width: 100%;
 }
 .landing-page{
-    background-image: url(../assets/Rectangle.png);
+    background-image: url(../Rectangle.png);
     background-size: cover;
     background-position: 50% 100%;
     background-repeat: no-repeat;
@@ -69,7 +69,7 @@ body{
 .btn {
     border: none !important;
     width: 33%;
-  }  
+  }
 
 .btn .card {
     background: linear-gradient(90deg, rgb(240, 65, 255) 0%, rgba(130, 165, 234, 1) 100%) !important;
@@ -119,4 +119,4 @@ body{
         font-size: 80%;
     }
 }
-    
+

@@ -1,15 +1,14 @@
 @extends('layouts.admin.modal')
 @extends('layouts.admin.app')
 
-@section('title', 'Beranda')
+@section('title', 'CMS')
 
 @section('content')
-
     
 <!-- MAIN CONTENT -->
 
     <!--Dashboard-->
-    <div class="col-xl-12 col-lg-12 form-wrapper tabcontents active" id="dashboard" >
+    <div class="col-xl-12 col-lg-12 form-wrapper tabcontents" id="dashboard" >
         <div class="row">
         <div class="col-xl-6">
             <div class="widget-stat card bg-success">
@@ -81,7 +80,7 @@
 
 <section>
     <!--User-->
-    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" id="tambah-user">
+    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" style="display: none"  id="tambah-user">
       <div class="card">
       <div class="card-header">
       <h4 class="card-title">Input Data User</h4>
@@ -155,7 +154,7 @@
     <!--./User-->
 
     <!--ITERA-->
-    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" id="tambah-upt">
+    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" style="display: none"  id="tambah-upt">
       <div class="card">
       <div class="card-header">
       <h4 class="card-title">Input Data UPT ITERA</h4>
@@ -187,7 +186,7 @@
     <!--./ITERA-->
 
     <!--Prodi-->
-    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" id="tambah-prodi">
+    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" style="display: none"  id="tambah-prodi">
       <div class="card">
       <div class="card-header">
       <h4 class="card-title">Input Data Prodi</h4>
@@ -275,7 +274,7 @@
     <!--./Prodi-->
 
     <!--Himpunan-->
-    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" id="tambah-himpunan">
+    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" style="display: none"  id="tambah-himpunan">
       <div class="card">
       <div class="card-header">
       <h4 class="card-title">Input Data Himpunan</h4>
@@ -361,7 +360,7 @@
     <!--./Himpunan-->
 
     <!--UKM/Komunitas-->
-    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" id="tambah-ukm">
+    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" style="display: none"  id="tambah-ukm">
       <div class="card">
       <div class="card-header">
       <h4 class="card-title">Input Data UKM/Komunitas</h4>
@@ -435,7 +434,7 @@
     <!--./UKM/Komunitas-->
 
     <!--Funfact-->
-    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" id="tambah-funfact">
+    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" style="display: none"  id="tambah-funfact">
       <div class="card">
       <div class="card-header">
       <h4 class="card-title">Input Funfact</h4>
@@ -461,7 +460,7 @@
     <!--./Funfact-->
 
     <!--Begalin-->
-    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" id="tambah-begalin">
+    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" style="display: none"  id="tambah-begalin">
       <div class="card">
       <div class="card-header">
       <h4 class="card-title">Input Data Begalin</h4>
@@ -493,7 +492,7 @@
     <!--./Begalin-->
 
     <!--Kamus Gaul-->
-    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" id="tambah-kamus">
+    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" style="display: none"  id="tambah-kamus">
       <div class="card">
       <div class="card-header">
       <h4 class="card-title">Input Data Kamus Gaul</h4>
@@ -525,7 +524,7 @@
     <!--./Kamus Gaul-->
     
     <!--Games redeem code-->
-    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" id="tambah-redeem">
+    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" style="display: none"  id="tambah-redeem">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Input Data Redeem Code</h4>
@@ -563,7 +562,7 @@
     <!--./Games redeem code-->
 
     <!--Games Tebak-->
-    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" id="tambah-tebak">
+    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" style="display: none"  id="tambah-tebak">
       <div class="card">
       <div class="card-header">
       <h4 class="card-title">Input Data Tebak Bangunan</h4>
@@ -601,7 +600,7 @@
     <!--./Games Tebak-->
     
     <!--Booklet-->
-    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" id="tambah-booklet">
+    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" style="display: none"  id="tambah-booklet">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Input Data Booklet</h4>
@@ -641,7 +640,7 @@
 
 <section>
     <!--Tabel User-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" id="kelola-user">
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-user">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Kelola QR-Code Panitia</h4>
@@ -726,7 +725,7 @@
     <!--./Tabel User-->
 
     <!--Tabel QR-Code Panitia-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" id="QR-Code-panitia">
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="QR-Code-panitia">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Kelola QR-Code Panitia</h4>
@@ -801,7 +800,7 @@
     <!--./Tabel QR-Code Panitia-->
 
     <!--Tabel QR-Code Maba-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" id="QR-Code-maba">
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="QR-Code-maba">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Kelola Data QR-Code Maba</h4>
@@ -876,7 +875,7 @@
     <!--./Tabel QR-Code Maba-->
     
     <!--Tabel UPT ITERA-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" id="kelola-upt">
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-upt">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Kelola Data UPT ITERA</h4>
@@ -946,7 +945,7 @@
     <!--./Tabel UPT ITERA-->
     
     <!--Tabel Prodi-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" id="kelola-prodi">
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-prodi">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Kelola Data Prodi</h4>
@@ -1047,7 +1046,7 @@
     <!--./Tabel Prodi-->
     
     <!--Tabel Himpunan-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" id="kelola-himpunan">
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-himpunan">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Kelola Data Himpunan</h4>
@@ -1130,7 +1129,7 @@
     <!--./Tabel Himpunan-->
     
     <!--Tabel Kabinet-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" id="kelola-kabinet">
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-kabinet">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Kelola Data Kabinet KM ITERA</h4>
@@ -1223,7 +1222,7 @@
     <!--./Tabel Kabinet-->
 
     <!--Tabel Senat-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" id="kelola-senat">
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-senat">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Kelola Data Senat KM ITERA</h4>
@@ -1312,7 +1311,7 @@
     <!--./Tabel Senat-->
 
     <!--Tabel UKM/Komunitas-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" id="kelola-ukm">
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-ukm">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Kelola Data UKM/Komunitas</h4>
@@ -1397,7 +1396,7 @@
     <!--./Tabel UKM/Komunitas-->
 
     <!--Tabel Funfact-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" id="kelola-funfact">
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-funfact">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Kelola Data Funfact</h4>
@@ -1465,7 +1464,7 @@
     <!--./Tabel Funfact-->
     
     <!--Tabel Begalin-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" id="kelola-begalin">
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-begalin">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Kelola Data Begalin</h4>
@@ -1535,7 +1534,7 @@
     <!--./Tabel Begalin-->
 
     <!--Tabel Kamus Gaul-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" id="kelola-kamus">
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-kamus">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Kelola Data Kamus Gaul</h4>
@@ -1605,7 +1604,7 @@
     <!--./Tabel Kamus Gaul-->
 
     <!--Tabel Redeem Code-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" id="kelola-redeem">
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-redeem">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Kelola Data Redeem Code</h4>
@@ -1677,7 +1676,7 @@
     <!--./Tabel Redeem Code-->
 
     <!--Tabel Tebak Bangunan-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" id="kelola-tebak">
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-tebak">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Kelola Data Tebak Bangunan</h4>
@@ -1749,7 +1748,7 @@
     <!--./Tabel Tebak Bangunan-->
 
     <!--Tabel Link Gform-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" id="kelola-gform">
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-gform">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Kelola Data gform</h4>
@@ -1817,7 +1816,7 @@
     <!--./Tabel Link Gform-->
 
     <!--Tabel Booklet-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" id="kelola-booklet">
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-booklet">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Kelola Data Booklet</h4>
@@ -1887,13 +1886,13 @@
     <!--./Tabel Booklet-->
     
     <!--Scanner Panitia-->
-    <div class="tabcontents" id="scanner-panitia">
+    <div class="tabcontents" style="display: none"  id="scanner-panitia">
       scanner panitia blm fix butuh href
     </div>
     <!--./Scanner Panitia-->
 
     <!--Scanner Maba-->
-    <div class="tabcontents" id="scanner-maba">
+    <div class="tabcontents" style="display: none"  id="scanner-maba">
       scanner maba blm fix butuh href
     </div>
     <!--./Scanner Maba-->
