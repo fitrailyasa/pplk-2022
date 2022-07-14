@@ -18,30 +18,27 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('client.index');
+    return view('client.index');                // ===> DEFAULT
 });
-Route::get('/admin', function () {
+Route::get('/admin', function () {              // ===> ADMIN
     return view('admin.index');
 });
-Route::get('/detail-himpunan', function () {
+Route::get('/detail-himpunan', function () {        // ===> Detail himpunan
     return view('client.ormawa.detail-himpunan');
 });
-Route::get('/detail-himpunan', function () {
-    return view('client.ormawa.detail-himpunan');
-});
-Route::get('/ukm', function () {
+Route::get('/ukm', function () {                    // ===> Unit kegiatan mahasiswa UKM
     return view('client.ormawa.ukm');
 });
-Route::get('/himpunan', function () {
+Route::get('/himpunan', function () {               // ===> himpunan
     return view('client.ormawa.himpunan');
 });
-Route::get('/jurusan', function () {
+Route::get('/jurusan', function () {                // ===> jurusan
     return view('client.jurusan.jurusan');
 });
 Route::get('/detail-prodi', function () {          // ===> detail prodi
     return view('client.jurusan.detail-prodi');
 });
-Route::get('/prodi', function () {
+Route::get('/prodi', function () {                  // ===> prodi
     return view('client.jurusan.prodi');
 });
 Route::get('/biodata', function () {                // ===> biodata
