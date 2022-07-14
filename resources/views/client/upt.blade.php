@@ -1,5 +1,5 @@
 @extends('layouts.client.app')
-
+//tambahin
 <!-- TITLE -->
 @section('title', 'Unit Pengelolaan Terpadu')
 
@@ -33,7 +33,7 @@
             <div class="carousel owl-carousel justify-content-center" id="upt-carousel">
                 <div class="card card-1 upt-card text-light p-3 mx-auto" data-merge="3">
                     <h3 class="text-center my-4">lorem</h3>
-                    <p class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati cum natus
+                    <p class="container">Permisi Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati cum natus
                         corrupti voluptates
                         quisquam molestiae eos quam possimus cupiditate provident quasi doloremque, consequuntur at et
                         cumque porro odio ipsam dignissimos?
