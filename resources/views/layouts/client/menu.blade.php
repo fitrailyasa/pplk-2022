@@ -1,6 +1,6 @@
-<!-- Desktop Navbar top -->
+<!--Desktop Navbar Top-->
 <div class="navbar navbar-expand-sm background-gradient navbar-dark sticky-top d-xl-block d-xxl-block" id="navbar-desktop">
-        <div class="container-fluid">
+    <div class="container-fluid">
             <div class="navbar-brand d-inline-flex">
                 <div class="pplk-logo-bknd">
                 </div>
@@ -121,10 +121,11 @@
                 </div>
             </div>
         </div>
-    </div>
+</div>
+<!--./Desktop Navbar Top-->
 
-    <!--Mobile Footer Bar-->
-    <div class="navbar p-0 d-lg-block d-xl-none" id="mobile-footer-bar">
+<!--Mobile Footer Bar-->
+<div class="navbar p-0 d-lg-block d-xl-none" id="mobile-footer-bar">
         <ul class="container-fluid footer-bar">
                 
                 <li>
@@ -165,3 +166,5 @@
 
         </ul>
     </div>
+</div>
+<!--./Mobile Footer Bar-->
