@@ -13,6 +13,7 @@ class ProdiSeeder extends Seeder
      */
     public function run()
     {
+        
         //
     }
 }
