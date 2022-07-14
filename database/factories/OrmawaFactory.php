@@ -15,7 +15,14 @@ class OrmawaFactory extends Factory
     public function definition()
     {
         return [
-            Ormawa::factory(5)->create()
+            'namaLengkap'=>$this->faker->name(1),
+            'namaSingkat'=>$this->faker->name(1),
+            'kategoris_id'=>random_int(1,3),
+            'visi'=>$this->faker->sentence(mt_rand(5,6)),
+            'misi'=>$this->faker->sentence(mt_rand(2,10)),
+            'deskripsi'=>$this->faker->sentence(mt_rand(5,15))
+
+
         ];
     }
 }
