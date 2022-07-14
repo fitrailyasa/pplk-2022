@@ -35,8 +35,8 @@ Route::get('/himpunan', function () {               // ===> himpunan
 Route::get('/jurusan', function () {                // ===> jurusan
     return view('client.jurusan.jurusan');
 });
-Route::get('/detail-produk', function () {          // ===> detail produk
-    return view('client.jurusan.detail-produk');
+Route::get('/detail-prodi', function () {          // ===> detail prodi
+    return view('client.jurusan.detail-prodi');
 });
 Route::get('/prodi', function () {                  // ===> prodi
     return view('client.jurusan.prodi');
