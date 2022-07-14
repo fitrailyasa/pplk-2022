@@ -17,7 +17,7 @@
 }
 
 body {
-  background-image: url(../assets/login-background.png);
+  background-image: url(../login-background.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
