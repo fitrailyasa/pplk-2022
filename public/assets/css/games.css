@@ -1,5 +1,5 @@
 body{
-    background-image: url(../assets/bacground-2.png);
+    background-image: url(../bacground-2.png);
     background-size: cover;
     background-position: 50% 5%;
     background-repeat: no-repeat;
@@ -36,7 +36,7 @@ body{
 }
 
 .main-landing-page {
-    background-image: url("../assets/jumbotron-games.png");
+    background-image: url("../jumbotron-games.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -214,10 +214,7 @@ body{
     line-height: 3%;
     text-align: left;
     /* or 28px */
-
-
     /* Call to Action 1 */
-
     color: #3991C9;
 }
 
@@ -849,7 +846,7 @@ body{
     .list-active {
         border: 2.5px solid #3991C9;
     }
-    
+
     .list-rank-col1 {
         margin-top: 17px;
     }

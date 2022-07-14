@@ -92,7 +92,7 @@ Route::get('/tebak-bangunan', function ()   {       // ===> tebak bangunan home
 Route::get('/tebak-bangunan-game', function ()   {  // ===> tebak bangunan game
     return view('client.games.tebak-bangunan.game');
 });
-Route::get('/game-home', function ()   {  // ===> home games
+Route::get('/game-home', function ()   {            // ===> home games
     return view('client.games.games');
 });
 
