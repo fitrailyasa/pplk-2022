@@ -1,11 +1,11 @@
 @extends('layouts.client.app')
 
 <!-- TITLE -->
-@section('title', 'GANTI')
+@section('title', 'Template')
 
 @section('style')
     <!-- STYLES -->
-    <link rel="stylesheet" href="{{ asset('assets') }}/css/GANTI.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/GANTI.css') }}">
 @endsection
 
 @section('content')
