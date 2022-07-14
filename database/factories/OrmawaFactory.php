@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Ormawa;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class OrmawaFactory extends Factory
@@ -14,7 +15,7 @@ class OrmawaFactory extends Factory
     public function definition()
     {
         return [
-            //
+            Ormawa::factory(5)->create()
         ];
     }
 }
