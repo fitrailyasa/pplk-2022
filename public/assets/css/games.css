@@ -705,6 +705,10 @@ body {
         margin-left: 27px;
     }
 
+    .top-rank-container {
+        display: none;
+    }
+
     .leaderboarad-header-container {
         padding-left: 59px;
         margin-bottom: 32px;
