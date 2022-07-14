@@ -1,5 +1,5 @@
 .jumbotron {
-  background-image: url(../assets/pplk.png);
+  background-image: url(../pplk.png);
   background-size: 100% 100%;
   background-position: center;
 }
@@ -7,6 +7,7 @@
 .upt-card {
   width: 90%;
   background: linear-gradient(90deg, rgb(240, 65, 255) 0%, rgba(130, 165, 234, 1) 100%) !important;
+  height: 25rem !important;
 }
 
 .owl-dots .active {
@@ -20,4 +21,10 @@
 .carousel .active .card {
   transition: 0.5s;
   transform: scale(1);
+}
+
+@media screen and (max-width:930px) {
+  #content {
+      margin-bottom: 6rem;
+  }
 }
