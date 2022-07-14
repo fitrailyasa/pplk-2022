@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Funfact;
 use Illuminate\Database\Seeder;
 
 class FunfactSeeder extends Seeder
@@ -13,6 +14,6 @@ class FunfactSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Funfact::factory(5)->create();
     }
 }

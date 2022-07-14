@@ -12,7 +12,4 @@ class Jurusan extends Model
     protected $table = 'jurusans';
     protected $fillable = ['namaLengkap', 'namaSingkat', 'kepalaJurusan', 'ruangJurusan'];
 
-    public function prodis(){
-        return $this->hasMany(Prodi::class, 'jurusans_id');
-    }
 }

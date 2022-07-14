@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class begalin extends Model
+class Begalin extends Model
 {
     use HasFactory;
-    protected $table = 'begalin';
+    protected $table = 'begalins';
     protected $fillable = ['isi'];
     
 }

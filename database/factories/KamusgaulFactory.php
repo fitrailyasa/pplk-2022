@@ -14,7 +14,8 @@ class KamusgaulFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'gaul'=>$this->faker->name(1),
+            'asli'=>$this->faker->text(100)
         ];
     }
 }

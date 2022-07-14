@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\Ormawa;
 use Illuminate\Database\Seeder;
+use App\Models\Ormawa;
 
 class OrmawaSeeder extends Seeder
 {

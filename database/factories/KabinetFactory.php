@@ -14,7 +14,13 @@ class KabinetFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'nama'=>'Kabinet KM Itera',
+            'presiden'=>'Arby',
+            'sekjen'=>'Rafi',
+            'organigram'=>$this->faker->text(10),
+            'logo'=>$this->faker->text(10),
+            'filosofiLogo'=>$this->faker->text(10),
+            'deskripsi'=>$this->faker->text(10)
         ];
     }
 }
