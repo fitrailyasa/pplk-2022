@@ -1,6 +1,3 @@
-@php
-    $data = 0 ;
-@endphp
 @extends('layouts.client.app')
 
 <!-- TITLE -->
