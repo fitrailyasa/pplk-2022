@@ -95,6 +95,9 @@ Route::get('/tebak-bangunan-game', function ()   {  // ===> tebak bangunan game
 Route::get('/game-home', function ()   {            // ===> home games
     return view('client.games.games');
 });
+Route::get('/login', function ()   {  // ===> Login
+    return view('login');
+});
 
 
 
