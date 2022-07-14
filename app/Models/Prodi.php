@@ -13,10 +13,4 @@ class Prodi extends Model
         'kepalaProdi', 'akreditasi', 'tahunBerdiri', 'ruangProdi', 'jumlahMahasiswa', 'diagramAlir', 'ormawas_id', 'jurusans_id'
     ];
 
-    public function ormawas(){
-        return $this->belongsTo(Ormawa::class, 'ormawas_id');
-    }
-    public function jurusans(){
-        return $this->belongsTo(Jurusan::class, 'jurusans_id');
-    }
 }

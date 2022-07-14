@@ -14,6 +14,8 @@ class UptFactory extends Factory
     public function definition()
     {
         return [
+            'nama'=>$this->faker->name(2),
+            'deskripsi'=>$this->faker->text(100)
             //
         ];
     }

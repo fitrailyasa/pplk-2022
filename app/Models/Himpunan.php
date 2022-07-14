@@ -12,8 +12,5 @@ class Himpunan extends Model
     protected $table ='himpunans';
     protected $fillabel=['kodeWarna', 'pembina', 'ketuaHimpunan', 'tahunBerdiri', 'logo', 'filosofiLogo', 'ormawas_id'];
 
-    public function ormawas(){
-        return $this->belongsTo(Ormawa::class, 'ormawas_id');
-    }
 
 }

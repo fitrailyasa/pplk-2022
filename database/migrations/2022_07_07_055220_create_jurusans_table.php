@@ -17,8 +17,11 @@ class CreateJurusansTable extends Migration
             $table->id();
             $table->string('namaLengkap');
             $table->string('namaSingkat');
+            $table->text('visi');
+            $table->text('misi');
             $table->string('kepalaJurusan');
             $table->string('ruangJurusan');
+            $table->timestamps();
         });
     }
 

@@ -18,6 +18,7 @@ class CreateKodeGamesTable extends Migration
             $table->string('nama');
             $table->string('kode');
             $table->string('nilai');
+            $table->timestamps();
         });
     }
 

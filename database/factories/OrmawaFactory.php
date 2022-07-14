@@ -22,7 +22,6 @@ class OrmawaFactory extends Factory
             'misi'=>$this->faker->sentence(mt_rand(2,10)),
             'deskripsi'=>$this->faker->sentence(mt_rand(5,15))
 
-
         ];
     }
 }

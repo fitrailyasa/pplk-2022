@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\begalin;
-use App\Http\Requests\StorebegalinRequest;
-use App\Http\Requests\UpdatebegalinRequest;
+use App\Models\Begalin;
+use App\Http\Requests\StoreBegalinRequest;
+use App\Http\Requests\UpdateBegalinRequest;
 
 class BegalinController extends Controller
 {

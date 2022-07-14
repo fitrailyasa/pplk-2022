@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Kamusgaul;
 use Illuminate\Database\Seeder;
 
 class KamusgaulSeeder extends Seeder
@@ -13,6 +14,6 @@ class KamusgaulSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Kamusgaul::factory(6)->create();
     }
 }

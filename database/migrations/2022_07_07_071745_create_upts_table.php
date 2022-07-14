@@ -17,6 +17,7 @@ class CreateUptsTable extends Migration
             $table->id();
             $table->string('nama')->nullable();
             $table->text('deskripsi')->nullable();
+            $table->timestamps();
 
         });
     }

@@ -18,6 +18,7 @@ class CreatePplksTable extends Migration
       $table->string('logo');
       $table->text('visi');
       $table->text('misi');
+      $table->timestamps();
     });
   }
 
