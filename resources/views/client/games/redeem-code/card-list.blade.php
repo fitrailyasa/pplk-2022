@@ -19,6 +19,7 @@
 
 @section('content')
     <!-- CONTENT -->
+
     <div class="star-conten">
         <!-- landing page -->
         <div class="container-fluid landing-page py-4">
