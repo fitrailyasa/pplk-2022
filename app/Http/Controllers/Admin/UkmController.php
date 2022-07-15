@@ -3,8 +3,17 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Ukm;
+use App\Models\Upt;
+use App\Models\Senat;
+use App\Models\Prodi;
+use App\Models\Funfact;
+use App\Models\Begalin;
+use App\Models\Kamusgaul;
+use App\Models\User;
+
 use App\Http\Requests\StoreUkmRequest;
 use App\Http\Requests\UpdateUkmRequest;
+
 
 class UkmController extends Controller
 {
@@ -13,10 +22,23 @@ class UkmController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
-        //
+        $users = User::get();
+        $begalins = Begalin::get();
+        $funfacts = Funfact::get();
+        $upts = Upt::all();
+        $ukms = Ukm::get();
+        $senats = Senat::all();
+        $prodis = Prodi::get();
+        $kamusgauls = Kamusgaul::get();
+
+        return view('admin.index', compact('ukms','upts','senats','prodis','funfacts','begalins','kamusgauls','users'));
     }
+
+
+
 
     /**
      * Show the form for creating a new resource.
