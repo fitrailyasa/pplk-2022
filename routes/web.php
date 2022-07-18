@@ -4,7 +4,7 @@ use App\Http\Controllers\Auth\loginController;
 use App\Http\Controllers\Admin\dashboardController;
 use App\Http\Controllers\Client\clientDashboardController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\UkmController;
+use App\Http\Controllers\Admin\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +16,7 @@ use App\Http\Controllers\Admin\UkmController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/admin', [UkmController::class, 'index'])->name('index');
+Route::get('/admin', [AdminController::class, 'index'])->name('index');
 
 Route::get('/', function () {
     return view('client.index');                // ===> DEFAULT

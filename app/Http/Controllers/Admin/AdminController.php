@@ -14,8 +14,7 @@ use App\Models\User;
 use App\Http\Requests\StoreUkmRequest;
 use App\Http\Requests\UpdateUkmRequest;
 
-
-class UkmController extends Controller
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -36,8 +35,6 @@ class UkmController extends Controller
 
         return view('admin.index', compact('ukms','upts','senats','prodis','funfacts','begalins','kamusgauls','users'));
     }
-
-
 
 
     /**
