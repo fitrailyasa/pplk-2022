@@ -90,12 +90,12 @@
                         <div class="col-lg-6 col-md-10 mb-4">
                             <img class="gambar-1 img-fluid" src="../assets/Logo_Mockup_125.jpg" alt="" srcset="">
                         </div>
-                        <div class="col-lg-6 col-md-10 my-auto">
+                        <div class="col-lg-6 col-md-10 my-auto gerak">
                             <h4 class="mt-lg-5 mt-md-4"><strong>Kepala Jurusan</strong></h4>
                             <h4>lorem</h4>
                             <h4 class="mt-lg-5 mt-md-4"><strong>Alamat Kantor</strong></h4>
                             <h4>Institut Teknologi Sumatera Jalan Terusan Ryacudu,
-                                Way Hui, Kecamatan Jati Agung, Lampung Selatan 35365              
+                                Way Hui, Kecamatan Jati Agung, Lampung Selatan 35365
                             </h4>
                         </div>
                     </div>
@@ -119,7 +119,7 @@
                     </div>
                 </div>
                 <!-- nama prodi -->
-                <div class="row justify-content-center">
+                <div class="row justify-content-center" id="terakhir">
                     <div class="col-12 text-center">
                         <h3>Program Studi</h3>
                     </div>
@@ -142,7 +142,7 @@
                         <p>Program Studi Teknik Material</p>
                         <p>Program Studi Teknik Telekomunikasi</p>
                         <p>Rekayasa Kehutanan</p>
-                        <p>Program Studi Teknik Biomedik</p>
+                        <p>Program Studi Teknik Biomedis</p>
                     </div>
                 </div>
             </div>
@@ -159,7 +159,7 @@
                             <h4>lorem</h4>
                             <h4 class="mt-lg-5 mt-md-4"><strong>Alamat Kantor</strong></h4>
                             <h4>Institut Teknologi Sumatera Jalan Terusan Ryacudu,
-                                Way Hui, Kecamatan Jati Agung, Lampung Selatan 35365              
+                                Way Hui, Kecamatan Jati Agung, Lampung Selatan 35365
                             </h4>
                         </div>
                     </div>
@@ -183,7 +183,7 @@
                     </div>
                 </div>
                 <!-- nama prodi -->
-                <div class="row justify-content-center">
+                <div class="row justify-content-center" id="terakhir">
                     <div class="col-12 text-center">
                         <h3>Program Studi</h3>
                     </div>
@@ -206,7 +206,7 @@
                         <p>Program Studi Teknik Material</p>
                         <p>Program Studi Teknik Telekomunikasi</p>
                         <p>Rekayasa Kehutanan</p>
-                        <p>Program Studi Teknik Biomedik</p>
+                        <p>Program Studi Teknik Biomedis</p>
                     </div>
                 </div>
             </div>
@@ -224,7 +224,7 @@
                             <h4>lorem</h4>
                             <h4 class="mt-lg-5 mt-md-4"><strong>Alamat Kantor</strong></h4>
                             <h4>Institut Teknologi Sumatera Jalan Terusan Ryacudu,
-                                Way Hui, Kecamatan Jati Agung, Lampung Selatan 35365              
+                                Way Hui, Kecamatan Jati Agung, Lampung Selatan 35365
                             </h4>
                         </div>
                     </div>
@@ -250,7 +250,7 @@
                     </div>
 
                     <!-- nama prodi -->
-                    <div class="row justify-content-center">
+                    <div class="row justify-content-center " id="terakhir">
                         <div class="col-12 text-center">
                             <h3>Program Studi</h3>
                         </div>
@@ -273,7 +273,7 @@
                             <p>Program Studi Teknik Material</p>
                             <p>Program Studi Teknik Telekomunikasi</p>
                             <p>Rekayasa Kehutanan</p>
-                            <p>Program Studi Teknik Biomedik</p>
+                            <p>Program Studi Teknik Biomedis</p>
                         </div>
                     </div>
                 </div>
