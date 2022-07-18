@@ -20,8 +20,8 @@
                         <div class="media-body text-white text-end">
                             <p class="mb-1">Total Mahasiswa</p>
                             <h3 class="text-white">1000</h3>
+                </div>
             </div>
-        </div>
                     </div>
                 </div>
                                 </div>
@@ -643,7 +643,7 @@
     <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-user">
       <div class="card">
         <div class="card-header">
-          <h4 class="card-title">Kelola QR-Code Panitia</h4>
+          <h4 class="card-title">User</h4>
         </div>
         <div class="card-body">
           @if (session('sukses'))
@@ -702,7 +702,7 @@
                           </div>
                           <div class="modal-body">Apakah anda yakin ingin menghapus data?</div>
                           <div class="modal-footer">
-                            <form action="#" method="POST">
+                            <form action="{{ url('/admin' . '/' .$user->id) }}" method="POST">
                               @method('DELETE')
                               @csrf
                               <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
@@ -907,7 +907,7 @@
                   <td>{{$upt->nama}}</td>
                   <td>{{$upt->deskripsi}}</td>
                   <td class="manage-row">
-                    <a href=" #" class="edit-button">
+                  <a onclick="openCMS(event, 'edit-upt')" class="nav-link tablinks">
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm  ">
@@ -1058,6 +1058,10 @@
                   <th>No</th>
                   <th>Nama Singkat</th>
                   <th>Nama Lengkap</th>
+                  <th>Visi</th>
+                  <th>Misi</th>
+                  <th>Deskripsi</th>
+                  <th>Kode Warna</th>
                   <th>Pembina</th>
                   <th>Ketua Himpunan</th>
                   <th>Logo</th>
@@ -1067,18 +1071,23 @@
                   <th>More</th>
                 </tr>
               </thead>
+              @foreach ($himpunans as $himpunan)
               <tbody>
 
                 <tr>
-                  <td>1</td>
-                  <td>HMIF</td>
-                  <td>Himpunan Mahasiswa Informatika</td>
-                  <td>Fitra Sindi</td>
-                  <td>Fitra Ilyasa</td>
-                  <td><img src=" #" widht="100" height="100"/></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>{{ $loop->iteration }}</td>
+                  <td>{{ $himpunan->namaSingkat }}</td>
+                  <td>{{ $himpunan->namaLengkap }}</td>
+                  <td>{{ $himpunan->visi }}</td>
+                  <td>{{ $himpunan->misi }}</td>
+                  <td>{{ $himpunan->deskripsi }}</td>
+                  <td>{{ $himpunan->kodeWarna }}</td>
+                  <td>{{ $himpunan->pembina }}</td>
+                  <td>{{ $himpunan->ketuaHimpunan }}</td>
+                  <td>{{ $himpunan->tahunBerdiri }}</td>
+                  <td>{{ $himpunan->logo }}</td>
+                  <td>{{ $himpunan->filosofiLogo }}</td>
+                  <td>{{ $himpunan->tahunBerdiri }}</td>
                   <td class="manage-row">
                     <a href=" #" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
@@ -1110,6 +1119,7 @@
                 </tr>
 
               </tbody>
+              @endforeach
               {{-- link paginate --}}
             </table>
           </div>
@@ -1139,10 +1149,13 @@
               <thead>
                 <tr>
                   <th>No</th>
-                  <th>Pembina</th>
+                  <th>Nama</th>
+                  <th>Deskripsi</th>
                   <th>Presiden Mahasiswa</th>
                   <th>Sekretaris Jenderal</th>
-                  <th>Dies Natalis</th>
+                  <th>Organigram</th>
+                  <th>Logo</th>
+                  <th>Filosopi Logo</th>
                   <th>Website</th>
                   <th>Facebook</th>
                   <th>Telegram</th>
@@ -1155,13 +1168,18 @@
                   <th>More</th>
                 </tr>
               </thead>
+              @foreach ($kabinets as $kabinet)
               <tbody>
 
                 <tr>
-                  <td>1</td>
-                  <td>Fitra Tampan</td>
-                  <td>Fitra lagi</td>
-                  <td>Fitra Semua</td>
+                  <td>{{ $loop->iteration }}</td>
+                  <td>{{ $kabinet->nama }}</td>
+                  <td>{{ $kabinet->deskripsi }}</td>
+                  <td>{{ $kabinet->presiden }}</td>
+                  <td>{{ $kabinet->sekjen }}</td>
+                  <td>{{ $kabinet->organigram }}</td>
+                  <td>{{ $kabinet->logo }}</td>
+                  <td>{{ $kabinet->filosofiLogo }}</td>
                   <td>dies natalis</td>
                   <td>https://km.itera.ac.id</td>
                   <td>https://facebook.com</td>
@@ -1203,6 +1221,7 @@
                 </tr>
 
               </tbody>
+              @endforeach
               {{-- link paginate --}}
             </table>
           </div>
@@ -1908,5 +1927,16 @@
 </section>
 
 <!--./UPDATE DATA-->
+
+@endsection
+
+@section('script')
+
+<script>
+    function editData() {
+        document.getElementById('nama-upt').disabled = false;
+        document.getElementById('deskripsi-upt').disabled = false;
+    }
+</script>
 
 @endsection
