@@ -3,8 +3,13 @@
 use App\Http\Controllers\Auth\loginController;
 use App\Http\Controllers\Admin\dashboardController;
 use App\Http\Controllers\Client\clientDashboardController;
+use App\Http\Controllers\Client\ClientUptController;
+use App\Http\Controllers\Client\ClientKamusgaulController;
+use App\Http\Controllers\Client\ClientKabinetController;
+use App\Http\Controllers\Client\ClientJurusanController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +21,15 @@ use App\Http\Controllers\Admin\AdminController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/admin', [AdminController::class, 'index'])->name('index');
+Route::get('/admin', [AdminController::class, 'index'])->name('index'); //===> cms admin
+
+Route::get('/upt', [ClientUptController::class, 'index'])->name('upt'); //===> upt
+
+Route::get('/kabinet', [ClientKabinetController::class, 'index'])->name('kabinet');  // ===>kabinet
+
+Route::get('/jurusan', [ClientJurusanController::class, 'index'])->name('jurusan'); // ===> jurusan
+
+Route::get('/kamus-gaul', [ClientKamusgaulController::class, 'index'])->name('kamus-gaul'); // ===> kamus-gaul
 
 Route::get('/', function () {
     return view('client.index');                // ===> DEFAULT
@@ -29,9 +42,6 @@ Route::get('/ukm', function () {                    // ===> Unit kegiatan mahasi
 });
 Route::get('/himpunan', function () {               // ===> himpunan
     return view('client.ormawa.himpunan');
-});
-Route::get('/jurusan', function () {                // ===> jurusan
-    return view('client.jurusan.jurusan');
 });
 Route::get('/detail-prodi', function () {          // ===> detail prodi
     return view('client.jurusan.detail-prodi');
@@ -57,20 +67,11 @@ Route::get('/div-pplk', function ()   {             // ===> divisi pplk
 Route::get('/form-keluhan', function ()   {         // ===> form keluhan
     return view('client.form-keluhan');
 });
-Route::get('/kabinet', function ()   {              // ===> kabinet
-    return view('client.kabinet');
-});
-Route::get('/kamus-gaul', function ()   {           // ===> kamus gaul
-    return view('client.kamus-gaul');
-});
 Route::get('/pplk', function ()   {                 // ===> pplk
     return view('client.pplk');
 });
 Route::get('/scanner', function ()   {              // ===> scanner
     return view('client.scanner');
-});
-Route::get('/upt', function ()   {                  // ===> unit pengelolaan terpadu UPT
-    return view('client.upt');
 });
 Route::get('/card-list', function ()   {            // ===> redeem code card list
     return view('client.games.redeem-code.card-listt');

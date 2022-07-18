@@ -29,73 +29,24 @@
         <div class="row">
             <h2 class="text-center display-3 px-5 py-5 text-light animasi"><strong>UPT ITERA</strong></h2>
         </div>
+
+
         <div class="row">
+
             <div class="carousel owl-carousel justify-content-center" id="upt-carousel">
+                @foreach ($upts as $upt)
                 <div class="card card-1 upt-card text-light p-3 mx-auto overflow-auto" data-merge="3">
-                    <h3 class="text-center my-4">lorem</h3>
-                    <p class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati cum natus
-                        corrupti voluptates
-                        quisquam molestiae eos quam possimus cupiditate provident quasi doloremque, consequuntur at et
-                        cumque porro odio ipsam dignissimos?
-                        Provident, voluptatum libero! Accusantium, similique. Cum non quas nemo ullam recusandae,
-                        consequatur laborum doloremque magnam deleniti nesciunt, ut molestias similique unde aut nulla
-                        ab quisquam voluptatibus eaque molestiae sit voluptas!</p>
+                    <h3 class="text-center my-4">{{ $upt ->nama }}</h3>
+                    <p class="container">{{ $upt ->deskripsi }}</p>
                 </div>
-                <div class="card card-2 upt-card text-light p-3 mx-auto overflow-auto" data-merge="3">
-                    <h3 class="text-center my-4">lorem</h3>
-                    <p class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati cum natus
-                        corrupti voluptates
-                        quisquam molestiae eos quam possimus cupiditate provident quasi doloremque, consequuntur at et
-                        cumque porro odio ipsam dignissimos?
-                        Provident, voluptatum libero! Accusantium, similique. Cum non quas nemo ullam recusandae,
-                        consequatur laborum doloremque magnam deleniti nesciunt, ut molestias similique unde aut nulla
-                        ab quisquam voluptatibus eaque molestiae sit voluptas!</p>
-                </div>
-                <div class="card card-3 upt-card text-light p-3 mx-auto overflow-auto" data-merge="3">
-                    <h3 class="text-center my-4">lorem</h3>
-                    <p class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati cum natus
-                        corrupti voluptates
-                        quisquam molestiae eos quam possimus cupiditate provident quasi doloremque, consequuntur at et
-                        cumque porro odio ipsam dignissimos?
-                        Provident, voluptatum libero! Accusantium, similique. Cum non quas nemo ullam recusandae,
-                        consequatur laborum doloremque magnam deleniti nesciunt, ut molestias similique unde aut nulla
-                        ab quisquam voluptatibus eaque molestiae sit voluptas!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad fuga doloremque quasi qui,
-                        reprehenderit velit ut eos, fugit laboriosam aliquam iusto esse beatae facilis? Culpa quis enim
-                        perferendis laboriosam in!
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consectetur praesentium
-                        illum laboriosam non aliquam, nobis incidunt eum alias sint architecto sapiente doloremque
-                        optio. Atque aliquam odit illum in repudiandae!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, quo. Recusandae facere
-                        delectus eveniet deleniti dolorem quidem vero, ut saepe. Amet natus, officia ratione hic a
-                        voluptas cupiditate accusantium nihil. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                        Optio at, modi aliquam aliquid itaque porro fuga natus, iure voluptas dolorem nemo illo ratione
-                        nam obcaecati sit laudantium, commodi aspernatur. A.
-                    </p>
-                </div>
-                <div class="card card-4 upt-card text-light p-3 mx-auto overflow-auto" data-merge="3">
-                    <h3 class="text-center my-4">lorem</h3>
-                    <p class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati cum natus
-                        corrupti voluptates
-                        quisquam molestiae eos quam possimus cupiditate provident quasi doloremque, consequuntur at et
-                        cumque porro odio ipsam dignissimos?
-                        Provident, voluptatum libero! Accusantium, similique. Cum non quas nemo ullam recusandae,
-                        consequatur laborum doloremque magnam deleniti nesciunt, ut molestias similique unde aut nulla
-                        ab quisquam voluptatibus eaque molestiae sit voluptas!</p>
-                </div>
-                <div class="card card-5 upt-card text-light p-3 mx-auto overflow-auto" data-merge="3">
-                    <h3 class="text-center my-4">lorem</h3>
-                    <p class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati cum natus
-                        corrupti voluptates
-                        quisquam molestiae eos quam possimus cupiditate provident quasi doloremque, consequuntur at et
-                        cumque porro odio ipsam dignissimos?
-                        Provident, voluptatum libero! Accusantium, similique. Cum non quas nemo ullam recusandae,
-                        consequatur laborum doloremque magnam deleniti nesciunt, ut molestias similique unde aut nulla
-                        ab quisquam voluptatibus eaque molestiae sit voluptas!</p>
-                </div>
+                @endforeach
             </div>
+
         </div>
+
     </div>
+
+
 
 @endsection
 

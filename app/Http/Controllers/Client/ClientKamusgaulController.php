@@ -15,7 +15,8 @@ class ClientKamusgaulController extends Controller
      */
     public function index()
     {
-        //
+        $kamus_gauls = Kamusgaul::all();
+        return view('client.kamus-gaul', compact('kamus_gauls'));
     }
 
     /**

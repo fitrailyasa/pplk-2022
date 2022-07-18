@@ -83,7 +83,7 @@
         <!-- tabs jurusan sains -->
         <div class="tab-pane fade show active  justify-content-center" id="pills-home" role="tabpanel"
             aria-labelledby="pills-home-tab" tabindex="0">
-            <div class="container-fluid d-flex flex-wrap justify-content-around">
+            <div class="container-fluid d-flex flex-wrap justify-content-around" id="terakhir">
                 <button type="button" class="btn my-4 prodi-card">
                     <div class="card rounded-5">
                         <img src="{{ asset('assets/2-2.jpeg') }}" class="card-img-top rounded-5" alt="...">
@@ -111,13 +111,30 @@
                     </div>
                 </button>
 
+                <button type="button" class="btn my-4 prodi-card">
+                    <div class="card rounded-5">
+                        <img src="{{ asset('assets/2-2.jpeg') }}" class="card-img-top rounded-5" alt="...">
+                        <div class="card-body">
+                            <p class="card-text pt-2 rounded-3 text-center text-light">Nama Prodi</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" class="btn my-4 prodi-card">
+                    <div class="card rounded-5">
+                        <img src="{{ asset('assets/2-2.jpeg') }}" class="card-img-top rounded-5" alt="...">
+                        <div class="card-body">
+                            <p class="card-text pt-2 rounded-3 text-center text-light">Nama Prodi</p>
+                        </div>
+                    </div>
+                </button>
             </div>
         </div>
 
         <!-- tab jurusan JTIK -->
         <div class="tab-pane fade justify-content-center" id="pills-profile" role="tabpanel"
             aria-labelledby="pills-profile-tab" tabindex="0">
-            <div class="container-fluid d-flex flex-wrap justify-content-around">
+            <div class="container-fluid d-flex flex-wrap justify-content-around" id="terakhir">
                 <button type="button" class="btn my-4 prodi-card scroll-reveal">
                     <div class="card rounded-5">
                         <img src="{{ asset('assets/2-2.jpeg') }}" class="card-img-top rounded-5" alt="...">
@@ -150,7 +167,7 @@
         <!-- tab jurusan JTIP -->
         <div class="tab-pane fade justify-content-center" id="pills-contact" role="tabpanel"
             aria-labelledby="pills-contact-tab" tabindex="0">
-            <div class="container-fluid d-flex flex-wrap justify-content-around">
+            <div class="container-fluid d-flex flex-wrap justify-content-around" id="terakhir">
                 <button type="button" class="btn my-4 prodi-card">
                     <div class="card rounded-5">
                         <img src="{{ asset('assets/2-2.jpeg') }}" class="card-img-top rounded-5" alt="...">
@@ -187,7 +204,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <!-- scrollReveal -->
-    <script src="{{ asset('assets/node_modules/scrollreveal/dist/scrollreveal.min.js') }}"></script>
+    {{-- <script src="{{ asset('assets/node_modules/scrollreveal/dist/scrollreveal.min.js') }}"></script>
     <script>
         ScrollReveal().reveal('.prodi-card', {
             delay: 100,
@@ -196,6 +213,6 @@
             origin: 'bottom',
             reset: true,
         });
-    </script>
+    </script> --}}
 
 @endsection
