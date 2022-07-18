@@ -96,6 +96,9 @@ Route::get('/game-home', function ()   {            // ===> home games
 Route::get('/login', function ()   {  // ===> Login
     return view('login');
 });
+Route::get('/registrasi', function ()   {  // ===> Registrasi
+    return view('registrasi');
+});
 
 
 
