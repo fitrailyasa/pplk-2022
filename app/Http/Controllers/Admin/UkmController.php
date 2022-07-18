@@ -14,7 +14,6 @@ use App\Models\User;
 use App\Http\Requests\StoreUkmRequest;
 use App\Http\Requests\UpdateUkmRequest;
 
-
 class UkmController extends Controller
 {
     /**
@@ -36,8 +35,6 @@ class UkmController extends Controller
 
         return view('admin.index', compact('ukms','upts','senats','prodis','funfacts','begalins','kamusgauls','users'));
     }
-
-
 
 
     /**
