@@ -1,10 +1,8 @@
 <?php
 
-use App\Http\Controllers\Auth\loginController;
-use App\Http\Controllers\Admin\dashboardController;
-use App\Http\Controllers\Client\clientDashboardController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\AdminController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +14,15 @@ use App\Http\Controllers\Admin\AdminController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/', [LoginController::class, 'showLoginForm']);
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/', [LoginController::class, 'login'])->name('loginPost');
+Route::get('/guest', [guestController::class, 'login'])->name('guest');
+
 Route::get('/admin', [AdminController::class, 'index'])->name('index');
 
-Route::get('/', function () {
+Route::get('/beranda', function () {
     return view('client.index');                // ===> DEFAULT
 });
 Route::get('/detail-himpunan', function () {        // ===> Detail himpunan
@@ -44,9 +48,6 @@ Route::get('/biodata', function () {                // ===> biodata
 });
 Route::get('/edit-biodata', function ()   {          // ===> edit biodata
     return view('client.biodata.edit-biodata');
-});
-Route::get('/beranda', function ()   {               // ===> beranda
-    return view('client.beranda');
 });
 Route::get('/booklet', function ()   {              // ===> booklet
     return view('client.booklet');
