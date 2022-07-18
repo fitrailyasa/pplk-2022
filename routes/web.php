@@ -3,8 +3,10 @@
 use App\Http\Controllers\Auth\loginController;
 use App\Http\Controllers\Admin\dashboardController;
 use App\Http\Controllers\Client\clientDashboardController;
+use App\Http\Controllers\Client\ClientUptController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +19,8 @@ use App\Http\Controllers\Admin\AdminController;
 |
 */
 Route::get('/admin', [AdminController::class, 'index'])->name('index');
+
+Route::get('/upt', [ClientUptController::class, 'index'])->name('upt');
 
 Route::get('/', function () {
     return view('client.index');                // ===> DEFAULT
@@ -68,9 +72,6 @@ Route::get('/pplk', function ()   {                 // ===> pplk
 });
 Route::get('/scanner', function ()   {              // ===> scanner
     return view('client.scanner');
-});
-Route::get('/upt', function ()   {                  // ===> unit pengelolaan terpadu UPT
-    return view('client.upt');
 });
 Route::get('/card-list', function ()   {            // ===> redeem code card list
     return view('client.games.redeem-code.card-listt');
