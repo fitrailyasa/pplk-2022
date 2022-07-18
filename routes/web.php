@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\dashboardController;
 use App\Http\Controllers\Client\clientDashboardController;
 use App\Http\Controllers\Client\ClientUptController;
 use App\Http\Controllers\Client\ClientKabinetController;
+use App\Http\Controllers\Client\ClientJurusanController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
 
@@ -25,6 +26,8 @@ Route::get('/upt', [ClientUptController::class, 'index'])->name('upt');
 
 Route::get('/kabinet', [ClientKabinetController::class, 'index'])->name('kabinet');
 
+Route::get('/jurusan', [ClientJurusanController::class, 'index'])->name('jurusan');
+
 Route::get('/', function () {
     return view('client.index');                // ===> DEFAULT
 });
@@ -36,9 +39,6 @@ Route::get('/ukm', function () {                    // ===> Unit kegiatan mahasi
 });
 Route::get('/himpunan', function () {               // ===> himpunan
     return view('client.ormawa.himpunan');
-});
-Route::get('/jurusan', function () {                // ===> jurusan
-    return view('client.jurusan.jurusan');
 });
 Route::get('/detail-prodi', function () {          // ===> detail prodi
     return view('client.jurusan.detail-prodi');
