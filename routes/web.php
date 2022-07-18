@@ -9,7 +9,6 @@ use App\Http\Controllers\Client\ClientKabinetController;
 use App\Http\Controllers\Client\ClientJurusanController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
-use Illuminate\Support\Facades\Route;
 
 
 /*
