@@ -4,7 +4,7 @@ use App\Http\Controllers\Auth\loginController;
 use App\Http\Controllers\Admin\dashboardController;
 use App\Http\Controllers\Client\clientDashboardController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Admin\UkmController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,12 +16,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/admin', [UkmController::class, 'index'])->name('index');
 
 Route::get('/', function () {
     return view('client.index');                // ===> DEFAULT
-});
-Route::get('/admin', function () {              // ===> ADMIN
-    return view('admin.index');
 });
 Route::get('/detail-himpunan', function () {        // ===> Detail himpunan
     return view('client.ormawa.detail-himpunan');
