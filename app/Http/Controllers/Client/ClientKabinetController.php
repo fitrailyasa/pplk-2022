@@ -15,7 +15,8 @@ class ClientKabinetController extends Controller
      */
     public function index()
     {
-        //
+        $kabinets = Kabinet::all();
+        return view('client.kabinet', compact('kabinets'));
     }
 
     /**

@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\loginController;
 use App\Http\Controllers\Admin\dashboardController;
 use App\Http\Controllers\Client\clientDashboardController;
 use App\Http\Controllers\Client\ClientUptController;
+use App\Http\Controllers\Client\ClientKabinetController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
 
@@ -21,6 +22,8 @@ use App\Http\Controllers\Admin\AdminController;
 Route::get('/admin', [AdminController::class, 'index'])->name('index');
 
 Route::get('/upt', [ClientUptController::class, 'index'])->name('upt');
+
+Route::get('/kabinet', [ClientKabinetController::class, 'index'])->name('kabinet');
 
 Route::get('/', function () {
     return view('client.index');                // ===> DEFAULT
@@ -60,9 +63,6 @@ Route::get('/div-pplk', function ()   {             // ===> divisi pplk
 });
 Route::get('/form-keluhan', function ()   {         // ===> form keluhan
     return view('client.form-keluhan');
-});
-Route::get('/kabinet', function ()   {              // ===> kabinet
-    return view('client.kabinet');
 });
 Route::get('/kamus-gaul', function ()   {           // ===> kamus gaul
     return view('client.kamus-gaul');
