@@ -95,7 +95,7 @@
                             <h4>lorem</h4>
                             <h4 class="mt-lg-5 mt-md-4"><strong>Alamat Kantor</strong></h4>
                             <h4>Institut Teknologi Sumatera Jalan Terusan Ryacudu,
-                                Way Hui, Kecamatan Jati Agung, Lampung Selatan 35365              
+                                Way Hui, Kecamatan Jati Agung, Lampung Selatan 35365
                             </h4>
                         </div>
                     </div>
@@ -159,7 +159,7 @@
                             <h4>lorem</h4>
                             <h4 class="mt-lg-5 mt-md-4"><strong>Alamat Kantor</strong></h4>
                             <h4>Institut Teknologi Sumatera Jalan Terusan Ryacudu,
-                                Way Hui, Kecamatan Jati Agung, Lampung Selatan 35365              
+                                Way Hui, Kecamatan Jati Agung, Lampung Selatan 35365
                             </h4>
                         </div>
                     </div>
@@ -224,7 +224,7 @@
                             <h4>lorem</h4>
                             <h4 class="mt-lg-5 mt-md-4"><strong>Alamat Kantor</strong></h4>
                             <h4>Institut Teknologi Sumatera Jalan Terusan Ryacudu,
-                                Way Hui, Kecamatan Jati Agung, Lampung Selatan 35365              
+                                Way Hui, Kecamatan Jati Agung, Lampung Selatan 35365
                             </h4>
                         </div>
                     </div>
