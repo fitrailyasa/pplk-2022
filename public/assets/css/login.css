@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+  --primary: #7739A3;
+  --secondary: #1A75FF;
+  --bawaan-gradient-1:rgb(240,65,255); /*Base Color*/
+  --bawaan-gradient-2: rgb(119,57,163); /*Text Color*/
+  --bawaan-gradient-3: rgb(11,10,60);
+  --gradient-1: linear-gradient(90deg, rgb(240, 65, 255) 0%, rgba(130,165,234,1) 100%);
+  --gradient-2: linear-gradient(90deg, rgba(119,57,163,1) 0%, rgba(26,117,255,1) 100%);
+  --gradient-3: linear-gradient(90deg, rgba(11,10,60,1) 0%, rgba(50,25,67,1) 100%);
+  --white: #fff;
+  --black: #000;
+  --grey: #C4C4C4;
+  --primary-color-1: #110f58;
+  --primary-color-2: rgba(91, 207, 197, 0.2);
+  --font-family-title: 'Poppins', 'open sans';
+  --font-family-body: 'Poppins', 'open sans';
+  --font-color-primary: #174461; 
+  --font-color-primary-2: #FFFFFF;
+  --font-color-subheadline: #071D2C; 
+  --font-color-secondary: #686868;
+  --font-color-call-to-act-2:#4a4a4a;
+  --page-background-1: #F9FAFB;
+  --page-background-2: #f6f6f6;
+}
+
+body {
+  font-family: var(--font-family-body) !important;
+  background-image: url(../assets/background-2.png);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  box-shadow: inset rgba(41, 1, 53, 0.66) 0px 1000rem 100px;
+  width: 100%;
+}
+
+/* Splash Screen */
+#splash-screen{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -999;
+}
+
+.launch-logo{
+  background-color:rgb(11,10,60);
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.launch-logo.display-none{
+  display: none;
+  transition: all 1s;
+}
+
+@keyframes fade{
+  0%,100% { opacity: 0 }
+  50% { opacity: 1 }
+}
+
+.fade{
+  opacity: 0;
+  animation: fade 3.5s ease-in-out forwards;
+}
+
+.launch-logo-image{
+  width: 281px;
+  height: 281px;
+}
+
+.show-up{
+  opacity: 0;
+  animation: show-up 4s ease-in-out forwards;
+}
+
+@keyframes show-up{
+  0% { opacity: 0 }
+  50% { opacity: 0 }
+  90% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+#login-container{
+  place-items: center;
+  z-index: 999;
+}
+
+#login {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#masuk {
+  width: 58.95%;
+  height: 50px;
+  background: rgb(113, 12, 111);
+  background: linear-gradient(180deg, rgba(113, 12, 111, 1) 12%, rgba(140, 51, 138, 1) 61%, rgba(200, 137, 198, 1) 100%);
+  font-size: 20px;
+}
+
+
+@media screen and (max-width: 600px) {
+  #image {
+    width: 50%;
+  }
+}
+
+.input-size {
+  width: 58.95%;
+  height: 50px;
+}
+
+@media (max-width: 768px) {
+  .launch-logo-image{
+    width: 281px;
+    height: 281px;
+    z-index: 200;
+}
+  .input-size {
+    width: 80%;
+    height: 50px;
+  }
+}
