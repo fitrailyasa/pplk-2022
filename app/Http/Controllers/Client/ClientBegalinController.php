@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Client;
 
-use App\Models\begalin;
-use App\Http\Requests\StorebegalinRequest;
-use App\Http\Requests\UpdatebegalinRequest;
+use App\Models\Begalin;
+use App\Http\Requests\StoreBegalinRequest;
+use App\Http\Requests\UpdateBegalinRequest;
 
 class ClientBegalinController extends Controller
 {
@@ -15,7 +15,8 @@ class ClientBegalinController extends Controller
      */
     public function index()
     {
-        //
+        $begalins = Begalin::all();
+        return view('client.index', compact('begalins'));
     }
 
     /**

@@ -15,7 +15,8 @@ class ClientJurusanController extends Controller
      */
     public function index()
     {
-        //
+        $jurusans = Jurusan::all();
+        return view('client.jurusan.jurusan', compact('jurusans'));
     }
 
     /**

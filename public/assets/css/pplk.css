@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 :root {
@@ -17,9 +17,9 @@
     --primary-color-2: rgba(91, 207, 197, 0.2);
     --font-family-title: 'Poppins', 'open sans';
     --font-family-body: 'Poppins', 'open sans';
-    --font-color-primary: #174461; 
+    --font-color-primary: #174461;
     --font-color-primary-2: #FFFFFF;
-    --font-color-subheadline: #071D2C; 
+    --font-color-subheadline: #071D2C;
     --font-color-secondary: #686868;
     --font-color-call-to-act-2:#4a4a4a;
     --page-background-1: #F9FAFB;
@@ -257,7 +257,7 @@ body{
     display: block;
     font-family: var(--font-family-body) !important;
     overflow-x: hidden;
-    background: url(../assets/background.png);
+    background: url(../background.png);
     background-position: center;
     background-size: cover;
 }
@@ -274,7 +274,7 @@ body{
 .container {
     padding-top: 3rem;
     width: max-content;
-    
+
 }
 
 .container h2, h3{
@@ -404,7 +404,7 @@ body p{
         width: 19rem;
         height: 19rem;
     }
-    
+
     .carousel .card {
         width: 19rem;
         height: 19rem;
@@ -457,7 +457,7 @@ body p{
         text-align: center;
         color: var(--white) !important;
         font-size: 10px;
-    } 
+    }
 
 }
 
@@ -469,7 +469,7 @@ body p{
 }
 
 @media screen and (max-width:768px) {
-    
+
     body {
         padding-bottom: 3.75rem;
     }
@@ -482,7 +482,7 @@ body p{
         width: 18.75rem;
         height: 18.75rem;
     }
-    
+
     .carousel .card {
         width: 18.75rem;
         height: 18.75rem;
@@ -513,7 +513,7 @@ body p{
         width: 18.75rem;
         height: 18.75rem;
     }
-    
+
     .carousel .card {
         width: 18.75rem;
         height: 18.75rem;
@@ -524,35 +524,35 @@ body p{
     .ratio {
         margin: 1.5rem 4.2rem 1.5rem 4.2rem;
     }
-    
+
 }
 
 @media screen and (max-width:370px) {
     #search-width{
         width: 11.2rem;
     }
-    
+
     .container {
         width: 60%;
         font-size: 0.8rem;
     }
-    
+
     .container a {
         width: 14rem;
         height: 14rem;
     }
-    
+
     .carousel .card {
         width: 14rem;
         height: 14rem;
         font-size: 0.5rem;
         font-weight: 600;
     }
-    
+
     .ratio{
         margin: 1rem 3rem 1rem 3rem;
     }
-    
+
 }
 
 @media screen and (max-width:340px) {

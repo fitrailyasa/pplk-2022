@@ -1,15 +1,14 @@
 @extends('layouts.admin.modal')
 @extends('layouts.admin.app')
 
-@section('title', 'Beranda')
+@section('title', 'CMS')
 
 @section('content')
 
-    
 <!-- MAIN CONTENT -->
 
     <!--Dashboard-->
-    <div class="col-xl-12 col-lg-12 form-wrapper tabcontents active" id="dashboard" >
+    <div class="col-xl-12 col-lg-12 form-wrapper tabcontents" id="dashboard" >
         <div class="row">
         <div class="col-xl-6">
             <div class="widget-stat card bg-success">
@@ -21,11 +20,11 @@
                         <div class="media-body text-white text-end">
                             <p class="mb-1">Total Mahasiswa</p>
                             <h3 class="text-white">1000</h3>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </div>
+                    </div>
+                </div>
+                                </div>
         <div class="col-xl-6">
             <div class="widget-stat card bg-warning">
                 <div class="card-body p-4">
@@ -36,11 +35,11 @@
                         <div class="media-body text-white text-end">
                             <p class="mb-1">Total Staff</p>
                             <h3 class="text-white">0</h3>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                                </div>
+                            </div>
+                        </div>
         <div class="col-xl-6">
             <div class="widget-stat card bg-info">
                 <div class="card-body p-4">
@@ -51,11 +50,11 @@
                         <div class="media-body text-white text-end">
                             <p class="mb-1">Total aja</p>
                             <h3 class="text-white">0</h3>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                                </div>
+                            </div>
         <div class="col-xl-6">
             <div class="widget-stat card bg-primary">
                 <div class="card-body p-4">
@@ -76,12 +75,12 @@
     <!--./Dashboard-->
 
 <!--------------------------------------------------------------------------------->
-    
+
 <!--CREATE DATA-->
 
 <section>
     <!--User-->
-    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" id="tambah-user">
+    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" style="display: none"  id="tambah-user">
       <div class="card">
       <div class="card-header">
       <h4 class="card-title">Input Data User</h4>
@@ -136,7 +135,7 @@
             <div class="col-sm-9">
               <input type="text" class="form-control" placeholder="username tanpa (@)" name="instagram" id="instagram" >
             </div>
-          </div>                                    
+          </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Riwayat Penyakit</label>
             <div class="col-sm-9">
@@ -148,14 +147,14 @@
               <button type="submit" class="btn btn-primary ">Tambah</button>
             </div>
           </div>
-          </form>			
+          </form>
         </div>
       </div>
     </div>
     <!--./User-->
 
     <!--ITERA-->
-    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" id="tambah-upt">
+    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" style="display: none"  id="tambah-upt">
       <div class="card">
       <div class="card-header">
       <h4 class="card-title">Input Data UPT ITERA</h4>
@@ -180,14 +179,14 @@
               <button type="submit" class="btn btn-primary ">Tambah</button>
             </div>
           </div>
-          </form>			
+          </form>
         </div>
       </div>
     </div>
     <!--./ITERA-->
 
     <!--Prodi-->
-    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" id="tambah-prodi">
+    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" style="display: none"  id="tambah-prodi">
       <div class="card">
       <div class="card-header">
       <h4 class="card-title">Input Data Prodi</h4>
@@ -261,21 +260,21 @@
                 <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2020" name="prestasi" id="prestasi"  ></textarea>
                 <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2021" name="prestasi" id="prestasi"  ></textarea>
                 <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2022" name="prestasi" id="prestasi"  ></textarea>
-              </div>                                    
+              </div>
             </div>
           <div class="mb-3 row">
             <div class="col-sm-9">
               <button type="submit" class="btn btn-primary ">Tambah</button>
             </div>
           </div>
-          </form>			
+          </form>
         </div>
       </div>
     </div>
     <!--./Prodi-->
 
     <!--Himpunan-->
-    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" id="tambah-himpunan">
+    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" style="display: none"  id="tambah-himpunan">
       <div class="card">
       <div class="card-header">
       <h4 class="card-title">Input Data Himpunan</h4>
@@ -342,7 +341,7 @@
             <div class="col-sm-9">
               <input type="text" class="form-control" placeholder="Filosofi Logo" name="filosofiLogo" id="filosofiLogo" >
             </div>
-          </div>                                    
+          </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Deskripsi</label>
             <div class="col-sm-9 ">
@@ -354,14 +353,14 @@
               <button type="submit" class="btn btn-primary ">Tambah</button>
             </div>
           </div>
-          </form>			
+          </form>
         </div>
       </div>
     </div>
     <!--./Himpunan-->
 
     <!--UKM/Komunitas-->
-    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" id="tambah-ukm">
+    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" style="display: none"  id="tambah-ukm">
       <div class="card">
       <div class="card-header">
       <h4 class="card-title">Input Data UKM/Komunitas</h4>
@@ -398,7 +397,7 @@
             <div class="col-sm-9">
               <textarea class="form-control custom-txt-area" placeholder="Filosofi Logo" name="filosofiLogo" id="filosofiLogo"  ></textarea>
             </div>
-          </div>                                    
+          </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">QR-Code</label>
             <div class="col-sm-9 ">
@@ -428,14 +427,14 @@
               <button type="submit" class="btn btn-primary ">Tambah</button>
             </div>
           </div>
-          </form>			
+          </form>
         </div>
       </div>
     </div>
     <!--./UKM/Komunitas-->
 
     <!--Funfact-->
-    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" id="tambah-funfact">
+    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" style="display: none"  id="tambah-funfact">
       <div class="card">
       <div class="card-header">
       <h4 class="card-title">Input Funfact</h4>
@@ -454,14 +453,14 @@
               <button type="submit" class="btn btn-primary ">Tambah</button>
             </div>
           </div>
-          </form>			
+          </form>
         </div>
       </div>
     </div>
     <!--./Funfact-->
 
     <!--Begalin-->
-    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" id="tambah-begalin">
+    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" style="display: none"  id="tambah-begalin">
       <div class="card">
       <div class="card-header">
       <h4 class="card-title">Input Data Begalin</h4>
@@ -486,14 +485,14 @@
               <button type="submit" class="btn btn-primary ">Tambah</button>
             </div>
           </div>
-          </form>			
+          </form>
         </div>
       </div>
     </div>
     <!--./Begalin-->
 
     <!--Kamus Gaul-->
-    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" id="tambah-kamus">
+    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" style="display: none"  id="tambah-kamus">
       <div class="card">
       <div class="card-header">
       <h4 class="card-title">Input Data Kamus Gaul</h4>
@@ -518,14 +517,14 @@
               <button type="submit" class="btn btn-primary ">Tambah</button>
             </div>
           </div>
-          </form>			
+          </form>
         </div>
       </div>
     </div>
     <!--./Kamus Gaul-->
-    
+
     <!--Games redeem code-->
-    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" id="tambah-redeem">
+    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" style="display: none"  id="tambah-redeem">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Input Data Redeem Code</h4>
@@ -556,14 +555,14 @@
               <button type="submit" class="btn btn-primary ">Tambah</button>
             </div>
           </div>
-          </form>			
+          </form>
         </div>
       </div>
     </div>
     <!--./Games redeem code-->
 
     <!--Games Tebak-->
-    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" id="tambah-tebak">
+    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" style="display: none"  id="tambah-tebak">
       <div class="card">
       <div class="card-header">
       <h4 class="card-title">Input Data Tebak Bangunan</h4>
@@ -594,14 +593,14 @@
               <button type="submit" class="btn btn-primary ">Tambah</button>
             </div>
           </div>
-          </form>			
+          </form>
         </div>
       </div>
     </div>
     <!--./Games Tebak-->
-    
+
     <!--Booklet-->
-    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" id="tambah-booklet">
+    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" style="display: none"  id="tambah-booklet">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Input Data Booklet</h4>
@@ -626,12 +625,12 @@
                 <button type="submit" class="btn btn-primary ">Tambah</button>
               </div>
             </div>
-          </form>			
+          </form>
         </div>
       </div>
     </div>
     <!--./Booklet-->
-</section>    
+</section>
 
 <!--./CREATE DATA-->
 
@@ -641,10 +640,10 @@
 
 <section>
     <!--Tabel User-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" id="kelola-user">
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-user">
       <div class="card">
         <div class="card-header">
-          <h4 class="card-title">Kelola QR-Code Panitia</h4>
+          <h4 class="card-title">User</h4>
         </div>
         <div class="card-body">
           @if (session('sukses'))
@@ -665,27 +664,27 @@
                   <th>Email</th>
                   <th>NIM</th>
                   <th>Kelompok</th>
+                  <th>instagram</th>
+                  <th>Qr code</th>
                   <th>Prodi</th>
-                  <th>No Telepon</th>
-                  <th>Golongan Darah</th>
-                  <th>Instagram</th>
-                  <th>Riwayat Penyakit</th>
+                  <th>Role</th>
                   <th>More</th>
                 </tr>
               </thead>
+              @foreach ($users as $user)
               <tbody>
-                 
+
                 <tr>
-                  <td>1</td>
-                  <td>Adi Sulaksono</td>
-                  <td>adi@gg.com</td>
-                  <td>120140038</td>
-                  <td>Ardhames</td>
-                  <td>Teknik Informatika/td>
-                  <td>6285163735758</td>
-                  <td>O</td>
-                  <td>adislksn</td>
-                  <td>Sehat :)</td>
+                  <td>{{ $loop->iteration }}</td>
+                  <td>{{ $user->nama }}</td>
+                  <td>{{ $user->email }}</td>
+                  <td>{{ $user->nim }}</td>
+                  <td>{{ $user->kelompok }}</td>
+                  <td>{{ $user->instagram }}</td>
+                  <td>qrcode.img</td>
+                  <td>{{ $user->prodis_id }}</td>
+                  <td>{{ $user->roles_id }}</td>
+
                   <td class="manage-row">
                     <a href=" #" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
@@ -703,7 +702,7 @@
                           </div>
                           <div class="modal-body">Apakah anda yakin ingin menghapus data?</div>
                           <div class="modal-footer">
-                            <form action="#" method="POST">
+                            <form action="{{ url('/admin' . '/' .$user->id) }}" method="POST">
                               @method('DELETE')
                               @csrf
                               <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
@@ -715,8 +714,9 @@
                     </div>
                   </td>
                 </tr>
-                 
+
               </tbody>
+              @endforeach
               {{-- link paginate --}}
             </table>
           </div>
@@ -726,7 +726,7 @@
     <!--./Tabel User-->
 
     <!--Tabel QR-Code Panitia-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" id="QR-Code-panitia">
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="QR-Code-panitia">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Kelola QR-Code Panitia</h4>
@@ -754,7 +754,7 @@
                 </tr>
               </thead>
               <tbody>
-                 
+
                 <tr>
                   <td>1</td>
                   <td>Adi Sulaksono</td>
@@ -790,7 +790,7 @@
                     </div>
                   </td>
                 </tr>
-                 
+
               </tbody>
               {{-- link paginate --}}
             </table>
@@ -801,7 +801,7 @@
     <!--./Tabel QR-Code Panitia-->
 
     <!--Tabel QR-Code Maba-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" id="QR-Code-maba">
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="QR-Code-maba">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Kelola Data QR-Code Maba</h4>
@@ -829,7 +829,7 @@
                 </tr>
               </thead>
               <tbody>
-                 
+
                 <tr>
                   <td>1</td>
                   <td>Adi Sulaksono</td>
@@ -865,7 +865,7 @@
                     </div>
                   </td>
                 </tr>
-                 
+
               </tbody>
               {{-- link paginate --}}
             </table>
@@ -874,9 +874,9 @@
       </div>
     </div>
     <!--./Tabel QR-Code Maba-->
-    
+
     <!--Tabel UPT ITERA-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" id="kelola-upt">
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-upt">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Kelola Data UPT ITERA</h4>
@@ -900,14 +900,14 @@
                   <th>Deskripsi</th>
                 </tr>
               </thead>
+              @foreach ($upts as $upt)
               <tbody>
-                 
                 <tr>
-                  <td>1</td>
-                  <td>Adi Sulaksono</td>
-                  <td>Kalem</td>
+                  <td>{{$loop->iteration}}</td>
+                  <td>{{$upt->nama}}</td>
+                  <td>{{$upt->deskripsi}}</td>
                   <td class="manage-row">
-                    <a href=" #" class="edit-button">
+                  <a onclick="openCMS(event, 'edit-upt')" class="nav-link tablinks">
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm  ">
@@ -935,8 +935,9 @@
                     </div>
                   </td>
                 </tr>
-                 
+
               </tbody>
+              @endforeach
               {{-- link paginate --}}
             </table>
           </div>
@@ -944,9 +945,9 @@
       </div>
     </div>
     <!--./Tabel UPT ITERA-->
-    
+
     <!--Tabel Prodi-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" id="kelola-prodi">
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-prodi">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Kelola Data Prodi</h4>
@@ -965,48 +966,35 @@
             <table id="example4" class="display" style="min-width: 845px">
               <thead>
                 <tr>
-                  <th>No</th>
-                  <th>Nama Prodi</th>
-                  <th>Kepala Prodi</th>
-                  <th>Akreditasi</th>
-                  <th>Ruang Prodi</th>
-                  <th>Tahun Berdiri</th>
-                  <th>Jumlah Mahasiswa</th>
-                  <th>Visi</th>
-                  <th>Misi</th>
-                  <th>Logo</th>
-                  <th>Tentang Kami</th>
-                  <th>Prestasi 2020</th>
-                  <th>Prestasi 2021</th>
-                  <th>Prestasi 2022</th>
-                  <th>More</th>
+                    <th>No</th>
+                    <th>Nama Lenkap</th>
+                    <th>Nama Singkat</th>
+                    <th>Visi</th>
+                    <th>Misi</th>
+                    <th>Deskripsi</th>
+                    <th>Kepala Prodi</th>
+                    <th>akreditasi</th>
+                    <th>tahun Berdiri</th>
+                    <th>jumlah Mahasiswa</th>
+                    <th>diagram alir</th>
+                    <th>More</th>
                 </tr>
               </thead>
+              @foreach ($prodis as $prodi)
               <tbody>
-                 
+
                 <tr>
-                  <td>1</td>
-                  <td>Teknik Informatika</td>
-                  <td>Fitra Ilyasa S.Kom, Masuk.Baskom</td>
-                  <td>A</td>
-                  <td>Gedung C Lt.2</td>
-                  <td>2030</td>
-                  <td>3.212</td>
-                  <td>Visi</td>
-                  <td>Misi</td>
-                  <td><img src=" #" widht="100" height="100"/></td>
-                  <td>About Us</td>
-                  <td>
-                    -bangun reaktor nuklir
-                    -hacker handal
-                  </td>
-                  <td>
-                    -Cabang Apple bagian Sumatera
-                    -Cabang Microsoft bagian Sumatera
-                  </td>
-                  <td>
-                    -Joki tes karyawan google
-                  </td>
+                    <td>{{ $loop->iteration }}</td>
+                    <td>{{ $prodi->namaLengkap }}</td>
+                    <td>{{ $prodi->namaSingkat }}</td>
+                    <td>{{ $prodi->visi }}</td>
+                    <td>{{ $prodi->misi }}</td>
+                    <td>{{ $prodi->deskripsi }}</td>
+                    <td>{{ $prodi->kepalaProdi }}</td>
+                    <td>{{ $prodi->akreditasi }}</td>
+                    <td>{{ $prodi->tahunBerdiri }}</td>
+                    <td>{{ $prodi->jumlahMahasiswa }}</td>
+                    <td><img src=" #" widht="100" height="100"/></td>
                   <td class="manage-row">
                     <a href=" #" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
@@ -1036,8 +1024,9 @@
                     </div>
                   </td>
                 </tr>
-                 
+
               </tbody>
+              @endforeach
               {{-- link paginate --}}
             </table>
           </div>
@@ -1045,9 +1034,9 @@
       </div>
     </div>
     <!--./Tabel Prodi-->
-    
+
     <!--Tabel Himpunan-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" id="kelola-himpunan">
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-himpunan">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Kelola Data Himpunan</h4>
@@ -1069,6 +1058,10 @@
                   <th>No</th>
                   <th>Nama Singkat</th>
                   <th>Nama Lengkap</th>
+                  <th>Visi</th>
+                  <th>Misi</th>
+                  <th>Deskripsi</th>
+                  <th>Kode Warna</th>
                   <th>Pembina</th>
                   <th>Ketua Himpunan</th>
                   <th>Logo</th>
@@ -1078,18 +1071,23 @@
                   <th>More</th>
                 </tr>
               </thead>
+              @foreach ($himpunans as $himpunan)
               <tbody>
-                 
+
                 <tr>
-                  <td>1</td>
-                  <td>HMIF</td>
-                  <td>Himpunan Mahasiswa Informatika</td>
-                  <td>Fitra Sindi</td>
-                  <td>Fitra Ilyasa</td>
-                  <td><img src=" #" widht="100" height="100"/></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>{{ $loop->iteration }}</td>
+                  <td>{{ $himpunan->namaSingkat }}</td>
+                  <td>{{ $himpunan->namaLengkap }}</td>
+                  <td>{{ $himpunan->visi }}</td>
+                  <td>{{ $himpunan->misi }}</td>
+                  <td>{{ $himpunan->deskripsi }}</td>
+                  <td>{{ $himpunan->kodeWarna }}</td>
+                  <td>{{ $himpunan->pembina }}</td>
+                  <td>{{ $himpunan->ketuaHimpunan }}</td>
+                  <td>{{ $himpunan->tahunBerdiri }}</td>
+                  <td>{{ $himpunan->logo }}</td>
+                  <td>{{ $himpunan->filosofiLogo }}</td>
+                  <td>{{ $himpunan->tahunBerdiri }}</td>
                   <td class="manage-row">
                     <a href=" #" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
@@ -1119,8 +1117,9 @@
                     </div>
                   </td>
                 </tr>
-                 
+
               </tbody>
+              @endforeach
               {{-- link paginate --}}
             </table>
           </div>
@@ -1128,9 +1127,9 @@
       </div>
     </div>
     <!--./Tabel Himpunan-->
-    
+
     <!--Tabel Kabinet-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" id="kelola-kabinet">
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-kabinet">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Kelola Data Kabinet KM ITERA</h4>
@@ -1150,10 +1149,13 @@
               <thead>
                 <tr>
                   <th>No</th>
-                  <th>Pembina</th>
+                  <th>Nama</th>
+                  <th>Deskripsi</th>
                   <th>Presiden Mahasiswa</th>
                   <th>Sekretaris Jenderal</th>
-                  <th>Dies Natalis</th>
+                  <th>Organigram</th>
+                  <th>Logo</th>
+                  <th>Filosopi Logo</th>
                   <th>Website</th>
                   <th>Facebook</th>
                   <th>Telegram</th>
@@ -1166,13 +1168,18 @@
                   <th>More</th>
                 </tr>
               </thead>
+              @foreach ($kabinets as $kabinet)
               <tbody>
-                 
+
                 <tr>
-                  <td>1</td>
-                  <td>Fitra Tampan</td>
-                  <td>Fitra lagi</td>
-                  <td>Fitra Semua</td>
+                  <td>{{ $loop->iteration }}</td>
+                  <td>{{ $kabinet->nama }}</td>
+                  <td>{{ $kabinet->deskripsi }}</td>
+                  <td>{{ $kabinet->presiden }}</td>
+                  <td>{{ $kabinet->sekjen }}</td>
+                  <td>{{ $kabinet->organigram }}</td>
+                  <td>{{ $kabinet->logo }}</td>
+                  <td>{{ $kabinet->filosofiLogo }}</td>
                   <td>dies natalis</td>
                   <td>https://km.itera.ac.id</td>
                   <td>https://facebook.com</td>
@@ -1212,8 +1219,9 @@
                     </div>
                   </td>
                 </tr>
-                 
+
               </tbody>
+              @endforeach
               {{-- link paginate --}}
             </table>
           </div>
@@ -1223,7 +1231,7 @@
     <!--./Tabel Kabinet-->
 
     <!--Tabel Senat-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" id="kelola-senat">
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-senat">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Kelola Data Senat KM ITERA</h4>
@@ -1243,35 +1251,27 @@
               <thead>
                 <tr>
                   <th>No</th>
-                  <th>Pembina</th>
-                  <th>Ketua Senat</th>
-                  <th>Dies Natalis</th>
-                  <th>Website</th>
+                  <th>ketua</th>
+                  <th>deskripsi</th>
+                  <th>website</th>
+                  <th>youtube</th>
                   <th>Facebook</th>
                   <th>Telegram</th>
                   <th>Youtube</th>
                   <th>Instagram</th>
-                  <th>Visi</th>
-                  <th>Misi</th>
-                  <th>Organigram</th>
                   <th>More</th>
                 </tr>
               </thead>
+              @foreach ($senats as $senat)
               <tbody>
-                 
+
                 <tr>
-                  <td>1</td>
-                  <td>Fitra Tampan</td>
-                  <td>Fitra lagi</td>
-                  <td>dies natalis</td>
-                  <td>https://km.itera.ac.id</td>
-                  <td>https://facebook.com</td>
-                  <td>https://te.me</td>
-                  <td>https://youtu.be</td>
-                  <td>https://instagram.com</td>
-                  <td>Visi</td>
-                  <td>Misi</td>
-                  <td><img src=" #" widht="100" height="100"/></td>
+                  <td>{{ $loop->iteration }}</td>
+                  <td>{{ $senat->ketua }}</td>
+                  <td>{{ $senat->deskripsi }}</td>
+                  <td>{{ $senat->website }}</td>
+                  <td>{{ $senat->youtube }}</td>
+                  <td>{{ $senat->instagram }}</td>
                   <td class="manage-row">
                     <a href=" #" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
@@ -1301,8 +1301,9 @@
                     </div>
                   </td>
                 </tr>
-                 
+
               </tbody>
+              @endforeach
               {{-- link paginate --}}
             </table>
           </div>
@@ -1312,7 +1313,7 @@
     <!--./Tabel Senat-->
 
     <!--Tabel UKM/Komunitas-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" id="kelola-ukm">
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-ukm">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Kelola Data UKM/Komunitas</h4>
@@ -1332,7 +1333,11 @@
               <thead>
                 <tr>
                   <th>No</th>
-                  <th>Pembina</th>
+                  <th>Nama Lengkap</th>
+                  <th>Nama Singkat</th>
+                  <th>visi </th>
+                  <th>misi</th>
+                  <th>pembina</th>
                   <th>Ketua Umum</th>
                   <th>Dies Natalis</th>
                   <th>Logo</th>
@@ -1344,15 +1349,19 @@
                   <th>More</th>
                 </tr>
               </thead>
+              @foreach ($ukms as $ukm)
               <tbody>
-                 
                 <tr>
-                  <td>1</td>
-                  <td>Fitra Tampan</td>
-                  <td>Fitra lagi</td>
-                  <td>dies natalis</td>
+                  <td>{{$loop->iteration}}</td>
+                  <td>{{ $ukm->namaLengkap}}</td>
+                  <td>{{ $ukm->namaSingkat}}</td>
+                  <td>{{ $ukm->visi}}</td>
+                  <td>{{ $ukm->misi}}</td>
+                  <td>{{ $ukm->pembina}}</td>
+                  <td>{{ $ukm->ketuaUmum}}</td>
+                  <td>{{ $ukm->tahunBerdiri}}</td>
                   <td><img src=" #" widht="100" height="100"/></td>
-                  <td>Filosofi</td>
+                  <td>{{ $ukm->filosofiLogo}}</td>
                   <td>aw32#$@aiwjd543</td>
                   <td><img src=" #" widht="100" height="100"/></td>
                   <td><img src=" #" widht="100" height="100"/></td>
@@ -1386,10 +1395,12 @@
                     </div>
                   </td>
                 </tr>
-                 
+
               </tbody>
+              @endforeach
               {{-- link paginate --}}
             </table>
+
           </div>
         </div>
       </div>
@@ -1397,7 +1408,7 @@
     <!--./Tabel UKM/Komunitas-->
 
     <!--Tabel Funfact-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" id="kelola-funfact">
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-funfact">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Kelola Data Funfact</h4>
@@ -1420,11 +1431,12 @@
                   <th>Deskripsi</th>
                 </tr>
               </thead>
+              @foreach ($funfacts as $funfact)
               <tbody>
-                 
+
                 <tr>
-                  <td>1</td>
-                  <td>Kalem</td>
+                  <td>{{ $loop->iteration }}</td>
+                  <td>{{ $funfact->isi }}</td>
                   <td class="manage-row">
                     <a href=" #" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
@@ -1454,8 +1466,9 @@
                     </div>
                   </td>
                 </tr>
-                 
+
               </tbody>
+              @endforeach
               {{-- link paginate --}}
             </table>
           </div>
@@ -1463,9 +1476,9 @@
       </div>
     </div>
     <!--./Tabel Funfact-->
-    
+
     <!--Tabel Begalin-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" id="kelola-begalin">
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-begalin">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Kelola Data Begalin</h4>
@@ -1485,16 +1498,17 @@
               <thead>
                 <tr>
                   <th>No</th>
-                  <th>Artikel Singkat</th>
-                  <th>Artikel Lengkap</th>
+                  <th>judul</th>
+                  <th>isi</th>
                 </tr>
               </thead>
+              @foreach ($begalins as $begalin)
               <tbody>
-                 
+
                 <tr>
-                  <td>1</td>
-                  <td>Fitra adalah makhluk perjaka yang mencari cinta meski ada Sindi...</td>
-                  <td>Fitra adalah makhluk perjaka yang mencari cinta meski ada Sindi. Ditemukan di daerah Garut spesies ini disebut Orang Utan Asgar (Asli Garut)</td>
+                  <td>{{ $loop->iteration }}</td>
+                  <td>{{ $begalin->judul }}</td>
+                  <td>{{ $begalin->isi }}</td>
                   <td class="manage-row">
                     <a href=" #" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
@@ -1524,8 +1538,9 @@
                     </div>
                   </td>
                 </tr>
-                 
+
               </tbody>
+              @endforeach
               {{-- link paginate --}}
             </table>
           </div>
@@ -1535,7 +1550,7 @@
     <!--./Tabel Begalin-->
 
     <!--Tabel Kamus Gaul-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" id="kelola-kamus">
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-kamus">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Kelola Data Kamus Gaul</h4>
@@ -1559,12 +1574,13 @@
                   <th>Arti Kamus</th>
                 </tr>
               </thead>
+              @foreach ($kamusgauls as $kamusgaul)
               <tbody>
-                 
+
                 <tr>
-                  <td>1</td>
-                  <td>Fitri</td>
-                  <td>Nama malam Fitra</td>
+                  <td>{{ $loop->iteration }}</td>
+                  <td>{{ $kamusgaul->gaul }}</td>
+                  <td>{{  $kamusgaul->asli }}</td>
                   <td class="manage-row">
                     <a href=" #" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
@@ -1594,8 +1610,9 @@
                     </div>
                   </td>
                 </tr>
-                 
+
               </tbody>
+              @endforeach
               {{-- link paginate --}}
             </table>
           </div>
@@ -1605,7 +1622,7 @@
     <!--./Tabel Kamus Gaul-->
 
     <!--Tabel Redeem Code-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" id="kelola-redeem">
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-redeem">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Kelola Data Redeem Code</h4>
@@ -1631,7 +1648,7 @@
                 </tr>
               </thead>
               <tbody>
-                 
+
                 <tr>
                   <td>1</td>
                   <td>Patung Fitra</td>
@@ -1666,7 +1683,7 @@
                     </div>
                   </td>
                 </tr>
-                 
+
               </tbody>
               {{-- link paginate --}}
             </table>
@@ -1677,7 +1694,7 @@
     <!--./Tabel Redeem Code-->
 
     <!--Tabel Tebak Bangunan-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" id="kelola-tebak">
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-tebak">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Kelola Data Tebak Bangunan</h4>
@@ -1703,7 +1720,7 @@
                 </tr>
               </thead>
               <tbody>
-                 
+
                 <tr>
                   <td>1</td>
                   <td>Patung Fitra</td>
@@ -1738,18 +1755,18 @@
                     </div>
                   </td>
                 </tr>
-                 
+
               </tbody>
               {{-- link paginate --}}
             </table>
           </div>
         </div>
-      </div>
-    </div>
+                </div>
+                    </div>
     <!--./Tabel Tebak Bangunan-->
 
     <!--Tabel Link Gform-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" id="kelola-gform">
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-gform">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Kelola Data gform</h4>
@@ -1773,7 +1790,7 @@
                 </tr>
               </thead>
               <tbody>
-                 
+
                 <tr>
                   <td>1</td>
                   <td>https://forms.gle</td>
@@ -1806,7 +1823,7 @@
                     </div>
                   </td>
                 </tr>
-                 
+
               </tbody>
               {{-- link paginate --}}
             </table>
@@ -1817,7 +1834,7 @@
     <!--./Tabel Link Gform-->
 
     <!--Tabel Booklet-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" id="kelola-booklet">
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-booklet">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Kelola Data Booklet</h4>
@@ -1842,7 +1859,7 @@
                 </tr>
               </thead>
               <tbody>
-                 
+
                 <tr>
                   <td>1</td>
                   <td>Barang bawaan maba</td>
@@ -1876,7 +1893,7 @@
                     </div>
                   </td>
                 </tr>
-                 
+
               </tbody>
               {{-- link paginate --}}
             </table>
@@ -1885,30 +1902,41 @@
       </div>
     </div>
     <!--./Tabel Booklet-->
-    
+
     <!--Scanner Panitia-->
-    <div class="tabcontents" id="scanner-panitia">
+    <div class="tabcontents" style="display: none"  id="scanner-panitia">
       scanner panitia blm fix butuh href
     </div>
     <!--./Scanner Panitia-->
 
     <!--Scanner Maba-->
-    <div class="tabcontents" id="scanner-maba">
+    <div class="tabcontents" style="display: none"  id="scanner-maba">
       scanner maba blm fix butuh href
     </div>
     <!--./Scanner Maba-->
 </section>
 
 <!--./READ & DELETE DATA-->
-    
+
 <!--------------------------------------------------------------------------------->
 
 <!--UPDATE DATA-->
 
 <section>
 
-</section>    
+</section>
 
 <!--./UPDATE DATA-->
-  
+
+@endsection
+
+@section('script')
+
+<script>
+    function editData() {
+        document.getElementById('nama-upt').disabled = false;
+        document.getElementById('deskripsi-upt').disabled = false;
+    }
+</script>
+
 @endsection

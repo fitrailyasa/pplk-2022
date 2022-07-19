@@ -28,7 +28,7 @@
 
 body {
   font-family: var(--font-family-body) !important;
-  background-image: url(../assets/bacground-2.png);
+  background-image: url(../assets/background-2.png);
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;

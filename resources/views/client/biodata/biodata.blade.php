@@ -5,7 +5,6 @@
 
 @section('style')
     <!-- STYLES -->
-    <link rel="stylesheet" href="{{ asset('assets/css/GANTI.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/biodata.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -101,17 +100,6 @@
 
 @section('script')
     <!-- SCRIPTS -->
-    <script type="text/javascript">
-        let nav = document.querySelector('#navbar-desktop');
-
-        window.addEventListener('scroll', function () {
-            if (window.pageYOffset > 50) {
-                nav.classList.add('background-gradient', 'shadow');
-            } else {
-                nav.classList.remove('background-gradient', 'shadow');
-            }
-        });
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>

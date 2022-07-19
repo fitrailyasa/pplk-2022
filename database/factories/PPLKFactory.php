@@ -14,6 +14,9 @@ class PPLKFactory extends Factory
     public function definition()
     {
         return [
+            'logo'=>$this->faker->text(10),
+            'visi'=>$this->faker->text(10),
+            'misi'=>$this->faker->text(20)
             //
         ];
     }

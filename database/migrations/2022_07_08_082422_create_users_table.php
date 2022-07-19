@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->string('qrCode');
             $table->integer('prodis_id')->nullable();
             $table->foreignId('roles_id')->constrained('roles')->onDelete('cascade')->onUpdate('cascade');
+            $table->timestamps();
         });
     }
 

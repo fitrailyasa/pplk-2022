@@ -1,5 +1,5 @@
-    <!-- Navbar -->
-    <nav class="main-header navbar navbar-expand navbar-white navbar-light" id="main-navbar">
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light" id="main-navbar">
     <!-- Left navbar links -->
     <ul class="navbar-nav align-items-center">
         <li class="nav-item">
@@ -40,7 +40,7 @@
       </li>
     </ul>
   </nav>
-  <!-- /.navbar -->
+  <!-- ./navbar -->
 
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4" id="left-sidebar">
@@ -446,3 +446,4 @@
     </div>
     <!-- /.sidebar -->
   </aside>
+  <!-- ./Main Sidebar Container -->

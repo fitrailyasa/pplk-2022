@@ -3,7 +3,7 @@
 namespace App\Policies;
 
 use App\Models\User;
-use App\Models\begalin;
+use App\Models\Begalin;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class BegalinPolicy

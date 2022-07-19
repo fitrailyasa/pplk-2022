@@ -6,7 +6,7 @@ use App\Models\Upt;
 use App\Http\Requests\StoreUptRequest;
 use App\Http\Requests\UpdateUptRequest;
 
-class UptController extends Controller
+class ClientUptController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,8 @@ class UptController extends Controller
      */
     public function index()
     {
-        //
+        $upts = Upt::all();
+        return view('client.upt', compact('upts'));
     }
 
     /**

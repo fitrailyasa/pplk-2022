@@ -1,7 +1,11 @@
-.jumbotron {
-  background-image: url(../pplk.png);
-  background-size: 100% 100%;
-  background-position: center;
+body {
+  background-image: url(../background-2.png) !important;
+  background-size: cover;
+  background-position: 50% 5%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  box-shadow: inset rgba(41, 1, 53, 0.66) 0px 1000rem 100px;
+  width: 100%;
 }
 
 .upt-card {
@@ -25,6 +29,6 @@
 
 @media screen and (max-width:930px) {
   #content {
-      margin-bottom: 6rem;
+      margin-bottom: 4rem;
   }
 }
