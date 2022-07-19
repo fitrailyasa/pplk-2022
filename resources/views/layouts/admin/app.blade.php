@@ -7,7 +7,7 @@
         <meta name="description" content="DESKRIPSI" />
         <meta name="keywords" content="KATA KUNCI" />
         <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="author" content="ARDHAMES" />
+        <meta name="author" content="Fitra Ilyasa" />
         <meta name="copyright" content="PPLK 2022" />
         <meta name="robots" content="follow" />
         <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -86,11 +86,13 @@
           evt.currentTarget.className += " active";
         }
       </script>
+      @yield('script')
 
       <!-- jQuery -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       <!-- AdminLTE App js-->
       <script src="{{ asset('assets/js/adminlte.js') }}"></script>
+      <script src="{{ asset('assets/js/adminlte.js.map') }}"></script>
       <script src="{{ asset('assets/js/bootstrap.js') }}"></script>
     </body>
 </html>

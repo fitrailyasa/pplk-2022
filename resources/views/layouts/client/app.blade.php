@@ -7,7 +7,7 @@
         <meta name="description" content="DESKRIPSI" />
         <meta name="keywords" content="KATA KUNCI" />
         <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="author" content="ARDHAMES" />
+        <meta name="author" content="Fitra Ilyasa" />
         <meta name="copyright" content="PPLK 2022" />
         <meta name="robots" content="follow" />
         <meta name="csrf-token" content="{{ csrf_token() }}">

@@ -1,73 +1,49 @@
-
-
 body{
-    /* background-color: var(--bawaan-gradient-2); */
-    padding-bottom: 500px;
-    background: rgb(11,10,60);
-    background: linear-gradient(90deg, rgba(11,10,60,1) 0%, rgba(50,25,67,1) 100%)!important;
+  background-image: url(../background-2.png) !important;
+  background-size: cover !important;
+  background-position: 50% 5%;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed;
+  padding-bottom: 6rem;
+  box-shadow: inset rgba(41, 1, 53, 0.66) 0px 1000rem 100px;
+  width: 100%;
 }
-
-.box{
-    height: 10rem;
-    width: 100%;
-
-}
-.box .box-img{
-    height: 100%;
-    width: 10rem;
-    object-fit: cover;
-    object-position: 50% 0%;
-}
-
-.tombol{
-    position: inherit;
-    border: none;
-    border-radius: 15px;
-    width: 12rem;
-    height: 3.5rem;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    cursor: pointer;
-    left: 37%;
-    bottom: -15px;
-    text-align: center;
-}
-
-.tombol{
-    position: inherit;
-    border: none;
-    border-radius: 15px;
-    width: 12rem;
-    height: 3.5rem;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    cursor: pointer;
-    left: 37%;
-    bottom: -15px;
-    text-align: center;
-}
-
-.tombol:hover{
-    transform: translate(-35px, 0px);
-    color: #000;
-}
-
 
 p, h3, h4, h5, h6 {
     line-height: 1em;
-    text-align: center;
+    /* text-align: center; */
     color: #fff;
 }
 
 h2{
     line-height: 1em;
-    text-align: center;
+    /* text-align: center; */
     color: #fff;
     padding-top: 20px;
+}
+
+.logo1{
+  width: 90% !important;
+}
+
+.teks2{
+  font-size: 3rem;
+}
+
+.teks3{
+  font-size: 2.5rem;
+}
+
+.teks4{
+  font-size: 2rem;
+}
+
+.teks5{
+  font-size: 1.75rem;
+}
+
+.teks6{
+  font-size: 1.5rem;
 }
 
 .details{
@@ -86,11 +62,14 @@ h2{
 .details h2{
     font-size: 22px;
     color: #fff;
+    text-align: left;
 }
 .details p{
     font-size: 16px;
     color: #fff;
+    text-align: left;
 }
+
 
 .slide-container{
     max-width: 1120px;
@@ -175,10 +154,48 @@ h2{
     cursor: pointer;
     transition: all 0.3s ease;
   }
+
+  .videoyoutube {
+    width: 75%;
+    height: 30rem;
+  }
+
+  .col {
+    justify-content: center;
+    display: flex;
+  }
+
+  .buttons{
+    border: none;
+    display: inline-block;
+    font-family:var(--font-family-body) ;
+    font-size: 4rem;
+    color: #FFF;
+    align-content: center;
+    padding: 15px 8px;
+    background-color: #14053d;
+    border-radius: 12rem;
+    height: 5rem;
+    width: 5rem;
+    cursor: pointer;
+    justify-content: center;
+    display: flex;
+    transition: all 0.3s ease;
+  }
+
+  .buttons:hover .icon {
+    transform: translate(0, -20px);
+  }
+
   .button:hover{
-    background: #db13db;
+    background: #860686;
   }
   
+  .buttons:hover{
+    background: #5e0c72;
+    color: white;
+  }
+
   .swiper-navBtn{
     color: #db13db;
     transition: color 0.3s ease;
@@ -204,6 +221,16 @@ h2{
     background-color: #db13db;
   }
   
+  .sosmed {
+    text-decoration: none;
+  }
+
+  .sosmed :hover {
+    text-decoration: none;
+    color: white;
+  }
+
+
   @media screen and (max-width: 768px) {
     .slide-content{
       margin: 0 10px;
@@ -212,4 +239,33 @@ h2{
       display: none;
     }
   }
-  
+
+  @media screen and (max-width:930px) {
+    .teks1 {
+      text-align: center;
+    }
+    .teks5, .teks6 {
+      padding-left: 1.5rem;
+    }
+    .buttons {
+      margin-top: 2rem;
+      margin-bottom: 6rem;
+      margin-left: auto;
+    }
+    #terakhir {
+      margin-bottom: 6rem;
+  }
+    .videoyoutube {
+      height: 15rem;
+      width: 25rem;
+  }
+    .teks2, .teks5 {
+      font-size: 1.5rem;
+    }
+    .logo1{
+      width: 45% !important;
+    }
+  }
+
+  @media screen and (max-width:570px) {
+  }
