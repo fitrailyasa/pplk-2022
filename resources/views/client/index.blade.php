@@ -367,8 +367,8 @@
                     <p>BEGALIN</p>
                     <p class="akronim-begalin">BELAJAR GALI INFORMASI</p>
                 </div>
+                @foreach ($begalins as $begalin )
                 <div class="begalin-wraper owl-carousel owl-theme">
-@foreach ($begalins as $begalin )
                     <div class="-begalin-card">
                         <div class="begalin-content">
                             <p> {{ $begalin->judul }}</p>
@@ -394,22 +394,22 @@
                         <p>{{ $begalin ->isi }}</p>
                     </div>
                 </div>
-@endforeach
                 <div class="modal-footer justify-content-start">
                     <!-- Tagline PPLK 2022 -->
                     <!-- Copyright href ke page Our Team -->
                     <div class="text-start">
                         <strong >Copyright &copy; 2022 <a href="#" class=" text-decoration-none">IMTEK PPLK-2022</a>.</strong> All rights reserved.
                     </div>
+                    @endforeach
 
                     <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Understood</button> -->
                 </div>
             </div>
-            </div>
         </div>
-        <!-- end modal begalin -->
-
+    </div>
+    <!-- end modal begalin -->
+    
         <!-- medpatr -->
         <div class="container-fluid medpart padding-top-bottom">
             <div class="wrapper">
