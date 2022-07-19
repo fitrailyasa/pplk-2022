@@ -33,14 +33,14 @@
                                         <img class="opacity-100 rounded-3" src="{{ asset('assets/media/alley 5.png') }}" alt="">
                                     </div>
                                 </div>
-                            </div> 
+                            </div>
                         </div>
-                    </div>    
+                    </div>
                 </div>
             </div>
           </div>
         </div>
-      </div> 
+      </div>
     <!-- end sponsor modal -->
 
     <div class="conten">
@@ -59,9 +59,9 @@
                 </div>
                 <div class="text-qoute">
                     <p>Ayo Menjelajah, Sekarang!</p>
-                </div>   
+                </div>
             </div>
-            
+
         </div>
 
 
@@ -72,7 +72,7 @@
                     <div class="d-flex justify-content-center">
                         <img class="mt-md-5 maskot maskot-awal" src="{{ asset('assets/space-cat.png') }}" alt="">
                     </div>
-                    
+
                 </div>
                 <div class="col-lg-6 col-md-7">
                     <div class="row g-2 justify-content-around">
@@ -86,8 +86,8 @@
                                         <path d="M65.819 169.505C46.8919 169.505 31.5013 154.109 31.5013 135.182C31.5013 133.073 29.793 131.37 27.6836 131.37C25.5794 131.37 23.8711 133.073 23.8711 135.182C23.8711 158.312 42.6888 177.13 65.819 177.13C67.9232 177.13 69.6315 175.427 69.6315 173.318C69.6315 171.208 67.9232 169.505 65.819 169.505Z" fill="black"/>
                                         <path d="M65.819 192.38C50.5378 192.38 36.1732 186.427 25.3711 175.625C14.569 164.823 8.61589 150.458 8.62109 135.182C8.62109 133.078 6.91276 131.37 4.80859 131.37C2.70443 131.37 0.996094 133.073 0.996094 135.182C0.996094 152.5 7.73568 168.776 19.9805 181.021C32.2253 193.265 48.5013 200.005 65.819 200.005C67.9232 200.005 69.6315 198.302 69.6315 196.193C69.6315 194.083 67.9232 192.38 65.819 192.38Z" fill="black"/>
                                         </svg>
-                                        
-                                    
+
+
                                     <h1 class="link-tilte">JURUSAN</h1>
                                 </div>
                             </div>
@@ -118,8 +118,8 @@
                                         <path d="M90.0365 70.5674H85.1667C83.8281 70.5674 82.7344 71.6611 82.7344 72.9997C82.7344 74.3382 83.8281 75.432 85.1667 75.432H90.0365C91.375 75.432 92.4688 74.3382 92.4688 72.9997C92.4688 71.6611 91.375 70.5674 90.0365 70.5674Z" fill="black"/>
                                         <path d="M68.1354 36.4998H73C74.3385 36.4998 75.4323 35.4061 75.4323 34.0675C75.4323 32.729 74.3385 31.6353 73 31.6353H68.1354C66.7917 31.6353 65.7031 32.729 65.7031 34.0675C65.7031 35.4061 66.7917 36.4998 68.1354 36.4998Z" fill="black"/>
                                         </svg>
-                                        
-                                    
+
+
                                     <h1 class="link-tilte">PRODI</h1>
                                 </div>
                             </div>
@@ -139,7 +139,7 @@
                                         <path d="M125.497 114.573H117.144C114.96 114.573 112.866 115.44 111.323 116.984C109.779 118.527 108.912 120.621 108.912 122.805V126.987C108.912 127.507 109.118 128.006 109.486 128.373C109.853 128.741 110.352 128.947 110.872 128.947H131.769C132.289 128.947 132.787 128.741 133.155 128.373C133.522 128.006 133.729 127.507 133.729 126.987V122.816C133.73 121.734 133.519 120.663 133.106 119.662C132.693 118.662 132.087 117.754 131.322 116.988C130.557 116.222 129.649 115.615 128.65 115.2C127.65 114.786 126.579 114.573 125.497 114.573V114.573Z" fill="black"/>
                                         <path d="M47.4898 89.7475C48.0096 89.7475 48.5081 89.541 48.8757 89.1735C49.2433 88.8059 49.4498 88.3074 49.4498 87.7876V81.9076H82.7695V87.7876C82.7695 88.3074 82.976 88.8059 83.3435 89.1735C83.7111 89.541 84.2096 89.7475 84.7295 89.7475C85.2493 89.7475 85.7478 89.541 86.1154 89.1735C86.4829 88.8059 86.6894 88.3074 86.6894 87.7876V81.9076H120.009V87.7876C120.009 88.3074 120.216 88.8059 120.583 89.1735C120.951 89.541 121.449 89.7475 121.969 89.7475C122.489 89.7475 122.987 89.541 123.355 89.1735C123.723 88.8059 123.929 88.3074 123.929 87.7876V79.9476C123.929 79.4278 123.723 78.9293 123.355 78.5617C122.987 78.1941 122.489 77.9876 121.969 77.9876H86.6894V72.1077C86.6894 71.5879 86.4829 71.0893 86.1154 70.7218C85.7478 70.3542 85.2493 70.1477 84.7295 70.1477C84.2096 70.1477 83.7111 70.3542 83.3435 70.7218C82.976 71.0893 82.7695 71.5879 82.7695 72.1077V77.9876H47.4898C46.9699 77.9876 46.4714 78.1941 46.1039 78.5617C45.7363 78.9293 45.5298 79.4278 45.5298 79.9476V87.7876C45.5298 88.3074 45.7363 88.8059 46.1039 89.1735C46.4714 89.541 46.9699 89.7475 47.4898 89.7475Z" fill="black"/>
                                         </svg>
-                                    
+
                                     <h1 class="link-tilte">HIMPUNAN</h1>
                                 </div>
                             </div>
@@ -159,7 +159,7 @@
                                         <path d="M122.635 98.875L124.974 61.6719C124.974 56.1094 120.438 51.5625 114.901 51.5625H84.8229C79.2813 51.5625 74.75 56.1094 74.75 61.6719L77.0833 98.875C77.0833 103.833 80.6927 107.979 85.401 108.818L87.0104 142.339C87.0104 146.552 90.4479 150 94.651 150H105.073C109.271 150 112.708 146.552 112.708 142.339L114.318 108.818C119.031 107.979 122.635 103.833 122.635 98.875Z" fill="black"/>
                                         <path d="M115.04 32.8125C115.04 41.224 108.243 48.0469 99.8581 48.0469C91.4727 48.0469 84.6758 41.224 84.6758 32.8125C84.6758 24.401 91.4727 17.5781 99.8581 17.5781C108.243 17.5781 115.04 24.401 115.04 32.8125Z" fill="black"/>
                                         </svg>
-                                        
+
                                         <h1 class="link-tilte m-4">UKM</h1>
                                 </div>
                             </div>
@@ -216,8 +216,8 @@
                                 <path d="M65.819 169.505C46.8919 169.505 31.5013 154.109 31.5013 135.182C31.5013 133.073 29.793 131.37 27.6836 131.37C25.5794 131.37 23.8711 133.073 23.8711 135.182C23.8711 158.312 42.6888 177.13 65.819 177.13C67.9232 177.13 69.6315 175.427 69.6315 173.318C69.6315 171.208 67.9232 169.505 65.819 169.505Z" fill="black"/>
                                 <path d="M65.819 192.38C50.5378 192.38 36.1732 186.427 25.3711 175.625C14.569 164.823 8.61589 150.458 8.62109 135.182C8.62109 133.078 6.91276 131.37 4.80859 131.37C2.70443 131.37 0.996094 133.073 0.996094 135.182C0.996094 152.5 7.73568 168.776 19.9805 181.021C32.2253 193.265 48.5013 200.005 65.819 200.005C67.9232 200.005 69.6315 198.302 69.6315 196.193C69.6315 194.083 67.9232 192.38 65.819 192.38Z" fill="black"/>
                                 </svg>
-                                
-                            
+
+
                             <h1 class="link-tilte">JURUSAN</h1>
                     </div>
                 </div>
@@ -246,8 +246,8 @@
                                 <path d="M90.0365 70.5674H85.1667C83.8281 70.5674 82.7344 71.6611 82.7344 72.9997C82.7344 74.3382 83.8281 75.432 85.1667 75.432H90.0365C91.375 75.432 92.4688 74.3382 92.4688 72.9997C92.4688 71.6611 91.375 70.5674 90.0365 70.5674Z" fill="black"/>
                                 <path d="M68.1354 36.4998H73C74.3385 36.4998 75.4323 35.4061 75.4323 34.0675C75.4323 32.729 74.3385 31.6353 73 31.6353H68.1354C66.7917 31.6353 65.7031 32.729 65.7031 34.0675C65.7031 35.4061 66.7917 36.4998 68.1354 36.4998Z" fill="black"/>
                             </svg>
-                                
-                            
+
+
                             <h1 class="link-tilte">PRODI</h1>
                     </div>
                 </div>
@@ -282,8 +282,8 @@
                             <path d="M122.635 98.875L124.974 61.6719C124.974 56.1094 120.438 51.5625 114.901 51.5625H84.8229C79.2813 51.5625 74.75 56.1094 74.75 61.6719L77.0833 98.875C77.0833 103.833 80.6927 107.979 85.401 108.818L87.0104 142.339C87.0104 146.552 90.4479 150 94.651 150H105.073C109.271 150 112.708 146.552 112.708 142.339L114.318 108.818C119.031 107.979 122.635 103.833 122.635 98.875Z" fill="black"/>
                             <path d="M115.04 32.8125C115.04 41.224 108.243 48.0469 99.8581 48.0469C91.4727 48.0469 84.6758 41.224 84.6758 32.8125C84.6758 24.401 91.4727 17.5781 99.8581 17.5781C108.243 17.5781 115.04 24.401 115.04 32.8125Z" fill="black"/>
                             </svg>
-                                
-                            
+
+
                             <h1 class="link-tilte">UKM</h1>
                     </div>
                 </div>
@@ -335,27 +335,27 @@
                         </div>
 
                         <div class="mt-5 p-3 col-10 g-3 carousel-contaner owl-carousel">
-                        
+
                             <div class="item">
                                 <iframe class="carousel-card" src="https://www.youtube.com/embed/jiUxHm9l1KY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                
+
                             </div>
                             <div class="item">
                                 <iframe class="carousel-card" src="https://www.youtube.com/embed/jiUxHm9l1KY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                
+
                             </div>
                             <div class="item">
                                 <iframe class="carousel-card" src="https://www.youtube.com/embed/jiUxHm9l1KY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                
+
                             </div>
-                        
-                        
+
+
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <img class="maskot"src="{{ asset('assets/space-cat.png') }}" alt="">
-                    
+
                 </div>
             </div>
         </div>
@@ -368,39 +368,19 @@
                     <p class="akronim-begalin">BELAJAR GALI INFORMASI</p>
                 </div>
                 <div class="begalin-wraper owl-carousel owl-theme">
+@foreach ($begalins as $begalin )
                     <div class="-begalin-card">
                         <div class="begalin-content">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt doloremque unde accusamus velit suscipit vel impedit magnam! Debitis consectetur commodi, esse distinctio dignissimos, accusantium, fuga quod eius porro cum ullam odio saepe! Unde, ducimus iusto earum ut itaque ipsum. Recusandae laboriosam quis sit, magni quia itaque est beatae?</p>
-                            
+                            <p> {{ $begalin->judul }}</p>
                             <button type="button" class="btn background-gradient mx-auto my-4" data-bs-toggle="modal" data-bs-target="#myModal">
-                                View More
+                               Toggle
                               </button>
                             </div>
                         </div>
-                        <div class="-begalin-card">
-                            <div class="begalin-content">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt doloremque unde accusamus velit suscipit vel impedit magnam! Debitis consectetur commodi, esse distinctio dignissimos, accusantium, fuga quod eius porro cum ullam odio saepe! Unde, ducimus iusto earum ut itaque ipsum. Recusandae laboriosam quis sit, magni quia itaque est beatae?</p>
-                        </div>
-                    </div>
-                    <div class="-begalin-card">
-                        <div class="begalin-content">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt doloremque unde accusamus velit suscipit vel impedit magnam! Debitis consectetur commodi, esse distinctio dignissimos, accusantium, fuga quod eius porro cum ullam odio saepe! Unde, ducimus iusto earum ut itaque ipsum. Recusandae laboriosam quis sit, magni quia itaque est beatae?</p>
-                        </div>
-                    </div>
-                    <div class="-begalin-card">
-                        <div class="begalin-content">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt doloremque unde accusamus velit suscipit vel impedit magnam! Debitis consectetur commodi, esse distinctio dignissimos, accusantium, fuga quod eius porro cum ullam odio saepe! Unde, ducimus iusto earum ut itaque ipsum. Recusandae laboriosam quis sit, magni quia itaque est beatae?</p>
-                        </div>
-                    </div>
-                    <div class="-begalin-card">
-                        <div class="begalin-content">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt doloremque unde accusamus velit suscipit vel impedit magnam! Debitis consectetur commodi, esse distinctio dignissimos, accusantium, fuga quod eius porro cum ullam odio saepe! Unde, ducimus iusto earum ut itaque ipsum. Recusandae laboriosam quis sit, magni quia itaque est beatae?</p>
-                        </div>
-                    </div>
-                </div>  
+                </div>
             </div>
         </div>
-        
+
         <!-- modal begalin -->
         <div class="modal modal-xl fade" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -411,26 +391,10 @@
                 </div>
                 <div class="modal-body">
                     <div class="content-modal text-start m-2">
-                        <p>4 jenis rumah adat lampung beserta faktanya 
-                            Rumah adat lampung dibagi menjadi 4 jenis yaitu adalah : 
-                            Rumah Nuwou Balak / Sesat Balai agung : rumah ini digunakan untuk melakukan berbagai macam kegiatan adat Lampung. Rumah ini juga terbagi menjadi beberapa ruang dengan fungsi yang berbeda yaitu adalah : 
-                            Ijan Geladak : ruang ini berfungsi sebagai ruang untuk menyambut tamu-tamu adat penting, dan tamu tersebut akan disambut dengan tarian khas Ijan Geladak. 
-                            Anjungan : Ruangan ini digunakan untuk menyambut tamu penting setelah Ijan Geladak. Ruang ini mempunyai fungsi lain yaitu adalah tempat bermusyawar dan beristirahat bagi petinggi-petinggi adat. 
-                            Ruang Paseban : Ruang ini berfungsi sebagai ruang utama dari Rumah Sesat Balai Agung ini.
-                            Ruang Tetabuhan Lampung : Ruangan ini digunakan untuk menyimpan berbagai alat musik lampung yang berupa gamelan dan tetabuhan ala khas Lampung.
-                            Ruang Gajah Merem : Sama hal nya dengan Anjungan, ruangan ini juga difungsikan untuk bermusyawarah. 
-                            Rumah Adat Nuwou Balak : Rumah ini menganut adat pepadun. Rumah nuwou ini juga disebut dengan Balai Keratun yang pada dasarnya dihuni oleh para petinggi dan kepala adat. Rumah ini juga terbagi menjadi beberapa ruang dengan fungsi yang berbeda yaitu adalah : 
-                            Lawang Kuri : Ruang ini difungsikan untuk menerima tamu juga merupakan titik temu adat.
-                            Lapang Agung : Ruangan ini difungsikan untuk berkumpulnya para hawa.
-                            Kebik Temen / Kebik Kerumpu : Ruangan ini difungsikan untuk kamar tifur anak tertua atau penyimbang bumi. 
-                            Kebik Rengek : Sebagai kamar tidur anak kedua / anak penyimbang ratu
-                            Kebik Tengah : Sebagai kamar tidur anak ketiga / penyimbang batin. 
-                            Rumah Adat lamban Balak : Rumah ini menyerupai Nuwou balak berupa rumah panggung. Untuk bagian dari ruangannya sendiri terdapat Jan, Lepau, Lapang Luakh, Lapang Lom, Bilik Kebik, Tebelayakh, Sekhudu, Panggakh, Dapokh, Gakhang, Bah Lamban. 
-                            Rumah adat Lamban Pesagi : Rumah ini memiliki ciri khas yaitu terdapat tiang-tiang penyangga yang berukuran lebih besar, ciri lainnya yang membedakan rumah adat ini dengan 3 rumah adat sebelumnya adalah lumbung padi yang dibangun terpisah dari rumah utama.</p>
+                        <p>{{ $begalin ->isi }}</p>
                     </div>
-
-                ...
                 </div>
+@endforeach
                 <div class="modal-footer justify-content-start">
                     <!-- Tagline PPLK 2022 -->
                     <!-- Copyright href ke page Our Team -->
@@ -443,8 +407,8 @@
                 </div>
             </div>
             </div>
-        </div> 
-        <!-- end modal begalin -->  
+        </div>
+        <!-- end modal begalin -->
 
         <!-- medpatr -->
         <div class="container-fluid medpart padding-top-bottom">
@@ -456,7 +420,7 @@
                                 <img src="{{ asset('assets/space-cat.png') }}" alt="">
                             </div>
                         </div>
-                      
+
                    </div>
                    <div class="medpatr-card">
                         <div class="d-flex justify-content-center">
@@ -464,7 +428,7 @@
                                 <img src="{{ asset('assets/space-cat.png') }}" alt="">
                             </div>
                         </div>
-                      
+
                    </div>
                    <div class="medpatr-card">
                         <div class="d-flex justify-content-center">
@@ -472,7 +436,7 @@
                                 <img src="{{ asset('assets/space-cat.png') }}" alt="">
                             </div>
                         </div>
-                      
+
                    </div>
                    <div class="medpatr-card">
                         <div class="d-flex justify-content-center">
@@ -480,13 +444,13 @@
                                 <img src="{{ asset('assets/space-cat.png') }}" alt="">
                             </div>
                         </div>
-                      
+
                    </div>
-                   
+
                 </div>
              </div>
         </div>
-        
+
     </div>
 @endsection
 
@@ -523,7 +487,7 @@
             stagePadding: 24,
             dots:false,
             });
-        
+
 
             $(".carousel-contaner").owlCarousel({
             loop: true,
@@ -537,7 +501,7 @@
             responsive: {
                 0:{
                 stagePadding:35,
-                },  
+                },
                 1200:{
                 stagePadding:100,
                 },
@@ -582,7 +546,7 @@
                nav: false
              }
            }
-            
+
          });
         </script>
 @endsection

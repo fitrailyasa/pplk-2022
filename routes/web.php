@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\dashboardController;
 use App\Http\Controllers\Client\clientDashboardController;
 use App\Http\Controllers\Client\ClientUptController;
 use App\Http\Controllers\Client\ClientKamusgaulController;
+use App\Http\Controllers\Client\ClientBegalinController;
 use App\Http\Controllers\Client\ClientKabinetController;
 use App\Http\Controllers\Client\ClientJurusanController;
 use Illuminate\Support\Facades\Route;
@@ -32,9 +33,14 @@ Route::get('/jurusan', [ClientJurusanController::class, 'index'])->name('jurusan
 
 Route::get('/kamus-gaul', [ClientKamusgaulController::class, 'index'])->name('kamus-gaul'); // ===> kamus-gaul
 
+<<<<<<< Updated upstream
 Route::get('/beranda', function () {
     return view('client.index');                // ===> DEFAULT
 });
+=======
+Route::get('/', [ClientBegalinController::class, 'index'])->name('index'); // ===> kamus-gaul
+
+>>>>>>> Stashed changes
 Route::get('/detail-himpunan', function () {        // ===> Detail himpunan
     return view('client.ormawa.detail-himpunan');
 });
