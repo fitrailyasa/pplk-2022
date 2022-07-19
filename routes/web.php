@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\dashboardController;
 use App\Http\Controllers\Client\clientDashboardController;
 use App\Http\Controllers\Client\ClientUptController;
 use App\Http\Controllers\Client\ClientKamusgaulController;
+use App\Http\Controllers\Client\ClientBegalinController;
 use App\Http\Controllers\Client\ClientKabinetController;
 use App\Http\Controllers\Client\ClientJurusanController;
 use Illuminate\Support\Facades\Route;
@@ -21,6 +22,7 @@ use App\Http\Controllers\Admin\AdminController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/admin', [AdminController::class, 'index'])->name('index'); //===> cms admin
 
 Route::get('/upt', [ClientUptController::class, 'index'])->name('upt'); //===> upt
@@ -31,9 +33,14 @@ Route::get('/jurusan', [ClientJurusanController::class, 'index'])->name('jurusan
 
 Route::get('/kamus-gaul', [ClientKamusgaulController::class, 'index'])->name('kamus-gaul'); // ===> kamus-gaul
 
-Route::get('/', function () {
+<<<<<<< Updated upstream
+Route::get('/beranda', function () {
     return view('client.index');                // ===> DEFAULT
 });
+=======
+Route::get('/', [ClientBegalinController::class, 'index'])->name('index'); // ===> kamus-gaul
+
+>>>>>>> Stashed changes
 Route::get('/detail-himpunan', function () {        // ===> Detail himpunan
     return view('client.ormawa.detail-himpunan');
 });
@@ -54,9 +61,6 @@ Route::get('/biodata', function () {                // ===> biodata
 });
 Route::get('/edit-biodata', function ()   {          // ===> edit biodata
     return view('client.biodata.edit-biodata');
-});
-Route::get('/beranda', function ()   {               // ===> beranda
-    return view('client.beranda');
 });
 Route::get('/booklet', function ()   {              // ===> booklet
     return view('client.booklet');

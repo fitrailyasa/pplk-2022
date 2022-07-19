@@ -15,7 +15,8 @@ class ClientBegalinController extends Controller
      */
     public function index()
     {
-        //
+        $begalins = Begalin::all();
+        return view('client.index', compact('begalins'));
     }
 
     /**

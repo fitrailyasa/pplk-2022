@@ -20,9 +20,6 @@
 
 @section('content')
     <!-- CONTENT -->
-    <!-- jumbotron -->
-    <div class="jumbotron  ratio ratio-16x9 my-auto">
-    </div>
 
     <!-- konten -->
     <div class="container-fluid" id="content">

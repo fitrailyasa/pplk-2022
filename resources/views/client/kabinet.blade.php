@@ -68,63 +68,66 @@
         <div class="col-md-12">
             <div class="row">
             <div class="col-md-2 my-5 ms-md-auto" style="text-align-last: center;">
-                <img src="../assets/Logo-km.png" alt="Image" class="img-fluid mx-auto d-block ratio ratio1x1" ></h6>
+                <img src="../assets/Logo-km.png" alt="Image" class="logo1" >
             </div>
             <div class="col-md-6 justify-content-start teks1">
-                <h2 class="fw-bold display-2" >KABINET KM ITERA</h2>
-                <h3 class="display-4">KELUARGA MAHASISWA</h3>
-                <h3 class="display-5">ITERA 2020-2021</h3>
+                <h2 class="fw-bold teks2 " >KABINET KM ITERA</h2>
+                <h3 class="teks3">KELUARGA MAHASISWA</h3>
+                <h3 class="teks4">ITERA 2020-2021</h3>
                 <br>
-                <div class="teks2">
-                <h5 class="text-start fw-bold teks display-5">Pembina</h5>
-                <h6 class="text-start teks display-6">Dr. Ir. Agus Laesanpura, M.S.</h6>
-                <h5 class="text-start fw-bold teks display-5">Ketua Himpunan</h5>
-                <h6 class="text-start teks display-6">Dr. Ir. Agus Laesanpura, M.S.</h6>
-                <h5 class="text-start fw-bold teks display-5">Dies Natalis</h5>
-                <h6 class="text-start teks display-6">9 Februari 2020</h6>
-                </div>
+                <h5 class="text-start fw-bold teks5">Pembina</h5>
+                <h6 class="text-start teks6">Dr. Ir. Agus Laesanpura, M.S.</h6>
+                <h5 class="text-start fw-bold teks5">Ketua Himpunan</h5>
+                <h6 class="text-start teks6">Dr. Ir. Agus Laesanpura, M.S.</h6>
+                <h5 class="text-start fw-bold teks5">Dies Natalis</h5>
+                <h6 class="text-start teks6">9 Februari 2020</h6>
             </div>
         </div>
     </div>
 
-        <div class="wrapper mt-2 justify-content-center d-flex">
-            <a href="https://google.com" target="_blank" class="buttons background-gradient sosmed">
-            <div class="icon text-center">
+
+    <div class="container">
+        <div class="mt-md-4 mt-sm-5 justify-content-center d-flex flex-wrap ">
+            <a href="https://google.com" target="_blank" class="buttons background-gradient sosmed mx-lg-5 mx-sm-3">
+            <div class="icon text-center ">
                 <i class="fab fa-facebook-f"></i>
             </div>
 
             </a>
-            <a href="https://google.com" target="_blank" class="buttons background-gradient sosmed">
-            <div class="icon">
+            <a href="https://google.com" target="_blank" class="buttons background-gradient sosmed mx-lg-5 mx-sm-3">
+            <div class="icon text-center ">
                 <i class="fab fa-twitter"></i>
             </div>
             </a>
-            <a href="https://google.com" target="_blank" class="buttons background-gradient sosmed">
-            <div class="icon">
+            <a href="https://google.com" target="_blank" class="buttons background-gradient sosmed mx-lg-5 mx-sm-3">
+            <div class="icon text-center ">
                 <i class="fab fa-instagram"></i>
             </div>
             </a>
-            <a href="https://google.com" target="_blank" class="buttons background-gradient sosmed">
-            <div class="icon">
+            <a href="https://google.com" target="_blank" class="buttons background-gradient sosmed mx-lg-5 mx-sm-3">
+            <div class="icon text-center ">
                 <i class="fab fa-youtube"></i>
             </div>
             </a>
         </div>
 
-        <div class="container mt-3 text-light">
-            <h5 class="text-center"><strong>KM ITERA</strong></h5>
+    </div>
+
+
+        <div class="container mt-md-5 mt-sm-2 text-light">
+            <h2 class="text-center teks2"><strong>KM ITERA</strong></h2>
             <div class="mt-3" style="display: flex; justify-content: center;">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/Y-Y-e6N6YPA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="videoyoutube" src="https://www.youtube.com/embed/Y-Y-e6N6YPA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
 
-        <div class="container justify-content-center mt-3 text-light">
-        <h2 class="text-center"><strong>VISI</strong></h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium dolore, rem vitae iure dolorem consequatur at? Cupiditate temporibus unde quaerat, adipisci minima illo error esse at commodi? Neque, amet porro aut fuga iste odio suscipit hic molestias ratione, excepturi cupiditate dolores consectetur ex veritatis in eum, laudantium debitis eaque facilis!</p>
-        <h2 class="text-center"><strong>MISI</strong></h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, quia commodi voluptate nobis ipsam molestiae quasi fugiat praesentium est, quis illum consectetur voluptatum? Quisquam, totam ullam quod dignissimos praesentium quidem. Veritatis nisi, alias quod corrupti quasi commodi sequi, provident optio voluptates error iure. Culpa, eveniet quo? Error ea natus neque!</p>
-        <h2 class="text-center"><strong>FILOSOFI LOGO</strong></h2>
-        <h3 class="text-center"><strong>KABINET KM</strong></h3>
+        <div class="container justify-content-center mt-3 text-light mt-md-5 mt-sm-2">
+        <h2 class="text-center fw-bold teks2">VISI</h2>
+        <p class="teks5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium dolore, rem vitae iure dolorem consequatur at? Cupiditate temporibus unde quaerat, adipisci minima illo error esse at commodi? Neque, amet porro aut fuga iste odio suscipit hic molestias ratione, excepturi cupiditate dolores consectetur ex veritatis in eum, laudantium debitis eaque facilis!</p>
+        <h2 class="text-center teks2">MISI</h2>
+        <p class="teks5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, quia commodi voluptate nobis ipsam molestiae quasi fugiat praesentium est, quis illum consectetur voluptatum? Quisquam, totam ullam quod dignissimos praesentium quidem. Veritatis nisi, alias quod corrupti quasi commodi sequi, provident optio voluptates error iure. Culpa, eveniet quo? Error ea natus neque!</p>
+        <h2 class="text-center fw-bold teks2">FILOSOFI LOGO</h2>
+        <h3 class="text-center fw-bold teks2">KABINET KM</h3>
         <img src="../assets/Logo-km.png" class="mx-auto d-block" alt="...">
         </div>
     </div>
@@ -133,6 +136,7 @@
 <div class="slide-container swiper mt-4">
     <div class="slide-content">
         <div class="card-wrapper swiper-wrapper">
+        
             <div class="card swiper-slide">
                 <div class="image-content">
                     <span class="overlay background-gradient"></span>
@@ -141,8 +145,8 @@
                     </div>
                     </div>
                     <div class="card-content">
-                        <h2 class="name">Dua Tangan</h2>
-                        <p class="description">Dua Tangan, yang mewakili Seribu Tangan, atau sasrabahu yang berarti saling membantu, bekerja sama, dan besinergi meraih masa depan.</p>
+                        <h2 class="name teks2">Dua Tangan</h2>
+                        <p class="description teks4">Dua Tangan, yang mewakili Seribu Tangan, atau sasrabahu yang berarti saling membantu, bekerja sama, dan besinergi meraih masa depan.</p>
                     </div>
             </div>
 
@@ -259,8 +263,8 @@
 </div>
 
 <div class="container mt-5 text-light" id="terakhir">
-    <h4 class="text-center"><strong>ORGANIGRAM</strong></h4>
-    <h4 class="text-center"><strong>KM ITERA</strong></h4>
+    <h4 class="text-center teks2"><strong>ORGANIGRAM</strong></h4>
+    <h4 class="text-center teks2"><strong>KM ITERA</strong></h4>
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" >
         <div class="carousel-inner">
         <div class="carousel-item active">
@@ -287,21 +291,8 @@
 @endsection
 
 @section('script')
-    <!-- SCRIPTS -->
-    <script type="text/javascript">
-        let nav = document.querySelector('#navbar-desktop');
-
-        window.addEventListener('scroll', function () {
-            if (window.pageYOffset > 50) {
-                nav.classList.add('background-gradient', 'shadow');
-            } else {
-                nav.classList.remove('background-gradient', 'shadow');
-            }
-        });
-    </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{{ asset('assets/js/kabinet.min.js') }}"></script>
     <script src="{{ asset('assets/js/kabinet.js') }}"></script>
-    <!-- Swiper JS -->
-    <script src="{{ asset('assets/js/swiper-bundle.min.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 @endsection
