@@ -34,7 +34,7 @@
                     <div class="row qr-code py-md-4">
                         <div class="imgUp justify-content-center">
                             <div class="ratio ratio-1x1  content">
-                                <img src="{{ asset('assets')}}/qrCode/{{$biodata->qrCode}}" alt="">
+                                <img src="{!! asset('assets') !!}/qrCode/{{$biodata->qrCode}}" alt="">
                             </div>
                         </div><!-- col-2 -->
                     </div>
@@ -73,6 +73,11 @@
                         <div class="row bio-input">
                             <label class="form-label" for="notel">Nomor Telepon</label>
                             <input type="text" placeholder="belum dinamis" disabled>
+                        </div>
+
+                        <div class="row bio-input">
+                            <label class="form-label" for="golongan darah">Alamat</label>
+                            <input type="text" placeholder="blum dinamis" disabled>
                         </div>
 
                         <div class="row bio-input">
