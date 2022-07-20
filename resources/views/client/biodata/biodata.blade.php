@@ -16,85 +16,85 @@
 @endsection
 
 @section('content')
-    <!-- CONTENT -->
-    <! -- Body -->
-    <div class="body">
-        <div class="container-fluid">
-            <div class="row justify-content-around">
-                <div class="col-lg-3 col-md-10 col-sm-12 justify-content-center">
-                    <div class="center">
-                        <div class="bio-profile">
-                            <img class="ratio border ratio-1x1 profile" src="../assets/jhonny.jpg" alt="photo-profile">
-                        </div>
-                        <div class="edit-profile py-md-4">
-                            <a href="../html/edit-biodata.html" class="pt-5">
-                                <label class="btn btn-primary fs-5">
-                                    EDIT PROFILE
-                                </label>
-                            </a>
-                        </div>
-                        <div class="row qr-code py-md-4">
-                            <div class="imgUp justify-content-center">
-                                <div class="ratio ratio-1x1 imagePreview content"></div>
-                            </div><!-- col-2 -->
-                        </div>
-                    </div><!-- row -->
-                </div><!-- container -->
-                <div class="col-xl-6 col-sm-12">
-                    <h1 align="center" >USER BIODATA</h1>
-                    <div class="container">
-                        <form class="col-sm-12 bio-form m-sm-auto container-fluid justify-content-between fle" method="POST">
-
-                            <div class="row bio-input">
-                                <label class="form-label" for="email">Email</label>
-                                <input type="text" placeholder="AdiSulaksonoGeming@gmail.com" disabled>
-                            </div>
-
-                            <div class="row bio-input">
-                                <label class="form-label" for="nama">Nama</label>
-                                <input type="text" placeholder="ADI GEMING ADIK ADIK" disabled>
-                            </div>
-
-                            <div class="row bio-input">
-                                <label class="form-label" for="nim">NIM</label>
-                                <input type="text" placeholder="122999000" disabled>
-                            </div>
-
-                            <div class="row bio-input">
-                                <label class="form-label" for="kelompok">Kelompok</label>
-                                <input type="text" placeholder="123 - Ardhames" disabled>
-                            </div>
-
-                            <div class="row bio-input">
-                                <label class="form-label" for="prodi">Program Studi</label>
-                                <input type="text" placeholder="Teknik Begal Jabung" disabled>
-                            </div>
-
-                            <div class="row bio-input">
-                                <label class="form-label" for="notel">Nomor Telepon</label>
-                                <input type="text" placeholder="081122334455" disabled>
-                            </div>
-
-                            <div class="row bio-input">
-                                <label class="form-label" for="golongan darah">Golongan Darah</label>
-                                <input type="text" placeholder="ABO" disabled>
-                            </div>
-
-                            <div class="row bio-input">
-                                <label class="form-label" for="instagram">Instagram</label>
-                                <input type="text" placeholder="@adigemingjr" disabled>
-                            </div>
-
-                            <div class="row bio-input">
-                                <label class="form-label" for="riwayat">Riwayat Penyakit</label>
-                                <input type="text" placeholder="jomblo" disabled>
-                            </div>
-                    </form>
+<div class="body">
+    <div class="container-fluid">
+        <div class="row justify-content-around">
+            <div class="col-lg-3 col-md-10 col-sm-12 justify-content-center">
+                <div class="center">
+                    <div class="bio-profile">
+                        <img class="ratio border ratio-1x1 profile" src="{{ asset('assets/jhonny.jpg') }}" alt="photo-profile">
                     </div>
+                    <div class="edit-profile py-md-4">
+                        <a href="/edit-biodata" class="pt-5">
+                            <label class="btn btn-primary fs-5">
+                                EDIT PROFILE
+                            </label>
+                        </a>
+                    </div>
+                    <div class="row qr-code py-md-4">
+                        <div class="imgUp justify-content-center">
+                            <div class="ratio ratio-1x1  content">
+                                <img src="{{ asset('assets')}}/qrCode/{{$biodata->qrCode}}" alt="">
+                            </div>
+                        </div><!-- col-2 -->
+                    </div>
+                </div><!-- row -->
+            </div><!-- container -->
+            <div class="col-xl-6 col-sm-12">
+                <h1 align="center" >BIODATA PENGGUNA</h1> <br>
+                <div class="container">
+                    <form class="col-sm-12 bio-form m-sm-auto container-fluid justify-content-between fle" method="POST">
+
+                        <div class="row bio-input">
+                            <label class="form-label" for="email">Email</label>
+                            <input type="text" placeholder="{{ $biodata->email }}" disabled>
+                        </div>
+
+                        <div class="row bio-input">
+                            <label class="form-label" for="nama">Nama</label>
+                            <input type="text" placeholder="{{ $biodata->nama }}" disabled>
+                        </div>
+
+                        <div class="row bio-input">
+                            <label class="form-label" for="nim">NIM</label>
+                            <input type="text" placeholder="{{ $biodata->nim }}" disabled>
+                        </div>
+
+                        <div class="row bio-input">
+                            <label class="form-label" for="kelompok">Kelompok</label>
+                            <input type="text" placeholder="{{ $biodata->kelompok }}" disabled>
+                        </div>
+
+                        <div class="row bio-input">
+                            <label class="form-label" for="prodi">Program Studi</label>
+                            <input type="text" placeholder="{{ $biodata->prodis_id }}" disabled>
+                        </div>
+
+                        <div class="row bio-input">
+                            <label class="form-label" for="notel">Nomor Telepon</label>
+                            <input type="text" placeholder="belum dinamis" disabled>
+                        </div>
+
+                        <div class="row bio-input">
+                            <label class="form-label" for="golongan darah">Golongan Darah</label>
+                            <input type="text" placeholder="blum dinamis" disabled>
+                        </div>
+
+                        <div class="row bio-input">
+                            <label class="form-label" for="instagram">Instagram</label>
+                            <input type="text" placeholder="{{ $biodata->instagram }}" disabled>
+                        </div>
+
+                        <div class="row bio-input">
+                            <label class="form-label" for="riwayat">Riwayat Penyakit</label>
+                            <input type="text" placeholder="belum dinamis" disabled>
+                        </div>
+                </form>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 @endsection
 
