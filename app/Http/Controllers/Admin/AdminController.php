@@ -18,9 +18,11 @@ use App\Models\StatusKehadiran;
 use App\Models\Ukm;
 use App\Models\Upt;
 use App\Models\User;
+use Exception;
 
-use App\Http\Requests\StoreAdminRequest;
-use App\Http\Requests\UpdateAdminRequest;
+use Illuminate\Support\Facades\DB;
+use App\Http\Requests\Admin\StoreAdminRequest;
+use App\Http\Requests\Admin\UpdateAdminRequest;
 
 class AdminController extends Controller
 {
@@ -88,6 +90,62 @@ class AdminController extends Controller
      */
     public function store(StoreAdminRequest $request)
     {
+        // Ukm::create([
+
+        //     'namaLengkap'=>$request->namaLengkap,
+        //     'namaSingkat'=>$request->namaSingkat,
+        //     'visi'=>$request->visi,
+        //     'misi'=>$request->misi,
+        //     'pembina'=>$request->pembina,
+        //     'ketuaUmum'=>$request->ketuaUmum,
+        //     'tahunBerdiri'=>$request->tahunBerdiri,
+        //     'logo'=>$request->logo,
+        //     'filosofiLogo'=>$request->filosofiLogo,
+        //     'qrCode'=>$request->qrCode,
+        //     'deskripsi'=>$request->deskripsi,
+        //     'dokumentasi1'=>$request->dokumentasi1,
+        //     'dokumentasi2'=>$request->dokumentasi2,
+        //     'dokumentasi3'=>$request->dokumentasi3
+        // ]);
+
+        // Himpunan::create([
+        //     'namaLengkap'=>$request->namaLengkap,
+        //     'namaSingkat'=>$request->namaSingkat,
+        //     'visi'=>$request->visi,
+        //     'misi'=>$request->misi,
+        //     'deskripsi'=>$request->deskripsi,
+        //     'pembina'=>$request->pembina,
+        //     'ketuaHimpunan'=>$request->ketuaHimpunan,
+        //     'tahunBerdiri'=>$request->tahunBerdiri,
+        //     'logo'=>$request->logo,
+        //     'filosofiLogo'=>$request->filosofiLogo,
+        //     'kodeWarna'=>$request->kodeWarna
+        // ]);
+
+            
+        // ]);
+        Begalin::create([
+            'isi'=>$request->isi,
+            'judul'=>$request->judul
+        ]);
+
+
+        Funfact::create([
+            'isi'=>$request->isi
+        ]);
+
+        Senat::create([
+            'ketua'=>$request->ketua,
+            'deskripsi'=>$request->deskripsi,
+            'website'=>$request->website,
+            'youtube'=>$request->youtube,
+            'instagram'=>$request->instagram
+        ]);
+
+
+        
+
+        return 'Berhasil';
         //
     }
 
@@ -97,7 +155,7 @@ class AdminController extends Controller
      * @param  \App\Models\Admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function show(Admin $admin)
+    public function show(AdminController $admin)
     {
         //
     }
@@ -108,7 +166,7 @@ class AdminController extends Controller
      * @param  \App\Models\Admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function edit(Admin $admin)
+    public function edit(AdminController $admin)
     {
         //
     }
@@ -120,7 +178,7 @@ class AdminController extends Controller
      * @param  \App\Models\Admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateAdminRequest $request, Admin $admin)
+    public function update(UpdateAdminRequest $request, AdminController $admin)
     {
         //
     }
@@ -128,10 +186,10 @@ class AdminController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Admin  $admin
+     * @param  \App\Models\Admin  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Admin $admin)
+    public function destroy(AdminController $id)
     {
         try{
             $begalins = Begalin::where('id', $id)->first();

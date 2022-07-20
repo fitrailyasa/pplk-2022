@@ -10,7 +10,7 @@ class Himpunan extends Model
     use HasFactory;
 
     protected $table ='himpunans';
-    protected $fillabel=['kodeWarna', 'pembina', 'ketuaHimpunan', 'tahunBerdiri', 'logo', 'filosofiLogo', 'ormawas_id'];
+    protected $fillabel=['namaLengkap','namaSingkat','visi','misi','deskripsi','kodeWarna', 'pembina', 'ketuaHimpunan', 'tahunBerdiri', 'logo', 'filosofiLogo'];
 
 
 }
