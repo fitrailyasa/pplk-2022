@@ -9,7 +9,6 @@ use App\Http\Controllers\Client\ClientKamusgaulController;
 use App\Http\Controllers\Client\ClientBegalinController;
 use App\Http\Controllers\Client\ClientKabinetController;
 use App\Http\Controllers\Client\ClientJurusanController;
-use App\Http\Controllers\Client\ClientKamusgaulController;
 
 
 /*
