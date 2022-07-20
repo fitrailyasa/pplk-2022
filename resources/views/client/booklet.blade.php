@@ -1,22 +1,19 @@
 @extends('layouts.client.app')
 
 <!-- TITLE -->
-@section('title', 'booklet')
+@section('title', 'Booklet')
 
 @section('style')
     <!-- STYLES -->
-    <link rel="stylesheet" href="{{ asset('assets') }}/css/GANTI.css">
-    <link rel="stylesheet" href="../css/main-style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../css/main-style.css">
-    <link rel="stylesheet" href="../css/styling.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/main-style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/styling.css') }}">
+    <!-- b5 -->
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 @endsection
 
 @section('content')
@@ -33,90 +30,78 @@
             </div>
         </div>
     </div> 
-</div>
-.<div class="container-fluid booklet-text">
+
+<!-- carousel -->
+<div class="container-fluid booklet-text">
     <div class="row justify-content-center">
         <div class="col-9 text-center">
-            <h1 class="text-white fw-bold">BOOKLET</h1>
-            <div class="card-body justify-content-center border">
-             <div class="col">
-                 <h3 class="card-title">KEBUTUHAN MABA</h3>
-                 <p class="card-text mb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur culpa quidem facilis placeat porro voluptatibus quia quod iste voluptates, ipsam quaerat amet harum sit officia odit blanditiis? Facilis consectetur aut quia, natus laudantium ex pariatur assumenda, neque magnam, asperiores est adipisci error deleniti dolorum laborum tenetur omnis molestiae sunt voluptas.</p>
-             </div>
+            <h1 class="text-white fw-bold mt-3">BOOKLET</h1>
+            <div class="card-body justify-content-center border" id="card-body">
+            <div class="col">
+                <h3 class="card-title">KEBUTUHAN MABA</h3>
+                <p class="card-text mb-5" style="color: black;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur culpa quidem facilis placeat porro voluptatibus quia quod iste voluptates, ipsam quaerat amet harum sit officia odit blanditiis? Facilis consectetur aut quia, natus laudantium ex pariatur assumenda, neque magnam, asperiores est adipisci error deleniti dolorum laborum tenetur omnis molestiae sunt voluptas.</p>
+            </div>
         </div>
     </div>
 </div>
-<div class="slide bg-black">
-   <div id="myCarousel" class="carousel" data-ride="carousel">
-     <!-- Indicators -->
-     <ol class="carousel-indicators">
-       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-       <li data-target="#myCarousel" data-slide-to="1"></li>
-       <li data-target="#myCarousel" data-slide-to="2"></li>
-     </ol>
- 
-     <!-- Wrapper for slides -->
-     <div class="carousel-inner">
- 
-       <div class="item active">
-               <div class="card fun-fact-card">
-                   <div class="card-body-ff">
-                       <h2 class="card-title">
-                           Fun Fact
-                       </h2>
-                       <p class="card-text">
-                           Segi empat menggabarkan stabilitas, kedamaian, soliditas, dan kesetaraan.
-                       </p>
-                   </div>
-               </div>
-       </div>
- 
-       <div class="item">
-               <div class="card fun-fact-card">
-                   <div class="card-body-ff">
-                       <h2 class="card-title">
-                           Fun Fact
-                       </h2>
-                       <p class="card-text">
-                           Segi empat menggabarkan stabilitas, kedamaian, soliditas, dan kesetaraan.
-                       </p>
-                   </div>
-               </div>
-       </div>
-        
-       <div class="item">
-           <div class="card fun-fact-card">
-               <div class="card-body-ff">
-                   <h2 class="card-title">
-                       Fun Fact
-                   </h2>
-                   <p class="card-text">
-                       Segi empat menggabarkan stabilitas, kedamaian, soliditas, dan kesetaraan.
-                   </p>
-               </div>
-           </div>
-       </div>
-     
-   
-     </div>
- 
-     <!-- Left and right controls -->
-     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-       <span class="glyphicon glyphicon-chevron-left"></span>
-       <span class="sr-only">Previous</span>
-     </a>
-     <a class="right carousel-control" href="#myCarousel" data-slide="next">
-       <span class="glyphicon glyphicon-chevron-right"></span>
-       <span class="sr-only">Next</span>
-     </a>
-   </div>
- </div>
+
+<div id="carouselExampleCaptions" class="carousel slide p-5" data-bs-ride="carousel">
+    <div class="carousel-inner" id="carouselExampleCaption">
+    
+        <div class="carousel-item  active">
+            <div class="card fun-fact-card">
+                <div class="card-body-ff">
+                    <h2 class="card-title">
+                        Fun Fact
+                    </h2>
+                    <p class="card-text">
+                        Segi empat menggabarkan stabilitas, kedamaian, soliditas, dan kesetaraan.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    <div class="carousel-item ">
+        <div class="card fun-fact-card">
+            <div class="card-body-ff">
+                <h2 class="card-title">
+                    Fun Fact
+                </h2>
+                <p class="card-text">
+                    Segi empat menggabarkan stabilitas, kedamaian, soliditas, dan kesetaraan.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="carousel-item">
+        <div class="card fun-fact-card">
+            <div class="card-body-ff">
+                <h2 class="card-title">
+                    Fun Fact
+                </h2>
+                <p class="card-text">
+                    Segi empat menggabarkan stabilitas, kedamaian, soliditas, dan kesetaraan.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
 @endsection
 
 @section('script')
     <!-- SCRIPTS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="../js/bootstrap.bundle.js"></script>
-    <script src="../js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 @endsection
