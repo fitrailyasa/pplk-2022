@@ -15,7 +15,8 @@ class ClientHimpunanController extends Controller
      */
     public function index()
     {
-        //
+        $himpunans = Himpunan::get();
+        return view('client.ormawa.himpunan', compact('himpunans'));
     }
 
     /**
