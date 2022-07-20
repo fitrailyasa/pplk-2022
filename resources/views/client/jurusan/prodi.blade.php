@@ -128,6 +128,42 @@
                         </div>
                     </div>
                 </button>
+
+                <button type="button" class="btn my-4 prodi-card scroll-reveal">
+                    <div class="card rounded-5">
+                        <img src="{{ asset('assets/2-2.jpeg') }}" class="card-img-top rounded-5" alt="...">
+                        <div class="card-body">
+                            <p class="card-text pt-2 rounded-3 text-center text-light">Nama Prodi</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" class="btn my-4 prodi-card scroll-reveal">
+                    <div class="card rounded-5">
+                        <img src="{{ asset('assets/2-2.jpeg') }}" class="card-img-top rounded-5" alt="...">
+                        <div class="card-body">
+                            <p class="card-text pt-2 rounded-3 text-center text-light">Nama Prodi</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" class="btn my-4 prodi-card scroll-reveal">
+                    <div class="card rounded-5">
+                        <img src="{{ asset('assets/2-2.jpeg') }}" class="card-img-top rounded-5" alt="...">
+                        <div class="card-body">
+                            <p class="card-text pt-2 rounded-3 text-center text-light">Nama Prodi</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" class="btn my-4 prodi-card scroll-reveal">
+                    <div class="card rounded-5">
+                        <img src="{{ asset('assets/2-2.jpeg') }}" class="card-img-top rounded-5" alt="...">
+                        <div class="card-body">
+                            <p class="card-text pt-2 rounded-3 text-center text-light">Nama Prodi</p>
+                        </div>
+                    </div>
+                </button>
             </div>
         </div>
 
@@ -135,6 +171,69 @@
         <div class="tab-pane fade justify-content-center" id="pills-profile" role="tabpanel"
             aria-labelledby="pills-profile-tab" tabindex="0">
             <div class="container-fluid d-flex flex-wrap justify-content-around" id="terakhir">
+                <button type="button" class="btn my-4 prodi-card scroll-reveal">
+                    <div class="card rounded-5">
+                        <img src="{{ asset('assets/2-2.jpeg') }}" class="card-img-top rounded-5" alt="...">
+                        <div class="card-body">
+                            <p class="card-text pt-2 rounded-3 text-center text-light">Nama Prodi</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" class="btn my-4 prodi-card scroll-reveal">
+                    <div class="card rounded-5">
+                        <img src="{{ asset('assets/2-2.jpeg') }}" class="card-img-top rounded-5" alt="...">
+                        <div class="card-body">
+                            <p class="card-text pt-2 rounded-3 text-center text-light">Nama Prodi</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" class="btn my-4 prodi-card scroll-reveal">
+                    <div class="card rounded-5">
+                        <img src="{{ asset('assets/2-2.jpeg') }}" class="card-img-top rounded-5" alt="...">
+                        <div class="card-body">
+                            <p class="card-text pt-2 rounded-3 text-center text-light">Nama Prodi</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" class="btn my-4 prodi-card scroll-reveal">
+                    <div class="card rounded-5">
+                        <img src="{{ asset('assets/2-2.jpeg') }}" class="card-img-top rounded-5" alt="...">
+                        <div class="card-body">
+                            <p class="card-text pt-2 rounded-3 text-center text-light">Nama Prodi</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" class="btn my-4 prodi-card scroll-reveal">
+                    <div class="card rounded-5">
+                        <img src="{{ asset('assets/2-2.jpeg') }}" class="card-img-top rounded-5" alt="...">
+                        <div class="card-body">
+                            <p class="card-text pt-2 rounded-3 text-center text-light">Nama Prodi</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" class="btn my-4 prodi-card scroll-reveal">
+                    <div class="card rounded-5">
+                        <img src="{{ asset('assets/2-2.jpeg') }}" class="card-img-top rounded-5" alt="...">
+                        <div class="card-body">
+                            <p class="card-text pt-2 rounded-3 text-center text-light">Nama Prodi</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" class="btn my-4 prodi-card scroll-reveal">
+                    <div class="card rounded-5">
+                        <img src="{{ asset('assets/2-2.jpeg') }}" class="card-img-top rounded-5" alt="...">
+                        <div class="card-body">
+                            <p class="card-text pt-2 rounded-3 text-center text-light">Nama Prodi</p>
+                        </div>
+                    </div>
+                </button>
+
                 <button type="button" class="btn my-4 prodi-card scroll-reveal">
                     <div class="card rounded-5">
                         <img src="{{ asset('assets/2-2.jpeg') }}" class="card-img-top rounded-5" alt="...">
@@ -187,6 +286,159 @@
                 </button>
 
                 <button type="button" class="btn my-4 prodi-card">
+                    <div class="card rounded-5">
+                        <img src="{{ asset('assets/2-2.jpeg') }}" class="card-img-top rounded-5" alt="...">
+                        <div class="card-body">
+                            <p class="card-text pt-2 rounded-3 text-center text-light">Nama Prodi</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" class="btn my-4 prodi-card scroll-reveal">
+                    <div class="card rounded-5">
+                        <img src="{{ asset('assets/2-2.jpeg') }}" class="card-img-top rounded-5" alt="...">
+                        <div class="card-body">
+                            <p class="card-text pt-2 rounded-3 text-center text-light">Nama Prodi</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" class="btn my-4 prodi-card scroll-reveal">
+                    <div class="card rounded-5">
+                        <img src="{{ asset('assets/2-2.jpeg') }}" class="card-img-top rounded-5" alt="...">
+                        <div class="card-body">
+                            <p class="card-text pt-2 rounded-3 text-center text-light">Nama Prodi</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" class="btn my-4 prodi-card scroll-reveal">
+                    <div class="card rounded-5">
+                        <img src="{{ asset('assets/2-2.jpeg') }}" class="card-img-top rounded-5" alt="...">
+                        <div class="card-body">
+                            <p class="card-text pt-2 rounded-3 text-center text-light">Nama Prodi</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" class="btn my-4 prodi-card scroll-reveal">
+                    <div class="card rounded-5">
+                        <img src="{{ asset('assets/2-2.jpeg') }}" class="card-img-top rounded-5" alt="...">
+                        <div class="card-body">
+                            <p class="card-text pt-2 rounded-3 text-center text-light">Nama Prodi</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" class="btn my-4 prodi-card scroll-reveal">
+                    <div class="card rounded-5">
+                        <img src="{{ asset('assets/2-2.jpeg') }}" class="card-img-top rounded-5" alt="...">
+                        <div class="card-body">
+                            <p class="card-text pt-2 rounded-3 text-center text-light">Nama Prodi</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" class="btn my-4 prodi-card scroll-reveal">
+                    <div class="card rounded-5">
+                        <img src="{{ asset('assets/2-2.jpeg') }}" class="card-img-top rounded-5" alt="...">
+                        <div class="card-body">
+                            <p class="card-text pt-2 rounded-3 text-center text-light">Nama Prodi</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" class="btn my-4 prodi-card scroll-reveal">
+                    <div class="card rounded-5">
+                        <img src="{{ asset('assets/2-2.jpeg') }}" class="card-img-top rounded-5" alt="...">
+                        <div class="card-body">
+                            <p class="card-text pt-2 rounded-3 text-center text-light">Nama Prodi</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" class="btn my-4 prodi-card scroll-reveal">
+                    <div class="card rounded-5">
+                        <img src="{{ asset('assets/2-2.jpeg') }}" class="card-img-top rounded-5" alt="...">
+                        <div class="card-body">
+                            <p class="card-text pt-2 rounded-3 text-center text-light">Nama Prodi</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" class="btn my-4 prodi-card scroll-reveal">
+                    <div class="card rounded-5">
+                        <img src="{{ asset('assets/2-2.jpeg') }}" class="card-img-top rounded-5" alt="...">
+                        <div class="card-body">
+                            <p class="card-text pt-2 rounded-3 text-center text-light">Nama Prodi</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" class="btn my-4 prodi-card scroll-reveal">
+                    <div class="card rounded-5">
+                        <img src="{{ asset('assets/2-2.jpeg') }}" class="card-img-top rounded-5" alt="...">
+                        <div class="card-body">
+                            <p class="card-text pt-2 rounded-3 text-center text-light">Nama Prodi</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" class="btn my-4 prodi-card scroll-reveal">
+                    <div class="card rounded-5">
+                        <img src="{{ asset('assets/2-2.jpeg') }}" class="card-img-top rounded-5" alt="...">
+                        <div class="card-body">
+                            <p class="card-text pt-2 rounded-3 text-center text-light">Nama Prodi</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" class="btn my-4 prodi-card scroll-reveal">
+                    <div class="card rounded-5">
+                        <img src="{{ asset('assets/2-2.jpeg') }}" class="card-img-top rounded-5" alt="...">
+                        <div class="card-body">
+                            <p class="card-text pt-2 rounded-3 text-center text-light">Nama Prodi</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" class="btn my-4 prodi-card scroll-reveal">
+                    <div class="card rounded-5">
+                        <img src="{{ asset('assets/2-2.jpeg') }}" class="card-img-top rounded-5" alt="...">
+                        <div class="card-body">
+                            <p class="card-text pt-2 rounded-3 text-center text-light">Nama Prodi</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" class="btn my-4 prodi-card scroll-reveal">
+                    <div class="card rounded-5">
+                        <img src="{{ asset('assets/2-2.jpeg') }}" class="card-img-top rounded-5" alt="...">
+                        <div class="card-body">
+                            <p class="card-text pt-2 rounded-3 text-center text-light">Nama Prodi</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" class="btn my-4 prodi-card scroll-reveal">
+                    <div class="card rounded-5">
+                        <img src="{{ asset('assets/2-2.jpeg') }}" class="card-img-top rounded-5" alt="...">
+                        <div class="card-body">
+                            <p class="card-text pt-2 rounded-3 text-center text-light">Nama Prodi</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" class="btn my-4 prodi-card scroll-reveal">
+                    <div class="card rounded-5">
+                        <img src="{{ asset('assets/2-2.jpeg') }}" class="card-img-top rounded-5" alt="...">
+                        <div class="card-body">
+                            <p class="card-text pt-2 rounded-3 text-center text-light">Nama Prodi</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" class="btn my-4 prodi-card scroll-reveal">
                     <div class="card rounded-5">
                         <img src="{{ asset('assets/2-2.jpeg') }}" class="card-img-top rounded-5" alt="...">
                         <div class="card-body">

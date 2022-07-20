@@ -88,7 +88,7 @@
                 <div class="container p-4">
                     <div class="row justify-content-around mb-4">
                         <div class="col-lg-6 col-md-10 mb-4">
-                            <img class="gambar-1 img-fluid" src="../assets/Logo_Mockup_125.jpg" alt="" srcset="">
+                            <img class="gambar-1 img-fluid" src="../assets/jurusan-poster1.png" alt="" srcset="">
                         </div>
                         <div class="col-lg-6 col-md-10 my-auto gerak">
                             <h2 class="mt-lg-5 mt-md-4"><strong>Kepala Jurusan</strong></h2>
@@ -139,7 +139,7 @@
                 <div class="container p-4">
                     <div class="row justify-content-around mb-4">
                         <div class="col-lg-6 col-md-10 mb-4">
-                            <img class="gambar-1 img-fluid" src="../assets/Logo_Mockup_125.jpg" alt="" srcset="">
+                            <img class="gambar-1 img-fluid" src="../assets/jurusan-poster3.png" alt="" srcset="">
                         </div>
                         <div class="col-lg-6 col-md-10 my-auto">
                             <h2 class="mt-lg-5 mt-md-4"><strong>Kepala Jurusan</strong></h2>
@@ -190,7 +190,7 @@
                     <!-- gambar dan deskripsi jurusan JTPI -->
                     <div class="row justify-content-around mb-4">
                         <div class="col-lg-6 col-md-10 mb-4">
-                            <img class="gambar-1 img-fluid" src="../assets/Logo_Mockup_125.jpg" alt="" srcset="">
+                            <img class="gambar-1 img-fluid" src="../assets/jurusan-poster2.png" alt="" srcset="">
                         </div>
                         <div class="col-lg-6 col-md-10 my-auto">
                             <h2 class="mt-lg-5 mt-md-4"><strong>Kepala Jurusan</strong></h2>
