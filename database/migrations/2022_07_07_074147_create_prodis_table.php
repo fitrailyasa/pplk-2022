@@ -25,7 +25,7 @@ class CreateProdisTable extends Migration
             $table->integer('tahunBerdiri')->nullable();
             $table->string('ruangProdi')->nullable();
             $table->integer('jumlahMahasiswa')->nullable();
-            $table->string('diagramAlir')->nullable();
+            $table->string('Logo')->nullable();
             $table->timestamps();
         });
     }

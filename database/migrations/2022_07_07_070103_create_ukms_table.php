@@ -19,13 +19,13 @@ class CreateUkmsTable extends Migration
             $table->string('namaSingkat')->unique();
             $table->text('visi');
             $table->text('misi');
+            $table->text('deskripsi');
             $table->string('pembina')->nullable();
             $table->string('ketuaUmum')->nullable();
             $table->integer('tahunBerdiri')->nullable();
             $table->string('logo')->nullable();
             $table->text('filosofiLogo')->nullable();
             $table->string('qrCode')->nullable();
-            $table->text('deskripsi');
             $table->string('dokumentasi1')->nullable();
             $table->string('dokumentasi2')->nullable();
             $table->string('dokumentasi3')->nullable();

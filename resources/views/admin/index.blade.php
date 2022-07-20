@@ -367,29 +367,53 @@
       </div>
       <div class="card-body">
         <form method="POST" action="#" enctype='multipart/form-data'>
-        @csrf
+          @csrf
+          <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Nama Lengkap</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" placeholder="Nama Pembina" name="namaLengkap" id="namalengkap" required>
+            </div>
+          </div>   
+          <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Nama Singkat</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" placeholder="Nama Pembina" name="namaSingkat" id="namasingkat" required>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Visi</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" placeholder="Nama Pembina" name="visi" id="visi" required>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Misi</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" placeholder="Nama Pembina" name="misi" id="misi" required>
+            </div>
+          </div>    
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Pembina</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Nama Pembina" name="namapembina" id="namapembina" required>
+              <input type="text" class="form-control" placeholder="Nama Pembina" name="pembina" id="namapembina" required>
             </div>
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Ketua Umum</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Ketua Umum" name="ketuaumum" id="ketuaumum" required>
+              <input type="text" class="form-control" placeholder="Ketua Umum" name="ketuaUmum" id="ketuaumum" required>
             </div>
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Dies Natalis</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Dies Natalis" name="diesnatalis" id="diesnatalis" >
+              <input type="text" class="form-control" placeholder="Dies Natalis" name="tahunBerdiri" id="diesnatalis" >
             </div>
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Logo</label>
             <div class="col-sm-9">
-              <input type="file" accept="image/*" class="form-control" name="logo" id="logo" >
+              <input type="text" accept="image/*" class="form-control" name="logo" id="logo" >
             </div>
           </div>
           <div class="mb-3 row">
@@ -401,25 +425,31 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">QR-Code</label>
             <div class="col-sm-9 ">
-              <input type="text" class="form-control" placeholder="Input https://linktr.ee" name="qrcode" id="qrcode" >
+              <input type="text" class="form-control" placeholder="Input https://linktr.ee" name="qrCode" id="qrcode" >
             </div>
           </div>
           <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Deskripsi</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" placeholder="Nama Pembina" name="deskripsi" id="deskripsi" required>
+            </div>
+          </div> 
+          <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Dokumentasi 1</label>
             <div class="col-sm-9">
-              <input type="file" accept="image/*" class="form-control" name="dukum1" id="dokum1" >
+              <input type="text" accept="image/*" class="form-control" name="dukumentasi1" id="dokumentasi1" >
             </div>
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Dokumentasi 2</label>
             <div class="col-sm-9">
-              <input type="file" accept="image/*" class="form-control" name="dokum2" id="dokum2" >
+              <input type="text" accept="image/*" class="form-control" name="dokumentasi2" id="dokumentasi2" >
             </div>
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Dokumentasi 3</label>
             <div class="col-sm-9">
-              <input type="file" accept="image/*" class="form-control" name="dokum3" id="dokum3" >
+              <input type="text" accept="image/*" class="form-control" name="dokumentasi3" id="dokumentasi3" >
             </div>
           </div>
           <div class="mb-3 row">
@@ -445,7 +475,7 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Deskripsi</label>
             <div class="col-sm-9">
-              <textarea class="form-control custom-txt-area" placeholder="Deskripsi" name="deskripsi" id="deskripsi " required></textarea>
+              <textarea class="form-control custom-txt-area" placeholder="Deskripsi" name="isi" id="" required></textarea>
             </div>
           </div>
           <div class="mb-3 row">
@@ -471,13 +501,13 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Artikel Singkat</label>
             <div class="col-sm-9">
-              <textarea class="form-control custom-txt-area" placeholder="Artikel Singkat..." name="singkat" id="singkat" required></textarea>
+              <textarea class="form-control custom-txt-area" placeholder="Artikel Singkat..." name="judul" id="singkat" required></textarea>
             </div>
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Artikel Lengkap</label>
             <div class="col-sm-9">
-              <textarea class="form-control custom-txt-area" placeholder="Artikel Lengkap" name="lengkap" id="lengkap" required></textarea>
+              <textarea class="form-control custom-txt-area" placeholder="Artikel Lengkap" name="isi" id="lengkap" required></textarea>
             </div>
           </div>
           <div class="mb-3 row">
