@@ -15,7 +15,8 @@ class UkmController extends Controller
      */
     public function index()
     {
-        //
+        $ukms = Ukm::all();
+        return view('client.ormawa.ukm', compact('ukms'));
     }
 
     /**

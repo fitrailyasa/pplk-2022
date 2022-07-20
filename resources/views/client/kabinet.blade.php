@@ -68,41 +68,19 @@
         <div class="col-md-12">
             <div class="row">
             <div class="col-md-2 my-5 ms-md-auto" style="text-align-last: center;">
-<<<<<<< Updated upstream
-                <img src="../assets/Logo-km.png" alt="Image" class="img-fluid mx-auto d-block ratio ratio1x1" ></h6>
-=======
-<<<<<<< HEAD
-                <img src="../assets/Logo-km.png" alt="Image" class="logo1" ></h6> 
-=======
-                <img src="../assets/Logo-km.png" alt="Image" class="img-fluid mx-auto d-block ratio ratio1x1" ></h6>
->>>>>>> 5a09b7b68251e08c1138a5ff0407862fd925357e
->>>>>>> Stashed changes
+                <img src="../assets/Logo-km.png" alt="Image" class="logo1" >
             </div>
             <div class="col-md-6 justify-content-start teks1">
                 <h2 class="fw-bold teks2 " >KABINET KM ITERA</h2>
                 <h3 class="teks3">KELUARGA MAHASISWA</h3>
                 <h3 class="teks4">ITERA 2020-2021</h3>
                 <br>
-<<<<<<< HEAD
                 <h5 class="text-start fw-bold teks5">Pembina</h5>
                 <h6 class="text-start teks6">Dr. Ir. Agus Laesanpura, M.S.</h6>
                 <h5 class="text-start fw-bold teks5">Ketua Himpunan</h5>
                 <h6 class="text-start teks6">Dr. Ir. Agus Laesanpura, M.S.</h6>
                 <h5 class="text-start fw-bold teks5">Dies Natalis</h5>
-                <h6 class="text-start teks6">9 Februari 2020</h6>    
-=======
-                <div class="teks2">
-                <h5 class="text-start fw-bold teks display-5">Pembina</h5>
-                <h6 class="text-start teks display-6">Dr. Ir. Agus Laesanpura, M.S.</h6>
-                <h5 class="text-start fw-bold teks display-5">Ketua Himpunan</h5>
-                <h6 class="text-start teks display-6">Dr. Ir. Agus Laesanpura, M.S.</h6>
-                <h5 class="text-start fw-bold teks display-5">Dies Natalis</h5>
-                <h6 class="text-start teks display-6">9 Februari 2020</h6>
-                </div>
-<<<<<<< Updated upstream
-=======
->>>>>>> 5a09b7b68251e08c1138a5ff0407862fd925357e
->>>>>>> Stashed changes
+                <h6 class="text-start teks6">9 Februari 2020</h6>
             </div>
         </div>
     </div>
@@ -313,24 +291,8 @@
 @endsection
 
 @section('script')
-<<<<<<< HEAD
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-=======
-    <!-- SCRIPTS -->
-    <script type="text/javascript">
-        let nav = document.querySelector('#navbar-desktop');
-
-        window.addEventListener('scroll', function () {
-            if (window.pageYOffset > 50) {
-                nav.classList.add('background-gradient', 'shadow');
-            } else {
-                nav.classList.remove('background-gradient', 'shadow');
-            }
-        });
-    </script>
->>>>>>> 5a09b7b68251e08c1138a5ff0407862fd925357e
+    <script src="{{ asset('assets/js/kabinet.min.js') }}"></script>
     <script src="{{ asset('assets/js/kabinet.js') }}"></script>
-    <!-- Swiper JS -->
-    <script src="{{ asset('assets/js/swiper-bundle.min.js') }}"></script>
 @endsection

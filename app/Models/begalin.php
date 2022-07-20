@@ -9,6 +9,6 @@ class Begalin extends Model
 {
     use HasFactory;
     protected $table = 'begalins';
-    protected $fillable = ['isi'];
+    protected $fillable = ['judul','isi'];
     
 }
