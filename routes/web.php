@@ -9,7 +9,6 @@ use App\Http\Controllers\Client\ClientKamusgaulController;
 use App\Http\Controllers\Client\ClientBegalinController;
 use App\Http\Controllers\Client\ClientKabinetController;
 use App\Http\Controllers\Client\ClientJurusanController;
-use App\Http\Controllers\Client\ClientKabinetController;
 use App\Http\Controllers\Client\ClientKamusgaulController;
 
 
@@ -30,9 +29,6 @@ Route::get('/', [LoginController::class, 'showLoginForm']);
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/', [LoginController::class, 'login'])->name('loginPost');
 Route::get('/guest', [guestController::class, 'login'])->name('guest');
-//
-
-
 
 Route::resource('/admin', AdminController::class)->except(['show']);
 
