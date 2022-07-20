@@ -9,8 +9,10 @@ use App\Http\Controllers\Client\ClientKamusgaulController;
 use App\Http\Controllers\Client\ClientBegalinController;
 use App\Http\Controllers\Client\ClientKabinetController;
 use App\Http\Controllers\Client\ClientJurusanController;
-use App\Http\Controllers\Client\ClientKabinetController;
-use App\Http\Controllers\Client\ClientKamusgaulController;
+use App\Http\Controllers\Client\ClientBiodataController;
+
+
+
 
 
 /*
@@ -30,9 +32,6 @@ Route::get('/', [LoginController::class, 'showLoginForm']);
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/', [LoginController::class, 'login'])->name('loginPost');
 Route::get('/guest', [guestController::class, 'login'])->name('guest');
-//
-
-
 
 Route::resource('/admin', AdminController::class)->except(['show']);
 
@@ -47,6 +46,10 @@ Route::get('/kabinet', [ClientKabinetController::class, 'index'])->name('kabinet
 Route::get('/jurusan', [ClientJurusanController::class, 'index'])->name('jurusan'); // ===> jurusan
 
 Route::get('/kamus-gaul', [ClientKamusgaulController::class, 'index'])->name('kamus-gaul');
+
+Route::get('/biodata', [ClientBiodataController::class, 'index'])->name('biodata');
+
+Route::get('/edit-biodata', [ClientBiodataController::class, 'indexEditBio'])->name('edit-biodata');
 
 Route::get('/beranda', [ClientBegalinController::class, 'index'])->name('begalin'); // ===> kamus-gaul
 
@@ -64,12 +67,6 @@ Route::get('/detail-prodi', function () {          // ===> detail prodi
 });
 Route::get('/prodi', function () {                  // ===> prodi
     return view('client.jurusan.prodi');
-});
-Route::get('/biodata', function () {                // ===> biodata
-    return view('client.biodata.biodata');
-});
-Route::get('/edit-biodata', function () {          // ===> edit biodata
-    return view('client.biodata.edit-biodata');
 });
 Route::get('/booklet', function () {              // ===> booklet
     return view('client.booklet');
