@@ -24,40 +24,27 @@ class StoreAdminRequest extends FormRequest
     public function rules()
     {
         return [
-            // 'namaLengkap'=>['string'],
-            // 'namaSingkat'=>['string'],
-            // 'visi'=>['string'],
-            // 'misi'=>['string'],
-            // 'pembina'=>['string'],
-            // 'ketuaUmum'=>['string'],
-            // 'tahunBerdiri'=>['integer'],
-            // 'logo'=>['string'],
-            // 'filosogiLogo'=>['string'],
-            // //UKM
-            // 'qrCode'=>['string'],
-            // 'deskripsi'=>['string'],
-            // 'dokumentasi1'=>['string'],
-            // 'dokumentasi2'=>['string'],
-            // 'dokumentasi3'=>['string'],
-            // //Prodi
-            // 'kepalaProdi'=>['string','nullable'],
-            // 'akreditas'=>['string','nullable'],
-            // 'ruangProdi'=>['string','nullable'],
-            // 'jumlahMahasiswa'=>['integer','nullable'],
-            //Begalin & Funfact
-            'judul'=>['string'],
-            'isi'=>['string'],
-            //Senat
-            'ketua'=>['string'],
-            'deskripsi'=>['string'],
-            'website'=>['string'],
-            'yputube'=>['string'],
-            'instagram'=>['string'],
-            //Himpunan
-            'kodeWarna'=>['string'],
-            'ketuaHimpunan'=>['string']
-
-
+            'namaSingkat'=>['string'],
+            'namaLengkap'=>['string'],
+            'visi'=>['string','nullable'],
+            'misi'=>['string','nullable'],
+            'deskrisi'=>['string','nullable'],
+            'tahunBerdiri'=>['integer','nullable'],
+            'logo'=>['string','nullable'],
+            'filosogiLogo'=>['string','nullable'],
+            //UKM
+            'pembina'=>['string','nullable'],
+            'ketuaUmum'=>['string','nullable'],
+            'qrCode'=>['string','nullable'],
+            'dokumentasi1'=>['string','nullable'],
+            'dokumentasi2'=>['string','nullable'],
+            'dokumentasi3'=>['string','nullable'],
+            //Prodi
+            'kepalaProdi'=>['string','nullable'],
+            'akreditas'=>['string','nullable'],
+            'ruangProdi'=>['string','nullable'],
+            'jumlahMahasiswa'=>['integer','nullable'],
+            //
         
 
 

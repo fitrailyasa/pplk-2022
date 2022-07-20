@@ -1,14 +1,13 @@
 <?php
 
-use App\Http\Controllers\Auth\loginController;
-use App\Http\Controllers\Admin\dashboardController;
-use App\Http\Controllers\Client\clientDashboardController;
-use App\Http\Controllers\Client\ClientUptController;
-use App\Http\Controllers\Client\ClientKamusgaulController;
-use App\Http\Controllers\Client\ClientKabinetController;
-use App\Http\Controllers\Client\ClientJurusanController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\loginController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Client\ClientUptController;
+use App\Http\Controllers\Client\ClientJurusanController;
+use App\Http\Controllers\Client\ClientKabinetController;
+use App\Http\Controllers\Client\ClientKamusgaulController;
 
 
 /*
@@ -22,7 +21,21 @@ use App\Http\Controllers\Admin\AdminController;
 |
 */
 
-Route::get('/admin', [AdminController::class, 'index'])->name('index'); //===> cms admin
+
+//Login
+Route::get('/', [LoginController::class, 'showLoginForm']);
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/', [LoginController::class, 'login'])->name('loginPost');
+Route::get('/guest', [guestController::class, 'login'])->name('guest');
+//
+
+
+
+Route::resource('/admin', AdminController::class)->except(['show']);
+
+Route::get('/admin', [AdminController::class, 'index'])->name('cms'); //===> cms admin
+
+Route::post('/admin', [AdminController::class, 'store'])->name('cms-create');
 
 Route::get('/upt', [ClientUptController::class, 'index'])->name('upt'); //===> upt
 
