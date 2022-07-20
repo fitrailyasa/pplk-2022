@@ -46,6 +46,10 @@ h2{
   font-size: 1.5rem;
 }
 
+.teks7{
+  font-size: 10rem;
+}
+
 .details{
     background-color: var(--gradient-2);
     background-color: var(--bawaan-gradient-2);
