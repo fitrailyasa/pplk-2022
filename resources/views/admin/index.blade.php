@@ -91,7 +91,7 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Nama User</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Nama Lengkap" name="namauser" id="namauser" required>
+              <input type="text" class="form-control" placeholder="Nama Lengkap" name="nama" id="nama" required>
             </div>
           </div>
           <div class="mb-3 row">
@@ -115,7 +115,7 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Program Studi</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" name="prodi" id="prodi"  >
+              <input type="text" class="form-control" name="prodis_id" id="prodi"  >
             </div>
           </div>
           <div class="mb-3 row">
@@ -127,7 +127,7 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Golongan Darah</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Golongan Darah" name="golongandarah" id="golongandarah" >
+              <input type="text" class="form-control" placeholder="Golongan Darah" name="golonganDarah" id="golongandarah" >
             </div>
           </div>
           <div class="mb-3 row">
@@ -139,8 +139,25 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Riwayat Penyakit</label>
             <div class="col-sm-9">
-              <textarea class="form-control custom-txt-area penyakit" placeholder="Riwayat Penyakit" name="riwayat" id="riwayat"  ></textarea>
+              <textarea class="form-control custom-txt-area penyakit" placeholder="Riwayat Penyakit" name="riwayatPenyakit" id="riwayat"  ></textarea>
             </div>
+          </div>
+          <div class="mb-3 row">
+    
+            <label class="col-sm-3 col-form-label">Roles ID</label>
+              <div class="col-sm-9">
+              <select style="width:100px;">
+                <option selected class="selected" value="1" name="roles_id">Super Admin</option>
+                <option value="2">Admin</option>
+                <option value="3">Himpunan</option>
+                <option value="4">Ukm</option>
+                <option value="5">Kedisiplinan</option>
+                <option value="6">DapMen</option>
+                <option value="7">Staff</option>
+                <option value="8">Maba</option>
+              </select>
+            </div> 
+        
           </div>
           <div class="mb-3 row">
             <div class="col-sm-9">
@@ -160,12 +177,12 @@
       <h4 class="card-title">Input Data UPT ITERA</h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="#" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('cms-createUpt') }}" enctype='multipart/form-data'>
         @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Nama UPT</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Nama UPT ITERA" name="namaupt" id="namaupt" required>
+              <input type="text" class="form-control" placeholder="Nama UPT ITERA" name="nama" id="nama" >
             </div>
           </div>
           <div class="mb-3 row">
@@ -280,7 +297,7 @@
       <h4 class="card-title">Input Data Himpunan</h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="#" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('cms-createHimpunan') }}" enctype='multipart/form-data'>
         @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Nama Lengkap</label>
@@ -366,7 +383,7 @@
       <h4 class="card-title">Input Data UKM/Komunitas</h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="#" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('cms-createUkm') }}" enctype='multipart/form-data'>
           @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Nama Lengkap</label>
@@ -383,31 +400,31 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Visi</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Nama Pembina" name="visi" id="visi" required>
+              <input type="text" class="form-control" placeholder="Nama Pembina" name="visi" id="visi" >
             </div>
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Misi</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Nama Pembina" name="misi" id="misi" required>
+              <input type="text" class="form-control" placeholder="Nama Pembina" name="misi" id="misi" >
             </div>
           </div>    
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Pembina</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Nama Pembina" name="pembina" id="namapembina" required>
+              <input type="text" class="form-control" placeholder="Nama Pembina" name="pembina" id="pembina" >
             </div>
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Ketua Umum</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Ketua Umum" name="ketuaUmum" id="ketuaumum" required>
+              <input type="text" class="form-control" placeholder="Ketua Umum" name="ketuaUmum" id="ketuaUmum" >
             </div>
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Dies Natalis</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Dies Natalis" name="tahunBerdiri" id="diesnatalis" >
+              <input type="text" class="form-control" placeholder="Dies Natalis" name="tahunBerdiri" id="tahunBerdiri" >
             </div>
           </div>
           <div class="mb-3 row">
@@ -425,13 +442,13 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">QR-Code</label>
             <div class="col-sm-9 ">
-              <input type="text" class="form-control" placeholder="Input https://linktr.ee" name="qrCode" id="qrcode" >
+              <input type="text" class="form-control" placeholder="Input https://linktr.ee" name="qrCode" id="qrCode" >
             </div>
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Deskripsi</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Nama Pembina" name="deskripsi" id="deskripsi" required>
+              <input type="text" class="form-control" placeholder="Nama Pembina" name="deskripsi" id="deskripsi" >
             </div>
           </div> 
           <div class="mb-3 row">
@@ -470,12 +487,12 @@
       <h4 class="card-title">Input Funfact</h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="#" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('cms-createfunFact') }}" enctype='multipart/form-data'>
         @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Deskripsi</label>
             <div class="col-sm-9">
-              <textarea class="form-control custom-txt-area" placeholder="Deskripsi" name="isi" id="" required></textarea>
+              <textarea class="form-control custom-txt-area" placeholder="Deskripsi" name="isi" id="isi" ></textarea>
             </div>
           </div>
           <div class="mb-3 row">

@@ -23,6 +23,7 @@ use Exception;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\Admin\StoreAdminRequest;
 use App\Http\Requests\Admin\UpdateAdminRequest;
+use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
@@ -88,65 +89,89 @@ class AdminController extends Controller
      * @param  \App\Http\Requests\StoreAdminRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreAdminRequest $request)
+    public function storeUkm(Request $request)
     {
-        // Ukm::create([
+        return 'Ukm Berhasil';
+        Ukm::create([
 
-        //     'namaLengkap'=>$request->namaLengkap,
-        //     'namaSingkat'=>$request->namaSingkat,
-        //     'visi'=>$request->visi,
-        //     'misi'=>$request->misi,
-        //     'pembina'=>$request->pembina,
-        //     'ketuaUmum'=>$request->ketuaUmum,
-        //     'tahunBerdiri'=>$request->tahunBerdiri,
-        //     'logo'=>$request->logo,
-        //     'filosofiLogo'=>$request->filosofiLogo,
-        //     'qrCode'=>$request->qrCode,
-        //     'deskripsi'=>$request->deskripsi,
-        //     'dokumentasi1'=>$request->dokumentasi1,
-        //     'dokumentasi2'=>$request->dokumentasi2,
-        //     'dokumentasi3'=>$request->dokumentasi3
-        // ]);
-
-        // Himpunan::create([
-        //     'namaLengkap'=>$request->namaLengkap,
-        //     'namaSingkat'=>$request->namaSingkat,
-        //     'visi'=>$request->visi,
-        //     'misi'=>$request->misi,
-        //     'deskripsi'=>$request->deskripsi,
-        //     'pembina'=>$request->pembina,
-        //     'ketuaHimpunan'=>$request->ketuaHimpunan,
-        //     'tahunBerdiri'=>$request->tahunBerdiri,
-        //     'logo'=>$request->logo,
-        //     'filosofiLogo'=>$request->filosofiLogo,
-        //     'kodeWarna'=>$request->kodeWarna
-        // ]);
-
-            
-        // ]);
-        Begalin::create([
-            'isi'=>$request->isi,
-            'judul'=>$request->judul
+            'namaLengkap'=>$request->namaLengkap,
+            'namaSingkat'=>$request->namaSingkat,
+            'visi'=>$request->visi,
+            'misi'=>$request->misi,
+            'pembina'=>$request->pembina,
+            'ketuaUmum'=>$request->ketuaUmum,
+            'tahunBerdiri'=>$request->tahunBerdiri,
+            'logo'=>$request->logo,
+            'filosofiLogo'=>$request->filosofiLogo,
+            'qrCode'=>$request->qrCode,
+            'deskripsi'=>$request->deskripsi,
+            'dokumentasi1'=>$request->dokumentasi1,
+            'dokumentasi2'=>$request->dokumentasi2,
+            'dokumentasi3'=>$request->dokumentasi3
         ]);
 
+        return 'Ukm Berhasil';
+        //
+    }
 
+
+    public function storefunFact(Request $request){
         Funfact::create([
             'isi'=>$request->isi
         ]);
 
-        Senat::create([
-            'ketua'=>$request->ketua,
+        return 'funFact Berhasil';
+    }
+
+    public function storeHimpunan(Request $request)
+    {
+        Himpunan::create([
+            'namaLengkap'=>$request->namaLengkap,
+            'namaSingkat'=>$request->namaSingkat,
+            'visi'=>$request->visi,
+            'misi'=>$request->misi,
             'deskripsi'=>$request->deskripsi,
-            'website'=>$request->website,
-            'youtube'=>$request->youtube,
-            'instagram'=>$request->instagram
+            'pembina'=>$request->pembina,
+            'ketuaHimpunan'=>$request->ketuaHimpunan,
+            'tahunBerdiri'=>$request->tahunBerdiri,
+            'logo'=>$request->logo,
+            'filosofiLogo'=>$request->filosofiLogo,
+            'kodeWarna'=>$request->kodeWarna
         ]);
 
+        return 'Himpunan sukses';
+    }
 
-        
 
-        return 'Berhasil';
-        //
+    public function storeUser(StoreAdminRequest $request){
+        User::create([
+            'nama'=>$request->nama,
+            'email'=>$request->email,
+            'password'=>$request->password,
+            'nim'=>$request->nim,
+            'kelompok'=>$request->kelompok,
+            'instagram'=>$request->instagram,
+            'qrCode'=>$request->qrCode,
+            'Prodi'=>$request->Prodi,
+            'nomorHp'=>$request->nomorHp,
+            'golonganDarah'=>$request->golonganDarah,
+            'riwayatPenyakit'=>$request->riwayatPenyakit,
+            'fotoProfil'=>$request->fotoProfil,
+            'roles_id'=>$request->roles_id
+
+        ]);
+
+        return 'User Berhasil';
+    }
+
+    public function storeUpt(Request $request){
+
+        Upt::create([
+            'nama'=>$request->nama,
+            'deskripsi'=>$request->deskripsi
+        ]);
+
+        return 'Upt Berhasil';
     }
 
     /**
