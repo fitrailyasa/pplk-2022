@@ -84,7 +84,7 @@ Route::get('/scanner', function () {              // ===> scanner
     return view('client.scanner');
 });
 Route::get('/card-list', function () {            // ===> redeem code card list
-    return view('client.games.redeem-code.card-listt');
+    return view('client.games.redeem-code.card-list');
 });
 Route::get('/redeem-failed', function () {        // ===> redeem code failed
     return view('client.games.redeem-code.failed');
@@ -109,4 +109,7 @@ Route::get('/login', function () {  // ===> Login
 });
 Route::get('/registrasi', function () {  // ===> Registrasi
     return view('registrasi');
+});
+Route::get('/senat', function () {  // ===> Registrasi
+    return view('client.senat');
 });
