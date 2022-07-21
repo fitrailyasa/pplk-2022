@@ -1,30 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
-:root {
-    --primary: #7739A3;
-    --secondary: #1A75FF;
-    --bawaan-gradient-1:rgb(240,65,255); /*Base Color*/
-    --bawaan-gradient-2: rgb(119,57,163); /*Text Color*/
-    --gradient-1: linear-gradient(90deg, rgb(240, 65, 255) 0%, rgba(130,165,234,1) 100%);
-    --gradient-2: linear-gradient(90deg, rgba(119,57,163,1) 0%, rgba(26,117,255,1) 100%);
-    --white: #fff;
-    --black: #000;
-    --grey: #C4C4C4;
-    --primary-color-1: #110f58;
-    --primary-color-2: rgba(91, 207, 197, 0.2);
-    --font-family-title: Poppins, 'open sans';
-    --font-family-body: Poppins, 'open sans';
-    --font-color-primary: #174461;
-    --font-color-primary-2: #FFFFFF;
-    --font-color-subheadline: #071D2C;
-    --font-color-secondary: #686868;
-    --font-color-call-to-act-2:#4a4a4a;
-    --page-background-1: #F9FAFB;
-    --page-background-2: #f6f6f6;
-}
 body{
-    background-image: url(../background-2.png);
+    background-image: url(../background-2.png) !important;
     background-size: cover;
     background-position: 50% 5%;
     background-repeat: no-repeat;
@@ -128,7 +103,7 @@ img{
 p{
     line-height: 1em;
     text-align: center;
-    color: #fff !important;
+    color: #fff;
     font-size: large;
     padding-left: 5%;
     padding-right: 5%;
@@ -144,7 +119,8 @@ h5{
 h3 {
     line-height: 1em;
     text-align: center;
-    color: #fff !important;
+    color: var(--gradient-1) !important;
+    color: var(--bawaan-gradient-1) !important;
     font-size: large;
     padding-bottom: 3%;
 }
@@ -195,7 +171,7 @@ h2{
     padding-left: 30px;
     border: 20px solid gray;
     text-align: center;
-    margin: 0 20px;
+    margin: 0 20px; 
 }
 .details h2{
     font-size: 22px;
@@ -220,7 +196,7 @@ h2{
     padding-left: 30px;
     text-align: center;
     margin: 0;
-
+    
 }
 .booklet-text{
     transform: translateY(-20rem);
@@ -232,7 +208,7 @@ h2{
 }
 .card-booklet svg, .card-booklet svg path{
     width: 100%;
-    height: 30rem;
+    height: 23rem;
     align-items: center;
 }
 .card-booklet h1{
@@ -240,16 +216,19 @@ h2{
     font-weight: 500;
     margin-bottom: 3%;
 }
-.card-body{
-    background-color: var(--gradient-2);
-    background-color: var(--bawaan-gradient-2);
+#card-body{
+    background-color: var(--white);
     text-align: center;
-    margin: 0;
+    margin: 0; 
     border: 10px solid gray;
     border-radius: 10px;
 }
+
+#carouselExampleCaption{
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
 .booklet{
-    background-image: url(/assets/pplk.png);
     background-size: cover;
     background-position:50% 0%;
     background-repeat: no-repeat;
@@ -273,14 +252,16 @@ h2{
     background: var(--gradient-1);
     padding-left: 40px;
     padding-right: 40px;
-    height: 260px;
+    height: 15rem !important;
     width: 100%;
     /* margin-top: 20px; */
 
 }
+
 .carousel-control{
     background: none !important;
 }
+
 .fun-fact-card .card-body-ff{
     justify-content: center;
     text-align: center;
@@ -305,6 +286,7 @@ h2{
 .fun-fact-card .card-body-ff .card-title {
     overflow: hidden;
     text-align: center;
+    color: var(--white);
 }
 
 .fun-fact-card .card-body-ff .card-title:before,
@@ -332,7 +314,7 @@ h2{
     .fun-fact-card{
 
         margin-top: 0rem;
-
+    
     }
-
+    
 }

@@ -1,33 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
-:root {
-    --primary: #7739A3;
-    --secondary: #1A75FF;
-    --bawaan-gradient-1:rgb(240,65,255); /*Base Color*/
-    --bawaan-gradient-2: rgb(119,57,163); /*Text Color*/
-    --bawaan-gradient-3: rgb(11,10,60);
-    --gradient-1: linear-gradient(90deg, rgb(240, 65, 255) 0%, rgba(130,165,234,1) 100%);
-    --gradient-2: linear-gradient(90deg, rgba(119,57,163,1) 0%, rgba(26,117,255,1) 100%);
-    --gradient-3: linear-gradient(90deg, rgba(11,10,60,1) 0%, rgba(50,25,67,1) 100%);
-    --white: #fff;
-    --black: #000;
-    --grey: #C4C4C4;
-    --primary-color-1: #110f58;
-    --primary-color-2: rgba(91, 207, 197, 0.2);
-    --font-family-title: 'Poppins', 'open sans';
-    --font-family-body: 'Poppins', 'open sans';
-    --font-color-primary: #174461; 
-    --font-color-primary-2: #FFFFFF;
-    --font-color-subheadline: #071D2C; 
-    --font-color-secondary: #686868;
-    --font-color-call-to-act-2:#4a4a4a;
-    --page-background-1: #F9FAFB;
-    --page-background-2: #f6f6f6;
-}
-
-
 body{
+    background-image: url(../background-2.png) !important;
+    background-size: cover;
+    background-position: 50% 5%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-shadow: inset rgba(41, 1, 53, 0.66) 0px 1000rem 100px;
+    width: 100%;;
     margin: 0;
     padding: 0;
     display: block;
@@ -118,7 +96,7 @@ body{
     background-color: #E4E4E4;
 }
 
-/*.navbar-brand ul li a:after {
+/* .navbar-brand ul li a:after {
     content: "";
     position: absolute;
     width: 100%;
@@ -335,21 +313,8 @@ body{
     }  
 }
 
-@media screen and (max-width:570px) {
-    #search-width{
-        width: 12rem;
-    }
-    
-}
-
-@media screen and (max-width:370px) {
-    #search-width{
-        width: 11.2rem;
-    }
-}
-
-@media screen and (max-width:340px) {
-    #search-width{
-        display: none;
+@media screen and (max-width:930px) {
+    #terakhir {
+        margin-bottom: 4rem;
     }
 }

@@ -15,7 +15,8 @@ class PPLKController extends Controller
      */
     public function index()
     {
-        //
+        $pplks = PPLK::all();
+        return view('client.pplk', compact('pplks'));
     }
 
     /**
