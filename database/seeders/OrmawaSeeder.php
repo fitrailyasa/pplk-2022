@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\Ormawa;
 
 class OrmawaSeeder extends Seeder
 {
@@ -11,8 +12,7 @@ class OrmawaSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
-    {
-        //
+    public function run(){
+        Ormawa::factory(5)->create();
     }
 }

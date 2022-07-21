@@ -1,0 +1,275 @@
+body{
+  background-image: url(../background-2.png) !important;
+  background-size: cover !important;
+  background-position: 50% 5%;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed;
+  padding-bottom: 6rem;
+  box-shadow: inset rgba(41, 1, 53, 0.66) 0px 1000rem 100px;
+  width: 100%;
+}
+
+p, h3, h4, h5, h6 {
+    line-height: 1em;
+    /* text-align: center; */
+    color: #fff;
+}
+
+h2{
+    line-height: 1em;
+    /* text-align: center; */
+    color: #fff;
+    padding-top: 20px;
+}
+
+.logo1{
+  width: 90% !important;
+}
+
+.teks2{
+  font-size: 3rem;
+}
+
+.teks3{
+  font-size: 2.5rem;
+}
+
+.teks4{
+  font-size: 2rem;
+}
+
+.teks5{
+  font-size: 1.75rem;
+}
+
+.teks6{
+  font-size: 1.5rem;
+}
+
+.teks7{
+  font-size: 10rem;
+}
+
+.details{
+    background-color: var(--gradient-2);
+    background-color: var(--bawaan-gradient-2);
+    position: relative;
+    z-index: 1;
+    width: 320px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border: 10px solid gray;
+    text-align: center;
+    margin: 0;
+}
+
+.details h2{
+    font-size: 22px;
+    color: #fff;
+    text-align: left;
+}
+.details p{
+    font-size: 16px;
+    color: #fff;
+    text-align: left;
+}
+
+
+.slide-container{
+    max-width: 1120px;
+    width: 100%;
+    padding: 40px 0;
+  }
+  .slide-content{
+    margin: 0 40px;
+    overflow: hidden;
+  }
+  .card{
+    background-color: #FFF;
+  }
+  .image-content,
+  .card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+  }
+  .image-content{
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+  }
+  .overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #db13db;
+    
+  }
+  .overlay::before,
+  .overlay::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: #ffffff;
+  }
+  .overlay::after{
+    border-radius: 0 25px 0 0;
+    background-color: #FFF;
+  }
+  .card-image{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background: #FFF;
+    padding: 3px;
+  }
+  .card-image .card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #8d0da7;
+  }
+  .name{
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+  }
+  .description{
+    font-size: 14px;
+    color: #707070;
+    text-align: center;
+  }
+  .button{
+    border: none;
+    font-size: 16px;
+    color: #FFF;
+    padding: 8px 16px;
+    background-color: #3d053d;
+    border-radius: 6px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .videoyoutube {
+    width: 75%;
+    height: 30rem;
+  }
+
+  .col {
+    justify-content: center;
+    display: flex;
+  }
+
+  .buttons{
+    border: none;
+    display: inline-block;
+    font-family:var(--font-family-body) ;
+    font-size: 4rem;
+    color: #FFF;
+    align-content: center;
+    padding: 15px 8px;
+    background-color: #14053d;
+    border-radius: 12rem;
+    height: 5rem;
+    width: 5rem;
+    cursor: pointer;
+    justify-content: center;
+    display: flex;
+    transition: all 0.3s ease;
+  }
+
+  .buttons:hover .icon {
+    transform: translate(0, -20px);
+  }
+
+  .button:hover{
+    background: #860686;
+  }
+  
+  .buttons:hover{
+    background: #5e0c72;
+    color: white;
+  }
+
+  .swiper-navBtn{
+    color: #db13db;
+    transition: color 0.3s ease;
+  }
+  .swiper-navBtn:hover{
+    color: #db13db;
+  }
+  .swiper-navBtn::before,
+  .swiper-navBtn::after{
+    font-size: 35px;
+  }
+  .swiper-button-next{
+    right: 0;
+  }
+  .swiper-button-prev{
+    left: 0;
+  }
+  .swiper-pagination-bullet{
+    background-color: #db13db;
+    opacity: 1;
+  }
+  .swiper-pagination-bullet-active{
+    background-color: #db13db;
+  }
+  
+  .sosmed {
+    text-decoration: none;
+  }
+
+  .sosmed :hover {
+    text-decoration: none;
+    color: white;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .slide-content{
+      margin: 0 10px;
+    }
+    .swiper-navBtn{
+      display: none;
+    }
+  }
+
+  @media screen and (max-width:930px) {
+    .teks1 {
+      text-align: center;
+    }
+    .teks5, .teks6 {
+      padding-left: 1.5rem;
+    }
+    .buttons {
+      margin-top: 2rem;
+      margin-bottom: 6rem;
+      margin-left: auto;
+    }
+    #terakhir {
+      margin-bottom: 6rem;
+  }
+    .videoyoutube {
+      height: 15rem;
+      width: 25rem;
+  }
+    .teks2, .teks5 {
+      font-size: 1.5rem;
+    }
+    .logo1{
+      width: 45% !important;
+    }
+  }
+
+  @media screen and (max-width:570px) {
+  }

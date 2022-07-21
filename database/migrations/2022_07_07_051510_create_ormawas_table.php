@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
+use App\Models\Ormawa;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 class CreateOrmawasTable extends Migration
 {
@@ -15,8 +16,8 @@ class CreateOrmawasTable extends Migration
     {
         Schema::create('ormawas', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_lengkap')->unique();
-            $table->string('nama_singkat')->unique();
+            $table->string('namaLengkap')->unique();
+            $table->string('namaSingkat')->unique();
             $table->foreignId('kategoris_id');
             $table->foreign('kategoris_id')->references('id')->on('kategoris');
             $table->text('visi');
@@ -25,6 +26,8 @@ class CreateOrmawasTable extends Migration
             $table->timestamps();
         });
     }
+
+
 
     /**
      * Reverse the migrations.

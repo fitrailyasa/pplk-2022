@@ -1,0 +1,50 @@
+.gambar-1 {
+  object-fit: cover;
+  object-position: 50% 0%;
+  border-radius: 20px;
+}
+
+.jumbotron {
+  background-image: url(../pplk.png);
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+#pills-tab {
+  background: rgb(11, 10, 60);
+  background: linear-gradient(90deg, rgba(11, 10, 60, 1) 0%, rgba(50, 25, 67, 1) 100%);
+}
+
+#pills-tab .nav-item .active {
+  background: linear-gradient(90deg, rgb(240, 65, 255) 0%, rgba(130, 165, 234, 1) 100%) !important;
+}
+.btn .card {
+  background: linear-gradient(90deg, rgb(240, 65, 255) 0%, rgba(130, 165, 234, 1) 100%) !important;
+  width: 20rem;
+}
+
+.dashboard-item-icon {
+  display: none;
+}
+
+.animasi-nav:hover {
+  transform: translate(0, -5px);
+  font-size: larger;
+}
+
+@media only screen and (max-width: 500px) {
+  .dashboard-item-icon {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+  }
+  #pills-tab .nav-item .nav-link {
+    height: 10rem;
+  }
+}
+
+@media screen and (max-width:930px) {
+  #terakhir {
+      margin-bottom: 8rem;
+  }
+}

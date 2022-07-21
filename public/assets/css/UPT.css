@@ -1,0 +1,34 @@
+body {
+  background-image: url(../background-2.png) !important;
+  background-size: cover;
+  background-position: 50% 5%;
+  background-repeat: no-repeat ;
+  background-attachment: fixed;
+  box-shadow: inset rgba(41, 1, 53, 0.66) 0px 1000rem 100px;
+  width: 100%;
+}
+
+.upt-card {
+  width: 90%;
+  background: linear-gradient(90deg, rgb(240, 65, 255) 0%, rgba(130, 165, 234, 1) 100%) !important;
+  height: 25rem !important;
+}
+
+.owl-dots .active {
+  padding: 5rem;
+}
+
+.carousel .card {
+  transition: 0.5s;
+  transform: scale(0.8);
+}
+.carousel .active .card {
+  transition: 0.5s;
+  transform: scale(1);
+}
+
+@media screen and (max-width:930px) {
+  #content {
+      margin-bottom: 4rem;
+  }
+}

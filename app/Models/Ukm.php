@@ -10,9 +10,6 @@ class Ukm extends Model
     use HasFactory;
 
     protected $table = 'ukms';
-    protected $fillable = ['pembina', 'ketuaUmum', 'tahunBerdiri', 'logo', 'filosofiLogo', 'barcode', 'ormawas_id'];
+    protected $fillable = ['namaLengkap','namaSingkat','visi','misi','pembina','ketuaUmum','tahunBerdiri','logo','filosofiLogo','qrCode','deskripsi','dokumentasi1','dokumentasi2','dokumentasi3'];
 
-    public function ormawas(){
-        return $this->belongsTo(Ormawa::class, 'ormawas_id');
-    }
 }

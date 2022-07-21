@@ -13,10 +13,11 @@ class CreateKamusgaulsTable extends Migration
      */
     public function up()
     {
-        Schema::create('kamusgauls', function (Blueprint $table) {
+        Schema::create('kamus_gauls', function (Blueprint $table) {
             $table->id();
             $table->string('gaul')->nullable();
             $table->string('asli')->nullable();
+            $table->timestamps();
         });
     }
 

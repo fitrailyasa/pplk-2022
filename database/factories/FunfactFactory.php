@@ -14,7 +14,7 @@ class FunfactFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'isi'=>$this->faker->unique()->text(mt_rand(250,300))
         ];
     }
 }

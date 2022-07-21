@@ -15,8 +15,8 @@ class CreateFunfactsTable extends Migration
     {
         Schema::create('funfacts', function (Blueprint $table) {
             $table->id();
-            $table->string('judul');
             $table->text('isi');
+            $table->timestamps();
         });
     }
 

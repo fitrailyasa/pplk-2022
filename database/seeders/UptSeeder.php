@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Upt;
 use Illuminate\Database\Seeder;
 
 class UptSeeder extends Seeder
@@ -13,6 +14,6 @@ class UptSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Upt::factory(5)->create();
     }
 }

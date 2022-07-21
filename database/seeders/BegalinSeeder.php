@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Begalin;
 use Illuminate\Database\Seeder;
 
 class BegalinSeeder extends Seeder
@@ -13,6 +14,7 @@ class BegalinSeeder extends Seeder
      */
     public function run()
     {
+        Begalin::factory(5)->create();
         //
     }
 }

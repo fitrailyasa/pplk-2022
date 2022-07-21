@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Kabinet;
 use Illuminate\Database\Seeder;
 
 class KabinetSeeder extends Seeder
@@ -13,6 +14,6 @@ class KabinetSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Kabinet::factory(1)->create();
     }
 }
