@@ -91,7 +91,11 @@ class AdminController extends Controller
      */
     public function storeUkm(Request $request)
     {
+<<<<<<< Updated upstream
         
+=======
+        return 'Ukm Berhasil';
+>>>>>>> Stashed changes
         Ukm::create([
 
             'namaLengkap'=>$request->namaLengkap,
@@ -143,7 +147,11 @@ class AdminController extends Controller
     }
 
 
+<<<<<<< Updated upstream
     public function storeUser(StoreAdminRequest $request){
+=======
+    public function storeUser(Request $request){
+>>>>>>> Stashed changes
         User::create([
             'nama'=>$request->nama,
             'email'=>$request->email,

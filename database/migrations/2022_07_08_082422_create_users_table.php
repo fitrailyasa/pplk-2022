@@ -22,7 +22,11 @@ class CreateUsersTable extends Migration
             $table->integer('kelompok')->nullable();
             $table->string('instagram')->nullable();
             $table->string('qrCode');
-            $table->integer('prodis_id')->nullable();
+            $table->integer('prodi')->nullable();
+            $table->string('nomorHp')->nullable();
+            $table->string('golonganDarah')->nullable();
+            $table->string('riwayatPenyakit')->nullable();
+            $table->string('fotoProfil')->nullable();
             $table->foreignId('roles_id')->constrained('roles')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });

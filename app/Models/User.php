@@ -23,9 +23,12 @@ class User extends Model
         'nim',
         'password',
         'roles_id',
-        'prodis_id',
+        'prodi',
         'kelompok',
-        'instagram'
+        'instagram',
+        'golonganDarah',
+        'riwayatPenyakit',
+        'nomorHp'
     ];
 
     /**
@@ -47,11 +50,6 @@ class User extends Model
     public function roles()
     {
         return $this->belongsTo(Role::class, 'roles_id');
-    }
-
-    public function prodis()
-    {
-        return $this->belongsTo(Prodi::class, 'prodis_id');
     }
 }
 

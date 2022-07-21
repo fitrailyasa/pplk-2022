@@ -4,6 +4,7 @@ namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+
 class StoreAdminRequest extends FormRequest
 {
     /**
@@ -24,26 +25,26 @@ class StoreAdminRequest extends FormRequest
     public function rules()
     {
         return [
-            // 'namaLengkap'=>['string'],
-            // 'namaSingkat'=>['string'],
-            // 'visi'=>['string'],
-            // 'misi'=>['string'],
-            // 'pembina'=>['string'],
-            // 'ketuaUmum'=>['string'],
-            // 'tahunBerdiri'=>['integer'],
-            // 'logo'=>['string'],
-            // 'filosogiLogo'=>['string'],
-            // //UKM
-            // 'qrCode'=>['string'],
-            // 'deskripsi'=>['string'],
-            // 'dokumentasi1'=>['string'],
-            // 'dokumentasi2'=>['string'],
-            // 'dokumentasi3'=>['string'],
-            // //Prodi
-            // 'kepalaProdi'=>['string','nullable'],
-            // 'akreditas'=>['string','nullable'],
-            // 'ruangProdi'=>['string','nullable'],
-            // 'jumlahMahasiswa'=>['integer','nullable'],
+            'namaLengkap'=>['string','required'],
+            'namaSingkat'=>['string','required'],
+            'visi'=>['string'],
+            'misi'=>['string'],
+            'pembina'=>['string'],
+            'ketuaUmum'=>['string'],
+            'tahunBerdiri'=>['integer'],
+            'logo'=>['string'],
+            'filosogiLogo'=>['string'],
+            //UKM
+            'qrCode'=>['string'],
+            'deskripsi'=>['string'],
+            'dokumentasi1'=>['string'],
+            'dokumentasi2'=>['string'],
+            'dokumentasi3'=>['string'],
+            //Prodi
+            'kepalaProdi'=>['string','nullable'],
+            'akreditas'=>['string','nullable'],
+            'ruangProdi'=>['string','nullable'],
+            'jumlahMahasiswa'=>['integer','nullable'],
             //Begalin & Funfact
             'judul'=>['string'],
             'isi'=>['string'],
@@ -55,28 +56,34 @@ class StoreAdminRequest extends FormRequest
             'instagram'=>['string'],
             //Himpunan
             'kodeWarna'=>['string'],
-            'ketuaHimpunan'=>['string']
+            'ketuaHimpunan'=>['string'],
+            //User
+            'nama'=>['string','required'],
+            'email'=>['string','required'],
+            'password'=>['string'],
+            'nim'=>['string'],
+            'kelompok'=>['integer'],
+            'instagram'=>['string'],
+            'qrCode'=>['string'],
+            'Prodi'=>['string'],
+            'nomorHp'=>['string'],
+            'golonganDarah'=>['string'],
+            'riwayatPenyakit'=>['string'],
+            'fotoProfil'=>['string'],
+            'roles_id'=>['integer']
+
 
 
         
 
 
-            // $table->string('kepalaProdi')->nullable();
+            // 'kepalaProdi')->nullable();
             // $table->string('akreditasi')->nullable();
             // $table->integer('tahunBerdiri')->nullable();
             // $table->string('ruangProdi')->nullable();
             // $table->integer('jumlahMahasiswa')->nullable();
             // $table->string('Logo')->nullable();
 
-            // $table->string('pembina')->nullable();
-            // $table->string('ketuaUmum')->nullable();
-            // $table->integer('tahunBerdiri')->nullable();
-            // $table->string('logo')->nullable();
-            // $table->text('filosofiLogo')->nullable();
-            // $table->string('qrCode')->nullable();
-            // $table->string('dokumentasi1')->nullable();
-            // $table->string('dokumentasi2')->nullable();
-            // $table->string('dokumentasi3')->nullable();
             
         ];
     }

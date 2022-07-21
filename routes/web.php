@@ -33,12 +33,20 @@ Route::get('/guest', [guestController::class, 'login'])->name('guest');
 
 Route::get('/admin', [AdminController::class, 'index'])->name('cms'); //===> cms admin
 //ROUTE CREATE
+<<<<<<< Updated upstream
 Route::post('/admin/Ukm', [AdminController::class, 'storeUkm'])->name('createUkm');
 Route::post('/admin/Himpunan', [AdminController::class, 'storeHimpunan'])->name('createHimpunan');
 Route::post('/admin/Funfact', [AdminController::class, 'storefunFact'])->name('createfunFact');
 Route::post('/admin/User', [AdminController::class, 'storeUser'])->name('createUser');
 Route::post('/admin/Upt', [AdminController::class, 'storeUpt'])->name('createUpt');
 
+=======
+Route::post('/admin/Ukm', [AdminController::class, 'storeUkm'])->name('cms-createUkm');
+Route::post('/admin/Himpunan', [AdminController::class, 'storeHimpunan'])->name('cms-createHimpunan');
+Route::post('/admin/Funfact', [AdminController::class, 'storefunFact'])->name('cms-createfunFact');
+Route::post('/admin/User', [AdminController::class, 'storeUser'])->name('cms-createUser');
+Route::post('/admin/Upt', [AdminController::class, 'storeUpt'])->name('cms-createUpt');
+>>>>>>> Stashed changes
 
 
 
