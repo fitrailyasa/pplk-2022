@@ -9,68 +9,108 @@
 
     <!--Dashboard-->
     <div class="col-xl-12 col-lg-12 form-wrapper tabcontents" id="dashboard" >
-        <div class="row">
-        <div class="col-xl-6">
-            <div class="widget-stat card bg-success">
-                <div class="card-body p-4">
-                    <div class="media">
-                        <span class="me-3">
-                            <i class="ti ti-user"></i>
-                        </span>
-                        <div class="media-body text-white text-end">
-                            <p class="mb-1">Total Mahasiswa</p>
-                            <h3 class="text-white">1000</h3>
-                </div>
+      <div class="row">
+        <div class="col-md">
+          <div class="widget-stat card" style="background: #FF6565;">
+            <div class="card-body p-4">
+              <div class="media">
+              <div class="media-body text-white text-end">
+                <p class="mb-1">Total Mahasiswa</p>
+                <h3 class="text-white">5451</h3>
+              </div>
             </div>
-                    </div>
-                </div>
-                                </div>
-        <div class="col-xl-6">
-            <div class="widget-stat card bg-warning">
-                <div class="card-body p-4">
-                    <div class="media">
-                        <span class="me-3">
-                            <i class="ti ti-gift"></i>
-                        </span>
-                        <div class="media-body text-white text-end">
-                            <p class="mb-1">Total Staff</p>
-                            <h3 class="text-white">0</h3>
-                            </div>
-                        </div>
-                                </div>
-                            </div>
-                        </div>
-        <div class="col-xl-6">
-            <div class="widget-stat card bg-info">
-                <div class="card-body p-4">
-                    <div class="media">
-                        <span class="me-3">
-                            <i class="ti ti-files"></i>
-                        </span>
-                        <div class="media-body text-white text-end">
-                            <p class="mb-1">Total aja</p>
-                            <h3 class="text-white">0</h3>
-                                </div>
-                            </div>
-                        </div>
-                                </div>
-                            </div>
-        <div class="col-xl-6">
-            <div class="widget-stat card bg-primary">
-                <div class="card-body p-4">
-                    <div class="media">
-                        <span class="me-3">
-                            <i class="ti ti-shopping-cart-full"></i>
-                        </span>
-                        <div class="media-body text-white text-end">
-                            <p class="mb-1">Total aja lagi</p>
-                            <h3 class="text-white">0</h3>
-                        </div>
-                    </div>
-                </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="widget-stat card" style="background: #58ED67;">
+          <div class="card-body p-4">
+            <div class="media">
+              <div class="media-body text-white text-end">
+                <p class="mb-1">Total Panitia</p>
+                <h3 class="text-white">984</h3>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
+      <div class="col-md">
+        <div class="widget-stat card" style="background: #FF659C;">
+          <div class="card-body p-4">
+            <div class="media">
+              <div class="media-body text-white text-end">
+                <p class="mb-1">Total Himpunan</p>
+                <h3 class="text-white">36</h3>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
+      <div class="row">
+        <div class="col-md">
+          <div class="widget-stat card" style="background: #9665FF;">
+            <div class="card-body p-4">
+              <div class="media">
+                <div class="media-body text-white text-end">
+                  <p class="mb-1">Total UKM/Komunitas</p>
+                  <h3 class="text-white">44</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="widget-stat card" style="background: #6590FF;">
+            <div class="card-body p-4">
+              <div class="media">
+                <div class="media-body text-white text-end">
+                  <p class="mb-1">Total Dapmen</p>
+                  <h3 class="text-white">383</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="widget-stat card" style="background: #61DAEB;">
+            <div class="card-body p-4">
+              <div class="media">
+                <div class="media-body text-white text-end">
+                  <p class="mb-1">Total Akun</p>
+                  <h3 class="text-white">6703</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md">
+          <div class="widget-stat card" style="background: #FFA73F;">
+            <div class="card-body p-4">
+              <div class="media">
+                <div class="media-body text-white text-end">
+                  <p class="mb-1">Total Kehadiran Maba</p>
+                  <h3 class="text-white">5423</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="widget-stat card" style="background: #F458F8;">
+            <div class="card-body p-4">
+              <div class="media">
+                <div class="media-body text-white text-end">
+                  <p class="mb-1">Total Kehadiran Panitia</p>
+                  <h3 class="text-white">922</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!--./Dashboard-->
 
