@@ -74,9 +74,9 @@
                     </div>
 
                 </div>
-                <div class="col-lg-6 col-md-7">
+               <div class="col-lg-6 col-md-7">
                     <div class="row g-2 justify-content-around">
-                        <div class="col-6">
+                        <div class="col-6"><a href="/jurusan">
                             <div class="card text-center m-lg-3 m-md-3" >
                                 <div class="card-body">
                                     <svg class="gambar-1" id="link-icon" viewBox="0 0 201 201" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -90,9 +90,9 @@
 
                                     <h1 class="link-tilte">JURUSAN</h1>
                                 </div>
-                            </div>
+                            </div></a>
                         </div>
-                        <div class="col-6">
+                        <div class="col-6"><a href="/prodi">
                             <div class="card text-center m-lg-3 m-md-3" >
                                 <div class="card-body">
                                     <svg class="gambar-1" id="link-icon" viewBox="0 0 146 146" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -122,9 +122,9 @@
 
                                     <h1 class="link-tilte">PRODI</h1>
                                 </div>
-                            </div>
+                            </div></a>
                         </div>
-                        <div class="col-6">
+                        <div class="col-6"><a href="/himpunan">
                             <div class="card text-center m-lg-3  m-md-3 " >
                                 <div class="card-body">
                                     <svg class="gambar-1" id="link-icon" viewBox="0 0 170 170" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -142,9 +142,9 @@
 
                                     <h1 class="link-tilte">HIMPUNAN</h1>
                                 </div>
-                            </div>
+                            </div></a>
                         </div>
-                        <div class="col-6">
+                        <div class="col-6"><a href="/ukm">
                             <div class="card text-center m-lg-3  m-md-3 " >
                                 <div class="card-body">
                                     <svg class="gambar-1" id="link-icon" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -160,9 +160,9 @@
                                         <path d="M115.04 32.8125C115.04 41.224 108.243 48.0469 99.8581 48.0469C91.4727 48.0469 84.6758 41.224 84.6758 32.8125C84.6758 24.401 91.4727 17.5781 99.8581 17.5781C108.243 17.5781 115.04 24.401 115.04 32.8125Z" fill="black"/>
                                         </svg>
 
-                                        <h1 class="link-tilte m-4">UKM</h1>
+                                        <h1 class="link-tilte m-4"> UKM</h1>
                                 </div>
-                            </div>
+                            </div></a>
                         </div>
                     </div>
                 </div>
@@ -171,32 +171,32 @@
                 <div class="flexbox-mini">
                     <div class="small-slide-menu-item justify-content-center">
                         <div class="text-link">
-                            UPT ITERA
+                           <a href="/upt">UPT ITERA</a>
                         </div>
                     </div>
                     <div class="small-slide-menu-item justify-content-center">
                         <div class="text-link">
-                            KABINET KM-ITERA
+                            <a href="/kabinet">KABINET KM-ITERA</a>
                         </div>
                     </div>
                     <div class="small-slide-menu-item justify-content-center">
                         <div class="text-link">
-                            SENAT KM-ITERA
+                            <a href="/senat"> SENAT KM-ITERA</a>
                         </div>
                     </div>
                     <div class="small-slide-menu-item justify-content-center">
                         <div class="text-link">
-                            PPLK ITERA
+                            <a href="/pplk">PPLK ITERA</a>
                         </div>
                     </div>
                     <div class="small-slide-menu-item justify-content-center">
                         <div class="text-link">
-                            DIVISI PPLK
+                            <a href="/div-pplk">DEVISI PPLK</a>
                         </div>
                     </div>
                     <div class="small-slide-menu-item justify-content-center">
                         <div class="text-link">
-                            KAMUS GAUL
+                            <a href="/kamus-gaul">KAMUS GAUL</a>
                         </div>
                     </div>
 
@@ -335,17 +335,16 @@
                         </div>
 
                         <div class="mt-5 p-3 col-10 g-3 carousel-contaner owl-carousel">
-
                             <div class="item">
-                                <iframe class="carousel-card" src="https://www.youtube.com/embed/jiUxHm9l1KY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-                            </div>
-                            <div class="item">
-                                <iframe class="carousel-card" src="https://www.youtube.com/embed/jiUxHm9l1KY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe class="carousel-card" src="https://www.youtube.com/embed/2Ri-jDNvRJo?start=4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                             </div>
                             <div class="item">
-                                <iframe class="carousel-card" src="https://www.youtube.com/embed/jiUxHm9l1KY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe class="carousel-card" src="https://www.youtube.com/embed/9ugGlXcktro?start=4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                            </div>
+                            <div class="item">
+                                <iframe class="carousel-card" src="https://www.youtube.com/embed/O3eV573Zb-k?start=4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                             </div>
 
@@ -359,57 +358,83 @@
                 </div>
             </div>
         </div>
+  <!-- begalin -->
+  <div class="container-fluid begalin pt-5">
+    <div class="begalin-container">
+        <div class="title text-center pt-3">
+            <p>BEGALIN</p>
+            <p class="akronim-begalin">BELAJAR GALI INFORMASI</p>
+        </div>
+        <div class="begalin-wraper owl-carousel owl-theme">
+            <div class="begalin-card">
+                <div class="begalin-content mx-5">
+                    <p class="truncate">
+                    Rumah Adat lamban Balak : Rumah ini menyerupai Nuwou balak berupa rumah panggung. Untuk bagian dari ruangannya sendiri terdapat Jan, Lepau, Lapang Luakh, Lapang Lom, Bilik Kebik, Tebelayakh, Sekhudu, Panggakh, Dapokh, Gakhang, Bah Lamban.
+                    Rumah adat Lamban Pesagi : Rumah ini memiliki ciri khas yaitu terdapat tiang-tiang penyangga yang berukuran lebih besar, ciri lainnya yang membedakan rumah adat ini dengan 3 rumah adat sebelumnya adalah lumbung padi yang dibangun terpisah dari rumah utama.
+                    </p>
 
-        <!-- begalin -->
-        <div class="container-fluid begalin pt-5">
-            <div class="begalin-container">
-                <div class="title text-center">
-                    <p>BEGALIN</p>
-                    <p class="akronim-begalin">BELAJAR GALI INFORMASI</p>
+                    <button type="button" class="btn background-gradient mx-auto my-4" data-bs-toggle="modal" data-bs-target="#begalin-1">
+                        View More
+                    </button>
+                    </div>
                 </div>
-                @foreach ($begalins as $begalin )
-                <div class="begalin-wraper owl-carousel owl-theme">
-                    <div class="-begalin-card">
-                        <div class="begalin-content">
-                            <p> {{ $begalin->judul }}</p>
-                            <button type="button" class="btn background-gradient mx-auto my-4" data-bs-toggle="modal" data-bs-target="#myModal">
-                               Toggle
-                              </button>
-                            </div>
-                        </div>
+                <div class="-begalin-card">
+                    <div class="begalin-content">
+                    <p class="truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt doloremque unde accusamus velit suscipit vel impedit magnam! Debitis consectetur commodi, esse distinctio dignissimos, accusantium, fuga quod eius porro cum ullam odio saepe! Unde, ducimus iusto earum ut itaque ipsum. Recusandae laboriosam quis sit, magni quia itaque est beatae?</p>
+
+                    <button type="button" class="btn background-gradient mx-auto my-4" data-bs-toggle="modal" data-bs-target="#begalin-2">
+                        View More
+                    </button>
                 </div>
             </div>
+
+
+
         </div>
+    </div>
+</div>
 
-        <!-- modal begalin -->
-        <div class="modal modal-xl fade" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <!-- <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5> -->
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="content-modal text-start m-2">
-                        <p>{{ $begalin ->isi }}</p>
-                    </div>
-                </div>
-                <div class="modal-footer justify-content-start">
-                    <!-- Tagline PPLK 2022 -->
-                    <!-- Copyright href ke page Our Team -->
-                    <div class="text-start">
-                        <strong >Copyright &copy; 2022 <a href="#" class=" text-decoration-none">IMTEK PPLK-2022</a>.</strong> All rights reserved.
-                    </div>
-                    @endforeach
 
-                    <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Understood</button> -->
-                </div>
+<!-- modal begalin -->
+<div class="modal modal-xl fade" id="begalin-1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <!-- <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5> -->
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-footer justify-content-start">
+            <div class="text-start">
+                <strong >Copyright &copy; 2022 <a href="#" class=" text-decoration-none">IMTEK PPLK-2022</a>.</strong> All rights reserved.
             </div>
         </div>
     </div>
-    <!-- end modal begalin -->
-    
+    </div>
+</div>
+<!-- end modal begalin -->
+<div class="modal modal-xl fade" id="begalin-2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <!-- <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5> -->
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="content-modal text-start m-2">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo ex eaque ratione quas sint. Quas libero similique totam velit molestias explicabo cupiditate nulla esse suscipit. Eum id cumque dolore enim.</p>
+            </div>
+        </div>
+        <div class="modal-footer justify-content-start">
+            <div class="text-start">
+                <strong >Copyright &copy; 2022 <a href="#" class=" text-decoration-none">IMTEK PPLK-2022</a>.</strong> All rights reserved.
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+<!-- end modal begalin -->
+
+
         <!-- medpatr -->
         <div class="container-fluid medpart padding-top-bottom" id="terakhir">
             <div class="wrapper">

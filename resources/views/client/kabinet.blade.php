@@ -213,13 +213,28 @@
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" >
         <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="../assets/satu.jpg" class="d-block w-100" alt="...">
+            <img src="{{ asset('assets/organigram/akspro.png') }}" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="../assets/dua.jpg" class="d-block w-100" alt="...">
+            <img src="{{ asset('assets/organigram/kesekre.png') }}" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="../assets/tiga.jpg" class="d-block w-100" alt="...">
+            <img src="{{ asset('assets/organigram/keuangan.png') }}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="{{ asset('assets/organigram/eksternal.png') }}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="{{ asset('assets/organigram/kominfo.png') }}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="{{ asset('assets/organigram/internal.png') }}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="{{ asset('assets/organigram/ppm.png') }}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="{{ asset('assets/organigram/presmasekjen.png') }}" class="d-block w-100" alt="...">
         </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
