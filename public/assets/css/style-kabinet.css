@@ -259,6 +259,9 @@ h2{
     #terakhir {
       margin-bottom: 6rem;
   }
+    #medsos {
+      margin-right: 3.5rem;
+    }
     .videoyoutube {
       height: 15rem;
       width: 25rem;
@@ -269,7 +272,4 @@ h2{
     .logo1{
       width: 45% !important;
     }
-  }
-
-  @media screen and (max-width:570px) {
   }

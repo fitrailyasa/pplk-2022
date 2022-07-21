@@ -43,7 +43,7 @@
 
 
     <div class="container">
-        <div class="mt-md-4 mt-sm-5 justify-content-center d-flex flex-wrap ">
+        <div class="mt-md-4 mt-sm-5 justify-content-center d-flex flex-wrap " id="medsos">
             <a href="https://twitter.com/KM_ITERA" target="_blank" class="buttons background-gradient sosmed mx-lg-5 mx-sm-3">
             <div class="icon text-center ">
                 <i class="fab fa-twitter"></i>

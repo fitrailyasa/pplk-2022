@@ -1,4 +1,4 @@
-`    @extends('layouts.client.app')
+@extends('layouts.client.app')
 
     <!-- TITLE -->
     @section('title', 'Jurusan')
