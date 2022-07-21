@@ -35,7 +35,7 @@
 <div class="container-fluid booklet-text">
     <div class="row justify-content-center">
         <div class="col-9 text-center">
-            <h1 class="text-white fw-bold mt-3">BOOKLET</h1>
+            <h1 class="text-white fw-bold mt-3" id="teks1">BOOKLET</h1>
             <div class="card-body justify-content-center border" id="card-body">
             <div class="col">
                 <h3 class="card-title">KEBUTUHAN MABA</h3>
@@ -74,7 +74,7 @@
         </div>
     </div>
     
-    <div class="carousel-item" id="terakhir">
+    <div class="carousel-item">
         <div class="card fun-fact-card">
             <div class="card-body-ff">
                 <h2 class="card-title">
@@ -87,15 +87,15 @@
         </div>
 
     </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-    </button>
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Next</span>
+</button>
 </div>
 </div>
 @endsection

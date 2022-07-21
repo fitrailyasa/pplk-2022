@@ -49,7 +49,7 @@
                         <div class="form-group">
                             <div class="mb-3">
                                 <label for="code-redeem" class="form-label text-white">CODE :</label>
-                                <input type="text" id="code-redeem" class="input-control" placeholder="_______">
+                                <input type="text" id="code-redeem" class="input-control" placeholder="_________">
                             </div>
                         </div>
                         <div class="d-flex justify-content-center">
@@ -79,7 +79,7 @@
                                     aria-label="Close"></button>
                                 <div class="conten-modal py-5">
                                     <h1 class="text-center dsplay-4"><strong>REEDEM CODE GAGAL</strong></h1>
-                                    <p class="px-4 text-center">Yahh kode yang kalian masukna salah
+                                    <p class="px-4 text-center">Yahh kode yang kalian masukan salah
                                         coba kode lain yuk !!.</p>
                                 </div>
                             </div>
