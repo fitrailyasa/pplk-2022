@@ -110,3 +110,6 @@ Route::get('/login', function () {  // ===> Login
 Route::get('/registrasi', function () {  // ===> Registrasi
     return view('registrasi');
 });
+Route::get('/senat', function () {  // ===> Registrasi
+    return view('client.senat');
+});
