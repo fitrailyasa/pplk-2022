@@ -24,7 +24,7 @@
         <div class="col-md-12">
             <div class="row">
             <div class="col-md-2 my-5 ms-md-auto" style="text-align-last: center;">
-                <img src="../assets/Logo-km.png" alt="Image" class="logo1" >
+                <img src="{{ asset('assets/logo/logokabinet.png') }}" alt="Image" class="logo1" >
             </div>
             <div class="col-md-6 justify-content-start teks1">
                 <h2 class="fw-bold teks2 " >KABINET KM ITERA</h2>
@@ -63,14 +63,17 @@
 
     </div>
 
-        <div class="container justify-content-center mt-3 text-light mt-md-5 mt-sm-2">
+
+        <div  style="text-align:center;"class="container justify-content-center mt-3 text-light mt-md-5 mt-sm-2">
         <h2 class="text-center fw-bold teks2">VISI</h2>
-        <p class="teks5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium dolore, rem vitae iure dolorem consequatur at? Cupiditate temporibus unde quaerat, adipisci minima illo error esse at commodi? Neque, amet porro aut fuga iste odio suscipit hic molestias ratione, excepturi cupiditate dolores consectetur ex veritatis in eum, laudantium debitis eaque facilis!</p>
+        <p class="teks5">“Mewujudkan KM ITERA yang harmonis, cerdas, berprestasi dan responsif dengan latar belakang teknologi dan tridharma perguruan tinggi”</p>
         <h2 class="text-center teks2">MISI</h2>
-        <p class="teks5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, quia commodi voluptate nobis ipsam molestiae quasi fugiat praesentium est, quis illum consectetur voluptatum? Quisquam, totam ullam quod dignissimos praesentium quidem. Veritatis nisi, alias quod corrupti quasi commodi sequi, provident optio voluptates error iure. Culpa, eveniet quo? Error ea natus neque!</p>
+        <p class="teks5">1.Mewadahi dan memberikan control untuk menyalurkan karya inovasi mahasiswa</p>
+        <p class="teks5">2.Menyediakan edukasi tentang sistem keorganisasian supaya terwujudnya internal organisasi yang baik demi kembalinya minat demokrasi mahasiswa</p>
+        <p class="teks5">3.Memaksimalkan penyaluran informasi dan pelayanan advokasi dengan pengawalan yang terstruktur dan terarah Refleksi KM ITERA</p>
         <h2 class="text-center fw-bold teks2">FILOSOFI LOGO</h2>
         <h3 class="text-center fw-bold teks2">KABINET KM</h3>
-        <img src="../assets/Logo-km.png" class="mx-auto d-block" alt="...">
+        <img src="{{ asset('assets/logo/logokabinet.png') }}" class="mx-auto d-block" alt="...">
         </div>
     </div>
 </div>
@@ -83,12 +86,12 @@
                 <div class="image-content">
                     <span class="overlay background-gradient"></span>
                     <div class="card-image">
-                        <img src="../assets/dua tangan.jpg" alt="" class="card-img">
+                        <img src="{{ asset('assets/logo/lumbalumba.png') }}" alt="lumba lumba" class="card-img">
                     </div>
                     </div>
                     <div class="card-content">
-                        <h2 class="name teks2">Dua Tangan</h2>
-                        <p class="description teks4">Dua Tangan, yang mewakili Seribu Tangan, atau sasrabahu yang berarti saling membantu, bekerja sama, dan besinergi meraih masa depan.</p>
+                        <h2 class="name teks2">Lumba-Lumba</h2>
+                        <p class="description teks4">Merepresentasikan Kecerdasan</p>
                     </div>
             </div>
 
@@ -96,12 +99,12 @@
                 <div class="image-content">
                     <span class="overlay background-gradient"></span>
                     <div class="card-image">
-                        <img src="../assets/daun dan buah persik.jpg" alt="" class="card-img">
+                        <img src="{{ asset('assets/logo/Lingkaran.png') }}" alt="lingkaran" class="card-img">
                     </div>
                 </div>
                 <div class="card-content">
-                    <h2 class="name">Daun dan Buah Persik</h2>
-                    <p class="description">Daun dan Buah Persik, mewakili rasa peduli dan kasih sayang terhadap sesama, dan menghargai hal-hal sekitar.</p>
+                    <h2 class="name">Lingkaran</h2>
+                    <p class="description">Mempresentasikan Integritas dan kerjasama</p>
                 </div>
             </div>
 
@@ -109,12 +112,12 @@
                 <div class="image-content">
                     <span class="overlay background-gradient"></span>
                     <div class="card-image">
-                        <img src="../assets/nyala api.jpg" alt="" class="card-img">
+                        <img src="{{ asset('assets/logo/Tunasapikal.png') }}" alt="Tunasapikal" class="card-img">
                     </div>
                 </div>
                 <div class="card-content">
-                    <h2 class="name">Nyala Api</h2>
-                    <p class="description">Nyala api, mewakili rasa jiwa yang kuat, bangkit dari keterpurukan, dapat beradaptasi dengan perubahan, dan terus maju</p>
+                    <h2 class="name">Tunas Apikal</h2>
+                    <p class="description">Merepresentasikan siap berprosesdan bermetaforsis bersama</p>
                 </div>
             </div>
 
@@ -122,12 +125,12 @@
                 <div class="image-content">
                     <span class="overlay background-gradient"></span>
                     <div class="card-image">
-                        <img src="../assets/burung phoenix.jpg" alt="" class="card-img">
+                        <img src="{{ asset('assets/logo/ombak.png') }}" alt="ombak" class="card-img">
                     </div>
                 </div>
                 <div class="card-content">
-                    <h2 class="name">Burung Phoenix</h2>
-                    <p class="description">Burung Phoenix diartikan pembaruan dan kebangkitan, dan mewakili banyak tema seperti ekosistem, diartikan juga suatu tatanan kesatuan secara utuh dari berbagai aspek yang ada pada kabinet sasrabahu.</p>
+                    <h2 class="name">Ombak bolak balik</h2>
+                    <p class="description">Merepresentasikan sikap responsif dan aktif </p>
                 </div>
             </div>
 
@@ -136,12 +139,12 @@
                     <span class="overlay background-gradient"></span>
 
                     <div class="card-image">
-                        <img src="../assets/gerigi.jpg" alt="" class="card-img">
+                        <img src="{{ asset('assets/logo/daunfotosintesis.png') }}" alt="daunfotosintesis" class="card-img">
                     </div>
                 </div>
                 <div class="card-content">
-                    <h2 class="name">Gerigi</h2>
-                    <p class="description">Gerigi, atau Gear, mewakili rancangan atau gagasan baru, berdedikasi terhadap suatu penemuan atau materi.</p>
+                    <h2 class="name">Daun Fotosintesis</h2>
+                    <p class="description">Merepresentasikan kebermanfaatan dengan terus berkarya dan beradaptasi</p>
                 </div>
             </div>
 
@@ -149,12 +152,12 @@
                 <div class="image-content">
                     <span class="overlay background-gradient"></span>
                     <div class="card-image">
-                        <img src="../assets/nyala lampu obor.jpg" alt="" class="card-img">
+                        <img src="{{ asset('assets/logo/daun7.png') }}" alt="daun7" class="card-img">
                     </div>
                 </div>
                 <div class="card-content">
-                    <h2 class="name">Nyala Lampu atau Obor</h2>
-                    <p class="description">Nyala Lampu atau Obor mewakili inovasi suatu contoh atau kreativitas, daya cipta dan inisiatif kuat dapat menghasilkan sesuatu yang secara materi jauh lebih baik dari pada penemuan-penemuan sebelumnya.</p>
+                    <h2 class="name">Angka 7</h2>
+                    <p class="description">Merepresentasikan Kabinet KM ITERA periode 7</p>
                 </div>
             </div>
 
@@ -162,12 +165,12 @@
                 <div class="image-content">
                     <span class="overlay background-gradient"></span>
                     <div class="card-image">
-                        <img src="../assets/orang.jpg" alt="" class="card-img">
+                        <img src="{{ asset('assets/logo/gerigi.png') }}" alt="gerigi" class="card-img">
                     </div>
                 </div>
                 <div class="card-content">
-                    <h2 class="name">Orang</h2>
-                    <p class="description">Orang mewakili bentuk wibawa, pengakuan, serta kepemimpinan, rasa percaya diri yang tinggi dan tekad yang kuat.</p>
+                    <h2 class="name">5 Mata Gerigi</h2>
+                    <p class="description">Mepresentasikan jurusan di ITERA yang saling bersinergi (2 jurusan dan 3 subjurusan)</p>
                 </div>
             </div>
 
@@ -175,12 +178,12 @@
                 <div class="image-content">
                     <span class="overlay background-gradient"></span>
                     <div class="card-image">
-                        <img src="../assets/perisai.jpg" alt="" class="card-img">
+                        <img src="{{ asset('assets/logo/lidahapi.png') }}" alt="lidahapi" class="card-img">
                     </div>
                 </div>
                 <div class="card-content">
-                    <h2 class="name">Perisai</h2>
-                    <p class="description">Perisai mewakili ketahanan, dan kekuatan, yang berfungsi sebagai stimulan bagi kabinet sasrabahu.</p>
+                    <h2 class="name">3 Lidah Api</h2>
+                    <p class="description">Mepresentasikan keberanian untuk membuat perubahan, revolusi, dan tridharma perguruan tinggi</p>
                 </div>
             </div>
 
@@ -188,12 +191,12 @@
                 <div class="image-content">
                     <span class="overlay background-gradient"></span>
                     <div class="card-image">
-                        <img src="../assets/warna.jpg" alt="" class="card-img">
+                        <img src="{{ asset('assets/logo/tangan.png') }}" alt="tangan" class="card-img">
                     </div>
                 </div>
                 <div class="card-content">
-                    <h2 class="name">Warna</h2>
-                    <p class="description">Warna Orange dan Kuning, mewakili, rasa semangat juang yang tinggi, dedikasi, kemauan untuk bergerak maju, dan pantang menyerah, hal itu mendukung kabinet Sasrabahu dalam menjalankan masa kepemimpinannya. Warna Hitam, memberikan kesan kegelapan yang membuat warna api menyala, menandakan logo bersinar bagaikan pelita dalam kegelapan.</p>
+                    <h2 class="name">Tangan Menengadah</h2>
+                    <p class="description">Mepresentasikan penopang dan pemberi kontribusi kontribusi positif</p>
                 </div>
             </div>
         </div>
