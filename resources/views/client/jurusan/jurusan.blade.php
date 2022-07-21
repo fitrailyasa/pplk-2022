@@ -1,4 +1,4 @@
-    @extends('layouts.client.app')
+`    @extends('layouts.client.app')
 
     <!-- TITLE -->
     @section('title', 'Jurusan')
@@ -88,61 +88,48 @@
                 <div class="container p-4">
                     <div class="row justify-content-around mb-4">
                         <div class="col-lg-6 col-md-10 mb-4">
-                            <img class="gambar-1 img-fluid" src="../assets/Logo_Mockup_125.jpg" alt="" srcset="">
+                            <img class="gambar-1 img-fluid" src="../assets/jurusan-poster1.png" alt="" srcset="">
                         </div>
                         <div class="col-lg-6 col-md-10 my-auto gerak">
-                            <h4 class="mt-lg-5 mt-md-4"><strong>Kepala Jurusan</strong></h4>
-                            <h4>lorem</h4>
-                            <h4 class="mt-lg-5 mt-md-4"><strong>Alamat Kantor</strong></h4>
-                            <h4>Institut Teknologi Sumatera Jalan Terusan Ryacudu,
-                                Way Hui, Kecamatan Jati Agung, Lampung Selatan 35365
-                            </h4>
+                            <h2 class="mt-lg-5 mt-md-4"><strong>Kepala Jurusan</strong></h2>
+                            <h5>Prof. Dr. L. Hari Wiryanto, M.S.</h5>
+                            <h2 class="mt-lg-5 mt-md-4"><strong>Alamat Kantor</strong></h2>
+                            <h5>Jurusan Sains, Gedung F Institut Teknologi Sumatera | Jalan Terusan Ryacudu, Way Huwi, Kecamatan Jati Agung, Kabupaten Lampung Selatan, Lampung 35365.
+                            </h5>
                         </div>
                     </div>
                     <div class="row justify-content-around">
                         <div class="container text-center">
-                            <h3>Visi</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis autem quibusdam ullam
-                                doloribus! Officia aliquid ea dolorum dicta suscipit in ipsa rerum voluptate, sunt ipsum id
-                                aspernatur veritatis nemo quidem.</p>
-                            <h3>Misi</h3>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo aliquam quis, voluptatum cum,
-                                dolorum magnam accusantium quibusdam enim, repudiandae nostrum tempore a cupiditate eius
-                                dolor assumenda maiores dignissimos voluptatem deleniti.
-                                Necessitatibus est eos enim recusandae saepe nesciunt delectus quo quis, earum et porro iste
-                                hic deserunt laudantium inventore ex sunt provident natus magni temporibus, vel, distinctio
-                                neque! Ab, quo maiores.
-                                Itaque totam aperiam ab quia delectus, veniam asperiores vel officia ex nostrum fugiat, hic
-                                adipisci ut harum fugit. Eius aliquam dicta a tenetur autem placeat reprehenderit commodi
-                                quod eos quis.</p>
+                            <h2>Visi</h2>
+                            <h6>Menjadi perguruan tinggi yang unggul, bermartabat, mandiri dan diakui dunia, serta berkontribusi dalam perubahan yang mampu meningkatkan kesejahteraan bangsa Indonesia dan dunia dengan memberdayakan potensi yang ada di wilayah Sumatera dan Sekitarnya.</h6>
+                            <h2>Misi</h2>
+                            <h6>1. Menyelenggarakan dan mengambangkan 
+                                pendidikan tinggi sains yang mencakup pengembangan teknologi serta menjadi landasan pengembangan teknologi dalam upaya menghasilkan lulusan yang memahami, mengembangkan, menerapkan ilmu sains yang berkarakter.
+                                <br><br>
+                                2. Menyelenggarakan dan mengembangkan kegiatan penelitian dan pengabdian masyarakat untuk mendorong peningkatan sains mencakup pengembangan teknologi serta menjadi landasan dalam pengembangan teknologi yang inovatif dan tanggap terhadap tantangan lokal maupun global.
+                                <br><br>
+                                3. Pemberdayaan potensi wilayah sekitar Sumatera secara optimal melalui keunggulan dalam pendidikan, penelitian, dan pengabdian kepada masyarakat melalui kerjasama dengan stakeholder terkait.
+                                </p>
                         </div>
                     </div>
                 </div>
                 <!-- nama prodi -->
                 <div class="row justify-content-center" id="terakhir">
                     <div class="col-12 text-center">
-                        <h3>Program Studi</h3>
+                        <h2>Program Studi</h2>
                     </div>
                     <div class="col-lg-6 col-md-10">
-                        <p class="text-md-end">Program Studi Teknik Elektro (EL)</p>
-                        <p class="text-md-end">Program Studi Teknik Geofisika (TG)</p>
-                        <p class="text-md-end">Program Studi Teknik Informatika (IF)</p>
-                        <p class="text-md-end">Program Studi Teknik Geologi</p>
-                        <p class="text-md-end">Program Studi Teknik Mesin</p>
-                        <p class="text-md-end">Program Studi Teknik Industri</p>
-                        <p class="text-md-end">Program Studi Teknik Fisika</p>
-                        <p class="text-md-end">Program Studi Teknik Kimia</p>
+                        <h6 class="text-md-end">Program Studi Fisika </h6>
+                        <h6 class="text-md-end">Program Studi Matematika </p>
+                        <h6 class="text-md-end">Program Studi Biologi </h6>
+                        <h6 class="text-md-end">Program Studi Kimia</h6>
+                        <h6 class="text-md-end">Program Studi Farmasi</p>
                     </div>
                     <div class="col-lg-6 col-md-10">
-                        <p>Program Studi Teknik Biosistem</p>
-                        <p>Program Studi Teknologi Industri Pertanian</p>
-                        <p>Program Studi Teknologi Pangan</p>
-                        <p>Program Studi Teknik Sistem Energi</p>
-                        <p>Program Studi Teknik Pertambangan</p>
-                        <p>Program Studi Teknik Material</p>
-                        <p>Program Studi Teknik Telekomunikasi</p>
-                        <p>Rekayasa Kehutanan</p>
-                        <p>Program Studi Teknik Biomedis</p>
+                        <h6>Program Studi Atmosfer dan Keplanetan</h6>
+                        <h6>Program Studi Sains Aktuaria</h6>
+                        <h6>Program Studi Sains Lingkungan Kelautan</h6>
+                        <h6>Program Studi Sains Data</h6>
                     </div>
                 </div>
             </div>
@@ -152,128 +139,111 @@
                 <div class="container p-4">
                     <div class="row justify-content-around mb-4">
                         <div class="col-lg-6 col-md-10 mb-4">
-                            <img class="gambar-1 img-fluid" src="../assets/Logo_Mockup_125.jpg" alt="" srcset="">
+                            <img class="gambar-1 img-fluid" src="../assets/jurusan-poster3.png" alt="" srcset="">
                         </div>
                         <div class="col-lg-6 col-md-10 my-auto">
-                            <h4 class="mt-lg-5 mt-md-4"><strong>Kepala Jurusan</strong></h4>
-                            <h4>lorem</h4>
-                            <h4 class="mt-lg-5 mt-md-4"><strong>Alamat Kantor</strong></h4>
-                            <h4>Institut Teknologi Sumatera Jalan Terusan Ryacudu,
-                                Way Hui, Kecamatan Jati Agung, Lampung Selatan 35365
-                            </h4>
+                            <h2 class="mt-lg-5 mt-md-4"><strong>Kepala Jurusan</strong></h2>
+                            <h5>Dr. Rahayu Sulistyorini, S.T., M.T.</h5>
+                            <h2 class="mt-lg-5 mt-md-4"><strong>Alamat Kantor</strong></h2>
+                            <h5>Institut Teknologi Sumatera Jalan Terusan Ryacudu,
+                                Way Hui, Kecamatan Jati Agung, Lampung Selatan 35365.
+                            </h5>
                         </div>
                     </div>
                     <div class="row justify-content-around">
                         <div class="container text-center">
-                            <h3>Visi</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis autem quibusdam ullam
-                                doloribus! Officia aliquid ea dolorum dicta suscipit in ipsa rerum voluptate, sunt ipsum id
-                                aspernatur veritatis nemo quidem.</p>
-                            <h3>Misi</h3>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo aliquam quis, voluptatum cum,
-                                dolorum magnam accusantium quibusdam enim, repudiandae nostrum tempore a cupiditate eius
-                                dolor assumenda maiores dignissimos voluptatem deleniti.
-                                Necessitatibus est eos enim recusandae saepe nesciunt delectus quo quis, earum et porro iste
-                                hic deserunt laudantium inventore ex sunt provident natus magni temporibus, vel, distinctio
-                                neque! Ab, quo maiores.
-                                Itaque totam aperiam ab quia delectus, veniam asperiores vel officia ex nostrum fugiat, hic
-                                adipisci ut harum fugit. Eius aliquam dicta a tenetur autem placeat reprehenderit commodi
-                                quod eos quis.</p>
+                            <h2>Visi</h2>
+                            <h6>Menjadi Jurusan yang unggul dan berkualitas di bidang IPTEK dan berkontribusi pada pemberdayaan potensi yang ada di wilayah Sumatera khususnya dan Indonesia serta dunia umunya.</h6>
+                            <h2>Misi</h2>
+                            <h6>1. Berkontribusi pada penyelengaraan program akademik, vokasi, dan profesi dilandasi dengan program kegiatan Pendidikan, penelitian dan pengabdian pada masyarakat yang terpadu dan berbasis teknologi untuk pemberdayaan potensi sumber daya alam di Sumatera.
+                            <br><br>
+                            2. Berkontribusi pada pengembangan SDM yang unggul, berkualitas menguasai IPTEK, disamping memiliki karakter kewirausahaan yang baik.   
+                            </h6>
                         </div>
                     </div>
                 </div>
                 <!-- nama prodi -->
                 <div class="row justify-content-center" id="terakhir">
                     <div class="col-12 text-center">
-                        <h3>Program Studi</h3>
+                        <h2>Program Studi</h2>
                     </div>
                     <div class="col-lg-6 col-md-10">
-                        <p class="text-md-end">Program Studi Teknik Elektro (EL)</p>
-                        <p class="text-md-end">Program Studi Teknik Geofisika (TG)</p>
-                        <p class="text-md-end">Program Studi Teknik Informatika (IF)</p>
-                        <p class="text-md-end">Program Studi Teknik Geologi</p>
-                        <p class="text-md-end">Program Studi Teknik Mesin</p>
-                        <p class="text-md-end">Program Studi Teknik Industri</p>
-                        <p class="text-md-end">Program Studi Teknik Fisika</p>
-                        <p class="text-md-end">Program Studi Teknik Kimia</p>
+                        <h6 class="text-md-end">Program Studi Perencanaan Wilayah dan Kota</h6>
+                        <h6 class="text-md-end">Program Studi Teknik Geomatika</h6>
+                        <h6 class="text-md-end">Program Studi Teknik Sipil</ph>
+                        <h6 class="text-md-end">Program Studi Arsitektur</p>
+                        <h6 class="text-md-end">Program Studi Teknik Lingkungan</p>
                     </div>
                     <div class="col-lg-6 col-md-10">
-                        <p>Program Studi Teknik Biosistem</p>
-                        <p>Program Studi Teknologi Industri Pertanian</p>
-                        <p>Program Studi Teknologi Pangan</p>
-                        <p>Program Studi Teknik Sistem Energi</p>
-                        <p>Program Studi Teknik Pertambangan</p>
-                        <p>Program Studi Teknik Material</p>
-                        <p>Program Studi Teknik Telekomunikasi</p>
-                        <p>Rekayasa Kehutanan</p>
-                        <p>Program Studi Teknik Biomedis</p>
+                        <h6>Program Studi Teknik Kelautan</h6>
+                        <h6>Program Studi Desain Komunikasi Visual</p>
+                        <h6>Program Arsitektur Lanskap</h6>
+                        <h6>Program Teknik Perkeretaapian</p>
+                        <h6>Rekayasa Tata Kelola Air Terpadu</h6> 
                     </div>
                 </div>
             </div>
 
-            <!-- jurusan JTIP -->
+            <!-- jurusan JTPI -->
             <div class=" tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
                 <div class="container p-4">
-                    <!-- gambar dan deskripsi jurusan JTIP -->
+                    <!-- gambar dan deskripsi jurusan JTPI -->
                     <div class="row justify-content-around mb-4">
                         <div class="col-lg-6 col-md-10 mb-4">
-                            <img class="gambar-1 img-fluid" src="../assets/Logo_Mockup_125.jpg" alt="" srcset="">
+                            <img class="gambar-1 img-fluid" src="../assets/jurusan-poster2.png" alt="" srcset="">
                         </div>
                         <div class="col-lg-6 col-md-10 my-auto">
-                            <h4 class="mt-lg-5 mt-md-4"><strong>Kepala Jurusan</strong></h4>
-                            <h4>lorem</h4>
-                            <h4 class="mt-lg-5 mt-md-4"><strong>Alamat Kantor</strong></h4>
-                            <h4>Institut Teknologi Sumatera Jalan Terusan Ryacudu,
-                                Way Hui, Kecamatan Jati Agung, Lampung Selatan 35365
-                            </h4>
+                            <h2 class="mt-lg-5 mt-md-4"><strong>Kepala Jurusan</strong></h2>
+                            <h5>Prof. Dr. Ir. Deny Juanda Puradimaja, DEA.</h5>
+                            <h2 class="mt-lg-5 mt-md-4"><strong>Alamat Kantor</strong></h2>
+                            <h5>Jl. Terusan Ryacudu, Way Huwi, Kec. Jati Agung, Kabupaten Lampung Selatan, Lampung 35365.
+                            </h5>
                         </div>
                     </div>
 
                     <!-- visi dan misi -->
                     <div class="row justify-content-around mb-4">
                         <div class="container text-center">
-                            <h3>Visi</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis autem quibusdam ullam
-                                doloribus! Officia aliquid ea dolorum dicta suscipit in ipsa rerum voluptate, sunt ipsum id
-                                aspernatur veritatis nemo quidem.</p>
-                            <h3>Misi</h3>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo aliquam quis, voluptatum cum,
-                                dolorum magnam accusantium quibusdam enim, repudiandae nostrum tempore a cupiditate eius
-                                dolor assumenda maiores dignissimos voluptatem deleniti.
-                                Necessitatibus est eos enim recusandae saepe nesciunt delectus quo quis, earum et porro iste
-                                hic deserunt laudantium inventore ex sunt provident natus magni temporibus, vel, distinctio
-                                neque! Ab, quo maiores.
-                                Itaque totam aperiam ab quia delectus, veniam asperiores vel officia ex nostrum fugiat, hic
-                                adipisci ut harum fugit. Eius aliquam dicta a tenetur autem placeat reprehenderit commodi
-                                quod eos quis.</p>
+                            <h2>Visi</h2>
+                            <h6>Jurusan yang berkontribusi unggul pada pendidikan tinggi sumber daya manusia dan inovasi dalam teknologi produksi dan pengelolaan sumber daya alam di Sumatera secara khusus dan Indonesia secara umum untuk menajuan ekonomi dan kesejahteraan yang berkelanjutan di era Revolusi Industri 4.0.</h6>
+                            <h2>Misi</h2>
+                            <h6>
+                                1. Melaksanakan dan mengembangkan pendidikan tinggi terutama bidang teknologi produksi dan industri untuk menyiapkan lulusan yang siap menggunakan, mengembangkan, dan menerapkan ilmu teknologi yang berkarakter.<br/><br/>
+                                2. Melakukan kegiatan penelitian dan pegabdian kepada masyarakat yang dapat menghasilkan pengembangan teknologi bidang produksi dan industri yang tanggap terhadap lokal maupun global.<br/><br/>
+                                3. Pengelolaan dan pengembangan potensi wilayah sekitar Sumatera khususnya dan Indonesia secara umumnya dalam bidang produksi dan industri melalui kegiatan pendidikan, penelitian, dan pengabdian kepada masyarakat melalui kerja sama dengan pihak-pihak yang terkait.<br/><br/>
+                                4. Menjalankan, menstimulasi, dan mengelola kerja sama pendidikan, penelitian, dan pengembangan kelompok penelitian yang menjangkarkan wilayah Sumatera sebagai pusat kemajuan Indonesia untuk menjangkau kontribusi di tingkat nasional, regional ASEAN, Asia, dan dunia di era Revolusi Industri 4.0.<br/><br/>
+                            </h6>
                         </div>
                     </div>
 
                     <!-- nama prodi -->
                     <div class="row justify-content-center " id="terakhir">
                         <div class="col-12 text-center">
-                            <h3>Program Studi</h3>
+                            <h2>Program Studi</h2>
                         </div>
                         <div class="col-lg-6 col-md-10 ">
-                            <p class="text-md-end">Program Studi Teknik Elektro (EL)</p>
-                            <p class="text-md-end">Program Studi Teknik Geofisika (TG)</p>
-                            <p class="text-md-end">Program Studi Teknik Informatika (IF)</p>
-                            <p class="text-md-end">Program Studi Teknik Geologi</p>
-                            <p class="text-md-end">Program Studi Teknik Mesin</p>
-                            <p class="text-md-end">Program Studi Teknik Industri</p>
-                            <p class="text-md-end">Program Studi Teknik Fisika</p>
-                            <p class="text-md-end">Program Studi Teknik Kimia</p>
+                            <h6 class="text-md-end">Program Studi Teknik Elektro</h6>
+                            <h6 class="text-md-end">Program Studi Teknik Fisika</h6>
+                            <h6 class="text-md-end">Program Studi Teknik Informatika</h6>
+                            <h6 class="text-md-end">Program Studi Teknik Geologi</h6>
+                            <h6 class="text-md-end">Program Studi Teknik Geofisika</h6>
+                            <h6 class="text-md-end">Program Studi Teknik Mesin</h6>
+                            <h6 class="text-md-end">Program Studi Teknik Kimia</h6>
+                            <h6 class="text-md-end">Program Studi Teknik Material</h6>
+                            <h6 class="text-md-end">Program Studi Teknik Sistem Energi</h6>
+                            <h6 class="text-md-end">Program Studi Teknik Industri</h6>
                         </div>
                         <div class="col-lg-6 col-md-10 ">
-                            <p>Program Studi Teknik Biosistem</p>
-                            <p>Program Studi Teknologi Industri Pertanian</p>
-                            <p>Program Studi Teknologi Pangan</p>
-                            <p>Program Studi Teknik Sistem Energi</p>
-                            <p>Program Studi Teknik Pertambangan</p>
-                            <p>Program Studi Teknik Material</p>
-                            <p>Program Studi Teknik Telekomunikasi</p>
-                            <p>Rekayasa Kehutanan</p>
-                            <p>Program Studi Teknik Biomedis</p>
+                            <h6>Program Studi Teknik Telekomunikasi</h6>
+                            <h6>Program Studi Teknik Pertambangan</h6>
+                            <h6>Program Studi Teknik Biosistem</h6>
+                            <h6>Program Studi Teknik Biomedik</h6>
+                            <h6>Program Studi Teknologi Pangan</h6>
+                            <h6>Program Studi Teknologi Industri Pertanian</h6>
+                            <h6>Program Studi Rekayasa Kehutanan</h6>
+                            <h6>Program Studi Rekayasa Kosmetik</h6>
+                            <h6>Program Studi Rekayasa Minyak dan Gas</h6>
+                            <h6>Program Studi Instrumentasi dan Automasi</h6>
                         </div>
                     </div>
                 </div>
