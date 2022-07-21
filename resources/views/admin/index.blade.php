@@ -177,7 +177,7 @@
       <h4 class="card-title">Input Data UPT ITERA</h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="{{ route('cms-createUpt') }}" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('createUpt') }}" enctype='multipart/form-data'>
         @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Nama UPT</label>
@@ -297,7 +297,7 @@
       <h4 class="card-title">Input Data Himpunan</h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="{{ route('cms-createHimpunan') }}" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('createHimpunan') }}" enctype='multipart/form-data'>
         @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Nama Lengkap</label>
@@ -383,7 +383,7 @@
       <h4 class="card-title">Input Data UKM/Komunitas</h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="{{ route('cms-createUkm') }}" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('createUkm') }}" enctype='multipart/form-data'>
           @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Nama Lengkap</label>
@@ -487,7 +487,7 @@
       <h4 class="card-title">Input Funfact</h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="{{ route('cms-createfunFact') }}" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('createfunFact') }}" enctype='multipart/form-data'>
         @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Deskripsi</label>

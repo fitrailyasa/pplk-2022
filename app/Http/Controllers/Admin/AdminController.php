@@ -91,7 +91,7 @@ class AdminController extends Controller
      */
     public function storeUkm(Request $request)
     {
-        return 'Ukm Berhasil';
+        
         Ukm::create([
 
             'namaLengkap'=>$request->namaLengkap,
