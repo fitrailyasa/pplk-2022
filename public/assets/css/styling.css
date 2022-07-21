@@ -4,7 +4,6 @@ body{
     background-position: 50% 5%;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding-bottom: 6rem;
     box-shadow: inset rgba(41, 1, 53, 0.66) 0px 1000rem 100px;
     width: 100%;
 }
@@ -225,7 +224,9 @@ h2{
 }
 
 #carouselExampleCaption{
-    background-color: rgba(0, 0, 0, 0) !important;
+    background: transparent;
+    background-color: transparent !important;
+    border-radius: 28px !important;
 }
 
 .booklet{
@@ -308,6 +309,12 @@ h2{
 .fun-fact-card .card-body-ff .card-title:after {
     left: 0.5em;
     margin-right: -50%;
+}
+
+@media screen and (max-width:930px) {
+    #terakhir {
+        margin-bottom: 3rem;
+    }
 }
 
 @media screen and (max-width: 700px) {

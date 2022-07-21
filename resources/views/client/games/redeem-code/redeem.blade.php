@@ -5,19 +5,13 @@
 
 @section('style')
     <!-- STYLES -->
-    <link rel="stylesheet" href="{{ asset('assets/css.main-style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/main-style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/redeem-code-redeem.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="{{ asset('assets/css/redeem-code-redeem.css') }}">
-    <!-- olw-caorusel -->
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/favicon.ico') }}" />
 @endsection
 
 @section('content')
@@ -39,7 +33,7 @@
                                 <img src="../assets/space-cat.png" class="card-img-top img-box" alt="...">
                             </div>
                             <div class="description text-center pt-3">
-                                <p>Penejlasan Singkat</p>
+                                <p>Penjelasan Singkat</p>
                             </div>
                         </div>
                         <div class="card-body">
@@ -62,15 +56,19 @@
                             <!-- Button trigger modal -->>
                             <button type="button" class="btn btn-redeem" data-bs-toggle="modal"
                                 data-bs-target="#staticBackdrop">
-                                <strong>REEDEM</strong>
+                                <strong>REDEEM</strong>
                             </button>
                         </div>
                     </form>
                 </div>
-                <!-- redeem code -->
+                <!-- redeem code -->             
+            r
+
                 <!-- Vertically centered modal -->
                 <!-- Modal -->
                 <!-- Button trigger modal -->
+
+
                 <!-- Modal -->
                 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
                     tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">

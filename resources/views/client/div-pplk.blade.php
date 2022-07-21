@@ -89,6 +89,27 @@
                         </div>
                     </div>
                 </div>
+                <div class="card rounded-5  m-5">
+                    <div class="d-flex justify-content-center box">
+                        <div class="ratio ratio-1x1 box-img";>
+                            <img src="../assets/Logo-PPLK.png" class="card-img p-2" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="card rounded-5  m-5">
+                    <div class="d-flex justify-content-center box">
+                        <div class="ratio ratio-1x1 box-img";>
+                            <img src="../assets/Logo-PPLK.png" class="card-img p-2" alt="...">
+                        </div>
+                    </div>
+                </div>
+                <div class="card rounded-5  m-5" >
+                    <div class="d-flex justify-content-center box">
+                        <div class="ratio ratio-1x1 box-img";>
+                            <img src="../assets/Logo-PPLK.png" class="card-img p-2" alt="...">
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </div>

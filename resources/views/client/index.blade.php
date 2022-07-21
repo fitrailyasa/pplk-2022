@@ -411,7 +411,7 @@
     <!-- end modal begalin -->
     
         <!-- medpatr -->
-        <div class="container-fluid medpart padding-top-bottom">
+        <div class="container-fluid medpart padding-top-bottom" id="terakhir">
             <div class="wrapper">
                 <div class="carousel owl-carousel">
                    <div class="medpatr-card">

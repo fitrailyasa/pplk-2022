@@ -74,7 +74,7 @@
         </div>
     </div>
     
-    <div class="carousel-item">
+    <div class="carousel-item" id="terakhir">
         <div class="card fun-fact-card">
             <div class="card-body-ff">
                 <h2 class="card-title">
@@ -97,7 +97,7 @@
     <span class="visually-hidden">Next</span>
     </button>
 </div>
-
+</div>
 @endsection
 
 @section('script')

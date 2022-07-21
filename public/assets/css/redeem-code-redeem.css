@@ -1,30 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
-:root {
-    --primary: #7739A3;
-    --secondary: #1A75FF;
-    --bawaan-gradient-1:rgb(240,65,255); /*Base Color*/
-    --bawaan-gradient-2: rgb(119,57,163); /*Text Color*/
-    --gradient-1: linear-gradient(90deg, rgb(240, 65, 255) 0%, rgba(130,165,234,1) 100%);
-    --gradient-2: linear-gradient(90deg, rgba(119,57,163,1) 0%, rgba(26,117,255,1) 100%);
-    --white: #fff;
-    --black: #000;
-    --grey: #C4C4C4;
-    --primary-color-1: #110f58;
-    --primary-color-2: rgba(91, 207, 197, 0.2);
-    --font-family-title: Poppins, 'open sans';
-    --font-family-body: Poppins, 'open sans';
-    --font-color-primary: #174461;
-    --font-color-primary-2: #FFFFFF;
-    --font-color-subheadline: #071D2C;
-    --font-color-secondary: #686868;
-    --font-color-call-to-act-2:#4a4a4a;
-    --page-background-1: #F9FAFB;
-    --page-background-2: #f6f6f6;
-}
-
-
 body, .redeem {
     background-image: url(../background.png);
     background-size: cover;
@@ -94,20 +67,4 @@ body, .redeem {
     border-radius: 5px!important;
     width: 30%!important;
 
-}
-
-@media screen and (max-width: 700px) {
-    .line-indikator{
-        display: block;
-        width: 30%;
-        height: 4px;
-        background: var(--bawaan-gradient-2);
-        background: var(--gradient-2);
-        margin-left: 25px;
-        margin-bottom: 2.5rem;
-    }
-    .btn-redeem{
-        width: 50%!important;
-
-    }
 }
