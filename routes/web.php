@@ -10,6 +10,7 @@ use App\Http\Controllers\Client\ClientBegalinController;
 use App\Http\Controllers\Client\ClientKabinetController;
 use App\Http\Controllers\Client\ClientJurusanController;
 use App\Http\Controllers\Client\ClientBiodataController;
+use App\Http\Controllers\Client\ClientProdiController;
 
 
 
@@ -51,7 +52,9 @@ Route::get('/biodata', [ClientBiodataController::class, 'index'])->name('biodata
 
 Route::get('/edit-biodata', [ClientBiodataController::class, 'indexEditBio'])->name('edit-biodata');
 
-Route::get('/beranda', [ClientBegalinController::class, 'index'])->name('begalin'); // ===> kamus-gaul
+Route::get('/beranda', [ClientBegalinController::class, 'index'])->name('begalin');
+
+Route::get('/detail-prodi', [ClientProdiController::class, 'indexDetail'])->name('detailprodi');
 
 Route::get('/detail-himpunan', function () {        // ===> Detail himpunan
     return view('client.ormawa.detail-himpunan');
@@ -61,9 +64,6 @@ Route::get('/ukm', function () {                    // ===> Unit kegiatan mahasi
 });
 Route::get('/himpunan', function () {               // ===> himpunan
     return view('client.ormawa.himpunan');
-});
-Route::get('/detail-prodi', function () {          // ===> detail prodi
-    return view('client.jurusan.detail-prodi');
 });
 Route::get('/prodi', function () {                  // ===> prodi
     return view('client.jurusan.prodi');
@@ -93,7 +93,7 @@ Route::get('/redeem', function () {               // ===> redeem page
     return view('client.games.redeem-code.redeem');
 });
 Route::get('/redeem-success', function () {       // ===> redeem code success
-    return view('client.upt');
+    return view('client.games.redeem-code.success');
 });
 Route::get('/tebak-bangunan', function () {       // ===> tebak bangunan home
     return view('client.games.tebak-bangunan.home');
