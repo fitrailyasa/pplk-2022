@@ -136,7 +136,7 @@
 <div class="slide-container swiper mt-4">
     <div class="slide-content">
         <div class="card-wrapper swiper-wrapper">
-        
+
             <div class="card swiper-slide">
                 <div class="image-content">
                     <span class="overlay background-gradient"></span>
