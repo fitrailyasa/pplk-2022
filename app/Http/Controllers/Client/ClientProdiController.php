@@ -15,7 +15,8 @@ class ProdiController extends Controller
      */
     public function index()
     {
-        //
+        $prodis = Prodi::all();
+        return view('client.jurusan.prodi', compact('prodis'));
     }
 
     /**
