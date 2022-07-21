@@ -3,7 +3,7 @@
 namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
-
+use Illuminate\Routing\Exceptions\UrlGenerationException;
 
 class StoreAdminRequest extends FormRequest
 {
@@ -70,7 +70,12 @@ class StoreAdminRequest extends FormRequest
             'golonganDarah'=>['string'],
             'riwayatPenyakit'=>['string'],
             'fotoProfil'=>['string'],
-            'roles_id'=>['integer']
+            'roles_id'=>['integer'],
+            //Kamus Gaul
+            'gaul'=>['string'],
+            'asli'=>['string'],
+            'contohPenggunaan'=>['string']
+
 
 
 

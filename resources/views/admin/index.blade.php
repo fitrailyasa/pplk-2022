@@ -177,11 +177,9 @@
       <h4 class="card-title">Input Data UPT ITERA</h4>
       </div>
       <div class="card-body">
-<<<<<<< Updated upstream
+
         <form method="POST" action="{{ route('createUpt') }}" enctype='multipart/form-data'>
-=======
-        <form method="POST" action="{{ route('cms-createUpt') }}" enctype='multipart/form-data'>
->>>>>>> Stashed changes
+
         @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Nama UPT</label>
@@ -301,11 +299,9 @@
       <h4 class="card-title">Input Data Himpunan</h4>
       </div>
       <div class="card-body">
-<<<<<<< Updated upstream
+
         <form method="POST" action="{{ route('createHimpunan') }}" enctype='multipart/form-data'>
-=======
-        <form method="POST" action="{{ route('cms-createHimpunan') }}" enctype='multipart/form-data'>
->>>>>>> Stashed changes
+
         @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Nama Lengkap</label>
@@ -391,11 +387,8 @@
       <h4 class="card-title">Input Data UKM/Komunitas</h4>
       </div>
       <div class="card-body">
-<<<<<<< Updated upstream
         <form method="POST" action="{{ route('createUkm') }}" enctype='multipart/form-data'>
-=======
-        <form method="POST" action="{{ route('cms-createUkm') }}" enctype='multipart/form-data'>
->>>>>>> Stashed changes
+
           @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Nama Lengkap</label>
@@ -499,11 +492,8 @@
       <h4 class="card-title">Input Funfact</h4>
       </div>
       <div class="card-body">
-<<<<<<< Updated upstream
         <form method="POST" action="{{ route('createfunFact') }}" enctype='multipart/form-data'>
-=======
-        <form method="POST" action="{{ route('cms-createfunFact') }}" enctype='multipart/form-data'>
->>>>>>> Stashed changes
+
         @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Deskripsi</label>
@@ -529,7 +519,7 @@
       <h4 class="card-title">Input Data Begalin</h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="#" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('createBegalin') }}" enctype='multipart/form-data'>
         @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Artikel Singkat</label>
@@ -561,18 +551,24 @@
       <h4 class="card-title">Input Data Kamus Gaul</h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="#" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('createKamusgaul') }}" enctype='multipart/form-data'>
         @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Kamus Gaul</label>
             <div class="col-sm-9">
-              <textarea class="form-control custom-txt-area" placeholder="Kamus Gaul" name="kamus" id="kamus" required></textarea>
+              <textarea class="form-control custom-txt-area" placeholder="Kamus Gaul" name="gaul" id="kamus" required></textarea>
             </div>
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Arti Kamus</label>
             <div class="col-sm-9">
-              <textarea class="form-control custom-txt-area" placeholder="Arti Kamus" name="arti-kamus" id="arti-kamus" required></textarea>
+              <textarea class="form-control custom-txt-area" placeholder="Arti Kamus" name="asli" id="arti-kamus" required></textarea>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Contoh Penggunaan</label>
+            <div class="col-sm-9">
+              <textarea class="form-control custom-txt-area" placeholder="Arti Kamus" name="contohPenggunaan" id="arti-kamus" required></textarea>
             </div>
           </div>
           <div class="mb-3 row">
@@ -1501,7 +1497,7 @@
                   <td>{{ $loop->iteration }}</td>
                   <td>{{ $funfact->isi }}</td>
                   <td class="manage-row">
-                    <a href=" #" class="edit-button">
+                    <a onclick="openCMS(event, 'edit-funFact')" class="nav-link tablinks">
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm  ">
@@ -1984,6 +1980,33 @@
 <!--------------------------------------------------------------------------------->
 
 <!--UPDATE DATA-->
+    <!--Funfact-->
+    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" style="display: none"  id="edit-funFact">
+      <div class="card">
+      <div class="card-header">
+      <h4 class="card-title">Input Funfact</h4>
+      </div>
+      <div class="card-body">
+        <form method="POST" action="{{ route('editfunFact',$funfacts) }}" enctype='multipart/form-data'>
+
+          @csrf
+          <input name="id" value="{{ $funfacts->id }}" type="hidden">
+          <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Deskripsi</label>
+            <div class="col-sm-9">
+              <textarea class="form-control custom-txt-area" placeholder="Deskripsi" name="isi" id="isi" value="{{ $funfacts->isi }}"  required disabled></textarea>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <div class="col-sm-9">
+              <button type="submit" class="btn btn-primary ">Ubah</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      </div>
+    </div>
+    <!--./Funfact-->
 
 <section>
 

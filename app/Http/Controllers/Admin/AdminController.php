@@ -91,11 +91,11 @@ class AdminController extends Controller
      */
     public function storeUkm(Request $request)
     {
-<<<<<<< Updated upstream
+
         
-=======
-        return 'Ukm Berhasil';
->>>>>>> Stashed changes
+
+
+    
         Ukm::create([
 
             'namaLengkap'=>$request->namaLengkap,
@@ -147,11 +147,7 @@ class AdminController extends Controller
     }
 
 
-<<<<<<< Updated upstream
     public function storeUser(StoreAdminRequest $request){
-=======
-    public function storeUser(Request $request){
->>>>>>> Stashed changes
         User::create([
             'nama'=>$request->nama,
             'email'=>$request->email,
@@ -181,6 +177,45 @@ class AdminController extends Controller
 
         return 'Upt Berhasil';
     }
+
+    public function storeBegalin(Request $request){
+
+        Begalin::create([
+            'judul'=>$request->judul,
+            'isi'=>$request->isi
+        ]);
+
+        return 'Begalin Berhasil';
+
+    }
+
+    public function storeKamusgaul(Request $request){
+
+        Kamusgaul::create([
+            'gaul'=>$request->gaul,
+            'asli'=>$request->asli,
+            'contohPenggunaan'=>$request->contohPenggunaan
+        ]);
+
+        return 'Kamus Gaul Berhasil';
+
+    }
+
+    
+
+    public function updatefunFact(StoreAdminRequest $request,Funfact $funfacts){
+        DB::transaction(function () use ($funfacts, $request){
+            $funFactData = Funfact::where('id', $funfacts->id)->first();
+
+            $funFactData->update(
+                [
+                    'isi'=> $request->isi
+                ]
+            );
+
+        });
+    }
+    
 
     /**
      * Display the specified resource.
