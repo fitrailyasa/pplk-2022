@@ -415,4 +415,8 @@ body {
     
 }
 
-
+@media screen and (max-width:930px) {
+    #terakhir {
+        margin-bottom: 3rem;
+    }
+}

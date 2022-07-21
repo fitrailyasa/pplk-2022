@@ -5,7 +5,7 @@
                 <div class="pplk-logo-bknd">
                 </div>
                     <a class="pplk_logo" id="id-pplk" href="#">
-                        <img src="{{ asset('assets') }}/Logo-PPLK.png" class="d-inline-block align-top" alt="">
+                        <img src="{{ asset('assets/Logo-PPLK.png') }}" class="d-inline-block align-top" alt="">
                     </a>
                     <div class="search-bar w-100 ">
                         <div class="search-form" id="search-width">
@@ -46,7 +46,7 @@
                 </div>
                 <div class="btn-group nav-item">
                     <a class="profile-img nav-item align-content-center" type="button" class="btn btn-lg dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="{{ asset('assets/contoh-photo.jpg') }}" alt="">
+                        <img src="{{ asset('assets/default.png') }}" alt="">
                     </a>
                     <ul class="dropdown-menu dropdown-menu-lg-end" id="mobile-dropdown">
                         <li><a class="dropdown-item" href="/biodata">
