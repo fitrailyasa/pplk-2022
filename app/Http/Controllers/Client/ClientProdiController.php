@@ -22,7 +22,7 @@ class ClientProdiController extends Controller
     {
         $default = 1;
 
-        $prodis = Prodi::where('id', $default)->firstOrFail();;
+        $prodis = Prodi::where('id', $default)->firstOrFail();
         return view('client.jurusan.detail-prodi', compact('prodis'));
     }
 

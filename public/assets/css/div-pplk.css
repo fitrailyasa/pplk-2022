@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 :root {
@@ -17,9 +17,9 @@
     --primary-color-2: rgba(91, 207, 197, 0.2);
     --font-family-title: 'Poppins', 'open sans';
     --font-family-body: 'Poppins', 'open sans';
-    --font-color-primary: #174461; 
+    --font-color-primary: #174461;
     --font-color-primary-2: #FFFFFF;
-    --font-color-subheadline: #071D2C; 
+    --font-color-subheadline: #071D2C;
     --font-color-secondary: #686868;
     --font-color-call-to-act-2:#4a4a4a;
     --page-background-1: #F9FAFB;
@@ -257,7 +257,7 @@ body{
     display: block;
     font-family: var(--font-family-body) !important;
     overflow-x: hidden;
-    background: url(../assets/background.png);
+    background: url(../background.png) !important;
     background-position: center;
     background-size: cover;
     font-size: 10rem;
@@ -287,7 +287,7 @@ body{
     width: 18.75rem;
 }
 
-@media screen and (min-width: 930px) {
+@media screen and (min-width: 931px) {
     #mobile-footer-bar, #mobile-footer-bar .container-fluid{
         display: none;
     }
@@ -360,8 +360,8 @@ body{
         text-align: center;
         color: var(--white) !important;
         font-size: 10px;
-    } 
-    
+    }
+
     body{
         padding-bottom: 5rem;
     }
@@ -379,7 +379,7 @@ body{
     .box{
         width: 17.5rem;
     }
-    
+
 }
 
 @media screen and (max-width:370px) {
