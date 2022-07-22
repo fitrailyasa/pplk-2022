@@ -4,7 +4,6 @@ body{
     background-position: 50% 5%;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 0rem;
     box-shadow: inset rgba(41, 1, 53, 0.66) 0px 1000rem 100px;
     width: 100%;
 }
@@ -319,6 +318,19 @@ h2{
 .fun-fact-card .card-body-ff .card-title:after {
     left: 0.5em;
     margin-right: -50%;
+}
+
+
+#bounce {
+    animation: bounce .5s alternate infinite ease-in;
+}
+@keyframes bounce {
+    0% {
+        transform: translateY(-12%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
 }
 
 @media screen and (max-width:930px) {

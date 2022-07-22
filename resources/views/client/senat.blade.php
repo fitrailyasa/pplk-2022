@@ -1,7 +1,7 @@
 @extends('layouts.client.app')
 
 <!-- TITLE -->
-@section('title', 'Kabinet ')
+@section('title', 'Senat ')
 
 @section('style')
     <!-- STYLES -->

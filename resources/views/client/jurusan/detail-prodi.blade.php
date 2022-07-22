@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="{{ asset('assets/css/detail-prodi.css') }}">
     <!-- b5 -->
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}">
-
     <!-- css lokal -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
@@ -25,8 +24,7 @@
 @section('content')
     <!-- CONTENT -->
     <!-- Nama Prodi -->
-    <h1 class="text-center text-light display-3 py-4 fw-bold flex-wrap my-3"><strong>sains atmosfir dan
-        keplanetan</strong>
+    <h1 class="text-center text-light display-3 py-4 fw-bold flex-wrap my-3"><strong>{{ $prodis->namaLengkap }}</strong>
 </h1>
 
 <!-- gambar -->
@@ -39,13 +37,13 @@
     </div>
     <div class="col-lg-6 col-md-12 my-auto text-light g-md-5 animasi">
         <h4><strong>Kepala Program Studi</strong></h4>
-        <h4>lorem</h4>
+        <h4>{{ $prodis->kepalaProdi }}</h4>
         <h4><strong>Akreditasi</strong></h4>
-        <h4>cakep</h4>
+        <h4>{{  $prodis->akreditasi }}</h4>
         <h4><strong>Ruangan Program Studi</strong></h4>
-        <h4>kamar mandi</h4>
+        <h4>{{ $prodis->ruangProdi }}</h4>
         <h4><strong>Tahun Berdiri</strong></h4>
-        <h4>9999</h4>
+        <h4>{{ $prodis->tahunBerdiri }}</h4>
     </div>
 </div>
 
@@ -60,22 +58,9 @@
             perferendis officia, laudantium doloribus sed eligendi assumenda possimus dolores minus consectetur
             animi. Corrupti, temporibus?</p>
         <h3 class="animasi">Visi</h3>
-        <p class="animasi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis autem quibusdam
-            ullam
-            doloribus! Officia aliquid ea dolorum dicta suscipit in ipsa rerum voluptate, sunt ipsum id
-            aspernatur veritatis nemo quidem.</p>
+        <p class="animasi">{{ $prodis->visi }}</p>
         <h3 class="animasi">Misi</h3>
-        <p class="animasi">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo aliquam quis,
-            voluptatum
-            cum,
-            dolorum magnam accusantium quibusdam enim, repudiandae nostrum tempore a cupiditate eius
-            dolor assumenda maiores dignissimos voluptatem deleniti.
-            Necessitatibus est eos enim recusandae saepe nesciunt delectus quo quis, earum et porro iste
-            hic deserunt laudantium inventore ex sunt provident natus magni temporibus, vel, distinctio
-            neque! Ab, quo maiores.
-            Itaque totam aperiam ab quia delectus, veniam asperiores vel officia ex nostrum fugiat, hic
-            adipisci ut harum fugit. Eius aliquam dicta a tenetur autem placeat reprehenderit commodi
-            quod eos quis.</p>
+        <p class="animasi">{{ $prodis->misi }}</p>
     </div>
 </div>
 
