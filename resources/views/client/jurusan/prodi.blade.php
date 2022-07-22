@@ -254,7 +254,7 @@
 
                 <button type="button" class="btn my-4 prodi-card scroll-reveal">
                     <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/Atmosfer Keplanetan.svg') }}" class="card-img-top rounded-5" alt="...">
+                        <img src="{{ asset('assets/logoProdi/2.svg') }}" class="card-img-top rounded-5" alt="...">
                         <div class="card-body">
                             <p class="card-text pt-2 rounded-3 text-center text-light">Tata Kelola Air Terpadu</p>
                         </div>
@@ -350,7 +350,7 @@
 
                 <button type="button" class="btn my-4 prodi-card scroll-reveal">
                     <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/industri.svg') }}" class="card-img-top rounded-5" alt="...">
+                        <img src="{{ asset('assets/logoProdi/industri.png') }}" class="card-img-top rounded-5" alt="...">
                         <div class="card-body">
                             <p class="card-text pt-2 rounded-3 text-center text-light">Teknik Industri</p>
                         </div>
@@ -359,7 +359,7 @@
 
                 <button type="button" class="btn my-4 prodi-card scroll-reveal">
                     <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/telekomunikasi.svg') }}" class="card-img-top rounded-5" alt="...">
+                        <img src="{{ asset('assets/logoProdi/telekomunikasi.png') }}" class="card-img-top rounded-5" alt="...">
                         <div class="card-body">
                             <p class="card-text pt-2 rounded-3 text-center text-light">Teknik Telekomunikasi</p>
                         </div>
@@ -368,7 +368,7 @@
 
                 <button type="button" class="btn my-4 prodi-card scroll-reveal">
                     <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/pertambangan.svg') }}" class="card-img-top rounded-5" alt="...">
+                        <img src="{{ asset('assets/logoProdi/pertambangan.png') }}" class="card-img-top rounded-5" alt="...">
                         <div class="card-body">
                             <p class="card-text pt-2 rounded-3 text-center text-light">Teknik Pertambangan</p>
                         </div>
@@ -377,7 +377,7 @@
 
                 <button type="button" class="btn my-4 prodi-card scroll-reveal">
                     <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/biosistem.svg') }}" class="card-img-top rounded-5" alt="...">
+                        <img src="{{ asset('assets/logoProdi/biosistem.png') }}" class="card-img-top rounded-5" alt="...">
                         <div class="card-body">
                             <p class="card-text pt-2 rounded-3 text-center text-light">Teknik Biosistem</p>
                         </div>
@@ -386,7 +386,7 @@
 
                 <button type="button" class="btn my-4 prodi-card scroll-reveal">
                     <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/biomedik.svg') }}" class="card-img-top rounded-5" alt="...">
+                        <img src="{{ asset('assets/logoProdi/biomedik.png') }}" class="card-img-top rounded-5" alt="...">
                         <div class="card-body">
                             <p class="card-text pt-2 rounded-3 text-center text-light">Teknik Biomedik</p>
                         </div>
@@ -395,7 +395,7 @@
 
                 <button type="button" class="btn my-4 prodi-card scroll-reveal">
                     <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/pangan.svg') }}" class="card-img-top rounded-5" alt="...">
+                        <img src="{{ asset('assets/logoProdi/pangan.png') }}" class="card-img-top rounded-5" alt="...">
                         <div class="card-body">
                             <p class="card-text pt-2 rounded-3 text-center text-light">Teknologi Pangan</p>
                         </div>
@@ -404,7 +404,7 @@
 
                 <button type="button" class="btn my-4 prodi-card scroll-reveal">
                     <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/tip.svg') }}" class="card-img-top rounded-5" alt="...">
+                        <img src="{{ asset('assets/logoProdi/tip.png') }}" class="card-img-top rounded-5" alt="...">
                         <div class="card-body">
                             <p class="card-text pt-2 rounded-3 text-center text-light">Teknologi Industri Pertanian</p>
                         </div>
@@ -413,7 +413,7 @@
 
                 <button type="button" class="btn my-4 prodi-card scroll-reveal">
                     <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/rekhut.svg') }}" class="card-img-top rounded-5" alt="...">
+                        <img src="{{ asset('assets/logoProdi/rekhut.png') }}" class="card-img-top rounded-5" alt="...">
                         <div class="card-body">
                             <p class="card-text pt-2 rounded-3 text-center text-light">Rekayasa Kehutanan</p>
                         </div>
@@ -431,7 +431,7 @@
 
                 <button type="button" class="btn my-4 prodi-card scroll-reveal">
                     <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/2.svg') }}" class="card-img-top rounded-5" alt="...">
+                        <img src="{{ asset('assets/logoProdi/3.svg') }}" class="card-img-top rounded-5" alt="...">
                         <div class="card-body">
                             <p class="card-text pt-2 rounded-3 text-center text-light">Rekayasa Minyak dan Gas</p>
                         </div>
@@ -440,7 +440,7 @@
 
                 <button type="button" class="btn my-4 prodi-card scroll-reveal">
                     <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/3.svg') }}" class="card-img-top rounded-5" alt="...">
+                        <img src="{{ asset('assets/logoProdi/.svg') }}" class="card-img-top rounded-5" alt="...">
                         <div class="card-body">
                             <p class="card-text pt-2 rounded-3 text-center text-light">Instrumentasi dan Automasi</p>
                         </div>

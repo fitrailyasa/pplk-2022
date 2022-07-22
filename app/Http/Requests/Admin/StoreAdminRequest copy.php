@@ -46,6 +46,22 @@ class StoreAdminRequest extends FormRequest
             'jumlahMahasiswa'=>['integer','nullable'],
             //
         
+        // ]);
+        // Begalin::create([
+        //     'isi'=>$request->isi,
+        //     'judul'=>$request->judul
+        // ]);
+
+
+
+
+        // Senat::create([
+        //     'ketua'=>$request->ketua,
+        //     'deskripsi'=>$request->deskripsi,
+        //     'website'=>$request->website,
+        //     'youtube'=>$request->youtube,
+        //     'instagram'=>$request->instagram
+        // ]);
 
 
             // $table->string('kepalaProdi')->nullable();
