@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 :root {
@@ -17,9 +17,9 @@
     --primary-color-2: rgba(91, 207, 197, 0.2);
     --font-family-title: 'Poppins', 'open sans';
     --font-family-body: 'Poppins', 'open sans';
-    --font-color-primary: #174461;
+    --font-color-primary: #174461; 
     --font-color-primary-2: #FFFFFF;
-    --font-color-subheadline: #071D2C;
+    --font-color-subheadline: #071D2C; 
     --font-color-secondary: #686868;
     --font-color-call-to-act-2:#4a4a4a;
     --page-background-1: #F9FAFB;
@@ -227,6 +227,11 @@ body{
 }
 
 /*Navbar mobile alias footbar CSS*/
+
+footer {
+    padding: 0 !important;
+}
+
 .footer-bar{
     background:var(--bawaan-gradient-1);
     background: var(--gradient-1);
@@ -348,7 +353,7 @@ body{
         text-align: center;
         color: var(--white) !important;
         font-size: 10px;
-    }
+    }  
 
     #footer-page{
         display: none !important;
@@ -359,7 +364,7 @@ body{
     #search-width{
         width: 12rem;
     }
-
+    
 }
 
 @media screen and (max-width:370px) {

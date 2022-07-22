@@ -6,7 +6,7 @@ use App\Models\Prodi;
 use App\Http\Requests\StoreProdiRequest;
 use App\Http\Requests\UpdateProdiRequest;
 
-class ProdiController extends Controller
+class ClientProdiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,15 @@ class ProdiController extends Controller
      */
     public function index()
     {
-        //
+        $prodis = Prodi::all();
+        return view('client.jurusan.prodi', compact('prodis'));
+    }
+    public function indexDetail()
+    {
+        $default = 1;
+
+        $prodis = Prodi::where('id', $default)->firstOrFail();
+        return view('client.jurusan.detail-prodi', compact('prodis'));
     }
 
     /**

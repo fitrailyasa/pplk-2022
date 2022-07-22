@@ -24,16 +24,7 @@
                 <div class="col-lg-3 col-md-10 col-sm-12 justify-content-center">
                     <div class="center">
                         <img class="ratio ratio-1x1 profile" src="../assets/jhonny.jpg">
-
-                        <div class="row qr-code py-md-5">
-                            <div class="imgUp justify-content-center">
-                                <div class="ratio ratio-1x1 imagePreview content"></div>
-                                <h3 align="center" class="pt-4">MY BARCODE</h3>
-                                <label class="btn btn-primary">
-                                    GENERATE<input type="file" class="uploadFile img" value="Upload Photo" style="width: 0px;height: 0px;overflow: hidden;">
-                                </label>
-                            </div><!-- col-2 -->
-                        </div>
+                        <!-- tambah input type file -->
                     </div><!-- row -->
                 </div><!-- container -->
                 <div class="col-xl-6 col-sm-12">
@@ -43,36 +34,36 @@
 
                             <div class="row bio-input">
                                 <label class="form-label" for="email">Email</label>
-                                <input type="text" placeholder="FitraAsgard@gmail.com" enabled>
+                                <input type="text" placeholder="{{ $viewbiodata->email }}" enabled>
                             </div>
 
                             <div class="row bio-input">
                                 <label class="form-label" for="nama">Nama</label>
-                                <input type="text" placeholder="FITRA NAXX GARUT" enabled>
+                                <input type="text" placeholder="{{ $viewbiodata->nama }}" enabled>
                             </div>
 
                             <div class="row bio-input">
                                 <label class="form-label" for="nim">NIM</label>
-                                <input type="text" placeholder="122999000" enabled>
+                                <input type="text" placeholder="{{ $viewbiodata->nim }}" enabled>
                             </div>
 
                             <div class="row bio-input">
                                 <label class="form-label" for="kelompok">Kelompok</label>
-                                <input type="text" placeholder="123 - Ardhames" enabled>
+                                <input type="text" placeholder="{{ $viewbiodata->kelompok }}" enabled>
                             </div>
 
                             <div class="row bio-input">
                                 <label class="form-label" for="prodi">Program Studi</label>
-                                <input type="text" placeholder="Teknik Percuanan Zeus" enabled>
+                                <input type="text" placeholder="{{ $viewbiodata->prodis_id }}" enabled>
                             </div>
 
                             <div class="row bio-input">
                                 <label class="form-label" for="notel">Nomor Telepon</label>
-                                <input type="text" placeholder="081122334455" enabled>
+                                <input type="text" placeholder="belum dinamis" enabled>
                             </div>
 
                             <div class="row bio-input">
-                                <label class="form-label" for="golongan darah">Golongan Darah</label>
+                                <label placeholder="belum dinamis" class="form-label" for="golongan darah">Golongan Darah</label>
                                 <select>
                                     <option selected class="selected">Goldar</option>
                                     <option value="1">A</option>
@@ -84,12 +75,12 @@
 
                             <div class="row bio-input">
                                 <label class="form-label" for="alamat">Alamat</label>
-                                <input type="text" placeholder="Korpri Jaya" enabled>
+                                <input type="text" placeholder="dinamis" enabled>
                             </div>
 
                             <div class="row bio-input">
                                 <label class="form-label" for="riwayat">Riwayat Penyakit</label>
-                                <input type="text" placeholder="Ayan" enabled>
+                                <input type="text" placeholder="belum dinamis" enabled>
                             </div>
                     </form>
 

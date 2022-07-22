@@ -44,40 +44,40 @@
     <!-- end sponsor modal -->
 
     <div class="conten">
-        <!-- jumbotron -->
-        <div class="container-fluid landing-page">
+           <!-- jumbotron -->
+           <div class="container-fluid landing-page">
             <div class="row justify-content-center">
                 <div class="box ratio ratio-1x1 mt-5">
-                    <img src="{{ asset('assets/Logo-PPLK.png') }}" alt="">
+                    <img src="../assets/Logo-PPLK.png" alt="">
                 </div>
                 <!-- <div class="col-lg-4 justify-content-center">
                 </div> -->
             </div>
             <div class="row text-center text-white">
                 <div class="text-nama">
-                    <p>HELLO, <span class="nama">USER</span></p>
+                    <p>HELLO, <span class="nama">MANG UDUT</span></p>
                 </div>
                 <div class="text-qoute">
-                    <p>Ayo Menjelajah, Sekarang!</p>
+                    <p>Ayo Menjelajah, Seklarang </p>
                 </div>
             </div>
 
         </div>
 
 
-        <!--under landing page dekstop -->
+        <!--under landing page dekctop -->
         <div class="container-fluid under-landing-page p-3">
             <div class="row justify-content-between p-4">
                 <div class="col-lg-5 col-md-4 align-self-center">
                     <div class="d-flex justify-content-center">
-                        <img class="mt-md-5 maskot maskot-awal" src="{{ asset('assets/space-cat.png') }}" alt="">
+                        <img class="mt-md-5 maskot maskot-awal" src="../assets/space-cat.png" alt="">
                     </div>
 
                 </div>
                 <div class="col-lg-6 col-md-7">
-                    <div class="row g-2 justify-content-around">
-                        <div class="col-6">
-                            <div class="card text-center m-lg-3 m-md-3" >
+                    <div class="row g-2 gap-md-2 gap-lg-5 justify-content-center">
+                        <div class="col-5">
+                            <a href="/jurusan" class="card text-center mx-lg-3" >
                                 <div class="card-body">
                                     <svg class="gambar-1" id="link-icon" viewBox="0 0 201 201" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M38.8529 48.9061L67.3893 20.3644L48.5195 1.49463C47.0247 0.00504541 44.6185 0.00504541 43.1289 1.49463L19.9831 24.6353C19.2643 25.354 18.8633 26.3228 18.8633 27.3332C18.8633 28.3436 19.2643 29.3175 19.9831 30.0259L38.8529 48.9061Z" fill="black"/>
@@ -90,10 +90,10 @@
 
                                     <h1 class="link-tilte">JURUSAN</h1>
                                 </div>
-                            </div>
+                            </a>
                         </div>
-                        <div class="col-6">
-                            <div class="card text-center m-lg-3 m-md-3" >
+                        <div class="col-5">
+                            <a href="/prodi" class="card text-center mx-lg-3" >
                                 <div class="card-body">
                                     <svg class="gambar-1" id="link-icon" viewBox="0 0 146 146" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M138.703 111.932H7.30208C5.95833 111.932 4.86979 110.839 4.86979 109.5V102.203H141.135V109.5C141.135 110.839 140.042 111.932 138.703 111.932ZM85.1667 126.536H60.8333V116.802H85.1667V126.536ZM99.7656 131.401C101.109 131.401 102.203 132.495 102.203 133.833V141.135H43.8021V133.833C43.8021 132.495 44.8958 131.401 46.2344 131.401H99.7656ZM7.30208 24.3333H17.0365V26.7656H9.73438C8.39583 26.7656 7.30208 27.8594 7.30208 29.2031V92.4688C7.30208 93.8073 8.39583 94.901 9.73438 94.901H136.266C137.609 94.901 138.703 93.8073 138.703 92.4688V29.2031C138.703 27.8594 137.609 26.7656 136.266 26.7656H128.969V24.3333H138.703C140.042 24.3333 141.135 25.4271 141.135 26.7656V97.3333H4.86979V26.7656C4.86979 25.4271 5.95833 24.3333 7.30208 24.3333ZM24.3333 4.86979H121.667C123.005 4.86979 124.099 5.95833 124.099 7.30208V14.599H21.901V7.30208C21.901 5.95833 22.9948 4.86979 24.3333 4.86979ZM24.3333 85.1667H121.667C125.698 85.1667 128.969 81.8958 128.969 77.8698V31.6354H133.833V90.0365H12.1667V31.6354H17.0365V77.8698C17.0365 81.8958 20.3021 85.1667 24.3333 85.1667ZM124.099 77.8698C124.099 79.2083 123.005 80.3021 121.667 80.3021H24.3333C22.9948 80.3021 21.901 79.2083 21.901 77.8698V19.4688H124.099V77.8698ZM138.703 19.4688H128.969V7.30208C128.969 3.27083 125.698 0 121.667 0H24.3333C20.3021 0 17.0365 3.27083 17.0365 7.30208V19.4688H7.30208C3.27083 19.4688 0 22.7396 0 26.7656V109.5C0 113.531 3.27083 116.802 7.30208 116.802H55.9688V126.536H46.2344C42.2031 126.536 38.9323 129.802 38.9323 133.833V143.568C38.9323 144.906 40.026 146 41.3698 146H104.635C105.974 146 107.068 144.906 107.068 143.568V133.833C107.068 129.802 103.797 126.536 99.7656 126.536H90.0365V116.802H138.703C142.729 116.802 146 113.531 146 109.5V26.7656C146 22.7396 142.729 19.4688 138.703 19.4688Z" fill="black"/>
@@ -122,10 +122,10 @@
 
                                     <h1 class="link-tilte">PRODI</h1>
                                 </div>
-                            </div>
+                            </a>
                         </div>
-                        <div class="col-6">
-                            <div class="card text-center m-lg-3  m-md-3 " >
+                        <div class="col-5">
+                            <a href="/himpunan" class="card text-center mx-lg-3 " >
                                 <div class="card-body">
                                     <svg class="gambar-1" id="link-icon" viewBox="0 0 170 170" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M84.9951 0C38.0928 0 0.000642004 38.0928 4.34924e-09 84.995C-0.000469996 131.898 38.092 169.99 84.9951 169.99C131.898 169.99 169.991 131.898 169.99 84.995C169.99 38.0928 131.897 0 84.9951 0V0ZM84.9951 6.55084C128.364 6.55084 163.451 41.6267 163.452 84.995C163.453 128.365 128.365 163.452 84.9951 163.452C41.6257 163.452 6.53763 128.365 6.53808 84.995C6.53869 41.6267 41.6264 6.55084 84.9951 6.55084V6.55084Z" fill="black"/>
@@ -142,10 +142,10 @@
 
                                     <h1 class="link-tilte">HIMPUNAN</h1>
                                 </div>
-                            </div>
+                            </a>
                         </div>
-                        <div class="col-6">
-                            <div class="card text-center m-lg-3  m-md-3 " >
+                        <div class="col-5">
+                            <a href="/ukm" class="card text-center mx-lg-3 " >
                                 <div class="card-body">
                                     <svg class="gambar-1" id="link-icon" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M189.79 15.2344C189.79 23.6458 182.993 30.4688 174.608 30.4688C166.223 30.4688 159.426 23.6458 159.426 15.2344C159.426 6.82292 166.223 0 174.608 0C182.993 0 189.79 6.82292 189.79 15.2344Z" fill="black"/>
@@ -162,43 +162,43 @@
 
                                         <h1 class="link-tilte m-4">UKM</h1>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="flexbox-mini">
-                    <div class="small-slide-menu-item justify-content-center">
+                    <a href="/upt" class="small-slide-menu-item justify-content-center">
                         <div class="text-link">
                             UPT ITERA
                         </div>
-                    </div>
-                    <div class="small-slide-menu-item justify-content-center">
+                    </a>
+                    <a href="/kabinet" class="small-slide-menu-item justify-content-center">
                         <div class="text-link">
                             KABINET KM-ITERA
                         </div>
-                    </div>
-                    <div class="small-slide-menu-item justify-content-center">
+                    </a>
+                    <a href="/senat" class="small-slide-menu-item justify-content-center">
                         <div class="text-link">
                             SENAT KM-ITERA
                         </div>
-                    </div>
-                    <div class="small-slide-menu-item justify-content-center">
+                    </a>
+                    <a href="/pplk" class="small-slide-menu-item justify-content-center">
                         <div class="text-link">
-                            PPLK ITERA
+                            PPKL ITERA
                         </div>
-                    </div>
-                    <div class="small-slide-menu-item justify-content-center">
+                    </a>
+                    <a href="/div-pplk" class="small-slide-menu-item justify-content-center">
                         <div class="text-link">
-                            DIVISI PPLK
+                            DIVISI PPKL
                         </div>
-                    </div>
-                    <div class="small-slide-menu-item justify-content-center">
+                    </a>
+                    <a href="/kamus-gaul" class="small-slide-menu-item justify-content-center">
                         <div class="text-link">
                             KAMUS GAUL
                         </div>
-                    </div>
+                    </a>
 
                 </div>
             </div>
@@ -207,8 +207,9 @@
         <!-- under landing page mobile -->
         <div class="container-fluid under-landing-page-mobile">
             <div class="mobile-wrapper owl-carousel owl-theme">
-                <div class="card text-center mt-4 mb-1" >
+                <a href="/jurusan" class="card text-center mt-4 mb-1" >
                     <div class="card-body p-md-1">
+
                             <svg class="gambar-1" id="link-icon" viewBox="0 0 201 201" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M38.8529 48.9061L67.3893 20.3644L48.5195 1.49463C47.0247 0.00504541 44.6185 0.00504541 43.1289 1.49463L19.9831 24.6353C19.2643 25.354 18.8633 26.3228 18.8633 27.3332C18.8633 28.3436 19.2643 29.3175 19.9831 30.0259L38.8529 48.9061Z" fill="black"/>
                                 <path d="M156.363 109.344C154.874 107.849 152.467 107.849 150.973 109.344L141.306 119.01L130.525 108.219L149.4 89.3488C150.118 88.6353 150.514 87.6665 150.514 86.6561C150.514 85.6457 150.118 84.6717 149.4 83.9582L117.046 51.604C115.613 50.1717 113.082 50.1717 111.655 51.604L92.7799 70.479L81.9883 59.6925L91.6549 50.0259C92.3737 49.3071 92.7747 48.3384 92.7747 47.328C92.7747 46.3175 92.3737 45.3436 91.6549 44.6353L72.7799 25.7603L44.2383 54.2967L63.1133 73.1717C63.832 73.8853 64.8008 74.2863 65.8112 74.2863C66.8216 74.2863 67.7956 73.8853 68.5091 73.1717L76.5924 65.0832L87.3841 75.8696L68.5091 94.7446C67.7904 95.4634 67.3893 96.4321 67.3893 97.4426C67.3893 98.453 67.7904 99.4217 68.5091 100.135L81.9883 113.614L76.3216 119.281C73.2331 117.229 69.6081 116.12 65.8112 116.12C60.7174 116.12 55.931 118.104 52.3268 121.703C44.8945 129.135 44.8945 141.234 52.3268 148.667C55.9258 152.265 60.7174 154.25 65.8112 154.25C70.8997 154.25 75.6914 152.265 79.2904 148.667C85.8008 142.156 86.6081 132.068 81.7174 124.672L87.3841 119.01L100.863 132.489C101.608 133.229 102.587 133.604 103.561 133.604C104.535 133.604 105.514 133.229 106.259 132.489L125.129 113.614L135.91 124.406L127.827 132.489C126.337 133.979 126.337 136.39 127.827 137.88L146.702 156.755L175.238 128.219L156.363 109.344Z" fill="black"/>
@@ -220,9 +221,10 @@
 
                             <h1 class="link-tilte">JURUSAN</h1>
                     </div>
-                </div>
-                <div class="card text-center mt-4 mb-1" >
+                </a>
+                <a href="/prodi" class="card text-center mt-4 mb-1" >
                     <div class="card-body p-md-1">
+
                             <svg class="gambar-1" id="link-icon" viewBox="0 0 146 146" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M138.703 111.932H7.30208C5.95833 111.932 4.86979 110.839 4.86979 109.5V102.203H141.135V109.5C141.135 110.839 140.042 111.932 138.703 111.932ZM85.1667 126.536H60.8333V116.802H85.1667V126.536ZM99.7656 131.401C101.109 131.401 102.203 132.495 102.203 133.833V141.135H43.8021V133.833C43.8021 132.495 44.8958 131.401 46.2344 131.401H99.7656ZM7.30208 24.3333H17.0365V26.7656H9.73438C8.39583 26.7656 7.30208 27.8594 7.30208 29.2031V92.4688C7.30208 93.8073 8.39583 94.901 9.73438 94.901H136.266C137.609 94.901 138.703 93.8073 138.703 92.4688V29.2031C138.703 27.8594 137.609 26.7656 136.266 26.7656H128.969V24.3333H138.703C140.042 24.3333 141.135 25.4271 141.135 26.7656V97.3333H4.86979V26.7656C4.86979 25.4271 5.95833 24.3333 7.30208 24.3333ZM24.3333 4.86979H121.667C123.005 4.86979 124.099 5.95833 124.099 7.30208V14.599H21.901V7.30208C21.901 5.95833 22.9948 4.86979 24.3333 4.86979ZM24.3333 85.1667H121.667C125.698 85.1667 128.969 81.8958 128.969 77.8698V31.6354H133.833V90.0365H12.1667V31.6354H17.0365V77.8698C17.0365 81.8958 20.3021 85.1667 24.3333 85.1667ZM124.099 77.8698C124.099 79.2083 123.005 80.3021 121.667 80.3021H24.3333C22.9948 80.3021 21.901 79.2083 21.901 77.8698V19.4688H124.099V77.8698ZM138.703 19.4688H128.969V7.30208C128.969 3.27083 125.698 0 121.667 0H24.3333C20.3021 0 17.0365 3.27083 17.0365 7.30208V19.4688H7.30208C3.27083 19.4688 0 22.7396 0 26.7656V109.5C0 113.531 3.27083 116.802 7.30208 116.802H55.9688V126.536H46.2344C42.2031 126.536 38.9323 129.802 38.9323 133.833V143.568C38.9323 144.906 40.026 146 41.3698 146H104.635C105.974 146 107.068 144.906 107.068 143.568V133.833C107.068 129.802 103.797 126.536 99.7656 126.536H90.0365V116.802H138.703C142.729 116.802 146 113.531 146 109.5V26.7656C146 22.7396 142.729 19.4688 138.703 19.4688Z" fill="black"/>
                                 <path d="M128.97 104.635H124.1C122.762 104.635 121.668 105.729 121.668 107.068C121.668 108.406 122.762 109.5 124.1 109.5H128.97C130.309 109.5 131.402 108.406 131.402 107.068C131.402 105.729 130.309 104.635 128.97 104.635Z" fill="black"/>
@@ -250,9 +252,12 @@
 
                             <h1 class="link-tilte">PRODI</h1>
                     </div>
-                </div>
-                <div class="card text-center mt-4 mb-1" >
+                </a>
+                <a href="/himpunan" class="card text-center mt-4 mb-1" >
                     <div class="card-body pt-md-1">
+                            <!-- <svg class="gambar-1"viewBox="0 0 24 24" xmlns="htt p://www.w3.org/2000/svg">
+                                <path id="link-icon" fill-rule="evenodd" clip-rule="evenodd" d="M22.0003 10.6422C22.0637 12.3105 21.9725 13.9808 21.7279 15.6348C21.8147 15.7177 21.9029 15.8045 21.9926 15.8927C22.0884 15.9871 22.186 16.0831 22.2851 16.1775C23.6583 18.1887 24.2337 20.5767 23.9136 22.9353C23.8969 23.1613 23.8077 23.3776 23.6575 23.5567C23.5072 23.7359 23.3026 23.8697 23.0697 23.9414C22.8368 24.013 22.586 24.0191 22.3493 23.959C22.1126 23.8989 21.9006 23.7752 21.7403 23.6036C21.0397 22.9538 20.2307 22.4118 19.344 21.9984C16.944 22.5623 14.4771 22.8482 12.0005 22.8496C9.5205 22.8389 7.05161 22.5433 4.65076 21.9699C3.76657 22.3842 2.95974 22.9261 2.26071 23.5751C2.09464 23.7359 1.88238 23.8499 1.64873 23.9037C1.41507 23.9575 1.16966 23.9488 0.941136 23.8787C0.712614 23.8087 0.510413 23.6801 0.358142 23.5079C0.205871 23.3358 0.109812 23.1273 0.0811809 22.9067C-0.227976 20.5562 0.351597 18.1794 1.72202 16.1775C1.90778 15.9833 2.08734 15.8062 2.2669 15.6348C2.02463 13.9806 1.93556 12.3104 2.00065 10.6422C1.66629 10.7793 1.36289 10.8935 1.10284 10.9906C0.967375 11.0394 0.819753 11.0521 0.676885 11.027C0.534018 11.002 0.401686 10.9403 0.295053 10.8491C0.18842 10.7579 0.1118 10.6408 0.0739739 10.5112C0.0361478 10.3817 0.0386455 10.2449 0.0811809 10.1167C2.53934 2.73624 12.0005 0 12.0005 0C12.0005 0 21.4554 2.73624 23.9198 10.1167C23.9623 10.2449 23.9648 10.3817 23.927 10.5112C23.8892 10.6408 23.8126 10.7579 23.7059 10.8491C23.5993 10.9403 23.467 11.002 23.3241 11.027C23.1812 11.0521 23.0336 11.0394 22.8981 10.9906C22.6195 10.8935 22.3347 10.7793 22.0003 10.6422ZM10.5696 9.85938H9.99992C9.39806 9.85938 8.91016 10.3095 8.91016 10.8648V11.396C8.91016 11.9513 9.39806 12.4014 9.99992 12.4014H10.5696C11.1714 12.4014 11.6593 11.9513 11.6593 11.396V10.8648C11.6593 10.3095 11.1714 9.85938 10.5696 9.85938ZM14.0133 9.85938H13.4374C12.8356 9.85938 12.3477 10.3095 12.3477 10.8648V11.396C12.3477 11.9513 12.8356 12.4014 13.4374 12.4014H14.0133C14.6151 12.4014 15.103 11.9513 15.103 11.396V10.8648C15.103 10.3095 14.6151 9.85938 14.0133 9.85938ZM13.4374 13.0469H14.0133C14.6151 13.0469 15.103 13.497 15.103 14.0523V14.5835C15.103 15.1388 14.6151 15.5889 14.0133 15.5889H13.4374C12.8356 15.5889 12.3477 15.1388 12.3477 14.5835V14.0523C12.3477 13.497 12.8356 13.0469 13.4374 13.0469ZM10.564 13.0469H9.9882C9.38634 13.0469 8.89844 13.497 8.89844 14.0523V14.5835C8.89844 15.1388 9.38634 15.5889 9.9882 15.5889H10.564C11.1659 15.5889 11.6538 15.1388 11.6538 14.5835V14.0523C11.6538 13.497 11.1659 13.0469 10.564 13.0469Z" fill="black"/>
+                            </svg>  -->
                             <svg class="gambar-1" id="link-icon" viewBox="0 0 170 170" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M84.9951 0C38.0928 0 0.000642004 38.0928 4.34924e-09 84.995C-0.000469996 131.898 38.092 169.99 84.9951 169.99C131.898 169.99 169.991 131.898 169.99 84.995C169.99 38.0928 131.897 0 84.9951 0V0ZM84.9951 6.55084C128.364 6.55084 163.451 41.6267 163.452 84.995C163.453 128.365 128.365 163.452 84.9951 163.452C41.6257 163.452 6.53763 128.365 6.53808 84.995C6.53869 41.6267 41.6264 6.55084 84.9951 6.55084V6.55084Z" fill="black"/>
                                 <path d="M84.7295 48.8074C89.6612 48.8074 93.6592 44.8094 93.6592 39.8777C93.6592 34.946 89.6612 30.948 84.7295 30.948C79.7978 30.948 75.7998 34.946 75.7998 39.8777C75.7998 44.8094 79.7978 48.8074 84.7295 48.8074Z" fill="black"/>
@@ -265,10 +270,12 @@
                                 <path d="M125.497 114.573H117.144C114.96 114.573 112.866 115.44 111.323 116.984C109.779 118.527 108.912 120.621 108.912 122.805V126.987C108.912 127.507 109.118 128.006 109.486 128.373C109.853 128.741 110.352 128.947 110.872 128.947H131.769C132.289 128.947 132.787 128.741 133.155 128.373C133.522 128.006 133.729 127.507 133.729 126.987V122.816C133.73 121.734 133.519 120.663 133.106 119.662C132.693 118.662 132.087 117.754 131.322 116.988C130.557 116.222 129.649 115.615 128.65 115.2C127.65 114.786 126.579 114.573 125.497 114.573V114.573Z" fill="black"/>
                                 <path d="M47.4898 89.7475C48.0096 89.7475 48.5081 89.541 48.8757 89.1735C49.2433 88.8059 49.4498 88.3074 49.4498 87.7876V81.9076H82.7695V87.7876C82.7695 88.3074 82.976 88.8059 83.3435 89.1735C83.7111 89.541 84.2096 89.7475 84.7295 89.7475C85.2493 89.7475 85.7478 89.541 86.1154 89.1735C86.4829 88.8059 86.6894 88.3074 86.6894 87.7876V81.9076H120.009V87.7876C120.009 88.3074 120.216 88.8059 120.583 89.1735C120.951 89.541 121.449 89.7475 121.969 89.7475C122.489 89.7475 122.987 89.541 123.355 89.1735C123.723 88.8059 123.929 88.3074 123.929 87.7876V79.9476C123.929 79.4278 123.723 78.9293 123.355 78.5617C122.987 78.1941 122.489 77.9876 121.969 77.9876H86.6894V72.1077C86.6894 71.5879 86.4829 71.0893 86.1154 70.7218C85.7478 70.3542 85.2493 70.1477 84.7295 70.1477C84.2096 70.1477 83.7111 70.3542 83.3435 70.7218C82.976 71.0893 82.7695 71.5879 82.7695 72.1077V77.9876H47.4898C46.9699 77.9876 46.4714 78.1941 46.1039 78.5617C45.7363 78.9293 45.5298 79.4278 45.5298 79.9476V87.7876C45.5298 88.3074 45.7363 88.8059 46.1039 89.1735C46.4714 89.541 46.9699 89.7475 47.4898 89.7475Z" fill="black"/>
                                 </svg>
+
+
                             <h1 class="link-tilte">HIMPUANAN</h1>
                     </div>
-                </div>
-                <div class="card text-center mt-4 mb-1" >
+                </a>
+                <a href="/ukm" class="card text-center mt-4 mb-1" >
                     <div class="card-body p-md-1">
                         <svg class="gambar-1" id="link-icon" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M189.79 15.2344C189.79 23.6458 182.993 30.4688 174.608 30.4688C166.223 30.4688 159.426 23.6458 159.426 15.2344C159.426 6.82292 166.223 0 174.608 0C182.993 0 189.79 6.82292 189.79 15.2344Z" fill="black"/>
@@ -286,41 +293,41 @@
 
                             <h1 class="link-tilte">UKM</h1>
                     </div>
-                </div>
+                </a>
             </div>
 
             <div class="row">
                 <div class="scrolling-wrapper-flexbox-mini owl-carousel">
-                    <div class="small-slide-menu-item justify-content-center">
+                    <a href="/upt" class="small-slide-menu-item justify-content-center">
                         <div class="text-link">
                             UPT ITERA
                         </div>
-                    </div>
-                    <div class="small-slide-menu-item justify-content-center">
+                    </a>
+                    <a href="/kabinet" class="small-slide-menu-item justify-content-center">
                         <div class="text-link">
                             KABINET KM-ITERA
                         </div>
-                    </div>
-                    <div class="small-slide-menu-item justify-content-center">
+                    </a>
+                    <a href="/senat" class="small-slide-menu-item justify-content-center">
                         <div class="text-link">
                             SENAT KM-ITERA
                         </div>
-                    </div>
-                    <div class="small-slide-menu-item justify-content-center">
+                    </a>
+                    <a href="/pplk" class="small-slide-menu-item justify-content-center">
                         <div class="text-link">
                             PPLK ITERA
                         </div>
-                    </div>
-                    <div class="small-slide-menu-item justify-content-center">
+                    </a>
+                    <a href="/div-pplk" class="small-slide-menu-item justify-content-center">
                         <div class="text-link">
                             DIVISI PPLK
                         </div>
-                    </div>
-                    <div class="small-slide-menu-item justify-content-center">
+                    </a>
+                    <a href="/kamus-gaul" class="small-slide-menu-item justify-content-center">
                         <div class="text-link">
                             KAMUS GAUL
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -331,87 +338,103 @@
                 <div class="col-md-5 col-sm-11 justify-content-center">
                     <div class="row justify-content-center">
                         <div class="col-10 text-center text">
-                            <span class="h1 text-white">KNOW MORE <br> ABOUT <span class=" text-gradien">PPLK 2022</span></span>
+                            <span class="h1 text-style text-white">KNOW MORE <br> ABOUT <span class=" text-gradien">PPLK 2022</span></span>
                         </div>
 
-                        <div class="mt-5 p-3 col-10 g-3 carousel-contaner owl-carousel">
+                        <div class="mt-5 p-3 col-10 g-3 carousel-container owl-carousel" >
 
-                            <div class="item">
-                                <iframe class="carousel-card" src="https://www.youtube.com/embed/jiUxHm9l1KY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-                            </div>
-                            <div class="item">
-                                <iframe class="carousel-card" src="https://www.youtube.com/embed/jiUxHm9l1KY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-                            </div>
-                            <div class="item">
-                                <iframe class="carousel-card" src="https://www.youtube.com/embed/jiUxHm9l1KY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+                            <div class="item img-fit">
+                                <button  data-bs-toggle="modal" data-bs-target="#you" >
+                                    <i class="bi bi-play-btn-fill play-icon text-danger"></i>
+                                    <img src="http://img.youtube.com/vi/IxEpWXop_WE/0.jpg" class="thumbnail" alt="">
+                                </button>
                             </div>
 
-
+                            <div class="item img-fit">
+                                <button  data-bs-toggle="modal" data-bs-target="#me" >
+                                    <i class="bi bi-play-btn-fill play-icon text-danger"></i>
+                                    <img src="http://img.youtube.com/vi/6gZ9WFwxRNY/0.jpg" class="thumbnail" alt="">
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <img class="maskot"src="{{ asset('assets/space-cat.png') }}" alt="">
+                    <img class="maskot"src="../assets/space-cat.png" alt="">
 
                 </div>
             </div>
         </div>
+        <!-- Modal  youtube-->
+        <div class="modal modal-xl fade" id="you" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RKr3EBT9v1I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                     </div>
+            </div>
+        </div>
 
-        <!-- begalin -->
-        <div class="container-fluid begalin pt-5">
-            <div class="begalin-container">
-                <div class="title text-center">
-                    <p>BEGALIN</p>
-                    <p class="akronim-begalin">BELAJAR GALI INFORMASI</p>
-                </div>
-                @foreach ($begalins as $begalin )
-                <div class="begalin-wraper owl-carousel owl-theme">
-                    <div class="-begalin-card">
-                        <div class="begalin-content">
-                            <p> {{ $begalin->judul }}</p>
-                            <button type="button" class="btn background-gradient mx-auto my-4" data-bs-toggle="modal" data-bs-target="#myModal">
-                               Toggle
-                              </button>
-                            </div>
-                        </div>
+        <div class="modal modal-xl fade" id="me" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <iframe class="youtube-size" src="https://www.youtube.com/embed/RKr3EBT9v1I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
 
-        <!-- modal begalin -->
-        <div class="modal modal-xl fade" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <!-- <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5> -->
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="content-modal text-start m-2">
-                        <p>{{ $begalin ->isi }}</p>
-                    </div>
-                </div>
-                <div class="modal-footer justify-content-start">
-                    <!-- Tagline PPLK 2022 -->
-                    <!-- Copyright href ke page Our Team -->
-                    <div class="text-start">
-                        <strong >Copyright &copy; 2022 <a href="#" class=" text-decoration-none">IMTEK PPLK-2022</a>.</strong> All rights reserved.
-                    </div>
-                    @endforeach
+  <!-- begalin -->
 
-                    <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Understood</button> -->
-                </div>
+  <div class="container-fluid begalin pt-5">
+    <div class="begalin-container">
+            <div class="title text-center pt-3">
+                <p>BEGALIN</p>
+                <p class="akronim-begalin">BELAJAR GALI INFORMASI</p>
+            </div>
+            <div class="begalin-wraper owl-carousel owl-theme">
+             @foreach ($begalins as $begalin )
+             <div class="begalin-card">
+                <div class="begalin-content mx-5">
+                    <p class="truncate">
+                        {{ $begalin->judul }}
+                    </p>
+                    <button type="button" class="btn background-gradient mx-auto my-4" data-bs-toggle="modal" data-bs-target="#begalin{{ $begalin->id }}">
+                        View More
+                    </button>
+                    </div>
+            </div>@endforeach
+        </div>
+    </div>
+
+
+<!-- modal begalin -->
+@foreach ($begalins as $begalin )
+<div class="modal modal-xl fade" id="begalin{{ $begalin->id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <!-- <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5> -->
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="content-modal text-start m-2">
+                <p>{{ $begalin->isi }}
+                </p>
+            </div>
+        </div>
+        <div class="modal-footer justify-content-start">
+            <div class="text-start">
+                <strong >Copyright &copy; 2022 <a href="#" class=" text-decoration-none">IMTEK PPLK-2022</a>.</strong> All rights reserved.
             </div>
         </div>
     </div>
-    <!-- end modal begalin -->
-    
+    </div>
+</div>
+@endforeach
+</div>
+<!-- end modal begalin -->
+
         <!-- medpatr -->
-        <div class="container-fluid medpart padding-top-bottom">
+        <div class="container-fluid medpart padding-top-bottom" id="terakhir">
             <div class="wrapper">
                 <div class="carousel owl-carousel">
                    <div class="medpatr-card">
