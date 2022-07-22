@@ -88,7 +88,7 @@ Route::get('/biodata', function () {                // ===> biodata
 });
 Route::get('/edit-biodata', function ()   {          // ===> edit biodata
     return view('client.biodata.edit-biodata');
-
+});
 Route::get('/booklet', function () {              // ===> booklet
     return view('client.booklet');
 });
