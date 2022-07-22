@@ -15,8 +15,11 @@ class ClientJurusanController extends Controller
      */
     public function index()
     {
-        $jurusans = Jurusan::all();
-        return view('client.jurusan.jurusan', compact('jurusans'));
+
+        $JTIK = Jurusan::where('namaSingkat', 'JTIK')->firstOrFail();
+        $JTPI = Jurusan::where('namaSingkat', 'JTPI')->firstOrFail();
+        $JS = Jurusan::where('namaSingkat', 'JS')->firstOrFail();
+        return view('client.jurusan.jurusan', compact('JTIK','JTPI','JS'));
     }
 
     /**

@@ -227,6 +227,11 @@ body{
 }
 
 /*Navbar mobile alias footbar CSS*/
+
+footer {
+    padding: 0 !important;
+}
+
 .footer-bar{
     background:var(--bawaan-gradient-1);
     background: var(--gradient-1);

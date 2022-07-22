@@ -19,79 +19,124 @@
 @endsection
 
 @section('content')
-    <!-- CONTENT -->
-    <div class="Div-PPLK">
-        <div class = "container">
-            <h2><strong>DIVISI PPLK 2022</strong></h2>
-        </div>
-        <section class="container-xxl list-card">
-            <div class="d-flex justify-content-center flex-wrap">
-                <div class="card rounded-5  m-5">
-                    <div class="d-flex justify-content-center box">
-                        <div class="ratio ratio-1x1 box-img";>
-                            <img src="../assets/Logo-PPLK.png" class="card-img p-2 justify-content-center" alt="...">
-                        </div>
-                    </div>
-                </div>
-                <div class="card rounded-5  m-5">
-                    <div class="d-flex justify-content-center box">
-                        <div class="ratio ratio-1x1 box-img";>
-                            <img src="../assets/Logo-PPLK.png" class="card-img p-2" alt="...">
-                        </div>
-                    </div>
-                </div>
-                <div class="card rounded-5  m-5">
-                    <div class="d-flex justify-content-center box">
-                        <div class="ratio ratio-1x1 box-img";>
-                            <img src="../assets/Logo-PPLK.png" class="card-img p-2" alt="...">
-                        </div>
-                    </div>
-                </div>
-                <div class="card rounded-5  m-5">
-                    <div class="d-flex justify-content-center box">
-                        <div class="ratio ratio-1x1 box-img";>
-                            <img src="../assets/Logo-PPLK.png" class="card-img p-2" alt="...">
-                        </div>
-                    </div>
-                </div>
-                <div class="card rounded-5  m-5">
-                    <div class="d-flex justify-content-center box">
-                        <div class="ratio ratio-1x1 box-img";>
-                            <img src="../assets/Logo-PPLK.png" class="card-img p-2" alt="...">
-                        </div>
-                    </div>
-                </div>
-                <div class="card rounded-5  m-5">
-                    <div class="d-flex justify-content-center box">
-                        <div class="ratio ratio-1x1 box-img";>
-                            <img src="../assets/Logo-PPLK.png" class="card-img p-2" alt="...">
-                        </div>
-                    </div>
-                </div>
-                <div class="card rounded-5  m-5">
-                    <div class="d-flex justify-content-center box">
-                        <div class="ratio ratio-1x1 box-img";>
-                            <img src="../assets/Logo-PPLK.png" class="card-img p-2" alt="...">
-                        </div>
-                    </div>
-                </div>
-                <div class="card rounded-5  m-5">
-                    <div class="d-flex justify-content-center box">
-                        <div class="ratio ratio-1x1 box-img";>
-                            <img src="../assets/Logo-PPLK.png" class="card-img p-2" alt="...">
-                        </div>
-                    </div>
-                </div>
-                <div class="card rounded-5  m-5">
-                    <div class="d-flex justify-content-center box">
-                        <div class="ratio ratio-1x1 box-img";>
-                            <img src="../assets/Logo-PPLK.png" class="card-img p-2" alt="...">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<!--Content web mulai dari sini-->
+<div class="Div-PPLK">
+    <div class = "container">
+        <h2><strong>DIVISI PPLK 2022</strong></h2>
     </div>
+    <section class="container-xxl list-card">
+        <div class="d-flex justify-content-center flex-wrap">
+            <div class="card rounded-5  m-5">
+                <div class="d-flex justify-content-center box">
+                    <div class="ratio ratio-1x1 box-img";>
+                        <img src="{{ asset('assets/logodevisi/ardhames.png') }}" class="card-img p-2 justify-content-center" alt="...">
+                    </div>
+                </div>
+              </div>
+            <div class="card rounded-5  m-5">
+                <div class="d-flex justify-content-center box">
+                    <div class="ratio ratio-1x1 box-img";>
+                        <img src="{{ asset('assets/logodevisi/eriedanus.png') }}" class="card-img p-2" alt="eriedanus">
+                    </div>
+                </div>
+              </div>
+            <div class="card rounded-5  m-5">
+                <div class="d-flex justify-content-center box">
+                    <div class="ratio ratio-1x1 box-img";>
+                        <img src="{{ asset('assets/logodevisi/harterous.png') }}" class="card-img p-2" alt="harterous">
+                    </div>
+                </div>
+              </div>
+            <div class="card rounded-5  m-5">
+                <div class="d-flex justify-content-center box">
+                    <div class="ratio ratio-1x1 box-img";>
+                        <img src="{{ asset('assets/logodevisi/heliodile.png') }}" class="card-img p-2" alt="heliodile">
+                    </div>
+                </div>
+              </div>
+            <div class="card rounded-5  m-5">
+                <div class="d-flex justify-content-center box">
+                    <div class="ratio ratio-1x1 box-img";>
+                        <img src="{{ asset('assets/logodevisi/krios.png') }}" class="card-img p-2" alt="krios">
+                    </div>
+                </div>
+              </div>
+            <div class="card rounded-5  m-5">
+                <div class="d-flex justify-content-center box">
+                    <div class="ratio ratio-1x1 box-img";>
+                        <img src="{{ asset('assets/logodevisi/galexia.png') }}" class="card-img p-2" alt="galexia">
+                    </div>
+                </div>
+              </div>
+            <div class="card rounded-5  m-5">
+                <div class="d-flex justify-content-center box">
+                    <div class="ratio ratio-1x1 box-img";>
+                        <img src="{{ asset('assets/logodevisi/cassiopeia.png') }}" class="card-img p-2" alt="cassiopeia">
+                    </div>
+                </div>
+              </div>
+            <div class="card rounded-5  m-5">
+                <div class="d-flex justify-content-center box">
+                    <div class="ratio ratio-1x1 box-img";>
+                        <img src="{{ asset('assets/logodevisi/zenith.png') }}" class="card-img p-2" alt="zenith">
+                    </div>
+                </div>
+              </div>
+            <div class="card rounded-5  m-5">
+                <div class="d-flex justify-content-center box">
+                    <div class="ratio ratio-1x1 box-img";>
+                        <img src="{{ asset('assets/logodevisi/kosmos.png') }}" class="card-img p-2" alt="kosmos">
+                    </div>
+                </div>
+              </div>
+              <div class="card rounded-5  m-5">
+                <div class="d-flex justify-content-center box">
+                    <div class="ratio ratio-1x1 box-img";>
+                        <img src="{{ asset('assets/logodevisi/phalosawala.png') }}" class="card-img p-2" alt="phalosawala">
+                    </div>
+                </div>
+              </div>
+              <div class="card rounded-5  m-5">
+                <div class="d-flex justify-content-center box">
+                    <div class="ratio ratio-1x1 box-img";>
+                        <img src="{{ asset('assets/logodevisi/kronos.png') }}" class="card-img p-2" alt="kronos">
+                    </div>
+                </div>
+              </div>
+              <div class="card rounded-5  m-5">
+                <div class="d-flex justify-content-center box">
+                    <div class="ratio ratio-1x1 box-img";>
+                        <img src="{{ asset('assets/logodevisi/phoenix.png') }}" class="card-img p-2" alt="phoenix">
+                    </div>
+                </div>
+              </div>
+              <div class="card rounded-5  m-5">
+                <div class="d-flex justify-content-center box">
+                    <div class="ratio ratio-1x1 box-img";>
+                        <img src="{{ asset('assets/logodevisi/milkyway.png') }}" class="card-img p-2" alt="milkyway">
+                    </div>
+                </div>
+              </div>
+              <div class="card rounded-5  m-5">
+                <div class="d-flex justify-content-center box">
+                    <div class="ratio ratio-1x1 box-img";>
+                        <img src="{{ asset('assets/logodevisi/sagitarius.png') }}" class="card-img p-2" alt="sagitarius">
+                    </div>
+                </div>
+              </div>
+              <div class="card rounded-5  m-5">
+                <div class="d-flex justify-content-center box">
+                    <div class="ratio ratio-1x1 box-img";>
+                        <img src="{{ asset('assets/logodevisi/ARP.png') }}" class="card-img p-2" alt="ARP">
+                    </div>
+                </div>
+              </div>
+
+        </div>
+    </section>
+</div>
+
+<!--Content web selesai dari sini-->
 @endsection
 
 @section('script')

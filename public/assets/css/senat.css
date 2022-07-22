@@ -1,0 +1,96 @@
+.senat-container {
+    position: relative;
+}
+.logo-senat {
+    width: 490px;
+    height: 450px;
+
+    margin: auto;
+    position: absolute;
+    padding-left: 30px;
+    top: 536px; left: 0; bottom: 0; right: 0;
+}
+
+.senat-text {
+    font-family: 'Open Sans';
+    font-style: normal;
+    text-align: center;
+    color: white;
+}
+
+.senat-title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 114.3%;
+    /* or 37px */
+
+    color: white;
+}
+
+.senat-subtitle {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 114.3%;
+    /* or 37px */
+
+    color: white;
+}
+
+.biodata-senat {
+    position: absolute;
+    overflow: auto;
+    margin: auto;
+    top: 466px;
+}
+
+.about-senat {
+    position: absolute;
+    overflow: auto;
+    margin: auto;
+    top: 636px;
+}
+
+.contacts-senat {
+    position: absolute;
+    margin: auto;
+    padding-left: 15%;
+    top: 900px;
+}
+.contacts-senat-text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #FFFFFF;
+}
+
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 1400px) {
+    .contacts-senat {
+        position: absolute;
+        margin: auto;
+        padding-left: 20%;
+        top: 880px;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .contacts-senat {
+        position: absolute;
+        margin: auto;
+        top: 980px;
+    }
+}
+
+
+@media screen and (max-width: 930px) {
+    .contacts-senat {
+        position: absolute;
+        margin: auto;
+        padding-left: 11%;
+        top: 1288px;
+    }
+}
