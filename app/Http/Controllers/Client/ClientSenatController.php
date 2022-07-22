@@ -15,7 +15,8 @@ class SenatController extends Controller
      */
     public function index()
     {
-        //
+        $senats = Senat::all();
+        return view('client.senat', compact('senats'));
     }
 
     /**
