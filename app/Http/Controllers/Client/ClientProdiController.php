@@ -21,7 +21,6 @@ class ClientProdiController extends Controller
     public function indexDetail()
     {
         $default = 1;
-
         $prodis = Prodi::where('id', $default)->firstOrFail();
         return view('client.jurusan.detail-prodi', compact('prodis'));
     }
