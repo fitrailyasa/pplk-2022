@@ -440,7 +440,7 @@
 
                 <button type="button" class="btn my-4 prodi-card scroll-reveal">
                     <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/.svg') }}" class="card-img-top rounded-5" alt="...">
+                        <img src="{{ asset('assets/logoProdi/instrumentasiDanAutomasi.png') }}" class="card-img-top rounded-5" alt="...">
                         <div class="card-body">
                             <p class="card-text pt-2 rounded-3 text-center text-light">Instrumentasi dan Automasi</p>
                         </div>

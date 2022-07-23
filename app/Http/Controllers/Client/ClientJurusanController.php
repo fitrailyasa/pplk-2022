@@ -15,7 +15,6 @@ class ClientJurusanController extends Controller
      */
     public function index()
     {
-
         $JTIK = Jurusan::where('namaSingkat', 'JTIK')->firstOrFail();
         $JTPI = Jurusan::where('namaSingkat', 'JTPI')->firstOrFail();
         $JS = Jurusan::where('namaSingkat', 'JS')->firstOrFail();

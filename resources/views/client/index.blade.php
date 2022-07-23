@@ -356,6 +356,9 @@
                                     <img src="http://img.youtube.com/vi/6gZ9WFwxRNY/0.jpg" class="thumbnail" alt="">
                                 </button>
                             </div>
+
+
+
                         </div>
                     </div>
                 </div>
@@ -369,19 +372,21 @@
         <div class="modal modal-xl fade" id="you" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RKr3EBT9v1I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                     </div>
+
+                    <iframe class="youtube-size" src="https://www.youtube.com/embed/IxEpWXop_WE?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
 
         <div class="modal modal-xl fade" id="me" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
-                    <iframe class="youtube-size" src="https://www.youtube.com/embed/RKr3EBT9v1I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+                    <iframe class="youtube-size" src=" https://youtu.be/6gZ9WFwxRNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
-
   <!-- begalin -->
 
   <div class="container-fluid begalin pt-5">
