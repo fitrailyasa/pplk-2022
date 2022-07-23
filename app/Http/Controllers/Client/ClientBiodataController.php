@@ -32,9 +32,9 @@ class ClientBiodataController extends Controller
      */
     public function create()
     {
-        //
+        $users = user::all();
+        return view('registrasi', compact('users'));
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -43,7 +43,22 @@ class ClientBiodataController extends Controller
      */
     public function store(StoreBiodataRequest $request)
     {
-        //
+        User::create([
+            'nama'=>$request->name,
+            'nim'=>$request->nim,
+            'email'=>$request->email,
+            'kelompok'=>$request->devisi,
+            'instagram'=>$request->instagram,
+            'nomorHp'=>$request->nohp,
+            'qrcode'=>$request->nim,
+            'logo'=>$request->logo,
+            'filosofiLogo'=>$request->filosofiLogo,
+            'qrCode'=>$request->nim,
+            'riwayatPenyakit'=>$request->riwayatPenyakit,
+            'roles_id'=>$request->roles,
+            'prodi'=>$request->prodi
+        ]);
+        return 'daftar Berhasil';
     }
 
     /**
