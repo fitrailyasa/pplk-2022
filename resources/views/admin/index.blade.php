@@ -1418,24 +1418,13 @@
                   <td>{{ $loop->iteration }}</td>
                   <td>{{ $funfact->isi }}</td>
                   <td class="manage-row">
-<<<<<<< Updated upstream
-                    <form action="" method="POST" id="editfunFact">
-                      @method('HEAD')
-                      <input type="hidden" value="{{ $funfact->id }}">
-                    </form>
+
                     <button type="submit" form="editfunFact" value="Submit">
                       <a onclick="openCMS(event, 'edit-funFact')" class="nav-link tablinks" >
                         <i class="fa-solid fa-marker"></i>
                       </a>
                     </button>
-=======
-                    <form action="" method="post">
-                      <a onclick="openCMS(event, 'edit-funFact')" class="nav-link tablinks" name="id">
-                        <i class="fa-solid fa-marker"></i>
-                                        </a>
-                    </form>
 
->>>>>>> Stashed changes
 
                     <!-- Button trigger modal -->
                     <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
