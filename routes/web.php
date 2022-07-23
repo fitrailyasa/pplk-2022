@@ -45,7 +45,8 @@ Route::post('/registrasi/create', [ClientBiodataController::class, 'store'])->na
 
 
 //ROUTE EDIT
-Route::put('/admin/editKamusgaul', [AdminController::class, 'updatefunFact'])->name('editfunFact');
+Route::put('/admin/editfunFact', [AdminController::class, 'updatefunFact'])->name('editfunFact');
+Route::get('/admin/{$funfact->id}',[AdminController::class, 'getfunFactId']);
 
 
 
