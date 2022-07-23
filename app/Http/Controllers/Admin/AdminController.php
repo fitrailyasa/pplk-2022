@@ -203,9 +203,10 @@ class AdminController extends Controller
 
     
 
-    public function updatefunFact(StoreAdminRequest $request,Funfact $funfacts){
-        DB::transaction(function () use ($funfacts, $request){
-            $funFactData = Funfact::where('id', $funfacts->id)->first();
+    public function updatefunFact(Request $request,Funfact $funfact){
+       
+
+        $funFactData = Funfact::where('id', $request->id)->first();
 
             $funFactData->update(
                 [
@@ -213,7 +214,9 @@ class AdminController extends Controller
                 ]
             );
 
-        });
+            return 'update funfact berhasil';
+
+     
     }
     
 

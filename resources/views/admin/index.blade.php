@@ -1418,10 +1418,16 @@
                   <td>{{ $loop->iteration }}</td>
                   <td>{{ $funfact->isi }}</td>
                   <td class="manage-row">
+                    <form action="" method="POST" id="editfunFact">
+                      @method('HEAD')
+                      <input type="hidden" value="{{ $funfact->id }}">
+                    </form>
+                    <button type="submit" form="editfunFact" value="Submit">
+                      <a onclick="openCMS(event, 'edit-funFact')" class="nav-link tablinks" >
+                        <i class="fa-solid fa-marker"></i>
+                      </a>
+                    </button>
 
-                    <a onclick="openCMS(event, 'edit-funFact')" class="nav-link tablinks">
-    <i class="fa-solid fa-marker"></i>
-                    </a>
                     <!-- Button trigger modal -->
                     <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                       <i class="fa-solid fa-trash-can"></i>
@@ -1945,14 +1951,14 @@
       <h4 class="card-title">Input Funfact</h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="{{ route('editfunFact',$funfacts) }}" enctype='multipart/form-data'>
-
+        <form method="POST" action="{{ route('editfunFact',$funfact) }}" enctype='multipart/form-data'>
+          @method('put')
           @csrf
-          <input name="id" value="{{ $funfacts->id }}" type="hidden">
+          <input name="id" value="{{ $funfact->id }}" type="hidden">
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Deskripsi</label>
             <div class="col-sm-9">
-              <textarea class="form-control custom-txt-area" placeholder="Deskripsi" name="isi" id="isi" value="{{ $funfacts->isi }}"  required disabled></textarea>
+              <textarea class="form-control custom-txt-area" placeholder="Deskripsi" name="isi" id="isi" value="{{ $funfact->isi }}"  >{{ $funfact->id }}</textarea>
             </div>
           </div>
           <div class="mb-3 row">
