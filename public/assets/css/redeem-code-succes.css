@@ -27,9 +27,10 @@
 }
 
 
-body, .redeem {
+body{
     background: rgb(11,10,60);
     background: linear-gradient(90deg, rgba(11,10,60,1) 0%, rgba(50,25,67,1) 100%);
+    overflow-y: hidden;
 }
 
 .title-text{
@@ -81,7 +82,7 @@ body, .redeem {
 
 }
 
-@media screen and (max-width: 700px) {
+/* @media screen and (max-width: 700px) {
     .line-indikator{
         display: block;
         width: 30%;
@@ -104,7 +105,7 @@ body, .redeem {
         text-shadow: #000000 0px 0px 5px;
     }
     .poin-card{
-        /* opacity: 0.7; */
+        opacity: 0.7;
         box-shadow: inset #ffffff11 0px 100rem 20px ;
         background: var(--bawaan-gradient-2)!important;
     }
@@ -112,4 +113,4 @@ body, .redeem {
         width: 100%;
     
     }
-}
+} */
