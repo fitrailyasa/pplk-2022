@@ -126,7 +126,7 @@
       <h4 class="card-title">Input Data User</h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="#" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('createUser') }}" enctype='multipart/form-data'>
         @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Nama User</label>
@@ -1949,23 +1949,18 @@
       <h4 class="card-title">Input Funfact</h4>
       </div>
       <div class="card-body">
-<<<<<<< Updated upstream
+
         <form method="POST" action="{{ route('editfunFact',$funfact) }}" enctype='multipart/form-data'>
           @method('put')
-=======
-        <form method="POST" action="{{ route('editfunFact') }}" enctype='multipart/form-data'>
 
->>>>>>> Stashed changes
           @csrf
           <input name="id" value="{{ $funfact->id }}" type="hidden">
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Deskripsi</label>
             <div class="col-sm-9">
-<<<<<<< Updated upstream
+
               <textarea class="form-control custom-txt-area" placeholder="Deskripsi" name="isi" id="isi" value="{{ $funfact->isi }}"  >{{ $funfact->id }}</textarea>
-=======
-              <textarea class="form-control custom-txt-area" placeholder="Deskripsi" name="isi" id="isi" value=""  >{{ $funfact->id }}</textarea>
->>>>>>> Stashed changes
+
             </div>
           </div>
           <div class="mb-3 row">

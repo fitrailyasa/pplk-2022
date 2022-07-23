@@ -147,7 +147,7 @@ class AdminController extends Controller
     }
 
 
-    public function storeUser(StoreAdminRequest $request){
+    public function storeUser(Request $request){
         User::create([
             'nama'=>$request->nama,
             'email'=>$request->email,

@@ -2,12 +2,16 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Auth\loginController;
+use App\Http\Controllers\Client\Controller;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Client\ClientUptController;
-use App\Http\Controllers\Client\ClientJurusanController;
-use App\Http\Controllers\Client\ClientBiodataController;
 use App\Http\Controllers\Client\ClientProdiController;
+use App\Http\Controllers\Client\ClientBegalinController;
+use App\Http\Controllers\Client\ClientBiodataController;
+use App\Http\Controllers\Client\ClientJurusanController;
+use App\Http\Controllers\Client\ClientKabinetController;
+use App\Http\Controllers\Client\ClientKamusgaulController;
 
 
 
@@ -63,14 +67,12 @@ Route::get('/biodata', [ClientBiodataController::class, 'index'])->name('biodata
 
 Route::get('/edit-biodata', [ClientBiodataController::class, 'indexEditBio'])->name('edit-biodata');
 
-Route::get('/beranda', [ClientBegalinController::class, 'index'])->name('begalin');
-
-Route::get('/detail-prodi', [ClientProdiController::class, 'indexDetail'])->name('detailprodi');
+Route::get('/detail-prodi', )->name('detailprodi');
 
 
-Route::get('/beranda', function () {
-    return view('client.index');                // ===> DEFAULT
-});
+
+Route::get('/beranda', [ClientBegalinController::class, 'index']); //DEFAULT
+
 Route::get('/detail-himpunan', function () {        // ===> Detail himpunan
     return view('client.ormawa.detail-himpunan');
 });
@@ -84,9 +86,6 @@ Route::get('/prodi', function () {                  // ===> prodi
     return view('client.jurusan.prodi');
 });
 
-Route::get('/biodata', function () {                // ===> biodata
-    return view('client.biodata.biodata');
-});
 Route::get('/edit-biodata', function () {          // ===> edit biodata
     return view('client.biodata.edit-biodata');
 });
