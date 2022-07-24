@@ -28,20 +28,17 @@
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  display: block;
+  background-image: url(../background-2.png);
+  background-size: cover;
+  background-position: 50% 5%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  box-shadow: inset rgba(41, 1, 53, 0.66) 0px 1000rem 100px;
+  width: 100%;
   font-family: var(--font-family-body) !important;
   overflow-x: hidden;
-  background: var(--bawaan-gradient-3);
-  background: var(--gradient-3);
 }
 
-/*Navbar CSS*/
-.background-gradient {
-  background: var(--bawaan-gradient-1);
-  background: var(--gradient-1);
-}
 
 .navbar-brand .pplk_logo {
   width: 3.8rem;
@@ -363,28 +360,28 @@ body {
 
 /* background tebak bangunan */
 .bg-tb {
-  background: url(../assets/pplk1.png), linear-gradient(90deg, #0b0a3c 1.56%, #321943 100%);
+  /* background: linear-gradient(90deg, #0b0a3c 1.56%, #321943 100%); */
   background-repeat: no-repeat, no-repeat;
   background-size: contain, cover;
   background-position: center top, center;
 }
 
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
   .bg-tb {
-    background: url(../assets/pplk1.png), linear-gradient(90deg, #0b0a3c 1.56%, #321943 100%);
+    background: url(../pplk1.png), linear-gradient(90deg, #0b0a3c 1.56%, #321943 100%);
     background-repeat: no-repeat, no-repeat;
     background-size: 1280px, cover;
     background-position: center top, center;
   }
 }
-
+ */
 /* back button */
-.navbar-bb {
+/* .navbar-bb {
   width: 36px;
   height: 36px;
   background: linear-gradient(90deg, rgba(240, 65, 255, 0.765) 0%, rgba(130, 165, 234, 0.85) 100%);
 }
-
+ */
 .judul-tb {
   font-family: "Lemon", cursive;
 }

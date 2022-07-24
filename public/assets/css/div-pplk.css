@@ -252,17 +252,19 @@
 /*Content Page CSS*/
 
 body{
-    margin: 0;
-    padding: 0;
-    display: block;
     font-family: var(--font-family-body) !important;
     overflow-x: hidden;
     background: url(../background.png) !important;
     background-position: center;
     background-size: cover;
+    background-size: cover;
+    background-position: 50% 5%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-size: 10rem;
     font-family: var(--font-family-body);
     color: var(--font-color-secondary);
+    overflow-x: hidden;
 }
 
 .Div-PPLK {
