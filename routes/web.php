@@ -48,11 +48,23 @@ Route::post('/admin/Kamusgaul', [AdminController::class, 'storeKamusgaul'])->nam
 
 
 //ROUTE EDIT
-Route::put('/admin/editfunFact', [AdminController::class, 'updatefunFact'])->name('editfunFact');
-Route::get('/admin/{$funfact->id}',[AdminController::class, 'getfunFactId']);
+//Edit Funfact
+Route::put('/admin/editfunFact', [AdminController::class, 'updatefunFact'])->name('editFunfact');
+Route::get('/admin/updatefunFact/{id}',[AdminController::class,'getfunFactId'])->name('viewEditFunfact');
+//Edit Begalin
+Route::put('/admin/editbegalin', [AdminController::class, 'updateBegalin'])->name('editBegalin');
+Route::get('/admin/updatebegalin/{id}',[AdminController::class,'getBegalinId'])->name('viewEditBegalin');
+//Edit UPT
+Route::put('/admin/editupt', [AdminController::class, 'updateUpt'])->name('editUpt');
+Route::get('/admin/updateupt/{id}',[AdminController::class,'getUptId'])->name('viewEditUpt');
+//Edit Himpunan
+Route::put('/admin/edithimpunan', [AdminController::class, 'updateHimpunan'])->name('editHimpunan');
+Route::get('/admin/updatehimpunan/{id}',[AdminController::class,'getHimpunanId'])->name('viewEditHimpunan');
 
 
-
+//Update UKM
+Route::put('/admin/editukm', [AdminController::class, 'updateUkm'])->name('editUkm');
+Route::get('/admin/updateukm/{id}',[AdminController::class,'getUkmId'])->name('viewEditUkm');
 
 
 Route::get('/upt', [ClientUptController::class, 'index'])->name('upt'); //===> upt
