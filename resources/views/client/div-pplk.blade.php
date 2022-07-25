@@ -118,15 +118,14 @@
                     </div>
                 </div>
               </div>
-              <a href="https://instagram.com/khalilfaza._" id="yang-ganti-mandul easter-egg1" class="text-decoration-none">
               <div class="card rounded-5  m-5">
+                <a href="https://instagram.com/khalilfaza._" id="yang-ganti-mandul easter-egg1" class="text-decoration-none">
                 <div class="d-flex justify-content-center box">
-                    <div class="ratio ratio-1x1 box-img";>
+                    <div class="ratio ratio-1x1 box-img">
                         <img src="{{ asset('assets/logodevisi/ardhames.png') }}" class="card-img p-2" alt="ardhames">
                     </div>
-                </div>
-              </div></a>
-
+                </div></a>
+              </div>
               <div class="card rounded-5  m-5">
                 <div class="d-flex justify-content-center box">
                     <div class="ratio ratio-1x1 box-img";>
