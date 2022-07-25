@@ -254,10 +254,9 @@
 body{
     font-family: var(--font-family-body) !important;
     overflow-x: hidden;
-    background: url(../background.png) !important;
+    background: url(../background-2.png) !important;
     background-position: center;
-    background-size: cover;
-    background-size: cover;
+    background-size: cover !important;
     background-position: 50% 5%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -265,6 +264,7 @@ body{
     font-family: var(--font-family-body);
     color: var(--font-color-secondary);
     overflow-x: hidden;
+    display: block;
 }
 
 .Div-PPLK {
@@ -279,10 +279,13 @@ body{
 }
 
 .card{
-    background-color: rgba(255, 255, 255, 0.212)!important;
+    background-color: rgba(255, 255, 255, 0.5)!important;
     border-color: #ffffff6c!important;
     box-shadow: #ffffff6c 0px 20px 60px!important;
     color: #000000;
+}
+.card:nth-child(even){
+    background-color: rgba(255, 255, 255, 0.225)!important;
 }
 
 .box{
@@ -407,6 +410,12 @@ body{
 @media screen and (max-width:280px) {
     .box{
         width: 10rem;
+    }
+
+}
+@media screen and (max-width:900px) {
+    #terakhir{
+        padding-bottom: 90px;
     }
 
 }

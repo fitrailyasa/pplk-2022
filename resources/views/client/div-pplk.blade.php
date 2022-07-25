@@ -23,7 +23,7 @@
     <div class = "container">
         <h2><strong>DIVISI PPLK 2022</strong></h2>
     </div>
-    <section class="container-xxl list-card">
+    <section class="container-xxl list-card" id ="terakhir">
         <div class="d-flex justify-content-center flex-wrap">
             <div class="card rounded-5  m-5">
                 <div class="d-flex justify-content-center box">
