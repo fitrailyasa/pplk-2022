@@ -58,7 +58,7 @@
                     <p>HELLO, <span class="nama">MANG UDUT</span></p>
                 </div>
                 <div class="text-qoute">
-                    <p>Ayo Menjelajah, Seklarang </p>
+                    <p>Ayo Menjelajah, Sekarang!</p>
                 </div>
             </div>
 
