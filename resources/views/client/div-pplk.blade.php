@@ -6,7 +6,6 @@
 @section('style')
     <!-- STYLES -->
     <link rel="stylesheet" href="{{ asset('assets/css/div-pplk.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap-pplk.css') }}">
     <!-- b5 -->
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"

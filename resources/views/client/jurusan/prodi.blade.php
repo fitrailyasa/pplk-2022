@@ -19,7 +19,9 @@
 @section('content')
     <!-- CONTENT -->
     <!-- Landing Page -->
-    <div id="landingPageJurusan" class="ratio ratio-16x9"></div>
+    <div id="landingPageJurusan" class="ratio ratio-16x9">
+        
+    </div>
 
     <!-- nav&tabs -->
     <!-- pills -->

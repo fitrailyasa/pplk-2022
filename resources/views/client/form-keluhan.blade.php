@@ -13,7 +13,6 @@
 
 @section('content')
     <!-- CONTENT -->
-    <p>
       <div>
       <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScI0EE9pdqGDDqWtfM0WyQKXR7KQJUbV-oX956iEN7hn8WUwA/formResponse">
     
@@ -71,8 +70,6 @@
       </div>
     </div>
     </div>
-  </div>
-    </p>
 @endsection
 
 @section('script')
