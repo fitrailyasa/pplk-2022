@@ -25,13 +25,15 @@
     </div>
     <section class="container-xxl list-card" id ="terakhir">
         <div class="d-flex justify-content-center flex-wrap">
+
             <div class="card rounded-5  m-5">
                 <div class="d-flex justify-content-center box">
                     <div class="ratio ratio-1x1 box-img";>
-                        <img src="{{ asset('assets/logodevisi/ardhames.png') }}" class="card-img p-2 justify-content-center" alt="...">
+                        <img src="{{ asset('assets/logodevisi/ardhames.png') }}"class="card-img p-2 justify-content-center" alt="...">
                     </div>
                 </div>
               </div>
+
             <div class="card rounded-5  m-5">
                 <div class="d-flex justify-content-center box">
                     <div class="ratio ratio-1x1 box-img";>
