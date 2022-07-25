@@ -5,14 +5,7 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     box-shadow: inset rgba(41, 1, 53, 0.66) 0px 1000rem 100px;
-    width: 100%;;
-    margin: 0;
-    padding: 0;
-    display: block;
     font-family: var(--font-family-body) !important;
-    overflow-x: hidden;
-    background: var(--bawaan-gradient-3);
-    background: var(--gradient-3);
 }
 
 /*Navbar CSS*/
