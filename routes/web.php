@@ -8,6 +8,8 @@ use App\Http\Controllers\Client\ClientUptController;
 use App\Http\Controllers\Client\ClientJurusanController;
 use App\Http\Controllers\Client\ClientBiodataController;
 use App\Http\Controllers\Client\ClientProdiController;
+use App\Http\Controllers\Client\ClientKamusgaulController;
+
 
 
 
