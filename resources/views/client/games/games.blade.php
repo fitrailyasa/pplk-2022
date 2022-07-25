@@ -70,7 +70,7 @@
                 <div class="top-3-winner row row-cols-3 pb-4">
                     <div class="winner-2 winner">
                         <div class="profile-winner">
-                            <img src="../assets/user-profile.jpg" alt="profile-img" />
+                            <img src="{{ asset('assets/user-profile.jpg') }}" alt="profile-img" />
                             <div class="winner-patch">
                                 <h1 class="winner-text">
                                     2
@@ -95,9 +95,9 @@
                         <div class="profile-winner">
                             <div class="crown">
                                 <!--<a href='https://pngtree.com/so/big'>big png from pngtree.com/</a>-->
-                                <img src="../assets/Golden Crown.png" alt="crown" class="crown-img"/>
+                                <img src="{{ asset('assets/Golden Crown.png') }}" alt="crown" class="crown-img"/>
                             </div>
-                            <img src="../assets/user-profile.jpg" alt="profile-img" />
+                            <img src="{{ asset('assets/user-profile.jpg') }}" alt="profile-img" />
                             <div class="winner-patch">
                                 <h1 class="winner-text">
                                     1
@@ -120,7 +120,7 @@
 
                     <div class="winner-3 winner">
                         <div class="profile-winner">
-                            <img src="../assets/user-profile.jpg" alt="profile-img" />
+                            <img src="{{ asset('assets/user-profile.jpg') }}" alt="profile-img" />
                             <div class="winner-patch">
                                 <h1 class="winner-text">
                                     3

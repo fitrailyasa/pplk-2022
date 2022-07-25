@@ -49,7 +49,7 @@ class AdminController extends Controller
         $roles = Role::all();
         $status_kehadirans = StatusKehadiran::all();
         $ukms = Ukm::get();
-        $upts = Upt::all();     
+        $upts = Upt::all();
         $users = User::get();
 
         return view('admin.index', compact('begalins','funfacts','himpunans','jurusans','kabinets','kamusgauls','kode_games','pplks','presensis','prodis','senats','roles','status_kehadirans','ukms','upts','users'));
@@ -77,7 +77,7 @@ class AdminController extends Controller
         $roles = Role::all();
         $status_kehadirans = StatusKehadiran::all();
         $ukms = Ukm::get();
-        $upts = Upt::all();     
+        $upts = Upt::all();
         $users = User::get();
 
         return view('admin.index', compact('begalins','funfacts','himpunans','jurusans','kabinets','kamusgauls','kode_games','pplks','presensis','prodis','senats','roles','status_kehadirans','ukms','upts','users'));
@@ -92,10 +92,10 @@ class AdminController extends Controller
     public function storeUkm(Request $request)
     {
 
-        
 
 
-    
+
+
         Ukm::create([
 
             'namaLengkap'=>$request->namaLengkap,
@@ -201,7 +201,7 @@ class AdminController extends Controller
 
     }
 
-    
+
 
     public function updatefunFact(Request $request,Funfact $funfact){
        
@@ -218,7 +218,7 @@ class AdminController extends Controller
 
      
     }
-    
+
 
     /**
      * Display the specified resource.
@@ -277,7 +277,7 @@ class AdminController extends Controller
             $roles = Role::where('id', $id)->first();
             $status_kehadirans = StatusKehadiran::where('id', $id)->first();
             $ukms = Ukm::where('id', $id)->first();
-            $upts = Upt::where('id', $id)->first();     
+            $upts = Upt::where('id', $id)->first();
             $users = User::where('id', $id)->first();
 
             $begalins->delete();
@@ -294,7 +294,7 @@ class AdminController extends Controller
             $roles->delete();
             $status_kehadirans->delete();
             $ukms->delete();
-            $upts->delete();     
+            $upts->delete();
             $users->delete();
 
         } catch(Exception $ex){

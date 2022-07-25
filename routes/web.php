@@ -41,6 +41,7 @@ Route::post('/admin/User', [AdminController::class, 'storeUser'])->name('createU
 Route::post('/admin/Upt', [AdminController::class, 'storeUpt'])->name('createUpt');
 Route::post('/admin/Begalin', [AdminController::class, 'storeBegalin'])->name('createBegalin');
 Route::post('/admin/Kamusgaul', [AdminController::class, 'storeKamusgaul'])->name('createKamusgaul');
+Route::post('/registrasi/create', [ClientBiodataController::class, 'store'])->name('regist_staff');
 
 
 //ROUTE EDIT

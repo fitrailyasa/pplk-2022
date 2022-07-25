@@ -25,9 +25,14 @@
     
 }
 body{
-    padding-bottom: 500px;
-    background: rgb(11,10,60);
-    background: linear-gradient(90deg, rgba(11,10,60,1) 0%, rgba(50,25,67,1) 100%);
+    background-image: url(../background-2.png);
+    background-size: cover;
+    background-position: 50% 5%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-shadow: inset rgba(41, 1, 53, 0.66) 0px 1000rem 100px;
+    width: 100%;
+    overflow-x: hidden;
 }
 .card{
     background-color: rgba(255, 255, 255, 0.212)!important;
