@@ -25,26 +25,40 @@
     </div>
     <section class="container-xxl list-card" id ="terakhir">
         <div class="d-flex justify-content-center flex-wrap">
+{{--
+            <div class=" rounded-5  m-5">
+                <div class="d-flex justify-content-center box ">
+                    <div class="ratio ratio-1x1 box-img";>
+                        <img src="{{ asset('assets/logodevisi/star.png') }}"class="card-img p-2 justify-content-center" alt="kosmos">
+                    </div>
+                </div>
+              </div> --}}
+              <div class="card rounded-5  m-5">
+                <div class="d-flex justify-content-center box">
+                    <div class="ratio ratio-1x1 box-img";>
+                        <img src="{{ asset('assets/logodevisi/kosmos.png') }}"class="card-img p-2 justify-content-center" alt="kosmos">
+                    </div>
+                </div>
+              </div>
+              {{-- <div class=" rounded-5  m-5 ">
+                <div class="d-flex justify-content-center box">
+                    <div class="ratio ratio-1x1 box-img";>
+                        <img src="{{ asset('assets/logodevisi/star.png') }}"class="card-img p-2 justify-content-center" alt="kosmos">
+                    </div>
+                </div>
+              </div> --}}
 
             <div class="card rounded-5  m-5">
                 <div class="d-flex justify-content-center box">
                     <div class="ratio ratio-1x1 box-img";>
-                        <img src="{{ asset('assets/logodevisi/ardhames.png') }}"class="card-img p-2 justify-content-center" alt="...">
-                    </div>
-                </div>
-              </div>
-
-            <div class="card rounded-5  m-5">
-                <div class="d-flex justify-content-center box">
-                    <div class="ratio ratio-1x1 box-img";>
-                        <img src="{{ asset('assets/logodevisi/eriedanus.png') }}" class="card-img p-2" alt="eriedanus">
+                        <img src="{{ asset('assets/logodevisi/cassiopeia.png') }}" class="card-img p-2" alt="cassiopeia">
                     </div>
                 </div>
               </div>
             <div class="card rounded-5  m-5">
                 <div class="d-flex justify-content-center box">
                     <div class="ratio ratio-1x1 box-img";>
-                        <img src="{{ asset('assets/logodevisi/harterous.png') }}" class="card-img p-2" alt="harterous">
+                        <img src="{{ asset('assets/logodevisi/milkyway.png') }}" class="card-img p-2" alt="milkyway">
                     </div>
                 </div>
               </div>
@@ -65,35 +79,58 @@
             <div class="card rounded-5  m-5">
                 <div class="d-flex justify-content-center box">
                     <div class="ratio ratio-1x1 box-img";>
+                        <img src="{{ asset('assets/logodevisi/kriosawala.png') }}" class="card-img p-2" alt="kriosawala">
+                    </div>
+                </div>
+              </div>
+            <div class="card rounded-5  m-5">
+                <div class="d-flex justify-content-center box">
+                    <div class="ratio ratio-1x1 box-img";>
+                        <img src="{{ asset('assets/logodevisi/phalosawala.png') }}" class="card-img p-2" alt="phalosawala">
+                    </div>
+                </div>
+              </div>
+            <div class="card rounded-5  m-5">
+                <div class="d-flex justify-content-center box">
+                    <div class="ratio ratio-1x1 box-img";>
+                        <img src="{{ asset('assets/logodevisi/arp.png') }}" class="card-img p-2" alt="arp">
+                    </div>
+                </div>
+              </div>
+            <div class="card rounded-5  m-5">
+                <div class="d-flex justify-content-center box">
+                    <div class="ratio ratio-1x1 box-img";>
                         <img src="{{ asset('assets/logodevisi/galexia.png') }}" class="card-img p-2" alt="galexia">
-                    </div>
-                </div>
-              </div>
-            <div class="card rounded-5  m-5">
-                <div class="d-flex justify-content-center box">
-                    <div class="ratio ratio-1x1 box-img";>
-                        <img src="{{ asset('assets/logodevisi/cassiopeia.png') }}" class="card-img p-2" alt="cassiopeia">
-                    </div>
-                </div>
-              </div>
-            <div class="card rounded-5  m-5">
-                <div class="d-flex justify-content-center box">
-                    <div class="ratio ratio-1x1 box-img";>
-                        <img src="{{ asset('assets/logodevisi/zenith.png') }}" class="card-img p-2" alt="zenith">
-                    </div>
-                </div>
-              </div>
-            <div class="card rounded-5  m-5">
-                <div class="d-flex justify-content-center box">
-                    <div class="ratio ratio-1x1 box-img";>
-                        <img src="{{ asset('assets/logodevisi/kosmos.png') }}" class="card-img p-2" alt="kosmos">
                     </div>
                 </div>
               </div>
               <div class="card rounded-5  m-5">
                 <div class="d-flex justify-content-center box">
                     <div class="ratio ratio-1x1 box-img";>
-                        <img src="{{ asset('assets/logodevisi/phalosawala.png') }}" class="card-img p-2" alt="phalosawala">
+                        <img src="{{ asset('assets/logodevisi/artherius.png') }}" class="card-img p-2" alt="artherius">
+                    </div>
+                </div>
+              </div>
+              <div class="card rounded-5  m-5">
+                <div class="d-flex justify-content-center box">
+                    <div class="ratio ratio-1x1 box-img";>
+                        <img src="{{ asset('assets/logodevisi/harterous.png') }}" class="card-img p-2" alt="harterous">
+                    </div>
+                </div>
+              </div>
+              <a href="https://instagram.com/khalilfaza._" id="yang-ganti-mandul easter-egg1" class="text-decoration-none">
+              <div class="card rounded-5  m-5">
+                <div class="d-flex justify-content-center box">
+                    <div class="ratio ratio-1x1 box-img";>
+                        <img src="{{ asset('assets/logodevisi/ardhames.png') }}" class="card-img p-2" alt="ardhames">
+                    </div>
+                </div>
+              </div></a>
+
+              <div class="card rounded-5  m-5">
+                <div class="d-flex justify-content-center box">
+                    <div class="ratio ratio-1x1 box-img";>
+                        <img src="{{ asset('assets/logodevisi/zenith.png') }}" class="card-img p-2" alt="zenith">
                     </div>
                 </div>
               </div>
@@ -107,32 +144,25 @@
               <div class="card rounded-5  m-5">
                 <div class="d-flex justify-content-center box">
                     <div class="ratio ratio-1x1 box-img";>
-                        <img src="{{ asset('assets/logodevisi/phoenix.png') }}" class="card-img p-2" alt="phoenix">
+                        <img src="{{ asset('assets/logodevisi/eriedanus.png') }}" class="card-img p-2" alt="eriedanus">
                     </div>
                 </div>
               </div>
-              <div class="card rounded-5  m-5">
-                <div class="d-flex justify-content-center box">
-                    <div class="ratio ratio-1x1 box-img";>
-                        <img src="{{ asset('assets/logodevisi/milkyway.png') }}" class="card-img p-2" alt="milkyway">
-                    </div>
-                </div>
-              </div>
-              <div class="card rounded-5  m-5">
+                <div class="card rounded-5  m-5">
                 <div class="d-flex justify-content-center box">
                     <div class="ratio ratio-1x1 box-img";>
                         <img src="{{ asset('assets/logodevisi/sagitarius.png') }}" class="card-img p-2" alt="sagitarius">
                     </div>
                 </div>
               </div>
+
               <div class="card rounded-5  m-5">
                 <div class="d-flex justify-content-center box">
                     <div class="ratio ratio-1x1 box-img";>
-                        <img src="{{ asset('assets/logodevisi/ARP.png') }}" class="card-img p-2" alt="ARP">
+                        <img src="{{ asset('assets/logodevisi/phoenix.png') }}" class="card-img p-2" alt="phoenix">
                     </div>
                 </div>
               </div>
-
         </div>
     </section>
 </div>
