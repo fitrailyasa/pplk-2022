@@ -67,22 +67,22 @@
 
                         <div class="row bio-input">
                             <label class="form-label" for="prodi">Program Studi</label>
-                            <input type="text" placeholder="{{ $biodata->prodis_id }}" disabled>
+                            <input type="text" placeholder="{{ $biodata->prodi }}" disabled>
                         </div>
 
                         <div class="row bio-input">
                             <label class="form-label" for="notel">Nomor Telepon</label>
-                            <input type="text" placeholder="belum dinamis" disabled>
+                            <input type="text" placeholder="{{ $biodata->nomorHp }}" disabled>
                         </div>
 
-                        <div class="row bio-input">
+                        {{-- <div class="row bio-input">
                             <label class="form-label" for="golongan darah">Alamat</label>
                             <input type="text" placeholder="blum dinamis" disabled>
-                        </div>
+                        </div> --}}
 
                         <div class="row bio-input">
                             <label class="form-label" for="golongan darah">Golongan Darah</label>
-                            <input type="text" placeholder="blum dinamis" disabled>
+                            <input type="text" placeholder="{{ $biodata->golonganDarah }}" disabled>
                         </div>
 
                         <div class="row bio-input">
@@ -92,7 +92,7 @@
 
                         <div class="row bio-input">
                             <label class="form-label" for="riwayat">Riwayat Penyakit</label>
-                            <input type="text" placeholder="belum dinamis" disabled>
+                            <input type="text" placeholder="{{ $biodata->riwayatPenyakit }}" disabled>
                         </div>
                 </form>
                 </div>

@@ -47,9 +47,10 @@ class ClientBiodataController extends Controller
         User::create([
 
             'nama'=>$request->name,
+            'golonganDarah'=>$request->golonganDarah,
             'nim'=>$request->nim,
             'email'=>$request->email,
-            'kelompok'=>$request->devisi,
+            'kelompok'=>$request->divisi,
             'instagram'=>$request->instagram,
             'nomorHp'=>$request->nohp,
             'password'=> Hash::make($request->password),

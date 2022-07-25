@@ -91,7 +91,7 @@
       <!-- Divisi -->
       <div class="row justify-content-center align-items-center">
         <div class="col mb-3 d-flex justify-content-center align-items-center">
-          <select name="devisi" class="form-select rounded input-size text-secondary" aria-label="Default select example">
+          <select name="divisi" class="form-select rounded input-size text-secondary" aria-label="Default select example">
             <option selected value="belum_isi">Divisi</option>
             <option value="Ardhames">Ardhames</option>
             <option value="Eriedanus">Eriedanus</option>
