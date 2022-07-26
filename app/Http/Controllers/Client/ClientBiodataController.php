@@ -1,10 +1,10 @@
 <?php
-
 namespace App\Http\Controllers\Client;
 
 use App\Models\User;
-use App\Http\Requests\StoreBiodataRequest;
-use App\Http\Requests\UpdateBiodataRequest;
+use Illuminate\Http\Request;
+
+use Illuminate\Support\Facades\Hash;
 
 class ClientBiodataController extends Controller
 {
@@ -15,7 +15,7 @@ class ClientBiodataController extends Controller
      */
     public function index()
     {
-        $biodata = User::where('id', '1')->firstOrFail();;
+        $biodata = User::where('id', '1')->firstOrFail();
         return view('client.biodata.biodata', compact('biodata'));
     }
 
@@ -32,18 +32,36 @@ class ClientBiodataController extends Controller
      */
     public function create()
     {
-        //
+        $users = user::all();
+        return view('registrasi.create', compact('users'));
     }
-
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreBiodataRequest  $request
+     * @param  Illuminate\Http\Request;
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreBiodataRequest $request)
+    public function store(Request $request)
     {
-        //
+
+        User::create([
+
+            'nama'=>$request->name,
+            'golonganDarah'=>$request->golonganDarah,
+            'nim'=>$request->nim,
+            'email'=>$request->email,
+            'kelompok'=>$request->divisi,
+            'instagram'=>$request->instagram,
+            'nomorHp'=>$request->nohp,
+            'password'=> Hash::make($request->password),
+            'logo'=>$request->logo,
+            'filosofiLogo'=>$request->filosofiLogo,
+            'qrCode'=>$request->nim,
+            'riwayatPenyakit'=>$request->riwayatPenyakit,
+            'roles_id'=>$request->roles,
+            'prodi'=>$request->prodi
+        ]);
+        return 'daftar Berhasil';
     }
 
     /**
@@ -71,7 +89,7 @@ class ClientBiodataController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateBiodataRequest  $request
+     * @param  Illuminate\Http\Request;  $request
      * @param  \App\Models\Biodata  $Biodata
      * @return \Illuminate\Http\Response
      */

@@ -1,14 +1,17 @@
 <?php
 
+use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Auth\loginController;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Client\ClientUptController;
-use App\Http\Controllers\Client\ClientJurusanController;
-use App\Http\Controllers\Client\ClientBiodataController;
 use App\Http\Controllers\Client\ClientProdiController;
-
+use App\Http\Controllers\Client\ClientBegalinController;
+use App\Http\Controllers\Client\ClientBiodataController;
+use App\Http\Controllers\Client\ClientJurusanController;
+use App\Http\Controllers\Client\ClientKabinetController;
+use App\Http\Controllers\Client\ClientKamusgaulController;
 
 
 
@@ -41,15 +44,12 @@ Route::post('/admin/User', [AdminController::class, 'storeUser'])->name('createU
 Route::post('/admin/Upt', [AdminController::class, 'storeUpt'])->name('createUpt');
 Route::post('/admin/Begalin', [AdminController::class, 'storeBegalin'])->name('createBegalin');
 Route::post('/admin/Kamusgaul', [AdminController::class, 'storeKamusgaul'])->name('createKamusgaul');
+Route::post('/registrasi/create', [ClientBiodataController::class, 'store'])->name('regist_staff');
 
 
 //ROUTE EDIT
 Route::put('/admin/editfunFact', [AdminController::class, 'updatefunFact'])->name('editfunFact');
 Route::get('/admin/{$funfact->id}',[AdminController::class, 'getfunFactId']);
-
-
-
-
 
 Route::get('/upt', [ClientUptController::class, 'index'])->name('upt'); //===> upt
 
@@ -67,10 +67,6 @@ Route::get('/beranda', [ClientBegalinController::class, 'index'])->name('begalin
 
 Route::get('/detail-prodi', [ClientProdiController::class, 'indexDetail'])->name('detailprodi');
 
-
-Route::get('/beranda', function () {
-    return view('client.index');                // ===> DEFAULT
-});
 Route::get('/detail-himpunan', function () {        // ===> Detail himpunan
     return view('client.ormawa.detail-himpunan');
 });
@@ -82,13 +78,6 @@ Route::get('/himpunan', function () {               // ===> himpunan
 });
 Route::get('/prodi', function () {                  // ===> prodi
     return view('client.jurusan.prodi');
-});
-
-Route::get('/biodata', function () {                // ===> biodata
-    return view('client.biodata.biodata');
-});
-Route::get('/edit-biodata', function () {          // ===> edit biodata
-    return view('client.biodata.edit-biodata');
 });
 Route::get('/booklet', function () {              // ===> booklet
     return view('client.booklet');
@@ -114,7 +103,6 @@ Route::get('/redeem-failed', function () {        // ===> redeem code failed
 Route::get('/redeem', function () {               // ===> redeem page
     return view('client.games.redeem-code.redeem');
 });
-
 Route::get('/redeem-success', function () {       // ===> redeem code success
     return view('client.games.redeem-code.success');
 });
@@ -133,7 +121,6 @@ Route::get('/login', function () {  // ===> Login
 Route::get('/registrasi', function () {  // ===> Registrasi
     return view('registrasi');
 });
-
 Route::get('/senat', function () {  // ===> Registrasi
     return view('client.senat');
 });
