@@ -9,68 +9,108 @@
 
     <!--Dashboard-->
     <div class="col-xl-12 col-lg-12 form-wrapper tabcontents" id="dashboard" >
-        <div class="row">
-        <div class="col-xl-6">
-            <div class="widget-stat card bg-success">
-                <div class="card-body p-4">
-                    <div class="media">
-                        <span class="me-3">
-                            <i class="ti ti-user"></i>
-                        </span>
-                        <div class="media-body text-white text-end">
-                            <p class="mb-1">Total Mahasiswa</p>
-                            <h3 class="text-white">1000</h3>
-                </div>
+      <div class="row">
+        <div class="col-md">
+          <div class="widget-stat card" style="background: #FF6565;">
+            <div class="card-body p-4">
+              <div class="media">
+              <div class="media-body text-white text-end">
+                <p class="mb-1">Total Mahasiswa</p>
+                <h3 class="text-white">5451</h3>
+              </div>
             </div>
-                    </div>
-                </div>
-                                </div>
-        <div class="col-xl-6">
-            <div class="widget-stat card bg-warning">
-                <div class="card-body p-4">
-                    <div class="media">
-                        <span class="me-3">
-                            <i class="ti ti-gift"></i>
-                        </span>
-                        <div class="media-body text-white text-end">
-                            <p class="mb-1">Total Staff</p>
-                            <h3 class="text-white">0</h3>
-                            </div>
-                        </div>
-                                </div>
-                            </div>
-                        </div>
-        <div class="col-xl-6">
-            <div class="widget-stat card bg-info">
-                <div class="card-body p-4">
-                    <div class="media">
-                        <span class="me-3">
-                            <i class="ti ti-files"></i>
-                        </span>
-                        <div class="media-body text-white text-end">
-                            <p class="mb-1">Total aja</p>
-                            <h3 class="text-white">0</h3>
-                                </div>
-                            </div>
-                        </div>
-                                </div>
-                            </div>
-        <div class="col-xl-6">
-            <div class="widget-stat card bg-primary">
-                <div class="card-body p-4">
-                    <div class="media">
-                        <span class="me-3">
-                            <i class="ti ti-shopping-cart-full"></i>
-                        </span>
-                        <div class="media-body text-white text-end">
-                            <p class="mb-1">Total aja lagi</p>
-                            <h3 class="text-white">0</h3>
-                        </div>
-                    </div>
-                </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="widget-stat card" style="background: #58ED67;">
+          <div class="card-body p-4">
+            <div class="media">
+              <div class="media-body text-white text-end">
+                <p class="mb-1">Total Panitia</p>
+                <h3 class="text-white">984</h3>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
+      <div class="col-md">
+        <div class="widget-stat card" style="background: #FF659C;">
+          <div class="card-body p-4">
+            <div class="media">
+              <div class="media-body text-white text-end">
+                <p class="mb-1">Total Himpunan</p>
+                <h3 class="text-white">36</h3>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+     </div>
+      <div class="row">
+        <div class="col-md">
+          <div class="widget-stat card" style="background: #9665FF;">
+            <div class="card-body p-4">
+              <div class="media">
+                <div class="media-body text-white text-end">
+                  <p class="mb-1">Total UKM/Komunitas</p>
+                  <h3 class="text-white">44</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="widget-stat card" style="background: #6590FF;">
+            <div class="card-body p-4">
+              <div class="media">
+                <div class="media-body text-white text-end">
+                  <p class="mb-1">Total Dapmen</p>
+                  <h3 class="text-white">383</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="widget-stat card" style="background: #61DAEB;">
+            <div class="card-body p-4">
+              <div class="media">
+                <div class="media-body text-white text-end">
+                  <p class="mb-1">Total Akun</p>
+                  <h3 class="text-white">6703</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md">
+          <div class="widget-stat card" style="background: #FFA73F;">
+            <div class="card-body p-4">
+              <div class="media">
+                <div class="media-body text-white text-end">
+                  <p class="mb-1">Total Kehadiran Maba</p>
+                  <h3 class="text-white">5423</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="widget-stat card" style="background: #F458F8;">
+            <div class="card-body p-4">
+              <div class="media">
+                <div class="media-body text-white text-end">
+                  <p class="mb-1">Total Kehadiran Panitia</p>
+                  <h3 class="text-white">922</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!--./Dashboard-->
 
@@ -91,7 +131,7 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Nama User</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Nama Lengkap" name="namauser" id="namauser" required>
+              <input type="text" class="form-control" placeholder="Nama Lengkap" name="nama" id="nama" required>
             </div>
           </div>
           <div class="mb-3 row">
@@ -115,7 +155,7 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Program Studi</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" name="prodi" id="prodi"  >
+              <input type="text" class="form-control" name="prodis_id" id="prodi"  >
             </div>
           </div>
           <div class="mb-3 row">
@@ -127,7 +167,7 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Golongan Darah</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Golongan Darah" name="golongandarah" id="golongandarah" >
+              <input type="text" class="form-control" placeholder="Golongan Darah" name="golonganDarah" id="golongandarah" >
             </div>
           </div>
           <div class="mb-3 row">
@@ -139,8 +179,25 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Riwayat Penyakit</label>
             <div class="col-sm-9">
-              <textarea class="form-control custom-txt-area penyakit" placeholder="Riwayat Penyakit" name="riwayat" id="riwayat"  ></textarea>
+              <textarea class="form-control custom-txt-area penyakit" placeholder="Riwayat Penyakit" name="riwayatPenyakit" id="riwayat"  ></textarea>
             </div>
+          </div>
+          <div class="mb-3 row">
+    
+            <label class="col-sm-3 col-form-label">Roles ID</label>
+              <div class="col-sm-9">
+              <select style="width:100px;">
+                <option selected class="selected" value="1" name="roles_id">Super Admin</option>
+                <option value="2">Admin</option>
+                <option value="3">Himpunan</option>
+                <option value="4">Ukm</option>
+                <option value="5">Kedisiplinan</option>
+                <option value="6">DapMen</option>
+                <option value="7">Staff</option>
+                <option value="8">Maba</option>
+              </select>
+            </div> 
+        
           </div>
           <div class="mb-3 row">
             <div class="col-sm-9">
@@ -160,12 +217,14 @@
       <h4 class="card-title">Input Data UPT ITERA</h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="#" enctype='multipart/form-data'>
+
+        <form method="POST" action="{{ route('createUpt') }}" enctype='multipart/form-data'>
+
         @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Nama UPT</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Nama UPT ITERA" name="namaupt" id="namaupt" required>
+              <input type="text" class="form-control" placeholder="Nama UPT ITERA" name="nama" id="nama" >
             </div>
           </div>
           <div class="mb-3 row">
@@ -280,7 +339,9 @@
       <h4 class="card-title">Input Data Himpunan</h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="#" enctype='multipart/form-data'>
+
+        <form method="POST" action="{{ route('createHimpunan') }}" enctype='multipart/form-data'>
+
         @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Nama Lengkap</label>
@@ -366,7 +427,8 @@
       <h4 class="card-title">Input Data UKM/Komunitas</h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="#" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('createUkm') }}" enctype='multipart/form-data'>
+
           @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Nama Lengkap</label>
@@ -383,31 +445,31 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Visi</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Nama Pembina" name="visi" id="visi" required>
+              <input type="text" class="form-control" placeholder="Nama Pembina" name="visi" id="visi" >
             </div>
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Misi</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Nama Pembina" name="misi" id="misi" required>
+              <input type="text" class="form-control" placeholder="Nama Pembina" name="misi" id="misi" >
             </div>
           </div>    
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Pembina</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Nama Pembina" name="pembina" id="namapembina" required>
+              <input type="text" class="form-control" placeholder="Nama Pembina" name="pembina" id="pembina" >
             </div>
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Ketua Umum</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Ketua Umum" name="ketuaUmum" id="ketuaumum" required>
+              <input type="text" class="form-control" placeholder="Ketua Umum" name="ketuaUmum" id="ketuaUmum" >
             </div>
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Dies Natalis</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Dies Natalis" name="tahunBerdiri" id="diesnatalis" >
+              <input type="text" class="form-control" placeholder="Dies Natalis" name="tahunBerdiri" id="tahunBerdiri" >
             </div>
           </div>
           <div class="mb-3 row">
@@ -425,13 +487,13 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">QR-Code</label>
             <div class="col-sm-9 ">
-              <input type="text" class="form-control" placeholder="Input https://linktr.ee" name="qrCode" id="qrcode" >
+              <input type="text" class="form-control" placeholder="Input https://linktr.ee" name="qrCode" id="qrCode" >
             </div>
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Deskripsi</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Nama Pembina" name="deskripsi" id="deskripsi" required>
+              <input type="text" class="form-control" placeholder="Nama Pembina" name="deskripsi" id="deskripsi" >
             </div>
           </div> 
           <div class="mb-3 row">
@@ -470,12 +532,13 @@
       <h4 class="card-title">Input Funfact</h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="#" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('createfunFact') }}" enctype='multipart/form-data'>
+
         @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Deskripsi</label>
             <div class="col-sm-9">
-              <textarea class="form-control custom-txt-area" placeholder="Deskripsi" name="isi" id="" required></textarea>
+              <textarea class="form-control custom-txt-area" placeholder="Deskripsi" name="isi" id="isi" ></textarea>
             </div>
           </div>
           <div class="mb-3 row">
@@ -496,7 +559,7 @@
       <h4 class="card-title">Input Data Begalin</h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="#" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('createBegalin') }}" enctype='multipart/form-data'>
         @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Artikel Singkat</label>
@@ -528,18 +591,24 @@
       <h4 class="card-title">Input Data Kamus Gaul</h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="#" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('createKamusgaul') }}" enctype='multipart/form-data'>
         @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Kamus Gaul</label>
             <div class="col-sm-9">
-              <textarea class="form-control custom-txt-area" placeholder="Kamus Gaul" name="kamus" id="kamus" required></textarea>
+              <textarea class="form-control custom-txt-area" placeholder="Kamus Gaul" name="gaul" id="kamus" required></textarea>
             </div>
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Arti Kamus</label>
             <div class="col-sm-9">
-              <textarea class="form-control custom-txt-area" placeholder="Arti Kamus" name="arti-kamus" id="arti-kamus" required></textarea>
+              <textarea class="form-control custom-txt-area" placeholder="Arti Kamus" name="asli" id="arti-kamus" required></textarea>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Contoh Penggunaan</label>
+            <div class="col-sm-9">
+              <textarea class="form-control custom-txt-area" placeholder="Arti Kamus" name="contohPenggunaan" id="arti-kamus" required></textarea>
             </div>
           </div>
           <div class="mb-3 row">
@@ -669,111 +738,31 @@
 <!--READ & DELETE DATA-->
 
 <section>
-    <!--Tabel User-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-user">
-      <div class="card">
-        <div class="card-header">
-          <h4 class="card-title">User</h4>
-        </div>
-        <div class="card-body">
-          @if (session('sukses'))
-          <div class="alert alert-success">
-            {{ session('sukses') }}
-          </div>
-          @elseif (session('error'))
-          <div class="alert alert-danger">
-            {{ session('error') }}
-          </div>
-          @endif
-          <div class="table-responsive">
-            <table id="example4" class="display" style="min-width: 845px">
-              <thead>
-                <tr>
-                  <th>No</th>
-                  <th>Nama</th>
-                  <th>Email</th>
-                  <th>NIM</th>
-                  <th>Kelompok</th>
-                  <th>instagram</th>
-                  <th>Qr code</th>
-                  <th>Prodi</th>
-                  <th>Role</th>
-                  <th>More</th>
-                </tr>
-              </thead>
-              @foreach ($users as $user)
-              <tbody>
-
-                <tr>
-                  <td>{{ $loop->iteration }}</td>
-                  <td>{{ $user->nama }}</td>
-                  <td>{{ $user->email }}</td>
-                  <td>{{ $user->nim }}</td>
-                  <td>{{ $user->kelompok }}</td>
-                  <td>{{ $user->instagram }}</td>
-                  <td>qrcode.img</td>
-                  <td>{{ $user->prodis_id }}</td>
-                  <td>{{ $user->roles_id }}</td>
-
-                  <td class="manage-row">
-                    <a href=" #" class="edit-button">
-                      <i class="fa-solid fa-marker"></i>
-                    </a>
-                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm  ">
-                      <i class="fa-solid fa-trash-can"></i>
-                    </a>
-                    <div class="modal fade bd-example-modal-sm  " tabindex="-1" role="dialog" aria-hidden="true">
-                      <div class="modal-dialog modal-sm">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title"><strong>Hapus Data</strong></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal">
-                            </button>
-                          </div>
-                          <div class="modal-body">Apakah anda yakin ingin menghapus data?</div>
-                          <div class="modal-footer">
-                            <form action="{{ url('/admin' . '/' .$user->id) }}" method="POST">
-                              @method('DELETE')
-                              @csrf
-                              <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
-                              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-
-              </tbody>
-              @endforeach
-              {{-- link paginate --}}
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--./Tabel User-->
+   
 
     <!--Tabel QR-Code Panitia-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="QR-Code-panitia">
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="overflow-x:hidden; display: none;" id="QR-Code-panitia">
       <div class="card">
-        <div class="card-header">
-          <h4 class="card-title">Kelola QR-Code Panitia</h4>
+      <div class="card-header">
+        <h4 class="card-title">@yield('title')</h4>
+      </div>
+      <div class="card-body">
+        @if (session('sukses'))
+        <div class="alert alert-success">
+          {{ session('sukses') }}
         </div>
-        <div class="card-body">
-          @if (session('sukses'))
-          <div class="alert alert-success">
-            {{ session('sukses') }}
+        @elseif (session('error'))
+        <div class="alert alert-danger">
+          {{ session('error') }}
+        </div>
+        @endif
+        <div class="container" ng-app="formvalid">
+          <div class="panel" data-ng-controller="validationCtrl">
+          <div class="panel-heading border">    
           </div>
-          @elseif (session('error'))
-          <div class="alert alert-danger">
-            {{ session('error') }}
-          </div>
-          @endif
-          <div class="table-responsive">
-            <table id="example4" class="display" style="min-width: 845px">
-              <thead>
+        <div class="panel-body">
+        <table class="table-responsive table table-bordered bordered table-striped table-condensed datatable dataTable no-footer" ui-jq="dataTable" ui-options="dataTableOpt" id="DataTables_Table_1" aria-describedby="DataTables_Table_1_info">
+          <thead>
                 <tr>
                   <th>No</th>
                   <th>Nama</th>
@@ -792,27 +781,28 @@
                   <td>Ardhames</td>
                   <td>aw231e#$mawdjmji@#!mawdawf</td>
                   <td class="manage-row">
-                    <a href=" #" class="edit-button">
+                    <a href="" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
-                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm  ">
+                    <!-- Button trigger modal -->
+                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                       <i class="fa-solid fa-trash-can"></i>
                     </a>
-                    <div class="modal fade bd-example-modal-sm  " tabindex="-1" role="dialog" aria-hidden="true">
-                      <div class="modal-dialog modal-sm">
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                      <div class="modal-dialog">
                         <div class="modal-content">
                           <div class="modal-header">
-                            <h5 class="modal-title"><strong>Hapus Data</strong></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal">
-                            </button>
+                            <h5 class="modal-title" id="staticBackdropLabel"><strong>Hapus Data</strong></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
-                          <div class="modal-body">Apakah anda yakin ingin menghapus data?</div>
+                          <div class="modal-body">
+                            Anda yakin menghapus data?
+                          </div>
                           <div class="modal-footer">
-                            <form action="#" method="POST">
-                              @method('DELETE')
-                              @csrf
-                              <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
-                              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
+                            <form action="" method="POST">
+                                <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
                             </form>
                           </div>
                         </div>
@@ -820,109 +810,39 @@
                     </div>
                   </td>
                 </tr>
-
               </tbody>
               {{-- link paginate --}}
-            </table>
-          </div>
+          </table>
+        </div>
         </div>
       </div>
-    </div>
-    <!--./Tabel QR-Code Panitia-->
-
-    <!--Tabel QR-Code Maba-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="QR-Code-maba">
-      <div class="card">
-        <div class="card-header">
-          <h4 class="card-title">Kelola Data QR-Code Maba</h4>
-        </div>
-        <div class="card-body">
-          @if (session('sukses'))
-          <div class="alert alert-success">
-            {{ session('sukses') }}
-          </div>
-          @elseif (session('error'))
-          <div class="alert alert-danger">
-            {{ session('error') }}
-          </div>
-          @endif
-          <div class="table-responsive">
-            <table id="example4" class="display" style="min-width: 845px">
-              <thead>
-                <tr>
-                  <th>No</th>
-                  <th>Nama</th>
-                  <th>NIM</th>
-                  <th>Kelompok</th>
-                  <th>QR-Code</th>
-                  <th>More</th>
-                </tr>
-              </thead>
-              <tbody>
-
-                <tr>
-                  <td>1</td>
-                  <td>Adi Sulaksono</td>
-                  <td>120140038</td>
-                  <td>13</td>
-                  <td>aw231e#$mawdjmji@#!mawdawf</td>
-                  <td class="manage-row">
-                    <a href=" #" class="edit-button">
-                      <i class="fa-solid fa-marker"></i>
-                    </a>
-                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm  ">
-                      <i class="fa-solid fa-trash-can"></i>
-                    </a>
-                    <div class="modal fade bd-example-modal-sm  " tabindex="-1" role="dialog" aria-hidden="true">
-                      <div class="modal-dialog modal-sm">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title"><strong>Hapus Data</strong></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal">
-                            </button>
-                          </div>
-                          <div class="modal-body">Apakah anda yakin ingin menghapus data?</div>
-                          <div class="modal-footer">
-                            <form action="#" method="POST">
-                              @method('DELETE')
-                              @csrf
-                              <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
-                              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-
-              </tbody>
-              {{-- link paginate --}}
-            </table>
-          </div>
-        </div>
       </div>
-    </div>
+      </div>
+      </div>
     <!--./Tabel QR-Code Maba-->
 
     <!--Tabel UPT ITERA-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-upt">
-      <div class="card">
-        <div class="card-header">
-          <h4 class="card-title">Kelola Data UPT ITERA</h4>
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="overflow-x:hidden; display: none;" id="kelola-upt">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">@yield('title')</h4>
+      </div>
+      <div class="card-body">
+        @if (session('sukses'))
+        <div class="alert alert-success">
+          {{ session('sukses') }}
         </div>
-        <div class="card-body">
-          @if (session('sukses'))
-          <div class="alert alert-success">
-            {{ session('sukses') }}
+        @elseif (session('error'))
+        <div class="alert alert-danger">
+          {{ session('error') }}
+        </div>
+        @endif
+        <div class="container" ng-app="formvalid">
+          <div class="panel" data-ng-controller="validationCtrl">
+          <div class="panel-heading border">    
           </div>
-          @elseif (session('error'))
-          <div class="alert alert-danger">
-            {{ session('error') }}
-          </div>
-          @endif
-          <div class="table-responsive">
-            <table id="example4" class="display" style="min-width: 845px">
+        <div class="panel-body">
+        <table class="table-responsive table table-bordered bordered table-striped table-condensed datatable dataTable no-footer" ui-jq="dataTable" ui-options="dataTableOpt" id="DataTables_Table_2" aria-describedby="DataTables_Table_2_info">
               <thead>
                 <tr>
                   <th>No</th>
@@ -930,34 +850,35 @@
                   <th>Deskripsi</th>
                 </tr>
               </thead>
-              @foreach ($upts as $upt)
               <tbody>
+                @foreach ($upts as $upt)
                 <tr>
                   <td>{{$loop->iteration}}</td>
                   <td>{{$upt->nama}}</td>
                   <td>{{$upt->deskripsi}}</td>
                   <td class="manage-row">
-                  <a onclick="openCMS(event, 'edit-upt')" class="nav-link tablinks">
+                    <a href="" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
-                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm  ">
+                    <!-- Button trigger modal -->
+                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                       <i class="fa-solid fa-trash-can"></i>
                     </a>
-                    <div class="modal fade bd-example-modal-sm  " tabindex="-1" role="dialog" aria-hidden="true">
-                      <div class="modal-dialog modal-sm">
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                      <div class="modal-dialog">
                         <div class="modal-content">
                           <div class="modal-header">
-                            <h5 class="modal-title"><strong>Hapus Data</strong></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal">
-                            </button>
+                            <h5 class="modal-title" id="staticBackdropLabel"><strong>Hapus Data</strong></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
-                          <div class="modal-body">Apakah anda yakin ingin menghapus data?</div>
+                          <div class="modal-body">
+                            Anda yakin menghapus data?
+                          </div>
                           <div class="modal-footer">
-                            <form action="#" method="POST">
-                              @method('DELETE')
-                              @csrf
-                              <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
-                              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
+                            <form action="" method="POST">
+                                <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
                             </form>
                           </div>
                         </div>
@@ -965,35 +886,40 @@
                     </div>
                   </td>
                 </tr>
-
+                @endforeach
               </tbody>
-              @endforeach
               {{-- link paginate --}}
-            </table>
-          </div>
+          </table>
+        </div>
         </div>
       </div>
+      </div>
     </div>
+  </div>
     <!--./Tabel UPT ITERA-->
 
     <!--Tabel Prodi-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-prodi">
-      <div class="card">
-        <div class="card-header">
-          <h4 class="card-title">Kelola Data Prodi</h4>
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="overflow-x:hidden; display: none;" id="kelola-prodi">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">@yield('title')</h4>
+      </div>
+      <div class="card-body">
+        @if (session('sukses'))
+        <div class="alert alert-success">
+          {{ session('sukses') }}
         </div>
-        <div class="card-body">
-          @if (session('sukses'))
-          <div class="alert alert-success">
-            {{ session('sukses') }}
+        @elseif (session('error'))
+        <div class="alert alert-danger">
+          {{ session('error') }}
+        </div>
+        @endif
+        <div class="container">
+          <div class="panel">
+          <div class="panel-heading border">    
           </div>
-          @elseif (session('error'))
-          <div class="alert alert-danger">
-            {{ session('error') }}
-          </div>
-          @endif
-          <div class="table-responsive">
-            <table id="example4" class="display" style="min-width: 845px">
+        <div class="panel-body">
+              <table class=" table-responsive table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt">
               <thead>
                 <tr>
                     <th>No</th>
@@ -1010,9 +936,8 @@
                     <th>More</th>
                 </tr>
               </thead>
-              @foreach ($prodis as $prodi)
               <tbody>
-
+                @foreach ($prodis as $prodi)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $prodi->namaLengkap }}</td>
@@ -1025,28 +950,29 @@
                     <td>{{ $prodi->tahunBerdiri }}</td>
                     <td>{{ $prodi->jumlahMahasiswa }}</td>
                     <td><img src=" #" widht="100" height="100"/></td>
-                  <td class="manage-row">
-                    <a href=" #" class="edit-button">
+                    <td class="manage-row">
+                    <a href="" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
-                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm  ">
+                    <!-- Button trigger modal -->
+                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                       <i class="fa-solid fa-trash-can"></i>
                     </a>
-                    <div class="modal fade bd-example-modal-sm  " tabindex="-1" role="dialog" aria-hidden="true">
-                      <div class="modal-dialog modal-sm">
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                      <div class="modal-dialog">
                         <div class="modal-content">
                           <div class="modal-header">
-                            <h5 class="modal-title"><strong>Hapus Data</strong></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal">
-                            </button>
+                            <h5 class="modal-title" id="staticBackdropLabel"><strong>Hapus Data</strong></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
-                          <div class="modal-body">Apakah anda yakin ingin menghapus data?</div>
+                          <div class="modal-body">
+                            Anda yakin menghapus data?
+                          </div>
                           <div class="modal-footer">
-                            <form action="#" method="POST">
-                              @method('DELETE')
-                              @csrf
-                              <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
-                              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
+                            <form action="" method="POST">
+                                <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
                             </form>
                           </div>
                         </div>
@@ -1054,35 +980,40 @@
                     </div>
                   </td>
                 </tr>
-
+                @endforeach
               </tbody>
-              @endforeach
               {{-- link paginate --}}
-            </table>
-          </div>
+          </table>
+        </div>
         </div>
       </div>
+      </div>
     </div>
+  </div>
     <!--./Tabel Prodi-->
 
     <!--Tabel Himpunan-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-himpunan">
-      <div class="card">
-        <div class="card-header">
-          <h4 class="card-title">Kelola Data Himpunan</h4>
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="overflow-x:hidden; display: none;" id="kelola-himpunan">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">@yield('title')</h4>
+      </div>
+      <div class="card-body">
+        @if (session('sukses'))
+        <div class="alert alert-success">
+          {{ session('sukses') }}
         </div>
-        <div class="card-body">
-          @if (session('sukses'))
-          <div class="alert alert-success">
-            {{ session('sukses') }}
+        @elseif (session('error'))
+        <div class="alert alert-danger">
+          {{ session('error') }}
+        </div>
+        @endif
+        <div class="container" ng-app="formvalid">
+          <div class="panel" data-ng-controller="validationCtrl">
+          <div class="panel-heading border">    
           </div>
-          @elseif (session('error'))
-          <div class="alert alert-danger">
-            {{ session('error') }}
-          </div>
-          @endif
-          <div class="table-responsive">
-            <table id="example4" class="display" style="min-width: 845px">
+        <div class="panel-body">
+              <table class=" table-responsive table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt">
               <thead>
                 <tr>
                   <th>No</th>
@@ -1101,9 +1032,8 @@
                   <th>More</th>
                 </tr>
               </thead>
-              @foreach ($himpunans as $himpunan)
               <tbody>
-
+                @foreach ($himpunans as $himpunan)
                 <tr>
                   <td>{{ $loop->iteration }}</td>
                   <td>{{ $himpunan->namaSingkat }}</td>
@@ -1119,27 +1049,28 @@
                   <td>{{ $himpunan->filosofiLogo }}</td>
                   <td>{{ $himpunan->tahunBerdiri }}</td>
                   <td class="manage-row">
-                    <a href=" #" class="edit-button">
+                    <a href="" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
-                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm  ">
+                    <!-- Button trigger modal -->
+                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                       <i class="fa-solid fa-trash-can"></i>
                     </a>
-                    <div class="modal fade bd-example-modal-sm  " tabindex="-1" role="dialog" aria-hidden="true">
-                      <div class="modal-dialog modal-sm">
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                      <div class="modal-dialog">
                         <div class="modal-content">
                           <div class="modal-header">
-                            <h5 class="modal-title"><strong>Hapus Data</strong></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal">
-                            </button>
+                            <h5 class="modal-title" id="staticBackdropLabel"><strong>Hapus Data</strong></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
-                          <div class="modal-body">Apakah anda yakin ingin menghapus data?</div>
+                          <div class="modal-body">
+                            Anda yakin menghapus data?
+                          </div>
                           <div class="modal-footer">
-                            <form action="#" method="POST">
-                              @method('DELETE')
-                              @csrf
-                              <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
-                              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
+                            <form action="" method="POST">
+                                <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
                             </form>
                           </div>
                         </div>
@@ -1147,35 +1078,40 @@
                     </div>
                   </td>
                 </tr>
-
+                @endforeach
               </tbody>
-              @endforeach
               {{-- link paginate --}}
-            </table>
-          </div>
+          </table>
+        </div>
         </div>
       </div>
+      </div>
     </div>
+  </div>
     <!--./Tabel Himpunan-->
 
     <!--Tabel Kabinet-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-kabinet">
-      <div class="card">
-        <div class="card-header">
-          <h4 class="card-title">Kelola Data Kabinet KM ITERA</h4>
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="overflow-x:hidden; display: none;" id="kelola-kabinet">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">@yield('title')</h4>
+      </div>
+      <div class="card-body">
+        @if (session('sukses'))
+        <div class="alert alert-success">
+          {{ session('sukses') }}
         </div>
-        <div class="card-body">
-          @if (session('sukses'))
-          <div class="alert alert-success">
-            {{ session('sukses') }}
+        @elseif (session('error'))
+        <div class="alert alert-danger">
+          {{ session('error') }}
+        </div>
+        @endif
+        <div class="container" ng-app="formvalid">
+          <div class="panel" data-ng-controller="validationCtrl">
+          <div class="panel-heading border">    
           </div>
-          @elseif (session('error'))
-          <div class="alert alert-danger">
-            {{ session('error') }}
-          </div>
-          @endif
-          <div class="table-responsive">
-            <table id="example4" class="display" style="min-width: 845px">
+        <div class="panel-body">
+              <table class=" table-responsive table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt">
               <thead>
                 <tr>
                   <th>No</th>
@@ -1198,9 +1134,8 @@
                   <th>More</th>
                 </tr>
               </thead>
-              @foreach ($kabinets as $kabinet)
               <tbody>
-
+                @foreach ($kabinets as $kabinet)
                 <tr>
                   <td>{{ $loop->iteration }}</td>
                   <td>{{ $kabinet->nama }}</td>
@@ -1221,27 +1156,28 @@
                   <td>Misi</td>
                   <td><img src=" #" widht="100" height="100"/></td>
                   <td class="manage-row">
-                    <a href=" #" class="edit-button">
+                    <a href="" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
-                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm  ">
+                    <!-- Button trigger modal -->
+                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                       <i class="fa-solid fa-trash-can"></i>
                     </a>
-                    <div class="modal fade bd-example-modal-sm  " tabindex="-1" role="dialog" aria-hidden="true">
-                      <div class="modal-dialog modal-sm">
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                      <div class="modal-dialog">
                         <div class="modal-content">
                           <div class="modal-header">
-                            <h5 class="modal-title"><strong>Hapus Data</strong></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal">
-                            </button>
+                            <h5 class="modal-title" id="staticBackdropLabel"><strong>Hapus Data</strong></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
-                          <div class="modal-body">Apakah anda yakin ingin menghapus data?</div>
+                          <div class="modal-body">
+                            Anda yakin menghapus data?
+                          </div>
                           <div class="modal-footer">
-                            <form action="#" method="POST">
-                              @method('DELETE')
-                              @csrf
-                              <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
-                              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
+                            <form action="" method="POST">
+                                <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
                             </form>
                           </div>
                         </div>
@@ -1249,35 +1185,40 @@
                     </div>
                   </td>
                 </tr>
-
+                @endforeach
               </tbody>
-              @endforeach
               {{-- link paginate --}}
-            </table>
-          </div>
+          </table>
+        </div>
         </div>
       </div>
+      </div>
     </div>
+  </div>
     <!--./Tabel Kabinet-->
 
     <!--Tabel Senat-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-senat">
-      <div class="card">
-        <div class="card-header">
-          <h4 class="card-title">Kelola Data Senat KM ITERA</h4>
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="overflow-x:hidden; display: none;" id="kelola-senat">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">@yield('title')</h4>
+      </div>
+      <div class="card-body">
+        @if (session('sukses'))
+        <div class="alert alert-success">
+          {{ session('sukses') }}
         </div>
-        <div class="card-body">
-          @if (session('sukses'))
-          <div class="alert alert-success">
-            {{ session('sukses') }}
+        @elseif (session('error'))
+        <div class="alert alert-danger">
+          {{ session('error') }}
+        </div>
+        @endif
+        <div class="container" ng-app="formvalid">
+          <div class="panel" data-ng-controller="validationCtrl">
+          <div class="panel-heading border">    
           </div>
-          @elseif (session('error'))
-          <div class="alert alert-danger">
-            {{ session('error') }}
-          </div>
-          @endif
-          <div class="table-responsive">
-            <table id="example4" class="display" style="min-width: 845px">
+        <div class="panel-body">
+              <table class=" table-responsive table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt">
               <thead>
                 <tr>
                   <th>No</th>
@@ -1292,9 +1233,8 @@
                   <th>More</th>
                 </tr>
               </thead>
-              @foreach ($senats as $senat)
               <tbody>
-
+                @foreach ($senats as $senat)
                 <tr>
                   <td>{{ $loop->iteration }}</td>
                   <td>{{ $senat->ketua }}</td>
@@ -1303,27 +1243,28 @@
                   <td>{{ $senat->youtube }}</td>
                   <td>{{ $senat->instagram }}</td>
                   <td class="manage-row">
-                    <a href=" #" class="edit-button">
+                    <a href="" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
-                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm  ">
+                    <!-- Button trigger modal -->
+                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                       <i class="fa-solid fa-trash-can"></i>
                     </a>
-                    <div class="modal fade bd-example-modal-sm  " tabindex="-1" role="dialog" aria-hidden="true">
-                      <div class="modal-dialog modal-sm">
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                      <div class="modal-dialog">
                         <div class="modal-content">
                           <div class="modal-header">
-                            <h5 class="modal-title"><strong>Hapus Data</strong></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal">
-                            </button>
+                            <h5 class="modal-title" id="staticBackdropLabel"><strong>Hapus Data</strong></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
-                          <div class="modal-body">Apakah anda yakin ingin menghapus data?</div>
+                          <div class="modal-body">
+                            Anda yakin menghapus data?
+                          </div>
                           <div class="modal-footer">
-                            <form action="#" method="POST">
-                              @method('DELETE')
-                              @csrf
-                              <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
-                              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
+                            <form action="" method="POST">
+                                <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
                             </form>
                           </div>
                         </div>
@@ -1331,35 +1272,40 @@
                     </div>
                   </td>
                 </tr>
-
+                @endforeach
               </tbody>
-              @endforeach
               {{-- link paginate --}}
-            </table>
-          </div>
+          </table>
+        </div>
         </div>
       </div>
+      </div>
     </div>
+  </div>
     <!--./Tabel Senat-->
 
     <!--Tabel UKM/Komunitas-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-ukm">
-      <div class="card">
-        <div class="card-header">
-          <h4 class="card-title">Kelola Data UKM/Komunitas</h4>
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="overflow-x:hidden; display: none;" id="kelola-ukm">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">@yield('title')</h4>
+      </div>
+      <div class="card-body">
+        @if (session('sukses'))
+        <div class="alert alert-success">
+          {{ session('sukses') }}
         </div>
-        <div class="card-body">
-          @if (session('sukses'))
-          <div class="alert alert-success">
-            {{ session('sukses') }}
+        @elseif (session('error'))
+        <div class="alert alert-danger">
+          {{ session('error') }}
+        </div>
+        @endif
+        <div class="container" ng-app="formvalid">
+          <div class="panel" data-ng-controller="validationCtrl">
+          <div class="panel-heading border">    
           </div>
-          @elseif (session('error'))
-          <div class="alert alert-danger">
-            {{ session('error') }}
-          </div>
-          @endif
-          <div class="table-responsive">
-            <table id="example4" class="display" style="min-width: 845px">
+        <div class="panel-body">
+              <table class=" table-responsive table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt">
               <thead>
                 <tr>
                   <th>No</th>
@@ -1379,8 +1325,8 @@
                   <th>More</th>
                 </tr>
               </thead>
-              @foreach ($ukms as $ukm)
               <tbody>
+                @foreach ($ukms as $ukm)
                 <tr>
                   <td>{{$loop->iteration}}</td>
                   <td>{{ $ukm->namaLengkap}}</td>
@@ -1397,27 +1343,28 @@
                   <td><img src=" #" widht="100" height="100"/></td>
                   <td><img src=" #" widht="100" height="100"/></td>
                   <td class="manage-row">
-                    <a href=" #" class="edit-button">
+                    <a href="" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
-                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm  ">
+                    <!-- Button trigger modal -->
+                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                       <i class="fa-solid fa-trash-can"></i>
                     </a>
-                    <div class="modal fade bd-example-modal-sm  " tabindex="-1" role="dialog" aria-hidden="true">
-                      <div class="modal-dialog modal-sm">
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                      <div class="modal-dialog">
                         <div class="modal-content">
                           <div class="modal-header">
-                            <h5 class="modal-title"><strong>Hapus Data</strong></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal">
-                            </button>
+                            <h5 class="modal-title" id="staticBackdropLabel"><strong>Hapus Data</strong></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
-                          <div class="modal-body">Apakah anda yakin ingin menghapus data?</div>
+                          <div class="modal-body">
+                            Anda yakin menghapus data?
+                          </div>
                           <div class="modal-footer">
-                            <form action="#" method="POST">
-                              @method('DELETE')
-                              @csrf
-                              <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
-                              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
+                            <form action="" method="POST">
+                                <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
                             </form>
                           </div>
                         </div>
@@ -1425,70 +1372,79 @@
                     </div>
                   </td>
                 </tr>
-
+                @endforeach
               </tbody>
-              @endforeach
               {{-- link paginate --}}
-            </table>
-
-          </div>
+          </table>
+        </div>
         </div>
       </div>
+      </div>
     </div>
+  </div>
     <!--./Tabel UKM/Komunitas-->
 
     <!--Tabel Funfact-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-funfact">
-      <div class="card">
-        <div class="card-header">
-          <h4 class="card-title">Kelola Data Funfact</h4>
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="overflow-x:hidden; display: none;" id="kelola-funfact">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">@yield('title')</h4>
+      </div>
+      <div class="card-body">
+        @if (session('sukses'))
+        <div class="alert alert-success">
+          {{ session('sukses') }}
         </div>
-        <div class="card-body">
-          @if (session('sukses'))
-          <div class="alert alert-success">
-            {{ session('sukses') }}
+        @elseif (session('error'))
+        <div class="alert alert-danger">
+          {{ session('error') }}
+        </div>
+        @endif
+        <div class="container" ng-app="formvalid">
+          <div class="panel" data-ng-controller="validationCtrl">
+          <div class="panel-heading border">    
           </div>
-          @elseif (session('error'))
-          <div class="alert alert-danger">
-            {{ session('error') }}
-          </div>
-          @endif
-          <div class="table-responsive">
-            <table id="example4" class="display" style="min-width: 845px">
+        <div class="panel-body">
+              <table class=" table-responsive table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt">
               <thead>
                 <tr>
                   <th>No</th>
                   <th>Deskripsi</th>
                 </tr>
               </thead>
-              @foreach ($funfacts as $funfact)
               <tbody>
-
+                @foreach ($funfacts as $funfact)
                 <tr>
                   <td>{{ $loop->iteration }}</td>
                   <td>{{ $funfact->isi }}</td>
                   <td class="manage-row">
-                    <a href=" #" class="edit-button">
-                      <i class="fa-solid fa-marker"></i>
-                    </a>
-                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm  ">
+
+                    <button type="submit" form="editfunFact" value="Submit">
+                      <a onclick="openCMS(event, 'edit-funFact')" class="nav-link tablinks" >
+                        <i class="fa-solid fa-marker"></i>
+                      </a>
+                    </button>
+
+
+                    <!-- Button trigger modal -->
+                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                       <i class="fa-solid fa-trash-can"></i>
                     </a>
-                    <div class="modal fade bd-example-modal-sm  " tabindex="-1" role="dialog" aria-hidden="true">
-                      <div class="modal-dialog modal-sm">
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                      <div class="modal-dialog">
                         <div class="modal-content">
                           <div class="modal-header">
-                            <h5 class="modal-title"><strong>Hapus Data</strong></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal">
-                            </button>
+                            <h5 class="modal-title" id="staticBackdropLabel"><strong>Hapus Data</strong></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
-                          <div class="modal-body">Apakah anda yakin ingin menghapus data?</div>
+                          <div class="modal-body">
+                            Anda yakin menghapus data?
+                          </div>
                           <div class="modal-footer">
-                            <form action="#" method="POST">
-                              @method('DELETE')
-                              @csrf
-                              <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
-                              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
+                            <form action="" method="POST">
+                                <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
                             </form>
                           </div>
                         </div>
@@ -1496,35 +1452,40 @@
                     </div>
                   </td>
                 </tr>
-
+                @endforeach
               </tbody>
-              @endforeach
               {{-- link paginate --}}
-            </table>
-          </div>
+          </table>
+        </div>
         </div>
       </div>
+      </div>
     </div>
+  </div>
     <!--./Tabel Funfact-->
 
     <!--Tabel Begalin-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-begalin">
-      <div class="card">
-        <div class="card-header">
-          <h4 class="card-title">Kelola Data Begalin</h4>
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="overflow-x:hidden; display: none;" id="kelola-begalin">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">@yield('title')</h4>
+      </div>
+      <div class="card-body">
+        @if (session('sukses'))
+        <div class="alert alert-success">
+          {{ session('sukses') }}
         </div>
-        <div class="card-body">
-          @if (session('sukses'))
-          <div class="alert alert-success">
-            {{ session('sukses') }}
+        @elseif (session('error'))
+        <div class="alert alert-danger">
+          {{ session('error') }}
+        </div>
+        @endif
+        <div class="container" ng-app="formvalid">
+          <div class="panel" data-ng-controller="validationCtrl">
+          <div class="panel-heading border">    
           </div>
-          @elseif (session('error'))
-          <div class="alert alert-danger">
-            {{ session('error') }}
-          </div>
-          @endif
-          <div class="table-responsive">
-            <table id="example4" class="display" style="min-width: 845px">
+        <div class="panel-body">
+              <table class=" table-responsive table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt">
               <thead>
                 <tr>
                   <th>No</th>
@@ -1532,35 +1493,35 @@
                   <th>isi</th>
                 </tr>
               </thead>
-              @foreach ($begalins as $begalin)
               <tbody>
-
+                @foreach ($begalins as $begalin)
                 <tr>
                   <td>{{ $loop->iteration }}</td>
                   <td>{{ $begalin->judul }}</td>
                   <td>{{ $begalin->isi }}</td>
                   <td class="manage-row">
-                    <a href=" #" class="edit-button">
+                    <a href="" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
-                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm  ">
+                    <!-- Button trigger modal -->
+                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                       <i class="fa-solid fa-trash-can"></i>
                     </a>
-                    <div class="modal fade bd-example-modal-sm  " tabindex="-1" role="dialog" aria-hidden="true">
-                      <div class="modal-dialog modal-sm">
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                      <div class="modal-dialog">
                         <div class="modal-content">
                           <div class="modal-header">
-                            <h5 class="modal-title"><strong>Hapus Data</strong></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal">
-                            </button>
+                            <h5 class="modal-title" id="staticBackdropLabel"><strong>Hapus Data</strong></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
-                          <div class="modal-body">Apakah anda yakin ingin menghapus data?</div>
+                          <div class="modal-body">
+                            Anda yakin menghapus data?
+                          </div>
                           <div class="modal-footer">
-                            <form action="#" method="POST">
-                              @method('DELETE')
-                              @csrf
-                              <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
-                              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
+                            <form action="" method="POST">
+                                <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
                             </form>
                           </div>
                         </div>
@@ -1568,35 +1529,40 @@
                     </div>
                   </td>
                 </tr>
-
+                @endforeach
               </tbody>
-              @endforeach
               {{-- link paginate --}}
-            </table>
-          </div>
+          </table>
+        </div>
         </div>
       </div>
+      </div>
     </div>
+  </div>
     <!--./Tabel Begalin-->
 
     <!--Tabel Kamus Gaul-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-kamus">
-      <div class="card">
-        <div class="card-header">
-          <h4 class="card-title">Kelola Data Kamus Gaul</h4>
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="overflow-x:hidden; display: none;" id="kelola-kamus">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">@yield('title')</h4>
+      </div>
+      <div class="card-body">
+        @if (session('sukses'))
+        <div class="alert alert-success">
+          {{ session('sukses') }}
         </div>
-        <div class="card-body">
-          @if (session('sukses'))
-          <div class="alert alert-success">
-            {{ session('sukses') }}
+        @elseif (session('error'))
+        <div class="alert alert-danger">
+          {{ session('error') }}
+        </div>
+        @endif
+        <div class="container" ng-app="formvalid">
+          <div class="panel" data-ng-controller="validationCtrl">
+          <div class="panel-heading border">    
           </div>
-          @elseif (session('error'))
-          <div class="alert alert-danger">
-            {{ session('error') }}
-          </div>
-          @endif
-          <div class="table-responsive">
-            <table id="example4" class="display" style="min-width: 845px">
+        <div class="panel-body">
+              <table class=" table-responsive table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt">
               <thead>
                 <tr>
                   <th>No</th>
@@ -1604,35 +1570,35 @@
                   <th>Arti Kamus</th>
                 </tr>
               </thead>
-              @foreach ($kamusgauls as $kamusgaul)
               <tbody>
-
+                @foreach ($kamusgauls as $kamusgaul)
                 <tr>
                   <td>{{ $loop->iteration }}</td>
                   <td>{{ $kamusgaul->gaul }}</td>
                   <td>{{  $kamusgaul->asli }}</td>
                   <td class="manage-row">
-                    <a href=" #" class="edit-button">
+                    <a href="" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
-                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm  ">
+                    <!-- Button trigger modal -->
+                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                       <i class="fa-solid fa-trash-can"></i>
                     </a>
-                    <div class="modal fade bd-example-modal-sm  " tabindex="-1" role="dialog" aria-hidden="true">
-                      <div class="modal-dialog modal-sm">
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                      <div class="modal-dialog">
                         <div class="modal-content">
                           <div class="modal-header">
-                            <h5 class="modal-title"><strong>Hapus Data</strong></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal">
-                            </button>
+                            <h5 class="modal-title" id="staticBackdropLabel"><strong>Hapus Data</strong></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
-                          <div class="modal-body">Apakah anda yakin ingin menghapus data?</div>
+                          <div class="modal-body">
+                            Anda yakin menghapus data?
+                          </div>
                           <div class="modal-footer">
-                            <form action="#" method="POST">
-                              @method('DELETE')
-                              @csrf
-                              <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
-                              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
+                            <form action="" method="POST">
+                                <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
                             </form>
                           </div>
                         </div>
@@ -1640,35 +1606,40 @@
                     </div>
                   </td>
                 </tr>
-
+                @endforeach
               </tbody>
-              @endforeach
               {{-- link paginate --}}
-            </table>
-          </div>
+          </table>
+        </div>
         </div>
       </div>
+      </div>
     </div>
+  </div>
     <!--./Tabel Kamus Gaul-->
 
     <!--Tabel Redeem Code-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-redeem">
-      <div class="card">
-        <div class="card-header">
-          <h4 class="card-title">Kelola Data Redeem Code</h4>
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="overflow-x:hidden; display: none;" id="kelola-redeem">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">@yield('title')</h4>
+      </div>
+      <div class="card-body">
+        @if (session('sukses'))
+        <div class="alert alert-success">
+          {{ session('sukses') }}
         </div>
-        <div class="card-body">
-          @if (session('sukses'))
-          <div class="alert alert-success">
-            {{ session('sukses') }}
+        @elseif (session('error'))
+        <div class="alert alert-danger">
+          {{ session('error') }}
+        </div>
+        @endif
+        <div class="container" ng-app="formvalid">
+          <div class="panel" data-ng-controller="validationCtrl">
+          <div class="panel-heading border">    
           </div>
-          @elseif (session('error'))
-          <div class="alert alert-danger">
-            {{ session('error') }}
-          </div>
-          @endif
-          <div class="table-responsive">
-            <table id="example4" class="display" style="min-width: 845px">
+        <div class="panel-body">
+              <table class=" table-responsive table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt">
               <thead>
                 <tr>
                   <th>No</th>
@@ -1685,27 +1656,28 @@
                   <td>haj1m0kr1</td>
                   <td>124</td>
                   <td class="manage-row">
-                    <a href=" #" class="edit-button">
+                    <a href="" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
-                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm  ">
+                    <!-- Button trigger modal -->
+                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                       <i class="fa-solid fa-trash-can"></i>
                     </a>
-                    <div class="modal fade bd-example-modal-sm  " tabindex="-1" role="dialog" aria-hidden="true">
-                      <div class="modal-dialog modal-sm">
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                      <div class="modal-dialog">
                         <div class="modal-content">
                           <div class="modal-header">
-                            <h5 class="modal-title"><strong>Hapus Data</strong></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal">
-                            </button>
+                            <h5 class="modal-title" id="staticBackdropLabel"><strong>Hapus Data</strong></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
-                          <div class="modal-body">Apakah anda yakin ingin menghapus data?</div>
+                          <div class="modal-body">
+                            Anda yakin menghapus data?
+                          </div>
                           <div class="modal-footer">
-                            <form action="#" method="POST">
-                              @method('DELETE')
-                              @csrf
-                              <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
-                              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
+                            <form action="" method="POST">
+                                <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
                             </form>
                           </div>
                         </div>
@@ -1713,34 +1685,39 @@
                     </div>
                   </td>
                 </tr>
-
               </tbody>
               {{-- link paginate --}}
-            </table>
-          </div>
+          </table>
+        </div>
         </div>
       </div>
+      </div>
     </div>
+  </div>
     <!--./Tabel Redeem Code-->
 
     <!--Tabel Tebak Bangunan-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-tebak">
-      <div class="card">
-        <div class="card-header">
-          <h4 class="card-title">Kelola Data Tebak Bangunan</h4>
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="overflow-x:hidden; display: none;" id="kelola-tebak">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">@yield('title')</h4>
+      </div>
+      <div class="card-body">
+        @if (session('sukses'))
+        <div class="alert alert-success">
+          {{ session('sukses') }}
         </div>
-        <div class="card-body">
-          @if (session('sukses'))
-          <div class="alert alert-success">
-            {{ session('sukses') }}
+        @elseif (session('error'))
+        <div class="alert alert-danger">
+          {{ session('error') }}
+        </div>
+        @endif
+        <div class="container" ng-app="formvalid">
+          <div class="panel" data-ng-controller="validationCtrl">
+          <div class="panel-heading border">    
           </div>
-          @elseif (session('error'))
-          <div class="alert alert-danger">
-            {{ session('error') }}
-          </div>
-          @endif
-          <div class="table-responsive">
-            <table id="example4" class="display" style="min-width: 845px">
+        <div class="panel-body">
+              <table class=" table-responsive table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt">
               <thead>
                 <tr>
                   <th>No</th>
@@ -1757,27 +1734,28 @@
                   <td>k1bt1f1tr4</td>
                   <td>122</td>
                   <td class="manage-row">
-                    <a href=" #" class="edit-button">
+                    <a href="" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
-                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm  ">
+                    <!-- Button trigger modal -->
+                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                       <i class="fa-solid fa-trash-can"></i>
                     </a>
-                    <div class="modal fade bd-example-modal-sm  " tabindex="-1" role="dialog" aria-hidden="true">
-                      <div class="modal-dialog modal-sm">
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                      <div class="modal-dialog">
                         <div class="modal-content">
                           <div class="modal-header">
-                            <h5 class="modal-title"><strong>Hapus Data</strong></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal">
-                            </button>
+                            <h5 class="modal-title" id="staticBackdropLabel"><strong>Hapus Data</strong></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
-                          <div class="modal-body">Apakah anda yakin ingin menghapus data?</div>
+                          <div class="modal-body">
+                            Anda yakin menghapus data?
+                          </div>
                           <div class="modal-footer">
-                            <form action="#" method="POST">
-                              @method('DELETE')
-                              @csrf
-                              <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
-                              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
+                            <form action="" method="POST">
+                                <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
                             </form>
                           </div>
                         </div>
@@ -1785,34 +1763,39 @@
                     </div>
                   </td>
                 </tr>
-
               </tbody>
               {{-- link paginate --}}
-            </table>
-          </div>
+          </table>
         </div>
-                </div>
-                    </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
     <!--./Tabel Tebak Bangunan-->
 
     <!--Tabel Link Gform-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-gform">
-      <div class="card">
-        <div class="card-header">
-          <h4 class="card-title">Kelola Data gform</h4>
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="overflow-x:hidden; display: none;" id="kelola-gform">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">@yield('title')</h4>
+      </div>
+      <div class="card-body">
+        @if (session('sukses'))
+        <div class="alert alert-success">
+          {{ session('sukses') }}
         </div>
-        <div class="card-body">
-          @if (session('sukses'))
-          <div class="alert alert-success">
-            {{ session('sukses') }}
+        @elseif (session('error'))
+        <div class="alert alert-danger">
+          {{ session('error') }}
+        </div>
+        @endif
+        <div class="container" ng-app="formvalid">
+          <div class="panel" data-ng-controller="validationCtrl">
+          <div class="panel-heading border">    
           </div>
-          @elseif (session('error'))
-          <div class="alert alert-danger">
-            {{ session('error') }}
-          </div>
-          @endif
-          <div class="table-responsive">
-            <table id="example4" class="display" style="min-width: 845px">
+        <div class="panel-body">
+              <table class=" table-responsive table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt">
               <thead>
                 <tr>
                   <th>No</th>
@@ -1825,27 +1808,28 @@
                   <td>1</td>
                   <td>https://forms.gle</td>
                   <td class="manage-row">
-                    <a href=" #" class="edit-button">
+                    <a href="" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
-                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm  ">
+                    <!-- Button trigger modal -->
+                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                       <i class="fa-solid fa-trash-can"></i>
                     </a>
-                    <div class="modal fade bd-example-modal-sm  " tabindex="-1" role="dialog" aria-hidden="true">
-                      <div class="modal-dialog modal-sm">
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                      <div class="modal-dialog">
                         <div class="modal-content">
                           <div class="modal-header">
-                            <h5 class="modal-title"><strong>Hapus Data</strong></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal">
-                            </button>
+                            <h5 class="modal-title" id="staticBackdropLabel"><strong>Hapus Data</strong></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
-                          <div class="modal-body">Apakah anda yakin ingin menghapus data?</div>
+                          <div class="modal-body">
+                            Anda yakin menghapus data?
+                          </div>
                           <div class="modal-footer">
-                            <form action="#" method="POST">
-                              @method('DELETE')
-                              @csrf
-                              <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
-                              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
+                            <form action="" method="POST">
+                                <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
                             </form>
                           </div>
                         </div>
@@ -1853,34 +1837,39 @@
                     </div>
                   </td>
                 </tr>
-
               </tbody>
               {{-- link paginate --}}
-            </table>
-          </div>
+          </table>
+        </div>
         </div>
       </div>
+      </div>
     </div>
+  </div>
     <!--./Tabel Link Gform-->
 
     <!--Tabel Booklet-->
-    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="display: none"  id="kelola-booklet">
-      <div class="card">
-        <div class="card-header">
-          <h4 class="card-title">Kelola Data Booklet</h4>
+    <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="overflow-x:hidden; display: none;" id="kelola-booklet">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">@yield('title')</h4>
+      </div>
+      <div class="card-body">
+        @if (session('sukses'))
+        <div class="alert alert-success">
+          {{ session('sukses') }}
         </div>
-        <div class="card-body">
-          @if (session('sukses'))
-          <div class="alert alert-success">
-            {{ session('sukses') }}
+        @elseif (session('error'))
+        <div class="alert alert-danger">
+          {{ session('error') }}
+        </div>
+        @endif
+        <div class="container" ng-app="formvalid">
+          <div class="panel" data-ng-controller="validationCtrl">
+          <div class="panel-heading border">    
           </div>
-          @elseif (session('error'))
-          <div class="alert alert-danger">
-            {{ session('error') }}
-          </div>
-          @endif
-          <div class="table-responsive">
-            <table id="example4" class="display" style="min-width: 845px">
+        <div class="panel-body">
+              <table class=" table-responsive table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt">
               <thead>
                 <tr>
                   <th>No</th>
@@ -1895,27 +1884,28 @@
                   <td>Barang bawaan maba</td>
                   <td>Bazooka, nuklir, sembako, doa ibu</td>
                   <td class="manage-row">
-                    <a href=" #" class="edit-button">
+                    <a href="" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
-                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm  ">
+                    <!-- Button trigger modal -->
+                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                       <i class="fa-solid fa-trash-can"></i>
                     </a>
-                    <div class="modal fade bd-example-modal-sm  " tabindex="-1" role="dialog" aria-hidden="true">
-                      <div class="modal-dialog modal-sm">
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                      <div class="modal-dialog">
                         <div class="modal-content">
                           <div class="modal-header">
-                            <h5 class="modal-title"><strong>Hapus Data</strong></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal">
-                            </button>
+                            <h5 class="modal-title" id="staticBackdropLabel"><strong>Hapus Data</strong></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
-                          <div class="modal-body">Apakah anda yakin ingin menghapus data?</div>
+                          <div class="modal-body">
+                            Anda yakin menghapus data?
+                          </div>
                           <div class="modal-footer">
-                            <form action="#" method="POST">
-                              @method('DELETE')
-                              @csrf
-                              <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
-                              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
+                            <form action="" method="POST">
+                                <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
                             </form>
                           </div>
                         </div>
@@ -1923,14 +1913,15 @@
                     </div>
                   </td>
                 </tr>
-
               </tbody>
               {{-- link paginate --}}
-            </table>
-          </div>
+          </table>
+        </div>
         </div>
       </div>
+      </div>
     </div>
+  </div>
     <!--./Tabel Booklet-->
 
     <!--Scanner Panitia-->
@@ -1951,6 +1942,42 @@
 <!--------------------------------------------------------------------------------->
 
 <!--UPDATE DATA-->
+    <!--Funfact-->
+    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" style="display: none"  id="edit-funFact">
+      <div class="card">
+      <div class="card-header">
+      <h4 class="card-title">Input Funfact</h4>
+      </div>
+      <div class="card-body">
+<<<<<<< Updated upstream
+        <form method="POST" action="{{ route('editfunFact',$funfact) }}" enctype='multipart/form-data'>
+          @method('put')
+=======
+        <form method="POST" action="{{ route('editfunFact') }}" enctype='multipart/form-data'>
+
+>>>>>>> Stashed changes
+          @csrf
+          <input name="id" value="{{ $funfact->id }}" type="hidden">
+          <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Deskripsi</label>
+            <div class="col-sm-9">
+<<<<<<< Updated upstream
+              <textarea class="form-control custom-txt-area" placeholder="Deskripsi" name="isi" id="isi" value="{{ $funfact->isi }}"  >{{ $funfact->id }}</textarea>
+=======
+              <textarea class="form-control custom-txt-area" placeholder="Deskripsi" name="isi" id="isi" value=""  >{{ $funfact->id }}</textarea>
+>>>>>>> Stashed changes
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <div class="col-sm-9">
+              <button type="submit" class="btn btn-primary ">Ubah</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      </div>
+    </div>
+    <!--./Funfact-->
 
 <section>
 
@@ -1961,12 +1988,6 @@
 @endsection
 
 @section('script')
-
-<script>
-    function editData() {
-        document.getElementById('nama-upt').disabled = false;
-        document.getElementById('deskripsi-upt').disabled = false;
-    }
-</script>
+<!--Table update prodi-->
 
 @endsection

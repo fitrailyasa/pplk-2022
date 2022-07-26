@@ -41,7 +41,7 @@
         <h2>{{ $kamus_gaul ->gaul }}</h2>
         <h6>{{ $kamus_gaul ->asli }}</h6>
         <div class="contoh-penggunaan">
-            <h6>Contoh penggunaan kata basing adalah :</h6>
+            <h6>{{ $kamus_gaul ->contohPenggunaan }}</h6>
         </div>
     </div>
 </div>

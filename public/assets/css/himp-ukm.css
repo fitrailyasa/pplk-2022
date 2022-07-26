@@ -31,7 +31,16 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-
+body{
+  background-image: url(../background-2.png);
+  background-size: cover;
+  background-position: 50% 5%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  box-shadow: inset rgba(41, 1, 53, 0.66) 0px 1000rem 100px;
+  width: 100%;
+  overflow-x: hidden;
+}
 .slide-container{
   max-width: 1120px;
   width: 100%;
@@ -127,9 +136,17 @@
   max-width: 1230px;
   margin: 0 auto;
 }
+
 .gambar_slider{
 padding: 50px 0;
 }
+
+@media screen and (max-width:930px) {
+  #terakhir {
+      margin-bottom: 4.7rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .slide-content{
     margin: 0 10px;

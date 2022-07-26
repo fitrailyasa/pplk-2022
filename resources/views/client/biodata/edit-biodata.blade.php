@@ -23,15 +23,17 @@
             <div class="row justify-content-around">
                 <div class="col-lg-3 col-md-10 col-sm-12 justify-content-center">
                     <div class="center">
-                        <img class="ratio ratio-1x1 profile" src="../assets/jhonny.jpg">
+                        <img class="ratio ratio-1x1 profile" src="../assets/{{$viewbiodata->fotoProfil}}" alt="fotoprofil">
                         <!-- tambah input type file -->
+
                     </div><!-- row -->
                 </div><!-- container -->
-                <div class="col-xl-6 col-sm-12">
-                    <h1 align="center" >USER BIODATA</h1>
-                    <div class="container">
-                        <form class="col-sm-12 bio-form m-sm-auto container-fluid justify-content-between fle" method="POST">
 
+                <div class="col-xl-6 col-sm-12">
+                    <form class="col-sm-12 bio-form m-sm-auto container-fluid justify-content-between fle" method="POST">
+                        <input type="file" placeholder="Edit Profil" class="submit-edit">
+                    <h1 align="center" >USER BIODATA</h1>
+                    <div class="container col-sm-12 bio-form m-sm-auto container-fluid justify-content-between fle">
                             <div class="row bio-input">
                                 <label class="form-label" for="email">Email</label>
                                 <input type="text" placeholder="{{ $viewbiodata->email }}" enabled>
@@ -49,49 +51,47 @@
 
                             <div class="row bio-input">
                                 <label class="form-label" for="kelompok">Kelompok</label>
-                                <input type="text" placeholder="{{ $viewbiodata->kelompok }}" enabled>
+                                <input type="text" placeholder="{{ $viewbiodata->kelompok }}" disabled>
                             </div>
 
                             <div class="row bio-input">
                                 <label class="form-label" for="prodi">Program Studi</label>
-                                <input type="text" placeholder="{{ $viewbiodata->prodis_id }}" enabled>
+                                <input type="text" placeholder="{{ $viewbiodata->prodi }}" enabled>
                             </div>
 
                             <div class="row bio-input">
                                 <label class="form-label" for="notel">Nomor Telepon</label>
-                                <input type="text" placeholder="belum dinamis" enabled>
+                                <input type="text" placeholder="{{ $viewbiodata->nomorHp }}" enabled>
                             </div>
 
                             <div class="row bio-input">
                                 <label placeholder="belum dinamis" class="form-label" for="golongan darah">Golongan Darah</label>
                                 <select>
-                                    <option selected class="selected">Goldar</option>
+                                    <option selected class="selected">{{ $viewbiodata->golonganDarah }}</option>
                                     <option value="1">A</option>
                                     <option value="2">AB</option>
                                     <option value="3">B</option>
                                     <option value="4">O</option>
                                 </select>
                             </div>
-
+{{--
                             <div class="row bio-input">
                                 <label class="form-label" for="alamat">Alamat</label>
                                 <input type="text" placeholder="dinamis" enabled>
-                            </div>
+                            </div> --}}
 
                             <div class="row bio-input">
                                 <label class="form-label" for="riwayat">Riwayat Penyakit</label>
-                                <input type="text" placeholder="belum dinamis" enabled>
+                                <input type="text" placeholder="{{ $viewbiodata->riwayatPenyakit }}" enabled>
                             </div>
-                    </form>
 
                     </div>
-                    <a href="../html/biodata.html">
                         <div class="submit-edit" align="center">
                             <label class="btn btn-primary">
-                                SUBMIT<input type="submit" class="submit" style="width: 0px;height: 0px;overflow: hidden;">
+                                SUBMIT<input type="submit" class="submit">
                             </label>
                         </div>
-                    </a>
+                    </form>
                 </div>
             </div>
             <div class="row ps-5 ms-2">

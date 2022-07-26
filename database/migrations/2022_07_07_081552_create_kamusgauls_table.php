@@ -17,6 +17,7 @@ class CreateKamusgaulsTable extends Migration
             $table->id();
             $table->string('gaul')->nullable();
             $table->string('asli')->nullable();
+            $table->string('contohPenggunaan')->nullable();
             $table->timestamps();
         });
     }
