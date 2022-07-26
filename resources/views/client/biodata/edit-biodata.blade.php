@@ -24,49 +24,57 @@
                 <div class="col-lg-3 col-md-10 col-sm-12 justify-content-center">
                     <div class="center">
                         <img class="ratio ratio-1x1 profile" src="../assets/{{$viewbiodata->fotoProfil}}" alt="fotoprofil">
-                        <!-- tambah input type file -->
-
+                    </div><!-- row -->
+                    <div class="center">
+                        <form action="{{ url('update-fotoProfil/'.$viewbiodata->id) }}" method="post" entype="multipart/form-data">
+                            @csrf
+                            @method('PUT')
+                        <input name="fotoProfil" type="file" class="btn btn-primary">
+                        <input type="submit" class="btn btn-primary " value="Unggah">
+                        </form>
                     </div><!-- row -->
                 </div><!-- container -->
 
                 <div class="col-xl-6 col-sm-12">
-                    <form class="col-sm-12 bio-form m-sm-auto container-fluid justify-content-between fle" method="POST">
-                        <input type="file" placeholder="Edit Profil" class="submit-edit">
+
                     <h1 align="center" >USER BIODATA</h1>
-                    <div class="container col-sm-12 bio-form m-sm-auto container-fluid justify-content-between fle">
+                    <div class="container">
+                        <form class="col-sm-12 bio-form m-sm-auto container-fluid justify-content-between fle" method="POST" action="{{ url('update-profil/'.$viewbiodata->id) }}">
+                            @csrf
+                            @method('PUT')
                             <div class="row bio-input">
                                 <label class="form-label" for="email">Email</label>
-                                <input type="text" placeholder="{{ $viewbiodata->email }}" enabled>
+                                <input value="{{ $viewbiodata->email }}" name="email" type="text" placeholder="{{ $viewbiodata->email }}" enabled>
                             </div>
 
                             <div class="row bio-input">
                                 <label class="form-label" for="nama">Nama</label>
-                                <input type="text" placeholder="{{ $viewbiodata->nama }}" enabled>
+                                <input value="{{ $viewbiodata->nama }}"name="name" type="text" placeholder="{{ $viewbiodata->nama }}" enabled>
                             </div>
 
                             <div class="row bio-input">
                                 <label class="form-label" for="nim">NIM</label>
-                                <input type="text" placeholder="{{ $viewbiodata->nim }}" enabled>
+                                <input value="{{ $viewbiodata->nim }}" name="nim" type="text" placeholder="{{ $viewbiodata->nim }}" enabled>
                             </div>
 
                             <div class="row bio-input">
                                 <label class="form-label" for="kelompok">Kelompok</label>
-                                <input type="text" placeholder="{{ $viewbiodata->kelompok }}" disabled>
+                                <input value="{{ $viewbiodata->kelompok }}"type="text" placeholder="{{ $viewbiodata->kelompok }}" disabled>
                             </div>
 
                             <div class="row bio-input">
                                 <label class="form-label" for="prodi">Program Studi</label>
-                                <input type="text" placeholder="{{ $viewbiodata->prodi }}" enabled>
+                                <input value="{{ $viewbiodata->prodi }}"name="prodi" type="text" placeholder="{{ $viewbiodata->prodi }}" enabled>
                             </div>
 
                             <div class="row bio-input">
                                 <label class="form-label" for="notel">Nomor Telepon</label>
-                                <input type="text" placeholder="{{ $viewbiodata->nomorHp }}" enabled>
+                                <input value="{{ $viewbiodata->nomorHp }}"name="nomorHp"type="text" placeholder="{{ $viewbiodata->nomorHp }}" enabled>
                             </div>
 
                             <div class="row bio-input">
                                 <label placeholder="belum dinamis" class="form-label" for="golongan darah">Golongan Darah</label>
-                                <select>
+                                <select name="golonganDarah">
                                     <option selected class="selected">{{ $viewbiodata->golonganDarah }}</option>
                                     <option value="1">A</option>
                                     <option value="2">AB</option>
@@ -82,20 +90,18 @@
 
                             <div class="row bio-input">
                                 <label class="form-label" for="riwayat">Riwayat Penyakit</label>
-                                <input type="text" placeholder="{{ $viewbiodata->riwayatPenyakit }}" enabled>
+                                <input value="{{ $viewbiodata->riwayatPenyakit }}" name="riwayatPenyakit"  type="text" placeholder="{{ $viewbiodata->riwayatPenyakit }}" enabled>
                             </div>
 
+                            <div class="submit-edit" align="center">
+                                <input type="submit" class="btn btn-primay" value="Unggah">
+                            </div>
                     </div>
-                        <div class="submit-edit" align="center">
-                            <label class="btn btn-primary">
-                                SUBMIT<input type="submit" class="submit">
-                            </label>
-                        </div>
                     </form>
                 </div>
             </div>
-            <div class="row ps-5 ms-2">
-            </div>
+            {{-- <div class="row ps-5 ms-2">
+            </div> --}}
         </div>
     </div>
 @endsection

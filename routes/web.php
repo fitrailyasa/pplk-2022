@@ -51,6 +51,13 @@ Route::post('/registrasi/create', [ClientBiodataController::class, 'store'])->na
 Route::put('/admin/editfunFact', [AdminController::class, 'updatefunFact'])->name('editfunFact');
 Route::get('/admin/{$funfact->id}',[AdminController::class, 'getfunFactId']);
 
+
+Route::get('edit-fotoProfil/{id}', [ClientBiodataController::class, 'editProfil']);
+Route::put('update-fotoProfil/{id}', [ClientBiodataController::class, 'updateProfil']);
+
+Route::get('edit-profil/{id}', [ClientBiodataController::class, 'editBiodata']);
+Route::put('update-profil/{id}', [ClientBiodataController::class, 'updateBiodata']);
+
 Route::get('/upt', [ClientUptController::class, 'index'])->name('upt'); //===> upt
 
 Route::get('/kabinet', [ClientKabinetController::class, 'index'])->name('kabinet');  // ===>kabinet

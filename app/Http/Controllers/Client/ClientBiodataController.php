@@ -3,6 +3,8 @@ namespace App\Http\Controllers\Client;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Requests\Admin\StoreClientRequest;
+use App\Http\Requests\Client\UpdateBiodataRequest;
 
 use Illuminate\Support\Facades\Hash;
 
@@ -54,8 +56,6 @@ class ClientBiodataController extends Controller
             'instagram'=>$request->instagram,
             'nomorHp'=>$request->nohp,
             'password'=> Hash::make($request->password),
-            'logo'=>$request->logo,
-            'filosofiLogo'=>$request->filosofiLogo,
             'qrCode'=>$request->nim,
             'riwayatPenyakit'=>$request->riwayatPenyakit,
             'roles_id'=>$request->roles,
@@ -64,6 +64,49 @@ class ClientBiodataController extends Controller
         return 'daftar Berhasil';
     }
 
+    public function editProfil($id)
+    {
+        $viewbiodata = User::find($id);
+        return view('Client.biodata.edit-biodata', compact('viewbiodata'));
+    }
+
+    public function editBiodata($id)
+    {
+        $viewbiodata = User::find($id);
+        return view('Client.biodata.edit-biodata', compact('viewbiodata'));
+    }
+
+    public function updateProfil(Request $request, $id)
+    {
+        $viewbiodata = User::find($id);
+        $viewbiodata->fotoProfil = $request->input('fotoProfil');
+        $viewbiodata->update();
+
+        $file=$request->file('fotoProfile');
+        $file->move('public/assets/profile',$file->getClientOriginalName());
+
+
+}
+
+public function updateBiodata(Request $request, $id){
+
+        $viewbiodata = User::find($id);
+
+        $viewbiodata->nama = $request->input('name');
+        $viewbiodata->golonganDarah = $request->input('golonganDarah');
+        $viewbiodata->nim = $request->input('nim');
+        $viewbiodata->email = $request->input('email');
+        $viewbiodata->instagram = $request->input('instagram');
+        $viewbiodata->nomorHp = $request->input('nomorHp');
+        $viewbiodata->riwayatPenyakit = $request->input('riwayatPenyakit');
+        $viewbiodata->prodi = $request->input('prodi');
+
+        $viewbiodata->update();
+
+        return 'update biodata berhasil';
+
+
+}
     /**
      * Display the specified resource.
      *
