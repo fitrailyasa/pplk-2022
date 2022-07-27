@@ -378,7 +378,8 @@ class AdminController extends Controller
                 'ruangProdi' => $request->ruangProdi,
                 'jumlahMahasiswa' => $request->jumlahMahasiswa,
                 'logo' => $request->logo,
-                'prestasi' => $request->prestasi
+                'prestasi' => $request->prestasi,
+                'jurusan_id' => $request->jurusan_id
             ]
         );
         return $this->index();

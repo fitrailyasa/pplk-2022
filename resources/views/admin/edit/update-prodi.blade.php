@@ -91,7 +91,9 @@
         </div>
       <div class="mb-3 row">
         <div class="col-sm-9">
-          <button type="submit" class="btn btn-primary ">Tambah</button>
+          <a>
+          <button type="submit" class="btn btn-primary ">Ubah</button>
+          </a>
         </div>
       </div>
       </form>
