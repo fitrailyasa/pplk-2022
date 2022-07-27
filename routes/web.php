@@ -3,6 +3,7 @@
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Client\Controller;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Client\ClientUptController;
@@ -12,6 +13,7 @@ use App\Http\Controllers\Client\ClientBiodataController;
 use App\Http\Controllers\Client\ClientJurusanController;
 use App\Http\Controllers\Client\ClientKabinetController;
 use App\Http\Controllers\Client\ClientKamusgaulController;
+
 
 
 
@@ -48,15 +50,31 @@ Route::post('/registrasi/create', [ClientBiodataController::class, 'store'])->na
 
 
 //ROUTE EDIT
-Route::put('/admin/editfunFact', [AdminController::class, 'updatefunFact'])->name('editfunFact');
-Route::get('/admin/{$funfact->id}',[AdminController::class, 'getfunFactId']);
-
+//Edit Funfact
+Route::put('/admin/editfunFact', [AdminController::class, 'updatefunFact'])->name('editFunfact');
+Route::get('/admin/updatefunFact/{id}',[AdminController::class,'getfunFactId'])->name('viewEditFunfact');
+//Edit Begalin
+Route::put('/admin/editbegalin', [AdminController::class, 'updateBegalin'])->name('editBegalin');
+Route::get('/admin/updatebegalin/{id}',[AdminController::class,'getBegalinId'])->name('viewEditBegalin');
+//Edit UPT
+Route::put('/admin/editupt', [AdminController::class, 'updateUpt'])->name('editUpt');
+Route::get('/admin/updateupt/{id}',[AdminController::class,'getUptId'])->name('viewEditUpt');
+//Edit Himpunan
+Route::put('/admin/edithimpunan', [AdminController::class, 'updateHimpunan'])->name('editHimpunan');
+Route::get('/admin/updatehimpunan/{id}',[AdminController::class,'getHimpunanId'])->name('viewEditHimpunan');
 
 Route::get('edit-fotoProfil/{id}', [ClientBiodataController::class, 'editProfil']);
 Route::put('update-fotoProfil/{id}', [ClientBiodataController::class, 'updateProfil']);
 
+
 Route::get('edit-profil/{id}', [ClientBiodataController::class, 'editBiodata']);
 Route::put('update-profil/{id}', [ClientBiodataController::class, 'updateBiodata']);
+
+//Update UKM
+Route::put('/admin/editukm', [AdminController::class, 'updateUkm'])->name('editUkm');
+Route::get('/admin/updateukm/{id}',[AdminController::class,'getUkmId'])->name('viewEditUkm');
+
+
 
 Route::get('/upt', [ClientUptController::class, 'index'])->name('upt'); //===> upt
 
@@ -70,9 +88,12 @@ Route::get('/biodata', [ClientBiodataController::class, 'index'])->name('biodata
 
 Route::get('/edit-biodata', [ClientBiodataController::class, 'indexEditBio'])->name('edit-biodata');
 
-Route::get('/beranda', [ClientBegalinController::class, 'index'])->name('begalin');
+Route::get('/detail-prodi', )->name('detailprodi');
 
-Route::get('/detail-prodi', [ClientProdiController::class, 'indexDetail'])->name('detailprodi');
+
+
+Route::get('/beranda', [ClientBegalinController::class, 'index']); //DEFAULT
+
 
 Route::get('/detail-himpunan', function () {        // ===> Detail himpunan
     return view('client.ormawa.detail-himpunan');
@@ -86,6 +107,12 @@ Route::get('/himpunan', function () {               // ===> himpunan
 Route::get('/prodi', function () {                  // ===> prodi
     return view('client.jurusan.prodi');
 });
+
+
+Route::get('/edit-biodata', function () {          // ===> edit biodata
+    return view('client.biodata.edit-biodata');
+});
+
 Route::get('/booklet', function () {              // ===> booklet
     return view('client.booklet');
 });

@@ -126,7 +126,7 @@
       <h4 class="card-title">Input Data User</h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="#" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('createUser') }}" enctype='multipart/form-data'>
         @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Nama User</label>
@@ -499,7 +499,7 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Dokumentasi 1</label>
             <div class="col-sm-9">
-              <input type="text" accept="image/*" class="form-control" name="dukumentasi1" id="dokumentasi1" >
+              <input type="text" accept="image/*" class="form-control" name="dokumentasi1" id="dokumentasi1" >
             </div>
           </div>
           <div class="mb-3 row">
@@ -857,7 +857,7 @@
                   <td>{{$upt->nama}}</td>
                   <td>{{$upt->deskripsi}}</td>
                   <td class="manage-row">
-                    <a href="" class="edit-button">
+                    <a href="{{ route('viewEditUpt',["id"=>$upt->id]) }}" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
@@ -1049,7 +1049,7 @@
                   <td>{{ $himpunan->filosofiLogo }}</td>
                   <td>{{ $himpunan->tahunBerdiri }}</td>
                   <td class="manage-row">
-                    <a href="" class="edit-button">
+                    <a href="{{ route('viewEditHimpunan',["id"=>$himpunan->id]) }}" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
@@ -1417,15 +1417,12 @@
                 <tr>
                   <td>{{ $loop->iteration }}</td>
                   <td>{{ $funfact->isi }}</td>
+                  
+
                   <td class="manage-row">
-
-                    <button type="submit" form="editfunFact" value="Submit">
-                      <a onclick="openCMS(event, 'edit-funFact')" class="nav-link tablinks" >
-                        <i class="fa-solid fa-marker"></i>
-                      </a>
-                    </button>
-
-
+                    <a href="{{ route('viewEditFunfact',['id'=>$funfact->id]) }}" class="nav-link tablinks" >
+                      <i class="fa-solid fa-marker"></i>
+                    </a>
                     <!-- Button trigger modal -->
                     <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                       <i class="fa-solid fa-trash-can"></i>
@@ -1500,7 +1497,7 @@
                   <td>{{ $begalin->judul }}</td>
                   <td>{{ $begalin->isi }}</td>
                   <td class="manage-row">
-                    <a href="" class="edit-button">
+                    <a href="{{ route('viewEditBegalin',['id'=>$begalin->id]) }}" class="edit-button" >
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
@@ -1941,47 +1938,10 @@
 
 <!--------------------------------------------------------------------------------->
 
+
 <!--UPDATE DATA-->
-    <!--Funfact-->
-    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" style="display: none"  id="edit-funFact">
-      <div class="card">
-      <div class="card-header">
-      <h4 class="card-title">Input Funfact</h4>
-      </div>
-      <div class="card-body">
-<<<<<<< Updated upstream
-        <form method="POST" action="{{ route('editfunFact',$funfact) }}" enctype='multipart/form-data'>
-          @method('put')
-=======
-        <form method="POST" action="{{ route('editfunFact') }}" enctype='multipart/form-data'>
 
->>>>>>> Stashed changes
-          @csrf
-          <input name="id" value="{{ $funfact->id }}" type="hidden">
-          <div class="mb-3 row">
-            <label class="col-sm-3 col-form-label">Deskripsi</label>
-            <div class="col-sm-9">
-<<<<<<< Updated upstream
-              <textarea class="form-control custom-txt-area" placeholder="Deskripsi" name="isi" id="isi" value="{{ $funfact->isi }}"  >{{ $funfact->id }}</textarea>
-=======
-              <textarea class="form-control custom-txt-area" placeholder="Deskripsi" name="isi" id="isi" value=""  >{{ $funfact->id }}</textarea>
->>>>>>> Stashed changes
-            </div>
-          </div>
-          <div class="mb-3 row">
-            <div class="col-sm-9">
-              <button type="submit" class="btn btn-primary ">Ubah</button>
-            </div>
-          </div>
-        </form>
-      </div>
-      </div>
-    </div>
-    <!--./Funfact-->
 
-<section>
-
-</section>
 
 <!--./UPDATE DATA-->
 

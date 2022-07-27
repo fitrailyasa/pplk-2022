@@ -81,7 +81,7 @@
       <h4 class="card-title">Input Data UPT ITERA</h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="#" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('viewEditUpt',['id'=>'$upt->id']) }}" enctype='multipart/form-data'>
         @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Nama UPT</label>
@@ -393,10 +393,12 @@
       <div class="card-body">
         <form method="POST" action="#" enctype='multipart/form-data'>
         @csrf
+          
           <div class="mb-3 row">
+
             <label class="col-sm-3 col-form-label">Deskripsi</label>
             <div class="col-sm-9">
-              <textarea class="form-control custom-txt-area" placeholder="Deskripsi" name="isi" id="" required></textarea>
+              <textarea class="form-control custom-txt-area" placeholder="Deskripsi" name="isi" id="" value="" required></textarea>
             </div>
           </div>
           <div class="mb-3 row">

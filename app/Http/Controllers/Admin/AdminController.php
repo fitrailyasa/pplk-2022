@@ -147,7 +147,7 @@ class AdminController extends Controller
     }
 
 
-    public function storeUser(StoreAdminRequest $request){
+    public function storeUser(Request $request){
         User::create([
             'nama'=>$request->nama,
             'email'=>$request->email,
@@ -202,22 +202,97 @@ class AdminController extends Controller
     }
 
 
-
-    public function updatefunFact(Request $request,Funfact $funfact){
-       
-
-        $funFactData = Funfact::where('id', $request->id)->first();
-
-            $funFactData->update(
-                [
-                    'isi'=> $request->isi
-                ]
-            );
-
-            return 'update funfact berhasil';
-
-     
+    //UPDATE FUNFACT
+    public function getfunFactId($id){
+        $funfact=Funfact::where('id', $id)->first();
+        return view('admin.edit.update-funfact',compact('funfact'));
     }
+    public function updatefunFact(Request $request){
+        $funfact = Funfact::where('id', $request->id)->first();
+        $funfact->update(
+            [
+                'isi'=> $request->isi
+            ]
+        );
+        return $this->index()->with('sukses', ' Success Inserted '.$funfact->isi);
+    }
+
+
+    //UPDATE BEGALIN
+    public function getBegalinId($id){
+        $begalin=Begalin::where('id', $id)->first();
+        return view('admin.edit.update-begalin',compact('begalin'));
+    }
+    public function updateBegalin(Request $request){
+        $begalin = Begalin::where('id', $request->id)->first();
+        $begalin->update(
+            [
+                'judul'=>$request->judul,
+                'isi'=> $request->isi
+            ]
+        );
+        return $this->index()->with('sukses', ' Success Inserted '.$begalin->isi);
+    }
+
+    //UPDATE UPT
+
+    public function getUptId($id){
+        $upt=Upt::where('id', $id)->first();
+        return view('admin.edit.update-upt',compact('upt'));
+    }
+    public function updateUpt(Request $request){
+        $upt = Upt::where('id', $request->id)->first();
+        $upt->update(
+            [
+                'nama'=>$request->nama,
+                'deskripsi'=> $request->deskripsi
+            ]
+        );
+        return $this->index()->with('sukses', ' Success Inserted '.$upt->isi);
+    }
+
+    //UPDATE HIMPUNAN
+    public function getHimpunanId($id){
+        $himpunan=Himpunan::where('id', $id)->first();
+        return view('admin.edit.update-himpunan',compact('himpunan'));
+    }
+    public function updateHimpunan(Request $request){
+        $himpunan = Himpunan::where('id', $request->id)->first();
+        $himpunan->update(
+            [
+                'namaLengkap'=>$request->namaLengkap,
+                'namaSingkat'=>$request->namaSingkat,
+                'visi'=>$request->visi,
+                'misi'=>$request->misi,
+                'deskripsi'=>$request->deskripsi,
+                'pembina'=>$request->pembina,
+                'ketuaHimpunan'=>$request->ketuaHimpunan,
+                'tahunBerdiri'=>$request->tahunBerdiri,
+                'logo'=>$request->logo,
+                'filosofiLogo'=>$request->filosofiLogo,
+                'kodeWarna'=>$request->kodeWarna
+            ]
+        );
+        return $this->index();;
+    }
+
+    //UPDATE UKM
+    public function getUkmId($id){
+        $ukm=Ukm::where('id', $id)->first();
+        return view('admin.edit.update-ukm',compact('ukm'));
+
+    // public function updatefunFact(Request $request){
+    //     $funFactData = Funfact::where('id', $request->id)->first();
+    //     $funFactData->update(
+    //         [
+    //             'isi'=> $request->isi
+    //         ]
+    //     );
+    //     return $this->index();
+    // }
+
+
+    
 
 
     /**

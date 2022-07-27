@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Client;
 
 use App\Models\Begalin;
+use Illuminate\Http\Request;
 use App\Http\Requests\StoreBegalinRequest;
+use App\Http\Controllers\Client\Controller;
 use App\Http\Requests\UpdateBegalinRequest;
 
 class ClientBegalinController extends Controller
@@ -35,7 +37,7 @@ class ClientBegalinController extends Controller
      * @param  \App\Http\Requests\StorebegalinRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StorebegalinRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -69,7 +71,7 @@ class ClientBegalinController extends Controller
      * @param  \App\Models\begalin  $begalin
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdatebegalinRequest $request, begalin $begalin)
+    public function update(Request $request, begalin $begalin)
     {
         //
     }
