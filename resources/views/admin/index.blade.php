@@ -1588,6 +1588,8 @@
                   <th>No</th>
                   <th>Kamus Gaul</th>
                   <th>Arti Kamus</th>
+                  <th>Contoh Penggunaan</th>
+                  <th>More</th>
                 </tr>
               </thead>
               <tbody>
@@ -1596,8 +1598,9 @@
                   <td>{{ $loop->iteration }}</td>
                   <td>{{ $kamusgaul->gaul }}</td>
                   <td>{{  $kamusgaul->asli }}</td>
+                  <td>{{  $kamusgaul->contohPenggunaan }}</td>
                   <td class="manage-row">
-                    <a href="" class="edit-button">
+                    <a href="{{ route('viewEditKamusGaul',['id'=>$kamusgaul->id]) }}" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->

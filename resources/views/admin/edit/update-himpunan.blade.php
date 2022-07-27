@@ -1,7 +1,7 @@
 @extends('layouts.admin.modal')
 @extends('layouts.admin.app')
 
-@section('title', 'editupt')
+@section('title', 'edithimpunan')
 
 @section('content')
 

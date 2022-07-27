@@ -52,16 +52,20 @@ Route::post('/registrasi/create', [ClientBiodataController::class, 'store'])->na
 //ROUTE EDIT
 //Edit Funfact
 Route::put('/admin/editfunFact', [AdminController::class, 'updatefunFact'])->name('editFunfact');
-Route::get('/admin/updatefunFact/{id}',[AdminController::class,'getfunFactId'])->name('viewEditFunfact');
+Route::get('/admin/updatefunFact/{id}', [AdminController::class, 'getfunFactId'])->name('viewEditFunfact');
 //Edit Begalin
 Route::put('/admin/editbegalin', [AdminController::class, 'updateBegalin'])->name('editBegalin');
-Route::get('/admin/updatebegalin/{id}',[AdminController::class,'getBegalinId'])->name('viewEditBegalin');
+Route::get('/admin/updatebegalin/{id}', [AdminController::class, 'getBegalinId'])->name('viewEditBegalin');
 //Edit UPT
 Route::put('/admin/editupt', [AdminController::class, 'updateUpt'])->name('editUpt');
-Route::get('/admin/updateupt/{id}',[AdminController::class,'getUptId'])->name('viewEditUpt');
+Route::get('/admin/updateupt/{id}', [AdminController::class, 'getUptId'])->name('viewEditUpt');
 //Edit Himpunan
 Route::put('/admin/edithimpunan', [AdminController::class, 'updateHimpunan'])->name('editHimpunan');
-Route::get('/admin/updatehimpunan/{id}',[AdminController::class,'getHimpunanId'])->name('viewEditHimpunan');
+Route::get('/admin/updatehimpunan/{id}', [AdminController::class, 'getHimpunanId'])->name('viewEditHimpunan');
+
+//Edit Kamus Gaul
+Route::put('/admin/editkamus-gaul', [AdminController::class, 'updateKamusGaul'])->name('editKamusGaul');
+Route::get('/admin/updatekamus-gaul/{id}', [AdminController::class, 'getKamusGaulId'])->name('viewEditKamusGaul');
 
 Route::get('edit-fotoProfil/{id}', [ClientBiodataController::class, 'editProfil']);
 Route::put('update-fotoProfil/{id}', [ClientBiodataController::class, 'updateProfil']);
@@ -72,7 +76,7 @@ Route::put('update-profil/{id}', [ClientBiodataController::class, 'updateBiodata
 
 //Update UKM
 Route::put('/admin/editukm', [AdminController::class, 'updateUkm'])->name('editUkm');
-Route::get('/admin/updateukm/{id}',[AdminController::class,'getUkmId'])->name('viewEditUkm');
+Route::get('/admin/updateukm/{id}', [AdminController::class, 'getUkmId'])->name('viewEditUkm');
 
 //Update Prodi
 Route::put('/admin/editprodi', [AdminController::class, 'updateProdi'])->name('editProdi');
@@ -92,7 +96,7 @@ Route::get('/biodata', [ClientBiodataController::class, 'index'])->name('biodata
 
 Route::get('/edit-biodata', [ClientBiodataController::class, 'indexEditBio'])->name('edit-biodata');
 
-Route::get('/detail-prodi', )->name('detailprodi');
+Route::get('/detail-prodi',)->name('detailprodi');
 
 
 
