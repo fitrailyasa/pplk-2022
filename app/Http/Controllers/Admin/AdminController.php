@@ -387,12 +387,20 @@ class AdminController extends Controller
 
 
     //HAPUS Funfact
-    public function destroyfunfact(Funfact $funfact)
+    public function destroyUpt($id)
     {
-        if ($funfact->delete()){
-            return redirect()->route('dashboard.funfact.index')->with('sukses', $funfact->isi.' Deleted ');
-        }
-        return redirect()->back()->withErrors('Delete Failed');
+        $data=Upt::where('id',$id)->first();
+        $data->delete();
+
+        return 'hapus sukses';
+    }
+
+    public function destroyFunfact($id)
+    {
+        $data=Funfact::where('id',$id)->first();
+        $data->delete();
+        
+        return 'hapus sukses';
     }
 
 

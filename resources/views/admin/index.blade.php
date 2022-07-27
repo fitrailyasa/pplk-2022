@@ -931,12 +931,12 @@
       </div>
       </div>
       </div>
-      </div>
+    </div>
     <!--./Tabel QR-Code Maba-->
 
     <!--Tabel UPT ITERA-->
     <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="overflow-x:hidden; display: none;" id="kelola-upt">
-      <div class="card">
+    <div class="card">
       <div class="card-header">
         <h4 class="card-title">Kelola Tabel UPT</h4>
       </div>
@@ -975,29 +975,10 @@
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
-                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <a href="{{ route('hapusUpt',["id"=>$upt->id,'table'=>'Upt']) }}" class="delete-button" >
                       <i class="fa-solid fa-trash-can"></i>
                     </a>
                     <!-- Modal -->
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel"><strong>Hapus Data</strong></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            Anda yakin menghapus data?
-                          </div>
-                          <div class="modal-footer">
-                            <form action="" method="POST">
-                                <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
-                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
                   </td>
                 </tr>
                 @endforeach
@@ -1009,7 +990,7 @@
       </div>
       </div>
       </div>
-      </div>
+    </div>
     <!--./Tabel UPT ITERA-->
 
     <!--Tabel Prodi-->
@@ -1103,7 +1084,7 @@
       </div>
       </div>
      </div>
-    </div>
+    </div> 
     <!--./Tabel Prodi-->
 
     <!--Tabel Himpunan-->
@@ -1536,30 +1517,11 @@
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
-                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <a href="{{ route('hapusFunfact',["id"=>$funfact->id]) }}" class="delete-button" >
                       <i class="fa-solid fa-trash-can"></i>
                     </a>
                     <!-- Modal -->
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel"><strong>Hapus Data</strong></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            Anda yakin menghapus data?
-                          </div>
-                          <div class="modal-footer">
-                            <form action="#" method="POST">
-                              @method('DELETE')
-                                <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
-                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+
                   </td>
                 </tr>
                 @endforeach
