@@ -9,6 +9,7 @@ use App\Http\Controllers\Client\ClientJurusanController;
 use App\Http\Controllers\Client\ClientBiodataController;
 use App\Http\Controllers\Client\ClientProdiController;
 use App\Http\Controllers\Client\ClientKamusgaulController;
+use App\Http\Controllers\Client\ClientKodegameController;
 
 
 
@@ -70,6 +71,8 @@ Route::get('/beranda', [ClientBegalinController::class, 'index'])->name('begalin
 
 Route::get('/detail-prodi', [ClientProdiController::class, 'indexDetail'])->name('detailprodi');
 
+Route::get('/card-list', [ClientKodegameController::class, 'index'])->name('card-list');
+
 
 Route::get('/beranda', function () {
     return view('client.index');                // ===> DEFAULT
@@ -107,9 +110,6 @@ Route::get('/pplk', function () {                 // ===> pplk
 });
 Route::get('/scanner', function () {              // ===> scanner
     return view('client.scanner');
-});
-Route::get('/card-list', function () {            // ===> redeem code card list
-    return view('client.games.redeem-code.card-list');
 });
 Route::get('/redeem-failed', function () {        // ===> redeem code failed
     return view('client.games.redeem-code.failed');
