@@ -1,7 +1,7 @@
 @extends('layouts.admin.modal')
 @extends('layouts.admin.app')
 
-@section('title', 'editupt')
+@section('title', 'edithimpunan')
 
 @section('content')
 
@@ -83,7 +83,7 @@
       </div>
       <div class="mb-3 row">
         <div class="col-sm-9">
-          <button type="submit" class="btn btn-primary ">Tambah</button>
+          <button type="submit" class="btn btn-primary ">Ubah</button>
         </div>
       </div>
       </form>
