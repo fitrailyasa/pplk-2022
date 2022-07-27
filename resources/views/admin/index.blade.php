@@ -961,6 +961,7 @@
                   <th>No</th>
                   <th>Nama UPT</th>
                   <th>Deskripsi</th>
+                  <th>More</th>
                 </tr>
               </thead>
               <tbody>
@@ -970,7 +971,7 @@
                   <td>{{$upt->nama}}</td>
                   <td>{{$upt->deskripsi}}</td>
                   <td class="manage-row">
-                    <a href="" class="edit-button">
+                    <a href="{{ route('viewEditUpt', ['id'=>$upt->id]) }}" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
@@ -1064,7 +1065,7 @@
                     <td>{{ $prodi->jumlahMahasiswa }}</td>
                     <td><img src=" #" widht="100" height="100"/></td>
                     <td class="manage-row">
-                    <a href="" class="edit-button">
+                    <a href="{{ route('viewEditProdi', ['id'=>$prodi->id]) }}" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
@@ -1162,7 +1163,7 @@
                   <td>{{ $himpunan->filosofiLogo }}</td>
                   <td>{{ $himpunan->tahunBerdiri }}</td>
                   <td class="manage-row">
-                    <a href="" class="edit-button">
+                    <a href="{{ route('viewEditHimpunan', ['id'=>$himpunan->id]) }}" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
@@ -1456,7 +1457,7 @@
                   <td><img src=" #" widht="100" height="100"/></td>
                   <td><img src=" #" widht="100" height="100"/></td>
                   <td class="manage-row">
-                    <a href="" class="edit-button">
+                    <a href="{{ route('viewEditUkm', ['id'=>$ukm->id]) }}" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
@@ -1531,7 +1532,7 @@
                   <td>{{ $loop->iteration }}</td>
                   <td>{{ $funfact->isi }}</td>
                   <td class="manage-row">
-                    <a href="" class="edit-button">
+                    <a href="{{ route('viewEditFunfact', ['id'=>$funfact->id]) }}" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
@@ -1608,7 +1609,7 @@
                   <td>{{ $begalin->judul }}</td>
                   <td>{{ $begalin->isi }}</td>
                   <td class="manage-row">
-                    <a href="" class="edit-button">
+                    <a href="{{ route('viewEditBegalin', ['id'=>$begalin->id]) }}" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
@@ -1676,6 +1677,7 @@
                   <th>No</th>
                   <th>Kamus Gaul</th>
                   <th>Arti Kamus</th>
+                  <th>Contoh Penggunaan</th>
                 </tr>
               </thead>
               <tbody>
@@ -1683,9 +1685,10 @@
                 <tr>
                   <td>{{ $loop->iteration }}</td>
                   <td>{{ $kamusgaul->gaul }}</td>
-                  <td>{{  $kamusgaul->asli }}</td>
+                  <td>{{ $kamusgaul->asli }}</td>
+                  <td>{{ $kamusgaul->contohPenggunaan }}</td>
                   <td class="manage-row">
-                    <a href="" class="edit-button">
+                    <a href="{{ route('viewEditKamusGaul', ['id'=>$kamusgaul->id]) }}" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->

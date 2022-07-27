@@ -57,7 +57,7 @@
         <!-- /.Control Sidebar -->
 
         <!-- Footer -->
-        <footer class="main-footer">
+        <footer class="main-footer fixed-bottom">
           <!-- Tagline PPLK 2022 -->
           <div class="float-right d-none d-sm-inline">
             <i>#Merakit_Cita_Dari_Kita_Untuk_Sumatera</i>
