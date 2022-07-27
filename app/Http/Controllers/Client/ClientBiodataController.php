@@ -78,15 +78,22 @@ class ClientBiodataController extends Controller
 
     public function updateProfil(Request $request, $id)
     {
+        $file = $request->file('fotoProfil');
         $viewbiodata = User::find($id);
-        $viewbiodata->fotoProfil = $request->input('fotoProfil');
+        $viewbiodata->fotoProfil = time().'_'.$file->getClientOriginalName();
         $viewbiodata->update();
 
-        $file=$request->file('fotoProfile');
-        $file->move('public/assets/profile',$file->getClientOriginalName());
 
+        $filename = time().'_'.$file->getClientOriginalName();
+
+        // File upload location
+        $location = 'F:\pplk-2022\public\assets\profile';
+
+        // Upload file
+        $file->move($location,$filename);
 
 }
+
 
 public function updateBiodata(Request $request, $id){
 

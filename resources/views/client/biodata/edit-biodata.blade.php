@@ -23,14 +23,14 @@
             <div class="row justify-content-around">
                 <div class="col-lg-3 col-md-10 col-sm-12 justify-content-center">
                     <div class="center">
-                        <img class="ratio ratio-1x1 profile" src="../assets/{{$viewbiodata->fotoProfil}}" alt="fotoprofil">
+                        <img class="ratio ratio-1x1 profile" src="{{ asset('assets/profile') }}/{{ $viewbiodata->fotoProfil }}" alt="fotoprofil">
                     </div><!-- row -->
                     <div class="center">
-                        <form action="{{ url('update-fotoProfil/'.$viewbiodata->id) }}" method="post" entype="multipart/form-data">
+                        <form action="{{ url('update-fotoProfil/'.$viewbiodata->id) }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
                         <input name="fotoProfil" type="file" class="btn btn-primary">
-                        <input type="submit" class="btn btn-primary " value="Unggah">
+                        <input type="submit" class="btn btn-primary" value="Unggah">
                         </form>
                     </div><!-- row -->
                 </div><!-- container -->
