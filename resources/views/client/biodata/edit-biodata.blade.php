@@ -23,7 +23,7 @@
             <div class="row justify-content-around">
                 <div class="col-lg-3 col-md-10 col-sm-12 justify-content-center">
                     <div class="center">
-                        <img class="ratio ratio-1x1 profile" src="{{ asset('assets/profile') }}/{{ $viewbiodata->fotoProfil }}" alt="fotoprofil">
+                        <img class="ratio ratio-1x1 profile" style="" src="{{ asset('assets/profile') }}/{{ $viewbiodata->fotoProfil }}" alt="fotoprofil">
                     </div><!-- row -->
                     <div class="center">
                         <form action="{{ url('update-fotoProfil/'.$viewbiodata->id) }}" method="POST" enctype="multipart/form-data">
