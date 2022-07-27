@@ -171,6 +171,12 @@
             </div>
           </div>
           <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Foto Profil</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" placeholder="Golongan Darah" name="fotoProfil" id="golongandarah" >
+            </div>
+          </div>
+          <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Instagram</label>
             <div class="col-sm-9">
               <input type="text" class="form-control" placeholder="username tanpa (@)" name="instagram" id="instagram" >
@@ -186,8 +192,8 @@
     
             <label class="col-sm-3 col-form-label">Roles ID</label>
               <div class="col-sm-9">
-              <select style="width:100px;">
-                <option selected class="selected" value="1" name="roles_id">Super Admin</option>
+              <select style="width:100px;" selected class="selected" name="roles_id">
+                <option value="1" >Super Admin</option>
                 <option value="2">Admin</option>
                 <option value="3">Himpunan</option>
                 <option value="4">Ukm</option>
@@ -251,18 +257,24 @@
       <h4 class="card-title">Input Data Prodi</h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="#" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('createProdi') }}" enctype='multipart/form-data'>
         @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Nama Prodi</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Nama Prodi" name="namaprodi" id="namaprodi" required>
+              <input type="text" class="form-control" placeholder="Nama Prodi" name="namaLengkap" id="namaLengkap" required>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Nama Singkat</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" placeholder="Nama Singkat" name="namaSingkat" id="namaSingkat" required>
             </div>
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Kepala Prodi</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Nama Kepala Prodi" name="namakaprodi" id="namakaprodi" required>
+              <input type="text" class="form-control" placeholder="Nama Kepala Prodi" name="kepalaProdi" id="namakaprodi" required>
             </div>
           </div>
           <div class="mb-3 row">
@@ -274,7 +286,7 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Ruang Prodi</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Ruang Prodi" name="ruangprodi" id="ruangprodi"  >
+              <input type="text" class="form-control" placeholder="Ruang Prodi" name="ruangProdi" id="ruangprodi"  >
             </div>
           </div>
           <div class="mb-3 row">
@@ -286,7 +298,7 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Jumlah Mahasiswa</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Kode Warna" name="kodeWarna" id="kodeWarna"  >
+              <input type="text" class="form-control" placeholder="Kode Warna" name="jumlahMahasiswa" id="kodeWarna"  >
             </div>
           </div>
           <div class="mb-3 row">
@@ -310,7 +322,7 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Tentang Kami</label>
             <div class="col-sm-9 ">
-              <textarea class="form-control custom-txt-area" placeholder="Tentang Kami" name="tentangkami" id="tentangkami"  ></textarea>
+              <textarea class="form-control custom-txt-area" placeholder="Tentang Kami" name="deskripsi" id="tentangkami"  ></textarea>
             </div>
           </div>
             <div class="mb-3 row">
@@ -321,6 +333,17 @@
                 <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2022" name="prestasi" id="prestasi"  ></textarea>
               </div>
             </div>
+
+            <div class="mb-3 row">
+          <label class="col-sm-3 col-form-label">Jurusan</label>
+          <div class="col-sm-9">
+          <select style="width:70px;" selected class="selected"  name="jurusan_id">
+            <option value="1">JTIK</option>
+            <option value="2" >JTPI</option>
+            <option value="3" >JS</option>
+          </select>
+        </div> 
+      </div>
           <div class="mb-3 row">
             <div class="col-sm-9">
               <button type="submit" class="btn btn-primary ">Tambah</button>
@@ -951,7 +974,7 @@
                     <td>{{ $prodi->jumlahMahasiswa }}</td>
                     <td><img src=" #" widht="100" height="100"/></td>
                     <td class="manage-row">
-                    <a href="" class="edit-button">
+                    <a href="{{ route('viewEditProdi',["id"=>$prodi->id]) }}" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->

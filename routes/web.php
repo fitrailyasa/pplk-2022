@@ -36,8 +36,8 @@ Route::post('/', [LoginController::class, 'login'])->name('loginPost');
 Route::get('/guest', [guestController::class, 'login'])->name('guest');
 
 Route::get('/admin', [AdminController::class, 'index'])->name('cms'); //===> cms admin
-//ROUTE CREATE
 
+//ROUTE CREATE
 Route::post('/admin/Ukm', [AdminController::class, 'storeUkm'])->name('createUkm');
 Route::post('/admin/Himpunan', [AdminController::class, 'storeHimpunan'])->name('createHimpunan');
 Route::post('/admin/Funfact', [AdminController::class, 'storefunFact'])->name('createfunFact');
@@ -45,6 +45,7 @@ Route::post('/admin/User', [AdminController::class, 'storeUser'])->name('createU
 Route::post('/admin/Upt', [AdminController::class, 'storeUpt'])->name('createUpt');
 Route::post('/admin/Begalin', [AdminController::class, 'storeBegalin'])->name('createBegalin');
 Route::post('/admin/Kamusgaul', [AdminController::class, 'storeKamusgaul'])->name('createKamusgaul');
+Route::post('/admin/Prodi', [AdminController::class, 'storeProdi'])->name('createProdi');
 Route::post('/registrasi/create', [ClientBiodataController::class, 'store'])->name('regist_staff');
 
 
@@ -72,6 +73,10 @@ Route::put('update-profil/{id}', [ClientBiodataController::class, 'updateBiodata
 //Update UKM
 Route::put('/admin/editukm', [AdminController::class, 'updateUkm'])->name('editUkm');
 Route::get('/admin/updateukm/{id}',[AdminController::class,'getUkmId'])->name('viewEditUkm');
+
+//Update Prodi
+Route::put('/admin/editprodi', [AdminController::class, 'updateProdi'])->name('editProdi');
+Route::get('/admin/updateprodi/{id}',[AdminController::class,'getProdiId'])->name('viewEditProdi');
 
 
 

@@ -168,6 +168,25 @@ class AdminController extends Controller
         return 'User Berhasil';
     }
 
+    public function storeProdi(Request $request){
+
+        Prodi::create([
+            'namaLengkap'=>$request->namaLengkap,
+            'namaSingkat'=>$request->namaSingkat,
+            'visi'=>$request->visi,
+            'misi'=>$request->misi,
+            'deskripsi'=>$request->deskripsi,
+            'kepalaProdi'=>$request->kepalaProdi,
+            'akreditasi'=>$request->akreditasi,
+           'tahunBerdiri'=>$request->tahunBerdiri,
+            'ruangProdi'=>$request->ruangProdi,
+           'jumlahMahasiswa'=>$request->jumlahMahasiswa,
+            'logo'=>$request->logo,
+            'prestasi'=>$request->prestasi,
+            'jurusan_id'=>$request->jurusan_id
+        ]);
+    }
+
     public function storeUpt(Request $request){
 
         Upt::create([
@@ -214,7 +233,7 @@ class AdminController extends Controller
                 'isi'=> $request->isi
             ]
         );
-        return $this->index()->with('sukses', ' Success Inserted '.$funfact->isi);
+        return redirect()->back()->with('succes', ' Success Inserted '.$funfact->isi);
     }
 
 
@@ -299,6 +318,33 @@ class AdminController extends Controller
                 'dokumentasi1'=>$request->dokumentasi1,
                 'dokumentasi2'=>$request->dokumentasi2,
                 'dokumentasi3'=>$request->dokumentasi3
+            ]
+        );
+        return $this->index();
+    }
+
+
+    //UPDATE PRODI
+    public function getProdiId($id){
+        $prodi=Prodi::where('id', $id)->first();
+        return view('admin.edit.update-prodi',compact('prodi'));
+    }
+    public function updateProdi(Request $request){
+        $prodi = Prodi::where('id', $request->id)->first();
+        $prodi->update(
+            [
+                'namaLengkap'=>$request->namaLengkap,
+                'namaSingkat'=>$request->namaSingkat,
+                'visi'=>$request->visi,
+                'misi'=>$request->misi,
+                'deskripsi'=>$request->deskripsi,
+                'kepalaProdi'=>$request->kepalaProdi,
+                'akreditasi'=>$request->akreditasi,
+               'tahunBerdiri'=>$request->tahunBerdiri,
+                'ruangProdi'=>$request->ruangProdi,
+               'jumlahMahasiswa'=>$request->jumlahMahasiswa,
+                'logo'=>$request->logo,
+                'prestasi'=>$request->prestasi
             ]
         );
         return $this->index();

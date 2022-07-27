@@ -14,6 +14,13 @@
       <form method="POST" action="{{ route('editFunfact') }}" enctype='multipart/form-data'>
       @method('PUT')
       @csrf
+      @if (\Session::has('success'))
+      <div class="alert alert-success">
+        <ul>
+            <li>{!! \Session::get('success') !!}</li>
+        </ul>
+      </div>
+      @endif
       <input type="hidden" name="id" value="{{ $funfact->id }}">
         
         <div class="mb-3 row">
@@ -25,7 +32,7 @@
         </div>
         <div class="mb-3 row">
           <div class="col-sm-9">
-            <button type="submit" class="btn btn-primary ">Tambah</button>
+            <button type="submit" class="btn btn-primary ">Update</button>
           </div>
         </div>
         </form>
