@@ -46,15 +46,16 @@
       </div>
       <!-- Akhir Sambutan-2 -->
 
-      <form>
+      <form action="{{ route("loginPost") }}" method="POST">
+        @csrf
         <div class="row justify-content-center">
           <div class="col mb-3 d-flex justify-content-center">
-            <input type="email" class="form-control rounded input-size" id="email" placeholder="Email" required />
+            <input type="email" class="form-control rounded input-size" id="email" placeholder="Email" name="email" required />
           </div>
         </div>
         <div class="row justify-content-center">
           <div class="col mb-3 d-flex justify-content-center">
-            <input type="password" class="form-control rounded input-size" id="password" placeholder="Password" required />
+            <input type="password" class="form-control rounded input-size" id="password" placeholder="Password" name="password" required />
           </div>
         </div>
         <div class="row justify-content-center">

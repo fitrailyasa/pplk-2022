@@ -3,6 +3,7 @@
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Client\ClientUptController;
@@ -29,7 +30,11 @@ use App\Http\Controllers\Client\ClientKamusgaulController;
 */
 
 
+/* Auth::routes();
+Route::get('/home',[HomeController::class, 'index'])->name('home'); */
+
 //Login
+
 Route::get('/', [LoginController::class, 'showLoginForm']);
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/', [LoginController::class, 'login'])->name('loginPost');
@@ -80,7 +85,7 @@ Route::get('/admin/updateukm/{id}', [AdminController::class, 'getUkmId'])->name(
 
 //Update Prodi
 Route::put('/admin/editprodi', [AdminController::class, 'updateProdi'])->name('editProdi');
-Route::get('/admin/updateprodi/{id}',[AdminController::class,'getProdiId'])->name('viewEditProdi');
+Route::get('/admin/updateprodi/{id}', [AdminController::class, 'getProdiId'])->name('viewEditProdi');
 
 
 
