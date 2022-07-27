@@ -137,9 +137,11 @@
         <div class="col mb-3 d-flex justify-content-center align-items-center">
           <select placeholder="golonganDarah" name="golonganDarah" class="form-select rounded input-size text-secondary" aria-label="Default select example">
             <option selected value="Belumisi+">Golongan Darah</option>
-            <option value="A">A</option>
-            <option value="AB">AB</option>
-            <option value="B">B</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
             <option value="O">O</option>
           </select>
         </div>
@@ -147,10 +149,10 @@
       <!-- golongan darah -->
 
       <!-- prodi -->
-      <div class="row bio-input">
-        <label  class="form-label" for="golongan darah">Program Studi</label>
-        <select name="prodi">
-            <option selected class="selected">{{ $viewbiodata->prodi }}</option>
+      <div class="row justify-content-center align-items-center">
+        <div class="col mb-3 d-flex justify-content-center align-items-center">
+          <select placeholder="prodi" name="prodi" class="form-select rounded input-size text-secondary" aria-label="Default select example">
+            <option selected value="belum_isi">Divisi</option>
             <option value="Teknik Informatika">Teknik Informatika</option>
             <option value="AB">Teknik Electro</option>
             <option value="Teknik Telekomunikasi">Teknik Telekomunikasi</option>

@@ -67,8 +67,8 @@
                             </div>
 
                             <div class="row bio-input">
-                                <label placeholder="belum dinamis" class="form-label" for="golongan darah">Program Studi</label>
-                                <select name="golonganDarah">
+                                <label  class="form-label" for="golongan darah">Program Studi</label>
+                                <select name="prodi">
                                     <option selected class="selected">{{ $viewbiodata->prodi }}</option>
                                     <option value="Teknik Informatika">Teknik Informatika</option>
                                     <option value="AB">Teknik Electro</option>
@@ -109,9 +109,6 @@
                                     <option value="Arsitektur Lanskap">Arsitektur Lanskap</option>
                                     <option value="Desain Komunikasi Visual">Desain Komunikasi Visual</option>
                                     <option value="Industri Pertanian">Industri Pertanian</option>
-
-
-
                                 </select>
                             </div>
 
