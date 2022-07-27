@@ -137,11 +137,9 @@
         <div class="col mb-3 d-flex justify-content-center align-items-center">
           <select placeholder="golonganDarah" name="golonganDarah" class="form-select rounded input-size text-secondary" aria-label="Default select example">
             <option selected value="Belumisi+">Golongan Darah</option>
-            <option value="A+">A+</option>
-            <option value="A-">A-</option>
-            <option value="B+">B-</option>
-            <option value="AB+">AB+</option>
-            <option value="AB-">AB-</option>
+            <option value="A">A</option>
+            <option value="AB">AB</option>
+            <option value="B">B</option>
             <option value="O">O</option>
           </select>
         </div>

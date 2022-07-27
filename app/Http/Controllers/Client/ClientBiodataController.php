@@ -92,6 +92,8 @@ class ClientBiodataController extends Controller
         // Upload file
         $file->move($location,$filename);
 
+        return redirect('edit-biodata');
+
 }
 
 
@@ -110,7 +112,7 @@ public function updateBiodata(Request $request, $id){
 
         $viewbiodata->update();
 
-        return 'update biodata berhasil';
+        return redirect('edit-biodata');
 
 
 }

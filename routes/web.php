@@ -3,7 +3,6 @@
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Client\Controller;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Client\ClientUptController;
@@ -63,6 +62,7 @@ Route::get('/admin/updateupt/{id}',[AdminController::class,'getUptId'])->name('v
 Route::put('/admin/edithimpunan', [AdminController::class, 'updateHimpunan'])->name('editHimpunan');
 Route::get('/admin/updatehimpunan/{id}',[AdminController::class,'getHimpunanId'])->name('viewEditHimpunan');
 
+
 Route::get('edit-fotoProfil/{id}', [ClientBiodataController::class, 'editProfil']);
 Route::put('update-fotoProfil/{id}', [ClientBiodataController::class, 'updateProfil']);
 
@@ -86,11 +86,11 @@ Route::get('/kamus-gaul', [ClientKamusgaulController::class, 'index'])->name('ka
 
 Route::get('/biodata', [ClientBiodataController::class, 'index'])->name('biodata');
 
-Route::get('/edit-biodata', [ClientBiodataController::class, 'indexEditBio'])->name('edit-biodata');
+
 
 Route::get('/detail-prodi', )->name('detailprodi');
 
-
+Route::get('/edit-biodata', [ClientBiodataController::class, 'indexEditBio'])->name('edit-biodata');
 
 Route::get('/beranda', [ClientBegalinController::class, 'index']); //DEFAULT
 
@@ -108,10 +108,6 @@ Route::get('/prodi', function () {                  // ===> prodi
     return view('client.jurusan.prodi');
 });
 
-
-Route::get('/edit-biodata', function () {          // ===> edit biodata
-    return view('client.biodata.edit-biodata');
-});
 
 Route::get('/booklet', function () {              // ===> booklet
     return view('client.booklet');

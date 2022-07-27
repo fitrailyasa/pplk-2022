@@ -23,7 +23,11 @@
             <div class="row justify-content-around">
                 <div class="col-lg-3 col-md-10 col-sm-12 justify-content-center">
                     <div class="center">
+                        @if ($viewbiodata->fotoProfil == null)
+                        <img class="ratio ratio-1x1 profile" style="" src="{{ asset('assets/profile') }}/default.png" alt="fotoprofil">
+                        @elseif($viewbiodata->fotoProfil != null)
                         <img class="ratio ratio-1x1 profile" style="" src="{{ asset('assets/profile') }}/{{ $viewbiodata->fotoProfil }}" alt="fotoprofil">
+                        @endif
                     </div><!-- row -->
                     <div class="center">
                         <form action="{{ url('update-fotoProfil/'.$viewbiodata->id) }}" method="POST" enctype="multipart/form-data">
@@ -76,10 +80,10 @@
                                 <label placeholder="belum dinamis" class="form-label" for="golongan darah">Golongan Darah</label>
                                 <select name="golonganDarah">
                                     <option selected class="selected">{{ $viewbiodata->golonganDarah }}</option>
-                                    <option value="1">A</option>
-                                    <option value="2">AB</option>
-                                    <option value="3">B</option>
-                                    <option value="4">O</option>
+                                    <option value="A">A</option>
+                                    <option value="AB">AB</option>
+                                    <option value="B">B</option>
+                                    <option value="O">O</option>
                                 </select>
                             </div>
 {{--
