@@ -1,0 +1,18 @@
+<?php
+
+namespace App\Http\Controllers;
+use Illuminate\Routing\Controller as BaseController;
+use Imagick;
+
+class GuestController extends BaseController {
+
+    public $imagic;
+
+    public function __construct(){
+        $this->imagic = new Imagick();
+    }
+
+    public function test(){
+        return get_class_methods($this->imagic);
+    }
+}
