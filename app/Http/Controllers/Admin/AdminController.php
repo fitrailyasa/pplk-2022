@@ -280,16 +280,29 @@ class AdminController extends Controller
     public function getUkmId($id){
         $ukm=Ukm::where('id', $id)->first();
         return view('admin.edit.update-ukm',compact('ukm'));
-
-    // public function updatefunFact(Request $request){
-    //     $funFactData = Funfact::where('id', $request->id)->first();
-    //     $funFactData->update(
-    //         [
-    //             'isi'=> $request->isi
-    //         ]
-    //     );
-    //     return $this->index();
-    // }
+    }
+    public function updateUkm(Request $request){
+        $ukm = Ukm::where('id', $request->id)->first();
+        $ukm->update(
+            [
+                'namaLengkap'=>$request->namaLengkap,
+                'namaSingkat'=>$request->namaSingkat,
+                'visi'=>$request->visi,
+                'misi'=>$request->misi,
+                'pembina'=>$request->pembina,
+                'ketuaUmum'=>$request->ketuaUmum,
+                'tahunBerdiri'=>$request->tahunBerdiri,
+                'logo'=>$request->logo,
+                'filosofiLogo'=>$request->filosofiLogo,
+                'qrCode'=>$request->qrCode,
+                'deskripsi'=>$request->deskripsi,
+                'dokumentasi1'=>$request->dokumentasi1,
+                'dokumentasi2'=>$request->dokumentasi2,
+                'dokumentasi3'=>$request->dokumentasi3
+            ]
+        );
+        return $this->index();
+    }
 
 
     

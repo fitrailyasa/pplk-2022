@@ -10,7 +10,7 @@
     <h4 class="card-title">Input Data UKM/Komunitas</h4>
     </div>
     <div class="card-body">
-      <form method="POST" action="#" enctype='multipart/form-data'>
+      <form method="POST" action="{{ route('editUkm') }}" enctype='multipart/form-data'>
         @csrf
         @method('PUT')
         <input type="hidden" value="{{ $ukm->id }}" name="id">
