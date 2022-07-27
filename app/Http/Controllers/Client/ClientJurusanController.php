@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Client;
 
 use App\Models\Jurusan;
 use App\Http\Requests\StoreJurusanRequest;
+use App\Http\Controllers\Client\Controller;
 use App\Http\Requests\UpdateJurusanRequest;
+
 
 class ClientJurusanController extends Controller
 {
