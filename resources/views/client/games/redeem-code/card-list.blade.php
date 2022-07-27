@@ -5,16 +5,7 @@
 
 @section('style')
     <!-- STYLES -->
-    <link rel="stylesheet" href="{{ asset('assets/css/main-style.css') }}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ asset('assets/css/redeem-code-card.css') }}">
-    <!-- olw-caorusel -->
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/favicon.ico') }}" />
-
 @endsection
 
 @section('content')
@@ -48,7 +39,7 @@
                     <a class="btn my-lg-4" href="#" role="button">
                         <div class="card rounded-4">
                             <div class="ratio ratio-16x9 bg-white rounded-4">
-                                <img src="../assets/space-cat.png" class="card-img-top img-box rounded-5" alt="...">
+                                <img src="{{ asset('assets/space-cat.png') }}" class="card-img-top img-box rounded-5" alt="...">
                             </div>
                             <div class="card-body">
                                 <p class="card-text pt-lg-2 pt-md-1 text-center text-light">Nama barang</p>
@@ -58,7 +49,7 @@
                     <a class="btn my-lg-4" href="#" role="button">
                         <div class="card rounded-4">
                             <div class="ratio ratio-16x9 bg-white rounded-4">
-                                <img src="../assets/space-cat.png" class="card-img-top img-box rounded-5" alt="...">
+                                <img src="{{ asset('assets/space-cat.png') }}" class="card-img-top img-box rounded-5" alt="...">
                             </div>
                             <div class="card-body">
                                 <p class="card-text pt-lg-2 pt-md-1 text-center text-light">Nama barang</p>
@@ -68,7 +59,7 @@
                     <a class="btn my-lg-4" href="#" role="button">
                         <div class="card rounded-4">
                             <div class="ratio ratio-16x9 bg-white rounded-4">
-                                <img src="../assets/space-cat.png" class="card-img-top img-box rounded-5" alt="...">
+                                <img src="{{ asset('assets/space-cat.png') }}" class="card-img-top img-box rounded-5" alt="...">
                             </div>
                             <div class="card-body">
                                 <p class="card-text pt-lg-2 pt-md-1 text-center text-light">Nama barang</p>
@@ -78,7 +69,7 @@
                     <a class="btn my-lg-4" href="#" role="button">
                         <div class="card rounded-4">
                             <div class="ratio ratio-16x9 bg-white rounded-4">
-                                <img src="../assets/space-cat.png" class="card-img-top img-box rounded-5" alt="...">
+                                <img src="{{ asset('assets/space-cat.png') }}" class="card-img-top img-box rounded-5" alt="...">
                             </div>
                             <div class="card-body">
                                 <p class="card-text pt-lg-2 pt-md-1 text-center text-light">Nama barang</p>
@@ -88,7 +79,7 @@
                     <a class="btn my-lg-4" href="#" role="button">
                         <div class="card rounded-4">
                             <div class="ratio ratio-16x9 bg-white rounded-4">
-                                <img src="../assets/space-cat.png" class="card-img-top img-box rounded-5" alt="...">
+                                <img src="{{ asset('assets/space-cat.png') }}" class="card-img-top img-box rounded-5" alt="...">
                             </div>
                             <div class="card-body">
                                 <p class="card-text pt-lg-2 pt-md-1 text-center text-light">Nama barang</p>
@@ -98,7 +89,7 @@
                     <a class="btn my-lg-4" href="#" role="button">
                         <div class="card rounded-4">
                             <div class="ratio ratio-16x9 bg-white rounded-4">
-                                <img src="../assets/space-cat.png" class="card-img-top img-box rounded-5" alt="...">
+                                <img src="{{ asset('assets/space-cat.png') }}" class="card-img-top img-box rounded-5" alt="...">
                             </div>
                             <div class="card-body">
                                 <p class="card-text pt-lg-2 pt-md-1 text-center text-light">Nama barang</p>
@@ -108,7 +99,7 @@
                     <a class="btn my-lg-4" href="#" role="button">
                         <div class="card rounded-4">
                             <div class="ratio ratio-16x9 bg-white rounded-4">
-                                <img src="../assets/space-cat.png" class="card-img-top img-box rounded-5" alt="...">
+                                <img src="{{ asset('assets/space-cat.png') }}" class="card-img-top img-box rounded-5" alt="...">
                             </div>
                             <div class="card-body">
                                 <p class="card-text pt-lg-2 pt-md-1 text-center text-light">Trash Bag</p>
@@ -118,7 +109,7 @@
                     <a class="btn my-lg-4" href="#" role="button">
                         <div class="card rounded-4">
                             <div class="ratio ratio-16x9 bg-white rounded-4">
-                                <img src="../assets/space-cat.png" class="card-img-top img-box rounded-5" alt="...">
+                                <img src="{{ asset('assets/space-cat.png') }}" class="card-img-top img-box rounded-5" alt="...">
                             </div>
                             <div class="card-body">
                                 <p class="card-text pt-lg-2 pt-md-1 text-center text-light">Trash Bag</p>
@@ -128,7 +119,7 @@
                     <a class="btn my-lg-4" href="#" role="button">
                         <div class="card rounded-4">
                             <div class=" ratio ratio-16x9 bg-white rounded-4">
-                                <img src="../assets/space-cat.png" class="card-img-top img-box rounded-5" alt="...">
+                                <img src="{{ asset('assets/space-cat.png') }}" class="card-img-top img-box rounded-5" alt="...">
                             </div>
                             <div class="card-body">
                                 <p class="card-text pt-lg-2 pt-md-1 text-center text-light">pohon</p>

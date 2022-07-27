@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Client\Controller;
@@ -45,6 +46,7 @@ Route::post('/admin/User', [AdminController::class, 'storeUser'])->name('createU
 Route::post('/admin/Upt', [AdminController::class, 'storeUpt'])->name('createUpt');
 Route::post('/admin/Begalin', [AdminController::class, 'storeBegalin'])->name('createBegalin');
 Route::post('/admin/Kamusgaul', [AdminController::class, 'storeKamusgaul'])->name('createKamusgaul');
+Route::post('/registrasi/create', [ClientBiodataController::class, 'store'])->name('regist_staff');
 
 
 //ROUTE EDIT
@@ -61,10 +63,17 @@ Route::get('/admin/updateupt/{id}',[AdminController::class,'getUptId'])->name('v
 Route::put('/admin/edithimpunan', [AdminController::class, 'updateHimpunan'])->name('editHimpunan');
 Route::get('/admin/updatehimpunan/{id}',[AdminController::class,'getHimpunanId'])->name('viewEditHimpunan');
 
+Route::get('edit-fotoProfil/{id}', [ClientBiodataController::class, 'editProfil']);
+Route::put('update-fotoProfil/{id}', [ClientBiodataController::class, 'updateProfil']);
+
+
+Route::get('edit-profil/{id}', [ClientBiodataController::class, 'editBiodata']);
+Route::put('update-profil/{id}', [ClientBiodataController::class, 'updateBiodata']);
 
 //Update UKM
 Route::put('/admin/editukm', [AdminController::class, 'updateUkm'])->name('editUkm');
 Route::get('/admin/updateukm/{id}',[AdminController::class,'getUkmId'])->name('viewEditUkm');
+
 
 
 Route::get('/upt', [ClientUptController::class, 'index'])->name('upt'); //===> upt
@@ -85,6 +94,7 @@ Route::get('/detail-prodi', )->name('detailprodi');
 
 Route::get('/beranda', [ClientBegalinController::class, 'index']); //DEFAULT
 
+
 Route::get('/detail-himpunan', function () {        // ===> Detail himpunan
     return view('client.ormawa.detail-himpunan');
 });
@@ -98,9 +108,11 @@ Route::get('/prodi', function () {                  // ===> prodi
     return view('client.jurusan.prodi');
 });
 
+
 Route::get('/edit-biodata', function () {          // ===> edit biodata
     return view('client.biodata.edit-biodata');
 });
+
 Route::get('/booklet', function () {              // ===> booklet
     return view('client.booklet');
 });
@@ -125,7 +137,6 @@ Route::get('/redeem-failed', function () {        // ===> redeem code failed
 Route::get('/redeem', function () {               // ===> redeem page
     return view('client.games.redeem-code.redeem');
 });
-
 Route::get('/redeem-success', function () {       // ===> redeem code success
     return view('client.games.redeem-code.success');
 });
@@ -144,7 +155,6 @@ Route::get('/login', function () {  // ===> Login
 Route::get('/registrasi', function () {  // ===> Registrasi
     return view('registrasi');
 });
-
 Route::get('/senat', function () {  // ===> Registrasi
     return view('client.senat');
 });

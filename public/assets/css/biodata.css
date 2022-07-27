@@ -3,8 +3,6 @@
 
 /* CONTENT CSS */
 body{
-    margin: 0;
-    padding: 0;
     padding-bottom: 90px;
     display: block;
     font-family: var(--font-family-body) !important;
