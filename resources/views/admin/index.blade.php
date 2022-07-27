@@ -971,7 +971,11 @@
                   <td>{{$upt->nama}}</td>
                   <td>{{$upt->deskripsi}}</td>
                   <td class="manage-row">
+<<<<<<< Updated upstream
                     <a href="{{ route('viewEditUpt', ['id'=>$upt->id]) }}" class="edit-button">
+=======
+                    <a href="{{ route('viewEditUpt',["id"=>$upt->id]) }}" class="edit-button">
+>>>>>>> Stashed changes
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
@@ -1065,7 +1069,11 @@
                     <td>{{ $prodi->jumlahMahasiswa }}</td>
                     <td><img src=" #" widht="100" height="100"/></td>
                     <td class="manage-row">
+<<<<<<< Updated upstream
                     <a href="{{ route('viewEditProdi', ['id'=>$prodi->id]) }}" class="edit-button">
+=======
+                    <a href="{{ route('viewEditProdi',["id"=>$prodi->id]) }}" class="edit-button">
+>>>>>>> Stashed changes
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
@@ -1163,7 +1171,11 @@
                   <td>{{ $himpunan->filosofiLogo }}</td>
                   <td>{{ $himpunan->tahunBerdiri }}</td>
                   <td class="manage-row">
+<<<<<<< Updated upstream
                     <a href="{{ route('viewEditHimpunan', ['id'=>$himpunan->id]) }}" class="edit-button">
+=======
+                    <a href="{{ route('viewEditHimpunan',["id"=>$himpunan->id]) }}" class="edit-button">
+>>>>>>> Stashed changes
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
@@ -1457,7 +1469,11 @@
                   <td><img src=" #" widht="100" height="100"/></td>
                   <td><img src=" #" widht="100" height="100"/></td>
                   <td class="manage-row">
+<<<<<<< Updated upstream
                     <a href="{{ route('viewEditUkm', ['id'=>$ukm->id]) }}" class="edit-button">
+=======
+                    <a href="{{ route('viewEditUkm',["id"=>$ukm->id]) }}" class="edit-button">
+>>>>>>> Stashed changes
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
@@ -1532,7 +1548,11 @@
                   <td>{{ $loop->iteration }}</td>
                   <td>{{ $funfact->isi }}</td>
                   <td class="manage-row">
+<<<<<<< Updated upstream
                     <a href="{{ route('viewEditFunfact', ['id'=>$funfact->id]) }}" class="edit-button">
+=======
+                    <a href="{{ route('viewEditFunfact',["id"=>$funfact->id]) }}" class="edit-button">
+>>>>>>> Stashed changes
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
@@ -1551,7 +1571,8 @@
                             Anda yakin menghapus data?
                           </div>
                           <div class="modal-footer">
-                            <form action="" method="POST">
+                            <form action="#" method="POST">
+                              @method('DELETE')
                                 <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
                                 <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
                             </form>
@@ -1609,7 +1630,11 @@
                   <td>{{ $begalin->judul }}</td>
                   <td>{{ $begalin->isi }}</td>
                   <td class="manage-row">
+<<<<<<< Updated upstream
                     <a href="{{ route('viewEditBegalin', ['id'=>$begalin->id]) }}" class="edit-button">
+=======
+                    <a href="{{ route('viewEditBegalin',["id"=>$begalin->id]) }}" class="edit-button">
+>>>>>>> Stashed changes
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
@@ -1688,7 +1713,11 @@
                   <td>{{ $kamusgaul->asli }}</td>
                   <td>{{ $kamusgaul->contohPenggunaan }}</td>
                   <td class="manage-row">
+<<<<<<< Updated upstream
                     <a href="{{ route('viewEditKamusGaul', ['id'=>$kamusgaul->id]) }}" class="edit-button">
+=======
+                    <a href="{{ route('viewEditKamusGaul',["id"=>$kamusgaul->id]) }}" class="edit-button">
+>>>>>>> Stashed changes
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
