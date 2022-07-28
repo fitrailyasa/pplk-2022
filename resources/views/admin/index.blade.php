@@ -126,7 +126,7 @@
       <h4 class="card-title">Input Data User</h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="#" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('createUser') }}" enctype='multipart/form-data'>
         @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Nama User</label>
@@ -171,6 +171,12 @@
             </div>
           </div>
           <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Foto Profil</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" placeholder="Golongan Darah" name="fotoProfil" id="golongandarah" >
+            </div>
+          </div>
+          <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Instagram</label>
             <div class="col-sm-9">
               <input type="text" class="form-control" placeholder="username tanpa (@)" name="instagram" id="instagram" >
@@ -186,8 +192,8 @@
     
             <label class="col-sm-3 col-form-label">Roles ID</label>
               <div class="col-sm-9">
-              <select style="width:100px;">
-                <option selected class="selected" value="1" name="roles_id">Super Admin</option>
+              <select style="width:100px;" selected class="selected" name="roles_id">
+                <option value="1" >Super Admin</option>
                 <option value="2">Admin</option>
                 <option value="3">Himpunan</option>
                 <option value="4">Ukm</option>
@@ -251,18 +257,24 @@
       <h4 class="card-title">Input Data Prodi</h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="#" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('createProdi') }}" enctype='multipart/form-data'>
         @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Nama Prodi</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Nama Prodi" name="namaprodi" id="namaprodi" required>
+              <input type="text" class="form-control" placeholder="Nama Prodi" name="namaLengkap" id="namaLengkap" required>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Nama Singkat</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" placeholder="Nama Singkat" name="namaSingkat" id="namaSingkat" required>
             </div>
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Kepala Prodi</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Nama Kepala Prodi" name="namakaprodi" id="namakaprodi" required>
+              <input type="text" class="form-control" placeholder="Nama Kepala Prodi" name="kepalaProdi" id="namakaprodi" required>
             </div>
           </div>
           <div class="mb-3 row">
@@ -274,7 +286,7 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Ruang Prodi</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Ruang Prodi" name="ruangprodi" id="ruangprodi"  >
+              <input type="text" class="form-control" placeholder="Ruang Prodi" name="ruangProdi" id="ruangprodi"  >
             </div>
           </div>
           <div class="mb-3 row">
@@ -286,7 +298,7 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Jumlah Mahasiswa</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Kode Warna" name="kodeWarna" id="kodeWarna"  >
+              <input type="text" class="form-control" placeholder="Kode Warna" name="jumlahMahasiswa" id="kodeWarna"  >
             </div>
           </div>
           <div class="mb-3 row">
@@ -310,7 +322,7 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Tentang Kami</label>
             <div class="col-sm-9 ">
-              <textarea class="form-control custom-txt-area" placeholder="Tentang Kami" name="tentangkami" id="tentangkami"  ></textarea>
+              <textarea class="form-control custom-txt-area" placeholder="Tentang Kami" name="deskripsi" id="tentangkami"  ></textarea>
             </div>
           </div>
             <div class="mb-3 row">
@@ -321,6 +333,17 @@
                 <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2022" name="prestasi" id="prestasi"  ></textarea>
               </div>
             </div>
+
+            <div class="mb-3 row">
+          <label class="col-sm-3 col-form-label">Jurusan</label>
+          <div class="col-sm-9">
+          <select style="width:70px;" selected class="selected"  name="jurusan_id">
+            <option value="1">JTIK</option>
+            <option value="2" >JTPI</option>
+            <option value="3" >JS</option>
+          </select>
+        </div> 
+      </div>
           <div class="mb-3 row">
             <div class="col-sm-9">
               <button type="submit" class="btn btn-primary ">Tambah</button>
@@ -499,7 +522,7 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Dokumentasi 1</label>
             <div class="col-sm-9">
-              <input type="text" accept="image/*" class="form-control" name="dukumentasi1" id="dokumentasi1" >
+              <input type="text" accept="image/*" class="form-control" name="dokumentasi1" id="dokumentasi1" >
             </div>
           </div>
           <div class="mb-3 row">
@@ -738,13 +761,103 @@
 <!--READ & DELETE DATA-->
 
 <section>
-   
+  <!--Tabel User-->
+  <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="overflow-x:hidden; display: none;" id="kelola-user">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Kelola Tabel User</h4>
+      </div>
+      <div class="card-body">
+        @if (session('sukses'))
+        <div class="alert alert-success">
+          {{ session('sukses') }}
+        </div>
+        @elseif (session('error'))
+        <div class="alert alert-danger">
+          {{ session('error') }}
+        </div>
+        @endif
+        <div class="container">
+          <div class="container" ng-app="formvalid">
+          <div class="panel" data-ng-controller="validationCtrl">   
+          </div>
+        <div class="panel-body">
+            <table class="table-responsive table table-bordered bordered table-striped table-condensed datatable dataTable no-footer" ui-jq="dataTable" ui-options="dataTableOpt">
+              <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama Lengkap</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>NIM</th>
+                    <th>Kelompok</th>
+                    <th>Instagram</th>
+                    <th>QR-Code</th>
+                    <th>Prodi ID</th>
+                    <th>Roles ID</th>
+                    <th>More</th>
+                </tr>
+              </thead>
+              <tbody>
+                @foreach ($users as $user)
+                <tr>
+                    <td>{{ $loop->iteration }}</td>
+                    <td>{{ $user->nama }}</td>
+                    <td>{{ $user->email }}</td>
+                    <td>{{ $user->password }}</td>
+                    <td>{{ $user->nim }}</td>
+                    <td>{{ $user->kelompok }}</td>
+                    <td>{{ $user->instagram }}</td>
+                    <td>{{ $user->qrCode }}</td>
+                    <td>{{ $user->prodis_id }}</td>
+                    <td>{{ $user->roles_id }}</td>
+                    <td class="manage-row">
+                    <a href="" class="edit-button">
+                      <i class="fa-solid fa-marker"></i>
+                    </a>
+                    <!-- Button trigger modal -->
+                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                      <i class="fa-solid fa-trash-can"></i>
+                    </a>
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel"><strong>Hapus Data</strong></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            Anda yakin menghapus data?
+                          </div>
+                          <div class="modal-footer">
+                            <form action="" method="POST">
+                                <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                @endforeach
+              </tbody>
+              {{-- link paginate --}}
+          </table>
+        </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+    <!--./Tabel User-->
 
     <!--Tabel QR-Code Panitia-->
     <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="overflow-x:hidden; display: none;" id="QR-Code-panitia">
       <div class="card">
       <div class="card-header">
-        <h4 class="card-title">@yield('title')</h4>
+        <h4 class="card-title">Kelola Tabel QR-Code</h4>
       </div>
       <div class="card-body">
         @if (session('sukses'))
@@ -761,7 +874,7 @@
           <div class="panel-heading border">    
           </div>
         <div class="panel-body">
-        <table class="table-responsive table table-bordered bordered table-striped table-condensed datatable dataTable no-footer" ui-jq="dataTable" ui-options="dataTableOpt" id="DataTables_Table_1" aria-describedby="DataTables_Table_1_info">
+        <table class=" table-responsive table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt">
           <thead>
                 <tr>
                   <th>No</th>
@@ -818,14 +931,14 @@
       </div>
       </div>
       </div>
-      </div>
+    </div>
     <!--./Tabel QR-Code Maba-->
 
     <!--Tabel UPT ITERA-->
     <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="overflow-x:hidden; display: none;" id="kelola-upt">
     <div class="card">
       <div class="card-header">
-        <h4 class="card-title">@yield('title')</h4>
+        <h4 class="card-title">Kelola Tabel UPT</h4>
       </div>
       <div class="card-body">
         @if (session('sukses'))
@@ -842,12 +955,13 @@
           <div class="panel-heading border">    
           </div>
         <div class="panel-body">
-        <table class="table-responsive table table-bordered bordered table-striped table-condensed datatable dataTable no-footer" ui-jq="dataTable" ui-options="dataTableOpt" id="DataTables_Table_2" aria-describedby="DataTables_Table_2_info">
+            <table class=" table-responsive table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt">
               <thead>
                 <tr>
                   <th>No</th>
                   <th>Nama UPT</th>
                   <th>Deskripsi</th>
+                  <th>More</th>
                 </tr>
               </thead>
               <tbody>
@@ -857,33 +971,14 @@
                   <td>{{$upt->nama}}</td>
                   <td>{{$upt->deskripsi}}</td>
                   <td class="manage-row">
-                    <a href="" class="edit-button">
+                    <a href="{{ route('viewEditUpt', ['id'=>$upt->id]) }}" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
-                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <a href="{{ route('hapusUpt',["id"=>$upt->id,'table'=>'Upt']) }}" class="delete-button" >
                       <i class="fa-solid fa-trash-can"></i>
                     </a>
                     <!-- Modal -->
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel"><strong>Hapus Data</strong></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            Anda yakin menghapus data?
-                          </div>
-                          <div class="modal-footer">
-                            <form action="" method="POST">
-                                <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
-                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
                   </td>
                 </tr>
                 @endforeach
@@ -894,15 +989,15 @@
         </div>
       </div>
       </div>
+      </div>
     </div>
-  </div>
     <!--./Tabel UPT ITERA-->
 
     <!--Tabel Prodi-->
     <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="overflow-x:hidden; display: none;" id="kelola-prodi">
-    <div class="card">
+       <div class="card">
       <div class="card-header">
-        <h4 class="card-title">@yield('title')</h4>
+        <h4 class="card-title">Kelola Tabel Prodi</h4>
       </div>
       <div class="card-body">
         @if (session('sukses'))
@@ -923,7 +1018,7 @@
               <thead>
                 <tr>
                     <th>No</th>
-                    <th>Nama Lenkap</th>
+                    <th>Nama Lengkap</th>
                     <th>Nama Singkat</th>
                     <th>Visi</th>
                     <th>Misi</th>
@@ -951,7 +1046,7 @@
                     <td>{{ $prodi->jumlahMahasiswa }}</td>
                     <td><img src=" #" widht="100" height="100"/></td>
                     <td class="manage-row">
-                    <a href="" class="edit-button">
+                    <a href="{{ route('viewEditProdi', ['id'=>$prodi->id]) }}" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
@@ -988,15 +1083,15 @@
         </div>
       </div>
       </div>
-    </div>
-  </div>
+     </div>
+    </div> 
     <!--./Tabel Prodi-->
 
     <!--Tabel Himpunan-->
     <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="overflow-x:hidden; display: none;" id="kelola-himpunan">
     <div class="card">
       <div class="card-header">
-        <h4 class="card-title">@yield('title')</h4>
+        <h4 class="card-title">Kelola Tabel Himpunan</h4>
       </div>
       <div class="card-body">
         @if (session('sukses'))
@@ -1013,7 +1108,7 @@
           <div class="panel-heading border">    
           </div>
         <div class="panel-body">
-              <table class=" table-responsive table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt">
+        <table class=" table-responsive table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt">
               <thead>
                 <tr>
                   <th>No</th>
@@ -1049,7 +1144,7 @@
                   <td>{{ $himpunan->filosofiLogo }}</td>
                   <td>{{ $himpunan->tahunBerdiri }}</td>
                   <td class="manage-row">
-                    <a href="" class="edit-button">
+                    <a href="{{ route('viewEditHimpunan', ['id'=>$himpunan->id]) }}" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
@@ -1094,7 +1189,7 @@
     <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="overflow-x:hidden; display: none;" id="kelola-kabinet">
     <div class="card">
       <div class="card-header">
-        <h4 class="card-title">@yield('title')</h4>
+        <h4 class="card-title">Kelola Tabel Kabinet</h4>
       </div>
       <div class="card-body">
         @if (session('sukses'))
@@ -1201,7 +1296,7 @@
     <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="overflow-x:hidden; display: none;" id="kelola-senat">
     <div class="card">
       <div class="card-header">
-        <h4 class="card-title">@yield('title')</h4>
+        <h4 class="card-title">Kelola Tabel Senat</h4>
       </div>
       <div class="card-body">
         @if (session('sukses'))
@@ -1288,7 +1383,7 @@
     <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="overflow-x:hidden; display: none;" id="kelola-ukm">
     <div class="card">
       <div class="card-header">
-        <h4 class="card-title">@yield('title')</h4>
+        <h4 class="card-title">Kelola Tabel Komunitas</h4>
       </div>
       <div class="card-body">
         @if (session('sukses'))
@@ -1343,7 +1438,7 @@
                   <td><img src=" #" widht="100" height="100"/></td>
                   <td><img src=" #" widht="100" height="100"/></td>
                   <td class="manage-row">
-                    <a href="" class="edit-button">
+                    <a href="{{ route('viewEditUkm', ['id'=>$ukm->id]) }}" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
@@ -1388,7 +1483,7 @@
     <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="overflow-x:hidden; display: none;" id="kelola-funfact">
     <div class="card">
       <div class="card-header">
-        <h4 class="card-title">@yield('title')</h4>
+        <h4 class="card-title">Kelola Tabel Funfact</h4>
       </div>
       <div class="card-body">
         @if (session('sukses'))
@@ -1418,38 +1513,15 @@
                   <td>{{ $loop->iteration }}</td>
                   <td>{{ $funfact->isi }}</td>
                   <td class="manage-row">
-
-                    <button type="submit" form="editfunFact" value="Submit">
-                      <a onclick="openCMS(event, 'edit-funFact')" class="nav-link tablinks" >
-                        <i class="fa-solid fa-marker"></i>
-                      </a>
-                    </button>
-
-
+                    <a href="{{ route('viewEditFunfact', ['id'=>$funfact->id]) }}" class="edit-button">
+                      <i class="fa-solid fa-marker"></i>
+                    </a>
                     <!-- Button trigger modal -->
-                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <a href="{{ route('hapusFunfact',["id"=>$funfact->id]) }}" class="delete-button" >
                       <i class="fa-solid fa-trash-can"></i>
                     </a>
                     <!-- Modal -->
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel"><strong>Hapus Data</strong></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            Anda yakin menghapus data?
-                          </div>
-                          <div class="modal-footer">
-                            <form action="" method="POST">
-                                <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
-                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+
                   </td>
                 </tr>
                 @endforeach
@@ -1468,7 +1540,7 @@
     <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="overflow-x:hidden; display: none;" id="kelola-begalin">
     <div class="card">
       <div class="card-header">
-        <h4 class="card-title">@yield('title')</h4>
+        <h4 class="card-title">Kelola Tabel Begalin</h4>
       </div>
       <div class="card-body">
         @if (session('sukses'))
@@ -1500,7 +1572,7 @@
                   <td>{{ $begalin->judul }}</td>
                   <td>{{ $begalin->isi }}</td>
                   <td class="manage-row">
-                    <a href="" class="edit-button">
+                    <a href="{{ route('viewEditBegalin', ['id'=>$begalin->id]) }}" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
@@ -1545,7 +1617,7 @@
     <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="overflow-x:hidden; display: none;" id="kelola-kamus">
     <div class="card">
       <div class="card-header">
-        <h4 class="card-title">@yield('title')</h4>
+        <h4 class="card-title">Kelola Tabel Kamus Gaul</h4>
       </div>
       <div class="card-body">
         @if (session('sukses'))
@@ -1568,6 +1640,7 @@
                   <th>No</th>
                   <th>Kamus Gaul</th>
                   <th>Arti Kamus</th>
+                  <th>Contoh Penggunaan</th>
                 </tr>
               </thead>
               <tbody>
@@ -1575,9 +1648,10 @@
                 <tr>
                   <td>{{ $loop->iteration }}</td>
                   <td>{{ $kamusgaul->gaul }}</td>
-                  <td>{{  $kamusgaul->asli }}</td>
+                  <td>{{ $kamusgaul->asli }}</td>
+                  <td>{{ $kamusgaul->contohPenggunaan }}</td>
                   <td class="manage-row">
-                    <a href="" class="edit-button">
+                    <a href="{{ route('viewEditKamusGaul',["id"=>$kamusgaul->id]) }}" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
@@ -1622,7 +1696,7 @@
     <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="overflow-x:hidden; display: none;" id="kelola-redeem">
     <div class="card">
       <div class="card-header">
-        <h4 class="card-title">@yield('title')</h4>
+        <h4 class="card-title">Kelola Tabel Redeem Code</h4>
       </div>
       <div class="card-body">
         @if (session('sukses'))
@@ -1700,7 +1774,7 @@
     <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="overflow-x:hidden; display: none;" id="kelola-tebak">
     <div class="card">
       <div class="card-header">
-        <h4 class="card-title">@yield('title')</h4>
+        <h4 class="card-title">Kelola Tabel Tebak Bangunan</h4>
       </div>
       <div class="card-body">
         @if (session('sukses'))
@@ -1778,7 +1852,7 @@
     <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="overflow-x:hidden; display: none;" id="kelola-gform">
     <div class="card">
       <div class="card-header">
-        <h4 class="card-title">@yield('title')</h4>
+        <h4 class="card-title">Kelola Tabel Link Gform</h4>
       </div>
       <div class="card-body">
         @if (session('sukses'))
@@ -1852,7 +1926,7 @@
     <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="overflow-x:hidden; display: none;" id="kelola-booklet">
     <div class="card">
       <div class="card-header">
-        <h4 class="card-title">@yield('title')</h4>
+        <h4 class="card-title">Kelola Tabel Booklet</h4>
       </div>
       <div class="card-body">
         @if (session('sukses'))
@@ -1941,47 +2015,10 @@
 
 <!--------------------------------------------------------------------------------->
 
+
 <!--UPDATE DATA-->
-    <!--Funfact-->
-    <div class="col-lg-12 col-lg-12 form-wrapper tabcontents" style="display: none"  id="edit-funFact">
-      <div class="card">
-      <div class="card-header">
-      <h4 class="card-title">Input Funfact</h4>
-      </div>
-      <div class="card-body">
-<<<<<<< Updated upstream
-        <form method="POST" action="{{ route('editfunFact',$funfact) }}" enctype='multipart/form-data'>
-          @method('put')
-=======
-        <form method="POST" action="{{ route('editfunFact') }}" enctype='multipart/form-data'>
 
->>>>>>> Stashed changes
-          @csrf
-          <input name="id" value="{{ $funfact->id }}" type="hidden">
-          <div class="mb-3 row">
-            <label class="col-sm-3 col-form-label">Deskripsi</label>
-            <div class="col-sm-9">
-<<<<<<< Updated upstream
-              <textarea class="form-control custom-txt-area" placeholder="Deskripsi" name="isi" id="isi" value="{{ $funfact->isi }}"  >{{ $funfact->id }}</textarea>
-=======
-              <textarea class="form-control custom-txt-area" placeholder="Deskripsi" name="isi" id="isi" value=""  >{{ $funfact->id }}</textarea>
->>>>>>> Stashed changes
-            </div>
-          </div>
-          <div class="mb-3 row">
-            <div class="col-sm-9">
-              <button type="submit" class="btn btn-primary ">Ubah</button>
-            </div>
-          </div>
-        </form>
-      </div>
-      </div>
-    </div>
-    <!--./Funfact-->
 
-<section>
-
-</section>
 
 <!--./UPDATE DATA-->
 

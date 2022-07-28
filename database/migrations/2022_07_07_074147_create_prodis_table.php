@@ -27,6 +27,8 @@ class CreateProdisTable extends Migration
             $table->integer('jumlahMahasiswa')->nullable();
             $table->string('logo')->nullable();
             $table->string('prestasi')->nullable();
+            $table->foreignId('jurusan_id');
+            $table->foreign('jurusan_id')->references('id')->on('jurusans');
             $table->timestamps();
         });
     }

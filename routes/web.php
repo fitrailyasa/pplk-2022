@@ -3,6 +3,7 @@
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Client\ClientUptController;
@@ -12,6 +13,8 @@ use App\Http\Controllers\Client\ClientBiodataController;
 use App\Http\Controllers\Client\ClientJurusanController;
 use App\Http\Controllers\Client\ClientKabinetController;
 use App\Http\Controllers\Client\ClientKamusgaulController;
+use App\Http\Controllers\Client\ClientScannerController;
+
 
 
 
@@ -28,15 +31,19 @@ use App\Http\Controllers\Client\ClientKamusgaulController;
 */
 
 
+/* Auth::routes();
+Route::get('/home',[HomeController::class, 'index'])->name('home'); */
+
 //Login
+
 Route::get('/', [LoginController::class, 'showLoginForm']);
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/', [LoginController::class, 'login'])->name('loginPost');
 Route::get('/guest', [guestController::class, 'login'])->name('guest');
 
 Route::get('/admin', [AdminController::class, 'index'])->name('cms'); //===> cms admin
-//ROUTE CREATE
 
+//ROUTE CREATE
 Route::post('/admin/Ukm', [AdminController::class, 'storeUkm'])->name('createUkm');
 Route::post('/admin/Himpunan', [AdminController::class, 'storeHimpunan'])->name('createHimpunan');
 Route::post('/admin/Funfact', [AdminController::class, 'storefunFact'])->name('createfunFact');
@@ -44,12 +51,53 @@ Route::post('/admin/User', [AdminController::class, 'storeUser'])->name('createU
 Route::post('/admin/Upt', [AdminController::class, 'storeUpt'])->name('createUpt');
 Route::post('/admin/Begalin', [AdminController::class, 'storeBegalin'])->name('createBegalin');
 Route::post('/admin/Kamusgaul', [AdminController::class, 'storeKamusgaul'])->name('createKamusgaul');
-Route::post('/registrasi/create', [ClientBiodataController::class, 'store'])->name('regist_staff');
+Route::post('/admin/Prodi', [AdminController::class, 'storeProdi'])->name('createProdi');
+Route::post('/registrasi/{create}', [ClientBiodataController::class, 'store'])->name('regist_staff');
 
 
 //ROUTE EDIT
-Route::put('/admin/editfunFact', [AdminController::class, 'updatefunFact'])->name('editfunFact');
-Route::get('/admin/{$funfact->id}',[AdminController::class, 'getfunFactId']);
+//Edit Funfact
+Route::put('/admin/editfunFact', [AdminController::class, 'updatefunFact'])->name('editFunfact');
+Route::get('/admin/updatefunFact/{id}', [AdminController::class, 'getfunFactId'])->name('viewEditFunfact');
+//Edit Begalin
+Route::put('/admin/editbegalin', [AdminController::class, 'updateBegalin'])->name('editBegalin');
+Route::get('/admin/updatebegalin/{id}', [AdminController::class, 'getBegalinId'])->name('viewEditBegalin');
+//Edit UPT
+Route::put('/admin/editupt', [AdminController::class, 'updateUpt'])->name('editUpt');
+Route::get('/admin/updateupt/{id}', [AdminController::class, 'getUptId'])->name('viewEditUpt');
+//Edit Himpunan
+Route::put('/admin/edithimpunan', [AdminController::class, 'updateHimpunan'])->name('editHimpunan');
+Route::get('/admin/updatehimpunan/{id}', [AdminController::class, 'getHimpunanId'])->name('viewEditHimpunan');
+
+//Edit Kamus Gaul
+Route::put('/admin/editkamus-gaul', [AdminController::class, 'updateKamusGaul'])->name('editKamusGaul');
+Route::get('/admin/updatekamus-gaul/{id}', [AdminController::class, 'getKamusGaulId'])->name('viewEditKamusGaul');
+
+
+Route::get('edit-fotoProfil/{id}', [ClientBiodataController::class, 'editProfil']);
+Route::put('update-fotoProfil/{id}', [ClientBiodataController::class, 'updateProfil']);
+
+
+Route::get('edit-profil/{id}', [ClientBiodataController::class, 'editBiodata']);
+Route::put('update-profil/{id}', [ClientBiodataController::class, 'updateBiodata']);
+
+//Update UKM
+Route::put('/admin/editukm', [AdminController::class, 'updateUkm'])->name('editUkm');
+Route::get('/admin/updateukm/{id}', [AdminController::class, 'getUkmId'])->name('viewEditUkm');
+
+//Update Prodi
+Route::put('/admin/editprodi', [AdminController::class, 'updateProdi'])->name('editProdi');
+Route::get('/admin/updateprodi/{id}', [AdminController::class, 'getProdiId'])->name('viewEditProdi');
+
+//Delete Funfact
+Route::get('/admin/hapusfunfact/{id}',[AdminController::class,'destroyFunfact'])->name('hapusFunfact');
+
+Route::get('/admin/hapusupt/{id}',[AdminController::class,'destroyUpt'])->name('hapusUpt');
+
+Route::post('/presensi/{id}', [ClientScannerController::class, 'presensi']);
+
+
+
 
 Route::get('/upt', [ClientUptController::class, 'index'])->name('upt'); //===> upt
 
@@ -60,12 +108,19 @@ Route::get('/jurusan', [ClientJurusanController::class, 'index'])->name('jurusan
 Route::get('/kamus-gaul', [ClientKamusgaulController::class, 'index'])->name('kamus-gaul');
 
 Route::get('/biodata', [ClientBiodataController::class, 'index'])->name('biodata');
+Route::get('/scanner', [ClientScannerController::class, 'index'])->name('scanner');
+
+
+
+Route::get('/detail-prodi',)->name('detailprodi');
+
+
+Route::get('/detail-prodi', )->name('detailprodi');
 
 Route::get('/edit-biodata', [ClientBiodataController::class, 'indexEditBio'])->name('edit-biodata');
 
-Route::get('/beranda', [ClientBegalinController::class, 'index'])->name('begalin');
+Route::get('/beranda', [ClientBegalinController::class, 'index']); //DEFAULT
 
-Route::get('/detail-prodi', [ClientProdiController::class, 'indexDetail'])->name('detailprodi');
 
 Route::get('/detail-himpunan', function () {        // ===> Detail himpunan
     return view('client.ormawa.detail-himpunan');
@@ -79,6 +134,8 @@ Route::get('/himpunan', function () {               // ===> himpunan
 Route::get('/prodi', function () {                  // ===> prodi
     return view('client.jurusan.prodi');
 });
+
+
 Route::get('/booklet', function () {              // ===> booklet
     return view('client.booklet');
 });
@@ -90,9 +147,6 @@ Route::get('/form-keluhan', function () {         // ===> form keluhan
 });
 Route::get('/pplk', function () {                 // ===> pplk
     return view('client.pplk');
-});
-Route::get('/scanner', function () {              // ===> scanner
-    return view('client.scanner');
 });
 Route::get('/card-list', function () {            // ===> redeem code card list
     return view('client.games.redeem-code.card-list');

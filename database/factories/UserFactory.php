@@ -21,8 +21,12 @@ class UserFactory extends Factory
             'kelompok' => random_int(1,165),
             'roles_id' => random_int(1,8),
             'instagram' => 'instagram.com/'.$this->faker->name(1),
-            'prodis_id' => random_int(1,10),
-            'qrCode'=>$this->faker->text(10)
+            'prodi' => random_int(1,10),
+            'qrCode'=>$this->faker->text(10),
+            'nomorHp'=>$this->faker->integer(12),
+            'golonganDarah'=>$this->faker->name(1),
+            'riwayatPenyakit'=>$this->faker->name(2),
+            'fotoProfil'=>$this->faker->name(4)
             //
         ];
     }

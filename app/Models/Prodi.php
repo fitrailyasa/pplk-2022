@@ -10,7 +10,7 @@ class Prodi extends Model
     use HasFactory;
     protected $table = 'prodis';
     protected $fillable = [
-        'kepalaProdi', 'akreditasi', 'tahunBerdiri', 'ruangProdi', 'jumlahMahasiswa', 'diagramAlir', 'ormawas_id', 'jurusans_id'
+        'namaLengkap','namaSingkat','visi','misi','deskripsi','kepalaProdi', 'akreditasi', 'tahunBerdiri', 'ruangProdi', 'jumlahMahasiswa', 'logo','prestasi', 'jurusan_id'
     ];
 
 }

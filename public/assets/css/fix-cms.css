@@ -49,6 +49,7 @@ html{
 
 body {
 	font-family: var(--font-family-body) !important;
+    overflow-x: hidden !important;
 }
 
 /* Navbar Utama*/
@@ -77,6 +78,8 @@ body {
     font-weight: bold;
     color: var(--font-color-primary);
 }
+
+
 
 /* Left Sidebar*/
 .tablinks, .tabitem{
