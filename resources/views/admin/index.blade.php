@@ -46,7 +46,7 @@
           </div>
         </div>
       </div>
-     </div>
+    </div>
       <div class="row">
         <div class="col-md">
           <div class="widget-stat card" style="background: #9665FF;">
@@ -1505,6 +1505,7 @@
                 <tr>
                   <th>No</th>
                   <th>Deskripsi</th>
+                  <th>More</th>
                 </tr>
               </thead>
               <tbody>
@@ -1576,7 +1577,7 @@
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
-                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <a href="{{ route('hapusBegalin',["id"=>$begalin->id]) }}" class="delete-button">
                       <i class="fa-solid fa-trash-can"></i>
                     </a>
                     <!-- Modal -->
