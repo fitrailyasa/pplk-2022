@@ -64,6 +64,15 @@
       </div>
       <!-- Akhir NIM -->
 
+      {{-- error nim --}}
+      <div class="row justify-content-center">
+        <div class="col mb-3 d-flex justify-content-center">
+            @error('nim')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
+        </div>
+      </div>
+
       <!-- Email -->
       <div class="row justify-content-center">
         <div class="col mb-3 d-flex justify-content-center">
@@ -71,14 +80,48 @@
         </div>
       </div>
 
-      {{-- contoh error --}}
-      {{-- <div class="row justify-content-center">
+      {{-- error email --}}
+      <div class="row justify-content-center">
         <div class="col mb-3 d-flex justify-content-center">
             @error('email')
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror
         </div>
-      </div> --}}
+      </div>
+
+        <!-- Instagram -->
+        <div class="row justify-content-center align-items-center">
+            <div class="col mb-3 d-flex justify-content-center align-items-center">
+                <input name="instagram" type="text" class="form-control rounded input-size" id="ig" placeholder="Instagram (tanpa @)" required />
+            </div>
+        </div>
+        <!-- Akhir Instagram -->
+
+          {{-- error instagram --}}
+      <div class="row justify-content-center">
+        <div class="col mb-3 d-flex justify-content-center">
+            @error('instagram')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
+        </div>
+      </div>
+
+        <!-- nohp -->
+        <div class="row justify-content-center align-items-center">
+            <div class="col mb-3 d-flex justify-content-center align-items-center">
+                <input name="nohp" type="text" class="form-control rounded input-size" id="ig" placeholder="Nomor Hp 62-xxx-xxxx-xxxx" required />
+            </div>
+        </div>
+        <!-- nohp -->
+
+        {{-- error nomorHp --}}
+      <div class="row justify-content-center">
+        <div class="col mb-3 d-flex justify-content-center">
+            @error('nomorHp')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
+        </div>
+      </div>
 
 
       <!-- Password -->
@@ -88,14 +131,6 @@
         </div>
       </div>
       <!-- Akhir Password -->
-
-      {{-- <!-- Konfirmasi Password -->
-      <div class="row justify-content-center">
-        <div class="col mb-3 d-flex justify-content-center">
-          <input type="password" class="form-control rounded input-size" id="password" placeholder="Konfirmasi Password" required />
-        </div>
-      </div>
-      <!-- Akhir Password --> --}}
 
       <!-- Divisi -->
       <div class="row justify-content-center align-items-center">
@@ -125,38 +160,8 @@
       </div>
       <!-- Akhir Divisi -->
 
-      <!-- Instagram -->
-      <div class="row justify-content-center align-items-center">
-        <div class="col mb-3 d-flex justify-content-center align-items-center">
-          <input name="instagram" type="text" class="form-control rounded input-size" id="ig" placeholder="Instagram (tanpa @)" required />
-        </div>
-      </div>
-      <!-- Akhir Instagram -->
-
-      <!-- nohp -->
-      <div class="row justify-content-center align-items-center">
-        <div class="col mb-3 d-flex justify-content-center align-items-center">
-          <input name="nohp" type="text" class="form-control rounded input-size" id="ig" placeholder="Nomor Hp 62-xxx-xxxx-xxxx" required />
-        </div>
-      </div>
-      <!-- nohp -->
-
-      <!-- golongan darah -->
-      <div class="row justify-content-center align-items-center">
-        <div class="col mb-3 d-flex justify-content-center align-items-center">
-          <select placeholder="golonganDarah" name="golonganDarah" class="form-select rounded input-size text-secondary" aria-label="Default select example">
-            <option selected class="selected">Golongan Darah</option>
-            <option value="A">A</option>
-            <option value="AB">AB</option>
-            <option value="B">B</option>
-            <option value="O">O</option>
-        </select>
-    </div>
-      </div>
-      <!-- golongan darah -->
-
-      <!-- prodi -->
-      <div class="row justify-content-center align-items-center">
+       <!-- prodi -->
+       <div class="row justify-content-center align-items-center">
         <div class="col mb-3 d-flex justify-content-center align-items-center">
           <select placeholder="prodi" name="prodi" class="form-select rounded input-size text-secondary" aria-label="Default select example">
             <option selected value="belum_isi">Program Studi</option>
@@ -203,29 +208,33 @@
     </div>
       <!-- prodi -->
 
-    <!-- riwayatPenyakit -->
-      <div class="row justify-content-center align-items-center">
-        <div class="col mb-3 d-flex justify-content-center align-items-center">
-          <input name="riwayatPenyakit" type="text" class="form-control rounded input-size" id="ig" placeholder="Riwayat Penyakit" required />
-        </div>
-      </div>
-      <!-- riwayatPenyakit -->
+                <!-- riwayatPenyakit -->
+                <div class="row justify-content-center align-items-center">
+                    <div class="col mb-3 d-flex justify-content-center align-items-center">
+                        <input name="riwayatPenyakit" type="text" class="form-control rounded input-size" id="ig" placeholder="Riwayat Penyakit" required />
+                    </div>
+                </div>
+                <!-- riwayatPenyakit -->
 
-              <!-- roles -->
-
+              <!-- golongan darah -->
               <div class="row justify-content-center align-items-center">
                 <div class="col mb-3 d-flex justify-content-center align-items-center">
-                  <input name="roles" type="text" class="form-control rounded input-size" id="rolesId" placeholder="superadmin" readonly value="1" />
-                </div>
+                    <select placeholder="golonganDarah" name="golonganDarah" class="form-select rounded input-size text-secondary" aria-label="Default select example">
+                        <option selected class="selected">Golongan Darah</option>
+                        <option value="A">A</option>
+                        <option value="AB">AB</option>
+                        <option value="B">B</option>
+                        <option value="O">O</option>
+                    </select>
+                 </div>
               </div>
+              <!-- golongan darah -->
 
         <div class="row justify-content-center align-items-center">
         <div class="col mb-3 d-flex justify-content-center align-items-center">
-            <input name="roles" type="text" class="form-control rounded input-size" id="ig" placeholder="staff" readonly value="7" />
+            <input name="roles" type="text" class="form-control rounded input-size" id="ig" placeholder="staff" readonly value="7" style="display: none;"/>
         </div>
         </div>
-
-              <!-- roles -->
 
       <!-- Tombol Daftar -->
       <div class="row justify-content-center">

@@ -50,6 +50,9 @@ class ClientBiodataController extends Controller
     {
         $data = $request->validate([
             'email' => 'required|unique:users|email',
+            'nim'=> 'required|unique:users',
+            'instagram'=> 'required|unique:users',
+            'nomorHp'=>'required|unique:users'
         ]);
         User::create([
             'nama'=>$request->name,
