@@ -13,12 +13,8 @@ use App\Http\Controllers\Client\ClientBiodataController;
 use App\Http\Controllers\Client\ClientJurusanController;
 use App\Http\Controllers\Client\ClientKabinetController;
 use App\Http\Controllers\Client\ClientKamusgaulController;
-use App\Http\Controllers\Client\ClientKodegameController;
 use App\Http\Controllers\Client\ClientScannerController;
-
-
-
-
+use App\Http\Controllers\Client\ClientKodeGameController;
 
 /*
 |--------------------------------------------------------------------------
@@ -99,10 +95,12 @@ Route::get('/admin/hapusupt/{id}', [AdminController::class, 'destroyUpt'])->name
 Route::get('/admin/hapusbegalin/{id}', [AdminController::class, 'destroyBegalin'])->name('hapusBegalin');
 //Delete KamusGaul
 Route::get('/admin/hapuskamusgaul/{id}', [AdminController::class, 'destroyKamusGaul'])->name('hapusKamusGaul');
-
-Route::get('/admin/hapusfunfact/{id}',[AdminController::class,'destroyFunfact'])->name('hapusFunfact');
-
-Route::get('/admin/hapusupt/{id}',[AdminController::class,'destroyUpt'])->name('hapusUpt');
+//Delete Prodi
+Route::get('/admin/hapusprodi/{id}', [AdminController::class, 'destroyProdi'])->name('hapusProdi');
+//Delete Himpunan
+Route::get('/admin/hapushimpunan/{id}', [AdminController::class, 'destroyHimpunan'])->name('hapusHimpunan');
+//Delete Ukm
+Route::get('/admin/hapusukm/{id}', [AdminController::class, 'destroyUkm'])->name('hapusUkm');
 
 Route::post('/presensi/{id}', [ClientScannerController::class, 'presensi']);
 
@@ -131,8 +129,7 @@ Route::get('/edit-biodata', [ClientBiodataController::class, 'indexEditBio'])->n
 
 Route::get('/beranda', [ClientBegalinController::class, 'index']); //DEFAULT
 
-Route::get('/card-list', [ClientKodegameController::class, 'index'])->name('card-list');
-
+Route::get('/card-list',[ClientKodeGameController::class,'index']); //Redeem card-list
 
 Route::get('/detail-himpunan', function () {        // ===> Detail himpunan
     return view('client.ormawa.detail-himpunan');
@@ -161,15 +158,11 @@ Route::get('/pplk', function () {                 // ===> pplk
     return view('client.pplk');
 });
 
-Route::get('/card-list', function () {            // ===> redeem code card list
-    return view('client.games.redeem-code.card-list');
-
-});
 Route::get('/redeem-failed', function () {        // ===> redeem code failed
     return view('client.games.redeem-code.failed');
 });
 Route::get('/redeem', function () {               // ===> redeem page
-    return view('client.games.redeem-code.redeem',);
+    return view('client.games.redeem-code.redeem');
 });
 Route::get('/redeem-success', function () {       // ===> redeem code success
     return view('client.games.redeem-code.success');
