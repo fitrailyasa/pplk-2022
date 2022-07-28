@@ -116,6 +116,10 @@
                                 <label class="form-label" for="notel">Nomor Telepon</label>
                                 <input value="{{ $viewbiodata->nomorHp }}"name="nomorHp"type="text" placeholder="{{ $viewbiodata->nomorHp }}" enabled>
                             </div>
+                            <div class="row bio-input">
+                                <label class="form-label" for="notel">Instagram</label>
+                                <input value="{{ $viewbiodata->instagram }}"name="instagram" type="text" placeholder="{{ $viewbiodata->nomorHp }}" enabled>
+                            </div>
 
                             <div class="row bio-input">
                                 <label placeholder="belum dinamis" class="form-label" for="golongan darah">Golongan Darah</label>

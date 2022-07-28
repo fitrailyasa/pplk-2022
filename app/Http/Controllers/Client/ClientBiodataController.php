@@ -20,13 +20,13 @@ class ClientBiodataController extends Controller
      */
     public function index()
     {
-        $biodata = User::where('id', '1')->firstOrFail();
+        $biodata = User::where('id', '2')->firstOrFail();
         return view('client.biodata.biodata', compact('biodata'));
     }
 
     public function indexEditBio()
     {
-        $viewbiodata = User::where('id', '1')->firstOrFail();;
+        $viewbiodata = User::where('id', '2')->firstOrFail();;
         return view('client.biodata.edit-biodata', compact('viewbiodata'));
     }
 
@@ -48,23 +48,24 @@ class ClientBiodataController extends Controller
      */
     public function store(Request $request)
     {
-
+        $data = $request->validate([
+            'email' => 'required|unique:users|email',
+        ]);
         User::create([
-
             'nama'=>$request->name,
             'golonganDarah'=>$request->golonganDarah,
             'nim'=>$request->nim,
-            'email'=>$request->email,
+            'email'=>$data['email'],
             'kelompok'=>$request->divisi,
             'instagram'=>$request->instagram,
             'nomorHp'=>$request->nohp,
             'password'=> Hash::make($request->password),
-            'qrCode'=>$request->nim,
             'riwayatPenyakit'=>$request->riwayatPenyakit,
             'roles_id'=>$request->roles,
             'prodi'=>$request->prodi
         ]);
         QrCode::format('svg')->margin(2)->size(200)->errorCorrection('H')->generate("$request->nim", "../public/assets/qrcode/"."$request->nim");
+
         return 'daftar Berhasil';
     }
 
@@ -86,8 +87,6 @@ class ClientBiodataController extends Controller
         $viewbiodata = User::find($id);
         $viewbiodata->fotoProfil = time().'_'.$file->getClientOriginalName();
         $viewbiodata->update();
-
-
         $filename = time().'_'.$file->getClientOriginalName();
 
         // File upload location
@@ -115,7 +114,7 @@ public function updateBiodata(Request $request, $id){
         $viewbiodata->prodi = $request->input('prodi');
 
         $viewbiodata->update();
-
+        QrCode::format('svg')->margin(2)->size(200)->errorCorrection('H')->generate("$request->nim", "../public/assets/qrcode/"."$request->nim");
         return redirect('edit-biodata');
 
 

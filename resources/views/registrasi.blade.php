@@ -70,7 +70,16 @@
           <input name="email" type="email" class="form-control rounded input-size" id="email" placeholder="Email" required />
         </div>
       </div>
-      <!-- Akhir Email -->
+
+      {{-- contoh error --}}
+      {{-- <div class="row justify-content-center">
+        <div class="col mb-3 d-flex justify-content-center">
+            @error('email')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
+        </div>
+      </div> --}}
+
 
       <!-- Password -->
       <div class="row justify-content-center">
@@ -136,15 +145,13 @@
       <div class="row justify-content-center align-items-center">
         <div class="col mb-3 d-flex justify-content-center align-items-center">
           <select placeholder="golonganDarah" name="golonganDarah" class="form-select rounded input-size text-secondary" aria-label="Default select example">
-            <option selected value="Belumisi+">Golongan Darah</option>
-            <option value="A+">A+</option>
-            <option value="A-">A-</option>
-            <option value="B+">B-</option>
-            <option value="AB+">AB+</option>
-            <option value="AB-">AB-</option>
+            <option selected class="selected">Golongan Darah</option>
+            <option value="A">A</option>
+            <option value="AB">AB</option>
+            <option value="B">B</option>
             <option value="O">O</option>
-          </select>
-        </div>
+        </select>
+    </div>
       </div>
       <!-- golongan darah -->
 
@@ -152,9 +159,9 @@
       <div class="row justify-content-center align-items-center">
         <div class="col mb-3 d-flex justify-content-center align-items-center">
           <select placeholder="prodi" name="prodi" class="form-select rounded input-size text-secondary" aria-label="Default select example">
-            <option selected value="belum_isi">Divisi</option>
+            <option selected value="belum_isi">Program Studi</option>
             <option value="Teknik Informatika">Teknik Informatika</option>
-            <option value="AB">Teknik Electro</option>
+            <option value="Teknik Elektro">Teknik Elektro</option>
             <option value="Teknik Telekomunikasi">Teknik Telekomunikasi</option>
             <option value="Teknik Lingkungan">Teknik Lingkungan</option>
             <option value="Teknik Industri">Teknik Industri</option>
@@ -205,11 +212,11 @@
       <!-- riwayatPenyakit -->
 
               <!-- roles -->
-              <div class="row justify-content-center align-items-center">
-                <div class="col mb-3 d-flex justify-content-center align-items-center">
-                  <input name="roles" type="text" class="form-control rounded input-size" id="ig" placeholder="staff" readonly value="7" />
-                </div>
-              </div>
+        <div class="row justify-content-center align-items-center">
+        <div class="col mb-3 d-flex justify-content-center align-items-center">
+            <input name="roles" type="text" class="form-control rounded input-size" id="ig" placeholder="staff" readonly value="7" />
+        </div>
+        </div>
               <!-- roles -->
 
       <!-- Tombol Daftar -->
@@ -227,6 +234,7 @@
     </div>
     <!-- Akhir Login -->
     </div>
+
 </section>
 @endsection
 
