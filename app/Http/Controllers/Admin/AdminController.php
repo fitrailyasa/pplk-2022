@@ -386,20 +386,66 @@ class AdminController extends Controller
     }
 
 
-    //HAPUS Funfact
+    //HAPUS Upt
     public function destroyUpt($id)
     {
-        $data=Upt::where('id',$id)->first();
+        $data = Upt::where('id', $id)->firstor();
         $data->delete();
 
         return 'hapus sukses';
     }
 
+    //HAPUS Funfact
     public function destroyFunfact($id)
     {
-        $data=Funfact::where('id',$id)->first();
+        $data = Funfact::where('id', $id)->first();
         $data->delete();
-        
+
+        return 'hapus sukses';
+    }
+
+    //HAPUS Begalin
+    public function destroyBegalin($id)
+    {
+        $data = Begalin::where('id', $id)->first();
+        $data->delete();
+
+        return 'hapus sukses';
+    }
+
+    //HAPUS KamusGaul
+    public function destroyKamusGaul($id)
+    {
+        $data = Kamusgaul::where('id', $id)->first();
+        $data->delete();
+
+        return 'hapus sukses';
+    }
+
+    //HAPUS Prodi
+    public function destroyProdi($id)
+    {
+        $data = Prodi::where('id', $id)->first();
+        $data->delete();
+
+        return 'hapus sukses';
+    }
+
+    //HAPUS Himpunan
+    public function destroyHimpunan($id)
+    {
+        $data = Himpunan::where('id', $id)->first();
+        $data->delete();
+
+        return 'hapus sukses';
+    }
+
+    //HAPUS Ukm
+    public function destroyUkm($id)
+    {
+        $data = Ukm::where('id', $id)->first();
+        $data->delete();
+
         return 'hapus sukses';
     }
 

@@ -46,7 +46,7 @@
           </div>
         </div>
       </div>
-     </div>
+    </div>
       <div class="row">
         <div class="col-md">
           <div class="widget-stat card" style="background: #9665FF;">
@@ -173,7 +173,7 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Foto Profil</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Golongan Darah" name="fotoProfil" id="golongandarah" >
+              <input type="text" class="form-control" placeholder="Foto Profil" name="fotoProfil" id="golongandarah" >
             </div>
           </div>
           <div class="mb-3 row">
@@ -328,9 +328,9 @@
             <div class="mb-3 row">
               <label class="col-sm-3 col-form-label">Prestasi</label>
               <div class="col-sm-9 mb-3">
-                <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2020" name="prestasi" id="prestasi"  ></textarea>
-                <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2021" name="prestasi" id="prestasi"  ></textarea>
-                <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2022" name="prestasi" id="prestasi"  ></textarea>
+                <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2020" name="prestasi1" id="prestasi"  ></textarea>
+                <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2021" name="prestasi2" id="prestasi"  ></textarea>
+                <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2022" name="prestasi3" id="prestasi"  ></textarea>
               </div>
             </div>
 
@@ -816,29 +816,9 @@
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
-                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <a class="delete-button">
                       <i class="fa-solid fa-trash-can"></i>
                     </a>
-                    <!-- Modal -->
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel"><strong>Hapus Data</strong></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            Anda yakin menghapus data?
-                          </div>
-                          <div class="modal-footer">
-                            <form action="" method="POST">
-                                <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
-                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
                   </td>
                 </tr>
                 @endforeach
@@ -1024,10 +1004,14 @@
                     <th>Misi</th>
                     <th>Deskripsi</th>
                     <th>Kepala Prodi</th>
+                    <th>Ruang Prodi</th>
                     <th>akreditasi</th>
                     <th>tahun Berdiri</th>
                     <th>jumlah Mahasiswa</th>
-                    <th>diagram alir</th>
+                    <th>Prestasi 2020</th>
+                    <th>Prestasi 2021</th>
+                    <th>Prestasi 2022</th>
+                    <th>Logo</th>
                     <th>More</th>
                 </tr>
               </thead>
@@ -1041,38 +1025,22 @@
                     <td>{{ $prodi->misi }}</td>
                     <td>{{ $prodi->deskripsi }}</td>
                     <td>{{ $prodi->kepalaProdi }}</td>
+                    <td>{{ $prodi->ruangProdi }}</td>
                     <td>{{ $prodi->akreditasi }}</td>
                     <td>{{ $prodi->tahunBerdiri }}</td>
                     <td>{{ $prodi->jumlahMahasiswa }}</td>
+                    <td>{{ $prodi->prestasi1 }}</td>
+                    <td>{{ $prodi->prestasi2 }}</td>
+                    <td>{{ $prodi->prestasi3 }}</td>
                     <td><img src=" #" widht="100" height="100"/></td>
                     <td class="manage-row">
                     <a href="{{ route('viewEditProdi', ['id'=>$prodi->id]) }}" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
-                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <a href="{{ route('hapusProdi',['id'=>$prodi->id]) }}" class="delete-button">
                       <i class="fa-solid fa-trash-can"></i>
                     </a>
-                    <!-- Modal -->
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel"><strong>Hapus Data</strong></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            Anda yakin menghapus data?
-                          </div>
-                          <div class="modal-footer">
-                            <form action="" method="POST">
-                                <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
-                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
                   </td>
                 </tr>
                 @endforeach
@@ -1148,29 +1116,9 @@
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
-                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <a href="{{ route('hapusHimpunan', ['id'=>$himpunan->id]) }}" class="delete-button">
                       <i class="fa-solid fa-trash-can"></i>
                     </a>
-                    <!-- Modal -->
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel"><strong>Hapus Data</strong></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            Anda yakin menghapus data?
-                          </div>
-                          <div class="modal-footer">
-                            <form action="" method="POST">
-                                <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
-                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
                   </td>
                 </tr>
                 @endforeach
@@ -1442,29 +1390,9 @@
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
-                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <a href="{{ route('hapusUkm', ['id'=>$ukm->id]) }}" class="delete-button">
                       <i class="fa-solid fa-trash-can"></i>
                     </a>
-                    <!-- Modal -->
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel"><strong>Hapus Data</strong></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            Anda yakin menghapus data?
-                          </div>
-                          <div class="modal-footer">
-                            <form action="" method="POST">
-                                <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
-                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
                   </td>
                 </tr>
                 @endforeach
@@ -1505,6 +1433,7 @@
                 <tr>
                   <th>No</th>
                   <th>Deskripsi</th>
+                  <th>More</th>
                 </tr>
               </thead>
               <tbody>
@@ -1576,7 +1505,7 @@
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
-                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <a href="{{ route('hapusBegalin',["id"=>$begalin->id]) }}" class="delete-button">
                       <i class="fa-solid fa-trash-can"></i>
                     </a>
                     <!-- Modal -->
@@ -1655,29 +1584,9 @@
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
-                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <a href="{{ route('hapusKamusGaul',["id"=>$kamusgaul->id]) }}" class="delete-button">
                       <i class="fa-solid fa-trash-can"></i>
                     </a>
-                    <!-- Modal -->
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel"><strong>Hapus Data</strong></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            Anda yakin menghapus data?
-                          </div>
-                          <div class="modal-footer">
-                            <form action="" method="POST">
-                                <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
-                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
                   </td>
                 </tr>
                 @endforeach
