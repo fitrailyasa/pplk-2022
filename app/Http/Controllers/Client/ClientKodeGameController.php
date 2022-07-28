@@ -48,8 +48,7 @@ class ClientKodeGameController extends Controller
      */
     public function show(Kode_game $kode_game)
     {
-         $data = Kode_game::find($kode_game->no);
-        return view('client.games.redeem-code.redeem', compact('data'));
+
     }
 
     /**
