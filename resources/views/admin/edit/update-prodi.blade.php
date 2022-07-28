@@ -89,6 +89,18 @@
             <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2022" name="prestasi" id="prestasi" value="{{ $prodi->prestasi }}"  >{{ $prodi->prestasi }}</textarea>
           </div>
         </div>
+        <div class="mb-3 row">
+    
+          <label class="col-sm-3 col-form-label">Jurusan</label>
+            <div class="col-sm-9">
+            <select style="width:100px;" selected class="selected" name="jurusan_id" value="{{ $prodi->jurusan_id }}">
+              <option value="1" >JTIK</option>
+              <option value="2">JTIP</option>
+              <option value="3">JS</option>
+            </select>
+          </div> 
+      
+        </div>
       <div class="mb-3 row">
         <div class="col-sm-9">
           <a>

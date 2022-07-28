@@ -30,7 +30,8 @@ class User extends Authenticatable
         'instagram',
         'golonganDarah',
         'riwayatPenyakit',
-        'nomorHp'
+        'nomorHp',
+        'qrCode'
     ];
 
     /**

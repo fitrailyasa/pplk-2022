@@ -1,16 +1,33 @@
-@extends('layouts.client.app')
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+        <meta name="theme-color" content="#09f" />
+        <meta name="description" content="DESKRIPSI" />
+        <meta name="keywords" content="KATA KUNCI" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="author" content="Fitra Ilyasa" />
+        <meta name="copyright" content="PPLK 2022" />
+        <meta name="robots" content="follow" />
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Website PPLK 2022" />
+        <meta property="og:url" content="URL" />
+        <link rel="manifest" href="./manifest.webmanifest" />
 
-<!-- TITLE -->
-@section('title', 'Login')
+        <!-- JUDUL -->
+        <title>@yield('title')Login - PPLK 2022</title>
 
-@section('style')
-<!-- STYLES -->
-<link rel="stylesheet" href="{{ asset('assets/css/login.css') }}">
-@endsection
-
-@section('content')
+        <!-- CSS -->
+        <link rel="stylesheet" href="{{ asset('assets/css/main-style.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/login.css') }}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 <!-- CONTENT -->
 <!-- Splash Screen -->
+<body>
 <div class="launch-logo fade" id="splash-screen">
   <img src="../assets/logo-pplk-minified.png" alt="launch-logo-pplk" class="launch-logo-image" />
 </div>
@@ -96,8 +113,6 @@
     </div>
   </div>
 </div>
-@endsection
-
 @section('script')
 <script>
   function DoAnimation() {
@@ -106,6 +121,8 @@
     targetElement.className += " animate";
   }
 </script>
+<script src="{{ asset('assets/js/manifest.json') }}"></script>
+<script src="{{ asset('assets/js/seriviceWorker.js') }}"></script>
 <script src="{{ asset('assets/js/mainServiceWorker.js') }}"></script>
 <script>
 
@@ -142,4 +159,5 @@
     });
 
 </script>
-@endsection
+</body>
+</html>

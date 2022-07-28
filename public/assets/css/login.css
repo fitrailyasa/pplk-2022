@@ -78,8 +78,13 @@ body {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+#email, #password {
+  width: 50%;
+}
+
+
 #masuk {
-  width: 58.95%;
+  width: 50%;
   height: 50px;
   background: rgb(113, 12, 111);
   background: linear-gradient(180deg, rgba(113, 12, 111, 1) 12%, rgba(140, 51, 138, 1) 61%, rgba(200, 137, 198, 1) 100%);
@@ -113,7 +118,7 @@ body {
   }
 
   #masuk {
-    width: 80%;
+    width: 50%;
     height: 50px;
     background: rgb(113, 12, 111);
     background: linear-gradient(180deg, rgba(113, 12, 111, 1) 12%, rgba(140, 51, 138, 1) 61%, rgba(200, 137, 198, 1) 100%);
