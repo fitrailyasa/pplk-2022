@@ -21,18 +21,16 @@
                 <div class="col-top-scanner justify-content-center">
                     <h5>SCANNER QR CODE</h5>
                 </div>
+                <div><form action="/presensi/{{ $users->id }}" method="POST">
+                    @csrf
                 <div class="col-scanner justify-content-center" id="ganti">
                     <div id="reader" class="justify-content-center"></div>
                 </div>
-                <div class="col-2-scanner justify-content-center">
-                   <!--  <h5>Hasil Scan</h5> -->
-                </div>
+
+            </form></div>
             </div>
         </div>
     </div>
-
-
-
     </div>
 @endsection
 

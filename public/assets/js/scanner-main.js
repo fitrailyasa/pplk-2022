@@ -1,9 +1,11 @@
 function onScanSuccess(qrCodeMessage) {
-    console.log(qrCodeMessage);
-    document.getElementById('ganti').innerHTML = '<a href="../../assets/php/scanner.php?hasil='+qrCodeMessage+'">UNGGAH</a>';
+console.log(qrCodeMessage);
+    document.getElementById('ganti').innerHTML = '<input name="nim" type="text" value="'+qrCodeMessage+'" readonly style="display: none;"><input name="status" type="text" value="hadir" readonly style="display: none;"><input type="submit" class="btn btn-primary">';
 }
+
+
   function onScanError(errorMessage) {
-  //handle scan error
+
   }
   var html5QrcodeScanner = new Html5QrcodeScanner(
     "reader", { fps: 10, qrbox: 250 });
