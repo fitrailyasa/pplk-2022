@@ -328,9 +328,9 @@
             <div class="mb-3 row">
               <label class="col-sm-3 col-form-label">Prestasi</label>
               <div class="col-sm-9 mb-3">
-                <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2020" name="prestasi" id="prestasi"  ></textarea>
-                <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2021" name="prestasi" id="prestasi"  ></textarea>
-                <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2022" name="prestasi" id="prestasi"  ></textarea>
+                <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2020" name="prestasi1" id="prestasi"  ></textarea>
+                <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2021" name="prestasi2" id="prestasi"  ></textarea>
+                <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2022" name="prestasi3" id="prestasi"  ></textarea>
               </div>
             </div>
 
@@ -1004,10 +1004,14 @@
                     <th>Misi</th>
                     <th>Deskripsi</th>
                     <th>Kepala Prodi</th>
+                    <th>Ruang Prodi</th>
                     <th>akreditasi</th>
                     <th>tahun Berdiri</th>
                     <th>jumlah Mahasiswa</th>
-                    <th>diagram alir</th>
+                    <th>Prestasi 2020</th>
+                    <th>Prestasi 2021</th>
+                    <th>Prestasi 2022</th>
+                    <th>Logo</th>
                     <th>More</th>
                 </tr>
               </thead>
@@ -1021,16 +1025,20 @@
                     <td>{{ $prodi->misi }}</td>
                     <td>{{ $prodi->deskripsi }}</td>
                     <td>{{ $prodi->kepalaProdi }}</td>
+                    <td>{{ $prodi->ruangProdi }}</td>
                     <td>{{ $prodi->akreditasi }}</td>
                     <td>{{ $prodi->tahunBerdiri }}</td>
                     <td>{{ $prodi->jumlahMahasiswa }}</td>
+                    <td>{{ $prodi->prestasi1 }}</td>
+                    <td>{{ $prodi->prestasi2 }}</td>
+                    <td>{{ $prodi->prestasi3 }}</td>
                     <td><img src=" #" widht="100" height="100"/></td>
                     <td class="manage-row">
                     <a href="{{ route('viewEditProdi', ['id'=>$prodi->id]) }}" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
-                    <a href="{{ route('hapusProdi',["id"=>$prodi->id]) }}" class="delete-button">
+                    <a href="{{ route('hapusProdi',['id'=>$prodi->id]) }}" class="delete-button">
                       <i class="fa-solid fa-trash-can"></i>
                     </a>
                   </td>

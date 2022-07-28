@@ -16,9 +16,10 @@
                                         Schema::create('presensis', function (Blueprint $table) {
                                             $table->id();
                                             $table->foreignId('user_id')->constrained('users')->onDelete('cascade')->onUpdate('cascade');
-                                            $table->date('hari');
+                                            $table->string('hari');
                                             $table->foreignId('status_id');
                                             $table->foreign('status_id')->references('id')->on('status_kehadirans');
+                                            $table->string('status');
                                             $table->timestamps();
                                         });
                                     }
