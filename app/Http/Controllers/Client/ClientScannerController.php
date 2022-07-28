@@ -22,6 +22,7 @@ class ClientScannerController extends Controller
     {
             $users = User::where('id', $id)->firstOrFail();
             $date = Date("m.d.y");
+
             $token = "$id"."$date";
             if  ($users->nim == $request->input('nim')){
                     Presensi::create([

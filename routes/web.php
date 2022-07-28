@@ -161,9 +161,6 @@ Route::get('/pplk', function () {                 // ===> pplk
     return view('client.pplk');
 });
 
-Route::get('/scanner', function () {              // ===> scanner
-    return view('client.scanner');
-
 Route::get('/card-list', function () {            // ===> redeem code card list
     return view('client.games.redeem-code.card-list');
 

@@ -70,7 +70,16 @@
           <input name="email" type="email" class="form-control rounded input-size" id="email" placeholder="Email" required />
         </div>
       </div>
-      <!-- Akhir Email -->
+
+      {{-- contoh error --}}
+      {{-- <div class="row justify-content-center">
+        <div class="col mb-3 d-flex justify-content-center">
+            @error('email')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
+        </div>
+      </div> --}}
+
 
       <!-- Password -->
       <div class="row justify-content-center">
@@ -225,6 +234,7 @@
     </div>
     <!-- Akhir Login -->
     </div>
+
 </section>
 @endsection
 
