@@ -6,7 +6,7 @@
 @section('content')
 
 <!--Tabel Begalin-->
-<div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="overflow-x:hidden; display: none;" id="kelola-begalin">
+<div class="col-lg-12col-lg-12 form-wrapper"  id="kelola-begalin">
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Kelola Tabel Begalin</h4>
@@ -41,7 +41,7 @@
                     <td>{{ $begalin->judul }}</td>
                     <td>{{ $begalin->isi }}</td>
                     <td class="manage-row">
-                      <a href="{{ route('viewEditBegalin', ['id'=>$begalin->id]) }}" class="edit-button">
+                      <a href="{{ route('adminBegalin.edit',['id'=>$begalin->id]) }}" class="edit-button">
                         <i class="fa-solid fa-marker"></i>
                       </a>
                       <!-- Button trigger modal -->

@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Begalin;
+use App\Models\KamusGaul;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Admin\Controller;
-use Illuminate\Contracts\View\View;
-use Illuminate\Http\RedirectResponse;
 
-class AdminBegalinController extends Controller
+
+class AdminKamusGaulController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +16,8 @@ class AdminBegalinController extends Controller
      */
     public function index()
     {
-        $begalins = Begalin::all();
-        return view('admin.begalin.index', compact('begalins'));
+        $kamusgauls = Kamusgaul::all();
+        return view('admin.kamusgaul.index', compact('kamusgauls'));
     }
 
     /**
@@ -28,8 +27,7 @@ class AdminBegalinController extends Controller
      */
     public function create()
     {
-        $begalins = Begalin::all();
-        return view('admin.begalin.create', compact('begalins'));
+        return view('admin.kamusGaul.create', compact('kamusgauls'));
     }
 
     /**
@@ -40,12 +38,14 @@ class AdminBegalinController extends Controller
      */
     public function store(Request $request)
     {
-        Begalin::create([
-            'judul' => $request->judul,
-            'isi' => $request->isi
+
+        Kamusgaul::create([
+            'gaul' => $request->gaul,
+            'asli' => $request->asli,
+            'contohPenggunaan' => $request->contohPenggunaan
         ]);
 
-        return 'Begalin Berhasil';
+        return 'Kamus Gaul Berhasil';
     }
 
     /**
@@ -54,11 +54,20 @@ class AdminBegalinController extends Controller
      * @param  \App\Models\begalin  $begalin
      * @return \Illuminate\Http\Response
      */
-
-    public function edit($id = 1): View
+    public function show(begalin $begalin)
     {
-        $begalin = Begalin::Where('id', $id);
-        return view('admin.begalin.update', compact('begalin'));
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\begalin  $begalin
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(begalin $begalin)
+    {
+        return view('admin.begalin.edit', compact('begalins'));
     }
 
     /**
@@ -68,15 +77,16 @@ class AdminBegalinController extends Controller
      * @param  \App\Models\begalin  $begalin
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Begalin $begalin)
+    public function update(Request $request)
     {
+        $begalin = Begalin::where('id', $request->id)->first();
         $begalin->update(
             [
                 'judul' => $request->judul,
                 'isi' => $request->isi
             ]
         );
-        return 'update begalin berhasil';
+        return $this->index()->with('sukses', ' Success Inserted ' . $begalin->isi);
     }
 
     /**
@@ -91,5 +101,7 @@ class AdminBegalinController extends Controller
         $data->delete();
 
         return 'hapus sukses';
+    }
+} { {
     }
 }

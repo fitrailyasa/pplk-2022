@@ -301,13 +301,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a onclick="openCMS(event, 'tambah-begalin')" class="nav-link tablinks">
+                <a href="{{ route('adminBegalin.create') }}" class="nav-link tablinks">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah Begalin</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a onclick="openCMS(event, 'kelola-begalin')" class="nav-link tablinks">
+                <a href="{{ route('adminBegalin.index') }}" class="nav-link tablinks">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Kelola Data Begalin</p>
                 </a>

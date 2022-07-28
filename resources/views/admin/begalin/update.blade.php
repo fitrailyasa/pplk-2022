@@ -5,13 +5,13 @@
 
 @section('content')
 
-<div class="col-lg-12 col-lg-12 form-wrapper"   id="editbegalin">
+<div class="col-lg-12 col-lg-12 form-wrapper"   id="edit-begalin">
     <div class="card">
     <div class="card-header">
     <h4 class="card-title">Input Data Begalin</h4>
     </div>
     <div class="card-body">
-      <form method="POST" action="{{ route('editBegalin') }}" enctype='multipart/form-data'>
+      <form method="POST" action="" enctype='multipart/form-data'>
       @csrf
       @method('PUT')
       <input type="hidden" value="{{ $begalin->id }}" name="id">

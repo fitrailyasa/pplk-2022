@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\AdminBegalinController;
 use App\Http\Controllers\Client\ClientUptController;
 use App\Http\Controllers\Client\ClientProdiController;
 use App\Http\Controllers\Client\ClientBegalinController;
@@ -34,14 +35,20 @@ use App\Http\Controllers\Client\ClientScannerController;
 /* Auth::routes();
 Route::get('/home',[HomeController::class, 'index'])->name('home'); */
 
+
+
+//Admin Route
+Route::get('/', [AdminController::class, 'index'])->name('index');
+Route::resource('adminBegalin', AdminBegalinController::class)->except(['show']);
+
 //Login
 
-Route::get('/', [LoginController::class, 'showLoginForm']);
-Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
-Route::post('/', [LoginController::class, 'login'])->name('loginPost');
-Route::get('/guest', [guestController::class, 'login'])->name('guest');
+// Route::get('/', [LoginController::class, 'showLoginForm']);
+// Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+// Route::post('/', [LoginController::class, 'login'])->name('loginPost');
+// Route::get('/guest', [guestController::class, 'login'])->name('guest');
 
-Route::get('/admin', [AdminController::class, 'index'])->name('cms'); //===> cms admin
+// Route::get('/admin', [AdminController::class, 'index'])->name('cms'); //===> cms admin
 
 //ROUTE CREATE
 Route::post('/admin/Ukm', [AdminController::class, 'storeUkm'])->name('createUkm');
