@@ -41,7 +41,13 @@ Route::get('/home',[HomeController::class, 'index'])->name('home'); */
 //Admin Route
 Route::get('/', [AdminController::class, 'index'])->name('index');
 Route::resource('adminBegalin', AdminBegalinController::class)->except(['show']);
-
+Route::resource('adminFunfact', AdminBegalinController::class)->except(['show']);
+Route::resource('adminHimpunan', AdminBegalinController::class)->except(['show']);
+Route::resource('adminKamusGaul', AdminBegalinController::class)->except(['show']);
+Route::resource('adminProdi', AdminBegalinController::class)->except(['show']);
+Route::resource('adminUkm', AdminBegalinController::class)->except(['show']);
+Route::resource('adminUser', AdminBegalinController::class)->except(['show']);
+Route::resource('adminUpt', AdminBegalinController::class)->except(['show']);
 //Login
 
 // Route::get('/', [LoginController::class, 'showLoginForm']);
