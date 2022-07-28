@@ -17,7 +17,7 @@
         <link rel="manifest" href="./manifest.webmanifest" />
 
         <!-- JUDUL -->
-        <title>@yield('title') - PPLK 2022</title>
+        <title>@yield('title')Login - PPLK 2022</title>
 
         <!-- CSS -->
         <link rel="stylesheet" href="{{ asset('assets/css/main-style.css') }}">

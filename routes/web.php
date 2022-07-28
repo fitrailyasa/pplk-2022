@@ -90,6 +90,15 @@ Route::put('/admin/editprodi', [AdminController::class, 'updateProdi'])->name('e
 Route::get('/admin/updateprodi/{id}', [AdminController::class, 'getProdiId'])->name('viewEditProdi');
 
 //Delete Funfact
+
+Route::get('/admin/hapusfunfact/{id}', [AdminController::class, 'destroyFunfact'])->name('hapusFunfact');
+//Delete Upt
+Route::get('/admin/hapusupt/{id}', [AdminController::class, 'destroyUpt'])->name('hapusUpt');
+//Delete Begalin
+Route::get('/admin/hapusbegalin/{id}', [AdminController::class, 'destroyBegalin'])->name('hapusBegalin');
+//Delete KamusGaul
+Route::get('/admin/hapuskamusgaul/{id}', [AdminController::class, 'destroyKamusGaul'])->name('hapusKamusGaul');
+
 Route::get('/admin/hapusfunfact/{id}',[AdminController::class,'destroyFunfact'])->name('hapusFunfact');
 
 Route::get('/admin/hapusupt/{id}',[AdminController::class,'destroyUpt'])->name('hapusUpt');
@@ -115,7 +124,7 @@ Route::get('/scanner', [ClientScannerController::class, 'index'])->name('scanner
 Route::get('/detail-prodi',)->name('detailprodi');
 
 
-Route::get('/detail-prodi', )->name('detailprodi');
+Route::get('/detail-prodi',)->name('detailprodi');
 
 Route::get('/edit-biodata', [ClientBiodataController::class, 'indexEditBio'])->name('edit-biodata');
 
