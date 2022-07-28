@@ -94,7 +94,8 @@ Route::get('/admin/hapusfunfact/{id}', [AdminController::class, 'destroyFunfact'
 Route::get('/admin/hapusupt/{id}', [AdminController::class, 'destroyUpt'])->name('hapusUpt');
 //Delete Begalin
 Route::get('/admin/hapusbegalin/{id}', [AdminController::class, 'destroyBegalin'])->name('hapusBegalin');
-
+//Delete KamusGaul
+Route::get('/admin/hapuskamusgaul/{id}', [AdminController::class, 'destroyKamusGaul'])->name('hapusKamusGaul');
 
 
 
