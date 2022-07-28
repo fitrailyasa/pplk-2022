@@ -11,10 +11,10 @@
     <h4 class="card-title">Input Data Begalin</h4>
     </div>
     <div class="card-body">
-      <form method="POST" action="" enctype='multipart/form-data'>
+      <form method="POST" action="{{ route('adminBegalin.update',$begalin) }}" enctype='multipart/form-data'>
       @csrf
       @method('PUT')
-      <input type="hidden" value="{{ $begalin->id }}" name="id">
+      <input type="hidden" value="$begalin->id" name="id">
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Artikel Singkat</label>
           <div class="col-sm-9">

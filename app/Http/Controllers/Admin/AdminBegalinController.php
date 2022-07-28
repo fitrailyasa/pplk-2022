@@ -55,9 +55,9 @@ class AdminBegalinController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function edit($id = 1): View
+    public function edit($id)
     {
-        $begalin = Begalin::Where('id', $id);
+        $begalin=Begalin::where('id',$id)->first();
         return view('admin.begalin.update', compact('begalin'));
     }
 
@@ -68,7 +68,7 @@ class AdminBegalinController extends Controller
      * @param  \App\Models\begalin  $begalin
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Begalin $begalin)
+    public function update(Request $request,Begalin $begalin)
     {
         $begalin->update(
             [
@@ -76,7 +76,7 @@ class AdminBegalinController extends Controller
                 'isi' => $request->isi
             ]
         );
-        return 'update begalin berhasil';
+        return redirect('/adminBegalin')->with('sukses', 'Berhasil Edit Data!');
     }
 
     /**
@@ -85,11 +85,11 @@ class AdminBegalinController extends Controller
      * @param  \App\Models\begalin  $begalin
      * @return \Illuminate\Http\Response
      */
-    public function destroy(begalin $begalin, $id)
+    public function destroy($id)
     {
         $data = Begalin::where('id', $id)->first();
         $data->delete();
 
-        return 'hapus sukses';
+        return redirect('/adminBegalin')->with('sukses', 'Berhasil Hapus Data!');
     }
 }
