@@ -49,6 +49,7 @@ html{
 
 body {
 	font-family: var(--font-family-body) !important;
+    overflow-x: hidden !important;
 }
 
 /* Navbar Utama*/
@@ -78,7 +79,12 @@ body {
     color: var(--font-color-primary);
 }
 
+
+
 /* Left Sidebar*/
+.tablinks, .tabitem{
+    cursor: pointer;
+}
 #left-sidebar{
     background: var(--bawaan-gradient-3);
     background: var(--gradient-3);
@@ -92,7 +98,74 @@ body {
     color: white;
 }
 
+table{
+    border-collapse:collapse;
+    border:2px solid #000000;
+}
+table td{
+    border:2px solid #000000;
+}
+table th{
+    background:#337ab7;
+    color:rgb(0, 0, 0);
+    text-align:left;
+    vertical-align:center;
+    margin:1px;
+    border:2px solid #000000;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; 
+    }
+
+@media (max-width: 575.98px) {
+    .table-responsive-sm {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; 
+        } 
+    }
+@media (max-width: 767.98px) {
+    .table-responsive-md {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; 
+        } 
+    }
+@media (max-width: 991.98px) {
+    .table-responsive-lg {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; 
+        } 
+    }
+@media (max-width: 1199.98px) {
+    .table-responsive-xl {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; 
+        } 
+    }
+@media (max-width: 1439.98) {
+    .table-responsive-xxl {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; 
+        } 
+    }
+    .form-label {
+        margin-bottom: 0.5rem; 
+    }
+
 @media screen and (max-width:290px) {
+    #judul-pplk{
+        display: none;
+    }
+    aside.control-sidebar{
+        width: 50%;
+    }
+    aside .p-3 h5{
+        font-size: 0.8rem;
+    }
+    aside .p-3 a{
+        font-size: .7rem;
+    }
     #icon-fullscreen{
         display:none;
     }

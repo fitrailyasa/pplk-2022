@@ -32,7 +32,7 @@
 </div>
 <br><br>
 
-<div class="slide-container swiper">
+<div class="slide-container swiper" id="terakhir">
             <div class="slide-content">
                 <div class="card-wrapper swiper-wrapper">
                     <div class="card-rr swiper-slide">

@@ -328,6 +328,8 @@ body{
 .profile {
     background-color: var(--font-color-primary-2);
     border-radius: 50%;
+    max-width: 350px;
+    max-height: 350px;
 }
 
 .col-xl-6{

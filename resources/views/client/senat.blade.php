@@ -1,7 +1,7 @@
 @extends('layouts.client.app')
 
 <!-- TITLE -->
-@section('title', 'Kabinet ')
+@section('title', 'Senat ')
 
 @section('style')
     <!-- STYLES -->
@@ -61,7 +61,7 @@
 
         <div style="text-align: center;" class="container justify-content-center mt-3 text-light mt-md-5 mt-sm-2">
         <h2 class="text-center fw-bold teks2">VISI</h2>
-        <p class="teks5">   Terwujudnya senat KM ITERA yang amanah, komunikatif, dan intelektual guna mempersatukan elemen yang ada di KM ITERA agar dapat bersinergi baik internal maupun eksternal</p>
+        <p class="teks5">"Terwujudnya senat KM ITERA yang amanah, komunikatif, dan intelektual guna mempersatukan elemen yang ada di KM ITERA agar dapat bersinergi baik internal maupun eksternal"</p>
         <h2 class="text-center teks2">MISI</h2>
         <p class="teks5">1.Mewujudkan penyelenggaraan fungsi legislasi yang efektif dan efisien</p>
         <p class="teks5">2.Mewujudkan fungsi anggaran organisasi yang transparant dan akuntabel</p>
@@ -76,8 +76,5 @@
 @endsection
 
 @section('script')
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="{{ asset('assets/js/kabinet.min.js') }}"></script>
-    <script src="{{ asset('assets/js/kabinet.js') }}"></script>
+<script src="{{ asset('assets/js/kabinet.js') }}"></script>
 @endsection

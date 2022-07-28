@@ -9,5 +9,5 @@ class Kamusgaul extends Model
 {
     use HasFactory;
     protected $table = 'kamus_gauls';
-    protected $fillable = ['gaul', 'asli'];
+    protected $fillable = ['gaul', 'asli','contohPenggunaan'];
 }

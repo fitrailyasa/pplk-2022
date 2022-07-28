@@ -10,20 +10,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-
-   <!--icon-->
-   <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/favicon.ico') }}" />
+<!--icon-->
+<link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/favicon.ico') }}" />
 @endsection
 
 @section('content')
 <div class="body">
     <div class="container-fluid">
         <div class="row justify-content-around">
+
             <div class="col-lg-3 col-md-10 col-sm-12 justify-content-center">
-                <div class="center">
+                <div class="center" style="justify-content:center !important;">
+
                     <div class="bio-profile">
-                        <img class="ratio border ratio-1x1 profile" src="{{ asset('assets/jhonny.jpg') }}" alt="photo-profile">
+                        @if ($biodata->fotoProfil == null)
+                        <img class="ratio ratio-1x1 profile" style="" src="{{ asset('assets/profile') }}/default.png" alt="fotoprofil">
+                        @elseif($biodata->fotoProfil != null)
+                        <img class="ratio ratio-1x1 profile" style="" src="{{ asset('assets/profile') }}/{{ $biodata->fotoProfil }}" alt="fotoprofil">
+                        @endif
                     </div>
+
                     <div class="edit-profile py-md-4">
                         <a href="/edit-biodata" class="pt-5">
                             <label class="btn btn-primary fs-5">
@@ -31,15 +37,21 @@
                             </label>
                         </a>
                     </div>
-                    <div class="row qr-code py-md-4">
-                        <div class="imgUp justify-content-center">
-                            <div class="ratio ratio-1x1  content">
-                                <img src="{!! asset('assets') !!}/qrCode/{{$biodata->qrCode}}" alt="">
+
+                    <br><h1 align="center" >QR PRESENSI</h1> <br>
+
+                    <div class=" qrCode Justify-content-center row container qr-code py-md-4" style=" width: 250px; height:250px;" >
+                        <div class="w-100">
+                            <div class="ratio ratio-1x1 content rounded">
+                                    <iframe id="qrCode" src="{{ asset('assets/qrCode')}}/{{ $biodata->nim }} "></iframe>
+                                    <img src="{{ asset('assets/logomini.png') }}" alt="logo kecil">
                             </div>
                         </div><!-- col-2 -->
                     </div>
+
                 </div><!-- row -->
             </div><!-- container -->
+
             <div class="col-xl-6 col-sm-12">
                 <h1 align="center" >BIODATA PENGGUNA</h1> <br>
                 <div class="container">
@@ -67,22 +79,22 @@
 
                         <div class="row bio-input">
                             <label class="form-label" for="prodi">Program Studi</label>
-                            <input type="text" placeholder="{{ $biodata->prodis_id }}" disabled>
+                            <input type="text" placeholder="{{ $biodata->prodi }}" disabled>
                         </div>
 
                         <div class="row bio-input">
                             <label class="form-label" for="notel">Nomor Telepon</label>
-                            <input type="text" placeholder="belum dinamis" disabled>
+                            <input type="text" placeholder="{{ $biodata->nomorHp }}" disabled>
                         </div>
 
-                        <div class="row bio-input">
+                        {{-- <div class="row bio-input">
                             <label class="form-label" for="golongan darah">Alamat</label>
                             <input type="text" placeholder="blum dinamis" disabled>
-                        </div>
+                        </div> --}}
 
                         <div class="row bio-input">
                             <label class="form-label" for="golongan darah">Golongan Darah</label>
-                            <input type="text" placeholder="blum dinamis" disabled>
+                            <input type="text" placeholder="{{ $biodata->golonganDarah }}" disabled>
                         </div>
 
                         <div class="row bio-input">
@@ -92,7 +104,7 @@
 
                         <div class="row bio-input">
                             <label class="form-label" for="riwayat">Riwayat Penyakit</label>
-                            <input type="text" placeholder="belum dinamis" disabled>
+                            <input type="text" placeholder="{{ $biodata->riwayatPenyakit }}" disabled>
                         </div>
                 </form>
                 </div>
@@ -105,9 +117,5 @@
 
 @section('script')
     <!-- SCRIPTS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src = "https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src = "{{ asset('assets/js/biodata.js') }}"></script>
 @endsection

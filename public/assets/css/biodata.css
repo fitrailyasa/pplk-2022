@@ -3,8 +3,6 @@
 
 /* CONTENT CSS */
 body{
-    margin: 0;
-    padding: 0;
     padding-bottom: 90px;
     display: block;
     font-family: var(--font-family-body) !important;
@@ -34,7 +32,7 @@ body{
 
 .container {
     width: 100%;
-    padding: 15px 0 20px 0;
+    padding: 15px 0 15px 0;
     border-radius: 15px;
     color: var(--black);
     font-weight: bold;
@@ -66,7 +64,9 @@ body{
     background: var(--bawaan-gradient-1);
     background: var(--gradient-1);
 }
-
+.qrCode{
+    margin-left:50px !important;
+}
 .qr-code{
     padding-top: 20px;
 }
@@ -101,6 +101,7 @@ body{
     #mobile-footer-bar, #mobile-footer-bar .container-fluid{
         display: none;
     }
+
 }
 
 @media screen and (max-width: 1300px) {
@@ -123,11 +124,26 @@ body{
         width: 2.5rem;
         height: 2.5rem;
     }
+    .qrCode{
+        margin-left:27px !important;
+    }
+
+}
+@media screen and (max-width:1050px) {
+    #search-width{
+        width: 11.2rem;
+    }
+    .qrCode{
+        margin-left:0px !important;
+    }
 }
 
 @media screen and (max-width:930px) {
     #navbar-nav-item{
         display: none;
+    }
+    .qrCode{
+        margin-left:240px !important;
     }
     #mobile-dropdown[data-bs-popper] {
         --bs-position: end;
@@ -181,16 +197,44 @@ body{
     }
 
 }
-
+@media screen and (max-width:850px) {
+    #search-width{
+        width: 12rem;
+    }
+    .qrCode{
+        margin-left:200px !important;
+    }
+}
+@media screen and (max-width:790px) {
+    #search-width{
+        width: 12rem;
+    }
+    .qrCode{
+        margin-left:180px !important;
+    }
+}
 @media screen and (max-width:570px) {
     #search-width{
         width: 12rem;
     }
+    .qrCode{
+        margin-left:125px !important;
+    }
 }
-
-@media screen and (max-width:370px) {
+@media screen and (max-width:420px) {
     #search-width{
         width: 11.2rem;
+    }
+    .qrCode{
+        margin-left:65px !important;
+    }
+}
+@media screen and (max-width:380px) {
+    #search-width{
+        width: 11.2rem;
+    }
+    .qrCode{
+        margin-left:35px !important;
     }
 }
 
@@ -203,6 +247,9 @@ body{
 @media screen and (max-width:280px) {
     .imagePreview{
         width: 30%;
+    }
+    .qrCode{
+        margin-left:0px !important;
     }
 }
 
