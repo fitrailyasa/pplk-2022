@@ -59,7 +59,6 @@ class ClientBiodataController extends Controller
             'instagram'=>$request->instagram,
             'nomorHp'=>$request->nohp,
             'password'=> Hash::make($request->password),
-            'qrCode'=>$request->nim,
             'riwayatPenyakit'=>$request->riwayatPenyakit,
             'roles_id'=>$request->roles,
             'prodi'=>$request->prodi
@@ -86,8 +85,6 @@ class ClientBiodataController extends Controller
         $viewbiodata = User::find($id);
         $viewbiodata->fotoProfil = time().'_'.$file->getClientOriginalName();
         $viewbiodata->update();
-
-
         $filename = time().'_'.$file->getClientOriginalName();
 
         // File upload location
@@ -115,7 +112,7 @@ public function updateBiodata(Request $request, $id){
         $viewbiodata->prodi = $request->input('prodi');
 
         $viewbiodata->update();
-
+        QrCode::format('svg')->margin(2)->size(200)->errorCorrection('H')->generate("$request->nim", "../public/assets/qrcode/"."$request->nim");
         return redirect('edit-biodata');
 
 
