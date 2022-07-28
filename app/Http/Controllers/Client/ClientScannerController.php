@@ -17,19 +17,21 @@ class ClientScannerController extends Controller
         return view('client.scanner', compact('users'));
     }
 
+
     public function presensi(Request $request,  $id)
     {
-        $users = User::where('id', $id)->firstOrFail();
-        $date = Date("m.d.y");
-        $token = "$id"."$date";
-        if  ($users->nim == $request->input('nim')){
-                Presensi::create([
-                    'user_id'=>$id,
-                    'status'=>$request->input('status'),
-                    'hari'=>$date,
-                    'token' => $token
-                ]);
-        }
-}
+            $users = User::where('id', $id)->firstOrFail();
+            $date = Date("m.d.y");
+
+            $token = "$id"."$date";
+            if  ($users->nim == $request->input('nim')){
+                    Presensi::create([
+                        'user_id'=>$id,
+                        'status'=>$request->input('status'),
+                        'hari'=>$date,
+                        'token' => $token
+                    ]);
+            }
+    }
 
 }
