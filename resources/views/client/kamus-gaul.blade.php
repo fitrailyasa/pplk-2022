@@ -18,39 +18,37 @@
     <!-- CONTENT -->
     <div class="container-fluid">
         <!-- Kamus Gaul PPLK 2022 -->
-    <div class="kamus-gaul_pplk">
-        <div class = "container">
-            <h2>KAMUS GAUL<br>PPLK 2022</h2>
-        </div>
-
-
+        <div class="kamus-gaul_pplk">
+            <div class = "container">
+                <h2>KAMUS GAUL<br>PPLK 2022</h2>
+            </div>
     <!-- CARD Kamus -->
-        <section class="list-card">
-            @foreach($kamus_gauls as $kamus_gaul)
-            <div class="d-flex justify-content-center flex-wrap">
-                <div class="card rounded-4" id="btn-kamus">
-                    <a class="d-flex justify-content-center box " id="box-kamus" href="#popup-{{ $loop ->iteration }}">
-                        <div class="kata-kamus">{{ $kamus_gaul ->gaul }}</div>
-                    </a>
-                </div>
-            </div>
 
-        </section>
-    <!-- TARGET MODAL/POPUP -->
-        <div id="popup-{{ $loop->iteration }}">
-            <div class="window" id="full-kamus">
-                <a href="#" title="Close">
-                    <i class="fa-solid fa-2x fa-circle-xmark close-button"></i>
-                </a>
-                <h2>{{ $kamus_gaul ->gaul }}</h2>
-                <h6>{{ $kamus_gaul ->asli }}</h6>
-                <div class="contoh-penggunaan">
-                    <h6>Contoh penggunaan kata basing adalah :</h6>
+
+                <div class="d-flex justify-content-center flex-wrap">
+                    @foreach($kamus_gauls as $kamus_gaul)
+                    <div class="card rounded-4" id="btn-kamus">
+                        <a class="d-flex justify-content-center box " id="box-kamus" href="#popup-{{ $loop->iteration }}">
+                            <div class="kata-kamus">{{ $kamus_gaul ->gaul }}</div>
+                        </a>
+                    </div>
+                    @endforeach
                 </div>
-            </div>
+                @foreach($kamus_gauls as $kamus_gaul)
+<div id="popup-{{ $loop->iteration }}">
+    <div class="window" id="full-kamus">
+        <a href="#" title="Close"> <i class="fa-solid fa-2x fa-circle-xmark close-button"></i></a>
+        <h2>{{ $kamus_gaul ->gaul }}</h2>
+        <h6>{{ $kamus_gaul ->asli }}</h6>
+        <div class="contoh-penggunaan">
+            <h6>{{ $kamus_gaul ->contohPenggunaan }}</h6>
         </div>
+    </div>
+</div>
 @endforeach
 
+    <!-- TARGET MODAL/POPUP -->
+        </div>
     </div>
 @endsection
 

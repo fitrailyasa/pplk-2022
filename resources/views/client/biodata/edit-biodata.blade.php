@@ -23,88 +23,130 @@
             <div class="row justify-content-around">
                 <div class="col-lg-3 col-md-10 col-sm-12 justify-content-center">
                     <div class="center">
-                        <img class="ratio ratio-1x1 profile" src="../assets/jhonny.jpg">
-
-                        <div class="row qr-code py-md-5">
-                            <div class="imgUp justify-content-center">
-                                <div class="ratio ratio-1x1 imagePreview content"></div>
-                                <h3 align="center" class="pt-4">MY BARCODE</h3>
-                                <label class="btn btn-primary">
-                                    GENERATE<input type="file" class="uploadFile img" value="Upload Photo" style="width: 0px;height: 0px;overflow: hidden;">
-                                </label>
-                            </div><!-- col-2 -->
-                        </div>
+                        @if ($viewbiodata->fotoProfil == null)
+                        <img class="ratio ratio-1x1 profile" style="" src="{{ asset('assets/profile') }}/default.png" alt="fotoprofil">
+                        @elseif($viewbiodata->fotoProfil != null)
+                        <img class="ratio ratio-1x1 profile" style="" src="{{ asset('assets/profile') }}/{{ $viewbiodata->fotoProfil }}" alt="fotoprofil">
+                        @endif
+                    </div><!-- row -->
+                    <div class="center">
+                        <form action="{{ url('update-fotoProfil/'.$viewbiodata->id) }}" method="POST" enctype="multipart/form-data">
+                            @csrf
+                            @method('PUT')
+                        <input name="fotoProfil" type="file" class="btn btn-primary">
+                        <input type="submit" class="btn btn-primary" value="Unggah">
+                        </form>
                     </div><!-- row -->
                 </div><!-- container -->
+
                 <div class="col-xl-6 col-sm-12">
+
                     <h1 align="center" >USER BIODATA</h1>
                     <div class="container">
-                        <form class="col-sm-12 bio-form m-sm-auto container-fluid justify-content-between fle" method="POST">
-
+                        <form class="col-sm-12 bio-form m-sm-auto container-fluid justify-content-between fle" method="POST" action="{{ url('update-profil/'.$viewbiodata->id) }}">
+                            @csrf
+                            @method('PUT')
                             <div class="row bio-input">
                                 <label class="form-label" for="email">Email</label>
-                                <input type="text" placeholder="FitraAsgard@gmail.com" enabled>
+                                <input value="{{ $viewbiodata->email }}" name="email" type="text" placeholder="{{ $viewbiodata->email }}" enabled>
                             </div>
 
                             <div class="row bio-input">
                                 <label class="form-label" for="nama">Nama</label>
-                                <input type="text" placeholder="FITRA NAXX GARUT" enabled>
+                                <input value="{{ $viewbiodata->nama }}"name="name" type="text" placeholder="{{ $viewbiodata->nama }}" enabled>
                             </div>
 
                             <div class="row bio-input">
                                 <label class="form-label" for="nim">NIM</label>
-                                <input type="text" placeholder="122999000" enabled>
+                                <input value="{{ $viewbiodata->nim }}" name="nim" type="text" placeholder="{{ $viewbiodata->nim }}" enabled>
                             </div>
 
                             <div class="row bio-input">
                                 <label class="form-label" for="kelompok">Kelompok</label>
-                                <input type="text" placeholder="123 - Ardhames" enabled>
+                                <input value="{{ $viewbiodata->kelompok }}"type="text" placeholder="{{ $viewbiodata->kelompok }}" disabled>
                             </div>
 
                             <div class="row bio-input">
-                                <label class="form-label" for="prodi">Program Studi</label>
-                                <input type="text" placeholder="Teknik Percuanan Zeus" enabled>
-                            </div>
-
-                            <div class="row bio-input">
-                                <label class="form-label" for="notel">Nomor Telepon</label>
-                                <input type="text" placeholder="081122334455" enabled>
-                            </div>
-
-                            <div class="row bio-input">
-                                <label class="form-label" for="golongan darah">Golongan Darah</label>
-                                <select>
-                                    <option selected class="selected">Goldar</option>
-                                    <option value="1">A</option>
-                                    <option value="2">AB</option>
-                                    <option value="3">B</option>
-                                    <option value="4">O</option>
+                                <label  class="form-label" for="golongan darah">Program Studi</label>
+                                <select name="prodi">
+                                    <option selected class="selected">{{ $viewbiodata->prodi }}</option>
+                                    <option value="Teknik Informatika">Teknik Informatika</option>
+                                    <option value="AB">Teknik Electro</option>
+                                    <option value="Teknik Telekomunikasi">Teknik Telekomunikasi</option>
+                                    <option value="Teknik Lingkungan">Teknik Lingkungan</option>
+                                    <option value="Teknik Industri">Teknik Industri</option>
+                                    <option value="Teknik Industri Pertanian">Teknik Industri Pertanian</option>
+                                    <option value="Teknik Geofisika">Teknik Geofisika</option>
+                                    <option value="Teknik Mesin">Teknik Mesin</option>
+                                    <option value="Teknik Fisika">Teknik Fisika</option>
+                                    <option value="Teknik Kimia">Teknik Kimia</option>
+                                    <option value="Teknik Biosistem">Teknik Biosistem</option>
+                                    <option value="Teknik Sipil">Teknik Sipil</option>
+                                    <option value="Teknik Kelautan">Teknik Kelautan</option>
+                                    <option value="Teknik Geologi">Teknik Geologi</option>
+                                    <option value="Teknik Geomatika">Teknik Geomatika</option>
+                                    <option value="Teknik Sistem Energi">Teknik Sistem Energi</option>
+                                    <option value="Teknik Material">Teknik Material</option>
+                                    <option value="Tenik Biomedis">Tenik Biomedis</option>
+                                    <option value="Teknik Perkereta Apian">Teknik Perkereta Apian</option>
+                                    <option value="Matematika">Matematika</option>
+                                    <option value="Fisika">Fisika</option>
+                                    <option value="Kimia">Kimia</option>
+                                    <option value="Biologi">Biologi</option>
+                                    <option value="Farmasi">Farmasi</option>
+                                    <option value="Sains Data">Sains Data</option>
+                                    <option value="Teknologi Pangan">Teknologi Pangan</option>
+                                    <option value="Sains Aktuaria">Sains Aktuaria</option>
+                                    <option value="Sains Atmosfer Dan Keplanetan">Sains Atmosfer Dan Keplanetan</option>
+                                    <option value="Sains Kelautan">Sains Kelautan</option>
+                                    <option value="Rekayasa Tata Kelola Air Terpadu">Rekayasa Tata Kelola Air Terpadu</option>
+                                    <option value="Rekayasa Kosmetik">Rekayasa Kosmetik</option>
+                                    <option value="Rekayasa Minyak Dan Gas">Rekayasa Minyak Dan Gas</option>
+                                    <option value="Rekayasa Kehutanan">Rekayasa Kehutanan</option>
+                                    <option value="Rekayasa Instrumentasi Dan Automasi">Rekayasa Instrumentasi Dan Automasi </option>
+                                    <option value="Arsitektur">Arsitektur</option>
+                                    <option value="Perencanaan Wilayah dan Kota">Perencanaan Wilayah dan Kota</option>
+                                    <option value="Arsitektur Lanskap">Arsitektur Lanskap</option>
+                                    <option value="Desain Komunikasi Visual">Desain Komunikasi Visual</option>
+                                    <option value="Industri Pertanian">Industri Pertanian</option>
                                 </select>
                             </div>
 
                             <div class="row bio-input">
-                                <label class="form-label" for="alamat">Alamat</label>
-                                <input type="text" placeholder="Korpri Jaya" enabled>
+                                <label class="form-label" for="notel">Nomor Telepon</label>
+                                <input value="{{ $viewbiodata->nomorHp }}"name="nomorHp"type="text" placeholder="{{ $viewbiodata->nomorHp }}" enabled>
                             </div>
 
                             <div class="row bio-input">
-                                <label class="form-label" for="riwayat">Riwayat Penyakit</label>
-                                <input type="text" placeholder="Ayan" enabled>
+                                <label placeholder="belum dinamis" class="form-label" for="golongan darah">Golongan Darah</label>
+                                <select name="golonganDarah">
+                                    <option selected class="selected">{{ $viewbiodata->golonganDarah }}</option>
+                                    <option value="A">A</option>
+                                    <option value="AB">AB</option>
+                                    <option value="B">B</option>
+                                    <option value="O">O</option>
+                                </select>
                             </div>
-                    </form>
+{{--
+                            <div class="row bio-input">
+                                <label class="form-label" for="alamat">Alamat</label>
+                                <input type="text" placeholder="dinamis" enabled>
+                            </div> --}}
 
+                            <div class="row bio-input">
+                                <label class="form-label" for="riwayat">Riwayat Penyakit</label>
+                                <input value="{{ $viewbiodata->riwayatPenyakit }}" name="riwayatPenyakit"  type="text" placeholder="{{ $viewbiodata->riwayatPenyakit }}" enabled>
+                            </div>
+
+                            <div class="submit-edit" align="center">
+                                <input type="submit" class="btn btn-primay" value="Unggah">
+                            </div>
                     </div>
-                    <a href="../html/biodata.html">
-                        <div class="submit-edit" align="center">
-                            <label class="btn btn-primary">
-                                SUBMIT<input type="submit" class="submit" style="width: 0px;height: 0px;overflow: hidden;">
-                            </label>
-                        </div>
-                    </a>
+                    </form>
                 </div>
             </div>
-            <div class="row ps-5 ms-2">
-            </div>
+            {{-- <div class="row ps-5 ms-2">
+            </div> --}}
         </div>
     </div>
 @endsection

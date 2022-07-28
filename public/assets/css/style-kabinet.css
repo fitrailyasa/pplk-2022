@@ -106,7 +106,7 @@ h2{
     height: 100%;
     width: 100%;
     background-color: #db13db;
-    
+
   }
   .overlay::before,
   .overlay::after{
@@ -194,7 +194,7 @@ h2{
   .button:hover{
     background: #860686;
   }
-  
+
   .buttons:hover{
     background: #5e0c72;
     color: white;
@@ -224,7 +224,7 @@ h2{
   .swiper-pagination-bullet-active{
     background-color: #db13db;
   }
-  
+
   .sosmed {
     text-decoration: none;
   }
@@ -259,6 +259,9 @@ h2{
     #terakhir {
       margin-bottom: 6rem;
   }
+    #medsos {
+      margin-right: 3.5rem;
+    }
     .videoyoutube {
       height: 15rem;
       width: 25rem;
@@ -269,7 +272,4 @@ h2{
     .logo1{
       width: 45% !important;
     }
-  }
-
-  @media screen and (max-width:570px) {
   }

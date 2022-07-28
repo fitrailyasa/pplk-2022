@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Client;
 
 use App\Models\Jurusan;
 use App\Http\Requests\StoreJurusanRequest;
+use App\Http\Controllers\Client\Controller;
 use App\Http\Requests\UpdateJurusanRequest;
+
 
 class ClientJurusanController extends Controller
 {
@@ -15,8 +17,10 @@ class ClientJurusanController extends Controller
      */
     public function index()
     {
-        $jurusans = Jurusan::all();
-        return view('client.jurusan.jurusan', compact('jurusans'));
+        $JTIK = Jurusan::where('namaSingkat', 'JTIK')->firstOrFail();
+        $JTPI = Jurusan::where('namaSingkat', 'JTPI')->firstOrFail();
+        $JS = Jurusan::where('namaSingkat', 'JS')->firstOrFail();
+        return view('client.jurusan.jurusan', compact('JTIK','JTPI','JS'));
     }
 
     /**
@@ -75,7 +79,7 @@ class ClientJurusanController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remophp ve the specified resource from storage.
      *
      * @param  \App\Models\Jurusan  $jurusan
      * @return \Illuminate\Http\Response
