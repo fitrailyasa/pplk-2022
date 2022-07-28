@@ -37,19 +37,27 @@ class LoginController extends Controller
                 return $this->redirectTo;
                 break;
             case 2:
-                $this->redirectTo = '/dashboardTugas';
+                $this->redirectTo = '/admin';
                 return $this->redirectTo;
                 break;
             case 3:
-                $this->redirectTo = '/dashboardDaplokMentor';
+                $this->redirectTo = '/admin';
                 return $this->redirectTo;
                 break;
-            case 6:
-                $this->redirectTo = '/dashboardOrmawa';
+            case 4:
+                $this->redirectTo = '/admin';
                 return $this->redirectTo;
                 break;
             case 5:
-                $this->redirectTo = '/home';
+                $this->redirectTo = '/admin';
+                return $this->redirectTo;
+                break;
+            case 6:
+                $this->redirectTo = '/admin';
+                return $this->redirectTo;
+                break;
+            case 7:
+                $this->redirectTo = '/beranda';
                 return $this->redirectTo;
                 break;
             default:

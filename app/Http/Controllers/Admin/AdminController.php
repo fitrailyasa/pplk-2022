@@ -386,6 +386,24 @@ class AdminController extends Controller
     }
 
 
+    //HAPUS Funfact
+    public function destroyUpt($id)
+    {
+        $data=Upt::where('id',$id)->first();
+        $data->delete();
+
+        return 'hapus sukses';
+    }
+
+    public function destroyFunfact($id)
+    {
+        $data=Funfact::where('id',$id)->first();
+        $data->delete();
+        
+        return 'hapus sukses';
+    }
+
+
 
 
 

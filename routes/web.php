@@ -88,6 +88,14 @@ Route::get('/admin/updateukm/{id}', [AdminController::class, 'getUkmId'])->name(
 Route::put('/admin/editprodi', [AdminController::class, 'updateProdi'])->name('editProdi');
 Route::get('/admin/updateprodi/{id}', [AdminController::class, 'getProdiId'])->name('viewEditProdi');
 
+//Delete Funfact
+Route::get('/admin/hapusfunfact/{id}',[AdminController::class,'destroyFunfact'])->name('hapusFunfact');
+
+Route::get('/admin/hapusupt/{id}',[AdminController::class,'destroyUpt'])->name('hapusUpt');
+
+
+
+
 
 
 Route::get('/upt', [ClientUptController::class, 'index'])->name('upt'); //===> upt

@@ -931,12 +931,12 @@
       </div>
       </div>
       </div>
-      </div>
+    </div>
     <!--./Tabel QR-Code Maba-->
 
     <!--Tabel UPT ITERA-->
     <div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="overflow-x:hidden; display: none;" id="kelola-upt">
-      <div class="card">
+    <div class="card">
       <div class="card-header">
         <h4 class="card-title">Kelola Tabel UPT</h4>
       </div>
@@ -961,6 +961,7 @@
                   <th>No</th>
                   <th>Nama UPT</th>
                   <th>Deskripsi</th>
+                  <th>More</th>
                 </tr>
               </thead>
               <tbody>
@@ -970,33 +971,14 @@
                   <td>{{$upt->nama}}</td>
                   <td>{{$upt->deskripsi}}</td>
                   <td class="manage-row">
-                    <a href="" class="edit-button">
+                    <a href="{{ route('viewEditUpt', ['id'=>$upt->id]) }}" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
-                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <a href="{{ route('hapusUpt',["id"=>$upt->id,'table'=>'Upt']) }}" class="delete-button" >
                       <i class="fa-solid fa-trash-can"></i>
                     </a>
                     <!-- Modal -->
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel"><strong>Hapus Data</strong></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            Anda yakin menghapus data?
-                          </div>
-                          <div class="modal-footer">
-                            <form action="" method="POST">
-                                <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
-                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
                   </td>
                 </tr>
                 @endforeach
@@ -1008,7 +990,7 @@
       </div>
       </div>
       </div>
-      </div>
+    </div>
     <!--./Tabel UPT ITERA-->
 
     <!--Tabel Prodi-->
@@ -1064,7 +1046,7 @@
                     <td>{{ $prodi->jumlahMahasiswa }}</td>
                     <td><img src=" #" widht="100" height="100"/></td>
                     <td class="manage-row">
-                    <a href="" class="edit-button">
+                    <a href="{{ route('viewEditProdi', ['id'=>$prodi->id]) }}" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
@@ -1102,7 +1084,7 @@
       </div>
       </div>
      </div>
-    </div>
+    </div> 
     <!--./Tabel Prodi-->
 
     <!--Tabel Himpunan-->
@@ -1162,7 +1144,7 @@
                   <td>{{ $himpunan->filosofiLogo }}</td>
                   <td>{{ $himpunan->tahunBerdiri }}</td>
                   <td class="manage-row">
-                    <a href="" class="edit-button">
+                    <a href="{{ route('viewEditHimpunan', ['id'=>$himpunan->id]) }}" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
@@ -1456,7 +1438,7 @@
                   <td><img src=" #" widht="100" height="100"/></td>
                   <td><img src=" #" widht="100" height="100"/></td>
                   <td class="manage-row">
-                    <a href="" class="edit-button">
+                    <a href="{{ route('viewEditUkm', ['id'=>$ukm->id]) }}" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
@@ -1531,33 +1513,15 @@
                   <td>{{ $loop->iteration }}</td>
                   <td>{{ $funfact->isi }}</td>
                   <td class="manage-row">
-                    <a href="" class="edit-button">
+                    <a href="{{ route('viewEditFunfact', ['id'=>$funfact->id]) }}" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
-                    <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <a href="{{ route('hapusFunfact',["id"=>$funfact->id]) }}" class="delete-button" >
                       <i class="fa-solid fa-trash-can"></i>
                     </a>
                     <!-- Modal -->
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel"><strong>Hapus Data</strong></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            Anda yakin menghapus data?
-                          </div>
-                          <div class="modal-footer">
-                            <form action="" method="POST">
-                                <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
-                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+
                   </td>
                 </tr>
                 @endforeach
@@ -1608,7 +1572,7 @@
                   <td>{{ $begalin->judul }}</td>
                   <td>{{ $begalin->isi }}</td>
                   <td class="manage-row">
-                    <a href="" class="edit-button">
+                    <a href="{{ route('viewEditBegalin', ['id'=>$begalin->id]) }}" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
@@ -1676,6 +1640,7 @@
                   <th>No</th>
                   <th>Kamus Gaul</th>
                   <th>Arti Kamus</th>
+                  <th>Contoh Penggunaan</th>
                 </tr>
               </thead>
               <tbody>
@@ -1683,9 +1648,10 @@
                 <tr>
                   <td>{{ $loop->iteration }}</td>
                   <td>{{ $kamusgaul->gaul }}</td>
-                  <td>{{  $kamusgaul->asli }}</td>
+                  <td>{{ $kamusgaul->asli }}</td>
+                  <td>{{ $kamusgaul->contohPenggunaan }}</td>
                   <td class="manage-row">
-                    <a href="" class="edit-button">
+                    <a href="{{ route('viewEditKamusGaul',["id"=>$kamusgaul->id]) }}" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
