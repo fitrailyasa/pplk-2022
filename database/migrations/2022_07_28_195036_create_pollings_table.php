@@ -15,7 +15,11 @@ class CreatePollingsTable extends Migration
     {
         Schema::create('pollings', function (Blueprint $table) {
             $table->id();
-
+            $table->foreignid('ukmsid');
+            $table->foreignid('usersid');
+            $table->foreign('ukmsid')->references('id')->on('ukms');
+            $table->foreign('usersid')->references('id')->on('users');
+            $table->string('token')->unique();
             $table->timestamps();
         });
     }

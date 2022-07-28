@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class polling extends Model
+class Leaderboard extends Model
 {
     use HasFactory;
-    protected $table = 'pollings';
-    protected $fillable = ['idUkm', 'nim', 'token'];
+    protected $table = 'leaderboards';
+    protected $fillable = ['idKelompok', 'skor'];
 }
