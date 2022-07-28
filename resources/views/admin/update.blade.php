@@ -178,9 +178,9 @@
             <div class="mb-3 row">
               <label class="col-sm-3 col-form-label">Prestasi</label>
               <div class="col-sm-9 mb-3">
-                <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2020" name="prestasi" id="prestasi"  ></textarea>
-                <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2021" name="prestasi" id="prestasi"  ></textarea>
-                <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2022" name="prestasi" id="prestasi"  ></textarea>
+                <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2020" name="prestasi1" id="prestasi"  ></textarea>
+                <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2021" name="prestasi2" id="prestasi"  ></textarea>
+                <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2022" name="prestasi3" id="prestasi"  ></textarea>
               </div>
             </div>
           <div class="mb-3 row">
