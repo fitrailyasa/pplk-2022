@@ -98,10 +98,12 @@ Route::get('/admin/hapusupt/{id}', [AdminController::class, 'destroyUpt'])->name
 Route::get('/admin/hapusbegalin/{id}', [AdminController::class, 'destroyBegalin'])->name('hapusBegalin');
 //Delete KamusGaul
 Route::get('/admin/hapuskamusgaul/{id}', [AdminController::class, 'destroyKamusGaul'])->name('hapusKamusGaul');
-
-Route::get('/admin/hapusfunfact/{id}',[AdminController::class,'destroyFunfact'])->name('hapusFunfact');
-
-Route::get('/admin/hapusupt/{id}',[AdminController::class,'destroyUpt'])->name('hapusUpt');
+//Delete Prodi
+Route::get('/admin/hapusprodi/{id}', [AdminController::class, 'destroyProdi'])->name('hapusProdi');
+//Delete Himpunan
+Route::get('/admin/hapushimpunan/{id}', [AdminController::class, 'destroyHimpunan'])->name('hapusHimpunan');
+//Delete Ukm
+Route::get('/admin/hapusukm/{id}', [AdminController::class, 'destroyUkm'])->name('hapusUkm');
 
 Route::post('/presensi/{id}', [ClientScannerController::class, 'presensi']);
 
