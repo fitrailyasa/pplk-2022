@@ -64,7 +64,7 @@ class ClientBiodataController extends Controller
             'roles_id'=>$request->roles,
             'prodi'=>$request->prodi
         ]);
-        QrCode::format('svg')->margin(2)->size(200)->errorCorrection('H')->generate("$request->nim,", "../public/assets/qrcode/"."$request->nim");
+        QrCode::format('svg')->margin(2)->size(200)->errorCorrection('H')->generate("$request->nim", "../public/assets/qrcode/"."$request->nim");
         return 'daftar Berhasil';
     }
 

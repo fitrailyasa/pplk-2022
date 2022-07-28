@@ -44,6 +44,7 @@
                         <div class="w-100">
                             <div class="ratio ratio-1x1 content rounded">
                                     <iframe id="qrCode" src="{{ asset('assets/qrCode')}}/{{ $biodata->nim }} "></iframe>
+                                    <img src="{{ asset('assets/logomini.png') }}" alt="logo kecil">
                             </div>
                         </div><!-- col-2 -->
                     </div>
