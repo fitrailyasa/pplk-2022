@@ -23,6 +23,7 @@ class Presensi extends Authenticatable
         'user_id',
         'hari',
         'status',
+        'token',
     ];
 
     /**

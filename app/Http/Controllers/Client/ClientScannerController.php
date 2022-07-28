@@ -19,25 +19,17 @@ class ClientScannerController extends Controller
 
     public function presensi(Request $request,  $id)
     {
-        $check = Presensi::where('user_id', $id)->firstOrFail();
         $users = User::where('id', $id)->firstOrFail();
-
-        if  ($users->nim == $request->input('nim')){
-
         $date = Date("m.d.y");
-            if ($check->date != $date && $check == true) {
-                 Presensi::create([
+        $token = "$id"."$date";
+        if  ($users->nim == $request->input('nim')){
+                Presensi::create([
                     'user_id'=>$id,
-                    'hari'=> $date,
-                    'status'=>$request->input('status')
+                    'status'=>$request->input('status'),
+                    'hari'=>$date,
+                    'token' => $token
                 ]);
-
-                return "absen berhasil";
-            }else {
-            return "galat";
         }
-
-    }
 }
 
 }
