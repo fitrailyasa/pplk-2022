@@ -6,41 +6,39 @@
 @section('style')
     <!-- STYLES -->
     <link rel="stylesheet" href="{{ asset('assets') }}/css/GANTI.css">
-    <link rel="stylesheet" href="../css/style-scanner.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/style-scanner.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/js/style-scanner.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 @endsection
 
 @section('content')
     <!-- CONTENT -->
+
     <div class="bg-presensi p-3">
         <div class="qr-code mx-auto justify-content-center">
             <div class="row row-scanner justify-content-center ms-auto me-auto">
                 <div class="col-top-scanner justify-content-center">
-                    <h5>PRESENSI QR CODE</h5>
+                    <h5>SCANNER QR CODE</h5>
                 </div>
-                <div class="col-scanner justify-content-center">
-                    <div id="reader"></div>
+                <div><form action="/presensi/{{ $users->id }}" method="POST">
+                    @csrf
+                <div class="col-scanner justify-content-center" id="ganti">
+                    <div id="reader" class="justify-content-center"></div>
                 </div>
-                <div class="col-2-scanner justify-content-center">
-                    <h5>Hasil Scan</h5>
-                </div>
-                <div class="col-3-scanner justify-content-center" id="result">
-                    Hasil Scan akan muncul disini
-                </div>
-                <div class="col-3-scanner justify-content-center">
-                    <a href="" class="tombol_submit justify-content-center">UPLOAD</a>
-                </div>
+
+            </form></div>
             </div>
         </div>
     </div>
-
     </div>
 @endsection
 
 @section('script')
     <!-- SCRIPTS -->
-    <link rel="stylesheet" href="../css/style-scanner.css">
+    <!-- QrCode Js -->
+<script src="{{ asset('assets/js/html5-qrcode.min.js') }}" type="text/javascript"></script>
+<script  src="{{ asset('assets/js/scanner-main.js') }}" type="text/javascript"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 @endsection

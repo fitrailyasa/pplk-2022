@@ -44,7 +44,7 @@
                     </div>
                 </div>
                 <!-- card choesed -->
-                
+
                 <!-- redeem code -->
                 <div class="col-6 mt-4">
                     <form>
@@ -64,12 +64,12 @@
                     </form>
                 </div>
                 <!-- redeem code -->
-            
+
             <!-- Vertically centered modal -->
             <!-- Modal -->
             <!-- Button trigger modal -->
-            
-            
+
+
             <!-- Modal -->
             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
             tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">

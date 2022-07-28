@@ -13,6 +13,7 @@ use App\Http\Controllers\Client\ClientBiodataController;
 use App\Http\Controllers\Client\ClientJurusanController;
 use App\Http\Controllers\Client\ClientKabinetController;
 use App\Http\Controllers\Client\ClientKamusgaulController;
+use App\Http\Controllers\Client\ClientScannerController;
 
 
 
@@ -51,7 +52,7 @@ Route::post('/admin/Upt', [AdminController::class, 'storeUpt'])->name('createUpt
 Route::post('/admin/Begalin', [AdminController::class, 'storeBegalin'])->name('createBegalin');
 Route::post('/admin/Kamusgaul', [AdminController::class, 'storeKamusgaul'])->name('createKamusgaul');
 Route::post('/admin/Prodi', [AdminController::class, 'storeProdi'])->name('createProdi');
-Route::post('/registrasi/create', [ClientBiodataController::class, 'store'])->name('regist_staff');
+Route::post('/registrasi/{create}', [ClientBiodataController::class, 'store'])->name('regist_staff');
 
 
 //ROUTE EDIT
@@ -89,6 +90,7 @@ Route::put('/admin/editprodi', [AdminController::class, 'updateProdi'])->name('e
 Route::get('/admin/updateprodi/{id}', [AdminController::class, 'getProdiId'])->name('viewEditProdi');
 
 //Delete Funfact
+
 Route::get('/admin/hapusfunfact/{id}', [AdminController::class, 'destroyFunfact'])->name('hapusFunfact');
 //Delete Upt
 Route::get('/admin/hapusupt/{id}', [AdminController::class, 'destroyUpt'])->name('hapusUpt');
@@ -96,6 +98,12 @@ Route::get('/admin/hapusupt/{id}', [AdminController::class, 'destroyUpt'])->name
 Route::get('/admin/hapusbegalin/{id}', [AdminController::class, 'destroyBegalin'])->name('hapusBegalin');
 //Delete KamusGaul
 Route::get('/admin/hapuskamusgaul/{id}', [AdminController::class, 'destroyKamusGaul'])->name('hapusKamusGaul');
+
+Route::get('/admin/hapusfunfact/{id}',[AdminController::class,'destroyFunfact'])->name('hapusFunfact');
+
+Route::get('/admin/hapusupt/{id}',[AdminController::class,'destroyUpt'])->name('hapusUpt');
+
+Route::post('/presensi/{id}', [ClientScannerController::class, 'presensi']);
 
 
 
@@ -109,6 +117,7 @@ Route::get('/jurusan', [ClientJurusanController::class, 'index'])->name('jurusan
 Route::get('/kamus-gaul', [ClientKamusgaulController::class, 'index'])->name('kamus-gaul');
 
 Route::get('/biodata', [ClientBiodataController::class, 'index'])->name('biodata');
+Route::get('/scanner', [ClientScannerController::class, 'index'])->name('scanner');
 
 
 
@@ -147,9 +156,6 @@ Route::get('/form-keluhan', function () {         // ===> form keluhan
 });
 Route::get('/pplk', function () {                 // ===> pplk
     return view('client.pplk');
-});
-Route::get('/scanner', function () {              // ===> scanner
-    return view('client.scanner');
 });
 Route::get('/card-list', function () {            // ===> redeem code card list
     return view('client.games.redeem-code.card-list');

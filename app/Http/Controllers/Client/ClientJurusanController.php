@@ -79,7 +79,7 @@ class ClientJurusanController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remophp ve the specified resource from storage.
      *
      * @param  \App\Models\Jurusan  $jurusan
      * @return \Illuminate\Http\Response

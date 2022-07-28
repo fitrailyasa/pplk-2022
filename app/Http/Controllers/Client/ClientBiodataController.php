@@ -1,6 +1,9 @@
 <?php
 namespace App\Http\Controllers\Client;
 
+use Illuminate\Support\HtmlString;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
+use SimpleSoftwareIO\QrCode\Facades\Storage;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Requests\Admin\StoreClientRequest;
@@ -61,6 +64,7 @@ class ClientBiodataController extends Controller
             'roles_id'=>$request->roles,
             'prodi'=>$request->prodi
         ]);
+        QrCode::format('svg')->margin(2)->size(200)->errorCorrection('H')->generate("$request->nim", "../public/assets/qrcode/"."$request->nim");
         return 'daftar Berhasil';
     }
 
@@ -87,7 +91,7 @@ class ClientBiodataController extends Controller
         $filename = time().'_'.$file->getClientOriginalName();
 
         // File upload location
-        $location = 'F:\pplk-2022\public\assets\profile';
+        $location = '../public/assets/profile/';
 
         // Upload file
         $file->move($location,$filename);
