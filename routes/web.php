@@ -148,7 +148,7 @@ Route::get('/redeem-failed', function () {        // ===> redeem code failed
     return view('client.games.redeem-code.failed');
 });
 Route::get('/redeem', function () {               // ===> redeem page
-    return view('client.games.redeem-code.redeem');
+    return view('client.games.redeem-code.redeem',);
 });
 Route::get('/redeem-success', function () {       // ===> redeem code success
     return view('client.games.redeem-code.success');
