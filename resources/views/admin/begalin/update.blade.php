@@ -1,14 +1,14 @@
-@extends('layouts.admin.modal')
 @extends('layouts.admin.app')
 
-@section('title', 'editbegalin')
+@section('title', 'Edit Begalin')
 
 @section('content')
 
-<div class="col-lg-12 col-lg-12 form-wrapper"   id="editbegalin">
+<!--Edit Begalin-->
+<div class="col-lg-12 col-lg-12 form-wrapper" id="edit-begalin">
     <div class="card">
     <div class="card-header">
-    <h4 class="card-title">Input Data Begalin</h4>
+    <h4 class="card-title">Edit Data Begalin</h4>
     </div>
     <div class="card-body">
       <form method="POST" action="{{ route('editBegalin') }}" enctype='multipart/form-data'>
@@ -36,6 +36,7 @@
       </div>
     </div>
   </div>
+  <!--./Edit Begalin-->
 
 @endsection
 

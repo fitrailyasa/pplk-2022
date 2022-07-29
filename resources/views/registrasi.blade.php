@@ -212,11 +212,19 @@
       <!-- riwayatPenyakit -->
 
               <!-- roles -->
+
+              <div class="row justify-content-center align-items-center">
+                <div class="col mb-3 d-flex justify-content-center align-items-center">
+                  <input name="roles" type="text" class="form-control rounded input-size" id="rolesId" placeholder="superadmin" readonly value="1" />
+                </div>
+              </div>
+
         <div class="row justify-content-center align-items-center">
         <div class="col mb-3 d-flex justify-content-center align-items-center">
             <input name="roles" type="text" class="form-control rounded input-size" id="ig" placeholder="staff" readonly value="7" />
         </div>
         </div>
+
               <!-- roles -->
 
       <!-- Tombol Daftar -->

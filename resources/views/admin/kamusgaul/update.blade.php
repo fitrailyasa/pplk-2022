@@ -1,14 +1,14 @@
-@extends('layouts.admin.modal')
 @extends('layouts.admin.app')
 
-@section('title', 'editkamusgaul')
+@section('title', 'Edit Kamus Gaul')
 
 @section('content')
-<!--Kamus Gaul-->
-<div class="col-lg-12 col-lg-12 form-wrapper" id="editkamus">
+
+<!--Edit Kamus Gaul-->
+<div class="col-lg-12 col-lg-12 form-wrapper" id="edit-kamus">
     <div class="card">
     <div class="card-header">
-    <h4 class="card-title">Input Data Kamus Gaul</h4>
+    <h4 class="card-title">Edit Data Kamus Gaul</h4>
     </div>
     <div class="card-body">
       <form method="POST" action="{{ route('editKamusGaul') }}" enctype='multipart/form-data'>
@@ -42,5 +42,6 @@
       </div>
     </div>
   </div>
-  <!--./Kamus Gaul-->
+  <!--./Edit Kamus Gaul-->
+
 @endsection

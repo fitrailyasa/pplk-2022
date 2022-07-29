@@ -21,7 +21,6 @@ class CreateUsersTable extends Migration
             $table->string('nim')->nullable()->unique();
             $table->string('kelompok')->nullable();
             $table->string('instagram')->nullable();
-            $table->string('qrCode')->nullable();
             $table->string('prodi')->nullable();
             $table->string('nomorHp')->nullable();
             $table->string('golonganDarah')->nullable();

@@ -1,14 +1,14 @@
-@extends('layouts.admin.modal')
 @extends('layouts.admin.app')
 
-@section('title', 'editfunfact')
+@section('title', 'Edit Funfact')
 
 @section('content')
 
-<div class="col-lg-12 col-lg-12 form-wrapper " style=""  id="editfunfact">
+<!--Edit Funfact-->
+<div class="col-lg-12 col-lg-12 form-wrapper" id="edit-funfact">
     <div class="card">
     <div class="card-header">
-    <h4 class="card-title">Input Funfact</h4>
+    <h4 class="card-title">Edit Data Funfact</h4>
     </div>
     <div class="card-body">
       <form method="POST" action="{{ route('editFunfact') }}" enctype='multipart/form-data'>
@@ -39,6 +39,7 @@
       </div>
     </div>
   </div>
+  <!--./Edit Funfact-->
 
 @endsection
 
