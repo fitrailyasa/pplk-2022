@@ -18,13 +18,13 @@
 
         <!-- JUDUL -->
         <title>@yield('title')Login - PPLK 2022</title>
-
         <!-- CSS -->
         <link rel="stylesheet" href="{{ asset('assets/css/main-style.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/login.css') }}">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+        <link rel="manifest" href="{{ asset('manifest.json') }}">
+      </head>
 <!-- CONTENT -->
 <!-- Splash Screen -->
 <body>
@@ -103,7 +103,7 @@
     </div>
     <div class="row justify-content-center mb-2">
       <div class="col d-flex justify-content-center">
-        <button class="w-25 rounded-5 bg-white border-0" id="pwa-button-install"><span class="gradient-text">Install</span></button>
+        <button class="w-25 rounded-5 bg-white border-0" id="pwa-button-install" onclick="install()"><span class="gradient-text">Install</span></button>
       </div>
     </div>
     <div class="row justify-content-center">
@@ -121,9 +121,7 @@
     targetElement.className += " animate";
   }
 </script>
-<script src="{{ asset('assets/js/manifest.json') }}"></script>
-<script src="{{ asset('assets/js/seriviceWorker.js') }}"></script>
-<script src="{{ asset('assets/js/mainServiceWorker.js') }}"></script>
+<script src="{{ asset('mainServiceWorker.js') }}"></script>
 <script>
 
     // Screen download app.
@@ -143,20 +141,21 @@
         display.style.display = 'block';
         btn.style.display = 'inline-block';
     });
-    
-    btn.addEventListener('click', (e) => {
-    btn.style.display = 'none';
-    display.style.display = 'none';
-    deferredPrompt.prompt();
-    deferredPrompt.userChoice.then((choiceResult) => {
-        if (choiceResult.outcome === 'accepted') {
-            console.log('User accepted the A2HS prompt');
-        } else {
-            console.log('User dismissed the A2HS prompt');
-        }
-        deferredPrompt = null;
-        });
-    });
+    function install(){
+      btn.addEventListener('click', (e) => {
+      btn.style.display = 'none';
+      display.style.display = 'none';
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+              console.log('User accepted the A2HS prompt');
+          } else {
+              console.log('User dismissed the A2HS prompt');
+          }
+          deferredPrompt = null;
+          });
+      });
+    }
 
 </script>
 </body>

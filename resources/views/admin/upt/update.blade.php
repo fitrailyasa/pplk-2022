@@ -1,14 +1,14 @@
-@extends('layouts.admin.modal')
 @extends('layouts.admin.app')
 
-@section('title', 'editupt')
+@section('title', 'Edit UPT')
 
 @section('content')
 
-<div class="col-lg-12 col-lg-12 form-wrapper"   id="editupt">
+<!--Edit UPT ITERA-->
+<div class="col-lg-12 col-lg-12 form-wrapper" id="edit-upt">
     <div class="card">
     <div class="card-header">
-    <h4 class="card-title">Input Data UPT ITERA</h4>
+    <h4 class="card-title">Edit Data UPT ITERA</h4>
     </div>
     <div class="card-body">
       <form method="POST" action="{{ route('editUpt') }}" enctype='multipart/form-data'>
@@ -36,5 +36,6 @@
       </div>
     </div>
   </div>
+  <!--./Edit UPT ITERA-->
 
 @endsection

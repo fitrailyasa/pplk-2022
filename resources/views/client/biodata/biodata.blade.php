@@ -56,12 +56,6 @@
                 <h1 align="center" >BIODATA PENGGUNA</h1> <br>
                 <div class="container">
                     <form class="col-sm-12 bio-form m-sm-auto container-fluid justify-content-between fle" method="POST">
-
-                        <div class="row bio-input">
-                            <label class="form-label" for="email">Email</label>
-                            <input type="text" placeholder="{{ $biodata->email }}" disabled>
-                        </div>
-
                         <div class="row bio-input">
                             <label class="form-label" for="nama">Nama</label>
                             <input type="text" placeholder="{{ $biodata->nama }}" disabled>
@@ -70,6 +64,11 @@
                         <div class="row bio-input">
                             <label class="form-label" for="nim">NIM</label>
                             <input type="text" placeholder="{{ $biodata->nim }}" disabled>
+                        </div>
+
+                        <div class="row bio-input">
+                            <label class="form-label" for="email">Email</label>
+                            <input type="text" placeholder="{{ $biodata->email }}" disabled>
                         </div>
 
                         <div class="row bio-input">
@@ -87,19 +86,14 @@
                             <input type="text" placeholder="{{ $biodata->nomorHp }}" disabled>
                         </div>
 
-                        {{-- <div class="row bio-input">
-                            <label class="form-label" for="golongan darah">Alamat</label>
-                            <input type="text" placeholder="blum dinamis" disabled>
-                        </div> --}}
+                        <div class="row bio-input">
+                            <label class="form-label" for="instagram">Instagram</label>
+                            <input type="text" placeholder="{{ $biodata->instagram }}" disabled>
+                        </div>
 
                         <div class="row bio-input">
                             <label class="form-label" for="golongan darah">Golongan Darah</label>
                             <input type="text" placeholder="{{ $biodata->golonganDarah }}" disabled>
-                        </div>
-
-                        <div class="row bio-input">
-                            <label class="form-label" for="instagram">Instagram</label>
-                            <input type="text" placeholder="{{ $biodata->instagram }}" disabled>
                         </div>
 
                         <div class="row bio-input">

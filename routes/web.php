@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\AdminBegalinController;
 use App\Http\Controllers\Client\ClientUptController;
 use App\Http\Controllers\Client\ClientProdiController;
 use App\Http\Controllers\Client\ClientBegalinController;
@@ -31,14 +32,26 @@ use App\Http\Controllers\Client\ClientKodeGameController;
 /* Auth::routes();
 Route::get('/home',[HomeController::class, 'index'])->name('home'); */
 
+
+
+//Admin Route
+Route::get('/', [AdminController::class, 'index'])->name('index');
+Route::resource('adminBegali n', AdminBegalinController::class)->except(['show']);
+Route::resource('adminFunfact', AdminBegalinController::class)->except(['show']);
+Route::resource('adminHimpunan', AdminBegalinController::class)->except(['show']);
+Route::resource('adminKamusGaul', AdminKamusGaulController::class)->except(['show']);
+Route::resource('adminProdi', AdminBegalinController::class)->except(['show']);
+Route::resource('adminUkm', AdminBegalinController::class)->except(['show']);
+Route::resource('adminUser', AdminBegalinController::class)->except(['show']);
+Route::resource('adminUpt', AdminBegalinController::class)->except(['show']);
 //Login
 
-Route::get('/', [LoginController::class, 'showLoginForm']);
-Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
-Route::post('/', [LoginController::class, 'login'])->name('loginPost');
-Route::get('/guest', [guestController::class, 'login'])->name('guest');
+// Route::get('/', [LoginController::class, 'showLoginForm']);
+// Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+// Route::post('/', [LoginController::class, 'login'])->name('loginPost');
+// Route::get('/guest', [guestController::class, 'login'])->name('guest');
 
-Route::get('/admin', [AdminController::class, 'index'])->name('cms'); //===> cms admin
+// Route::get('/admin', [AdminController::class, 'index'])->name('cms'); //===> cms admin
 
 //ROUTE CREATE
 Route::post('/admin/Ukm', [AdminController::class, 'storeUkm'])->name('createUkm');
@@ -103,8 +116,7 @@ Route::get('/admin/hapushimpunan/{id}', [AdminController::class, 'destroyHimpuna
 Route::get('/admin/hapusukm/{id}', [AdminController::class, 'destroyUkm'])->name('hapusUkm');
 
 Route::post('/presensi/{id}', [ClientScannerController::class, 'presensi']);
-
-
+Route::post('/polling/{id}', [ClientScannerController::class, 'polling']);
 
 
 Route::get('/upt', [ClientUptController::class, 'index'])->name('upt'); //===> upt
@@ -116,7 +128,9 @@ Route::get('/jurusan', [ClientJurusanController::class, 'index'])->name('jurusan
 Route::get('/kamus-gaul', [ClientKamusgaulController::class, 'index'])->name('kamus-gaul');
 
 Route::get('/biodata', [ClientBiodataController::class, 'index'])->name('biodata');
+
 Route::get('/scanner', [ClientScannerController::class, 'index'])->name('scanner');
+Route::get('/polling', [ClientScannerController::class, 'indexPolling'])->name('polling');
 
 
 
@@ -158,6 +172,10 @@ Route::get('/pplk', function () {                 // ===> pplk
     return view('client.pplk');
 });
 
+
+Route::get('/card-list', function () {            // ===> redeem code card list
+    return view('client.games.redeem-code.card-list');
+});
 Route::get('/redeem-failed', function () {        // ===> redeem code failed
     return view('client.games.redeem-code.failed');
 });
