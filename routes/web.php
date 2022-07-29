@@ -40,7 +40,7 @@ Route::get('/home',[HomeController::class, 'index'])->name('home'); */
 
 //Admin Route
 Route::get('/', [AdminController::class, 'index'])->name('index');
-Route::resource('adminBegalin', AdminBegalinController::class)->except(['show']);
+Route::resource('adminBegali n', AdminBegalinController::class)->except(['show']);
 Route::resource('adminFunfact', AdminBegalinController::class)->except(['show']);
 Route::resource('adminHimpunan', AdminBegalinController::class)->except(['show']);
 Route::resource('adminKamusGaul', AdminBegalinController::class)->except(['show']);
