@@ -43,7 +43,7 @@ Route::get('/', [AdminController::class, 'index'])->name('index');
 Route::resource('adminBegali n', AdminBegalinController::class)->except(['show']);
 Route::resource('adminFunfact', AdminBegalinController::class)->except(['show']);
 Route::resource('adminHimpunan', AdminBegalinController::class)->except(['show']);
-Route::resource('adminKamusGaul', AdminBegalinController::class)->except(['show']);
+Route::resource('adminKamusGaul', AdminKamusGaulController::class)->except(['show']);
 Route::resource('adminProdi', AdminBegalinController::class)->except(['show']);
 Route::resource('adminUkm', AdminBegalinController::class)->except(['show']);
 Route::resource('adminUser', AdminBegalinController::class)->except(['show']);
@@ -178,7 +178,6 @@ Route::get('/pplk', function () {                 // ===> pplk
 
 Route::get('/card-list', function () {            // ===> redeem code card list
     return view('client.games.redeem-code.card-list');
-
 });
 Route::get('/redeem-failed', function () {        // ===> redeem code failed
     return view('client.games.redeem-code.failed');

@@ -5,7 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Models\KamusGaul;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Admin\Controller;
-
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 
 class AdminKamusGaulController extends Controller
 {
@@ -27,13 +28,14 @@ class AdminKamusGaulController extends Controller
      */
     public function create()
     {
+        $kamusgauls = KamusGaul::all();
         return view('admin.kamusGaul.create', compact('kamusgauls'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StorebegalinRequest  $request
+     * @param  \App\Http\Requests\StorekamusgaulRequest  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -51,42 +53,40 @@ class AdminKamusGaulController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\begalin  $begalin
+     * @param  \App\Models\kamusgaul  $kamusgaul
      * @return \Illuminate\Http\Response
      */
-    public function show(begalin $begalin)
-    {
-        //
-    }
+
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\begalin  $begalin
+     * @param  \App\Models\kamusgaul  $kamusgaul
      * @return \Illuminate\Http\Response
      */
-    public function edit(begalin $begalin)
+    public function edit($id)
     {
-        return view('admin.begalin.edit', compact('begalins'));
+        $kamusgauls = KamusGaul::where('id', $id)->first();
+        return view('admin.kamusGaul.edit', compact('kamusgaul'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdatebegalinRequest  $request
-     * @param  \App\Models\begalin  $begalin
+     * @param  \App\Http\Requests\UpdatekamusgaulRequest  $request
+     * @param  \App\Models\kamusgaul  $kamusgaul
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(Request $request, KamusGaul $kamusgaul)
     {
-        $begalin = Begalin::where('id', $request->id)->first();
-        $begalin->update(
+        $kamusgaul->update(
             [
-                'judul' => $request->judul,
-                'isi' => $request->isi
+                'gaul' => $request->gaul,
+                'asli' => $request->asli,
+                'contohPenggunaan' =>       $request->contohPenggunaan
             ]
         );
-        return $this->index()->with('sukses', ' Success Inserted ' . $begalin->isi);
+        return redirect('/adminKamusGaul')->with('sukses', 'Berhasil Edit Data!');
     }
 
     /**
@@ -95,13 +95,11 @@ class AdminKamusGaulController extends Controller
      * @param  \App\Models\begalin  $begalin
      * @return \Illuminate\Http\Response
      */
-    public function destroy(begalin $begalin, $id)
+    public function destroy($id)
     {
-        $data = Begalin::where('id', $id)->first();
+        $data = KamusGaul::where('id', $id)->first();
         $data->delete();
 
-        return 'hapus sukses';
-    }
-} { {
+        return redirect('/adminKamusGaul')->with('sukses', 'Berhasil Hapus Data!');
     }
 }
