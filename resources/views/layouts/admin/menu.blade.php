@@ -283,7 +283,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a onclick="{{ route('adminFunfact.index') }} " class="nav-link tablinks">
+                <a href="{{ route('adminFunfact.index') }} " class="nav-link tablinks">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Kelola Data funfact</p>
                 </a>

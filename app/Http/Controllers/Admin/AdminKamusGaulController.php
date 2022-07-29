@@ -66,7 +66,7 @@ class AdminKamusGaulController extends Controller
      */
     public function edit($id)
     {
-        $kamusgauls = KamusGaul::where('id', $id)->first();
+        $kamusgaul = KamusGaul::where('id', $id)->first();
         return view('admin.kamusgaul.update', compact('kamusgaul'));
     }
 
