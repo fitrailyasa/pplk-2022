@@ -121,6 +121,7 @@ public function updateBiodata(Request $request, $id){
         $viewbiodata->nama = $request->input('name');
         $viewbiodata->golonganDarah = $request->input('golonganDarah');
         $viewbiodata->nim = $nim;
+        $viewbiodata->password = Hash::make($request->input('password'));
         $viewbiodata->email = $request->input('email');
         $viewbiodata->instagram = $request->input('instagram');
         $viewbiodata->nomorHp = $request->input('nomorHp');
@@ -131,7 +132,7 @@ public function updateBiodata(Request $request, $id){
         $viewbiodata->update();
         QrCode::format('svg')->margin(2)->size(200)->errorCorrection('H')->generate("$qrCode", "../public/assets/qrcode/"."$qrCode");
         echo "<script>
-        alert('Daftar update');
+        alert('Data update');
         window.location.href='/edit-biodata'
          </script>";
 
