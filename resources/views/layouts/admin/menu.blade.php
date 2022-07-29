@@ -109,13 +109,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a onclick="openCMS(event, 'tambah-user')" class="nav-link tablinks">
+                <a href="{{ route('adminUser.create') }}" class="nav-link tablinks">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah User</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a onclick="openCMS(event, 'kelola-user')" class="nav-link tablinks">
+                <a href="{{ route('adminUser.index') }}" class="nav-link tablinks">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Kelola Data User</p>
                 </a>
@@ -181,13 +181,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a onclick="openCMS(event, 'tambah-prodi')" class="nav-link tablinks">
+                <a href="{{ route('adminProdi.create') }}" class="nav-link tablinks">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah Prodi</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a onclick="openCMS(event, 'kelola-prodi')" class="nav-link tablinks">
+                <a href="{{ route('adminProdi.index') }}" class="nav-link tablinks">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Kelola Data Prodi</p>
                 </a>
@@ -325,13 +325,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{ route('adminKamusGaul.create') }}" class="nav-link tablinks">
+                <a href="{{ route('adminKamusgaul.create') }}" class="nav-link tablinks">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah Kamus</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{ route('adminKamusGaul.index') }}" class="nav-link tablinks">
+                <a href="{{ route('adminKamusgaul.index') }}" class="nav-link tablinks">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Kelola Kamus Gaul</p>
                 </a>

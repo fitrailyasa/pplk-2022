@@ -11,9 +11,8 @@
     <h4 class="card-title">Edit Data Himpunan</h4>
     </div>
     <div class="card-body">
-      <form method="POST" action="{{ route('editHimpunan') }}" enctype='multipart/form-data'>
+      <form method="POST" action="{{ route('adminHimpunan.store') }}" enctype='multipart/form-data'>
       @csrf
-      @method('PUT')
       <input type="hidden" name="id" value="{{ $himpunan->id }}">
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Nama Lengkap</label>

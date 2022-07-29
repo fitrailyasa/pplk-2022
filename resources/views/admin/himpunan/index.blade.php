@@ -39,7 +39,6 @@
                     <th>Ketua Himpunan</th>
                     <th>Logo</th>
                     <th>Filosofi Logo</th>
-                    <th>Kode Warna</th>
                     <th>Tahun Berdiri</th>
                     <th>More</th>
                   </tr>
@@ -56,7 +55,6 @@
                     <td>{{ $himpunan->kodeWarna }}</td>
                     <td>{{ $himpunan->pembina }}</td>
                     <td>{{ $himpunan->ketuaHimpunan }}</td>
-                    <td>{{ $himpunan->tahunBerdiri }}</td>
                     <td>{{ $himpunan->logo }}</td>
                     <td>{{ $himpunan->filosofiLogo }}</td>
                     <td>{{ $himpunan->tahunBerdiri }}</td>

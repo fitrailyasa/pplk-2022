@@ -18,7 +18,7 @@ class AdminKamusGaulController extends Controller
     public function index()
     {
         $kamusgauls = KamusGaul::all();
-        return view('admin.kamusgaul.index', compact('kamusgauls'));
+        return view('admin.Kamusgaul.index', compact('kamusgauls'));
     }
 
     /**
@@ -29,7 +29,7 @@ class AdminKamusGaulController extends Controller
     public function create()
     {
         $kamusgauls = KamusGaul::all();
-        return view('admin.kamusgaul.create', compact('kamusgauls'));
+        return view('admin.Kamusgaul.create', compact('kamusgauls'));
     }
 
     /**
@@ -47,7 +47,7 @@ class AdminKamusGaulController extends Controller
             'contohPenggunaan' => $request->contohPenggunaan
         ]);
 
-        return redirect('/adminKamusGaul')->with('sukses', 'Berhasil Tambah Data!');
+        return redirect('/adminKamusgaul')->with('sukses', 'Berhasil Tambah Data!');
     }
 
     /**
@@ -79,7 +79,7 @@ class AdminKamusGaulController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $kamusgaul=KamusGaul::where('id',$id)->first();
+        $kamusgaul = KamusGaul::where('id', $id)->first();
         $kamusgaul->update(
             [
                 'gaul' => $request->gaul,
@@ -87,7 +87,7 @@ class AdminKamusGaulController extends Controller
                 'contohPenggunaan' => $request->contohPenggunaan
             ]
         );
-        return redirect('/adminKamusGaul')->with('sukses', 'Berhasil Edit Data!');
+        return redirect('/adminKamusgaul')->with('sukses', 'Berhasil Edit Data!');
     }
 
     /**
@@ -101,6 +101,6 @@ class AdminKamusGaulController extends Controller
         $data = KamusGaul::where('id', $id)->first();
         $data->delete();
 
-        return redirect('/adminKamusGaul')->with('sukses', 'Berhasil Hapus Data!');
+        return redirect('/adminKamusgaul')->with('sukses', 'Berhasil Hapus Data!');
     }
 }
