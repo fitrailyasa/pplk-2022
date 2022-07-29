@@ -44,11 +44,16 @@ class ClientKodeGameController extends Controller
      * Display the specified resource.
      *
      * @param  \App\Models\Kode_game  $kode_game
+     * @param int $no
      * @return \Illuminate\Http\Response
      */
-    public function show(Kode_game $kode_game)
+    public function show(Kode_game $kode_game, $no)
     {
+        $data = $kode_game->select('nama')->where('no', '=', $no)->get();
 
+        return view('client.games.redeem-code.redeem', [
+            'nama' => $data[0]->nama
+        ]);
     }
 
     /**
