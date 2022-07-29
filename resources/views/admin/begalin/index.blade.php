@@ -1,4 +1,3 @@
-@extends('layouts.admin.modal')
 @extends('layouts.admin.app')
 
 @section('title', 'Kelola Begalin')
@@ -6,7 +5,9 @@
 @section('content')
 
 <!--Tabel Begalin-->
-<div class="col-lg-12col-lg-12 form-wrapper"  id="kelola-begalin">
+
+<div class="col-lg-12col-lg-12 form-wrapper" id="kelola-begalin">
+
       <div class="card">
         <div class="card-header">
           <h4 class="card-title">Kelola Tabel Begalin</h4>
