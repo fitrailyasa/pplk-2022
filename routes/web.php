@@ -7,6 +7,9 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AdminBegalinController;
+use App\Http\Controllers\Admin\AdminFunfactController;
+use App\Http\Controllers\Admin\AdminHimpunanController;
+use App\Http\Controllers\Admin\AdminKamusGaulController;
 use App\Http\Controllers\Client\ClientUptController;
 use App\Http\Controllers\Client\ClientProdiController;
 use App\Http\Controllers\Client\ClientBegalinController;
@@ -36,9 +39,9 @@ Route::get('/home',[HomeController::class, 'index'])->name('home'); */
 
 //Admin Route
 Route::get('/', [AdminController::class, 'index'])->name('index');
-Route::resource('adminBegali n', AdminBegalinController::class)->except(['show']);
-Route::resource('adminFunfact', AdminBegalinController::class)->except(['show']);
-Route::resource('adminHimpunan', AdminBegalinController::class)->except(['show']);
+Route::resource('adminBegalin', AdminBegalinController::class)->except(['show']);
+Route::resource('adminFunfact', AdminFunfactController::class)->except(['show']);
+Route::resource('adminHimpunan', AdminHimpunanController::class)->except(['show']);
 Route::resource('adminKamusGaul', AdminKamusGaulController::class)->except(['show']);
 Route::resource('adminProdi', AdminBegalinController::class)->except(['show']);
 Route::resource('adminUkm', AdminBegalinController::class)->except(['show']);
@@ -142,7 +145,7 @@ Route::get('/edit-biodata', [ClientBiodataController::class, 'indexEditBio'])->n
 
 Route::get('/beranda', [ClientBegalinController::class, 'index']); //DEFAULT
 
-Route::get('/card-list',[ClientKodeGameController::class,'index']); //Redeem card-list
+Route::get('/card-list', [ClientKodeGameController::class, 'index']); //Redeem card-list
 
 Route::get('/detail-himpunan', function () {        // ===> Detail himpunan
     return view('client.ormawa.detail-himpunan');

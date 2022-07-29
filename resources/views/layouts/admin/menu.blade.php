@@ -205,13 +205,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a onclick="openCMS(event, 'tambah-himpunan')" class="nav-link tablinks">
+                <a href="{{ route('adminHimpunan.create') }}" class="nav-link tablinks">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah Himpunan</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a onclick="openCMS(event, 'kelola-himpunan')" class="nav-link tablinks">
+                <a href="{{ route('adminHimpunan.index') }}" class="nav-link tablinks">
                   <i class="far fa-circle nav-icon"></i>
                   <p style="font-size:0.9rem;">Kelola Data Himpunan</p>
                 </a>
@@ -277,13 +277,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a onclick="openCMS(event, 'tambah-funfact')" class="nav-link tablinks">
+                <a href="{{ route('adminFunfact.create') }} " class="nav-link tablinks">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah Funfact</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a onclick="openCMS(event, 'kelola-funfact')" class="nav-link tablinks">
+                <a onclick="{{ route('adminFunfact.index') }} " class="nav-link tablinks">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Kelola Data funfact</p>
                 </a>
@@ -325,13 +325,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a onclick="openCMS(event, 'tambah-kamus')" class="nav-link tablinks">
+                <a href="{{ route('adminKamusGaul.create') }}" class="nav-link tablinks">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah Kamus</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a onclick="openCMS(event, 'kelola-kamus')" class="nav-link tablinks">
+                <a href="{{ route('adminKamusGaul.index') }}" class="nav-link tablinks">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Kelola Kamus Gaul</p>
                 </a>

@@ -13,7 +13,6 @@
       <div class="card-body">
 
         <form method="POST" action="{{ route('createHimpunan') }}" enctype='multipart/form-data'>
-
         @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Nama Lengkap</label>

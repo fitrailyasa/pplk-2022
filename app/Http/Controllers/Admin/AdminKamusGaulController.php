@@ -17,7 +17,7 @@ class AdminKamusGaulController extends Controller
      */
     public function index()
     {
-        $kamusgauls = Kamusgaul::all();
+        $kamusgauls = KamusGaul::all();
         return view('admin.kamusgaul.index', compact('kamusgauls'));
     }
 
@@ -29,7 +29,7 @@ class AdminKamusGaulController extends Controller
     public function create()
     {
         $kamusgauls = KamusGaul::all();
-        return view('admin.kamusGaul.create', compact('kamusgauls'));
+        return view('admin.kamusgaul.create', compact('kamusgauls'));
     }
 
     /**
@@ -67,7 +67,7 @@ class AdminKamusGaulController extends Controller
     public function edit($id)
     {
         $kamusgauls = KamusGaul::where('id', $id)->first();
-        return view('admin.kamusGaul.edit', compact('kamusgaul'));
+        return view('admin.kamusgaul.update', compact('kamusgaul'));
     }
 
     /**
@@ -92,7 +92,7 @@ class AdminKamusGaulController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\begalin  $begalin
+     * @param  \App\Models\kamusgaul $kamusgaul
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

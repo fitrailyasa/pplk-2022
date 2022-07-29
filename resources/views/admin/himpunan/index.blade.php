@@ -61,15 +61,15 @@
                     <td>{{ $himpunan->filosofiLogo }}</td>
                     <td>{{ $himpunan->tahunBerdiri }}</td>
                     <td class="manage-row">
-                      <a href="{{ route('viewEditHimpunan', ['id'=>$himpunan->id]) }}" class="edit-button">
+                      <a href="{{ route('adminHimpunan.edit', $himpunan->id)}}" class="edit-button">
                         <i class="fa-solid fa-marker"></i>
                       </a>
                       <!-- Button trigger modal -->
-                      <a role="button" class="delete-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                      <a role="button"  class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm{{$himpunan->id}}">
                         <i class="fa-solid fa-trash-can"></i>
                       </a>
                       <!-- Modal -->
-                      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                      <div class="modal fade bd-example-modal-sm{{$himpunan->id}}" tabindex="-1" role="dialog" aria-hidden="true">
                         <div class="modal-dialog">
                           <div class="modal-content">
                             <div class="modal-header">
@@ -80,7 +80,9 @@
                               Anda yakin menghapus data?
                             </div>
                             <div class="modal-footer">
-                              <form action="" method="POST">
+                              <form action="{{route('adminHimpunan.destroy', $himpunan->id)}}" method="POST">
+                                @method('DELETE')
+                                @csrf
                                   <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
                                   <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
                               </form>
