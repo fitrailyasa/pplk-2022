@@ -41,14 +41,35 @@
                   <td>{{$upt->nama}}</td>
                   <td>{{$upt->deskripsi}}</td>
                   <td class="manage-row">
-                    <a href="{{ route('viewEditUpt', ['id'=>$upt->id]) }}" class="edit-button">
+                    <a href="{{ route('adminUpt.edit',$upt->id) }}" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>
                     <!-- Button trigger modal -->
-                    <a href="{{ route('hapusUpt',["id"=>$upt->id,'table'=>'Upt']) }}" class="delete-button" >
+                    <a role="button"  class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm{{$upt->id}}">
                       <i class="fa-solid fa-trash-can"></i>
                     </a>
                     <!-- Modal -->
+
+                    <div class="modal fade bd-example-modal-sm{{$upt->id}}" tabindex="-1" role="dialog" aria-hidden="true">
+                      <div class="modal-dialog ">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h5 class="modal-title"><strong>Hapus Data</strong></h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal">
+                                  </button>
+                              </div>
+                              <div class="modal-body">Apakah anda yakin ingin menghapus data?</div>
+                              <div class="modal-footer">
+                                <form action="{{route('adminUpt.destroy',$upt->id)}}" method="POST">
+                                  @method('DELETE')
+                                  @csrf
+                                  <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
+                                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>
+                                </form>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
                   </td>
                 </tr>
                 @endforeach
@@ -62,3 +83,4 @@
       </div>
     </div>
     <!--./Tabel UPT ITERA-->
+    @endsection

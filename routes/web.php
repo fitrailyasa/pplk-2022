@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\AdminFunfactController;
 use App\Http\Controllers\Admin\AdminHimpunanController;
 use App\Http\Controllers\Admin\AdminKamusGaulController;
 use App\Http\Controllers\Admin\AdminUkmController;
+use App\Http\Controllers\Admin\AdminUptController;
 use App\Http\Controllers\Client\ClientUptController;
 use App\Http\Controllers\Client\ClientProdiController;
 use App\Http\Controllers\Client\ClientBegalinController;
@@ -47,7 +48,7 @@ Route::resource('adminKamusGaul', AdminKamusGaulController::class)->except(['sho
 Route::resource('adminProdi', AdminBegalinController::class)->except(['show']);
 Route::resource('adminUkm', AdminUkmController::class)->except(['show']);
 Route::resource('adminUser', AdminBegalinController::class)->except(['show']);
-Route::resource('adminUpt', AdminBegalinController::class)->except(['show']);
+Route::resource('adminUpt', AdminUptController::class)->except(['show']);
 //Login
 
 // Route::get('/', [LoginController::class, 'showLoginForm']);

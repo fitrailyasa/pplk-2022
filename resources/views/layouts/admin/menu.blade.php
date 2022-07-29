@@ -157,13 +157,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a onclick="openCMS(event, 'tambah-upt')" class="nav-link tablinks">
+                <a href="{{ route('adminUpt.create') }}" class="nav-link tablinks">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah UPT</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a onclick="openCMS(event, 'kelola-upt')" class="nav-link tablinks">
+                <a href="{{ route('adminUpt.index') }}" class="nav-link tablinks">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Kelola Data UPT</p>
                 </a>
