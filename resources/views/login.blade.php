@@ -18,7 +18,6 @@
 
         <!-- JUDUL -->
         <title>@yield('title')Login - PPLK 2022</title>
-
         <!-- CSS -->
         <link rel="stylesheet" href="{{ asset('assets/css/main-style.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/login.css') }}">
