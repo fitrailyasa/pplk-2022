@@ -1,7 +1,7 @@
 @extends('layouts.client.app')
 
 <!-- TITLE -->
-@section('title', 'Scanner')
+@section('title', 'Polling')
 
 @section('style')
     <!-- STYLES -->
@@ -18,12 +18,12 @@
         <div class="qr-code mx-auto justify-content-center">
             <div class="row row-scanner justify-content-center ms-auto me-auto">
                 <div class="col-top-scanner justify-content-center">
-                    <h5>SCANNER Polling</h5>
+                    <h5>SCANNER POLLING</h5>
                 </div>
-                <div><form action="/presensi/{{ $users->id }}" method="POST">
+                <div><form action="/presensi/{{ $ukms->id }}" method="POST">
                     @csrf
                 <div class="col-scanner justify-content-center" id="ganti">
-                    <div id="reader" class="justify-content-center"></div>
+                    <div id="reader"  class="justify-content-center"></div>
                 </div>
 
             </form></div>

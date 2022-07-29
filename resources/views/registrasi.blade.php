@@ -109,7 +109,7 @@
         <!-- nohp -->
         <div class="row justify-content-center align-items-center">
             <div class="col mb-3 d-flex justify-content-center align-items-center">
-                <input name="nohp" type="text" class="form-control rounded input-size" id="ig" placeholder="Nomor Hp 62-xxx-xxxx-xxxx" required />
+                <input name="nomorHp" type="text" class="form-control rounded input-size" id="ig" placeholder="Nomor Hp 62-xxx-xxxx-xxxx" required />
             </div>
         </div>
         <!-- nohp -->
