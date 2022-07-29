@@ -15,7 +15,7 @@ class ClientScannerController extends Controller
      */
     public function index()
     {
-        $users = User::where('id', '2')->firstOrFail();
+        $users = User::where('id', '1')->firstOrFail();
         return view('client.scannerPresensi', compact('users'));
     }
 
@@ -25,11 +25,18 @@ class ClientScannerController extends Controller
         return view('client.scannerPolling', compact('ukms'));
     }
 
+    public function indexMaba()
+    {
+        $users = User::where('id', '2')->firstOrFail();
+        return view('client.scannerMaba', compact('users'));
+    }
+
     public function presensi(Request $request,  $id)
     {
-        $users = User::where('id', $id)->firstOrFail();
+
+        $users = User::where('qrCode', $request->input('nim'))->firstOrFail();
         $date = Date("m.d.y");
-        $token = "$id"."$date";
+        $token = "$users->id"."$date";
         $check = Presensi::where('token', $token)->get();
         $checkCount = $check->count();
 
@@ -42,7 +49,7 @@ class ClientScannerController extends Controller
 
                 }else {
                     Presensi::create([
-                        'user_id'=>$id,
+                        'user_id'=>$users->id,
                         'status'=>$request->input('status'),
                         'hari'=>$date,
                         'token' => $token
@@ -58,6 +65,55 @@ class ClientScannerController extends Controller
         window.location.href='/scanner'
       </script>";
 }
+
+}
+
+public function presensiMaba(Request $request,  $id)
+{
+    $qrCodeScanner = $request->input('nim');
+    $dapmen = User::where('id', $id)->firstOrFail();
+    $maba = User::where('qrCode', $qrCodeScanner)->firstOrFail();
+    $checkMaba = User::where('qrCode', $qrCodeScanner)->get();
+    $countMaba = $checkMaba->count();
+    $date = Date("m.d.y");
+    $token = "$maba->id"."$date";
+    $checkToken = Presensi::where('token', $token)->get();
+    $countToken = $checkToken->count();
+
+
+    if ($countMaba >= 1) {
+        if ($dapmen->kelompok == $maba->kelompok){
+            if ($countToken >= 1) {
+                echo "<script>
+                alert('Anda Hari Ini Sudah Absen');
+                window.location.href='/presensiMaba'
+            </script>";
+            }else {
+                Presensi::create([
+                    'user_id'=>$maba->id,
+                    'status'=>$request->input('status'),
+                    'hari'=>$date,
+                    'token' => $token
+                ]);
+                echo "<script>
+                alert('Anda Sudah Berhasil absen');
+                window.location.href='/presensiMaba'
+              </script>";
+            }
+        }else{
+            echo "<script>
+            alert('Maba Bukan Anggota Kelompok Anda');
+            window.location.href='/presensiMaba'
+          </script>";
+        }
+    }else{
+        echo "<script>
+        alert('QrCode Tidak Cocok Dengan Data Manapun');
+        window.location.href='/presensiMaba'
+      </script>";
+    }
+
+
 
 }
 

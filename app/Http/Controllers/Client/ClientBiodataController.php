@@ -20,7 +20,7 @@ class ClientBiodataController extends Controller
      */
     public function index()
     {
-        $biodata = User::where('id', '2')->firstOrFail();
+        $biodata = User::where('id', '7')->firstOrFail();
         return view('client.biodata.biodata', compact('biodata'));
     }
 
@@ -68,7 +68,7 @@ class ClientBiodataController extends Controller
             'riwayatPenyakit'=>$request->riwayatPenyakit,
             'roles_id'=>$request->roles,
             'prodi'=>$request->prodi,
-            'qrCode'=>$request->$qrCode
+            'qrCode'=>$qrCode
         ]);
         QrCode::format('svg')->margin(2)->size(200)->errorCorrection('H')->generate("$qrCode", "../public/assets/qrcode/"."$qrCode");
 
