@@ -18,9 +18,9 @@
         <div class="qr-code mx-auto justify-content-center">
             <div class="row row-scanner justify-content-center ms-auto me-auto">
                 <div class="col-top-scanner justify-content-center">
-                    <h5>SCANNER POLLING</h5>
+                    <h5> SCANNER POLLING </h5>
                 </div>
-                <div><form action="/presensi/{{ $ukms->id }}" method="POST">
+                <div><form action="/polling/{{ $ukms->id }}" method="POST">
                     @csrf
                 <div class="col-scanner justify-content-center" id="ganti">
                     <div id="reader"  class="justify-content-center"></div>

@@ -237,7 +237,7 @@
         </div>
 
       <!-- Tombol Daftar -->
-      <div class="row justify-content-center">
+      <div class="row justify-content-center mb-5">
         <div class="col d-flex justify-content-center">
           <button type="submit" class="btn btn-danger rounded fw-bold" id="masuk">DAFTAR</button>
         </div>
