@@ -26,6 +26,7 @@ class CreateUsersTable extends Migration
             $table->string('golonganDarah')->nullable();
             $table->string('riwayatPenyakit')->nullable();
             $table->string('fotoProfil')->nullable();
+            $table->string('qrCode')->nullable();
             $table->foreignId('roles_id')->constrained('roles')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });

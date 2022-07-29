@@ -164,7 +164,6 @@
        <div class="row justify-content-center align-items-center">
         <div class="col mb-3 d-flex justify-content-center align-items-center">
           <select placeholder="prodi" name="prodi" class="form-select rounded input-size text-secondary" aria-label="Default select example">
-            <option selected value="belum_isi">Program Studi</option>
             <option value="Teknik Informatika">Teknik Informatika</option>
             <option value="Teknik Elektro">Teknik Elektro</option>
             <option value="Teknik Telekomunikasi">Teknik Telekomunikasi</option>
@@ -182,8 +181,8 @@
             <option value="Teknik Geomatika">Teknik Geomatika</option>
             <option value="Teknik Sistem Energi">Teknik Sistem Energi</option>
             <option value="Teknik Material">Teknik Material</option>
-            <option value="Tenik Biomedis">Tenik Biomedis</option>
-            <option value="Teknik Perkereta Apian">Teknik Perkereta Apian</option>
+            <option value="Teknik Biomedis">Teknik Biomedis</option>
+            <option value="Teknik Perkeretaapian">Teknik Perkeretaapian</option>
             <option value="Matematika">Matematika</option>
             <option value="Fisika">Fisika</option>
             <option value="Kimia">Kimia</option>
@@ -192,13 +191,13 @@
             <option value="Sains Data">Sains Data</option>
             <option value="Teknologi Pangan">Teknologi Pangan</option>
             <option value="Sains Aktuaria">Sains Aktuaria</option>
-            <option value="Sains Atmosfer Dan Keplanetan">Sains Atmosfer Dan Keplanetan</option>
+            <option value="Sains Atmosfer dan Keplanetan">Sains Atmosfer dan Keplanetan</option>
             <option value="Sains Kelautan">Sains Kelautan</option>
             <option value="Rekayasa Tata Kelola Air Terpadu">Rekayasa Tata Kelola Air Terpadu</option>
             <option value="Rekayasa Kosmetik">Rekayasa Kosmetik</option>
-            <option value="Rekayasa Minyak Dan Gas">Rekayasa Minyak Dan Gas</option>
+            <option value="Rekayasa Minyak dan Gas">Rekayasa Minyak dan Gas</option>
             <option value="Rekayasa Kehutanan">Rekayasa Kehutanan</option>
-            <option value="Rekayasa Instrumentasi Dan Automasi">Rekayasa Instrumentasi Dan Automasi </option>
+            <option value="Rekayasa Instrumentasi dan Automasi">Rekayasa Instrumentasi dan Automasi </option>
             <option value="Arsitektur">Arsitektur</option>
             <option value="Perencanaan Wilayah dan Kota">Perencanaan Wilayah dan Kota</option>
             <option value="Arsitektur Lanskap">Arsitektur Lanskap</option>
@@ -237,7 +236,7 @@
         </div>
 
       <!-- Tombol Daftar -->
-      <div class="row justify-content-center">
+      <div class="row justify-content-center mb-5">
         <div class="col d-flex justify-content-center">
           <button type="submit" class="btn btn-danger rounded fw-bold" id="masuk">DAFTAR</button>
         </div>
