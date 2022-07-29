@@ -1,6 +1,6 @@
 function onScanSuccess(qrCodeMessage) {
     console.log(qrCodeMessage);
-        document.getElementById('ganti').innerHTML = '<div><input type="text" name="NIM" value="'qrCodeMessage'" style="display: none;"><input type="text" name="idUkm" value="{{ $ukms->id }}" style="display: none;"><input type="submit" class="btn btn-primary" value="Kirim" ></div>';
+        document.getElementById('ganti').innerHTML = '<div><input type="text" name="NIM" value="'+qrCodeMessage+'" style="display: none;"><input type="text" name="idUkm" value="{{ $ukms->id }}" style="display: none;"><input type="submit" class="btn btn-primary" value="Kirim" ></div>';
     }
       function onScanError(errorMessage) {
 
