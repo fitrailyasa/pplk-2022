@@ -8,6 +8,4 @@ use Illuminate\Database\Eloquent\Model;
 class Leaderboard extends Model
 {
     use HasFactory;
-    protected $table = 'leaderboards';
-    protected $fillable = ['idKelompok', 'skor'];
 }
