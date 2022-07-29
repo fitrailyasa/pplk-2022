@@ -18,7 +18,7 @@
         <div class="qr-code mx-auto justify-content-center">
             <div class="row row-scanner justify-content-center ms-auto me-auto">
                 <div class="col-top-scanner justify-content-center">
-                    <h5>SCANNER PRESENSI</h5>
+                    <h5>SCANNER PRESENSI STAFF</h5>
                 </div>
                 <div><form action="/presensi/{{ $users->id }}" method="POST">
                     @csrf

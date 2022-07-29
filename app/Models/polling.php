@@ -9,5 +9,5 @@ class polling extends Model
 {
     use HasFactory;
     protected $table = 'pollings';
-    protected $fillable = ['idUkm', 'nim', 'token'];
+    protected $fillable = ['ukmsid', 'usersid', 'token'];
 }
