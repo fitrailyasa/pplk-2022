@@ -67,8 +67,9 @@ class AdminFunfactController extends Controller
      * @param  \App\Models\Funfact  $Funfact
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Funfact $funfact)
+    public function update(Request $request, $id)
     {
+        $funfact=Funfact::where('id',$id)->first();
         $funfact->update(
             [
                 'isi' => $request->isi

@@ -77,13 +77,14 @@ class AdminKamusGaulController extends Controller
      * @param  \App\Models\kamusgaul  $kamusgaul
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, KamusGaul $kamusgaul)
+    public function update(Request $request, $id)
     {
+        $kamusgaul=KamusGaul::where('id',$id)->first();
         $kamusgaul->update(
             [
                 'gaul' => $request->gaul,
                 'asli' => $request->asli,
-                'contohPenggunaan' =>       $request->contohPenggunaan
+                'contohPenggunaan' => $request->contohPenggunaan
             ]
         );
         return redirect('/adminKamusGaul')->with('sukses', 'Berhasil Edit Data!');

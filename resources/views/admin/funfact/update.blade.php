@@ -11,7 +11,7 @@
     <h4 class="card-title">Edit Data Funfact</h4>
     </div>
     <div class="card-body">
-      <form method="POST" action="{{ route('adminFunfact.update',$funfact) }}" enctype='multipart/form-data'>
+      <form method="POST" action="{{ route('adminFunfact.update',$funfact->id) }}" enctype='multipart/form-data'>
       @method('PUT')
       @csrf
       @if (\Session::has('success'))

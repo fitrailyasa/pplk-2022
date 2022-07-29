@@ -68,8 +68,9 @@ class AdminBegalinController extends Controller
      * @param  \App\Models\begalin  $begalin
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request,Begalin $begalin)
+    public function update(Request $request,$id)
     {
+        $begalin=Begalin::where('id',$id)->first();
         $begalin->update(
             [
                 'judul' => $request->judul,
