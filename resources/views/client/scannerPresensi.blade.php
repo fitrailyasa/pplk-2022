@@ -5,7 +5,6 @@
 
 @section('style')
     <!-- STYLES -->
-    <link rel="stylesheet" href="{{ asset('assets') }}/css/GANTI.css">
     <link rel="stylesheet" href="{{ asset('assets/css/style-scanner.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/js/style-scanner.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -19,12 +18,12 @@
         <div class="qr-code mx-auto justify-content-center">
             <div class="row row-scanner justify-content-center ms-auto me-auto">
                 <div class="col-top-scanner justify-content-center">
-                    <h5>SCANNER QR CODE</h5>
+                    <h5>SCANNER PRESENSI</h5>
                 </div>
                 <div><form action="/presensi/{{ $users->id }}" method="POST">
                     @csrf
                 <div class="col-scanner justify-content-center" id="ganti">
-                    <div id="reader" class="justify-content-center"></div>
+                    <div id="reader"  class="justify-content-center"></div>
                 </div>
 
             </form></div>

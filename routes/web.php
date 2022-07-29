@@ -116,8 +116,7 @@ Route::get('/admin/hapushimpunan/{id}', [AdminController::class, 'destroyHimpuna
 Route::get('/admin/hapusukm/{id}', [AdminController::class, 'destroyUkm'])->name('hapusUkm');
 
 Route::post('/presensi/{id}', [ClientScannerController::class, 'presensi']);
-
-
+Route::post('/polling/{id}', [ClientScannerController::class, 'polling']);
 
 
 Route::get('/upt', [ClientUptController::class, 'index'])->name('upt'); //===> upt
@@ -129,7 +128,9 @@ Route::get('/jurusan', [ClientJurusanController::class, 'index'])->name('jurusan
 Route::get('/kamus-gaul', [ClientKamusgaulController::class, 'index'])->name('kamus-gaul');
 
 Route::get('/biodata', [ClientBiodataController::class, 'index'])->name('biodata');
+
 Route::get('/scanner', [ClientScannerController::class, 'index'])->name('scanner');
+Route::get('/polling', [ClientScannerController::class, 'indexPolling'])->name('polling');
 
 
 

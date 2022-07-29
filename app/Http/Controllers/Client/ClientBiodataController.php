@@ -49,7 +49,10 @@ class ClientBiodataController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'email' => 'required|unique:users|email',
+            'email' => ['required', 'unique:users', 'email'],
+            'nim'=> ['required', 'unique:users', 'max:255'],
+            'instagram'=> ['required', 'unique:users', 'max:255'],
+            'nomorHp'=>['required', 'unique:users', 'max:255']
         ]);
         User::create([
             'nama'=>$request->name,
@@ -58,7 +61,7 @@ class ClientBiodataController extends Controller
             'email'=>$data['email'],
             'kelompok'=>$request->divisi,
             'instagram'=>$request->instagram,
-            'nomorHp'=>$request->nohp,
+            'nomorHp'=>$request->nomorHp,
             'password'=> Hash::make($request->password),
             'riwayatPenyakit'=>$request->riwayatPenyakit,
             'roles_id'=>$request->roles,

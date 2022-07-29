@@ -47,23 +47,18 @@
                             @csrf
                             @method('PUT')
                             <div class="row bio-input">
-                                <label class="form-label" for="email">Email</label>
-                                <input value="{{ $viewbiodata->email }}" name="email" type="text" placeholder="{{ $viewbiodata->email }}" enabled>
-                            </div>
-
-                            <div class="row bio-input">
                                 <label class="form-label" for="nama">Nama</label>
                                 <input value="{{ $viewbiodata->nama }}"name="name" type="text" placeholder="{{ $viewbiodata->nama }}" enabled>
                             </div>
 
                             <div class="row bio-input">
-                                <label class="form-label" for="nim">NIM</label>
-                                <input value="{{ $viewbiodata->nim }}" name="nim" type="text" placeholder="{{ $viewbiodata->nim }}" enabled>
+                                <label class="form-label" for="email">Email</label>
+                                <input value="{{ $viewbiodata->email }}" name="email" type="text" placeholder="{{ $viewbiodata->email }}" enabled>
                             </div>
 
                             <div class="row bio-input">
-                                <label class="form-label" for="kelompok">Kelompok</label>
-                                <input value="{{ $viewbiodata->kelompok }}"type="text" placeholder="{{ $viewbiodata->kelompok }}" disabled>
+                                <label class="form-label" for="nim">NIM</label>
+                                <input value="{{ $viewbiodata->nim }}" name="nim" type="text" placeholder="{{ $viewbiodata->nim }}" enabled>
                             </div>
 
                             <div class="row bio-input">
@@ -113,9 +108,15 @@
                             </div>
 
                             <div class="row bio-input">
+                                <label class="form-label" for="kelompok">Kelompok</label>
+                                <input value="{{ $viewbiodata->kelompok }}"type="text" placeholder="{{ $viewbiodata->kelompok }}" disabled>
+                            </div>
+
+                            <div class="row bio-input">
                                 <label class="form-label" for="notel">Nomor Telepon</label>
                                 <input value="{{ $viewbiodata->nomorHp }}"name="nomorHp"type="text" placeholder="{{ $viewbiodata->nomorHp }}" enabled>
                             </div>
+
                             <div class="row bio-input">
                                 <label class="form-label" for="notel">Instagram</label>
                                 <input value="{{ $viewbiodata->instagram }}"name="instagram" type="text" placeholder="{{ $viewbiodata->nomorHp }}" enabled>
@@ -124,18 +125,13 @@
                             <div class="row bio-input">
                                 <label placeholder="belum dinamis" class="form-label" for="golongan darah">Golongan Darah</label>
                                 <select name="golonganDarah">
-                                    <option selected class="selected">{{ $viewbiodata->golonganDarah }}</option>
+                                    <option selected class="selected">Golongan Darah Anda : {{ $viewbiodata->golonganDarah }}</option>
                                     <option value="A">A</option>
                                     <option value="AB">AB</option>
                                     <option value="B">B</option>
                                     <option value="O">O</option>
                                 </select>
                             </div>
-{{--
-                            <div class="row bio-input">
-                                <label class="form-label" for="alamat">Alamat</label>
-                                <input type="text" placeholder="dinamis" enabled>
-                            </div> --}}
 
                             <div class="row bio-input">
                                 <label class="form-label" for="riwayat">Riwayat Penyakit</label>
