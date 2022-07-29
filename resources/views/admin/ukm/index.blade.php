@@ -1,14 +1,8 @@
-@extends('layouts.admin.app')
-
-@section('title', 'Kelola Begalin')
-
-@section('content')
-
-<!--Tabel Begalin-->
-<div class="col-lg-12col-lg-12 form-wrapper" id="kelola-begalin">
+<!--Tabel UKM/Komunitas-->
+<div class="col-lg-12col-lg-12 form-wrapper" id="kelola-ukm">
       <div class="card">
         <div class="card-header">
-          <h4 class="card-title">Kelola Tabel Begalin</h4>
+          <h4 class="card-title">Kelola Tabel Komunitas</h4>
         </div>
         <div class="card-body">
           @if (session('sukses'))
@@ -29,18 +23,41 @@
                 <thead>
                   <tr>
                     <th>No</th>
-                    <th>judul</th>
-                    <th>isi</th>
+                    <th>Nama Lengkap</th>
+                    <th>Nama Singkat</th>
+                    <th>visi </th>
+                    <th>misi</th>
+                    <th>pembina</th>
+                    <th>Ketua Umum</th>
+                    <th>Dies Natalis</th>
+                    <th>Logo</th>
+                    <th>Filosofi Logo</th>
+                    <th>QR-Code</th>
+                    <th>Dokumentasi1</th>
+                    <th>Dokumentasi2</th>
+                    <th>Dokumentasi3</th>
+                    <th>More</th>
                   </tr>
                 </thead>
                 <tbody>
-                  @foreach ($begalins as $begalin)
+                  @foreach ($ukms as $ukm)
                   <tr>
-                    <td>{{ $loop->iteration }}</td>
-                    <td>{{ $begalin->judul }}</td>
-                    <td>{{ $begalin->isi }}</td>
+                    <td>{{$loop->iteration}}</td>
+                    <td>{{ $ukm->namaLengkap}}</td>
+                    <td>{{ $ukm->namaSingkat}}</td>
+                    <td>{{ $ukm->visi}}</td>
+                    <td>{{ $ukm->misi}}</td>
+                    <td>{{ $ukm->pembina}}</td>
+                    <td>{{ $ukm->ketuaUmum}}</td>
+                    <td>{{ $ukm->tahunBerdiri}}</td>
+                    <td><img src=" #" widht="100" height="100"/></td>
+                    <td>{{ $ukm->filosofiLogo}}</td>
+                    <td>aw32#$@aiwjd543</td>
+                    <td><img src=" #" widht="100" height="100"/></td>
+                    <td><img src=" #" widht="100" height="100"/></td>
+                    <td><img src=" #" widht="100" height="100"/></td>
                     <td class="manage-row">
-                      <a href="{{ route('viewEditBegalin', ['id'=>$begalin->id]) }}" class="edit-button">
+                      <a href="{{ route('viewEditUkm', ['id'=>$ukm->id]) }}" class="edit-button">
                         <i class="fa-solid fa-marker"></i>
                       </a>
                       <!-- Button trigger modal -->
@@ -79,5 +96,4 @@
         </div>
       </div>
     </div>
-    <!--./Tabel Begalin-->
-@endsection
+    <!--./Tabel UKM/Komunitas-->

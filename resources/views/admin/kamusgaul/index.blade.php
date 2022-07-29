@@ -1,14 +1,14 @@
 @extends('layouts.admin.app')
 
-@section('title', 'Kelola Begalin')
+@section('title', 'Kelola Kamus Gaul')
 
 @section('content')
 
-<!--Tabel Begalin-->
-<div class="col-lg-12col-lg-12 form-wrapper" id="kelola-begalin">
+<!--Tabel Kamus Gaul-->
+<div class="col-lg-12col-lg-12 form-wrapper tabcontents" id="kelola-kamus">
       <div class="card">
         <div class="card-header">
-          <h4 class="card-title">Kelola Tabel Begalin</h4>
+          <h4 class="card-title">Kelola Tabel Kamus Gaul</h4>
         </div>
         <div class="card-body">
           @if (session('sukses'))
@@ -29,18 +29,20 @@
                 <thead>
                   <tr>
                     <th>No</th>
-                    <th>judul</th>
-                    <th>isi</th>
+                    <th>Kamus Gaul</th>
+                    <th>Arti Kamus</th>
+                    <th>Contoh Penggunaan</th>
                   </tr>
                 </thead>
                 <tbody>
-                  @foreach ($begalins as $begalin)
+                  @foreach ($kamusgauls as $kamusgaul)
                   <tr>
                     <td>{{ $loop->iteration }}</td>
-                    <td>{{ $begalin->judul }}</td>
-                    <td>{{ $begalin->isi }}</td>
+                    <td>{{ $kamusgaul->gaul }}</td>
+                    <td>{{ $kamusgaul->asli }}</td>
+                    <td>{{ $kamusgaul->contohPenggunaan }}</td>
                     <td class="manage-row">
-                      <a href="{{ route('viewEditBegalin', ['id'=>$begalin->id]) }}" class="edit-button">
+                      <a href="{{ route('viewEditKamusGaul',["id"=>$kamusgaul->id]) }}" class="edit-button">
                         <i class="fa-solid fa-marker"></i>
                       </a>
                       <!-- Button trigger modal -->
@@ -79,5 +81,4 @@
         </div>
       </div>
     </div>
-    <!--./Tabel Begalin-->
-@endsection
+    <!--./Tabel Kamus Gaul-->

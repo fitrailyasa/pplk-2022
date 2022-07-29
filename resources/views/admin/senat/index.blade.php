@@ -1,14 +1,8 @@
-@extends('layouts.admin.app')
-
-@section('title', 'Kelola Begalin')
-
-@section('content')
-
-<!--Tabel Begalin-->
-<div class="col-lg-12col-lg-12 form-wrapper" id="kelola-begalin">
+<!--Tabel Senat-->
+<div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="overflow-x:hidden; display: none;" id="kelola-senat">
       <div class="card">
         <div class="card-header">
-          <h4 class="card-title">Kelola Tabel Begalin</h4>
+          <h4 class="card-title">Kelola Tabel Senat</h4>
         </div>
         <div class="card-body">
           @if (session('sukses'))
@@ -29,18 +23,28 @@
                 <thead>
                   <tr>
                     <th>No</th>
-                    <th>judul</th>
-                    <th>isi</th>
+                    <th>ketua</th>
+                    <th>deskripsi</th>
+                    <th>website</th>
+                    <th>youtube</th>
+                    <th>Facebook</th>
+                    <th>Telegram</th>
+                    <th>Youtube</th>
+                    <th>Instagram</th>
+                    <th>More</th>
                   </tr>
                 </thead>
                 <tbody>
-                  @foreach ($begalins as $begalin)
+                  @foreach ($senats as $senat)
                   <tr>
                     <td>{{ $loop->iteration }}</td>
-                    <td>{{ $begalin->judul }}</td>
-                    <td>{{ $begalin->isi }}</td>
+                    <td>{{ $senat->ketua }}</td>
+                    <td>{{ $senat->deskripsi }}</td>
+                    <td>{{ $senat->website }}</td>
+                    <td>{{ $senat->youtube }}</td>
+                    <td>{{ $senat->instagram }}</td>
                     <td class="manage-row">
-                      <a href="{{ route('viewEditBegalin', ['id'=>$begalin->id]) }}" class="edit-button">
+                      <a href="" class="edit-button">
                         <i class="fa-solid fa-marker"></i>
                       </a>
                       <!-- Button trigger modal -->
@@ -79,5 +83,4 @@
         </div>
       </div>
     </div>
-    <!--./Tabel Begalin-->
-@endsection
+    <!--./Tabel Senat-->

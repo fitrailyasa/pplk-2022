@@ -1,12 +1,11 @@
-@extends('layouts.admin.modal')
 @extends('layouts.admin.app')
 
 @section('title', 'Tambah Begalin')
 
 @section('content')
 
-<!--Begalin-->
-<div class="col-lg-12 col-lg-12 form-wrapper tabcontents" style="display: none"  id="tambah-begalin">
+  <!--Tambah Begalin-->
+  <div class="col-lg-12 col-lg-12 form-wrapper" id="tambah-begalin">
       <div class="card">
       <div class="card-header">
       <h4 class="card-title">Input Data Begalin</h4>
@@ -35,5 +34,5 @@
         </div>
       </div>
     </div>
-    <!--./Begalin-->
+    <!--./Tambah Begalin-->
 @endsection

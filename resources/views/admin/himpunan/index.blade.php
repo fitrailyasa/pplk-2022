@@ -1,14 +1,14 @@
 @extends('layouts.admin.app')
 
-@section('title', 'Kelola Begalin')
+@section('title', 'Kelola Himpunan')
 
 @section('content')
 
-<!--Tabel Begalin-->
-<div class="col-lg-12col-lg-12 form-wrapper" id="kelola-begalin">
+<!--Tabel Himpunan-->
+<div class="col-lg-12col-lg-12 form-wrapper" id="kelola-himpunan">
       <div class="card">
         <div class="card-header">
-          <h4 class="card-title">Kelola Tabel Begalin</h4>
+          <h4 class="card-title">Kelola Tabel Himpunan</h4>
         </div>
         <div class="card-body">
           @if (session('sukses'))
@@ -25,22 +25,43 @@
             <div class="panel-heading border">    
             </div>
           <div class="panel-body">
-                <table class=" table-responsive table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt">
+          <table class=" table-responsive table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt">
                 <thead>
                   <tr>
                     <th>No</th>
-                    <th>judul</th>
-                    <th>isi</th>
+                    <th>Nama Singkat</th>
+                    <th>Nama Lengkap</th>
+                    <th>Visi</th>
+                    <th>Misi</th>
+                    <th>Deskripsi</th>
+                    <th>Kode Warna</th>
+                    <th>Pembina</th>
+                    <th>Ketua Himpunan</th>
+                    <th>Logo</th>
+                    <th>Filosofi Logo</th>
+                    <th>Kode Warna</th>
+                    <th>Tahun Berdiri</th>
+                    <th>More</th>
                   </tr>
                 </thead>
                 <tbody>
-                  @foreach ($begalins as $begalin)
+                  @foreach ($himpunans as $himpunan)
                   <tr>
                     <td>{{ $loop->iteration }}</td>
-                    <td>{{ $begalin->judul }}</td>
-                    <td>{{ $begalin->isi }}</td>
+                    <td>{{ $himpunan->namaSingkat }}</td>
+                    <td>{{ $himpunan->namaLengkap }}</td>
+                    <td>{{ $himpunan->visi }}</td>
+                    <td>{{ $himpunan->misi }}</td>
+                    <td>{{ $himpunan->deskripsi }}</td>
+                    <td>{{ $himpunan->kodeWarna }}</td>
+                    <td>{{ $himpunan->pembina }}</td>
+                    <td>{{ $himpunan->ketuaHimpunan }}</td>
+                    <td>{{ $himpunan->tahunBerdiri }}</td>
+                    <td>{{ $himpunan->logo }}</td>
+                    <td>{{ $himpunan->filosofiLogo }}</td>
+                    <td>{{ $himpunan->tahunBerdiri }}</td>
                     <td class="manage-row">
-                      <a href="{{ route('viewEditBegalin', ['id'=>$begalin->id]) }}" class="edit-button">
+                      <a href="{{ route('viewEditHimpunan', ['id'=>$himpunan->id]) }}" class="edit-button">
                         <i class="fa-solid fa-marker"></i>
                       </a>
                       <!-- Button trigger modal -->
@@ -79,5 +100,6 @@
         </div>
       </div>
     </div>
-    <!--./Tabel Begalin-->
+    <!--./Tabel Himpunan-->
+
 @endsection
