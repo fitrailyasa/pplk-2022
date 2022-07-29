@@ -253,13 +253,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a onclick="openCMS(event, 'tambah-ukm')" class="nav-link tablinks">
+                <a href="{{ route('adminUkm.create') }}" class="nav-link tablinks">
                   <i class="far fa-circle nav-icon"></i>
                   <p style="font-size:0.8rem;">Tambah UKM/Komunitas</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a onclick="openCMS(event, 'kelola-ukm')" class="nav-link tablinks">
+                <a href="{{ route('adminUkm.index') }}" class="nav-link tablinks">
                   <i class="far fa-circle nav-icon"></i>
                   <p style="font-size:0.8rem;">Kelola UKM/Komunitas</p>
                 </a>

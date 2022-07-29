@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Himpunan;
+use App\Models\Ukm;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Admin\Controller;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 
-class AdminHimpunanController extends Controller
+class AdminUkmController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +17,8 @@ class AdminHimpunanController extends Controller
      */
     public function index()
     {
-        $himpunans = Himpunan::all();
-        return view('admin.himpunan.index', compact('himpunans'));
+        $ukms = Ukm::all();
+        return view('admin.Ukm.index', compact('ukms'));
     }
 
     /**
@@ -28,86 +28,92 @@ class AdminHimpunanController extends Controller
      */
     public function create()
     {
-        $himpunans = Himpunan::all();
-        return view('admin.himpunan.create', compact('himpunans'));
+        return view('admin.Ukm.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StorehimpunanRequest  $request
+     * @param  \App\Http\Requests\StoreUkmRequest  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        Himpunan::create([
+        Ukm::create([
             'namaLengkap' => $request->namaLengkap,
             'namaSingkat' => $request->namaSingkat,
             'visi' => $request->visi,
             'misi' => $request->misi,
-            'deskripsi' => $request->deskripsi,
-            'kodeWarna' => $request->kodeWarna,
             'pembina' => $request->pembina,
-            'ketuaHimpunan' => $request->ketuaHimpunan,
+            'ketuaUmum' => $request->ketuaUmum,
             'tahunBerdiri' => $request->tahunBerdiri,
             'logo' => $request->logo,
-            'filosofiLogo' => $request->filosofiLogo
+            'filosofiLogo' => $request->filosofiLogo,
+            'qrCode' => $request->qrCode,
+            'deskripsi' => $request->deskripsi,
+            'dokumentasi1' => $request->dokumentasi1,
+            'dokumentasi2' => $request->dokumentasi2,
+            'dokumentasi3' => $request->dokumentasi3
         ]);
 
-        return redirect('/adminHimpunan')->with('sukses', 'Berhasil Tambah Data!');
+        return redirect('/adminUkm')->with('sukses', 'Berhasil Tambah Data!');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\himpunan $himpunan
+     * @param  \App\Models\Ukm  $Ukm
      * @return \Illuminate\Http\Response
      */
 
     public function edit($id)
     {
-        $himpunan = Himpunan::where('id', $id)->first();
-        return view('admin.himpunan.update', compact('himpunan'));
+        $ukm=Ukm::where('id',$id)->first();
+        return view('admin.Ukm.update', compact('ukm'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdatehimpunanRequest  $request
-     * @param  \App\Models\himpuan $himpunan
+     * @param  \App\Http\Requests\UpdateUkmRequest  $request
+     * @param  \App\Models\Ukm  $Ukm
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Himpunan $himpunan)
+    public function update(Request $request,$id)
     {
-        $himpunan->update(
+        $ukm=Ukm::where('id',$id)->first();
+        $ukm->update(
             [
                 'namaLengkap' => $request->namaLengkap,
                 'namaSingkat' => $request->namaSingkat,
                 'visi' => $request->visi,
                 'misi' => $request->misi,
-                'deskripsi' => $request->deskripsi,
-                'kodeWarna' => $request->kodeWarna,
                 'pembina' => $request->pembina,
-                'ketuaHimpunan' => $request->ketuaHimpunan,
+                'ketuaUmum' => $request->ketuaUmum,
                 'tahunBerdiri' => $request->tahunBerdiri,
                 'logo' => $request->logo,
-                'filosofiLogo' => $request->filosofiLogo
+                'filosofiLogo' => $request->filosofiLogo,
+                'qrCode' => $request->qrCode,
+                'deskripsi' => $request->deskripsi,
+                'dokumentasi1' => $request->dokumentasi1,
+                'dokumentasi2' => $request->dokumentasi2,
+                'dokumentasi3' => $request->dokumentasi3
             ]
         );
-        return redirect('/adminHimpunan')->with('sukses', 'Berhasil Edit Data!');
+        return redirect('/adminUkm')->with('sukses', 'Berhasil Edit Data!');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\himpunan  $himpunan
+     * @param  \App\Models\Ukm  $begalin
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        $data = Himpunan::where('id', $id)->first();
+        $data = Ukm::where('id', $id)->first();
         $data->delete();
 
-        return redirect('/adminHimpunan')->with('sukses', 'Berhasil Hapus Data!');
+        return redirect('/adminUkm')->with('sukses', 'Berhasil Hapus Data!');
     }
 }

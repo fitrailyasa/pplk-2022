@@ -47,7 +47,7 @@ class AdminKamusGaulController extends Controller
             'contohPenggunaan' => $request->contohPenggunaan
         ]);
 
-        return 'Kamus Gaul Berhasil';
+        return redirect('/adminKamusGaul')->with('sukses', 'Berhasil Tambah Data!');
     }
 
     /**

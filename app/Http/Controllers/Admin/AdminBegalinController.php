@@ -45,7 +45,7 @@ class AdminBegalinController extends Controller
             'isi' => $request->isi
         ]);
 
-        return 'Begalin Berhasil';
+        return redirect('/adminBegalin')->with('sukses', 'Berhasil Tambah Data!');
     }
 
     /**
