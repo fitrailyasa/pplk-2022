@@ -55,7 +55,7 @@
             </div>
             <div class="row text-center text-white">
                 <div class="text-nama">
-                    <p>HELLO, <span class="nama">MANG UDUT</span></p>
+                    <p>HELLO, <span class="nama">{{ auth()->user()->nama }}</span></p>
                 </div>
                 <div class="text-qoute">
                     <p>Ayo Menjelajah, Sekarang!</p>
@@ -186,12 +186,12 @@
                     </a>
                     <a href="/pplk" class="small-slide-menu-item justify-content-center">
                         <div class="text-link">
-                            PPKL ITERA
+                            PPLK ITERA
                         </div>
                     </a>
                     <a href="/div-pplk" class="small-slide-menu-item justify-content-center">
                         <div class="text-link">
-                            DIVISI PPKL
+                            DIVISI PPLK
                         </div>
                     </a>
                     <a href="/kamus-gaul" class="small-slide-menu-item justify-content-center">
@@ -338,7 +338,7 @@
                         <div class="col-md-5 col-sm-11 justify-content-center">
                             <div class="row justify-content-center">
                                 <div class="col-10 text-center text">
-                                    <span class="h1 text-style text-white">KNOW MORE <br> ABOUT <span class=" text-gradien">PPLK 2022</span></span>
+                                    <span class="h1 text-style text-white">TAHU LEBIH <br> TENTANG <span class=" text-gradien">PPLK 2022</span></span>
                                 </div>
                                 <div class="mt-5 p-3 col-10 g-3 carousel-container owl-carousel" >
                                     <div class="item img-fit">
@@ -393,7 +393,7 @@
                         {{ $begalin->judul }}
                     </p>
                     <button type="button" class="btn background-gradient mx-auto my-4" data-bs-toggle="modal" data-bs-target="#begalin{{ $begalin->id }}">
-                        View More
+                        Buka
                     </button>
                     </div>
             </div>@endforeach

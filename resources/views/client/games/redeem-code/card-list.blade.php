@@ -37,7 +37,7 @@
                 <div class="d-flex flex-wrap justify-content-around">
                     <!-- cards -->
             @foreach ($kode_games as $kode_game)
-                    <a class="btn my-lg-4" href="#" role="button">
+                    <a class="btn my-lg-4" href='{{ url("/redeem/$kode_game->no") }}' role="button">
                         <div class="card rounded-4">
                             <div class="ratio ratio-16x9 bg-white rounded-4">
                                 <img src="{{ asset('assets/space-cat.png') }}" class="card-img-top img-box rounded-5" alt="...">

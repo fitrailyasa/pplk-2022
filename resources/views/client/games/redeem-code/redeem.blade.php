@@ -39,7 +39,9 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <p class="card-text pt-lg-2 pt-md-1 text-center text-light">pohon</p>
+                            <p class="card-text pt-lg-2 pt-md-1 text-center text-light">
+                                {{ $nama }}
+                            </p>
                         </div>
                     </div>
                 </div>
