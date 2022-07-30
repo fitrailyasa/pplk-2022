@@ -15,20 +15,20 @@ class ClientScannerController extends Controller
      */
     public function index()
     {
-        $users = User::where('id', '1')->firstOrFail();
-        return view('client.scannerPresensi', compact('users'));
+        $users = User::where('id', auth()->user()->id)->firstOrFail();
+        return view('scanner.scannerPresensi', compact('users'));
     }
 
     public function indexPolling()
     {
-        $ukms = Ukm::where('id', '2')->firstOrFail();
-        return view('client.scannerPolling', compact('ukms'));
+        $ukms = Ukm::where('id', auth()->user()->id)->firstOrFail();
+        return view('scanner.scannerPolling', compact('ukms'));
     }
 
     public function indexMaba()
     {
-        $users = User::where('id', '2')->firstOrFail();
-        return view('client.scannerMaba', compact('users'));
+        $users = User::where('id', auth()->user()->id)->firstOrFail();
+        return view('scanner.scannerMaba', compact('users'));
     }
 
     public function presensi(Request $request,  $id)
