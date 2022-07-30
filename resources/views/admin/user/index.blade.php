@@ -1,5 +1,11 @@
+@extends('layouts.admin.app')
+
+@section('title', 'Kelola User')
+
+@section('content')
+
 <!--Tabel User-->
-<div class="col-lg-12col-lg-12 form-wrapper tabcontents" style="overflow-x:hidden; display: none;" id="kelola-user">
+<div class="col-lg-12col-lg-12 form-wrapper" id="kelola-user">
     <div class="card">
       <div class="card-header">
         <h4 class="card-title">Kelola Tabel User</h4>
@@ -89,3 +95,5 @@
     </div>
   </div>
     <!--./Tabel User-->
+
+@endsection

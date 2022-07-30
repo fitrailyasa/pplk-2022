@@ -10,7 +10,7 @@ class Himpunan extends Model
     use HasFactory;
 
     protected $table ='himpunans';
-    protected $fillable=['namaLengkap','namaSingkat','visi','misi','deskripsi','kodeWarna', 'pembina', 'ketuaHimpunan', 'tahunBerdiri', 'logo', 'filosofiLogo'];
+    protected $fillable=['namaLengkap','namaSingkat','visi','misi','deskripsi', 'pembina', 'ketuaHimpunan', 'tahunBerdiri', 'logo', 'filosofiLogo'];
 
 
 }
