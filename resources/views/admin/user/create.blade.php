@@ -1,5 +1,11 @@
-<!--User-->
-<div class="col-lg-12 col-lg-12 form-wrapper tabcontents" style="display: none"  id="tambah-user">
+@extends('layouts.admin.app')
+
+@section('title', 'Tambah User')
+
+@section('content')
+
+<!--Tambah User-->
+<div class="col-lg-12 col-lg-12 form-wrapper" id="tambah-user">
       <div class="card">
       <div class="card-header">
       <h4 class="card-title">Input Data User</h4>
@@ -93,4 +99,6 @@
         </div>
       </div>
     </div>
-    <!--./User-->
+    <!--./Tambah User-->
+
+@endsection
