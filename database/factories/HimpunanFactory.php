@@ -22,7 +22,6 @@ class HimpunanFactory extends Factory
             'deskripsi'=>$this->faker->text(mt_rand(20,30)),
             'ketuaHimpunan'=>$this->faker->name(2),
             'pembina'=>$this->faker->name(2),
-            'kodeWarna'=>array_rand(['A','B','C']),
             'tahunBerdiri'=>random_int(2013,2017),
             'logo'=>$this->faker->text(10),
             'filosofiLogo'=>$this->faker->text(50)
