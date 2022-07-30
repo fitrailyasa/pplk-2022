@@ -422,6 +422,33 @@ class AdminController extends Controller
         return 'hapus sukses';
     }
 
+    //HAPUS Prodi
+    public function destroyProdi($id)
+    {
+        $data = Prodi::where('id', $id)->first();
+        $data->delete();
+
+        return 'hapus sukses';
+    }
+
+    //HAPUS Himpunan
+    public function destroyHimpunan($id)
+    {
+        $data = Himpunan::where('id', $id)->first();
+        $data->delete();
+
+        return 'hapus sukses';
+    }
+
+    //HAPUS Ukm
+    public function destroyUkm($id)
+    {
+        $data = Ukm::where('id', $id)->first();
+        $data->delete();
+
+        return 'hapus sukses';
+    }
+
 
 
 

@@ -26,7 +26,9 @@ class CreateProdisTable extends Migration
             $table->string('ruangProdi')->nullable();
             $table->integer('jumlahMahasiswa')->nullable();
             $table->string('logo')->nullable();
-            $table->string('prestasi')->nullable();
+            $table->string('prestasi1')->nullable();
+            $table->string('prestasi2')->nullable();
+            $table->string('prestasi3')->nullable();
             $table->foreignId('jurusan_id');
             $table->foreign('jurusan_id')->references('id')->on('jurusans');
             $table->timestamps();
