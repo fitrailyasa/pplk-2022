@@ -159,8 +159,8 @@ Route::get('/form-keluhan', function () {         // ===> form keluhan
 Route::get('/pplk', function () {                 // ===> pplk
     return view('client.pplk');
 });
-Route::get('/card-list', function () {            // ===> redeem code card list
-    return view('client.games.redeem-code.card-list');
+Route::get('/begalin', function () {              // ===> begalin
+    return view('client.begalin');
 });
 Route::get('/redeem-failed', function () {        // ===> redeem code failed
     return view('client.games.redeem-code.failed');
