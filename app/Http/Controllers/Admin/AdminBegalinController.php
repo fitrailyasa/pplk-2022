@@ -5,7 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Begalin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Admin\Controller;
-
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 
 class AdminBegalinController extends Controller
 {
@@ -27,6 +28,7 @@ class AdminBegalinController extends Controller
      */
     public function create()
     {
+        $begalins = Begalin::all();
         return view('admin.begalin.create', compact('begalins'));
     }
 
@@ -52,20 +54,11 @@ class AdminBegalinController extends Controller
      * @param  \App\Models\begalin  $begalin
      * @return \Illuminate\Http\Response
      */
-    public function show(begalin $begalin)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\begalin  $begalin
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(begalin $begalin)
+    public function edit($id)
     {
-        return view('admin.begalin.edit', compact('begalins'));
+        $begalin=Begalin::where('id',$id)->first();
+        return view('admin.begalin.update', compact('begalin'));
     }
 
     /**
@@ -75,16 +68,15 @@ class AdminBegalinController extends Controller
      * @param  \App\Models\begalin  $begalin
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(Request $request,Begalin $begalin)
     {
-        $begalin = Begalin::where('id', $request->id)->first();
         $begalin->update(
             [
                 'judul' => $request->judul,
                 'isi' => $request->isi
             ]
         );
-        return $this->index()->with('sukses', ' Success Inserted ' . $begalin->isi);
+        return redirect('/adminBegalin')->with('sukses', 'Berhasil Edit Data!');
     }
 
     /**
@@ -93,11 +85,11 @@ class AdminBegalinController extends Controller
      * @param  \App\Models\begalin  $begalin
      * @return \Illuminate\Http\Response
      */
-    public function destroy(begalin $begalin, $id)
+    public function destroy($id)
     {
         $data = Begalin::where('id', $id)->first();
         $data->delete();
 
-        return 'hapus sukses';
+        return redirect('/adminBegalin')->with('sukses', 'Berhasil Hapus Data!');
     }
 }

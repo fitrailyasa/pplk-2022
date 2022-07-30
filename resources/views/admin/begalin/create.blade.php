@@ -1,18 +1,19 @@
-@extends('layouts.admin.modal')
 @extends('layouts.admin.app')
 
 @section('title', 'Tambah Begalin')
 
 @section('content')
 
-<!--Begalin-->
-<div class="col-lg-12 col-lg-12 form-wrapper tabcontents" style="display: none"  id="tambah-begalin">
+
+  <!--Tambah Begalin-->
+  <div class="col-lg-12 col-lg-12 form-wrapper" id="tambah-begalin">
+
       <div class="card">
       <div class="card-header">
       <h4 class="card-title">Input Data Begalin</h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="{{ route('createBegalin') }}" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('adminBegalin.store') }}" enctype='multipart/form-data'>
         @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Artikel Singkat</label>
@@ -35,5 +36,5 @@
         </div>
       </div>
     </div>
-    <!--./Begalin-->
+    <!--./Tambah Begalin-->
 @endsection
