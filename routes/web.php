@@ -119,7 +119,7 @@ Route::get('/jurusan', [ClientJurusanController::class, 'index'])->name('jurusan
 
 Route::get('/kamus-gaul', [ClientKamusgaulController::class, 'index'])->name('kamus-gaul');
 
-Route::get('/biodata', [ClientBiodataController::class, 'index'])->name('biodata');
+// Route::get('/biodata', [ClientBiodataController::class, 'index'])->name('biodata');
 
 Route::get('/scanner', [ClientScannerController::class, 'index'])->name('scanner');
 Route::get('/polling', [ClientScannerController::class, 'indexPolling'])->name('polling');
@@ -132,8 +132,6 @@ Route::get('/detail-prodi',)->name('detailprodi');
 
 
 Route::get('/detail-prodi',)->name('detailprodi');
-
-Route::get('/edit-biodata', [ClientBiodataController::class, 'indexEditBio'])->name('edit-biodata');
 
 Route::get('/beranda', [ClientBegalinController::class, 'index']); //DEFAULT
 
@@ -189,12 +187,16 @@ Route::get('/tebak-bangunan-game', function () {  // ===> tebak bangunan game
 Route::get('/game-home', function () {            // ===> home games
     return view('client.games.games');
 });
-Route::get('/login', function () {  // ===> Login
-    return view('login');
-});
+
 Route::get('/registrasi', function () {  // ===> Registrasi
     return view('registrasi');
 });
 Route::get('/senat', function () {  // ===> Registrasi
     return view('client.senat');
 });
+
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/biodata', [ClientBiodataController::class, 'index'])->name('biodata');
+    Route::get('/edit-biodata', [ClientBiodataController::class, 'indexEditBio'])->name('edit-biodata');
+  });
