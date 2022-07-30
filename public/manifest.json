@@ -5,7 +5,7 @@
     "background_color": "#7739a3",
     "display": "standalone",
     "Scope": "/",
-    "start_url": "/assets/js/",
+    "start_url": ".",
   
     "icons": [
       {
