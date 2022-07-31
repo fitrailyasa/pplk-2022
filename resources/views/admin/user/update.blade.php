@@ -3,11 +3,12 @@
 @section('title', 'Edit User')
 
 @section('content')
-<!--User-->
-<div class="col-lg-12 col-lg-12 form-wrapper "id="edit-user">
+
+<!--Edit User-->
+<div class="col-lg-12 col-lg-12 form-wrapper" id="edit-user">
       <div class="card">
       <div class="card-header">
-      <h4 class="card-title">Input Data User</h4>
+      <h4 class="card-title">Edit Data User</h4>
       </div>
       <div class="card-body">
         <form method="POST" action="{{ route('adminUser.update', $user->id) }}" enctype='multipart/form-data'>
@@ -80,5 +81,6 @@
         </div>
       </div>
     </div>
-    <!--./User-->
+    <!--./Edit User-->
+    
 @endsection

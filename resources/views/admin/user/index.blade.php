@@ -3,6 +3,7 @@
 @section('title', 'Kelola User')
 
 @section('content')
+
 <!--Tabel User-->
 <div class="col-lg-12col-lg-12 form-wrapper" id="kelola-user">
     <div class="card">
@@ -99,4 +100,5 @@
     </div>
   </div>
     <!--./Tabel User-->
+
 @endsection

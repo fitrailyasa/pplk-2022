@@ -4,8 +4,8 @@
 
 @section('content')
 
-<!--User-->
-<div class="col-lg-12 col-lg-12 form-wrapper"  id="tambah-user">
+<!--Tambah User-->
+<div class="col-lg-12 col-lg-12 form-wrapper" id="tambah-user">
       <div class="card">
       <div class="card-header">
       <h4 class="card-title">Input Data User</h4>
@@ -145,5 +145,6 @@
         </div>
       </div>
     </div>
-    <!--./User-->
-    @endsection
+    <!--./Tambah User-->
+
+@endsection
