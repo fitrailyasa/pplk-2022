@@ -1,11 +1,17 @@
-<!--User-->
-<div class="col-lg-12 col-lg-12 form-wrapper tabcontents" style="display: none"  id="tambah-user">
+@extends('layouts.admin.app')
+
+@section('title', 'Tambah User')
+
+@section('content')
+
+<!--Tambah User-->
+<div class="col-lg-12 col-lg-12 form-wrapper" id="tambah-user">
       <div class="card">
       <div class="card-header">
       <h4 class="card-title">Input Data User</h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="{{ route('createUser') }}" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('adminUser.store') }}" enctype='multipart/form-data'>
         @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Nama User</label>
@@ -17,6 +23,12 @@
             <label class="col-sm-3 col-form-label">Email</label>
             <div class="col-sm-9">
               <input type="text" class="form-control" placeholder="adi@gg.com" name="email" id="email" required>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label class="col-sm-3 col-form-label">Password</label>
+            <div class="col-sm-9">
+              <input type="password" class="form-control" placeholder="Password" name="password" id="password" required>
             </div>
           </div>
           <div class="mb-3 row">
@@ -32,27 +44,27 @@
             </div>
           </div>
           <div class="mb-3 row">
-            <label class="col-sm-3 col-form-label">Program Studi</label>
+          <label class="col-sm-3 col-form-label">Program Studi</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" name="prodis_id" id="prodi"  >
+              <input type="text" class="form-control" name="prodi" id="prodi"  >
             </div>
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">No Telepon</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="628...." name="telepon" id="telepon"  >
+              <input type="text" class="form-control" placeholder="628...." name="nomorHp" id="telepon"  >
             </div>
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Golongan Darah</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Golongan Darah" name="golonganDarah" id="golongandarah" >
+              <input type="text" class="form-control" placeholder="Golongan Darah" name="golonganDarah" id="golonganDarah" >
             </div>
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Foto Profil</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Golongan Darah" name="fotoProfil" id="golongandarah" >
+              <input type="text" class="form-control" placeholder="Foto Profil" name="fotoProfil" id="fotoProfil" >
             </div>
           </div>
           <div class="mb-3 row">
@@ -81,6 +93,12 @@
                 <option value="7">Staff</option>
                 <option value="8">Maba</option>
               </select>
+            </div>
+            <div class="mb-3 row">
+              <label class="col-sm-3 col-form-label">Qr Code</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" placeholder="Qr Code" name="qrCode" id="qrCode" required>
+              </div>
             </div> 
         
           </div>
@@ -93,4 +111,6 @@
         </div>
       </div>
     </div>
-    <!--./User-->
+    <!--./Tambah User-->
+
+@endsection

@@ -7,7 +7,6 @@
 
   <!--Tambah Begalin-->
   <div class="col-lg-12 col-lg-12 form-wrapper" id="tambah-begalin">
-
       <div class="card">
       <div class="card-header">
       <h4 class="card-title">Input Data Begalin</h4>

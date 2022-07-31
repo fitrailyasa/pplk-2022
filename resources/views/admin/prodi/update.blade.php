@@ -11,7 +11,7 @@
     <h4 class="card-title">Edit Data Prodi</h4>
     </div>
     <div class="card-body">
-      <form method="POST" action="{{ route('editProdi') }}" enctype='multipart/form-data'>
+      <form method="POST" action="{{ route('adminProdi.update', $prodi->id) }}" enctype='multipart/form-data'>
       @csrf
       @method('PUT')
       <input type="hidden" value="{{ $prodi->id }}" name="id">

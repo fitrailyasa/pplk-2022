@@ -124,10 +124,10 @@
                                     </linearGradient>
                                 </defs>
                             </svg>
-                            {{-- <form id="logout-form" action="{{ route('logout') }}" method="POST" hidden>
-                                @csrf
-                            </form> --}}
                             Logout</a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" hidden>
+                                @csrf
+                            </form>
                         </li>
                     </ul>
                 </div>
