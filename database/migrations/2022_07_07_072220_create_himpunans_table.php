@@ -20,7 +20,6 @@ class CreateHimpunansTable extends Migration
             $table->text('visi');
             $table->text('misi');
             $table->text('deskripsi');
-            $table->string('kodeWarna')->nullable();
             $table->string('pembina')->nullable();
             $table->string('ketuaHimpunan')->nullable();
             $table->integer('tahunBerdiri')->nullable();
