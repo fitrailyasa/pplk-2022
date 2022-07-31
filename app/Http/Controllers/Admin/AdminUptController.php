@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Begalin;
+use App\Models\Upt;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Admin\Controller;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 
-class AdminBegalinController extends Controller
+class AdminUptController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +17,8 @@ class AdminBegalinController extends Controller
      */
     public function index()
     {
-        $begalins = Begalin::all();
-        return view('admin.begalin.index', compact('begalins'));
+        $upts = Upt::all();
+        return view('admin.upt.index', compact('upts'));
     }
 
     /**
@@ -28,68 +28,68 @@ class AdminBegalinController extends Controller
      */
     public function create()
     {
-        return view('admin.begalin.create');
+        return view('admin.upt.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StorebegalinRequest  $request
+     * @param  \App\Http\Requests\StoreUptRequest  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        Begalin::create([
-            'judul' => $request->judul,
-            'isi' => $request->isi
+        Upt::create([
+            'nama' => $request->nama,
+            'deskripsi' => $request->deskripsi
         ]);
 
-        return redirect('/adminBegalin')->with('sukses', 'Berhasil Tambah Data!');
+        return redirect('/adminUpt')->with('sukses', 'Berhasil Tambah Data!');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\begalin  $begalin
+     * @param  \App\Models\Upt  $Upt
      * @return \Illuminate\Http\Response
      */
 
     public function edit($id)
     {
-        $begalin = Begalin::where('id', $id)->first();
-        return view('admin.begalin.update', compact('begalin'));
+        $upt = Upt::where('id', $id)->first();
+        return view('admin.upt.update', compact('upt'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdatebegalinRequest  $request
-     * @param  \App\Models\begalin  $begalin
+     * @param  \App\Http\Requests\UpdateUptRequest  $request
+     * @param  \App\Models\Upt  $Upt
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        $begalin = Begalin::where('id', $id)->first();
-        $begalin->update(
+        $upt = Upt::where('id', $id)->first();
+        $upt->update(
             [
-                'judul' => $request->judul,
-                'isi' => $request->isi
+                'nama' => $request->nama,
+                'deskripsi' => $request->deskripsi
             ]
         );
-        return redirect('/adminBegalin')->with('sukses', 'Berhasil Edit Data!');
+        return redirect('/adminUpt')->with('sukses', 'Berhasil Edit Data!');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\begalin  $begalin
+     * @param  \App\Models\Upt  $Upt
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        $data = Begalin::where('id', $id)->first();
+        $data = Upt::where('id', $id)->first();
         $data->delete();
 
-        return redirect('/adminBegalin')->with('sukses', 'Berhasil Hapus Data!');
+        return redirect('/adminUpt')->with('sukses', 'Berhasil Hapus Data!');
     }
 }

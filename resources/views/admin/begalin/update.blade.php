@@ -13,7 +13,7 @@
     <h4 class="card-title">Edit Data Begalin</h4>
     </div>
     <div class="card-body">
-      <form method="POST" action="{{ route('adminBegalin.update',$begalin) }}" enctype='multipart/form-data'>
+      <form method="POST" action="{{ route('adminBegalin.update',$begalin->id) }}" enctype='multipart/form-data'>
       @csrf
       @method('PUT')
       <input type="hidden" value="$begalin->id" name="id">

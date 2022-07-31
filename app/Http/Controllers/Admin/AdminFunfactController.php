@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Begalin;
+use App\Models\Funfact;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Admin\Controller;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 
-class AdminBegalinController extends Controller
+class AdminFunfactController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +17,8 @@ class AdminBegalinController extends Controller
      */
     public function index()
     {
-        $begalins = Begalin::all();
-        return view('admin.begalin.index', compact('begalins'));
+        $funfacts = Funfact::all();
+        return view('admin.funfact.index', compact('funfacts'));
     }
 
     /**
@@ -28,68 +28,67 @@ class AdminBegalinController extends Controller
      */
     public function create()
     {
-        return view('admin.begalin.create');
+        return view('admin.funfact.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StorebegalinRequest  $request
+     * @param  \App\Http\Requests\StoreFunfactRequest  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        Begalin::create([
+        Funfact::create([
             'judul' => $request->judul,
             'isi' => $request->isi
         ]);
 
-        return redirect('/adminBegalin')->with('sukses', 'Berhasil Tambah Data!');
+        return redirect('/adminFunfact')->with('sukses', 'Berhasil Tambah Data!');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\begalin  $begalin
+     * @param  \App\Models\Funfact  $Funfact
      * @return \Illuminate\Http\Response
      */
 
     public function edit($id)
     {
-        $begalin = Begalin::where('id', $id)->first();
-        return view('admin.begalin.update', compact('begalin'));
+        $funfact = Funfact::where('id', $id)->first();
+        return view('admin.funfact.update', compact('funfact'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdatebegalinRequest  $request
-     * @param  \App\Models\begalin  $begalin
+     * @param  \App\Http\Requests\UpdateFunfactRequest  $request
+     * @param  \App\Models\Funfact  $Funfact
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        $begalin = Begalin::where('id', $id)->first();
-        $begalin->update(
+        $funfact=Funfact::where('id',$id)->first();
+        $funfact->update(
             [
-                'judul' => $request->judul,
                 'isi' => $request->isi
             ]
         );
-        return redirect('/adminBegalin')->with('sukses', 'Berhasil Edit Data!');
+        return redirect('/adminFunfact')->with('sukses', 'Berhasil Edit Data!');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\begalin  $begalin
+     * @param  \App\Models\Funfact  $Funfact
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        $data = Begalin::where('id', $id)->first();
+        $data = Funfact::where('id', $id)->first();
         $data->delete();
 
-        return redirect('/adminBegalin')->with('sukses', 'Berhasil Hapus Data!');
+        return redirect('/adminFunfact')->with('sukses', 'Berhasil Hapus Data!');
     }
 }
