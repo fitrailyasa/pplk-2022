@@ -44,10 +44,11 @@ Route::resource('adminUser', AdminBegalinController::class)->except(['show']);
 Route::resource('adminUpt', AdminBegalinController::class)->except(['show']);
 //Login
 
-// Route::get('/', [LoginController::class, 'showLoginForm']);
-// Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
-// Route::post('/', [LoginController::class, 'login'])->name('loginPost');
-// Route::get('/guest', [guestController::class, 'login'])->name('guest');
+Route::get('/', [LoginController::class, 'showLoginForm']);
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/', [LoginController::class, 'login'])->name('loginPost');
+Route::get('/guest', [guestController::class, 'login'])->name('guest');
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 // Route::get('/admin', [AdminController::class, 'index'])->name('cms'); //===> cms admin
 
@@ -133,7 +134,7 @@ Route::get('/detail-prodi',)->name('detailprodi');
 
 Route::get('/beranda', [ClientBegalinController::class, 'index']); //DEFAULT
 
-Route::get('/card-list',[ClientKodeGameController::class,'index']); //Redeem card-list
+Route::get('/card-list', [ClientKodeGameController::class, 'index']); //Redeem card-list
 
 Route::get('/detail-himpunan', function () {        // ===> Detail himpunan
     return view('client.ormawa.detail-himpunan');
@@ -192,4 +193,4 @@ Route::get('/senat', function () {  // ===> Registrasi
 Route::middleware(['auth'])->group(function () {
     Route::get('/biodata', [ClientBiodataController::class, 'index'])->name('biodata');
     Route::get('/edit-biodata', [ClientBiodataController::class, 'indexEditBio'])->name('edit-biodata');
-  });
+});
