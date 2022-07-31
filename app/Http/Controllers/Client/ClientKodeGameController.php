@@ -15,7 +15,7 @@ class ClientKodeGameController extends Controller
      */
     public function index()
     {
-        $kode_games = Kode_game::get();
+        $kode_games = Kode_game::all();
         return view('client.games.redeem-code.card-list', compact('kode_games'));
     }
 
