@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="id">
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta charset="UTF-8" />
         <meta name="theme-color" content="#09f" />
         <meta name="description" content="DESKRIPSI" />
@@ -14,7 +14,9 @@
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Website PPLK 2022" />
         <meta property="og:url" content="URL" />
-        <link rel="manifest" href="./manifest.webmanifest" />
+        <!-- Chrome for Android theme color -->
+        <meta name="theme-color" content="#f9fafb">
+        <link rel="manifest" href="{{ asset('manifest.json') }}">
 
         <!-- JUDUL -->
 
@@ -24,13 +26,13 @@
         <link rel="stylesheet" href="{{ asset('assets/css/login.css') }}">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="manifest" href="{{ asset('manifest.json') }}">
+        {{-- <link rel="manifest" href="{{ asset('assets/js/manifest.json') }}"> --}}
       </head>
 <!-- CONTENT -->
 <!-- Splash Screen -->
 <body>
 <div class="launch-logo fade" id="splash-screen">
-  <img src="../assets/logo-pplk-minified.png" alt="launch-logo-pplk" class="launch-logo-image" />
+  <img src="assets/logo-pplk-minified.png" alt="launch-logo-pplk" class="launch-logo-image" />
 </div>
 
 <div class="d-flex align-items-center min-vh-100 show-up" id="login-container">
@@ -41,7 +43,7 @@
       <!-- Image row and column -->
       <div class="row justify-content-center">
         <div class="col-sm-6 col-md-5 text-center text-wrap" id="image">
-          <img class="img-fluid" src="../assets/logo-pplk-minified.png" alt="logo-pplk-minified" />
+          <img class="img-fluid" src="assets/logo-pplk-minified.png" alt="logo-pplk-minified" />
         </div>
       </div>
     </div>
@@ -104,7 +106,7 @@
     </div>
     <div class="row justify-content-center mb-2">
       <div class="col d-flex justify-content-center">
-        <button class="w-25 rounded-5 bg-white border-0" id="pwa-button-install" onclick="install()"><span class="gradient-text">Install</span></button>
+        <button class="w-25 rounded-5 bg-white border-0" id="pwa-button-install" ><span class="gradient-text">Install</span></button>
       </div>
     </div>
     <div class="row justify-content-center">
@@ -123,6 +125,7 @@
   }
 </script>
 <script src="{{ asset('mainServiceWorker.js') }}"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 <script>
 
     // Screen download app.
@@ -137,13 +140,16 @@
     let display = document.getElementById("pwa");
     var btn = document.getElementById("pwa-button-install");
     window.addEventListener('beforeinstallprompt', (e) => {
+      console.log('sdasdasad')
         e.preventDefault();
         deferredPrompt = e;
         display.style.display = 'block';
         btn.style.display = 'inline-block';
     });
-    function install(){
+    
+
       btn.addEventListener('click', (e) => {
+        console.log('sds')
       btn.style.display = 'none';
       display.style.display = 'none';
       deferredPrompt.prompt();
@@ -156,7 +162,6 @@
           deferredPrompt = null;
           });
       });
-    }
 
 </script>
 </body>
