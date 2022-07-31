@@ -28,8 +28,7 @@ class AdminBegalinController extends Controller
      */
     public function create()
     {
-        $begalins = Begalin::all();
-        return view('admin.begalin.create', compact('begalins'));
+        return view('admin.begalin.create');
     }
 
     /**
@@ -57,7 +56,7 @@ class AdminBegalinController extends Controller
 
     public function edit($id)
     {
-        $begalin=Begalin::where('id',$id)->first();
+        $begalin = Begalin::where('id', $id)->first();
         return view('admin.begalin.update', compact('begalin'));
     }
 
@@ -68,9 +67,9 @@ class AdminBegalinController extends Controller
      * @param  \App\Models\begalin  $begalin
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request,$id)
+    public function update(Request $request, $id)
     {
-        $begalin=Begalin::where('id',$id)->first();
+        $begalin = Begalin::where('id', $id)->first();
         $begalin->update(
             [
                 'judul' => $request->judul,

@@ -28,8 +28,7 @@ class AdminHimpunanController extends Controller
      */
     public function create()
     {
-        $himpunans = Himpunan::all();
-        return view('admin.himpunan.create', compact('himpunans'));
+        return view('admin.himpunan.create');
     }
 
     /**

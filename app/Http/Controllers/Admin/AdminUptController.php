@@ -28,8 +28,7 @@ class AdminUptController extends Controller
      */
     public function create()
     {
-        $upt = Upt::all();
-        return view('admin.upt.create', compact('upt'));
+        return view('admin.upt.create');
     }
 
     /**
@@ -57,7 +56,7 @@ class AdminUptController extends Controller
 
     public function edit($id)
     {
-        $upt=Upt::where('id',$id)->first();
+        $upt = Upt::where('id', $id)->first();
         return view('admin.upt.update', compact('upt'));
     }
 
@@ -68,9 +67,9 @@ class AdminUptController extends Controller
      * @param  \App\Models\Upt  $Upt
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request,$id)
+    public function update(Request $request, $id)
     {
-        $upt=Upt::where('id',$id)->first();
+        $upt = Upt::where('id', $id)->first();
         $upt->update(
             [
                 'nama' => $request->nama,
