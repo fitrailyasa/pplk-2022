@@ -51,11 +51,11 @@ Route::resource('adminUser', AdminUserController::class)->except(['show']);
 Route::resource('adminUpt', AdminUptController::class)->except(['show']);
 //Login
 
-// Route::get('/', [LoginController::class, 'showLoginForm']);
-// Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
-// Route::post('/', [LoginController::class, 'login'])->name('loginPost');
-// Route::get('/guest', [guestController::class, 'login'])->name('guest');
-// Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::get('/', [LoginController::class, 'showLoginForm']);
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/', [LoginController::class, 'login'])->name('loginPost');
+Route::get('/guest', [guestController::class, 'login'])->name('guest');
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 // Route::get('/admin', [AdminController::class, 'index'])->name('cms'); //===> cms admin
 

@@ -45,7 +45,6 @@ class AdminHimpunanController extends Controller
             'visi' => $request->visi,
             'misi' => $request->misi,
             'deskripsi' => $request->deskripsi,
-            'kodeWarna' => $request->kodeWarna,
             'pembina' => $request->pembina,
             'ketuaHimpunan' => $request->ketuaHimpunan,
             'tahunBerdiri' => $request->tahunBerdiri,
@@ -86,14 +85,14 @@ class AdminHimpunanController extends Controller
                 'visi' => $request->visi,
                 'misi' => $request->misi,
                 'deskripsi' => $request->deskripsi,
-                'kodeWarna' => $request->kodeWarna,
                 'pembina' => $request->pembina,
                 'ketuaHimpunan' => $request->ketuaHimpunan,
                 'tahunBerdiri' => $request->tahunBerdiri,
                 'filosofiLogo' => $request->filosofiLogo
             ]
         );
-        if ($request->hasFile('logo')) {
+        if ($request->hasFile('logo'))
+           {
             $himpunan->update([
                 'logo' => url($request->file('logo')->move('assets/himpunan', $himpunan->namaSingkat . '.' . $request->file('logo')->extension())),
             ]);
