@@ -11,7 +11,7 @@
     <h4 class="card-title">Edit Data UPT ITERA</h4>
     </div>
     <div class="card-body">
-      <form method="POST" action="{{ route('editUpt') }}" enctype='multipart/form-data'>
+      <form method="POST" action="{{ route('adminUpt.update',$upt->id) }}" enctype='multipart/form-data'>
       @csrf
       @method('PUT')
       <input type="hidden" value="{{ $upt->id }}" name="id">

@@ -17,8 +17,7 @@ class AdminKamusGaulController extends Controller
      */
     public function index()
     {
-        $kamusgauls = Kamusgaul::all();
-        return view('admin.kamusgaul.index', compact('kamusgauls'));
+        return view('admin.Kamusgaul.index');
     }
 
     /**
@@ -28,8 +27,7 @@ class AdminKamusGaulController extends Controller
      */
     public function create()
     {
-        $kamusgauls = KamusGaul::all();
-        return view('admin.kamusGaul.create', compact('kamusgauls'));
+        return view('admin.Kamusgaul.create');
     }
 
     /**
@@ -47,7 +45,7 @@ class AdminKamusGaulController extends Controller
             'contohPenggunaan' => $request->contohPenggunaan
         ]);
 
-        return 'Kamus Gaul Berhasil';
+        return redirect('/adminKamusgaul')->with('sukses', 'Berhasil Tambah Data!');
     }
 
     /**
@@ -66,8 +64,8 @@ class AdminKamusGaulController extends Controller
      */
     public function edit($id)
     {
-        $kamusgauls = KamusGaul::where('id', $id)->first();
-        return view('admin.kamusGaul.edit', compact('kamusgaul'));
+        $kamusgaul = KamusGaul::where('id', $id)->first();
+        return view('admin.kamusgaul.update', compact('kamusgaul'));
     }
 
     /**
@@ -77,22 +75,23 @@ class AdminKamusGaulController extends Controller
      * @param  \App\Models\kamusgaul  $kamusgaul
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, KamusGaul $kamusgaul)
+    public function update(Request $request, $id)
     {
+        $kamusgaul = KamusGaul::where('id', $id)->first();
         $kamusgaul->update(
             [
                 'gaul' => $request->gaul,
                 'asli' => $request->asli,
-                'contohPenggunaan' =>       $request->contohPenggunaan
+                'contohPenggunaan' => $request->contohPenggunaan
             ]
         );
-        return redirect('/adminKamusGaul')->with('sukses', 'Berhasil Edit Data!');
+        return redirect('/adminKamusgaul')->with('sukses', 'Berhasil Edit Data!');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\begalin  $begalin
+     * @param  \App\Models\kamusgaul $kamusgaul
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
@@ -100,6 +99,6 @@ class AdminKamusGaulController extends Controller
         $data = KamusGaul::where('id', $id)->first();
         $data->delete();
 
-        return redirect('/adminKamusGaul')->with('sukses', 'Berhasil Hapus Data!');
+        return redirect('/adminKamusgaul')->with('sukses', 'Berhasil Hapus Data!');
     }
 }

@@ -12,7 +12,7 @@
       </div>
       <div class="card-body">
 
-        <form method="POST" action="{{ route('createUpt') }}" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('adminUpt.store') }}" enctype='multipart/form-data'>
 
         @csrf
           <div class="mb-3 row">
@@ -37,3 +37,5 @@
       </div>
     </div>
     <!--./ITERA-->
+
+    @endsection

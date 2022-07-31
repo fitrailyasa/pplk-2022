@@ -5,16 +5,16 @@
 @section('content')
 
 <!--Edit Kamus Gaul-->
-<div class="col-lg-12 col-lg-12 form-wrapper" id="edit-kamus">
+<div class="col-lg-12 col-lg-12 form-wrapper" id="edit-kamusgaul">
     <div class="card">
     <div class="card-header">
     <h4 class="card-title">Edit Data Kamus Gaul</h4>
     </div>
     <div class="card-body">
-      <form method="POST" action="{{ route('editKamusGaul') }}" enctype='multipart/form-data'>
+      <form method="POST" action="{{ route('adminKamusgaul.update',$kamusgaul->id) }}" enctype='multipart/form-data'>
       @csrf
       @method('PUT')
-      <input type="hidden" name="id" value="{{ $kamusgaul->id }}">
+      <input type="hidden" name="id" value="$kamusgaul->id">
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Kamus Gaul</label>
           <div class="col-sm-9">
