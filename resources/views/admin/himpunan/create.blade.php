@@ -45,12 +45,6 @@
             </div>
           </div>
           <div class="mb-3 row">
-            <label class="col-sm-3 col-form-label">Kode Warna</label>
-            <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Kode Warna" name="kodeWarna" id="kodeWarna"  >
-            </div>
-          </div>
-          <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Visi</label>
             <div class="col-sm-9">
               <input type="text" class="form-control" placeholder="Visi" name="visi" id="visi" >
