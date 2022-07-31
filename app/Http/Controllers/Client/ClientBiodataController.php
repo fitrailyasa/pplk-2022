@@ -55,7 +55,9 @@ class ClientBiodataController extends Controller
             'nomorHp'=>['required', 'unique:users', 'max:255']
         ]);
         $nim =$data['nim'];
-        $qrCode = "$nim"."$nim"."$nim"."$nim"."$nim"."$nim";
+        $date = Date("m.d.y");
+        $time = time();
+        $qrCode = "$nim"."$nim"."$nim"."$nim"."$nim"."$date"."$time";
         User::create([
             'nama'=>$request->name,
             'golonganDarah'=>$request->golonganDarah,
@@ -117,7 +119,9 @@ public function updateBiodata(Request $request, $id){
 
         $viewbiodata = User::find($id);
         $nim = $request->input('nim');
-        $qrCode = "$nim"."$nim"."$nim"."$nim"."$nim"."$nim";
+        $date = Date("m.d.y");
+        $time = time();
+        $qrCode = "$nim"."$nim"."$nim"."$nim"."$nim"."$date"."$time";
         $viewbiodata->nama = $request->input('name');
         $viewbiodata->golonganDarah = $request->input('golonganDarah');
         $viewbiodata->nim = $nim;
@@ -127,7 +131,7 @@ public function updateBiodata(Request $request, $id){
         $viewbiodata->nomorHp = $request->input('nomorHp');
         $viewbiodata->riwayatPenyakit = $request->input('riwayatPenyakit');
         $viewbiodata->prodi = $request->input('prodi');
-        $viewbiodata->qrCode = "$nim"."$nim"."$nim"."$nim"."$nim"."$nim";
+        $viewbiodata->qrCode = $qrCode;
 
         $viewbiodata->update();
         QrCode::format('svg')->margin(2)->size(200)->errorCorrection('H')->generate("$qrCode", "../public/assets/qrcode/"."$qrCode");
