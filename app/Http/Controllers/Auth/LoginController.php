@@ -60,8 +60,12 @@ class LoginController extends Controller
                 $this->redirectTo = '/Staff';
                 return $this->redirectTo;
                 break;
-            default:
+            case 8:
                 $this->redirectTo = '/Maba';
+                return $this->redirectTo;
+                break;
+            default:
+                $this->redirectTo = '/beranda';
                 return $this->redirectTo;
         }
     }

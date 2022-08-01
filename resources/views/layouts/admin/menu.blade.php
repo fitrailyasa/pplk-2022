@@ -55,6 +55,7 @@
 
     <!-- Sidebar -->
     <div class="sidebar">
+
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex align-items-center">
         <div class="image">
@@ -83,6 +84,9 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!--Pakai class active utk mengaktifkan button-->
           <!--Sama class menu-open supaya dropdown otomatis terbuka di awal load page-->
+
+
+          <!--Dashboard-->
           <li class="nav-item">
             <a onclick="openCMS(event, 'dashboard')" class="nav-link tablinks active">
               <i class="fas fa-rocket nav-icon"></i>
@@ -91,14 +95,21 @@
               </p>
             </a>
           </li>
+          <!--./Dashboard-->
+
+          @if(auth()->user()->roles_id == 1)
+          <!--Beranda-->
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="/beranda" class="nav-link">
               <i class="fa-solid fa-earth-asia nav-icon"></i>
               <p>
                 Home PPLK 2022
               </p>
             </a>
           </li>
+          <!--./Beranda-->
+
+          <!--User-->
           <li class="nav-item">
             <a class="nav-link tabitem">
               <i class="nav-icon fa-solid fa-user-astronaut"></i>
@@ -122,6 +133,8 @@
               </li>
             </ul>
           </li>
+          <!--./User-->
+
           <!--QR-Code-->
           <li class="nav-item">
             <a class="nav-link tabitem">
@@ -146,7 +159,9 @@
               </li>
             </ul>
           </li>
-          <!--ITERA-->
+          <!--./QR-Code-->
+
+          <!--UPT ITERA-->
           <li class="nav-item">
             <a class="nav-link tabitem">
               <i class="fa-solid fa-building nav-icon"></i>
@@ -170,6 +185,8 @@
               </li>
             </ul>
           </li>
+          <!--./UPT ITERA-->
+
           <!--Prodi-->
           <li class="nav-item">
             <a class="nav-link tabitem">
@@ -194,6 +211,8 @@
               </li>
             </ul>
           </li>
+          <!--./Prodi-->
+
           <!--Himpunan-->
           <li class="nav-item">
             <a class="nav-link tabitem">
@@ -218,6 +237,8 @@
               </li>
             </ul>
           </li>
+          <!--./Himpunan-->
+
           <!--KM ITERA-->
           <li class="nav-item">
             <a class="nav-link tabitem">
@@ -242,6 +263,8 @@
               </li>
             </ul>
           </li>
+          <!--./KM ITERA-->
+
           <!--UKM/Komunitas-->
           <li class="nav-item">
             <a class="nav-link tabitem">
@@ -266,6 +289,7 @@
               </li>
             </ul>
           </li>
+
           <!--Funfact-->
           <li class="nav-item">
             <a class="nav-link tabitem">
@@ -290,6 +314,8 @@
               </li>
             </ul>
           </li>
+          <!--./Funfact-->
+
           <!--Begalin-->
           <li class="nav-item">
             <a class="nav-link tabitem">
@@ -314,6 +340,8 @@
               </li>
             </ul>
           </li>
+          <!--./Begalin-->
+
           <!--Kamus Gaul-->
           <li class="nav-item">
             <a class="nav-link tabitem">
@@ -338,6 +366,8 @@
               </li>
             </ul>
           </li>
+          <!--./Kamus Gaul-->
+
           <!--Games-->
           <li class="nav-item">
             <a class="nav-link tabitem">
@@ -374,6 +404,8 @@
               </li>
             </ul>
           </li>
+          <!--./Games-->
+
           <!--Gform-->
           <li class="nav-item">
             <a class="nav-link tabitem">
@@ -392,6 +424,8 @@
               </li>
             </ul>
           </li>
+          <!--./Gform-->
+
           <!--Booklet-->
           <li class="nav-item">
             <a class="nav-link tabitem">
@@ -416,6 +450,8 @@
               </li>
             </ul>
           </li>
+          <!--./Booklet-->
+
           <!--Scanner-->
           <li class="nav-item">
             <a class="nav-link tabitem">
@@ -427,23 +463,28 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a onclick="openCMS(event, 'scanner-panitia')" class="nav-link tablinks">
+                <a href="/scanner" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Scanner Panitia</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a onclick="openCMS(event, 'scanner-maba')" class="nav-link tablinks">
+                <a href="/presensiMaba" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Scanner Maba</p>
                 </a>
               </li>
             </ul>
           </li>
+          <!--./Scanner-->
+          @endif
+
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
+
     </div>
     <!-- /.sidebar -->
+
   </aside>
   <!-- ./Main Sidebar Container -->
