@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Client;
 use App\Models\Kode_game;
 use App\Http\Requests\StoreKode_gameRequest;
 use App\Http\Requests\UpdateKode_gameRequest;
+use App\Models\Leaderboard;
+use Illuminate\Http\Request;
+
 
 class ClientKodeGameController extends Controller
 {
@@ -15,7 +18,7 @@ class ClientKodeGameController extends Controller
      */
     public function index()
     {
-        $kode_games = Kode_game::get();
+        $kode_games = Kode_game::all();
         return view('client.games.redeem-code.card-list', compact('kode_games'));
     }
 
@@ -29,6 +32,16 @@ class ClientKodeGameController extends Controller
         //
     }
 
+    public function sumscore(Request $request){
+        $nilai=Kode_game::where('kode',$request->code)->value('nilai');
+        $current_score=Leaderboard::where('id','1')->value('score');
+        $current_score=$current_score+$nilai;
+
+        Leaderboard::where('id','1')->update(['score'=>$current_score]);
+
+
+
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -49,11 +62,11 @@ class ClientKodeGameController extends Controller
      */
     public function show(Kode_game $kode_game, $no)
     {
-        $data = $kode_game->select('nama')->where('no', '=', $no)->get();
+        $kode_game = Kode_game::where('no', $no)->first();
 
-        return view('client.games.redeem-code.redeem', [
-            'nama' => $data[0]->nama
-        ]);
+        // $data = $kode_game->select('nama')->where('no', '=', $no)->get();
+
+        return view('client.games.redeem-code.redeem', compact('kode_game'));
     }
 
     /**
