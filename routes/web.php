@@ -17,6 +17,7 @@ use App\Http\Controllers\Client\ClientKamusgaulController;
 use App\Http\Controllers\Client\ClientScannerController;
 use App\Http\Controllers\Client\ClientKodeGameController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -51,6 +52,9 @@ Route::get('/guest', [guestController::class, 'login'])->name('guest');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 // Route::get('/admin', [AdminController::class, 'index'])->name('cms'); //===> cms admin
+
+//Reedem
+Route::post('/submitcode', [ClientKodeGameController::class, 'sumscore'])->name('sumscore');
 
 //ROUTE CREATE
 Route::post('/admin/Ukm', [AdminController::class, 'storeUkm'])->name('createUkm');
