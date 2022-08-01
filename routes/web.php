@@ -12,7 +12,6 @@ use App\Http\Middleware\DapMen;
 use App\Http\Middleware\Staff;
 use App\Http\Middleware\Maba;
 use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AdminBegalinController;
 use App\Http\Controllers\Admin\AdminFunfactController;
 use App\Http\Controllers\Admin\AdminHimpunanController;
@@ -128,6 +127,7 @@ Route::middleware([DapMen::class])->group(function () {
 Route::middleware(['auth'])->group(function () {
 
     // UTAMA
+    Route::get('/', [ClientBegalinController::class, 'index']);
     Route::get('/beranda', [ClientBegalinController::class, 'index']);
     Route::get('/upt', [ClientUptController::class, 'index'])->name('upt');
     Route::get('/kabinet', [ClientKabinetController::class, 'index'])->name('kabinet');
