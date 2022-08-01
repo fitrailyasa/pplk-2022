@@ -11,9 +11,9 @@
     <h4 class="card-title">Edit Data Himpunan</h4>
     </div>
     <div class="card-body">
-      <form method="POST" action="{{ route('editHimpunan') }}" enctype='multipart/form-data'>
-      @csrf
+      <form method="POST" action="{{ route('adminHimpunan.update',$himpunan->id) }}" enctype='multipart/form-data'>
       @method('PUT')
+      @csrf
       <input type="hidden" name="id" value="{{ $himpunan->id }}">
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Nama Lengkap</label>
@@ -46,12 +46,6 @@
           </div>
         </div>
         <div class="mb-3 row">
-          <label class="col-sm-3 col-form-label">Kode Warna</label>
-          <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Kode Warna" name="kodeWarna" id="kodeWarna" value="{{ $himpunan->kodeWarna }}" >
-          </div>
-        </div>
-        <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Visi</label>
           <div class="col-sm-9">
             <input type="text" class="form-control" placeholder="Visi" name="visi" id="visi" value="{{ $himpunan->visi }}" >
@@ -66,7 +60,7 @@
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Logo</label>
           <div class="col-sm-9">
-            <input type="file" accept="image/*" class="form-control" name="logo" id="logo" value="{{ $himpunan->logo }}" >
+            <input type="file" accept="image/*" class="form-control" name="logo" id="logo"  >
           </div>
         </div>
         <div class="mb-3 row">

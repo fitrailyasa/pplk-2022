@@ -11,7 +11,7 @@
       <h4 class="card-title">Input Data Prodi</h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="{{ route('createProdi') }}" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('adminProdi.store') }}" enctype='multipart/form-data'>
         @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Nama Prodi</label>
@@ -46,13 +46,13 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Tahun Berdiri</label>
             <div class="col-sm-9">
-              <input type="number" class="form-control" name="tahunBerdiri" id="tahunBerdiri"  >
+              <input type="number" class="form-control" placeholder="Tahun Berdiri" name="tahunBerdiri" id="tahunBerdiri"  >
             </div>
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Jumlah Mahasiswa</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Kode Warna" name="jumlahMahasiswa" id="kodeWarna"  >
+              <input type="text" class="form-control" placeholder="Jumlah Mahasiswa" name="jumlahMahasiswa" id="kodeWarna"  >
             </div>
           </div>
           <div class="mb-3 row">
@@ -82,9 +82,9 @@
             <div class="mb-3 row">
               <label class="col-sm-3 col-form-label">Prestasi</label>
               <div class="col-sm-9 mb-3">
-                <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2020" name="prestasi" id="prestasi"  ></textarea>
-                <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2021" name="prestasi" id="prestasi"  ></textarea>
-                <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2022" name="prestasi" id="prestasi"  ></textarea>
+                <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2020" name="prestasi1" id="prestasi1"  ></textarea>
+                <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2021" name="prestasi2" id="prestasi2"  ></textarea>
+                <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2022" name="prestasi3" id="prestasi3"  ></textarea>
               </div>
             </div>
 

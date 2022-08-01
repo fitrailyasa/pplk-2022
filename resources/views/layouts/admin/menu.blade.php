@@ -109,13 +109,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a onclick="openCMS(event, 'tambah-user')" class="nav-link tablinks">
+                <a href="{{ route('adminUser.create') }}" class="nav-link tablinks">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah User</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a onclick="openCMS(event, 'kelola-user')" class="nav-link tablinks">
+                <a href="{{ route('adminUser.index') }}" class="nav-link tablinks">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Kelola Data User</p>
                 </a>
@@ -157,13 +157,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a onclick="openCMS(event, 'tambah-upt')" class="nav-link tablinks">
+                <a href="{{ route('adminUpt.create') }}" class="nav-link tablinks">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah UPT</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a onclick="openCMS(event, 'kelola-upt')" class="nav-link tablinks">
+                <a href="{{ route('adminUpt.index') }}" class="nav-link tablinks">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Kelola Data UPT</p>
                 </a>
@@ -181,13 +181,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a onclick="openCMS(event, 'tambah-prodi')" class="nav-link tablinks">
+                <a href="{{ route('adminProdi.create') }}" class="nav-link tablinks">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah Prodi</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a onclick="openCMS(event, 'kelola-prodi')" class="nav-link tablinks">
+                <a href="{{ route('adminProdi.index') }}" class="nav-link tablinks">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Kelola Data Prodi</p>
                 </a>
@@ -205,13 +205,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a onclick="openCMS(event, 'tambah-himpunan')" class="nav-link tablinks">
+                <a href="{{ route('adminHimpunan.create') }}" class="nav-link tablinks">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah Himpunan</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a onclick="openCMS(event, 'kelola-himpunan')" class="nav-link tablinks">
+                <a href="{{ route('adminHimpunan.index') }}" class="nav-link tablinks">
                   <i class="far fa-circle nav-icon"></i>
                   <p style="font-size:0.9rem;">Kelola Data Himpunan</p>
                 </a>
@@ -253,13 +253,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a onclick="openCMS(event, 'tambah-ukm')" class="nav-link tablinks">
+                <a href="{{ route('adminUkm.create') }}" class="nav-link tablinks">
                   <i class="far fa-circle nav-icon"></i>
                   <p style="font-size:0.8rem;">Tambah UKM/Komunitas</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a onclick="openCMS(event, 'kelola-ukm')" class="nav-link tablinks">
+                <a href="{{ route('adminUkm.index') }}" class="nav-link tablinks">
                   <i class="far fa-circle nav-icon"></i>
                   <p style="font-size:0.8rem;">Kelola UKM/Komunitas</p>
                 </a>
@@ -277,13 +277,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a onclick="openCMS(event, 'tambah-funfact')" class="nav-link tablinks">
+                <a href="{{ route('adminFunfact.create') }} " class="nav-link tablinks">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah Funfact</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a onclick="openCMS(event, 'kelola-funfact')" class="nav-link tablinks">
+                <a href="{{ route('adminFunfact.index') }} " class="nav-link tablinks">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Kelola Data funfact</p>
                 </a>
@@ -325,13 +325,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a onclick="openCMS(event, 'tambah-kamus')" class="nav-link tablinks">
+                <a href="{{ route('adminKamusgaul.create') }}" class="nav-link tablinks">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah Kamus</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a onclick="openCMS(event, 'kelola-kamus')" class="nav-link tablinks">
+                <a href="{{ route('adminKamusgaul.index') }}" class="nav-link tablinks">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Kelola Kamus Gaul</p>
                 </a>

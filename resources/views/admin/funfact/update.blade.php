@@ -11,7 +11,7 @@
     <h4 class="card-title">Edit Data Funfact</h4>
     </div>
     <div class="card-body">
-      <form method="POST" action="{{ route('editFunfact') }}" enctype='multipart/form-data'>
+      <form method="POST" action="{{ route('adminFunfact.update',$funfact->id) }}" enctype='multipart/form-data'>
       @method('PUT')
       @csrf
       @if (\Session::has('success'))
@@ -24,7 +24,6 @@
       <input type="hidden" name="id" value="{{ $funfact->id }}">
         
         <div class="mb-3 row">
-
           <label class="col-sm-3 col-form-label">Deskripsi</label>
           <div class="col-sm-9">
             <textarea class="form-control custom-txt-area" placeholder="Deskripsi" name="isi" id="" value="{{ $funfact->isi }}" required>{{ $funfact->isi }}</textarea>

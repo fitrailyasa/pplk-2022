@@ -158,7 +158,7 @@ class AdminController extends Controller
             'kelompok' => $request->kelompok,
             'instagram' => $request->instagram,
             'qrCode' => $request->qrCode,
-            'Prodi' => $request->Prodi,
+            'Prodi' => $request->prodi,
             'nomorHp' => $request->nomorHp,
             'golonganDarah' => $request->golonganDarah,
             'riwayatPenyakit' => $request->riwayatPenyakit,

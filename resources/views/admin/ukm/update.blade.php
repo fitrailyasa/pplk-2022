@@ -11,7 +11,7 @@
     <h4 class="card-title">Edit Data UKM/Komunitas</h4>
     </div>
     <div class="card-body">
-      <form method="POST" action="{{ route('editUkm') }}" enctype='multipart/form-data'>
+      <form method="POST" action="{{ route('adminUkm.update',$ukm->id) }}" enctype='multipart/form-data'>
         @csrf
         @method('PUT')
         <input type="hidden" value="{{ $ukm->id }}" name="id">
@@ -84,19 +84,19 @@
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Dokumentasi 1</label>
           <div class="col-sm-9">
-            <input type="text" accept="image/*" class="form-control" name="dokumentasi1" id="dokumentasi1" value="{{ $ukm->dokumentasi1 }}">
+            <input type="file" accept="image/*" class="form-control" name="dokumentasi1" id="dokumentasi1" >
           </div>
         </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Dokumentasi 2</label>
           <div class="col-sm-9">
-            <input type="text" accept="image/*" class="form-control" name="dokumentasi2" id="dokumentasi2" value="{{ $ukm->dokumentasi2 }}">
+            <input type="file" accept="image/*" class="form-control" name="dokumentasi2" id="dokumentasi2">
           </div>
         </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Dokumentasi 3</label>
           <div class="col-sm-9">
-            <input type="text" accept="image/*" class="form-control" name="dokumentasi3" id="dokumentasi3" value="{{ $ukm->dokumentasi3 }}">
+            <input type="file" accept="image/*" class="form-control" name="dokumentasi3" id="dokumentasi3">
           </div>
         </div>
         <div class="mb-3 row">
