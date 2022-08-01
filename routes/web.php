@@ -42,7 +42,7 @@ use App\Http\Controllers\Client\ClientKeluhanController;
 Route::get('/home',[HomeController::class, 'index'])->name('home'); */
 
 //Admin Route
-Route::get('/', [AdminController::class, 'index'])->name('index');
+// Route::get('/', [AdminController::class, 'index'])->name('index');
 Route::resource('adminBegalin', AdminBegalinController::class)->except(['show']);
 Route::resource('adminFunfact', AdminFunfactController::class)->except(['show']);
 Route::resource('adminHimpunan', AdminHimpunanController::class)->except(['show']);
@@ -278,8 +278,6 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/beranda', [ClientBegalinController::class, 'index']); //DEFAULT
 
-    Route::get('/card-list', [ClientKodeGameController::class, 'index']); //Redeem card-list
-
     Route::get('/detail-himpunan', function () {        // ===> Detail himpunan
         return view('client.ormawa.detail-himpunan');
     });
@@ -304,9 +302,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/pplk', function () {                 // ===> pplk
         return view('client.pplk');
     });
-    Route::get('/card-list', function () {            // ===> redeem code card list
-        return view('client.games.redeem-code.card-list');
-    });
+
     Route::get('/redeem-failed', function () {        // ===> redeem code failed
         return view('client.games.redeem-code.failed');
     });
