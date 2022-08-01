@@ -20,16 +20,16 @@ use App\Http\Controllers\Admin\AdminUkmController;
 use App\Http\Controllers\Admin\AdminUptController;
 use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\Admin\AdminProdiController;
-use App\Http\Controllers\Client\ClientUptController;
-use App\Http\Controllers\Client\ClientProdiController;
 use App\Http\Controllers\Client\ClientBegalinController;
 use App\Http\Controllers\Client\ClientBiodataController;
 use App\Http\Controllers\Client\ClientJurusanController;
 use App\Http\Controllers\Client\ClientKabinetController;
 use App\Http\Controllers\Client\ClientKamusgaulController;
-use App\Http\Controllers\Client\ClientScannerController;
 use App\Http\Controllers\Client\ClientKodeGameController;
 use App\Http\Controllers\Client\ClientKeluhanController;
+use App\Http\Controllers\Client\ClientProdiController;
+use App\Http\Controllers\Client\ClientScannerController;
+use App\Http\Controllers\Client\ClientUptController;
 
 
 /*
