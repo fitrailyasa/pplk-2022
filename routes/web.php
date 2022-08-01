@@ -69,84 +69,55 @@ Route::get('/registrasi', function () { return view('registrasi'); });
 Route::post('/registrasi/{create}', [ClientBiodataController::class, 'store'])->name('regist_staff');
 
 Route::middleware(['auth'])->group(function () {
-    //DEFAULT
+    // UTAMA
     Route::get('/beranda', [ClientBegalinController::class, 'index']);
+    Route::get('/upt', [ClientUptController::class, 'index'])->name('upt');
+    Route::get('/kabinet', [ClientKabinetController::class, 'index'])->name('kabinet');
+    Route::get('/senat', function () { return view('client.senat'); });
+    Route::get('/kamus-gaul', [ClientKamusgaulController::class, 'index'])->name('kamus-gaul');
 
+    // BOOKLET
+    Route::get('/booklet', function () { return view('client.booklet'); });
+
+    // PPLK
+    Route::get('/pplk', function () { return view('client.pplk'); });
+    Route::get('/div-pplk', function () { return view('client.div-pplk'); });
+
+    // BIODATA
     Route::get('/biodata', [ClientBiodataController::class, 'index'])->name('biodata');
     Route::get('/edit-biodata', [ClientBiodataController::class, 'indexEditBio'])->name('edit-biodata');
-    
-    //post scanner
+    Route::get('edit-fotoProfil/{id}', [ClientBiodataController::class, 'editProfil']);
+    Route::put('update-fotoProfil/{id}', [ClientBiodataController::class, 'updateProfil']);
+    Route::get('edit-profil/{id}', [ClientBiodataController::class, 'editBiodata']);
+    Route::put('update-profil/{id}', [ClientBiodataController::class, 'updateBiodata']);
+
+    // SCANNER
+    Route::get('/scanner', [ClientScannerController::class, 'index'])->name('scanner');
+    Route::get('/polling', [ClientScannerController::class, 'indexPolling'])->name('polling');
+    Route::get('/presensiMaba', [ClientScannerController::class, 'indexMaba'])->name('indexMaba');
     Route::post('/presensi/{id}', [ClientScannerController::class, 'presensi']);
     Route::post('/polling/{id}', [ClientScannerController::class, 'polling']);
     Route::post('/presensiMaba/{id}', [ClientScannerController::class, 'presensiMaba']);
 
-    //update foto profil
-    Route::get('edit-fotoProfil/{id}', [ClientBiodataController::class, 'editProfil']);
-    Route::put('update-fotoProfil/{id}', [ClientBiodataController::class, 'updateProfil']);
-
-    //update biodata/user
-    Route::get('edit-profil/{id}', [ClientBiodataController::class, 'editBiodata']);
-    Route::put('update-profil/{id}', [ClientBiodataController::class, 'updateBiodata']);
-
-    Route::get('/upt', [ClientUptController::class, 'index'])->name('upt'); //===> upt
-    Route::get('/kabinet', [ClientKabinetController::class, 'index'])->name('kabinet');  // ===>kabinet
-    Route::get('/jurusan', [ClientJurusanController::class, 'index'])->name('jurusan'); // ===> jurusan
-    Route::get('/kamus-gaul', [ClientKamusgaulController::class, 'index'])->name('kamus-gaul');
-
-    //view scanner
-    Route::get('/scanner', [ClientScannerController::class, 'index'])->name('scanner');
-    Route::get('/polling', [ClientScannerController::class, 'indexPolling'])->name('polling');
-    Route::get('/presensiMaba', [ClientScannerController::class, 'indexMaba'])->name('indexMaba');
-
+    // FORM KELUHAN
     Route::get('/form-keluhan ', [ClientKeluhanController::class, 'index'])->name('indexKeluhan');
     Route::post('/form-keluhan/{id}', [ClientKeluhanController::class, 'create'])->name('create-keluhan');
-
+    
+    // ORMAWA
+    Route::get('/ukm', function () { return view('client.ormawa.ukm'); });
+    Route::get('/himpunan', function () { return view('client.ormawa.himpunan'); });
+    Route::get('/detail-himpunan', function () { return view('client.ormawa.detail-himpunan'); });
+    Route::get('/jurusan', [ClientJurusanController::class, 'index'])->name('jurusan');
+    Route::get('/prodi', function () { return view('client.jurusan.prodi'); });
     Route::get('/detail-prodi',)->name('detailprodi');
 
-    Route::get('/card-list', [ClientKodeGameController::class, 'index']); //Redeem card-list
-
-    Route::get('/detail-himpunan', function () {        // ===> Detail himpunan
-        return view('client.ormawa.detail-himpunan');
-    });
-    Route::get('/ukm', function () {                    // ===> Unit kegiatan mahasiswa UKM
-        return view('client.ormawa.ukm');
-    });
-    Route::get('/himpunan', function () {               // ===> himpunan
-        return view('client.ormawa.himpunan');
-    });
-    Route::get('/prodi', function () {                  // ===> prodi
-        return view('client.jurusan.prodi');
-    });
-    Route::get('/booklet', function () {              // ===> booklet
-        return view('client.booklet');
-    });
-    Route::get('/div-pplk', function () {             // ===> divisi pplk
-        return view('client.div-pplk');
-    });
-    Route::get('/pplk', function () {                 // ===> pplk
-        return view('client.pplk');
-    });
-    Route::get('/card-list', function () {            // ===> redeem code card list
-        return view('client.games.redeem-code.card-list');
-    });
-    Route::get('/redeem-failed', function () {        // ===> redeem code failed
-        return view('client.games.redeem-code.failed');
-    });
+    // GAMES
+    Route::get('/game-home', function () { return view('client.games.games'); });
+    Route::get('/card-list', [ClientKodeGameController::class, 'index']); 
     Route::get('/redeem/{no}', [ClientKodeGameController::class, 'show']);
-    Route::get('/redeem-success', function () {       // ===> redeem code success
-        return view('client.games.redeem-code.success');
-    });
-    Route::get('/tebak-bangunan', function () {       // ===> tebak bangunan home
-        return view('client.games.tebak-bangunan.home');
-    });
-    Route::get('/tebak-bangunan-game', function () {  // ===> tebak bangunan game
-        return view('client.games.tebak-bangunan.game');
-    });
-    Route::get('/game-home', function () {            // ===> home games
-        return view('client.games.games');
-    });
-    Route::get('/senat', function () {  // ===> Registrasi
-        return view('client.senat');
-    });
+    Route::get('/redeem-failed', function () { return view('client.games.redeem-code.failed'); });
+    Route::get('/redeem-success', function () { return view('client.games.redeem-code.success'); });
+    Route::get('/tebak-bangunan', function () { return view('client.games.tebak-bangunan.home'); });
+    Route::get('/tebak-bangunan-game', function () { return view('client.games.tebak-bangunan.game'); });
 
 });
