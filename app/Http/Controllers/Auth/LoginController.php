@@ -33,35 +33,35 @@ class LoginController extends Controller
 
         switch (auth()->user()->roles_id) {
             case 1:
-                $this->redirectTo = '/admin';
+                $this->redirectTo = '/sAdmin';
                 return $this->redirectTo;
                 break;
             case 2:
-                $this->redirectTo = '/admin';
+                $this->redirectTo = '/Admin';
                 return $this->redirectTo;
                 break;
             case 3:
-                $this->redirectTo = '/admin';
+                $this->redirectTo = '/Himpunan';
                 return $this->redirectTo;
                 break;
             case 4:
-                $this->redirectTo = '/admin';
+                $this->redirectTo = '/Ukm';
                 return $this->redirectTo;
                 break;
             case 5:
-                $this->redirectTo = '/admin';
+                $this->redirectTo = '/Kedisiplinan';
                 return $this->redirectTo;
                 break;
             case 6:
-                $this->redirectTo = '/admin';
+                $this->redirectTo = '/DapMen';
                 return $this->redirectTo;
                 break;
             case 7:
-                $this->redirectTo = '/beranda';
+                $this->redirectTo = '/Staff';
                 return $this->redirectTo;
                 break;
             default:
-                $this->redirectTo = '/beranda';
+                $this->redirectTo = '/Maba';
                 return $this->redirectTo;
         }
     }
