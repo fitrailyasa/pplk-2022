@@ -186,4 +186,23 @@ public function updateBiodata(Request $request, $id){
     {
         //
     }
+
+    public function generateAllQrCode()
+    {
+        while ($users = User::all()) {
+            $nim = $users->nim;
+            $date = Date("m.d.y");
+            $time = time();
+            $qrCode = "$nim"."$nim"."$nim"."$nim"."$nim"."$date"."$time";
+            $users->qrCode = $qrCode;
+            $users->update();
+            QrCode::format('svg')->margin(2)->size(200)->errorCorrection('H')->generate("$qrCode", "../public/assets/qrcode/"."$qrCode");
+        }
+        echo "<script>
+        alert('Semua QrCode User Sudah di Generate ');
+        window.location.href='/registrasi'
+         </script>";
+    }
 }
+
+
