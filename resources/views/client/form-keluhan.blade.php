@@ -14,8 +14,8 @@
 @section('content')
     <!-- CONTENT -->
       <div>
-      <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScI0EE9pdqGDDqWtfM0WyQKXR7KQJUbV-oX956iEN7hn8WUwA/formResponse">
-    
+      {{-- <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScI0EE9pdqGDDqWtfM0WyQKXR7KQJUbV-oX956iEN7hn8WUwA/formResponse"> --}}
+
       <div class="content">
       <div class="container">
         <div class="row justify-content-center">
@@ -26,43 +26,43 @@
                 <h6 style="color: #FFF;" >Program Pengenalan Lingkungan Kampus <br> Institut Teknologi Sumatera <br><br><br>
                 <img src="../assets/Logo-form.png" alt="Image" class="img-fluid"></h6> <br><br><br>
               </div>
-              
+
               <div class="col-md-6">
                 <br><br>
-                  <form class="mb-5" method="post" id="contactForm" name="contactForm">
-                  <div class="row">
+                  <form class="mb-5" enctype="multipart/form-data" method="post" action="/form-keluhan/{{ $users->id }}" id="contactForm" name="contactForm">
+                  @csrf
+                    <div class="row">
                     <div class="col-md-12 form-group">
-                      <input type="text" class="form-control" name="entry.966698347" id="nama" placeholder="Nama">
+                      <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama" value="{{ $users->nama }}" readonly>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-12 form-group">
-                      <input type="text" class="form-control" name="entry.1336220338" id="nim" placeholder="NIM">
+                      <input type="text" class="form-control" name="nim" id="nim" placeholder="NIM" value="{{ $users->nim }}" readonly>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-12 form-group">
-                      <input type="text" class="form-control" name="entry.950230856" id="kelompok" placeholder="Kelompok">
+                      <input type="text" class="form-control" name="kelompok" id="kelompok" placeholder="Kelompok" value="{{ $users->kelompok }}" readonly>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-12 form-group">
-                      <textarea class="form-control" name="entry.355164863" id="keluhan" cols="30" rows="7" placeholder="Tuliskan keluhan anda"></textarea>
+                      <textarea class="form-control" name="keluhan" id="keluhan" cols="30" rows="7" placeholder="Tuliskan keluhan anda"></textarea>
                     </div>
-                  </div>  
+                  </div>
                   <div class="row">
                     <div class="col-md-12 form-group ">
-                      <div class="image" name="entry.14879951"> </div>
-                    <input id="default-btn" type="file">
+                      <div class="image" name="foto"> </div>
+                    <input id="default-btn" type="file" name="bukti" required>
                 </div>
-                  <div class="row">
+                <div class="row">
                     <div class="col-md-12 form-group">
-                      <input type="submit" value="Kirimkan keluhan" class="btn btn-primary rounded-0 py-2 px-4" id="terakhir">
-                    <span class="submitting"></span>
+                      <input type="submit" class="form-control " name="submit" id="submit"  value="Kirim Keluhan" >
                     </div>
                   </div>
                 </form>
-  
+
               </div>
             </div>
           </div>
@@ -76,7 +76,7 @@
     <!-- SCRIPTS -->
     <script type="text/javascript">
       let nav = document.querySelector('#navbar-desktop');
-      
+
       window.addEventListener('scroll', function () {
           if (window.pageYOffset > 50) {
               nav.classList.add('background-gradient', 'shadow');

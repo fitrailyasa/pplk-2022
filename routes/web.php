@@ -23,6 +23,7 @@ use App\Http\Controllers\Client\ClientKabinetController;
 use App\Http\Controllers\Client\ClientKamusgaulController;
 use App\Http\Controllers\Client\ClientScannerController;
 use App\Http\Controllers\Client\ClientKodeGameController;
+use App\Http\Controllers\Client\ClientKeluhanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -141,6 +142,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/polling', [ClientScannerController::class, 'indexPolling'])->name('polling');
     Route::get('/presensiMaba', [ClientScannerController::class, 'indexMaba'])->name('indexMaba');
 
+    Route::get('/form-keluhan ', [ClientKeluhanController::class, 'index'])->name('indexKeluhan');
+    Route::post('/form-keluhan/{id}', [ClientKeluhanController::class, 'create'])->name('create-keluhan');
+
+
     Route::get('/detail-prodi',)->name('detailprodi');
 
     Route::get('/beranda', [ClientBegalinController::class, 'index']); //DEFAULT
@@ -165,9 +170,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/div-pplk', function () {             // ===> divisi pplk
         return view('client.div-pplk');
     });
-    Route::get('/form-keluhan', function () {         // ===> form keluhan
-        return view('client.form-keluhan');
-    });
+    // Route::get('/form-keluhan', function () {         // ===> form keluhan
+    //     return view('client.form-keluhan');
+    // });
     Route::get('/pplk', function () {                 // ===> pplk
         return view('client.pplk');
     });
@@ -193,11 +198,12 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/game-home', function () {            // ===> home games
         return view('client.games.games');
     });
-    Route::get('/registrasi', function () {  // ===> Registrasi
-        return view('registrasi');
-    });
     Route::get('/senat', function () {  // ===> Registrasi
         return view('client.senat');
     });
 
+});
+
+Route::get('/registrasi', function () {  // ===> Registrasi
+    return view('registrasi');
 });

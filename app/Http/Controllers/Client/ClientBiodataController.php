@@ -76,7 +76,7 @@ class ClientBiodataController extends Controller
 
             echo "<script>
                         alert('Daftar Berhasil');
-                        window.location.href='/registrasi'
+                        window.location.href='/login'
                     </script>";
 ;
     }
