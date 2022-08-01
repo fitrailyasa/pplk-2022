@@ -61,9 +61,6 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 // Route::get('/admin', [AdminController::class, 'index'])->name('cms'); //===> cms admin
 
-//Reedem
-Route::post('/submitcode', [ClientKodeGameController::class, 'sumscore'])->name('sumscore');
-
 
 Route::get('/registrasi', function () { return view('registrasi'); });
 Route::post('/registrasi/{create}', [ClientBiodataController::class, 'store'])->name('regist_staff');
@@ -119,5 +116,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/redeem-success', function () { return view('client.games.redeem-code.success'); });
     Route::get('/tebak-bangunan', function () { return view('client.games.tebak-bangunan.home'); });
     Route::get('/tebak-bangunan-game', function () { return view('client.games.tebak-bangunan.game'); });
+    Route::post('/submitcode', [ClientKodeGameController::class, 'sumscore'])->name('sumscore');
 
 });
