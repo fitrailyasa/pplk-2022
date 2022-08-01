@@ -74,46 +74,46 @@ Route::post('/registrasi/{create}', [ClientBiodataController::class, 'store'])->
 
 //ROUTE EDIT
 //Edit Funfact
-Route::put('/admin/editfunFact', [AdminController::class, 'updatefunFact'])->name('editFunfact');
-Route::get('/admin/updatefunFact/{id}', [AdminController::class, 'getfunFactId'])->name('viewEditFunfact');
-//Edit Begalin
-Route::put('/admin/editbegalin', [AdminController::class, 'updateBegalin'])->name('editBegalin');
-Route::get('/admin/updatebegalin/{id}', [AdminController::class, 'getBegalinId'])->name('viewEditBegalin');
-//Edit UPT
-Route::put('/admin/editupt', [AdminController::class, 'updateUpt'])->name('editUpt');
-Route::get('/admin/updateupt/{id}', [AdminController::class, 'getUptId'])->name('viewEditUpt');
-//Edit Himpunan
-Route::put('/admin/edithimpunan', [AdminController::class, 'updateHimpunan'])->name('editHimpunan');
-Route::get('/admin/updatehimpunan/{id}', [AdminController::class, 'getHimpunanId'])->name('viewEditHimpunan');
+// Route::put('/admin/editfunFact', [AdminController::class, 'updatefunFact'])->name('editFunfact');
+// Route::get('/admin/updatefunFact/{id}', [AdminController::class, 'getfunFactId'])->name('viewEditFunfact');
+// //Edit Begalin
+// Route::put('/admin/editbegalin', [AdminController::class, 'updateBegalin'])->name('editBegalin');
+// Route::get('/admin/updatebegalin/{id}', [AdminController::class, 'getBegalinId'])->name('viewEditBegalin');
+// //Edit UPT
+// Route::put('/admin/editupt', [AdminController::class, 'updateUpt'])->name('editUpt');
+// Route::get('/admin/updateupt/{id}', [AdminController::class, 'getUptId'])->name('viewEditUpt');
+// //Edit Himpunan
+// Route::put('/admin/edithimpunan', [AdminController::class, 'updateHimpunan'])->name('editHimpunan');
+// Route::get('/admin/updatehimpunan/{id}', [AdminController::class, 'getHimpunanId'])->name('viewEditHimpunan');
 
-//Edit Kamus Gaul
-Route::put('/admin/editkamus-gaul', [AdminController::class, 'updateKamusGaul'])->name('editKamusGaul');
-Route::get('/admin/updatekamus-gaul/{id}', [AdminController::class, 'getKamusGaulId'])->name('viewEditKamusGaul');
+// //Edit Kamus Gaul
+// Route::put('/admin/editkamus-gaul', [AdminController::class, 'updateKamusGaul'])->name('editKamusGaul');
+// Route::get('/admin/updatekamus-gaul/{id}', [AdminController::class, 'getKamusGaulId'])->name('viewEditKamusGaul');
 
 
-//Update UKM
-Route::put('/admin/editukm', [AdminController::class, 'updateUkm'])->name('editUkm');
-Route::get('/admin/updateukm/{id}', [AdminController::class, 'getUkmId'])->name('viewEditUkm');
+// //Update UKM
+// Route::put('/admin/editukm', [AdminController::class, 'updateUkm'])->name('editUkm');
+// Route::get('/admin/updateukm/{id}', [AdminController::class, 'getUkmId'])->name('viewEditUkm');
 
-//Update Prodi
-Route::put('/admin/editprodi', [AdminController::class, 'updateProdi'])->name('editProdi');
-Route::get('/admin/updateprodi/{id}', [AdminController::class, 'getProdiId'])->name('viewEditProdi');
+// //Update Prodi
+// Route::put('/admin/editprodi', [AdminController::class, 'updateProdi'])->name('editProdi');
+// Route::get('/admin/updateprodi/{id}', [AdminController::class, 'getProdiId'])->name('viewEditProdi');
 
-//Delete Funfact
+// //Delete Funfact
 
-Route::get('/admin/hapusfunfact/{id}', [AdminController::class, 'destroyFunfact'])->name('hapusFunfact');
-//Delete Upt
-Route::get('/admin/hapusupt/{id}', [AdminController::class, 'destroyUpt'])->name('hapusUpt');
-//Delete Begalin
-Route::get('/admin/hapusbegalin/{id}', [AdminController::class, 'destroyBegalin'])->name('hapusBegalin');
-//Delete KamusGaul
-Route::get('/admin/hapuskamusgaul/{id}', [AdminController::class, 'destroyKamusGaul'])->name('hapusKamusGaul');
-//Delete Prodi
-Route::get('/admin/hapusprodi/{id}', [AdminController::class, 'destroyProdi'])->name('hapusProdi');
-//Delete Himpunan
-Route::get('/admin/hapushimpunan/{id}', [AdminController::class, 'destroyHimpunan'])->name('hapusHimpunan');
-//Delete Ukm
-Route::get('/admin/hapusukm/{id}', [AdminController::class, 'destroyUkm'])->name('hapusUkm');
+// Route::get('/admin/hapusfunfact/{id}', [AdminController::class, 'destroyFunfact'])->name('hapusFunfact');
+// //Delete Upt
+// Route::get('/admin/hapusupt/{id}', [AdminController::class, 'destroyUpt'])->name('hapusUpt');
+// //Delete Begalin
+// Route::get('/admin/hapusbegalin/{id}', [AdminController::class, 'destroyBegalin'])->name('hapusBegalin');
+// //Delete KamusGaul
+// Route::get('/admin/hapuskamusgaul/{id}', [AdminController::class, 'destroyKamusGaul'])->name('hapusKamusGaul');
+// //Delete Prodi
+// Route::get('/admin/hapusprodi/{id}', [AdminController::class, 'destroyProdi'])->name('hapusProdi');
+// //Delete Himpunan
+// Route::get('/admin/hapushimpunan/{id}', [AdminController::class, 'destroyHimpunan'])->name('hapusHimpunan');
+// //Delete Ukm
+// Route::get('/admin/hapusukm/{id}', [AdminController::class, 'destroyUkm'])->name('hapusUkm');
 
 
 Route::middleware(['auth'])->group(function () {

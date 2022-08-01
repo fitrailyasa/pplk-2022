@@ -51,7 +51,6 @@ class AdminUserController extends Controller
             'golonganDarah' => $request->golonganDarah,
             'riwayatPenyakit' => $request->riwayatPenyakit,
             'nomorHp' => $request->nomorHp,
-            'qrCode' => $request->qrCode
         ]);
 
         return redirect('/adminUser')->with('sukses', 'Berhasil Tambah Data!');
@@ -86,14 +85,12 @@ class AdminUserController extends Controller
                 'email' => $request->email,
                 'nim' => $request->nim,
                 'password' => $request->password,
-                'roles_id' => $request->roles_id,
                 'prodi' => $request->prodi,
                 'kelompok' => $request->kelompok,
                 'instagram' => $request->instagram,
                 'golonganDarah' => $request->golonganDarah,
                 'riwayatPenyakit' => $request->riwayatPenyakit,
                 'nomorHp' => $request->nomorHp,
-                'qrCode' => $request->qrCode
             ]
         );
         return redirect('/adminUser')->with('sukses', 'Berhasil Edit Data!');
