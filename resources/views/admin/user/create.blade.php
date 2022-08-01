@@ -46,7 +46,48 @@
           <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Program Studi</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" name="prodi" id="prodi"  >
+            <select name="prodi">
+            <option selected class="selected"></option>
+            <option value="Teknik Informatika">Teknik Informatika</option>
+            <option value="AB">Teknik Electro</option>
+            <option value="Teknik Telekomunikasi">Teknik Telekomunikasi</option>
+            <option value="Teknik Lingkungan">Teknik Lingkungan</option>
+            <option value="Teknik Industri">Teknik Industri</option>
+            <option value="Teknik Industri Pertanian">Teknik Industri Pertanian</option>
+            <option value="Teknik Geofisika">Teknik Geofisika</option>
+            <option value="Teknik Mesin">Teknik Mesin</option>
+            <option value="Teknik Fisika">Teknik Fisika</option>
+            <option value="Teknik Kimia">Teknik Kimia</option>
+            <option value="Teknik Biosistem">Teknik Biosistem</option>
+            <option value="Teknik Sipil">Teknik Sipil</option>
+            <option value="Teknik Kelautan">Teknik Kelautan</option>
+            <option value="Teknik Geologi">Teknik Geologi</option>
+            <option value="Teknik Geomatika">Teknik Geomatika</option>
+            <option value="Teknik Sistem Energi">Teknik Sistem Energi</option>
+            <option value="Teknik Material">Teknik Material</option>
+            <option value="Tenik Biomedis">Tenik Biomedis</option>
+            <option value="Teknik Perkereta Apian">Teknik Perkereta Apian</option>
+            <option value="Matematika">Matematika</option>
+            <option value="Fisika">Fisika</option>
+            <option value="Kimia">Kimia</option>
+            <option value="Biologi">Biologi</option>
+            <option value="Farmasi">Farmasi</option>
+            <option value="Sains Data">Sains Data</option>
+            <option value="Teknologi Pangan">Teknologi Pangan</option>
+            <option value="Sains Aktuaria">Sains Aktuaria</option>
+            <option value="Sains Atmosfer Dan Keplanetan">Sains Atmosfer Dan Keplanetan</option>
+            <option value="Sains Kelautan">Sains Kelautan</option>
+            <option value="Rekayasa Tata Kelola Air Terpadu">Rekayasa Tata Kelola Air Terpadu</option>
+            <option value="Rekayasa Kosmetik">Rekayasa Kosmetik</option>
+            <option value="Rekayasa Minyak Dan Gas">Rekayasa Minyak Dan Gas</option>
+            <option value="Rekayasa Kehutanan">Rekayasa Kehutanan</option>
+            <option value="Rekayasa Instrumentasi Dan Automasi">Rekayasa Instrumentasi Dan Automasi </option>
+            <option value="Arsitektur">Arsitektur</option>
+            <option value="Perencanaan Wilayah dan Kota">Perencanaan Wilayah dan Kota</option>
+            <option value="Arsitektur Lanskap">Arsitektur Lanskap</option>
+            <option value="Desain Komunikasi Visual">Desain Komunikasi Visual</option>
+            <option value="Industri Pertanian">Industri Pertanian</option>
+              </select>
             </div>
           </div>
           <div class="mb-3 row">
@@ -56,15 +97,15 @@
             </div>
           </div>
           <div class="mb-3 row">
-            <label class="col-sm-3 col-form-label">Golongan Darah</label>
-            <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Golongan Darah" name="golonganDarah" id="golonganDarah" >
-            </div>
-          </div>
-          <div class="mb-3 row">
-            <label class="col-sm-3 col-form-label">Foto Profil</label>
-            <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Foto Profil" name="fotoProfil" id="fotoProfil" >
+          <label class="col-sm-3 col-form-label">Golongan Darah</label>
+          <div class="col-sm-9">
+              <select name="golonganDarah">
+                <option selected class="selected"></option>
+                <option value="A">A</option>
+                <option value="AB">AB</option>
+                <option value="B">B</option>
+                <option value="O">O</option>
+              </select>
             </div>
           </div>
           <div class="mb-3 row">
@@ -94,13 +135,6 @@
                 <option value="8">Maba</option>
               </select>
             </div>
-            <div class="mb-3 row">
-              <label class="col-sm-3 col-form-label">Qr Code</label>
-              <div class="col-sm-9">
-                <input type="text" class="form-control" placeholder="Qr Code" name="qrCode" id="qrCode" required>
-              </div>
-            </div> 
-        
           </div>
           <div class="mb-3 row">
             <div class="col-sm-9">

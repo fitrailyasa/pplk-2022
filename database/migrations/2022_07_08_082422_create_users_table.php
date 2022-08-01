@@ -28,6 +28,9 @@ class CreateUsersTable extends Migration
             $table->string('fotoProfil')->nullable();
             $table->string('qrCode')->nullable();
             $table->foreignId('roles_id')->constrained('roles')->onDelete('cascade')->onUpdate('cascade');
+
+            /* $table->string('qrCode'); */
+
             $table->timestamps();
         });
     }
