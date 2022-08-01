@@ -29,13 +29,13 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" role="button" style="color:red;">
+        <a class="nav-link" href="#" role="button" style="color:red;" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
           <i class="fa-solid fa-arrow-right-to-bracket"></i>
         </a>
         <li class="nav-item d-none d-sm-inline-block">
-          <a class="nav-link" href="#" role="button" style="color:red;">
-            Logout
-          </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" hidden>
+                @csrf
+            </form>
         </li>
       </li>
     </ul>
@@ -59,11 +59,15 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex align-items-center">
         <div class="image">
-          <img src="../assets/user-profile.jpg" class="img-circle elevation-2" alt="User Image">
+          @if (auth()->user()->fotoProfil == Null)
+            <img src="{{ asset('assets/profile') }}/default.png" class="img-circle elevation-2" alt="User Image">
+          @else
+            <img src="{{ asset('assets/profile') }}/{{ auth()->user()->fotoProfil }}" class="img-circle elevation-2" alt="User Image">
+          @endif
         </div>
         <div class="info">
-          <a href="#" class="d-block text-decoration-none">Adi Sulaksono</a>
-          <a class="d-block text-decoration-none">adi@gg.com</a>
+          <a href="#" class="d-block text-decoration-none">{{ auth()->user()->nama }}</a>
+          <a class="d-block text-decoration-none">{{ auth()->user()->email }}</a>
         </div>
       </div>
 

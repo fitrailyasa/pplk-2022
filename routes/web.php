@@ -13,6 +13,7 @@ use App\Http\Middleware\Staff;
 use App\Http\Middleware\Maba;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\AdminBegalinController;
+use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AdminFunfactController;
 use App\Http\Controllers\Admin\AdminHimpunanController;
 use App\Http\Controllers\Admin\AdminKamusGaulController;
@@ -57,7 +58,7 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 // CMS SUPER ADMIN
 Route::middleware([SuperAdmin::class])->group(function () {
-    Route::get('/', [AdminController::class, 'index'])->name('index');
+    Route::get('/cms-super', [AdminController::class, 'index'])->name('index');
     Route::resource('adminBegalin', AdminBegalinController::class)->except(['show']);
     Route::resource('adminFunfact', AdminFunfactController::class)->except(['show']);
     Route::resource('adminHimpunan', AdminHimpunanController::class)->except(['show']);
@@ -78,7 +79,7 @@ Route::middleware([SuperAdmin::class])->group(function () {
 
 // CMS ADMIN
 Route::middleware([Admin::class])->group(function () {
-    Route::get('/', [AdminController::class, 'index'])->name('index');
+    Route::get('/cms-admin', [AdminController::class, 'index'])->name('index');
     Route::resource('adminBegalin', AdminBegalinController::class)->except(['show']);
     Route::resource('adminFunfact', AdminFunfactController::class)->except(['show']);
     Route::resource('adminHimpunan', AdminHimpunanController::class)->except(['show']);
@@ -90,14 +91,14 @@ Route::middleware([Admin::class])->group(function () {
 
 // CMS HIMPUNAN
 Route::middleware([Himpunan::class])->group(function () {
-    Route::get('/', [AdminController::class, 'index'])->name('index');
+    Route::get('/cms-himpunan', [AdminController::class, 'index'])->name('index');
     Route::resource('adminHimpunan', AdminHimpunanController::class)->except(['show']);
     Route::resource('adminProdi', AdminProdiController::class)->except(['show']);
   });
 
 // CMS UKM
 Route::middleware([Ukm::class])->group(function () {
-    Route::get('/', [AdminController::class, 'index'])->name('index');
+    Route::get('/cms-ukm', [AdminController::class, 'index'])->name('index');
     Route::resource('adminUkm', AdminUkmController::class)->except(['show']);
     Route::get('/polling', [ClientScannerController::class, 'indexPolling'])->name('polling');
     Route::post('/polling/{id}', [ClientScannerController::class, 'polling']);
@@ -105,7 +106,7 @@ Route::middleware([Ukm::class])->group(function () {
 
 // CMS KEDISIPLISAN
 Route::middleware([Kedisiplinan::class])->group(function () {
-    Route::get('/', [AdminController::class, 'index'])->name('index');
+    Route::get('/cms-kedis', [AdminController::class, 'index'])->name('index');
     // Route::resource('adminForm', AdminBegalinController::class)->except(['show']);
 
     // SCANNER STAFF
@@ -115,7 +116,7 @@ Route::middleware([Kedisiplinan::class])->group(function () {
 
 // CMS DAPMEN
 Route::middleware([DapMen::class])->group(function () {
-    Route::get('/', [AdminController::class, 'index'])->name('index');
+    Route::get('/admin-dapmen', [AdminController::class, 'index'])->name('index');
     Route::resource('adminUser', AdminBegalinController::class)->except(['show']);
 
     // SCANNER MABA
@@ -123,7 +124,7 @@ Route::middleware([DapMen::class])->group(function () {
     Route::post('/presensiMaba/{id}', [ClientScannerController::class, 'presensiMaba']);
   });
 
-// CLIENT
+// // CLIENT
 Route::middleware(['auth'])->group(function () {
 
     // UTAMA
