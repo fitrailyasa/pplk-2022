@@ -17,7 +17,7 @@
         <link rel="manifest" href="./manifest.webmanifest" />
 
         <!-- JUDUL -->
-        <title>REGISTRASI - PPLK 2022</title>
+        <title>Registrasi - PPLK 2022</title>
 
         <!-- CSS -->
         <link rel="stylesheet" href="{{ asset('assets') }}/css/main-style.css">
