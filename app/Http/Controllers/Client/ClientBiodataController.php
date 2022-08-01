@@ -191,9 +191,8 @@ public function updateBiodata(Request $request, $id){
     {
         $check = user::get();
         $checkCount = $check->count();
-        $i = 0 ;
 
-        for ( $i <= $checkCount ) {
+        for ($x = 0; $x <= $checkCount; $x++ ) {
             $nim = $users->nim;
             $date = Date("m.d.y");
             $time = time();
