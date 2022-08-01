@@ -37,7 +37,6 @@
                     <th>Dies Natalis</th>
                     <th>Logo</th>
                     <th>Filosofi Logo</th>
-                    <th>QR-Code</th>
                     <th>Dokumentasi1</th>
                     <th>Dokumentasi2</th>
                     <th>Dokumentasi3</th>
@@ -55,12 +54,12 @@
                     <td>{{ $ukm->pembina}}</td>
                     <td>{{ $ukm->ketuaUmum}}</td>
                     <td>{{ $ukm->tahunBerdiri}}</td>
-                    <td><img src=" #" widht="100" height="100"/></td>
+                    <td>{{ $ukm->logo }}</td>
                     <td>{{ $ukm->filosofiLogo}}</td>
-                    <td>aw32#$@aiwjd543</td>
-                    <td><img src=" #" widht="100" height="100"/></td>
-                    <td><img src=" #" widht="100" height="100"/></td>
-                    <td><img src=" #" widht="100" height="100"/></td>
+                    <td>{{ $ukm->dokumentasi1 }}</td>
+                    <td>{{ $ukm->dokumentasi2 }}</td>
+                    <td>{{ $ukm->dokumentasi3 }}</td>
+                 
                     <td class="manage-row">
                       <a href="{{ route('adminUkm.edit',$ukm->id) }}" class="edit-button">
                         <i class="fa-solid fa-marker"></i>

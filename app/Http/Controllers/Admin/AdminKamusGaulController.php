@@ -17,7 +17,8 @@ class AdminKamusGaulController extends Controller
      */
     public function index()
     {
-        return view('admin.Kamusgaul.index');
+        $kamusgauls = KamusGaul::all();
+        return view('admin.Kamusgaul.index', compact('kamusgauls'));
     }
 
     /**

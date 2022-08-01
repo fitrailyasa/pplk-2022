@@ -36,7 +36,7 @@
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Akreditasi</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Akreditasi" name="akreditasi" id="akreditasi" value="{{ $prodi->akreditsi }}" >
+            <input type="text" class="form-control" placeholder="Akreditasi" name="akreditasi" id="akreditasi" value="{{ $prodi->akreditasi }}" >
           </div>
         </div>
         <div class="mb-3 row">
@@ -72,7 +72,7 @@
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Logo</label>
           <div class="col-sm-9">
-            <input type="file" accept="image/*" class="form-control" name="logo" id="logo" value="{{ $prodi->logo }}" >
+            <input type="file" accept="image/*" class="form-control" name="logo" id="logo">
           </div>
         </div>
         <div class="mb-3 row">
@@ -84,9 +84,9 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Prestasi</label>
             <div class="col-sm-9 mb-3">
-              <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2020" name="prestasi" id="prestasi" value="{{ $prodi->prestasi }}" >{{ $prodi->prestasi }}</textarea>
-              <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2021" name="prestasi" id="prestasi" value="{{ $prodi->prestasi }}"  >{{ $prodi->prestasi }}</textarea>
-              <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2022" name="prestasi" id="prestasi" value="{{ $prodi->prestasi }}"  >{{ $prodi->prestasi }}</textarea>
+              <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2020" name="prestasi1" id="prestasi1" value="{{ $prodi->prestasi1 }}" >{{ $prodi->prestasi1 }}</textarea>
+              <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2021" name="prestasi2" id="prestasi2" value="{{ $prodi->prestasi2 }}"  >{{ $prodi->prestasi2 }}</textarea>
+              <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2022" name="prestasi3" id="prestasi3" value="{{ $prodi->prestasi3}}"  >{{ $prodi->prestasi3 }}</textarea>
             </div>
           </div>
           <div class="mb-3 row">

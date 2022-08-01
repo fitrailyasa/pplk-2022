@@ -55,7 +55,7 @@
                     <td>{{ $prodi->akreditasi }}</td>
                     <td>{{ $prodi->tahunBerdiri }}</td>
                     <td>{{ $prodi->jumlahMahasiswa }}</td>
-                    <td><img src="#" widht="100" height="100"/></td>
+                    <td>{{ $prodi->logo }}</td>
                     <td class="manage-row">
                     <a href="{{ route('adminProdi.edit', $prodi->id) }}" class="edit-button">
                       <i class="fa-solid fa-marker"></i>

@@ -34,7 +34,6 @@
                     <th>NIM</th>
                     <th>Kelompok</th>
                     <th>Instagram</th>
-                    <th>QR-Code</th>
                     <th>Golongan Darah</th>
                     <th>Riwayat Penyakit</th>
                     <th>Prodi</th>
@@ -51,7 +50,6 @@
                     <td>{{ $user->nim }}</td>
                     <td>{{ $user->kelompok }}</td>
                     <td>{{ $user->instagram }}</td>
-                    <td>{{ $user->qrCode }}</td>
                     <td>{{ $user->golonganDarah }}</td>
                     <td>{{ $user->riwayatPenyakit }}</td>
                     <td>{{ $user->prodi }}</td>
