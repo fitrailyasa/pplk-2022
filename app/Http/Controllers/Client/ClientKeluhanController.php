@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Controllers\Client;
-
+use Illuminate\Http\Request;
+use App\Models\User;
 use App\Models\Keluhan;
-use App\Http\Requests\StoreKeluhanRequest;
-use App\Http\Requests\UpdateKeluhanRequest;
+
+use Illuminate\Support\Facades\Hash;
 
 class ClientKeluhanController extends Controller
 {
@@ -15,7 +16,8 @@ class ClientKeluhanController extends Controller
      */
     public function index()
     {
-        //
+        $users = User::where( 'id', auth()->user()->id )->firstOrFail();
+        return view('client.form-keluhan', compact('users'));
     }
 
     /**
@@ -23,9 +25,34 @@ class ClientKeluhanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request, $id )
     {
-        //
+        $nim = $request->input('nim');
+        $nama = $request->input('nama');
+        $kelompok = $request->input('kelompok');
+        $keluhan = $request->input('keluhan');
+        $file = $request->file('bukti');
+
+        Keluhan::create([
+            'userid' => $id,
+           'nama' => $nama,
+           'nim' => $nim,
+           'kelompok' => $kelompok,
+           'keluhan' => $keluhan
+
+        ]);
+
+        $filename = time().'_'.$file->getClientOriginalName();
+        // File upload location
+        $location = '../public/assets/buktiKeluhan/';
+        // Upload file
+        $file->move($location,$filename);
+
+        echo "<script>
+        alert('Keluhan Anda sudah Terkirim ke Kedisiplinan');
+        window.location.href='/form-keluhan'
+    </script>";
+;
     }
 
     /**
