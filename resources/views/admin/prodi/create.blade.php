@@ -52,7 +52,7 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Jumlah Mahasiswa</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Kode Warna" name="jumlahMahasiswa" id="kodeWarna"  >
+              <input type="text" class="form-control" placeholder="Jumlah Mahasiswa" name="jumlahMahasiswa" id="kodeWarna"  >
             </div>
           </div>
           <div class="mb-3 row">
