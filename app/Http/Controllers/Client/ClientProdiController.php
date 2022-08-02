@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Client;
 use App\Models\Prodi;
 use App\Http\Requests\StoreProdiRequest;
 use App\Http\Requests\UpdateProdiRequest;
+use Illuminate\Support\Facades\Cache;
 
 class ClientProdiController extends Controller
 {
@@ -15,79 +16,16 @@ class ClientProdiController extends Controller
      */
     public function index()
     {
-        $prodis = Prodi::all();
+        $prodis = Cache::rememberForever('prodis', function () {
+            return Prodi::with('jurusans')->get();
+        });
         return view('client.jurusan.prodi', compact('prodis'));
     }
-    public function indexDetail()
+    public function show($id)
     {
-        $default = 1;
-        $prodis = Prodi::where('id', $default)->firstOrFail();
+        $prodis = Cache::rememberForever('detail-prodi' . $id, function () use ($id) {
+            return Prodi::where('id', $id)->first();
+        });
         return view('client.jurusan.detail-prodi', compact('prodis'));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreProdiRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreProdiRequest $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Prodi  $prodi
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Prodi $prodi)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Prodi  $prodi
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Prodi $prodi)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateProdiRequest  $request
-     * @param  \App\Models\Prodi  $prodi
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateProdiRequest $request, Prodi $prodi)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Prodi  $prodi
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Prodi $prodi)
-    {
-        //
     }
 }
