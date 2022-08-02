@@ -25,7 +25,7 @@
         <div class="container-fluid redeem py-3">
             <div class="row justify-content-around">
                 <div class="col-11 text-start">
-                    <p class="text-white title-text">REDEEM CODE</p>
+                    <p class="text-white title-text">REDEEM CODE FAILED</p>
                     <div class="line-indikator"></div>
                 </div>
             </div>

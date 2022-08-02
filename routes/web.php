@@ -170,7 +170,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/redeem-success', function () { return view('client.games.redeem-code.success'); });
     Route::get('/tebak-bangunan', function () { return view('client.games.tebak-bangunan.home'); });
     Route::get('/tebak-bangunan-game', function () { return view('client.games.tebak-bangunan.game'); });
-    Route::post('/submitcode', [ClientKodeGameController::class, 'sumscore'])->name('sumscore');
+    Route::post('/submitcode/{id}', [ClientKodeGameController::class, 'sumscore'])->name('sumscore');
     Route::get('/game-home', [LeaderboardController::class, 'index']);
 
  });

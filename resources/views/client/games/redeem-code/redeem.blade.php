@@ -46,12 +46,13 @@
 
                 <!-- redeem code -->
                 <div class="col-6 mt-4">
-                    <form method="POST" action="{{ route('sumscore') }}">
+                    <form method="POST" action="/submitcode/{{ auth()->user()->id }}">
                         @csrf
                         <div class="form-group">
                             <div class="mb-3">
                                 <label for="code-redeem" class="form-label text-white">CODE :</label>
-                                <input type="text" name="code" value="{{ $kode_game->code }}" id="code-redeem" class="input-control" placeholder="___">
+                                <input type="text" name="code" value="" id="code-redeem" class="input-control" placeholder="___">
+                                <input type="text" name="nomor" value="{{ $kode_game->no }}" id="code-redeem" style="display: none" class="input-control" placeholder="___">
                             </div>
                         </div>
                         <div class="d-flex justify-content-center">
