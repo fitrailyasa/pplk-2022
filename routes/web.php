@@ -31,6 +31,7 @@ use App\Http\Controllers\Client\ClientKeluhanController;
 use App\Http\Controllers\Client\ClientProdiController;
 use App\Http\Controllers\Client\ClientScannerController;
 use App\Http\Controllers\Client\ClientUptController;
+use App\Http\Controllers\Leaderboardontroller;
 
 
 /*
@@ -173,3 +174,4 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/submitcode', [ClientKodeGameController::class, 'sumscore'])->name('sumscore');
 
  });
+
