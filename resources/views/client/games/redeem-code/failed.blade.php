@@ -43,7 +43,7 @@
                                 <p class="fs-4 fw-bold text-kelompok">Kelompok kamu mendapat poin</p>
 
                                 <div class="poin-container rounded-circle mx-auto">
-                                    <p id="poin">0</p>
+                                    <p id="poin">{{ $leaderboards->score }}</p>
                                     <p class="text-poin">poin</p>
                                 </div>
                             </div>
@@ -55,7 +55,7 @@
                         <button type="submit" class="btn btn-redeem">SELESAI</button>
                     </div>
                 </a>
-                <a href="{{  url('/')}}">
+                <a href="{{  url('/game-home')}}">
                     <div class="d-flex justify-content-center">
                     <button type="submit" class="btn btn-redeem">LEADERBOARD</button>
                     </div>

@@ -51,9 +51,15 @@ class ClientKodeGameController extends Controller
             $current_score=Leaderboard::where('id',auth()->user()->id)->value('score');
             $current_score=$current_score+$kode->nilai;
             Leaderboard::where('id','1')->update(['score'=>$current_score]);
+
+            $leaderboards=Leaderboard::where('id',auth()->user()->id)->first();
+
+            return view('client.games.redeem-code.success',compact('leaderboards'));
         }
         else{
-            return 'Kode sudah pernah dimasukan';
+            $leaderboards=Leaderboard::where('id',auth()->user()->id)->first();
+
+            return view('client.games.redeem-code.failed',compact('leaderboards'));
         }
 
 

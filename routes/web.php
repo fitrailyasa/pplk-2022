@@ -31,7 +31,7 @@ use App\Http\Controllers\Client\ClientKeluhanController;
 use App\Http\Controllers\Client\ClientProdiController;
 use App\Http\Controllers\Client\ClientScannerController;
 use App\Http\Controllers\Client\ClientUptController;
-use App\Http\Controllers\Leaderboardontroller;
+use App\Http\Controllers\Leaderboardcontroller;
 
 
 /*
@@ -164,7 +164,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/detail-prodi',)->name('detailprodi');
 
     // GAMES
-    Route::get('/game-home', function () { return view('client.games.games'); });
     Route::get('/card-list', [ClientKodeGameController::class, 'index']);
     Route::get('/redeem/{no}', [ClientKodeGameController::class, 'show']);
     Route::get('/redeem-failed', function () { return view('client.games.redeem-code.failed'); });
@@ -172,6 +171,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/tebak-bangunan', function () { return view('client.games.tebak-bangunan.home'); });
     Route::get('/tebak-bangunan-game', function () { return view('client.games.tebak-bangunan.game'); });
     Route::post('/submitcode', [ClientKodeGameController::class, 'sumscore'])->name('sumscore');
+    Route::get('/game-home', [LeaderboardController::class, 'index']);
 
  });
 

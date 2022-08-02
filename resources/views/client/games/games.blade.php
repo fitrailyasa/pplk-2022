@@ -141,9 +141,6 @@
                     </div>
                 </div>
             @foreach ($leaderboards as $leaderboard )
-
-            @endforeach
-            <div class="container card table-bknd">
                 <table class="table table-bordered table-striped my-3">
                     <thead>
                         <tr>
@@ -162,6 +159,8 @@
                     </tbody>
                 </table>
             </div>
+            @endforeach
+
         </div>
     </div>
 
