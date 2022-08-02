@@ -46,7 +46,9 @@ use App\Http\Controllers\Leaderboardontroller;
 */
 
 // REGISTRASI
-Route::get('/registrasi', function () { return view('registrasi'); });
+Route::get('/registrasi', function () {
+  return view('registrasi');
+});
 Route::post('/registrasi/{create}', [ClientBiodataController::class, 'store'])->name('regist_staff');
 
 // LOGIN
@@ -58,118 +60,146 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 // CMS SUPER ADMIN
 Route::middleware([SuperAdmin::class])->group(function () {
-    Route::get('/cms-super', [AdminController::class, 'index'])->name('index');
-    Route::resource('adminBegalin', AdminBegalinController::class);
-    Route::resource('adminFunfact', AdminFunfactController::class);
-    Route::resource('adminHimpunan', AdminHimpunanController::class);
-    Route::resource('adminKamusgaul', AdminKamusGaulController::class);
-    Route::resource('adminProdi', AdminProdiController::class);
-    Route::resource('adminUkm', AdminUkmController::class);
-    Route::resource('adminUser', AdminUserController::class);
-    Route::resource('adminUpt', AdminUptController::class);
+  Route::get('/cms-super', [AdminController::class, 'index'])->name('index');
+  Route::resource('adminBegalin', AdminBegalinController::class);
+  Route::resource('adminFunfact', AdminFunfactController::class);
+  Route::resource('adminHimpunan', AdminHimpunanController::class);
+  Route::resource('adminKamusgaul', AdminKamusGaulController::class);
+  Route::resource('adminProdi', AdminProdiController::class);
+  Route::resource('adminUkm', AdminUkmController::class);
+  Route::resource('adminUser', AdminUserController::class);
+  Route::resource('adminUpt', AdminUptController::class);
 
-    // SCANNER
-    Route::get('/scanner', [ClientScannerController::class, 'index'])->name('scanner');
-    Route::get('/polling', [ClientScannerController::class, 'indexPolling'])->name('polling');
-    Route::get('/presensiMaba', [ClientScannerController::class, 'indexMaba'])->name('indexMaba');
-    Route::post('/presensi/{id}', [ClientScannerController::class, 'presensi']);
-    Route::post('/polling/{id}', [ClientScannerController::class, 'polling']);
-    Route::post('/presensiMaba/{id}', [ClientScannerController::class, 'presensiMaba']);
-  });
+  // SCANNER
+  Route::get('/scanner', [ClientScannerController::class, 'index'])->name('scanner');
+  Route::get('/polling', [ClientScannerController::class, 'indexPolling'])->name('polling');
+  Route::get('/presensiMaba', [ClientScannerController::class, 'indexMaba'])->name('indexMaba');
+  Route::post('/presensi/{id}', [ClientScannerController::class, 'presensi']);
+  Route::post('/polling/{id}', [ClientScannerController::class, 'polling']);
+  Route::post('/presensiMaba/{id}', [ClientScannerController::class, 'presensiMaba']);
+});
 
 // CMS ADMIN
 Route::middleware([Admin::class])->group(function () {
-    Route::get('/cms-admin', [AdminController::class, 'index'])->name('index');
-    Route::resource('adminBegalin', AdminBegalinController::class);
-    Route::resource('adminFunfact', AdminFunfactController::class);
-    Route::resource('adminKamusgaul', AdminKamusGaulController::class);
-    Route::resource('adminUpt', AdminUptController::class);
-  });
+  Route::get('/cms-admin', [AdminController::class, 'index'])->name('index');
+  Route::resource('adminBegalin', AdminBegalinController::class);
+  Route::resource('adminFunfact', AdminFunfactController::class);
+  Route::resource('adminKamusgaul', AdminKamusGaulController::class);
+  Route::resource('adminUpt', AdminUptController::class);
+});
 
 // CMS HIMPUNAN
 Route::middleware([Himpunan::class])->group(function () {
-    Route::get('/cms-himpunan', [AdminController::class, 'index'])->name('index');
-    Route::resource('adminHimpunan', AdminHimpunanController::class);
-    Route::resource('adminProdi', AdminProdiController::class);
-  });
+  Route::get('/cms-himpunan', [AdminController::class, 'index'])->name('index');
+  Route::resource('adminHimpunan', AdminHimpunanController::class);
+  Route::resource('adminProdi', AdminProdiController::class);
+});
 
 // CMS UKM
 Route::middleware([Ukm::class])->group(function () {
-    Route::get('/cms-ukm', [AdminController::class, 'index'])->name('index');
-    Route::resource('adminUkm', AdminUkmController::class);
-    Route::get('/polling', [ClientScannerController::class, 'indexPolling'])->name('polling');
-    Route::post('/polling/{id}', [ClientScannerController::class, 'polling']);
-  });
+  Route::get('/cms-ukm', [AdminController::class, 'index'])->name('index');
+  Route::resource('adminUkm', AdminUkmController::class);
+  Route::get('/polling', [ClientScannerController::class, 'indexPolling'])->name('polling');
+  Route::post('/polling/{id}', [ClientScannerController::class, 'polling']);
+});
 
 // CMS KEDISIPLISAN
 Route::middleware([Kedisiplinan::class])->group(function () {
-    Route::get('/cms-kedis', [AdminController::class, 'index'])->name('index');
-    // Route::resource('adminForm', AdminBegalinController::class);
+  Route::get('/cms-kedis', [AdminController::class, 'index'])->name('index');
+  // Route::resource('adminForm', AdminBegalinController::class);
 
-    // SCANNER STAFF
-    Route::get('/scanner', [ClientScannerController::class, 'index'])->name('scanner');
-    Route::post('/presensi/{id}', [ClientScannerController::class, 'presensi']);
-  });
+  // SCANNER STAFF
+  Route::get('/scanner', [ClientScannerController::class, 'index'])->name('scanner');
+  Route::post('/presensi/{id}', [ClientScannerController::class, 'presensi']);
+});
 
 // CMS DAPMEN
 Route::middleware([DapMen::class])->group(function () {
-    Route::get('/cms-dapmen', [AdminController::class, 'index'])->name('index');
-    Route::resource('adminUser', AdminBegalinController::class);
+  Route::get('/cms-dapmen', [AdminController::class, 'index'])->name('index');
+  Route::resource('adminUser', AdminBegalinController::class);
 
-    // SCANNER MABA
-    Route::get('/presensiMaba', [ClientScannerController::class, 'indexMaba'])->name('indexMaba');
-    Route::post('/presensiMaba/{id}', [ClientScannerController::class, 'presensiMaba']);
-  });
+  // SCANNER MABA
+  Route::get('/presensiMaba', [ClientScannerController::class, 'indexMaba'])->name('indexMaba');
+  Route::post('/presensiMaba/{id}', [ClientScannerController::class, 'presensiMaba']);
+});
 
 // // CLIENT
 Route::middleware(['auth'])->group(function () {
 
-    // UTAMA
-    Route::get('/', [ClientBegalinController::class, 'index']);
-    Route::get('/beranda', [ClientBegalinController::class, 'index']);
-    Route::get('/upt', [ClientUptController::class, 'index'])->name('upt');
-    Route::get('/kabinet', [ClientKabinetController::class, 'index'])->name('kabinet');
-    Route::get('/senat', function () { return view('client.senat'); });
-    Route::get('/kamus-gaul', [ClientKamusgaulController::class, 'index'])->name('kamus-gaul');
+  // UTAMA
+  Route::get('/', [ClientBegalinController::class, 'index']);
+  Route::get('/beranda', [ClientBegalinController::class, 'index']);
+  Route::get('/upt', [ClientUptController::class, 'index'])->name('upt');
+  Route::get('/kabinet', [ClientKabinetController::class, 'index'])->name('kabinet');
+  Route::get('/senat', function () {
+    return view('client.senat');
+  });
+  Route::get('/kamus-gaul', [ClientKamusgaulController::class, 'index'])->name('kamus-gaul');
 
-    // BOOKLET
-    Route::get('/booklet', function () { return view('client.booklet'); });
+  // BOOKLET
+  Route::get('/booklet', function () {
+    return view('client.booklet');
+  });
 
-    // PPLK
-    Route::get('/pplk', function () { return view('client.pplk'); });
-    Route::get('/div-pplk', function () { return view('client.div-pplk'); });
+  // PPLK
+  Route::get('/pplk', function () {
+    return view('client.pplk');
+  });
+  Route::get('/div-pplk', function () {
+    return view('client.div-pplk');
+  });
+  Route::get('/our-team', function () {
+    return view('client.our-team');
+  });
 
-    // BIODATA
-    Route::get('/biodata', [ClientBiodataController::class, 'index'])->name('biodata');
-    Route::get('/edit-biodata', [ClientBiodataController::class, 'indexEditBio'])->name('edit-biodata');
-    Route::get('edit-fotoProfil/{id}', [ClientBiodataController::class, 'editProfil']);
-    Route::put('update-fotoProfil/{id}', [ClientBiodataController::class, 'updateProfil']);
-    Route::get('edit-profil/{id}', [ClientBiodataController::class, 'editBiodata']);
-    Route::put('update-profil/{id}', [ClientBiodataController::class, 'updateBiodata']);
+  // BIODATA
+  Route::get('/biodata', [ClientBiodataController::class, 'index'])->name('biodata');
+  Route::get('/edit-biodata', [ClientBiodataController::class, 'indexEditBio'])->name('edit-biodata');
+  Route::get('edit-fotoProfil/{id}', [ClientBiodataController::class, 'editProfil']);
+  Route::put('update-fotoProfil/{id}', [ClientBiodataController::class, 'updateProfil']);
+  Route::get('edit-profil/{id}', [ClientBiodataController::class, 'editBiodata']);
+  Route::put('update-profil/{id}', [ClientBiodataController::class, 'updateBiodata']);
 
-    // FORM KELUHAN
-    Route::get('/form-keluhan ', [ClientKeluhanController::class, 'index'])->name('indexKeluhan');
-    Route::post('/form-keluhan/{id}', [ClientKeluhanController::class, 'create'])->name('create-keluhan');
+  // FORM KELUHAN
+  Route::get('/form-keluhan ', [ClientKeluhanController::class, 'index'])->name('indexKeluhan');
+  Route::post('/form-keluhan/{id}', [ClientKeluhanController::class, 'create'])->name('create-keluhan');
 
-    // ORMAWA
-    Route::get('/ukm', function () { return view('client.ormawa.ukm'); });
-    Route::get('/himpunan', function () { return view('client.ormawa.himpunan'); });
-    Route::get('/detail-himpunan', function () { return view('client.ormawa.detail-himpunan'); });
-    Route::get('/jurusan', [ClientJurusanController::class, 'index'])->name('jurusan');
-    Route::get('/prodi', function () { return view('client.jurusan.prodi'); });
-    Route::get('/detail-prodi',)->name('detailprodi');
+  // OUR TEAM
+  Route::get('/form-keluhan ', [ClientKeluhanController::class, 'index'])->name('indexKeluhan');
 
-    // GAMES
-    Route::get('/game-home', function () { return view('client.games.games'); });
-    Route::get('/card-list', [ClientKodeGameController::class, 'index']);
-    Route::get('/redeem/{no}', [ClientKodeGameController::class, 'show']);
-    Route::get('/redeem-failed', function () { return view('client.games.redeem-code.failed'); });
-    Route::get('/redeem-success', function () { return view('client.games.redeem-code.success'); });
-    Route::get('/tebak-bangunan', function () { return view('client.games.tebak-bangunan.home'); });
-    Route::get('/tebak-bangunan-game', function () { return view('client.games.tebak-bangunan.game'); });
-    Route::post('/submitcode', [ClientKodeGameController::class, 'sumscore'])->name('sumscore');
+  // ORMAWA
+  Route::get('/ukm', function () {
+    return view('client.ormawa.ukm');
+  });
+  Route::get('/himpunan', function () {
+    return view('client.ormawa.himpunan');
+  });
+  Route::get('/detail-himpunan', function () {
+    return view('client.ormawa.detail-himpunan');
+  });
+  Route::get('/jurusan', [ClientJurusanController::class, 'index'])->name('jurusan');
+  Route::get('/prodi', function () {
+    return view('client.jurusan.prodi');
+  });
+  Route::get('/detail-prodi',)->name('detailprodi');
 
- });
-
-
-
+  // GAMES
+  Route::get('/game-home', function () {
+    return view('client.games.games');
+  });
+  Route::get('/card-list', [ClientKodeGameController::class, 'index']);
+  Route::get('/redeem/{no}', [ClientKodeGameController::class, 'show']);
+  Route::get('/redeem-failed', function () {
+    return view('client.games.redeem-code.failed');
+  });
+  Route::get('/redeem-success', function () {
+    return view('client.games.redeem-code.success');
+  });
+  Route::get('/tebak-bangunan', function () {
+    return view('client.games.tebak-bangunan.home');
+  });
+  Route::get('/tebak-bangunan-game', function () {
+    return view('client.games.tebak-bangunan.game');
+  });
+  Route::post('/submitcode', [ClientKodeGameController::class, 'sumscore'])->name('sumscore');
+});
