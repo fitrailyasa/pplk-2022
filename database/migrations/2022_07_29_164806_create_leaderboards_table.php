@@ -15,7 +15,7 @@ class CreateLeaderboardsTable extends Migration
     {
         Schema::create('leaderboards', function (Blueprint $table) {
             $table->id();
-            $table->foreignid('userid')->references('id')->on('users');
+            $table->string('kelompok');
             $table->integer('score');
             $table->timestamps();
         });

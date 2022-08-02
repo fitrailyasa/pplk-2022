@@ -7,9 +7,9 @@
     <!-- STYLES -->
 
     <link rel="stylesheet" href="{{ asset('assets/css/main-style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/games-fix.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ asset('assets/css/games.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -18,8 +18,8 @@
 @endsection
 
 @section('content')
-    <!-- CONTENT -->
-    <div class="content-wrapper">
+     <!-- CONTENT -->
+     <div class="content-wrapper">
         <div class="container-fluid">
             <div class="row justify-content-center pt-5 pb-1">
                 <svg id="games-bounce" width="250" height="250" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -41,13 +41,16 @@
                         <div class="col-auto">
                             <p class="card rounded-4" id="box-group"><i class="fa-solid fa-chess-queen"></i></p>
                         </div>
+                        @foreach ($juara1 as $g )
                         <div class="col-auto user-info">
-                            <p>Kelompok 82</p>
+                            <p>Kelompok {{ $g->kelompok }}</p>
                             <p>Peringkat 1</p>
                         </div>
+
                         <div class="col-auto d-flex">
-                            <p style="font-size:1.3rem; text-indent: 10px; color: azure;" class="points-title"><i style="color:yellow" class="fa-solid fa-coins"></i>  11563 Poin</p>
+                            <p style="font-size:1.3rem; text-indent: 10px; color: azure;" class="points-title"><i style="color:yellow" class="fa-solid fa-coins"></i>  {{ $g->score }} Poin</p>
                         </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -77,17 +80,21 @@
                             </div>
                         </div>
                         <div class="info-winner">
+                            @foreach ($juara2 as $juara2s)
+
                             <div class="nama">
                                 <h2>
-                                    Kelompok 82
+                                    Kelompok {{  $juara2s->kelompok }}
                                 </h2>
                             </div>
                             <div class="point">
                                 <h1>
-                                    34523 Poin
+                                    {{  $juara2s->score }} poin
                                 </h1>
                             </div>
                         </div>
+
+                        @endforeach
                     </div>
 
                     <div class="winner-1 winner">
@@ -103,17 +110,22 @@
                                 </h1>
                             </div>
                         </div>
+
+
+
                         <div class="info-winner">
+                            @foreach ( $juara1  as $a)
                             <div class="nama">
                                 <h2>
-                                    Kelompok 38
+                                   Kelompok {{  $a->kelompok }}
                                 </h2>
                             </div>
                             <div class="point">
                                 <h1>
-                                    559381 Poin
+                                    {{  $a->score }} poin
                                 </h1>
                             </div>
+                            @endforeach
                         </div>
                     </div>
 
@@ -127,22 +139,24 @@
                             </div>
                         </div>
                         <div class="info-winner">
+                            @foreach ( $juara3  as $l)
                             <div class="nama">
                                 <h2>
-                                    Kelompok 22
+                                   Kelompok {{  $l->kelompok }}
                                 </h2>
                             </div>
                             <div class="point">
                                 <h1>
-                                    12938 Poin
+                                    {{  $l->score }} poin
                                 </h1>
                             </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
-            @foreach ($leaderboards as $leaderboard )
 
-            @endforeach
+
+
             <div class="container card table-bknd">
                 <table class="table table-bordered table-striped my-3">
                     <thead>
@@ -153,12 +167,14 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach ($leaderboards as $leaderboard )
                         <tr>
-                            <th scope="row">1</th>
-                            <td>{{ $leaderboard -> userid }}</td>
-                            <td>{{ $leaderboard -> score }}</td>
+                            {{-- <th scope="row">1</th> --}}
+                            <td>{{ $loop->iteration }}</td>
+                            <td>{{ $leaderboard->kelompok }}</td>
+                            <td>{{ $leaderboard->score }}</td>
                         </tr>
-
+                        @endforeach
                     </tbody>
                 </table>
             </div>
