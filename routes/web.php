@@ -44,23 +44,6 @@ use App\Http\Controllers\Client\ClientUptController;
 |
 */
 
-
-
-/* Auth::routes();
-Route::get('/home',[HomeController::class, 'index'])->name('home'); */
-
-//Admin Route
-// Route::get('/', [AdminController::class, 'index'])->name('index');
-Route::resource('adminBegalin', AdminBegalinController::class)->except(['show']);
-Route::resource('adminFunfact', AdminFunfactController::class)->except(['show']);
-Route::resource('adminHimpunan', AdminHimpunanController::class)->except(['show']);
-Route::resource('adminKamusgaul', AdminKamusGaulController::class)->except(['show']);
-Route::resource('adminProdi', AdminProdiController::class)->except(['show']);
-Route::resource('adminUkm', AdminUkmController::class)->except(['show']);
-Route::resource('adminUser', AdminUserController::class)->except(['show']);
-Route::resource('adminUpt', AdminUptController::class)->except(['show']);
-//Login
-
 // REGISTRASI
 Route::get('/registrasi', function () { return view('registrasi'); });
 Route::post('/registrasi/{create}', [ClientBiodataController::class, 'store'])->name('regist_staff');
