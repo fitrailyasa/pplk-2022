@@ -14,6 +14,6 @@ class guestController extends Controller
         if (!Auth::check()) {
             Auth::loginUsingId(5440);
         }
-        return redirect()->route('beranda');
+        return redirect()->route('/beranda');
     }
 }

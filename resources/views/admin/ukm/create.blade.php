@@ -11,31 +11,31 @@
       <h4 class="card-title">Input Data UKM/Komunitas</h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="{{ route('createUkm') }}" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('adminUkm.store') }}" enctype='multipart/form-data'>
 
           @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Nama Lengkap</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Nama Pembina" name="namaLengkap" id="namalengkap" required>
+              <input type="text" class="form-control" placeholder="Nama Lengkap" name="namaLengkap" id="namalengkap" required>
             </div>
           </div>   
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Nama Singkat</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Nama Pembina" name="namaSingkat" id="namasingkat" required>
+              <input type="text" class="form-control" placeholder="Nama Singkat" name="namaSingkat" id="namasingkat" required>
             </div>
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Visi</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Nama Pembina" name="visi" id="visi" >
+              <input type="text" class="form-control" placeholder="Visi" name="visi" id="visi" >
             </div>
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Misi</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Nama Pembina" name="misi" id="misi" >
+              <input type="text" class="form-control" placeholder="Misi" name="misi" id="misi" >
             </div>
           </div>    
           <div class="mb-3 row">
@@ -59,7 +59,7 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Logo</label>
             <div class="col-sm-9">
-              <input type="text" accept="image/*" class="form-control" name="logo" id="logo" >
+              <input type="file" accept="image/*" class="form-control" name="logo" id="logo" >
             </div>
           </div>
           <div class="mb-3 row">
@@ -77,25 +77,25 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Deskripsi</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Nama Pembina" name="deskripsi" id="deskripsi" >
+              <input type="text" class="form-control" placeholder="Deskripsi" name="deskripsi" id="deskripsi" >
             </div>
           </div> 
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Dokumentasi 1</label>
             <div class="col-sm-9">
-              <input type="text" accept="image/*" class="form-control" name="dokumentasi1" id="dokumentasi1" >
+              <input type="file" accept="image/*" class="form-control" name="dokumentasi1" id="dokumentasi1" >
             </div>
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Dokumentasi 2</label>
             <div class="col-sm-9">
-              <input type="text" accept="image/*" class="form-control" name="dokumentasi2" id="dokumentasi2" >
+              <input type="file" accept="image/*" class="form-control" name="dokumentasi2" id="dokumentasi2" >
             </div>
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Dokumentasi 3</label>
             <div class="col-sm-9">
-              <input type="text" accept="image/*" class="form-control" name="dokumentasi3" id="dokumentasi3" >
+              <input type="file" accept="image/*" class="form-control" name="dokumentasi3" id="dokumentasi3" >
             </div>
           </div>
           <div class="mb-3 row">

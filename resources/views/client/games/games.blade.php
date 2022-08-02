@@ -140,7 +140,9 @@
                         </div>
                     </div>
                 </div>
+            @foreach ($leaderboards as $leaderboard )
 
+            @endforeach
             <div class="container card table-bknd">
                 <table class="table table-bordered table-striped my-3">
                     <thead>
@@ -153,54 +155,10 @@
                     <tbody>
                         <tr>
                             <th scope="row">1</th>
-                            <td>Kelompok 23</td>
-                            <td>12023</td>
+                            <td>{{ $leaderboard -> userid }}</td>
+                            <td>{{ $leaderboard -> score }}</td>
                         </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Kelompok 21</td>
-                            <td>9231</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Kelompok 33</td>
-                            <td>8231</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">4</th>
-                            <td>Kelompok 32</td>
-                            <td>7532</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">5</th>
-                            <td>Kelompok 25</td>
-                            <td>6342</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">6</th>
-                            <td>Kelompok 89</td>
-                            <td>6214</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">7</th>
-                            <td>Kelompok 156</td>
-                            <td>6112</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">8</th>
-                            <td>Kelompok 137</td>
-                            <td>5981</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">9</th>
-                            <td>Kelompok 1</td>
-                            <td>5627</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">10</th>
-                            <td>Kelompok 123</td>
-                            <td>4627</td>
-                        </tr>
+
                     </tbody>
                 </table>
             </div>

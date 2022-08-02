@@ -12,8 +12,7 @@
       </div>
       <div class="card-body">
 
-        <form method="POST" action="{{ route('createHimpunan') }}" enctype='multipart/form-data'>
-
+        <form method="POST" action="{{ route('adminHimpunan.store') }}" enctype='multipart/form-data'>
         @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Nama Lengkap</label>
@@ -42,13 +41,7 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Tahun Berdiri</label>
             <div class="col-sm-9">
-              <input type="number" class="form-control" name="tahunBerdiri" id="tahunBerdiri"  >
-            </div>
-          </div>
-          <div class="mb-3 row">
-            <label class="col-sm-3 col-form-label">Kode Warna</label>
-            <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Kode Warna" name="kodeWarna" id="kodeWarna"  >
+              <input type="number" class="form-control" placeholder="Tahun Berdiri" name="tahunBerdiri" id="tahunBerdiri"  >
             </div>
           </div>
           <div class="mb-3 row">

@@ -11,7 +11,7 @@
       <h4 class="card-title">Input Data Kamus Gaul</h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="{{ route('createKamusgaul') }}" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('adminKamusgaul.store') }}" enctype='multipart/form-data'>
         @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Kamus Gaul</label>
@@ -28,7 +28,7 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Contoh Penggunaan</label>
             <div class="col-sm-9">
-              <textarea class="form-control custom-txt-area" placeholder="Arti Kamus" name="contohPenggunaan" id="arti-kamus" required></textarea>
+              <textarea class="form-control custom-txt-area" placeholder="Contoh Pemakaian Kata" name="contohPenggunaan" id="arti-kamus" required></textarea>
             </div>
           </div>
           <div class="mb-3 row">

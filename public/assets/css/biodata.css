@@ -3,7 +3,7 @@
 
 /* CONTENT CSS */
 body{
-    padding-bottom: 90px;
+    /* padding-bottom: 90px; */
     display: block;
     font-family: var(--font-family-body) !important;
     overflow-x: hidden;

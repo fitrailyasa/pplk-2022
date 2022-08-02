@@ -8,7 +8,7 @@
 <!-- MAIN CONTENT -->
 
     <!--Dashboard-->
-    <div class="col-xl-12 col-lg-12 form-wrapper tabcontents" id="dashboard" >
+    <div class="col-xl-12 col-lg-12 form-wrapper" id="dashboard" >
       <div class="row">
         <div class="col-md">
           <div class="widget-stat card" style="background: #FF6565;">

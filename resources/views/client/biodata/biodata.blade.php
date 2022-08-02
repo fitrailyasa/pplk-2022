@@ -39,20 +39,22 @@
                     </div>
 
                     <br><h1 align="center" >QR PRESENSI</h1> <br>
-
                     <div class=" qrCode Justify-content-center row container qr-code py-md-4" style=" width: 250px; height:250px;" >
                         <div class="w-100">
                             <div class="ratio ratio-1x1 content rounded">
                                     <iframe id="qrCode" src="{{ asset('assets/qrCode')}}/{{ $biodata->qrCode }} "></iframe>
-                                    <img src="{{ asset('assets/logomini.png') }}" alt="logo kecil">
+                                    <img src="{{ asset('assets/logomini.png') }}" target="_blank" alt="logo kecil">
+
                             </div>
+
                         </div><!-- col-2 -->
                     </div>
+                    <a href="#" class="btn btn-primary">PRINT QR CODE</a>
 
                 </div><!-- row -->
             </div><!-- container -->
 
-            <div class="col-xl-6 col-sm-12">
+            <div class="col-xl-6 col-sm-12 mb-5">
                 <h1 align="center" >BIODATA PENGGUNA</h1> <br>
                 <div class="container">
                     <form class="col-sm-12 bio-form m-sm-auto container-fluid justify-content-between fle" method="POST">
