@@ -47,10 +47,12 @@
                         <button type="submit" class="btn btn-redeem">SELESAI</button>
                     </div>
                 </a>
-
+                <a href="{{ url('') }}">
                     <div class="d-flex justify-content-center">
                         <button type="submit" class="btn btn-redeem">LEADERBOARD</button>
                     </div>
+                </a>
+
                 </div>
             </div>
 
