@@ -54,6 +54,19 @@ class AdminUptController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+    public function show($id)
+    {
+        $upt = Upt::where('id', $id)->first();
+        return view('admin.upt.read', compact('upt'));
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Upt  $Upt
+     * @return \Illuminate\Http\Response
+     */
+
     public function edit($id)
     {
         $upt = Upt::where('id', $id)->first();

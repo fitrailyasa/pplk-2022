@@ -66,6 +66,19 @@ class AdminUkmController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+    public function show($id)
+    {
+        $ukm=Ukm::where('id',$id)->first();
+        return view('admin.Ukm.read', compact('ukm'));
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Ukm  $Ukm
+     * @return \Illuminate\Http\Response
+     */
+
     public function edit($id)
     {
         $ukm=Ukm::where('id',$id)->first();

@@ -31,7 +31,7 @@ use App\Http\Controllers\Client\ClientKeluhanController;
 use App\Http\Controllers\Client\ClientProdiController;
 use App\Http\Controllers\Client\ClientScannerController;
 use App\Http\Controllers\Client\ClientUptController;
-use App\Http\Controllers\Leaderboardontroller;
+use App\Http\Controllers\Leaderboardcontroller;
 
 
 /*
@@ -49,7 +49,6 @@ use App\Http\Controllers\Leaderboardontroller;
 Route::get('/registrasi', function () { return view('registrasi'); });
 Route::post('/registrasi/{create}', [ClientBiodataController::class, 'store'])->name('regist_staff');
 
-
 // LOGIN
 Route::get('/', [LoginController::class, 'showLoginForm']);
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
@@ -59,71 +58,68 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 // CMS SUPER ADMIN
 Route::middleware([SuperAdmin::class])->group(function () {
-    Route::get('/cms-super', [AdminController::class, 'index'])->name('index');
-    Route::resource('adminBegalin', AdminBegalinController::class)->except(['show']);
-    Route::resource('adminFunfact', AdminFunfactController::class)->except(['show']);
-    Route::resource('adminHimpunan', AdminHimpunanController::class)->except(['show']);
-    Route::resource('adminKamusgaul', AdminKamusGaulController::class)->except(['show']);
-    Route::resource('adminProdi', AdminProdiController::class)->except(['show']);
-    Route::resource('adminUkm', AdminUkmController::class)->except(['show']);
-    Route::resource('adminUser', AdminUserController::class)->except(['show']);
-    Route::resource('adminUpt', AdminUptController::class)->except(['show']);
+  Route::get('/cms-super', [AdminController::class, 'index'])->name('index');
+  Route::resource('adminBegalin', AdminBegalinController::class);
+  Route::resource('adminFunfact', AdminFunfactController::class);
+  Route::resource('adminHimpunan', AdminHimpunanController::class);
+  Route::resource('adminKamusgaul', AdminKamusGaulController::class);
+  Route::resource('adminProdi', AdminProdiController::class);
+  Route::resource('adminUkm', AdminUkmController::class);
+  Route::resource('adminUser', AdminUserController::class);
+  Route::resource('adminUpt', AdminUptController::class);
 
-    // SCANNER
-    Route::get('/scanner', [ClientScannerController::class, 'index'])->name('scanner');
-    Route::get('/polling', [ClientScannerController::class, 'indexPolling'])->name('polling');
-    Route::get('/presensiMaba', [ClientScannerController::class, 'indexMaba'])->name('indexMaba');
-    Route::post('/presensi/{id}', [ClientScannerController::class, 'presensi']);
-    Route::post('/polling/{id}', [ClientScannerController::class, 'polling']);
-    Route::post('/presensiMaba/{id}', [ClientScannerController::class, 'presensiMaba']);
-  });
+  // SCANNER
+  Route::get('/scanner', [ClientScannerController::class, 'index'])->name('scanner');
+  Route::get('/polling', [ClientScannerController::class, 'indexPolling'])->name('polling');
+  Route::get('/presensiMaba', [ClientScannerController::class, 'indexMaba'])->name('indexMaba');
+  Route::post('/presensi/{id}', [ClientScannerController::class, 'presensi']);
+  Route::post('/polling/{id}', [ClientScannerController::class, 'polling']);
+  Route::post('/presensiMaba/{id}', [ClientScannerController::class, 'presensiMaba']);
+});
 
 // CMS ADMIN
 Route::middleware([Admin::class])->group(function () {
-    Route::get('/cms-admin', [AdminController::class, 'index'])->name('index');
-    Route::resource('adminBegalin', AdminBegalinController::class)->except(['show']);
-    Route::resource('adminFunfact', AdminFunfactController::class)->except(['show']);
-    Route::resource('adminHimpunan', AdminHimpunanController::class)->except(['show']);
-    Route::resource('adminKamusgaul', AdminKamusGaulController::class)->except(['show']);
-    Route::resource('adminProdi', AdminProdiController::class)->except(['show']);
-    Route::resource('adminUkm', AdminUkmController::class)->except(['show']);
-    Route::resource('adminUpt', AdminUptController::class)->except(['show']);
-  });
+  Route::get('/cms-admin', [AdminController::class, 'index'])->name('index');
+  Route::resource('adminBegalin', AdminBegalinController::class);
+  Route::resource('adminFunfact', AdminFunfactController::class);
+  Route::resource('adminKamusgaul', AdminKamusGaulController::class);
+  Route::resource('adminUpt', AdminUptController::class);
+});
 
 // CMS HIMPUNAN
 Route::middleware([Himpunan::class])->group(function () {
-    Route::get('/cms-himpunan', [AdminController::class, 'index'])->name('index');
-    Route::resource('adminHimpunan', AdminHimpunanController::class)->except(['show']);
-    Route::resource('adminProdi', AdminProdiController::class)->except(['show']);
-  });
+  Route::get('/cms-himpunan', [AdminController::class, 'index'])->name('index');
+  Route::resource('adminHimpunan', AdminHimpunanController::class);
+  Route::resource('adminProdi', AdminProdiController::class);
+});
 
 // CMS UKM
 Route::middleware([Ukm::class])->group(function () {
-    Route::get('/cms-ukm', [AdminController::class, 'index'])->name('index');
-    Route::resource('adminUkm', AdminUkmController::class)->except(['show']);
-    Route::get('/polling', [ClientScannerController::class, 'indexPolling'])->name('polling');
-    Route::post('/polling/{id}', [ClientScannerController::class, 'polling']);
-  });
+  Route::get('/cms-ukm', [AdminController::class, 'index'])->name('index');
+  Route::resource('adminUkm', AdminUkmController::class);
+  Route::get('/polling', [ClientScannerController::class, 'indexPolling'])->name('polling');
+  Route::post('/polling/{id}', [ClientScannerController::class, 'polling']);
+});
 
 // CMS KEDISIPLISAN
 Route::middleware([Kedisiplinan::class])->group(function () {
-    Route::get('/cms-kedis', [AdminController::class, 'index'])->name('index');
-    // Route::resource('adminForm', AdminBegalinController::class)->except(['show']);
+  Route::get('/cms-kedis', [AdminController::class, 'index'])->name('index');
+  // Route::resource('adminForm', AdminBegalinController::class);
 
-    // SCANNER STAFF
-    Route::get('/scanner', [ClientScannerController::class, 'index'])->name('scanner');
-    Route::post('/presensi/{id}', [ClientScannerController::class, 'presensi']);
-  });
+  // SCANNER STAFF
+  Route::get('/scanner', [ClientScannerController::class, 'index'])->name('scanner');
+  Route::post('/presensi/{id}', [ClientScannerController::class, 'presensi']);
+});
 
 // CMS DAPMEN
 Route::middleware([DapMen::class])->group(function () {
-    Route::get('/admin-dapmen', [AdminController::class, 'index'])->name('index');
-    Route::resource('adminUser', AdminBegalinController::class)->except(['show']);
+  Route::get('/cms-dapmen', [AdminController::class, 'index'])->name('index');
+  Route::resource('adminUser', AdminUserController::class);
 
-    // SCANNER MABA
-    Route::get('/presensiMaba', [ClientScannerController::class, 'indexMaba'])->name('indexMaba');
-    Route::post('/presensiMaba/{id}', [ClientScannerController::class, 'presensiMaba']);
-  });
+  // SCANNER MABA
+  Route::get('/presensiMaba', [ClientScannerController::class, 'indexMaba'])->name('indexMaba');
+  Route::post('/presensiMaba/{id}', [ClientScannerController::class, 'presensiMaba']);
+});
 
 // // CLIENT
 Route::middleware(['auth'])->group(function () {
@@ -164,14 +160,16 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/detail-prodi',)->name('detailprodi');
 
     // GAMES
-    Route::get('/game-home', function () { return view('client.games.games'); });
     Route::get('/card-list', [ClientKodeGameController::class, 'index']);
     Route::get('/redeem/{no}', [ClientKodeGameController::class, 'show']);
     Route::get('/redeem-failed', function () { return view('client.games.redeem-code.failed'); });
     Route::get('/redeem-success', function () { return view('client.games.redeem-code.success'); });
     Route::get('/tebak-bangunan', function () { return view('client.games.tebak-bangunan.home'); });
     Route::get('/tebak-bangunan-game', function () { return view('client.games.tebak-bangunan.game'); });
-    Route::post('/submitcode', [ClientKodeGameController::class, 'sumscore'])->name('sumscore');
-
- });
-
+    Route::post('/submitcode/{id}', [ClientKodeGameController::class, 'sumscore'])->name('sumscore');
+    Route::get('/game-home', [LeaderboardController::class, 'index']);
+    
+    // OUR TEAM
+    Route::get('/our-team', function () { return view('client.our-team'); });
+    
+});

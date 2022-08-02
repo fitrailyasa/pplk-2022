@@ -11,7 +11,7 @@
       <h4 class="card-title">Input Data Funfact</h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="{{ route('createfunFact') }}" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('adminFunfact.store') }}" enctype='multipart/form-data'>
 
         @csrf
           <div class="mb-3 row">

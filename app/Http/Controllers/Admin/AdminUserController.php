@@ -63,6 +63,19 @@ class AdminUserController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+    public function show($id)
+    {
+        $user = User::where('id', $id)->first();
+        return view('admin.user.read', compact('user'));
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\himpunan $himpunan
+     * @return \Illuminate\Http\Response
+     */
+
     public function edit($id)
     {
         $user = User::where('id', $id)->first();
