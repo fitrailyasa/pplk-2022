@@ -21,8 +21,8 @@
           </div>
           @endif
           <div class="container">
-            <div class="panel">
-            <div class="panel-heading border">    
+            <div class="container" ng-app="formvalid">
+            <div class="panel" data-ng-controller="validationCtrl">   
             </div>
           <div class="panel-body">
           <table class=" table-responsive table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt">

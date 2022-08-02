@@ -30,8 +30,6 @@
                   <tr>
                     <th>No</th>
                     <th>Kamus Gaul</th>
-                    <th>Arti Kamus</th>
-                    <th>Contoh Penggunaan</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -39,9 +37,10 @@
                   <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $kamusgaul->gaul }}</td>
-                    <td>{{ $kamusgaul->asli }}</td>
-                    <td>{{ $kamusgaul->contohPenggunaan }}</td>
                     <td class="manage-row">
+                      <a href="{{ route('adminKamusgaul.show',$kamusgaul->id) }}" class="edit-button">
+                        <i class="fa-solid fa-eye"></i>
+                      </a>
                       <a href="{{ route('adminKamusgaul.edit',$kamusgaul->id) }}" class="edit-button">
                         <i class="fa-solid fa-marker"></i>
                       </a>

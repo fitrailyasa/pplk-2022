@@ -30,7 +30,6 @@
                 <tr>
                   <th>No</th>
                   <th>Nama UPT</th>
-                  <th>Deskripsi</th>
                   <th>More</th>
                 </tr>
               </thead>
@@ -39,8 +38,10 @@
                 <tr>
                   <td>{{$loop->iteration}}</td>
                   <td>{{$upt->nama}}</td>
-                  <td>{{$upt->deskripsi}}</td>
                   <td class="manage-row">
+                    <a href="{{ route('adminUpt.show',$upt->id) }}" class="edit-button">
+                      <i class="fa-solid fa-eye"></i>
+                    </a>
                     <a href="{{ route('adminUpt.edit',$upt->id) }}" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>

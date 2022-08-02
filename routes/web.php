@@ -116,7 +116,7 @@ Route::middleware([Kedisiplinan::class])->group(function () {
 // CMS DAPMEN
 Route::middleware([DapMen::class])->group(function () {
   Route::get('/cms-dapmen', [AdminController::class, 'index'])->name('index');
-  Route::resource('adminUser', AdminBegalinController::class);
+  Route::resource('adminUser', AdminUserController::class);
 
   // SCANNER MABA
   Route::get('/presensiMaba', [ClientScannerController::class, 'indexMaba'])->name('indexMaba');
