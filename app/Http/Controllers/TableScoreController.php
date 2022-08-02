@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Client;
+namespace App\Http\Controllers;
 
-use App\Models\Ormawa;
-use App\Http\Requests\StoreOrmawaRequest;
-use App\Http\Requests\UpdateOrmawaRequest;
+use App\Models\Table_score;
+use App\Http\Requests\StoreTable_scoreRequest;
+use App\Http\Requests\UpdateTable_scoreRequest;
 
-class ClientOrmawaController extends Controller
+class TableScoreController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class ClientOrmawaController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreOrmawaRequest  $request
+     * @param  \App\Http\Requests\StoreTable_scoreRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreOrmawaRequest $request)
+    public function store(StoreTable_scoreRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class ClientOrmawaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Ormawa  $ormawa
+     * @param  \App\Models\Table_score  $table_score
      * @return \Illuminate\Http\Response
      */
-    public function show(Ormawa $ormawa)
+    public function show(Table_score $table_score)
     {
         //
     }
@@ -53,10 +53,10 @@ class ClientOrmawaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Ormawa  $ormawa
+     * @param  \App\Models\Table_score  $table_score
      * @return \Illuminate\Http\Response
      */
-    public function edit(Ormawa $ormawa)
+    public function edit(Table_score $table_score)
     {
         //
     }
@@ -64,11 +64,11 @@ class ClientOrmawaController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateOrmawaRequest  $request
-     * @param  \App\Models\Ormawa  $ormawa
+     * @param  \App\Http\Requests\UpdateTable_scoreRequest  $request
+     * @param  \App\Models\Table_score  $table_score
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateOrmawaRequest $request, Ormawa $ormawa)
+    public function update(UpdateTable_scoreRequest $request, Table_score $table_score)
     {
         //
     }
@@ -76,10 +76,10 @@ class ClientOrmawaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Ormawa  $ormawa
+     * @param  \App\Models\Table_score  $table_score
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Ormawa $ormawa)
+    public function destroy(Table_score $table_score)
     {
         //
     }

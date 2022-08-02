@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateStatusKehadiransTable extends Migration
+class CreateTableScoresTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,12 @@ class CreateStatusKehadiransTable extends Migration
      */
     public function up()
     {
-        Schema::create('status_kehadirans', function (Blueprint $table) {
+        Schema::create('table_scores', function (Blueprint $table) {
             $table->id();
-            $table->string('status');
+            $table->string('token')->unique();
+            $table->integer('score');
+            $table->string('kelompok');
+            $table->timestamps();
         });
     }
 
@@ -26,6 +29,6 @@ class CreateStatusKehadiransTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('status_kehadirans');
+        Schema::dropIfExists('table_scores');
     }
 }
