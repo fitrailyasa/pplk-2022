@@ -18,8 +18,8 @@
 @endsection
 
 @section('content')
-    <!-- CONTENT -->
-    <div class="content-wrapper">
+     <!-- CONTENT -->
+     <div class="content-wrapper">
         <div class="container-fluid">
             <div class="row justify-content-center pt-5 pb-1">
                 <svg id="games-bounce" width="250" height="250" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -77,17 +77,21 @@
                             </div>
                         </div>
                         <div class="info-winner">
+                            @foreach ($juara2 as $juara2s)
+
                             <div class="nama">
                                 <h2>
-                                    Kelompok 82
+                                    Kelompok {{  $juara2s->kelompok }}
                                 </h2>
                             </div>
                             <div class="point">
                                 <h1>
-                                    34523 Poin
+                                    {{  $juara2s->score }} poin
                                 </h1>
                             </div>
                         </div>
+
+                        @endforeach
                     </div>
 
                     <div class="winner-1 winner">
@@ -103,17 +107,22 @@
                                 </h1>
                             </div>
                         </div>
+
+
+
                         <div class="info-winner">
+                            @foreach ( $juara1  as $a)
                             <div class="nama">
                                 <h2>
-                                    Kelompok 38
+                                   Kelompok {{  $a->kelompok }}
                                 </h2>
                             </div>
                             <div class="point">
                                 <h1>
-                                    559381 Poin
+                                    {{  $a->score }} poin
                                 </h1>
                             </div>
+                            @endforeach
                         </div>
                     </div>
 
@@ -127,41 +136,45 @@
                             </div>
                         </div>
                         <div class="info-winner">
+                            @foreach ( $juara3  as $l)
                             <div class="nama">
                                 <h2>
-                                    Kelompok 22
+                                   Kelompok {{  $l->kelompok }}
                                 </h2>
                             </div>
                             <div class="point">
                                 <h1>
-                                    12938 Poin
+                                    {{  $l->score }} poin
                                 </h1>
                             </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
 
-            <table class="table table-bordered table-striped my-3">
-                <thead>
-                    <tr>
-                        <th scope="col">Rank</th>
-                        <th scope="col">Kelompok</th>
-                        <th scope="col">Points</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($leaderboards as $leaderboard )
-                    <tr>
-                        <th scope="row">{{ $loop->iteration }}</th>
-                        <td>{{ $leaderboard->kelompok }}</td>
-                        <td>{{ $leaderboard->score }}</td>
-                    </tr>
-                    @endforeach
-                </tbody>
-            </table>
+
+
+            <div class="container card table-bknd">
+                <table class="table table-bordered table-striped my-3">
+                    <thead>
+                        <tr>
+                            <th scope="col">Rank</th>
+                            <th scope="col">Kelompok</th>
+                            <th scope="col">Poin</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($leaderboards as $leaderboard )
+                        <tr>
+                            {{-- <th scope="row">1</th> --}}
+                            <td>{{ $loop->iteration }}</td>
+                            <td>{{ $leaderboard->kelompok }}</td>
+                            <td>{{ $leaderboard->score }}</td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
             </div>
-
-
         </div>
     </div>
 
