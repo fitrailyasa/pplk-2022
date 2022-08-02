@@ -153,7 +153,7 @@ Route::middleware(['auth'])->group(function () {
 
   Route::get('/prodi', [ClientProdiController::class, 'index']); // ===> prodi
 
-  Route::get('/detail-prodi/{id}', [ClientProdiController::class, 'show']);
+  Route::get('/detail-prodi/{id}', [ClientProdiController::class, 'show'])->name('detailProdi');
 
   Route::get('/detail-himpunan', function () {        // ===> Detail himpunan
     return view('client.ormawa.detail-himpunan');

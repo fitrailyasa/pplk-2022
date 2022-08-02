@@ -88,15 +88,17 @@
             <div class="container-fluid d-flex flex-wrap justify-content-around" id="terakhir">
                 @foreach($prodis as $prodi)
                 @if($prodi->jurusan_id == 3)
+                <a style="text-decoration:none;" href="/detail-prodi/{{ $prodi->id }}">
                 <button type="button" class="btn my-4 prodi-card">
                     <div class="card rounded-5">
                         <img src="{{ asset('assets/logoProdi/'. $prodi->namaSingkat.'.svg') }}" class="card-img-top rounded-5" alt="...">
                         <div class="card-body">
                             <p class="card-text pt-2 rounded-3 text-center text-light">{{ $prodi->namaLengkap }}</p>
-                            <a href="detail-prodi/{{ $prodi->id }}">
+                            <a href="{{ route('detailProdi',$prodi->id) }}"></a>
                         </div>
                     </div>
                 </button>
+                </a>
                 @endif
                 @endforeach
             </div>
@@ -108,15 +110,17 @@
             <div class="container-fluid d-flex flex-wrap justify-content-around" id="terakhir">
                 @foreach($prodis as $prodi)
                 @if($prodi->jurusan_id == 1)
+                <a style="text-decoration:none;" href="/detail-prodi/{{ $prodi->id }}">
                 <button type="button" class="btn my-4 prodi-card">
                     <div class="card rounded-5">
                         <img src="{{ asset('assets/logoProdi/'. $prodi->namaSingkat.'.svg') }}" class="card-img-top rounded-5" alt="...">
                         <div class="card-body">
                             <p class="card-text pt-2 rounded-3 text-center text-light">{{ $prodi->namaLengkap }}</p>
-                            <a href="detail-prodi/{{ $prodi->id }}">
+                            <a href="{{ route('detailProdi',$prodi->id) }}"></a>
                         </div>
                     </div>
                 </button>
+                </a>
                 @endif
                 @endforeach
         </div>
@@ -128,15 +132,16 @@
             <div class="container-fluid d-flex flex-wrap justify-content-around" id="terakhir">
                 @foreach($prodis as $prodi)
                 @if($prodi->jurusan_id == 2)
+                <a style="text-decoration:none;" href="/detail-prodi/{{ $prodi->id }}">
                 <button type="button" class="btn my-4 prodi-card">
                     <div class="card rounded-5">
                         <img src="{{ asset('assets/logoProdi/'. $prodi->namaSingkat.'.svg') }}" class="card-img-top rounded-5" alt="...">
                         <div class="card-body">
                             <p class="card-text pt-2 rounded-3 text-center text-light">{{ $prodi->namaLengkap }}</p>
-                            <a href="detail-prodi/{{ $prodi->id }}">
                         </div>
                     </div>
                 </button>
+            </a>
                 @endif
                 @endforeach
             </div>
