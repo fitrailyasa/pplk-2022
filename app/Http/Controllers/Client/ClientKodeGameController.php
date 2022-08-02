@@ -6,6 +6,7 @@ use App\Models\Kode_game;
 use App\Http\Requests\StoreKode_gameRequest;
 use App\Http\Requests\UpdateKode_gameRequest;
 use App\Models\Leaderboard;
+use App\Models\Table_score;
 use Illuminate\Http\Request;
 
 
@@ -32,12 +33,30 @@ class ClientKodeGameController extends Controller
         //
     }
 
-    public function sumscore(Request $request){
-        $nilai=Kode_game::where('kode',$request->code)->value('nilai');
-        $current_score=Leaderboard::where('id','1')->value('score');
-        $current_score=$current_score+$nilai;
 
-        Leaderboard::where('id','1')->update(['score'=>$current_score]);
+    public function sumscore(Request $request){
+
+        $kode=Kode_game::where('kode',$request->code)->first();
+        $kelompok=auth()->user()->kelompok;
+        $token="$kelompok"."$kode->kode";
+
+        $check = Table_score::where('token', $token)->get();
+        $checkCount = $check->count();
+
+        if($checkCount<1){
+            Table_score::create([
+                'token' => $token,
+            ]);
+
+            $current_score=Leaderboard::where('id',auth()->user()->id)->value('score');
+            $current_score=$current_score+$kode->nilai;
+            Leaderboard::where('id','1')->update(['score'=>$current_score]);
+        }
+        else{
+            return 'Kode sudah pernah dimasukan';
+        }
+
+
 
 
 

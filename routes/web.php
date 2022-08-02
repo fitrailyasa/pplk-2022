@@ -45,9 +45,26 @@ use App\Http\Controllers\Client\ClientUptController;
 */
 
 
+
+/* Auth::routes();
+Route::get('/home',[HomeController::class, 'index'])->name('home'); */
+
+//Admin Route
+// Route::get('/', [AdminController::class, 'index'])->name('index');
+Route::resource('adminBegalin', AdminBegalinController::class)->except(['show']);
+Route::resource('adminFunfact', AdminFunfactController::class)->except(['show']);
+Route::resource('adminHimpunan', AdminHimpunanController::class)->except(['show']);
+Route::resource('adminKamusgaul', AdminKamusGaulController::class)->except(['show']);
+Route::resource('adminProdi', AdminProdiController::class)->except(['show']);
+Route::resource('adminUkm', AdminUkmController::class)->except(['show']);
+Route::resource('adminUser', AdminUserController::class)->except(['show']);
+Route::resource('adminUpt', AdminUptController::class)->except(['show']);
+//Login
+
 // REGISTRASI
 Route::get('/registrasi', function () { return view('registrasi'); });
 Route::post('/registrasi/{create}', [ClientBiodataController::class, 'store'])->name('regist_staff');
+
 
 // LOGIN
 Route::get('/', [LoginController::class, 'showLoginForm']);
@@ -162,9 +179,45 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/prodi', function () { return view('client.jurusan.prodi'); });
     Route::get('/detail-prodi',)->name('detailprodi');
 
+
+    Route::get('/beranda', [ClientBegalinController::class, 'index']); //DEFAULT
+
+    Route::get('/detail-himpunan', function () {        // ===> Detail himpunan
+        return view('client.ormawa.detail-himpunan');
+    });
+    Route::get('/ukm', function () {                    // ===> Unit kegiatan mahasiswa UKM
+        return view('client.ormawa.ukm');
+    });
+    Route::get('/himpunan', function () {               // ===> himpunan
+        return view('client.ormawa.himpunan');
+    });
+    Route::get('/prodi', function () {                  // ===> prodi
+        return view('client.jurusan.prodi');
+    });
+    Route::get('/booklet', function () {              // ===> booklet
+        return view('client.booklet');
+    });
+    Route::get('/div-pplk', function () {             // ===> divisi pplk
+        return view('client.div-pplk');
+    });
+    // Route::get('/form-keluhan', function () {         // ===> form keluhan
+    //     return view('client.form-keluhan');
+    // });
+    Route::get('/pplk', function () {                 // ===> pplk
+        return view('client.pplk');
+    });
+
+    Route::get('/redeem-failed', function () {        // ===> redeem code failed
+        return view('client.games.redeem-code.failed');
+    });
+    //Route::get('/redeem', function () {               // ===> redeem page
+    //    return view('client.games.redeem-code.redeem');
+    //});
+
     // GAMES
     Route::get('/game-home', function () { return view('client.games.games'); });
     Route::get('/card-list', [ClientKodeGameController::class, 'index']);
+
     Route::get('/redeem/{no}', [ClientKodeGameController::class, 'show']);
     Route::get('/redeem-failed', function () { return view('client.games.redeem-code.failed'); });
     Route::get('/redeem-success', function () { return view('client.games.redeem-code.success'); });
@@ -172,4 +225,3 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/tebak-bangunan-game', function () { return view('client.games.tebak-bangunan.game'); });
     Route::post('/submitcode', [ClientKodeGameController::class, 'sumscore'])->name('sumscore');
 
-});
