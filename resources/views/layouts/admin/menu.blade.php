@@ -113,58 +113,6 @@
           <!--./Beranda-->
 
           @if(auth()->user()->roles_id == 1)
-          <!--User-->
-          <li class="nav-item">
-            <a class="nav-link tabitem">
-              <i class="nav-icon fa-solid fa-user-astronaut"></i>
-              <p>
-                User
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{ route('adminUser.create') }}" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Tambah User</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{ route('adminUser.index') }}" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Kelola Data User</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <!--./User-->
-
-          <!--QR-Code-->
-          <li class="nav-item">
-            <a class="nav-link tabitem">
-              <i class="nav-icon fa-solid fa-users-viewfinder"></i>
-              <p>
-                QR-Code
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a onclick="openCMS(event, 'QR-Code-panitia')" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>QR-Code Panitia</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a onclick="openCMS(event, 'QR-Code-maba')" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>QR-Code Maba</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <!--./QR-Code-->
-
           <!--UPT ITERA-->
           <li class="nav-item">
             <a class="nav-link tabitem">
@@ -242,32 +190,6 @@
             </ul>
           </li>
           <!--./Himpunan-->
-
-          <!--KM ITERA-->
-          <li class="nav-item">
-            <a class="nav-link tabitem">
-              <i class="nav-icon fa-solid fa-hands-holding-circle"></i>
-              <p>
-                KM ITERA
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a onclick="openCMS(event, 'kelola-kabinet')" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Kelola Data Kabinet</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a onclick="openCMS(event, 'kelola-senat')" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Kelola Data Senat</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <!--./KM ITERA-->
 
           <!--UKM/Komunitas-->
           <li class="nav-item">
@@ -410,26 +332,6 @@
             </ul>
           </li>
           <!--./Games-->
-
-          <!--Gform-->
-          <li class="nav-item">
-            <a class="nav-link tabitem">
-              <i class="nav-icon fa-solid fa-receipt"></i>
-              <p>
-                Link Gform
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a onclick="openCMS(event, 'kelola-gform')" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Kelola Link Gform</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <!--./Gform-->
 
           <!--Booklet-->
           <li class="nav-item">
@@ -490,33 +392,6 @@
           <!--./Scanner-->
 
           @elseif(auth()->user()->roles_id == 2)
-
-          <!--QR-Code-->
-          <li class="nav-item">
-            <a class="nav-link tabitem">
-              <i class="nav-icon fa-solid fa-users-viewfinder"></i>
-              <p>
-                QR-Code
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a onclick="openCMS(event, 'QR-Code-panitia')" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>QR-Code Panitia</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a onclick="openCMS(event, 'QR-Code-maba')" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>QR-Code Maba</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <!--./QR-Code-->
-
           <!--UPT ITERA-->
           <li class="nav-item">
             <a class="nav-link tabitem">
@@ -542,110 +417,6 @@
             </ul>
           </li>
           <!--./UPT ITERA-->
-
-          <!--Prodi-->
-          <li class="nav-item">
-            <a class="nav-link tabitem">
-              <i class="nav-icon fa-solid fa-satellite"></i>
-              <p>
-                Prodi
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{ route('adminProdi.create') }}" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Tambah Prodi</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{ route('adminProdi.index') }}" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Kelola Data Prodi</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <!--./Prodi-->
-
-          <!--Himpunan-->
-          <li class="nav-item">
-            <a class="nav-link tabitem">
-              <i class="nav-icon fa-solid fa-people-roof"></i>
-              <p>
-                Himpunan
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{ route('adminHimpunan.create') }}" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Tambah Himpunan</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{ route('adminHimpunan.index') }}" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p style="font-size:0.9rem;">Kelola Data Himpunan</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <!--./Himpunan-->
-
-          <!--KM ITERA-->
-          <li class="nav-item">
-            <a class="nav-link tabitem">
-              <i class="nav-icon fa-solid fa-hands-holding-circle"></i>
-              <p>
-                KM ITERA
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a onclick="openCMS(event, 'kelola-kabinet')" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Kelola Data Kabinet</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a onclick="openCMS(event, 'kelola-senat')" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Kelola Data Senat</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <!--./KM ITERA-->
-
-          <!--UKM/Komunitas-->
-          <li class="nav-item">
-            <a class="nav-link tabitem">
-              <i class="nav-icon fa-solid fa-people-carry-box"></i>
-              <p>
-                UKM/Komunitas
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{ route('adminUkm.create') }}" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p style="font-size:0.8rem;">Tambah UKM/Komunitas</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{ route('adminUkm.index') }}" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p style="font-size:0.8rem;">Kelola UKM/Komunitas</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <!--./UKM/Komunitas-->
 
           <!--Funfact-->
           <li class="nav-item">
@@ -763,26 +534,6 @@
           </li>
           <!--./Games-->
 
-          <!--Gform-->
-          <li class="nav-item">
-            <a class="nav-link tabitem">
-              <i class="nav-icon fa-solid fa-receipt"></i>
-              <p>
-                Link Gform
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a onclick="openCMS(event, 'kelola-gform')" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Kelola Link Gform</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <!--./Gform-->
-
           <!--Booklet-->
           <li class="nav-item">
             <a class="nav-link tabitem">
@@ -810,7 +561,6 @@
           <!--./Booklet-->
 
           @elseif(auth()->user()->roles_id == 3)
-
           <!--Prodi-->
           <li class="nav-item">
             <a class="nav-link tabitem">
@@ -864,7 +614,6 @@
           <!--./Himpunan-->
 
           @elseif(auth()->user()->roles_id == 4)
-
           <!--UKM/Komunitas-->
           <li class="nav-item">
             <a class="nav-link tabitem">
@@ -903,6 +652,25 @@
           <!--./Scanner-->
 
           @elseif(auth()->user()->roles_id == 5)
+          <!--Gform-->
+          <li class="nav-item">
+            <a class="nav-link tabitem">
+              <i class="nav-icon fa-solid fa-receipt"></i>
+              <p>
+                Link Gform
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a onclick="openCMS(event, 'kelola-gform')" class="nav-link tablinks">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Kelola Link Gform</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!--./Gform-->
 
           <!--Scanner-->
           <li class="nav-item">
@@ -916,7 +684,32 @@
           <!--./Scanner-->
 
           @elseif(auth()->user()->roles_id == 6)
-
+          <!--User-->
+          <li class="nav-item">
+            <a class="nav-link tabitem">
+              <i class="nav-icon fa-solid fa-user-astronaut"></i>
+              <p>
+                User
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('adminUser.create') }}" class="nav-link tablinks">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tambah User</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('adminUser.index') }}" class="nav-link tablinks">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Kelola Data User</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!--./User-->
+          
           <!--Scanner-->
           <li class="nav-item">
             <a href="/presensiMaba" class="nav-link">

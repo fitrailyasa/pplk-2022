@@ -22,13 +22,13 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Email</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="adi@gg.com" name="email" id="email" required>
+              <input type="text" class="form-control" placeholder="fitra@gabut.com" name="email" id="email" required>
             </div>
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Password</label>
             <div class="col-sm-9">
-              <input type="password" class="form-control" placeholder="Password" name="password" id="password" required>
+              <input type="password" class="form-control" placeholder="*******" name="password" id="password" required>
             </div>
           </div>
           <div class="mb-3 row">

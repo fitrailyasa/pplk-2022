@@ -62,6 +62,19 @@ class AdminHimpunanController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+    public function show($id)
+    {
+        $himpunan = Himpunan::where('id', $id)->first();
+        return view('admin.himpunan.read', compact('himpunan'));
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\himpunan $himpunan
+     * @return \Illuminate\Http\Response
+     */
+
     public function edit($id)
     {
         $himpunan = Himpunan::where('id', $id)->first();

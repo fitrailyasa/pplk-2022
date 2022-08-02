@@ -50,6 +50,18 @@ class AdminBegalinController extends Controller
     /**
      * Display the specified resource.
      *
+     * @param  \App\Models\Admin  $admin
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        $begalin = Begalin::where('id', $id)->first();
+        return view('admin.begalin.read', compact('begalin'));
+    }
+
+    /**
+     * Display the specified resource.
+     *
      * @param  \App\Models\begalin  $begalin
      * @return \Illuminate\Http\Response
      */

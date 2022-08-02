@@ -70,6 +70,19 @@ class AdminProdiController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+    public function show($id)
+    {
+        $prodi = Prodi::where('id', $id)->first();
+        return view('admin.prodi.read', compact('prodi'));
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Prodi  $Prodi
+     * @return \Illuminate\Http\Response
+     */
+
     public function edit($id)
     {
         $prodi = Prodi::where('id', $id)->first();
