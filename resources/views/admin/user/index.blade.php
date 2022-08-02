@@ -50,8 +50,8 @@
                     <td>{{ $user->email }}</td>
                     <td>{{ $user->nim }}</td>
                     <td>{{ $user->kelompok }}</td>
-                    <td><a href="https://instagram.com/{{ $user->instagram }}">{{ $user->instagram }}</a></td>
-                    <td><a href="https://api.whatsapp.com/send?phone={{ $user->nomorHp }}&text=Halo!">{{ $user->nomorHp }}</a></td>
+                    <td><a style="" href="https://instagram.com/{{ $user->instagram }}">{{ $user->instagram }}</a></td>
+                    <td><a style="" href="https://api.whatsapp.com/send?phone={{ $user->nomorHp }}&text=Halo!">{{ $user->nomorHp }}</a></td>
                     <td>{{ $user->golonganDarah }}</td>
                     <td>{{ $user->riwayatPenyakit }}</td>
                     <td>{{ $user->prodi }}</td>
