@@ -261,12 +261,6 @@
                         </div>
                         <!-- golongan darah -->
 
-                  <div class="row justify-content-center align-items-center">
-                  <div class="col mb-3 d-flex justify-content-center align-items-center">
-                      <input name="roles" type="text" class="form-control rounded input-size" id="ig" placeholder="staff" readonly value="7" style="display: none;"/>
-                  </div>
-                  </div>
-
                 <!-- Tombol Daftar -->
                 <div class="row justify-content-center mb-5">
                   <div class="col d-flex justify-content-center">

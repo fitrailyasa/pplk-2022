@@ -57,7 +57,7 @@ class ClientBiodataController extends Controller
         $nim =$data['nim'];
         $date = Date("m.d.y");
         $time = time();
-        $qrCode = "$nim"."$nim"."$nim"."$nim"."$nim"."$date"."$time";
+        $qrCode = "$date"."$nim"."$date"."$date"."$date"."$date"."$time";
         User::create([
             'nama'=>$request->name,
             'golonganDarah'=>$request->golonganDarah,
@@ -68,7 +68,7 @@ class ClientBiodataController extends Controller
             'nomorHp'=>$data['nomorHp'],
             'password'=> Hash::make($request->password),
             'riwayatPenyakit'=>$request->riwayatPenyakit,
-            'roles_id'=>$request->roles,
+            'roles_id'=>'7',
             'prodi'=>$request->prodi,
             'qrCode'=>$qrCode
         ]);
@@ -119,9 +119,6 @@ public function updateBiodata(Request $request, $id){
 
         $viewbiodata = User::find($id);
         $nim = $request->input('nim');
-        $date = Date("m.d.y");
-        $time = time();
-        $qrCode = "$nim"."$nim"."$nim"."$nim"."$nim"."$date"."$time";
         $viewbiodata->nama = $request->input('name');
         $viewbiodata->golonganDarah = $request->input('golonganDarah');
         $viewbiodata->nim = $nim;
@@ -131,10 +128,8 @@ public function updateBiodata(Request $request, $id){
         $viewbiodata->nomorHp = $request->input('nomorHp');
         $viewbiodata->riwayatPenyakit = $request->input('riwayatPenyakit');
         $viewbiodata->prodi = $request->input('prodi');
-        $viewbiodata->qrCode = $qrCode;
 
         $viewbiodata->update();
-        QrCode::format('svg')->margin(2)->size(200)->errorCorrection('H')->generate("$qrCode", "../public/assets/qrcode/"."$qrCode");
         echo "<script>
         alert('Data update');
         window.location.href='/edit-biodata'
@@ -186,4 +181,26 @@ public function updateBiodata(Request $request, $id){
     {
         //
     }
+
+    public function generateAllQrCode()
+    {
+        $check = user::get();
+        $checkCount = $check->count();
+
+        for ($x = 0; $x <= $checkCount; $x++ ) {
+            $date = Date("m.d.y");
+            $time = time();
+            $qrCode = "$time"."$date"."$time"."$date"."$time"."$date"."$time";
+            $users->qrCode = $qrCode;
+            $users->update();
+            QrCode::format('svg')->margin(2)->size(200)->errorCorrection('H')->generate("$qrCode", "../public/assets/qrcode/"."$qrCode");
+        }
+
+        echo "<script>
+        alert('Semua QrCode User Sudah di Generate ');
+        window.location.href='/registrasi'
+         </script>";
+    }
 }
+
+
