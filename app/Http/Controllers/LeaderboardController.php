@@ -15,8 +15,8 @@ class LeaderboardController extends Controller
      */
     public function index()
     {
-        $leaderboards = Leaderboard::all();
-        return view('client.gamesgames', compact('leaderboards'));
+        $leaderboards = Leaderboard::take(10)->get();
+        return view('client.games.games', compact('leaderboards'));
     }
 
     /**
