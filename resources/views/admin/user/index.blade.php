@@ -34,7 +34,7 @@
                     <th>NIM</th>
                     <th>Kelompok</th>
                     <th>Instagram</th>
-                    <th>QR-Code</th>
+                    <th>Nomor HP</th>
                     <th>Golongan Darah</th>
                     <th>Riwayat Penyakit</th>
                     <th>Prodi</th>
@@ -50,14 +50,17 @@
                     <td>{{ $user->email }}</td>
                     <td>{{ $user->nim }}</td>
                     <td>{{ $user->kelompok }}</td>
-                    <td>{{ $user->instagram }}</td>
-                    <td>{{ $user->qrCode }}</td>
+                    <td><a style="" href="https://instagram.com/{{ $user->instagram }}">{{ $user->instagram }}</a></td>
+                    <td><a style="" href="https://api.whatsapp.com/send?phone={{ $user->nomorHp }}&text=Halo!">{{ $user->nomorHp }}</a></td>
                     <td>{{ $user->golonganDarah }}</td>
                     <td>{{ $user->riwayatPenyakit }}</td>
                     <td>{{ $user->prodi }}</td>
                     <td>{{ $user->roles_id }}</td>
                     
                     <td class="manage-row">
+                    <a href="{{ route('adminUser.show', $user->id)}}" class="edit-button">
+                      <i class="fa-solid fa-eye"></i>
+                    </a>
                     <a href="{{ route('adminUser.edit', $user->id)}}" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>

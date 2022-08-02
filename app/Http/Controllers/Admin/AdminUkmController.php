@@ -47,16 +47,29 @@ class AdminUkmController extends Controller
             'pembina' => $request->pembina,
             'ketuaUmum' => $request->ketuaUmum,
             'tahunBerdiri' => $request->tahunBerdiri,
-            'logo' => $request->logo,
+            'logo'  => url($request->file('logo')->move('assets/ukm/logo', $request->namaSingkat . '.' . $request->file('logo')->extension())),
             'filosofiLogo' => $request->filosofiLogo,
             'qrCode' => $request->qrCode,
             'deskripsi' => $request->deskripsi,
-            'dokumentasi1' => $request->dokumentasi1,
-            'dokumentasi2' => $request->dokumentasi2,
-            'dokumentasi3' => $request->dokumentasi3
+            'dokumentasi1'  => url($request->file('dokumentasi1')->move('assets/ukm/dokumentasi1', $request->namaSingkat .'d1'.'.' . $request->file('dokumentasi1')->extension())),
+            'dokumentasi2'  => url($request->file('dokumentasi2')->move('assets/ukm/dokumentasi2', $request->namaSingkat .'d2'. '.' . $request->file('dokumentasi2')->extension())),
+            'dokumentasi3'  => url($request->file('dokumentasi3')->move('assets/ukm/dokumentasi3', $request->namaSingkat .'d3'. '.' . $request->file('dokumentasi3')->extension()))
         ]);
 
         return redirect('/adminUkm')->with('sukses', 'Berhasil Tambah Data!');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Ukm  $Ukm
+     * @return \Illuminate\Http\Response
+     */
+
+    public function show($id)
+    {
+        $ukm=Ukm::where('id',$id)->first();
+        return view('admin.Ukm.read', compact('ukm'));
     }
 
     /**
@@ -91,15 +104,38 @@ class AdminUkmController extends Controller
                 'pembina' => $request->pembina,
                 'ketuaUmum' => $request->ketuaUmum,
                 'tahunBerdiri' => $request->tahunBerdiri,
-                'logo' => $request->logo,
                 'filosofiLogo' => $request->filosofiLogo,
                 'qrCode' => $request->qrCode,
                 'deskripsi' => $request->deskripsi,
-                'dokumentasi1' => $request->dokumentasi1,
-                'dokumentasi2' => $request->dokumentasi2,
-                'dokumentasi3' => $request->dokumentasi3
             ]
         );
+        if ($request->hasFile('logo'))
+        {
+         $ukm->update([
+             'logo' => url($request->file('logo')->move('assets/himpunan', $ukm->namaSingkat . '.' . $request->file('logo')->extension())),
+         ]);
+     }
+
+        if ($request->hasFile('dokumentasi1'))
+        {
+         $ukm->update([
+             'dokumentasi1' => url($request->file('dokumentasi1')->move('assets/ukm/dokumentasi', $ukm->namaSingkat .'d1'. '.' . $request->file('dokumentas1')->extension())),
+         ]);
+        }
+
+        if ($request->hasFile('dokumentasi2'))
+        {
+         $ukm->update([
+             'dokumentasi2' => url($request->file('dokumentasi2')->move('assets/ukm/dokumentasi', $ukm->namaSingkat .'d2'. '.' . $request->file('dokumentasi2')->extension())),
+         ]);
+        }
+
+        if ($request->hasFile('dokumentasi3'))
+        {
+         $ukm->update([
+             'dokumentasi3' => url($request->file('dokumentasi3')->move('assets/ukm/dokumentasi', $ukm->namaSingkat .'d3'. '.' . $request->file('dokumentasi3')->extension())),
+         ]);
+        }
         return redirect('/adminUkm')->with('sukses', 'Berhasil Edit Data!');
     }
 

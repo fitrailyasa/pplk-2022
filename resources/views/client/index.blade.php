@@ -70,7 +70,7 @@
             <div class="row justify-content-between p-4">
                 <div class="col-lg-5 col-md-4 align-self-center">
                     <div class="d-flex justify-content-center">
-                        <img class="mt-md-5 maskot maskot-awal" src="../assets/space-cat.png" alt="">
+                        <img class="mt-md-5 maskot maskot-awal" src="../assets/Maskot1.png" alt="">
                     </div>
 
                 </div>
@@ -333,50 +333,74 @@
         </div>
 
                 <!-- fun fact -->
-                <div class="container-fluid fun-fact">
-                    <div class="row justify-content-around p-3">
-                        <div class="col-md-5 col-sm-11 justify-content-center">
-                            <div class="row justify-content-center">
-                                <div class="col-10 text-center text">
-                                    <span class="h1 text-style text-white">TAHU LEBIH <br> TENTANG <span class=" text-gradien">PPLK 2022</span></span>
-                                </div>
-                                <div class="mt-5 p-3 col-10 g-3 carousel-container owl-carousel" >
-                                    <div class="item img-fit">
-                                        <button  data-bs-toggle="modal" data-bs-target="#you" >
-                                            <i class="bi bi-play-btn-fill play-icon text-danger"></i>
-                                            <img src="http://img.youtube.com/vi/IxEpWXop_WE/0.jpg" class="thumbnail" alt="">
-                                        </button>
-                                    </div>
-                                    <div class="item img-fit">
-                                        <button  data-bs-toggle="modal" data-bs-target="#me" >
-                                            <i class="bi bi-play-btn-fill play-icon text-danger"></i>
-                                            <img src="http://img.youtube.com/vi/6gZ9WFwxRNY/0.jpg" class="thumbnail" alt="">
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
+        <div class="container-fluid fun-fact">
+            <div class="row justify-content-around p-3">
+                <div class="col-md-5 col-sm-11 justify-content-center">
+                    <div class="row justify-content-center">
+                        <div class="col-10 text-center text">
+                            <span class="h1 text-style text-white">KNOW MORE <br> ABOUT <span class=" text-gradien">PPLK 2022</span></span>
                         </div>
-                        <div class="col-md-4">
-                            <img class="maskot"src="../assets/space-cat.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <!-- Modal  youtube-->
-                <div class="modal modal-xl fade" id="you" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <iframe class="youtube-size" src="https://www.youtube.com/embed/IxEpWXop_WE?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="modal modal-xl fade" id="me" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <iframe class="youtube-size" src=" https://youtu.be/6gZ9WFwxRNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="mt-5 p-3 col-10 g-3 carousel-container owl-carousel" >
+                        
+                            <div class="item img-fit">
+                                <button  data-bs-toggle="modal" data-bs-target="#you" >
+                                    <i class="bi bi-play-btn-fill play-icon text-danger"></i>
+                                    <img src="http://img.youtube.com/vi/C2e22o8xIpQ/0.jpg" class="thumbnail" alt="">
+                                </button>
+                            </div>
+
+                            <div class="item img-fit">
+                                <button  data-bs-toggle="modal" data-bs-target="#and" >
+                                    <i class="bi bi-play-btn-fill play-icon text-danger"></i>
+                                    <img src="http://img.youtube.com/vi/Z6w_5ST34UQ/0.jpg" class="thumbnail" alt="">
+                                </button>
+                            </div>
+                        
+                            <div class="item img-fit">
+                                <button  data-bs-toggle="modal" data-bs-target="#me" >
+                                    <i class="bi bi-play-btn-fill play-icon text-danger"></i>
+                                    <img src="http://img.youtube.com/vi/6gZ9WFwxRNY/0.jpg" class="thumbnail" alt="">
+                                </button>
+                            </div>
+                        
                         </div>
                     </div>
                 </div>
+                <div class="col-md-4">
+                    <img class="maskot2"src="../assets/Maskot2.png" alt="">
+                    
+                </div>
+            </div>
+        </div>
+        <!-- Modal  youtube-->
+        <div class="modal modal-xl fade" id="you" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+
+                    <iframe class="youtube-size" src="https://www.youtube.com/embed/C2e22o8xIpQ?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal modal-xl fade" id="and" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+
+                    <iframe class="youtube-size" src="https://www.youtube.com/embed/Z6w_5ST34UQ?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal modal-xl fade" id="me" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                <!-- https://youtu.be/6gZ9WFwxRNY -->
+
+                    <iframe class="youtube-size" src="https://www.youtube.com/embed/6gZ9WFwxRNY?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
   <!-- begalin -->
 
   <div class="container-fluid begalin pt-5">

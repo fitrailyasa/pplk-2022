@@ -32,15 +32,12 @@
                     <div class="card rounded-4">
                         <div class="bg-white rounded-4">
                             <div class="ratio ratio-16x9 bg-white rounded-4">
-                                <img src="../assets/space-cat.png" class="card-img-top img-box" alt="...">
-                            </div>
-                            <div class="description text-center pt-3">
-                                <p>Penjelasan Singkat</p>
+                                <img src="{{ asset('assets/space-cat.png') }}" class="card-img-top img-box" alt="...">
                             </div>
                         </div>
                         <div class="card-body">
                             <p class="card-text pt-lg-2 pt-md-1 text-center text-light">
-                                {{ $nama }}
+                                {{ $kode_game->nama }}
                             </p>
                         </div>
                     </div>
@@ -49,17 +46,19 @@
 
                 <!-- redeem code -->
                 <div class="col-6 mt-4">
-                    <form>
+                    <form method="POST" action="/submitcode/{{ auth()->user()->id }}">
+                        @csrf
                         <div class="form-group">
                             <div class="mb-3">
                                 <label for="code-redeem" class="form-label text-white">CODE :</label>
-                                <input type="text" id="code-redeem" class="input-control" placeholder="___">
+                                <input type="text" name="code" value="" id="code-redeem" class="input-control" placeholder="___">
+                                <input type="text" name="nomor" value="{{ $kode_game->no }}" id="code-redeem" style="display: none" class="input-control" placeholder="___">
                             </div>
                         </div>
                         <div class="d-flex justify-content-center">
                             <!-- Button trigger modal -->>
-                            <button type="button" class="btn btn-redeem" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop">
+                            <button type="submit" class="btn btn-redeem" data-bs-toggle="modal"
+                                data-bs-target=".bd-example-modal-sm{{ $kode_game->code }}">
                                 <strong>REDEEM</strong>
                             </button>
                         </div>

@@ -19,9 +19,9 @@
             {{ session('error') }}
           </div>
           @endif
-          <div class="container" ng-app="formvalid">
-            <div class="panel" data-ng-controller="validationCtrl">
-            <div class="panel-heading border">    
+          <div class="container">
+            <div class="container" ng-app="formvalid">
+            <div class="panel" data-ng-controller="validationCtrl">    
             </div>
           <div class="panel-body">
                 <table class=" table-responsive table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt">
@@ -30,17 +30,6 @@
                     <th>No</th>
                     <th>Nama Lengkap</th>
                     <th>Nama Singkat</th>
-                    <th>visi </th>
-                    <th>misi</th>
-                    <th>pembina</th>
-                    <th>Ketua Umum</th>
-                    <th>Dies Natalis</th>
-                    <th>Logo</th>
-                    <th>Filosofi Logo</th>
-                    <th>QR-Code</th>
-                    <th>Dokumentasi1</th>
-                    <th>Dokumentasi2</th>
-                    <th>Dokumentasi3</th>
                     <th>More</th>
                   </tr>
                 </thead>
@@ -50,17 +39,7 @@
                     <td>{{$loop->iteration}}</td>
                     <td>{{ $ukm->namaLengkap}}</td>
                     <td>{{ $ukm->namaSingkat}}</td>
-                    <td>{{ $ukm->visi}}</td>
-                    <td>{{ $ukm->misi}}</td>
-                    <td>{{ $ukm->pembina}}</td>
-                    <td>{{ $ukm->ketuaUmum}}</td>
-                    <td>{{ $ukm->tahunBerdiri}}</td>
-                    <td><img src=" #" widht="100" height="100"/></td>
-                    <td>{{ $ukm->filosofiLogo}}</td>
-                    <td>aw32#$@aiwjd543</td>
-                    <td><img src=" #" widht="100" height="100"/></td>
-                    <td><img src=" #" widht="100" height="100"/></td>
-                    <td><img src=" #" widht="100" height="100"/></td>
+                 
                     <td class="manage-row">
                       <a href="{{ route('adminUkm.edit',$ukm->id) }}" class="edit-button">
                         <i class="fa-solid fa-marker"></i>

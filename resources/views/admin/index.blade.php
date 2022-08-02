@@ -8,7 +8,7 @@
 <!-- MAIN CONTENT -->
 
     <!--Dashboard-->
-    <div class="col-xl-12 col-lg-12 form-wrapper tabcontents" id="dashboard" >
+    <div class="col-xl-12 col-lg-12 form-wrapper" id="dashboard" >
       <div class="row">
         <div class="col-md">
           <div class="widget-stat card" style="background: #FF6565;">
@@ -16,7 +16,7 @@
               <div class="media">
               <div class="media-body text-white text-end">
                 <p class="mb-1">Total Mahasiswa</p>
-                <h3 class="text-white">5451</h3>
+                <h3 class="text-white">{{ $totalMaba }}</h3>
               </div>
             </div>
           </div>
@@ -28,7 +28,7 @@
             <div class="media">
               <div class="media-body text-white text-end">
                 <p class="mb-1">Total Panitia</p>
-                <h3 class="text-white">984</h3>
+                <h3 class="text-white">{{ $totalPanitia }}</h3>
               </div>
             </div>
           </div>
@@ -40,7 +40,7 @@
             <div class="media">
               <div class="media-body text-white text-end">
                 <p class="mb-1">Total Himpunan</p>
-                <h3 class="text-white">36</h3>
+                <h3 class="text-white">{{ $totalHimpunan }}</h3>
               </div>
             </div>
           </div>
@@ -54,7 +54,7 @@
               <div class="media">
                 <div class="media-body text-white text-end">
                   <p class="mb-1">Total UKM/Komunitas</p>
-                  <h3 class="text-white">44</h3>
+                  <h3 class="text-white">{{ $totalUkm }}</h3>
                 </div>
               </div>
             </div>
@@ -66,7 +66,7 @@
               <div class="media">
                 <div class="media-body text-white text-end">
                   <p class="mb-1">Total Dapmen</p>
-                  <h3 class="text-white">383</h3>
+                  <h3 class="text-white">{{$totalDapmen }}</h3>
                 </div>
               </div>
             </div>
@@ -78,7 +78,7 @@
               <div class="media">
                 <div class="media-body text-white text-end">
                   <p class="mb-1">Total Akun</p>
-                  <h3 class="text-white">6703</h3>
+                  <h3 class="text-white">{{ $totalAkun }}</h3>
                 </div>
               </div>
             </div>

@@ -30,33 +30,36 @@ class LoginController extends Controller
 
     public function redirectTo()
     {
-
-        switch (auth()->user()->roles_id) {
+        switch(auth()->user()->roles_id){
             case 1:
-                $this->redirectTo = '/admin';
+                $this->redirectTo = '/cms-super';
                 return $this->redirectTo;
                 break;
             case 2:
-                $this->redirectTo = '/admin';
+                $this->redirectTo = '/cms-admin';
                 return $this->redirectTo;
                 break;
             case 3:
-                $this->redirectTo = '/admin';
+                $this->redirectTo = '/cms-himpunan';
                 return $this->redirectTo;
                 break;
             case 4:
-                $this->redirectTo = '/admin';
+                $this->redirectTo = '/cms-ukm';
                 return $this->redirectTo;
                 break;
             case 5:
-                $this->redirectTo = '/admin';
+                $this->redirectTo = '/cms-kedis';
                 return $this->redirectTo;
                 break;
             case 6:
-                $this->redirectTo = '/admin';
+                $this->redirectTo = '/cms-dapmen';
                 return $this->redirectTo;
                 break;
             case 7:
+                $this->redirectTo = '/beranda';
+                return $this->redirectTo;
+                break;
+            case 8:
                 $this->redirectTo = '/beranda';
                 return $this->redirectTo;
                 break;

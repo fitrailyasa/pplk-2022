@@ -39,25 +39,41 @@ class AdminProdiController extends Controller
      */
     public function store(Request $request)
     {
-        Prodi::create([
-            'namaLengkap' => $request->namaLengkap,
-            'namaSingkat' => $request->namaSingkat,
-            'visi' => $request->visi,
-            'misi' => $request->misi,
-            'deskripsi' => $request->deskripsi,
-            'kepalaProdi' => $request->kepalaProdi,
-            'akreditasi' => $request->akreditasi,
-            'tahunBerdiri' => $request->tahunBerdiri,
-            'ruangProdi' => $request->ruangProdi,
-            'jumlahMahasiswa' => $request->jumlahMahasiswa,
-            'logo' => $request->logo,
-            'prestasi1' => $request->prestasi1,
-            'prestasi2' => $request->prestasi2,
-            'prestasi3' => $request->prestasi3,
-            'jurusan_id' => $request->jurusan_id
-        ]);
+
+        Prodi::create(
+            [
+                'namaLengkap' => $request->namaLengkap,
+                'namaSingkat' => $request->namaSingkat,
+                'visi' => $request->visi,
+                'misi' => $request->misi,
+                'deskripsi' => $request->deskripsi,
+                'kepalaProdi' => $request->kepalaProdi,
+                'akreditasi' => $request->akreditasi,
+                'tahunBerdiri' => $request->tahunBerdiri,
+                'ruangProdi' => $request->ruangProdi,
+                'jumlahMahasiswa' => $request->jumlahMahasiswa,
+                'logo' => url($request->file('logo')->move('assets/logoProdi', $request->namaSingkat . '.' . $request->file('logo')->extension())),
+                'prestasi1' => $request->prestasi1,
+                'prestasi2' => $request->prestasi2,
+                'prestasi3' => $request->prestasi3,
+                'jurusan_id' => $request->jurusan_id,
+            ]
+        );
 
         return redirect('/adminProdi')->with('sukses', 'Berhasil Tambah Data!');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Prodi  $Prodi
+     * @return \Illuminate\Http\Response
+     */
+
+    public function show($id)
+    {
+        $prodi = Prodi::where('id', $id)->first();
+        return view('admin.prodi.read', compact('prodi'));
     }
 
     /**
@@ -95,13 +111,18 @@ class AdminProdiController extends Controller
                 'tahunBerdiri' => $request->tahunBerdiri,
                 'ruangProdi' => $request->ruangProdi,
                 'jumlahMahasiswa' => $request->jumlahMahasiswa,
-                'logo' => $request->logo,
+
                 'prestasi1' => $request->prestasi1,
                 'prestasi2' => $request->prestasi2,
                 'prestasi3' => $request->prestasi3,
                 'jurusan_id' => $request->jurusan_id
             ]
         );
+        if ($request->hasFile('logo')) {
+            $prodi->update([
+                'logo' => url($request->file('logo')->move('assets/logoProdi', $prodi->namaSingkat . '.' . $request->file('logo')->extension())),
+            ]);
+        }
         return redirect('/adminProdi')->with('sukses', 'Berhasil Edit Data!');
     }
 

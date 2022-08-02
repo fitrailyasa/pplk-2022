@@ -45,15 +45,27 @@ class AdminHimpunanController extends Controller
             'visi' => $request->visi,
             'misi' => $request->misi,
             'deskripsi' => $request->deskripsi,
-            'kodeWarna' => $request->kodeWarna,
             'pembina' => $request->pembina,
             'ketuaHimpunan' => $request->ketuaHimpunan,
             'tahunBerdiri' => $request->tahunBerdiri,
-            'logo' => $request->logo,
+            'logo'  => url($request->file('logo')->move('assets/himpunan', $request->namaSingkat . '.' . $request->file('logo')->extension())),
             'filosofiLogo' => $request->filosofiLogo
         ]);
 
         return redirect('/adminHimpunan')->with('sukses', 'Berhasil Tambah Data!');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\himpunan $himpunan
+     * @return \Illuminate\Http\Response
+     */
+
+    public function show($id)
+    {
+        $himpunan = Himpunan::where('id', $id)->first();
+        return view('admin.himpunan.read', compact('himpunan'));
     }
 
     /**
@@ -76,8 +88,9 @@ class AdminHimpunanController extends Controller
      * @param  \App\Models\himpuan $himpunan
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Himpunan $himpunan)
+    public function update(Request $request, $id)
     {
+        $himpunan = Himpunan::where('id', $id)->first();
         $himpunan->update(
             [
                 'namaLengkap' => $request->namaLengkap,
@@ -85,14 +98,18 @@ class AdminHimpunanController extends Controller
                 'visi' => $request->visi,
                 'misi' => $request->misi,
                 'deskripsi' => $request->deskripsi,
-                'kodeWarna' => $request->kodeWarna,
                 'pembina' => $request->pembina,
                 'ketuaHimpunan' => $request->ketuaHimpunan,
                 'tahunBerdiri' => $request->tahunBerdiri,
-                'logo' => $request->logo,
                 'filosofiLogo' => $request->filosofiLogo
             ]
         );
+        if ($request->hasFile('logo'))
+           {
+            $himpunan->update([
+                'logo' => url($request->file('logo')->move('assets/himpunan', $himpunan->namaSingkat . '.' . $request->file('logo')->extension())),
+            ]);
+        }
         return redirect('/adminHimpunan')->with('sukses', 'Berhasil Edit Data!');
     }
 
