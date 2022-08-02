@@ -41,13 +41,16 @@
                         <div class="col-auto">
                             <p class="card rounded-4" id="box-group"><i class="fa-solid fa-chess-queen"></i></p>
                         </div>
+                        @foreach ($juara1 as $g )
                         <div class="col-auto user-info">
-                            <p>Kelompok 82</p>
+                            <p>Kelompok {{ $g->kelompok }}</p>
                             <p>Peringkat 1</p>
                         </div>
+
                         <div class="col-auto d-flex">
-                            <p style="font-size:1.3rem; text-indent: 10px; color: azure;" class="points-title"><i style="color:yellow" class="fa-solid fa-coins"></i>  11563 Poin</p>
+                            <p style="font-size:1.3rem; text-indent: 10px; color: azure;" class="points-title"><i style="color:yellow" class="fa-solid fa-coins"></i>  {{ $g->score }} Poin</p>
                         </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
