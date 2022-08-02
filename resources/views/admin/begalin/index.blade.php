@@ -33,6 +33,7 @@
                     <th>No</th>
                     <th>judul</th>
                     <th>isi</th>
+                    <th>More</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -42,6 +43,9 @@
                     <td>{{ $begalin->judul }}</td>
                     <td>{{ $begalin->isi }}</td>
                     <td class="manage-row">
+                      <a href="{{ route('adminBegalin.show',$begalin->id) }}" class="edit-button">
+                        <i class="fa-solid fa-eye"></i>
+                      </a>
                       <a href="{{ route('adminBegalin.edit',$begalin->id) }}" class="edit-button">
                         <i class="fa-solid fa-marker"></i>
                       </a>

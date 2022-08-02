@@ -139,32 +139,6 @@
           </li>
           <!--./User-->
 
-          <!--QR-Code-->
-          <li class="nav-item">
-            <a class="nav-link tabitem">
-              <i class="nav-icon fa-solid fa-users-viewfinder"></i>
-              <p>
-                QR-Code
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a onclick="openCMS(event, 'QR-Code-panitia')" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>QR-Code Panitia</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a onclick="openCMS(event, 'QR-Code-maba')" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>QR-Code Maba</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <!--./QR-Code-->
-
           <!--UPT ITERA-->
           <li class="nav-item">
             <a class="nav-link tabitem">
@@ -490,33 +464,6 @@
           <!--./Scanner-->
 
           @elseif(auth()->user()->roles_id == 2)
-
-          <!--QR-Code-->
-          <li class="nav-item">
-            <a class="nav-link tabitem">
-              <i class="nav-icon fa-solid fa-users-viewfinder"></i>
-              <p>
-                QR-Code
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a onclick="openCMS(event, 'QR-Code-panitia')" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>QR-Code Panitia</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a onclick="openCMS(event, 'QR-Code-maba')" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>QR-Code Maba</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <!--./QR-Code-->
-
           <!--UPT ITERA-->
           <li class="nav-item">
             <a class="nav-link tabitem">
@@ -543,58 +490,6 @@
           </li>
           <!--./UPT ITERA-->
 
-          <!--Prodi-->
-          <li class="nav-item">
-            <a class="nav-link tabitem">
-              <i class="nav-icon fa-solid fa-satellite"></i>
-              <p>
-                Prodi
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{ route('adminProdi.create') }}" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Tambah Prodi</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{ route('adminProdi.index') }}" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Kelola Data Prodi</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <!--./Prodi-->
-
-          <!--Himpunan-->
-          <li class="nav-item">
-            <a class="nav-link tabitem">
-              <i class="nav-icon fa-solid fa-people-roof"></i>
-              <p>
-                Himpunan
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{ route('adminHimpunan.create') }}" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Tambah Himpunan</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{ route('adminHimpunan.index') }}" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p style="font-size:0.9rem;">Kelola Data Himpunan</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <!--./Himpunan-->
-
           <!--KM ITERA-->
           <li class="nav-item">
             <a class="nav-link tabitem">
@@ -620,32 +515,6 @@
             </ul>
           </li>
           <!--./KM ITERA-->
-
-          <!--UKM/Komunitas-->
-          <li class="nav-item">
-            <a class="nav-link tabitem">
-              <i class="nav-icon fa-solid fa-people-carry-box"></i>
-              <p>
-                UKM/Komunitas
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{ route('adminUkm.create') }}" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p style="font-size:0.8rem;">Tambah UKM/Komunitas</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{ route('adminUkm.index') }}" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p style="font-size:0.8rem;">Kelola UKM/Komunitas</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <!--./UKM/Komunitas-->
 
           <!--Funfact-->
           <li class="nav-item">
@@ -810,7 +679,6 @@
           <!--./Booklet-->
 
           @elseif(auth()->user()->roles_id == 3)
-
           <!--Prodi-->
           <li class="nav-item">
             <a class="nav-link tabitem">
@@ -864,7 +732,6 @@
           <!--./Himpunan-->
 
           @elseif(auth()->user()->roles_id == 4)
-
           <!--UKM/Komunitas-->
           <li class="nav-item">
             <a class="nav-link tabitem">
@@ -903,7 +770,6 @@
           <!--./Scanner-->
 
           @elseif(auth()->user()->roles_id == 5)
-
           <!--Scanner-->
           <li class="nav-item">
             <a href="/scanner" class="nav-link">
@@ -916,7 +782,6 @@
           <!--./Scanner-->
 
           @elseif(auth()->user()->roles_id == 6)
-
           <!--Scanner-->
           <li class="nav-item">
             <a href="/presensiMaba" class="nav-link">
