@@ -179,45 +179,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/prodi', function () { return view('client.jurusan.prodi'); });
     Route::get('/detail-prodi',)->name('detailprodi');
 
-
-    Route::get('/beranda', [ClientBegalinController::class, 'index']); //DEFAULT
-
-    Route::get('/detail-himpunan', function () {        // ===> Detail himpunan
-        return view('client.ormawa.detail-himpunan');
-    });
-    Route::get('/ukm', function () {                    // ===> Unit kegiatan mahasiswa UKM
-        return view('client.ormawa.ukm');
-    });
-    Route::get('/himpunan', function () {               // ===> himpunan
-        return view('client.ormawa.himpunan');
-    });
-    Route::get('/prodi', function () {                  // ===> prodi
-        return view('client.jurusan.prodi');
-    });
-    Route::get('/booklet', function () {              // ===> booklet
-        return view('client.booklet');
-    });
-    Route::get('/div-pplk', function () {             // ===> divisi pplk
-        return view('client.div-pplk');
-    });
-    // Route::get('/form-keluhan', function () {         // ===> form keluhan
-    //     return view('client.form-keluhan');
-    // });
-    Route::get('/pplk', function () {                 // ===> pplk
-        return view('client.pplk');
-    });
-
-    Route::get('/redeem-failed', function () {        // ===> redeem code failed
-        return view('client.games.redeem-code.failed');
-    });
-    //Route::get('/redeem', function () {               // ===> redeem page
-    //    return view('client.games.redeem-code.redeem');
-    //});
-
     // GAMES
     Route::get('/game-home', function () { return view('client.games.games'); });
     Route::get('/card-list', [ClientKodeGameController::class, 'index']);
-
     Route::get('/redeem/{no}', [ClientKodeGameController::class, 'show']);
     Route::get('/redeem-failed', function () { return view('client.games.redeem-code.failed'); });
     Route::get('/redeem-success', function () { return view('client.games.redeem-code.success'); });
