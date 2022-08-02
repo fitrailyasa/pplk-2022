@@ -113,32 +113,6 @@
           <!--./Beranda-->
 
           @if(auth()->user()->roles_id == 1)
-          <!--User-->
-          <li class="nav-item">
-            <a class="nav-link tabitem">
-              <i class="nav-icon fa-solid fa-user-astronaut"></i>
-              <p>
-                User
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{ route('adminUser.create') }}" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Tambah User</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{ route('adminUser.index') }}" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Kelola Data User</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <!--./User-->
-
           <!--UPT ITERA-->
           <li class="nav-item">
             <a class="nav-link tabitem">
@@ -710,6 +684,32 @@
           <!--./Scanner-->
 
           @elseif(auth()->user()->roles_id == 6)
+          <!--User-->
+          <li class="nav-item">
+            <a class="nav-link tabitem">
+              <i class="nav-icon fa-solid fa-user-astronaut"></i>
+              <p>
+                User
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('adminUser.create') }}" class="nav-link tablinks">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tambah User</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('adminUser.index') }}" class="nav-link tablinks">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Kelola Data User</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!--./User-->
+          
           <!--Scanner-->
           <li class="nav-item">
             <a href="/presensiMaba" class="nav-link">
