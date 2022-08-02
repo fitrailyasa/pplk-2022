@@ -225,3 +225,4 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/tebak-bangunan-game', function () { return view('client.games.tebak-bangunan.game'); });
     Route::post('/submitcode', [ClientKodeGameController::class, 'sumscore'])->name('sumscore');
 
+ });
