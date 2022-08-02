@@ -29,11 +29,6 @@
             <textarea class="form-control custom-txt-area" placeholder="Artikel Lengkap" name="isi" id="lengkap" value="{{  $begalin->isi  }}" disabled>{{ $begalin->isi }}</textarea>
           </div>
         </div>
-        <div class="mb-3 row">
-          <div class="col-sm-9">
-            <button type="submit" class="btn btn-primary ">Ubah</button>
-          </div>
-        </div>
         </form>
       </div>
     </div>

@@ -22,8 +22,8 @@
             {{ session('error') }}
           </div>
           @endif
-          <div class="container" ng-app="formvalid">
-            <div class="panel" data-ng-controller="validationCtrl">
+          <div class="container">
+            <div class="panel">
             <div class="panel-heading border">    
             </div>
           <div class="panel-body">
@@ -32,7 +32,6 @@
                   <tr>
                     <th>No</th>
                     <th>judul</th>
-                    <th>isi</th>
                     <th>More</th>
                   </tr>
                 </thead>
@@ -41,7 +40,6 @@
                   <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $begalin->judul }}</td>
-                    <td>{{ $begalin->isi }}</td>
                     <td class="manage-row">
                       <a href="{{ route('adminBegalin.show',$begalin->id) }}" class="edit-button">
                         <i class="fa-solid fa-eye"></i>

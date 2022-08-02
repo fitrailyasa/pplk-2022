@@ -31,14 +31,6 @@
                     <th>No</th>
                     <th>Nama Lengkap</th>
                     <th>Nama Singkat</th>
-                    <th>Visi</th>
-                    <th>Misi</th>
-                    <th>Deskripsi</th>
-                    <th>Kepala Prodi</th>
-                    <th>akreditasi</th>
-                    <th>tahun Berdiri</th>
-                    <th>jumlah Mahasiswa</th>
-                    <th>diagram alir</th>
                     <th>More</th>
                 </tr>
               </thead>
@@ -48,15 +40,10 @@
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $prodi->namaLengkap }}</td>
                     <td>{{ $prodi->namaSingkat }}</td>
-                    <td>{{ $prodi->visi }}</td>
-                    <td>{{ $prodi->misi }}</td>
-                    <td>{{ $prodi->deskripsi }}</td>
-                    <td>{{ $prodi->kepalaProdi }}</td>
-                    <td>{{ $prodi->akreditasi }}</td>
-                    <td>{{ $prodi->tahunBerdiri }}</td>
-                    <td>{{ $prodi->jumlahMahasiswa }}</td>
-                    <td>{{ $prodi->logo }}</td>
                     <td class="manage-row">
+                    <a href="{{ route('adminProdi.show', $prodi->id) }}" class="edit-button">
+                      <i class="fa-solid fa-eye"></i>
+                    </a>
                     <a href="{{ route('adminProdi.edit', $prodi->id) }}" class="edit-button">
                       <i class="fa-solid fa-marker"></i>
                     </a>

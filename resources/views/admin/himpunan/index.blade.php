@@ -20,8 +20,8 @@
             {{ session('error') }}
           </div>
           @endif
-          <div class="container" ng-app="formvalid">
-            <div class="panel" data-ng-controller="validationCtrl">
+          <div class="container">
+            <div class="panel">
             <div class="panel-heading border">    
             </div>
           <div class="panel-body">
@@ -31,15 +31,6 @@
                     <th>No</th>
                     <th>Nama Singkat</th>
                     <th>Nama Lengkap</th>
-                    <th>Visi</th>
-                    <th>Misi</th>
-                    <th>Deskripsi</th>
-                    <th>Kode Warna</th>
-                    <th>Pembina</th>
-                    <th>Ketua Himpunan</th>
-                    <th>Logo</th>
-                    <th>Filosofi Logo</th>
-                    <th>Tahun Berdiri</th>
                     <th>More</th>
                   </tr>
                 </thead>
@@ -49,16 +40,10 @@
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $himpunan->namaSingkat }}</td>
                     <td>{{ $himpunan->namaLengkap }}</td>
-                    <td>{{ $himpunan->visi }}</td>
-                    <td>{{ $himpunan->misi }}</td>
-                    <td>{{ $himpunan->deskripsi }}</td>
-                    <td>{{ $himpunan->kodeWarna }}</td>
-                    <td>{{ $himpunan->pembina }}</td>
-                    <td>{{ $himpunan->ketuaHimpunan }}</td>
-                    <td>{{ $himpunan->logo }}</td>
-                    <td>{{ $himpunan->filosofiLogo }}</td>
-                    <td>{{ $himpunan->tahunBerdiri }}</td>
                     <td class="manage-row">
+                      <a href="{{ route('adminHimpunan.show', $himpunan->id)}}" class="edit-button">
+                        <i class="fa-solid fa-eye"></i>
+                      </a>
                       <a href="{{ route('adminHimpunan.edit', $himpunan->id)}}" class="edit-button">
                         <i class="fa-solid fa-marker"></i>
                       </a>

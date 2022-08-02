@@ -217,32 +217,6 @@
           </li>
           <!--./Himpunan-->
 
-          <!--KM ITERA-->
-          <li class="nav-item">
-            <a class="nav-link tabitem">
-              <i class="nav-icon fa-solid fa-hands-holding-circle"></i>
-              <p>
-                KM ITERA
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a onclick="openCMS(event, 'kelola-kabinet')" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Kelola Data Kabinet</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a onclick="openCMS(event, 'kelola-senat')" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Kelola Data Senat</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <!--./KM ITERA-->
-
           <!--UKM/Komunitas-->
           <li class="nav-item">
             <a class="nav-link tabitem">
@@ -385,26 +359,6 @@
           </li>
           <!--./Games-->
 
-          <!--Gform-->
-          <li class="nav-item">
-            <a class="nav-link tabitem">
-              <i class="nav-icon fa-solid fa-receipt"></i>
-              <p>
-                Link Gform
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a onclick="openCMS(event, 'kelola-gform')" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Kelola Link Gform</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <!--./Gform-->
-
           <!--Booklet-->
           <li class="nav-item">
             <a class="nav-link tabitem">
@@ -489,32 +443,6 @@
             </ul>
           </li>
           <!--./UPT ITERA-->
-
-          <!--KM ITERA-->
-          <li class="nav-item">
-            <a class="nav-link tabitem">
-              <i class="nav-icon fa-solid fa-hands-holding-circle"></i>
-              <p>
-                KM ITERA
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a onclick="openCMS(event, 'kelola-kabinet')" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Kelola Data Kabinet</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a onclick="openCMS(event, 'kelola-senat')" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Kelola Data Senat</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <!--./KM ITERA-->
 
           <!--Funfact-->
           <li class="nav-item">
@@ -631,26 +559,6 @@
             </ul>
           </li>
           <!--./Games-->
-
-          <!--Gform-->
-          <li class="nav-item">
-            <a class="nav-link tabitem">
-              <i class="nav-icon fa-solid fa-receipt"></i>
-              <p>
-                Link Gform
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a onclick="openCMS(event, 'kelola-gform')" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Kelola Link Gform</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <!--./Gform-->
 
           <!--Booklet-->
           <li class="nav-item">
@@ -770,6 +678,26 @@
           <!--./Scanner-->
 
           @elseif(auth()->user()->roles_id == 5)
+          <!--Gform-->
+          <li class="nav-item">
+            <a class="nav-link tabitem">
+              <i class="nav-icon fa-solid fa-receipt"></i>
+              <p>
+                Link Gform
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a onclick="openCMS(event, 'kelola-gform')" class="nav-link tablinks">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Kelola Link Gform</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!--./Gform-->
+
           <!--Scanner-->
           <li class="nav-item">
             <a href="/scanner" class="nav-link">
