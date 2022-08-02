@@ -39,37 +39,40 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <p class="card-text pt-lg-2 pt-md-1 text-center text-light">pohon</p>
+                            <p class="card-text pt-lg-2 pt-md-1 text-center text-light">
+                                {{ $kode_game->nama }}
+                            </p>
                         </div>
                     </div>
                 </div>
                 <!-- card choesed -->
-                
+
                 <!-- redeem code -->
                 <div class="col-6 mt-4">
-                    <form>
+                    <form method="POST" action="{{ route('sumscore') }}">
+                        @csrf
                         <div class="form-group">
                             <div class="mb-3">
                                 <label for="code-redeem" class="form-label text-white">CODE :</label>
-                                <input type="text" id="code-redeem" class="input-control" placeholder="___">
+                                <input type="text" name="code" value="{{ $kode_game->code }}" id="code-redeem" class="input-control" placeholder="___">
                             </div>
                         </div>
                         <div class="d-flex justify-content-center">
                             <!-- Button trigger modal -->>
-                            <button type="button" class="btn btn-redeem" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop">
+                            <button type="submit" class="btn btn-redeem" data-bs-toggle="modal"
+                                data-bs-target=".bd-example-modal-sm{{ $kode_game->code }}">
                                 <strong>REDEEM</strong>
                             </button>
                         </div>
                     </form>
                 </div>
                 <!-- redeem code -->
-            
+
             <!-- Vertically centered modal -->
             <!-- Modal -->
             <!-- Button trigger modal -->
-            
-            
+
+
             <!-- Modal -->
             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
             tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">

@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Client;
 
 use App\Models\Jurusan;
 use App\Http\Requests\StoreJurusanRequest;
+use App\Http\Controllers\Client\Controller;
 use App\Http\Requests\UpdateJurusanRequest;
+
 
 class ClientJurusanController extends Controller
 {
@@ -77,7 +79,7 @@ class ClientJurusanController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remophp ve the specified resource from storage.
      *
      * @param  \App\Models\Jurusan  $jurusan
      * @return \Illuminate\Http\Response

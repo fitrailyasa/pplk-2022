@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers;
+use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use Illuminate\Support\Facades\Auth;
 
-class LoginController 
+class LoginController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
@@ -21,45 +20,39 @@ class LoginController
     */
 
     use AuthenticatesUsers;
-    
+
     /**
-     * Show the application's login form.
+     * Where to redirect users after login.
      *
-     * @return \Illuminate\View\View
+     * @var string
      */
-    protected $redirectTo;
-    
-    public function showLoginForm()
-    {
-        return view('login');
-    }
-    
+    /* protected $redirectTo = RouteServiceProvider::HOME; */
+
     public function redirectTo()
     {
-        
         switch(auth()->user()->roles_id){
             case 1:
-                $this->redirectTo = '/superAdmin';
+                $this->redirectTo = '/cms-super';
                 return $this->redirectTo;
                 break;
             case 2:
-                $this->redirectTo = '/admin';
+                $this->redirectTo = '/cms-admin';
                 return $this->redirectTo;
                 break;
             case 3:
-                $this->redirectTo = '/himpunan';
+                $this->redirectTo = '/cms-himpunan';
                 return $this->redirectTo;
                 break;
             case 4:
-                $this->redirectTo = '/ukm';
+                $this->redirectTo = '/cms-ukm';
                 return $this->redirectTo;
                 break;
             case 5:
-                $this->redirectTo = '/kedisiplinan';
+                $this->redirectTo = '/cms-kedis';
                 return $this->redirectTo;
                 break;
             case 6:
-                $this->redirectTo = '/dapmen';
+                $this->redirectTo = '/cms-dapmen';
                 return $this->redirectTo;
                 break;
             case 7:
@@ -74,19 +67,16 @@ class LoginController
                 $this->redirectTo = '/beranda';
                 return $this->redirectTo;
         }
-        
-       
     }
-    
-   
+
 
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    // public function __construct()
-    // {
-    //     $this->middleware('guest')->except('logout');
-    // }
+    public function __construct()
+    {
+        $this->middleware('guest')->except('logout');
+    }
 }

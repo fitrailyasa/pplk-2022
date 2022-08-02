@@ -5,6 +5,10 @@ namespace App\Http\Controllers\Client;
 use App\Models\Kode_game;
 use App\Http\Requests\StoreKode_gameRequest;
 use App\Http\Requests\UpdateKode_gameRequest;
+use App\Models\Leaderboard;
+use App\Models\Table_score;
+use Illuminate\Http\Request;
+
 
 class ClientKodeGameController extends Controller
 {
@@ -15,8 +19,8 @@ class ClientKodeGameController extends Controller
      */
     public function index()
     {
-        $kode_games = Kode_game::get();
-        return view('client.kode_game.index', compact('kode_games'));
+        $kode_games = Kode_game::all();
+        return view('client.games.redeem-code.card-list', compact('kode_games'));
     }
 
     /**
@@ -29,6 +33,34 @@ class ClientKodeGameController extends Controller
         //
     }
 
+
+    public function sumscore(Request $request){
+
+        $kode=Kode_game::where('kode',$request->code)->first();
+        $kelompok=auth()->user()->kelompok;
+        $token="$kelompok"."$kode->kode";
+
+        $check = Table_score::where('token', $token)->get();
+        $checkCount = $check->count();
+
+        if($checkCount<1){
+            Table_score::create([
+                'token' => $token,
+            ]);
+
+            $current_score=Leaderboard::where('id',auth()->user()->id)->value('score');
+            $current_score=$current_score+$kode->nilai;
+            Leaderboard::where('id','1')->update(['score'=>$current_score]);
+        }
+        else{
+            return 'Kode sudah pernah dimasukan';
+        }
+
+
+
+
+
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -44,11 +76,16 @@ class ClientKodeGameController extends Controller
      * Display the specified resource.
      *
      * @param  \App\Models\Kode_game  $kode_game
+     * @param int $no
      * @return \Illuminate\Http\Response
      */
-    public function show(Kode_game $kode_game)
+    public function show(Kode_game $kode_game, $no)
     {
-        //
+        $kode_game = Kode_game::where('no', $no)->first();
+
+        // $data = $kode_game->select('nama')->where('no', '=', $no)->get();
+
+        return view('client.games.redeem-code.redeem', compact('kode_game'));
     }
 
     /**
