@@ -9,8 +9,7 @@ use App\Http\Middleware\Himpunan;
 use App\Http\Middleware\Ukm;
 use App\Http\Middleware\Kedisiplinan;
 use App\Http\Middleware\DapMen;
-use App\Http\Middleware\Staff;
-use App\Http\Middleware\Maba;
+
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\AdminBegalinController;
 use App\Http\Controllers\Admin\AdminController;
@@ -21,6 +20,8 @@ use App\Http\Controllers\Admin\AdminUkmController;
 use App\Http\Controllers\Admin\AdminUptController;
 use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\Admin\AdminProdiController;
+use App\Http\Controllers\Admin\DapmenUserController;
+
 use App\Http\Controllers\Client\ClientBegalinController;
 use App\Http\Controllers\Client\ClientBiodataController;
 use App\Http\Controllers\Client\ClientJurusanController;
@@ -114,7 +115,8 @@ Route::middleware([Kedisiplinan::class])->group(function () {
 // CMS DAPMEN
 Route::middleware([DapMen::class])->group(function () {
   Route::get('/cms-dapmen', [AdminController::class, 'index'])->name('index');
-  Route::resource('adminUser', AdminUserController::class);
+  Route::resource('dapmenUser', DapmenUserController::class);
+
 
   // SCANNER MABA
   Route::get('/presensiMaba', [ClientScannerController::class, 'indexMaba'])->name('indexMaba');
