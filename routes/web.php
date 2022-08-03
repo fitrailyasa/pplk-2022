@@ -1,40 +1,41 @@
 <?php
 
-use Illuminate\Routing\Controller;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Route;
-use App\Http\Middleware\SuperAdmin;
-use App\Http\Middleware\Admin;
-use App\Http\Middleware\Himpunan;
 use App\Http\Middleware\Ukm;
-use App\Http\Middleware\Kedisiplinan;
-use App\Http\Middleware\DapMen;
-use App\Http\Middleware\Staff;
 use App\Http\Middleware\Maba;
+use App\Http\Middleware\Admin;
+use App\Http\Middleware\Staff;
+use App\Http\Middleware\DapMen;
+use App\Http\Middleware\Himpunan;
+use Illuminate\Routing\Controller;
+use App\Http\Middleware\SuperAdmin;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Middleware\Kedisiplinan;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\Admin\AdminBegalinController;
 use App\Http\Controllers\Admin\AdminController;
-use App\Http\Controllers\Admin\AdminFunfactController;
-use App\Http\Controllers\Admin\AdminHimpunanController;
-use App\Http\Controllers\Admin\AdminKamusGaulController;
 use App\Http\Controllers\Admin\AdminUkmController;
 use App\Http\Controllers\Admin\AdminUptController;
 use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\Admin\AdminProdiController;
+use App\Http\Controllers\Client\ClientUkmController;
+use App\Http\Controllers\Client\ClientUptController;
+use App\Http\Controllers\Admin\AdminBegalinController;
+use App\Http\Controllers\Admin\AdminFunfactController;
+use App\Http\Controllers\Client\ClientProdiController;
+use App\Http\Controllers\Admin\AdminHimpunanController;
+use App\Http\Controllers\Admin\AdminKamusGaulController;
 use App\Http\Controllers\Client\ClientBegalinController;
 use App\Http\Controllers\Client\ClientBiodataController;
 use App\Http\Controllers\Client\ClientJurusanController;
 use App\Http\Controllers\Client\ClientKabinetController;
-use App\Http\Controllers\Client\ClientKamusgaulController;
-use App\Http\Controllers\Client\ClientKodeGameController;
 use App\Http\Controllers\Client\ClientKeluhanController;
+use App\Http\Controllers\Client\ClientScannerController;
 
 use App\Http\Controllers\Client\ClientHimpunanController;
-use App\Http\Controllers\Client\ClientUkmController;
-
-use App\Http\Controllers\Client\ClientProdiController;
-use App\Http\Controllers\Client\ClientScannerController;
-use App\Http\Controllers\Client\ClientUptController;
+use App\Http\Controllers\Client\ClientKodeGameController;
+use App\Http\Controllers\Client\ClientKamusgaulController;
+use App\Http\Controllers\Client\ClientGameTebakBangunanController;
 
 
 
@@ -240,12 +241,16 @@ Route::middleware(['auth'])->group(function () {
   Route::get('/redeem-success', function () {       // ===> redeem code success
     return view('client.games.redeem-code.success');
   });
-  Route::get('/tebak-bangunan', function () {       // ===> tebak bangunan home
-    return view('client.games.tebak-bangunan.home');
-  });
-  Route::get('/tebak-bangunan-game', function () {  // ===> tebak bangunan game
-    return view('client.games.tebak-bangunan.game');
-  });
+
+
+  //TEBAK BANGUNAN
+  Route::get('/tebak-bangunan',[ClientGameTebakBangunanController::class,'index']);     // ===> tebak bangunan home
+  Route::get('/tebak-bangunan-game/{id}',[ClientGameTebakBangunanController::class,'show']);
+
+
+
+
+
   Route::get('/game-home', function () {            // ===> home games
     return view('client.games.games');
   });

@@ -39,18 +39,18 @@
     </div>
     <div class="row justify-content-center">
       <div class="col-6 col-sm-6 col-md-3 col-lg-3 d-flex justify-content-center align-items-start p-0 my-2">
-        <button type="button" class="rounded b-rat px-1 d-flex align-items-center justify-content-center fs-3 fw-bolder chc-1 text">Gedung E</button>
+        <button type="button" class="rounded b-rat px-1 d-flex align-items-center justify-content-center "><span class="chc-rest fs-3 fw-bold">{{ $soal->jawabanA }}</span></button>
       </div>
       <div class="col-6 col-sm-6 col-md-3 col-lg-3 d-flex justify-content-center align-items-start p-0 my-2">
-        <button type="button" class="rounded b-rat px-1 d-flex align-items-center justify-content-center bg-white"><span class="chc-rest fs-3 fw-bold">Gedung E</span></button>
+        <button type="button" class="rounded b-rat px-1 d-flex align-items-center justify-content-center bg-white"><span class="chc-rest fs-3 fw-bold">{{ $soal->jawabanB }}</span></button>
       </div>
     </div>
     <div class="row justify-content-center">
       <div class="col-6 col-sm-6 col-md-3 col-lg-3 d-flex justify-content-center align-items-start p-0 my-2">
-        <button type="button" class="rounded b-rat px-1 d-flex align-items-center justify-content-center bg-white"><span class="chc-rest fs-3 fw-bold">Gedung E</span></button>
+        <button type="button" class="rounded b-rat px-1 d-flex align-items-center justify-content-center bg-white"><span class="chc-rest fs-3 fw-bold">{{ $soal->jawabanC }}</span></button>
       </div>
       <div class="col-6 col-sm-6 col-md-3 col-lg-3 d-flex justify-content-center align-items-start p-0 my-2">
-        <button type="button" class="rounded b-rat px-1 d-flex align-items-center justify-content-center bg-white"><span class="chc-rest fs-3 fw-bold">Gedung E</span></button>
+        <button type="button" class="rounded b-rat px-1 d-flex align-items-center justify-content-center bg-white"><span class="chc-rest fs-3 fw-bold">{{ $soal->jawabanD }}</span></button>
       </div>
     </div>
     <div class="row justify-content-center">
