@@ -5,6 +5,7 @@ use Illuminate\Support\HtmlString;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use SimpleSoftwareIO\QrCode\Facades\Storage;
 use App\Models\User;
+use App\Models\Prodi;
 use Illuminate\Http\Request;
 use App\Http\Requests\Admin\StoreClientRequest;
 use App\Http\Requests\Client\UpdateBiodataRequest;
@@ -24,10 +25,17 @@ class ClientBiodataController extends Controller
         return view('client.biodata.biodata', compact('biodata'));
     }
 
+    public function ViewRegister()
+    {
+        $prodis = Prodi::all();
+        return view('registrasi', compact('prodis'));
+    }
+
     public function indexEditBio()
     {
+        $prodis = Prodi::all();
         $viewbiodata = User::where('id', auth()->user()->id)->firstOrFail();;
-        return view('client.biodata.edit-biodata', compact('viewbiodata'));
+        return view('client.biodata.edit-biodata', compact('viewbiodata','prodis'));
     }
 
     /**
@@ -85,7 +93,7 @@ class ClientBiodataController extends Controller
     public function editProfil($id)
     {
         $viewbiodata = User::find($id);
-        return view('Client.biodata.edit-biodata', compact('viewbiodata'));
+        return view('Client.biodata.edit-biodata', compact('viewbiodata',));
     }
 
     public function editBiodata($id)
@@ -183,30 +191,30 @@ public function updateBiodata(Request $request, $id){
         //
     }
 
-    public function hitunguser(){
-        $user = User::where('id', '<' , 289)->get();
-        $count = $user->count();
-        return $count;
-    }
+    // public function hitunguser(){
+    //     $user = User::where('id', '<' , 289)->get();
+    //     $count = $user->count();
+    //     return $count;
+    // }
 
-    public function generateAllQrCode()
-    {
-        $user = User::all();
-        $count = $user->count();
-        for($n=1;$n<=$count;$n++){
-            $date = Date("m.d.y");
-            $time = microtime(true);
-            $qrCode = "$date"."$time"."$date"."$date"."$date"."$date"."$time";
-            $user = User::where('id',$n)->first();
-            // $user->qrCode = 'kosong';
-            $user->update(['qrCode' => $qrCode]);
-            QrCode::format('svg')->margin(2)->size(200)->errorCorrection('H')->generate("$qrCode", "../public/assets/qrcode/"."$qrCode");
-        }
-            echo "<script>
-            alert(' Semuaa Data update');
-            window.location.href='/'
-             </script>";
-    }
+    // public function generateAllQrCode()
+    // {
+    //     $user = User::all();
+    //     $count = $user->count();
+    //     for($n=1;$n<=$count;$n++){
+    //         $date = Date("m.d.y");
+    //         $time = microtime(true);
+    //         $qrCode = "$date"."$time"."$date"."$date"."$date"."$date"."$time";
+    //         $user = User::where('id',$n)->first();
+    //         // $user->qrCode = 'kosong';
+    //         $user->update(['qrCode' => $qrCode]);
+    //         QrCode::format('svg')->margin(2)->size(200)->errorCorrection('H')->generate("$qrCode", "../public/assets/qrcode/"."$qrCode");
+    //     }
+    //         echo "<script>
+    //         alert(' Semuaa Data update');
+    //         window.location.href='/'
+    //          </script>";
+    // }
 }
 
 

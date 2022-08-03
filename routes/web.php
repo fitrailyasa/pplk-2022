@@ -47,7 +47,7 @@ use App\Http\Controllers\Leaderboardcontroller;
 */
 
 // REGISTRASI
-Route::get('/registrasi', function () { return view('registrasi'); });
+Route::get('/registrasi', [ClientBiodataController::class, 'ViewRegister'])->name('ViewRegister');
 Route::post('/registrasi/{create}', [ClientBiodataController::class, 'store'])->name('regist_staff');
 
 // LOGIN
