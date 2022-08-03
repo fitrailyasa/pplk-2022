@@ -24,6 +24,8 @@ use App\Http\Controllers\Client\ClientKamusgaulController;
 use App\Http\Controllers\Client\ClientScannerController;
 use App\Http\Controllers\Client\ClientKodeGameController;
 use App\Http\Controllers\Client\ClientKeluhanController;
+use App\Http\Controllers\Client\ClientHimpunanController;
+use App\Http\Controllers\Client\ClientUkmController;
 
 /*
 |--------------------------------------------------------------------------
@@ -151,19 +153,23 @@ Route::middleware(['auth'])->group(function () {
 
   Route::get('/card-list', [ClientKodeGameController::class, 'index']); //Redeem card-list
 
-  Route::get('/prodi', [ClientProdiController::class, 'index']); // ===> prodi
+  Route::get('/prodi', [ClientProdiController::class, 'index'])->name('prodis'); // ===> prodi
+  Route::get('/himpunan', [ClientHimpunanController::class, 'index'])->name('himpunans'); // ===> himpunan
+  Route::get('/ukm', [ClientUkmController::class, 'index'])->name('ukms'); // ===> ukm
 
   Route::get('/detail-prodi/{id}', [ClientProdiController::class, 'show'])->name('detailProdi');
+  Route::get('/detail-himpunan/{id}', [ClientHimpunanController::class, 'show'])->name('detailHimpunan');
+  Route::get('/detail-ukm/{id}', [ClientUkmController::class, 'show'])->name('detailUkm');
 
-  Route::get('/detail-himpunan', function () {        // ===> Detail himpunan
-    return view('client.ormawa.detail-himpunan');
-  });
-  Route::get('/ukm', function () {                    // ===> Unit kegiatan mahasiswa UKM
-    return view('client.ormawa.ukm');
-  });
-  Route::get('/himpunan', function () {               // ===> himpunan
-    return view('client.ormawa.himpunan');
-  });
+  // Route::get('/detail-himpunan', function () {        // ===> Detail himpunan
+  //   return view('client.ormawa.detail-himpunan');
+  // });
+  // Route::get('/ukm', function () {                    // ===> Unit kegiatan mahasiswa UKM
+  //   return view('client.ormawa.ukm');
+  // });
+  // Route::get('/himpunan', function () {               // ===> himpunan
+  //   return view('client.ormawa.himpunan');
+  // });
   Route::get('/booklet', function () {              // ===> booklet
     return view('client.booklet');
   });

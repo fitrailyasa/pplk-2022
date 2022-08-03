@@ -20,9 +20,7 @@
     <!-- CONTENT -->
     <!-- Landing Page -->
     <div id="landingPageJurusan" class="ratio ratio-16x9">
-        
     </div>
-
     <!-- nav&tabs -->
     <!-- pills -->
     <ul class="nav nav-pills mt-4 flex-nowrap  justify-content-center" id="pills-tab" role="tablist">
@@ -89,7 +87,7 @@
                 @foreach($prodis as $prodi)
                 @if($prodi->jurusan_id == 3)
                 <a style="text-decoration:none;" href="/detail-prodi/{{ $prodi->id }}">
-                <button type="button" class="btn my-4 prodi-card">
+                    <button type="button" href="/detail-prodi/{{ $prodi->id }}" class="btn my-4 prodi-card">
                     <div class="card rounded-5">
                         <img src="{{ asset('assets/logoProdi/'. $prodi->namaSingkat.'.svg') }}" class="card-img-top rounded-5" alt="...">
                         <div class="card-body">
@@ -110,8 +108,8 @@
             <div class="container-fluid d-flex flex-wrap justify-content-around" id="terakhir">
                 @foreach($prodis as $prodi)
                 @if($prodi->jurusan_id == 1)
-                <a style="text-decoration:none;" href="/detail-prodi/{{ $prodi->id }}">
-                <button type="button" class="btn my-4 prodi-card">
+                {{-- <a style="text-decoration:none;" href="/detail-prodi/{{ $prodi->id }}"> --}}
+                <button type="button" href="/detail-prodi/{{ $prodi->id }}" class="btn my-4 prodi-card">
                     <div class="card rounded-5">
                         <img src="{{ asset('assets/logoProdi/'. $prodi->namaSingkat.'.svg') }}" class="card-img-top rounded-5" alt="...">
                         <div class="card-body">
@@ -120,7 +118,7 @@
                         </div>
                     </div>
                 </button>
-                </a>
+                {{-- </a> --}}
                 @endif
                 @endforeach
         </div>
@@ -132,8 +130,8 @@
             <div class="container-fluid d-flex flex-wrap justify-content-around" id="terakhir">
                 @foreach($prodis as $prodi)
                 @if($prodi->jurusan_id == 2)
-                <a style="text-decoration:none;" href="/detail-prodi/{{ $prodi->id }}">
-                <button type="button" class="btn my-4 prodi-card">
+                {{-- <a style="text-decoration:none;" href="/detail-prodi/{{ $prodi->id }}"> --}}
+                <button type="button" href="/detail-prodi/{{ $prodi->id }}" class="btn my-4 prodi-card">
                     <div class="card rounded-5">
                         <img src="{{ asset('assets/logoProdi/'. $prodi->namaSingkat.'.svg') }}" class="card-img-top rounded-5" alt="...">
                         <div class="card-body">
