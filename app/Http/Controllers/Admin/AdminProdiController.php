@@ -52,10 +52,10 @@ class AdminProdiController extends Controller
                 'tahunBerdiri' => $request->tahunBerdiri,
                 'ruangProdi' => $request->ruangProdi,
                 'jumlahMahasiswa' => $request->jumlahMahasiswa,
-                'logo' => url($request->file('logo')->move('assets/logoProdi', $request->namaSingkat . '.' . $request->file('logo')->extension())),
                 'prestasi1' => $request->prestasi1,
                 'prestasi2' => $request->prestasi2,
                 'prestasi3' => $request->prestasi3,
+                'logo' => url($request->file('logo')->move('assets/logoProdi', $request->namaSingkat . '.' . $request->file('logo')->extension())),
                 'jurusan_id' => $request->jurusan_id,
             ]
         );
@@ -98,7 +98,6 @@ class AdminProdiController extends Controller
                 'tahunBerdiri' => $request->tahunBerdiri,
                 'ruangProdi' => $request->ruangProdi,
                 'jumlahMahasiswa' => $request->jumlahMahasiswa,
-
                 'prestasi1' => $request->prestasi1,
                 'prestasi2' => $request->prestasi2,
                 'prestasi3' => $request->prestasi3,
