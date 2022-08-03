@@ -20,7 +20,7 @@
     <!-- CONTENT -->
     <!-- Landing Page -->
     <div id="landingPageJurusan" class="ratio ratio-16x9">
-    </div>
+        </div>
     <!-- nav&tabs -->
     <!-- pills -->
     <ul class="nav nav-pills mt-4 flex-nowrap  justify-content-center" id="pills-tab" role="tablist">

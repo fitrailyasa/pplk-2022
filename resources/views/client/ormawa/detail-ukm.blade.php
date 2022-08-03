@@ -17,21 +17,21 @@
 @section('content')
     <!-- CONTENT -->
     <div class="himpunan p-0 justify-content-center">
-        <img src="../assets/logo-contoh.png " class="hmp-img" alt="...">
-        <h2>HMP MANDALANATA</h2>
-        <h5>DIES NATALIS : 13 APRIL</h5>
-        <h5>PEMBINA HIMPUNAN : YUDHA RAHMAN</h5>
-        <h5>KETUA HIMPUNAN : ILHAM FAHREZI</h5>
+        <img src="{{ asset('assets/ukm/logo/'. $ukms->namaSingkat.'.svg') }}" class="hmp-img" alt="..." height="500" width="500">
+        <h2>{{ $ukms->namaSingkat }}</h2>
+        <h5>DIES NATALIS : {{ $ukms->tahunBerdiri }}</h5>
+        <h5>PEMBINA HIMPUNAN : {{ $ukms->pembina }}</h5>
+        <h5>KETUA HIMPUNAN : {{ $ukms->ketuaUmum }}</h5>
         <h2>VISI</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium dolore, rem vitae iure dolorem consequatur at? Cupiditate temporibus unde quaerat, adipisci minima illo error esse at commodi? Neque, amet porro aut fuga iste odio suscipit hic molestias ratione, excepturi cupiditate dolores consectetur ex veritatis in eum, laudantium debitis eaque facilis!</p>
+        <p>{{ $ukms->visi }}</p>
         <h2>MISI</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, quia commodi voluptate nobis ipsam molestiae quasi fugiat praesentium est, quis illum consectetur voluptatum? Quisquam, totam ullam quod dignissimos praesentium quidem. Veritatis nisi, alias quod corrupti quasi commodi sequi, provident optio voluptates error iure. Culpa, eveniet quo? Error ea natus neque!</p>
+        <p>{{ $ukms->misi }}</p>
     <div class="container-fluid background-gradient" id="box-in">
         <div class="row justify-content-center" id="code">
             <div class="col-lg-4 col-md-10">
                 <h2>SCAN CODE HERE</h2>
                 <div class="gambar" id="icon">
-                    <img src="../assets/logo-contoh.png" alt="...">
+                    <img src="{{ asset('assets/qrCodeUkm/'. $ukms->qrCode)}}" alt="...">
                 </div>
             </div>
             <div class="col-lg-8 col-md-11">

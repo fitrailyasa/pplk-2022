@@ -203,8 +203,8 @@ Route::middleware(['auth'])->group(function () {
   Route::get('/ukm', [ClientUkmController::class, 'index'])->name('ukms'); // ===> ukm
 
   Route::get('/detail-prodi/{id}', [ClientProdiController::class, 'show'])->name('detailProdi');
-  Route::get('/detail-himpunan/{id}', [ClientHimpunanController::class, 'show'])->name('detailHimpunan');
-  Route::get('/detail-ukm/{id}', [ClientUkmController::class, 'show'])->name('detailUkm');
+  Route::get('/detailHimpunan/{id}', [ClientHimpunanController::class, 'show'])->name('detailHimpunan');
+  Route::get('/detailUkm/{id}', [ClientUkmController::class, 'show'])->name('detailUkm');
 
   // Route::get('/detail-himpunan', function () {        // ===> Detail himpunan
   //   return view('client.ormawa.detail-himpunan');
