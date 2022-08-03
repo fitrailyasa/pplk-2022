@@ -23,24 +23,23 @@ h2{
 }
 
 .logo1{
-  margin-top: 90px;
-  width: 100% !important;
+  width: 90% !important;
 }
 
 .teks2{
-  font-size: 3rem;
+  font-size: 1.75rem;
 }
 
 .teks3{
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 
 .teks4{
-  font-size: 2rem;
+  font-size: 1.25rem;
 }
 
 .teks5{
-  font-size: 1.75rem;
+  font-size: 1rem;
 }
 
 .teks6{
@@ -235,6 +234,15 @@ h2{
     color: white;
   }
 
+  @media screen and (max-width: 768px) {
+    .buttons {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+    .logo1{
+      width: 75%;
+    }
+  }
 
   @media screen and (max-width: 768px) {
     .slide-content{
@@ -246,33 +254,54 @@ h2{
   }
 
   @media screen and (max-width:930px) {
-    .teks1 {
+    /* .teks1 {
       text-align: center;
     }
     .teks5, .teks6 {
       padding-left: 1.5rem;
+    } */
+    .teks5 {
+      font-size: 0.2rem;
     }
     .buttons {
+      height: 4rem;
+      width: 4rem;
       margin-top: 2rem;
       margin-bottom: 6rem;
       margin-left: auto;
+      margin-right: auto;
+    }
+    .buttons icon {
+      height: 0.75rem;
+      width: 0.75rem;
+      justify-content: center;
     }
     #terakhir {
       margin-bottom: 6rem;
   }
-    #medsos {
+    /* #medsos {
       margin-right: 3.5rem;
-    }
+    } */
     .videoyoutube {
       height: 15rem;
       width: 25rem;
-  }
-    .teks2, .teks5 {
+    }
+    .teks2 {
+      font-size: 1.75rem;
+    }
+    .teks3 {
       font-size: 1.5rem;
     }
+    .teks4 {
+      font-size: 1.25rem;
+    }
+    .teks5 {
+      font-size: 1.1rem;
+    }
     .logo1{
-      margin-top: 5px;
-      margin-bottom: 5px;
       width: 45% !important;
+    }
+    #visiMisi {
+      margin-bottom: 5rem;
     }
   }
