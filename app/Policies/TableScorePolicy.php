@@ -2,11 +2,11 @@
 
 namespace App\Policies;
 
-use App\Models\Leaderboard;
+use App\Models\Table_score;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class LeaderboardPolicy
+class TableScorePolicy
 {
     use HandlesAuthorization;
 
@@ -25,10 +25,10 @@ class LeaderboardPolicy
      * Determine whether the user can view the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Leaderboard  $leaderboard
+     * @param  \App\Models\Table_score  $tableScore
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function view(User $user, Leaderboard $leaderboard)
+    public function view(User $user, Table_score $tableScore)
     {
         //
     }
@@ -48,10 +48,10 @@ class LeaderboardPolicy
      * Determine whether the user can update the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Leaderboard  $leaderboard
+     * @param  \App\Models\Table_score  $tableScore
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function update(User $user, Leaderboard $leaderboard)
+    public function update(User $user, Table_score $tableScore)
     {
         //
     }
@@ -60,10 +60,10 @@ class LeaderboardPolicy
      * Determine whether the user can delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Leaderboard  $leaderboard
+     * @param  \App\Models\Table_score  $tableScore
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function delete(User $user, Leaderboard $leaderboard)
+    public function delete(User $user, Table_score $tableScore)
     {
         //
     }
@@ -72,10 +72,10 @@ class LeaderboardPolicy
      * Determine whether the user can restore the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Leaderboard  $leaderboard
+     * @param  \App\Models\Table_score  $tableScore
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function restore(User $user, Leaderboard $leaderboard)
+    public function restore(User $user, Table_score $tableScore)
     {
         //
     }
@@ -84,10 +84,10 @@ class LeaderboardPolicy
      * Determine whether the user can permanently delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Leaderboard  $leaderboard
+     * @param  \App\Models\Table_score  $tableScore
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function forceDelete(User $user, Leaderboard $leaderboard)
+    public function forceDelete(User $user, Table_score $tableScore)
     {
         //
     }

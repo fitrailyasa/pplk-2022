@@ -3,10 +3,17 @@
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
+use App\Http\Middleware\SuperAdmin;
+use App\Http\Middleware\Admin;
+use App\Http\Middleware\Himpunan;
+use App\Http\Middleware\Ukm;
+use App\Http\Middleware\Kedisiplinan;
+use App\Http\Middleware\DapMen;
+use App\Http\Middleware\Staff;
+use App\Http\Middleware\Maba;
 use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AdminBegalinController;
+use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AdminFunfactController;
 use App\Http\Controllers\Admin\AdminHimpunanController;
 use App\Http\Controllers\Admin\AdminKamusGaulController;
@@ -14,18 +21,22 @@ use App\Http\Controllers\Admin\AdminUkmController;
 use App\Http\Controllers\Admin\AdminUptController;
 use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\Admin\AdminProdiController;
-use App\Http\Controllers\Client\ClientUptController;
-use App\Http\Controllers\Client\ClientProdiController;
 use App\Http\Controllers\Client\ClientBegalinController;
 use App\Http\Controllers\Client\ClientBiodataController;
 use App\Http\Controllers\Client\ClientJurusanController;
 use App\Http\Controllers\Client\ClientKabinetController;
 use App\Http\Controllers\Client\ClientKamusgaulController;
-use App\Http\Controllers\Client\ClientScannerController;
 use App\Http\Controllers\Client\ClientKodeGameController;
 use App\Http\Controllers\Client\ClientKeluhanController;
+
 use App\Http\Controllers\Client\ClientHimpunanController;
 use App\Http\Controllers\Client\ClientUkmController;
+
+use App\Http\Controllers\Client\ClientProdiController;
+use App\Http\Controllers\Client\ClientScannerController;
+use App\Http\Controllers\Client\ClientUptController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -39,11 +50,12 @@ use App\Http\Controllers\Client\ClientUkmController;
 */
 
 
+
 /* Auth::routes();
 Route::get('/home',[HomeController::class, 'index'])->name('home'); */
 
 //Admin Route
-Route::get('/', [AdminController::class, 'index'])->name('index');
+// Route::get('/', [AdminController::class, 'index'])->name('index');
 Route::resource('adminBegalin', AdminBegalinController::class)->except(['show']);
 Route::resource('adminFunfact', AdminFunfactController::class)->except(['show']);
 Route::resource('adminHimpunan', AdminHimpunanController::class)->except(['show']);
@@ -54,11 +66,18 @@ Route::resource('adminUser', AdminUserController::class)->except(['show']);
 Route::resource('adminUpt', AdminUptController::class)->except(['show']);
 //Login
 
+// REGISTRASI
+Route::get('/registrasi', function () { return view('registrasi'); });
+Route::post('/registrasi/{create}', [ClientBiodataController::class, 'store'])->name('regist_staff');
+
+
+// LOGIN
 Route::get('/', [LoginController::class, 'showLoginForm']);
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/', [LoginController::class, 'login'])->name('loginPost');
 Route::get('/guest', [guestController::class, 'login'])->name('guest');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
 
 Route::get('/admin', [AdminController::class, 'index'])->name('cms'); //===> cms admin
 
@@ -73,52 +92,78 @@ Route::post('/admin/Kamusgaul', [AdminController::class, 'storeKamusgaul'])->nam
 Route::post('/admin/Prodi', [AdminController::class, 'storeProdi'])->name('createProdi');
 Route::post('/registrasi/{create}', [ClientBiodataController::class, 'store'])->name('regist_staff');
 
+// CMS SUPER ADMIN
+Route::middleware([SuperAdmin::class])->group(function () {
+    Route::get('/cms-super', [AdminController::class, 'index'])->name('index');
+    Route::resource('adminBegalin', AdminBegalinController::class)->except(['show']);
+    Route::resource('adminFunfact', AdminFunfactController::class)->except(['show']);
+    Route::resource('adminHimpunan', AdminHimpunanController::class)->except(['show']);
+    Route::resource('adminKamusgaul', AdminKamusGaulController::class)->except(['show']);
+    Route::resource('adminProdi', AdminProdiController::class)->except(['show']);
+    Route::resource('adminUkm', AdminUkmController::class)->except(['show']);
+    Route::resource('adminUser', AdminUserController::class)->except(['show']);
+    Route::resource('adminUpt', AdminUptController::class)->except(['show']);
 
-//ROUTE EDIT
-//Edit Funfact
-// Route::put('/admin/editfunFact', [AdminController::class, 'updatefunFact'])->name('editFunfact');
-// Route::get('/admin/updatefunFact/{id}', [AdminController::class, 'getfunFactId'])->name('viewEditFunfact');
-// //Edit Begalin
-// Route::put('/admin/editbegalin', [AdminController::class, 'updateBegalin'])->name('editBegalin');
-// Route::get('/admin/updatebegalin/{id}', [AdminController::class, 'getBegalinId'])->name('viewEditBegalin');
-// //Edit UPT
-// Route::put('/admin/editupt', [AdminController::class, 'updateUpt'])->name('editUpt');
-// Route::get('/admin/updateupt/{id}', [AdminController::class, 'getUptId'])->name('viewEditUpt');
-// //Edit Himpunan
-// Route::put('/admin/edithimpunan', [AdminController::class, 'updateHimpunan'])->name('editHimpunan');
-// Route::get('/admin/updatehimpunan/{id}', [AdminController::class, 'getHimpunanId'])->name('viewEditHimpunan');
+    // SCANNER
+    Route::get('/scanner', [ClientScannerController::class, 'index'])->name('scanner');
+    Route::get('/polling', [ClientScannerController::class, 'indexPolling'])->name('polling');
+    Route::get('/presensiMaba', [ClientScannerController::class, 'indexMaba'])->name('indexMaba');
+    Route::post('/presensi/{id}', [ClientScannerController::class, 'presensi']);
+    Route::post('/polling/{id}', [ClientScannerController::class, 'polling']);
+    Route::post('/presensiMaba/{id}', [ClientScannerController::class, 'presensiMaba']);
+  });
 
-// //Edit Kamus Gaul
-// Route::put('/admin/editkamus-gaul', [AdminController::class, 'updateKamusGaul'])->name('editKamusGaul');
-// Route::get('/admin/updatekamus-gaul/{id}', [AdminController::class, 'getKamusGaulId'])->name('viewEditKamusGaul');
+// CMS ADMIN
+Route::middleware([Admin::class])->group(function () {
+    Route::get('/cms-admin', [AdminController::class, 'index'])->name('index');
+    Route::resource('adminBegalin', AdminBegalinController::class)->except(['show']);
+    Route::resource('adminFunfact', AdminFunfactController::class)->except(['show']);
+    Route::resource('adminHimpunan', AdminHimpunanController::class)->except(['show']);
+    Route::resource('adminKamusgaul', AdminKamusGaulController::class)->except(['show']);
+    Route::resource('adminProdi', AdminProdiController::class)->except(['show']);
+    Route::resource('adminUkm', AdminUkmController::class)->except(['show']);
+    Route::resource('adminUpt', AdminUptController::class)->except(['show']);
+  });
 
+// CMS HIMPUNAN
+Route::middleware([Himpunan::class])->group(function () {
+    Route::get('/cms-himpunan', [AdminController::class, 'index'])->name('index');
+    Route::resource('adminHimpunan', AdminHimpunanController::class)->except(['show']);
+    Route::resource('adminProdi', AdminProdiController::class)->except(['show']);
+  });
 
-// //Update UKM
-// Route::put('/admin/editukm', [AdminController::class, 'updateUkm'])->name('editUkm');
-// Route::get('/admin/updateukm/{id}', [AdminController::class, 'getUkmId'])->name('viewEditUkm');
-
-// //Update Prodi
-// Route::put('/admin/editprodi', [AdminController::class, 'updateProdi'])->name('editProdi');
-// Route::get('/admin/updateprodi/{id}', [AdminController::class, 'getProdiId'])->name('viewEditProdi');
-
-// //Delete Funfact
-
-// Route::get('/admin/hapusfunfact/{id}', [AdminController::class, 'destroyFunfact'])->name('hapusFunfact');
-// //Delete Upt
-// Route::get('/admin/hapusupt/{id}', [AdminController::class, 'destroyUpt'])->name('hapusUpt');
-// //Delete Begalin
-// Route::get('/admin/hapusbegalin/{id}', [AdminController::class, 'destroyBegalin'])->name('hapusBegalin');
-// //Delete KamusGaul
-// Route::get('/admin/hapuskamusgaul/{id}', [AdminController::class, 'destroyKamusGaul'])->name('hapusKamusGaul');
-// //Delete Prodi
-// Route::get('/admin/hapusprodi/{id}', [AdminController::class, 'destroyProdi'])->name('hapusProdi');
-// //Delete Himpunan
-// Route::get('/admin/hapushimpunan/{id}', [AdminController::class, 'destroyHimpunan'])->name('hapusHimpunan');
-// //Delete Ukm
-// Route::get('/admin/hapusukm/{id}', [AdminController::class, 'destroyUkm'])->name('hapusUkm');
+// CMS UKM
+Route::middleware([Ukm::class])->group(function () {
+    Route::get('/cms-ukm', [AdminController::class, 'index'])->name('index');
+    Route::resource('adminUkm', AdminUkmController::class)->except(['show']);
+    Route::get('/polling', [ClientScannerController::class, 'indexPolling'])->name('polling');
+    Route::post('/polling/{id}', [ClientScannerController::class, 'polling']);
+  });
 
 
+// CMS KEDISIPLISAN
+Route::middleware([Kedisiplinan::class])->group(function () {
+    Route::get('/cms-kedis', [AdminController::class, 'index'])->name('index');
+    // Route::resource('adminForm', AdminBegalinController::class)->except(['show']);
+
+    // SCANNER STAFF
+    Route::get('/scanner', [ClientScannerController::class, 'index'])->name('scanner');
+    Route::post('/presensi/{id}', [ClientScannerController::class, 'presensi']);
+  });
+
+// CMS DAPMEN
+Route::middleware([DapMen::class])->group(function () {
+    Route::get('/admin-dapmen', [AdminController::class, 'index'])->name('index');
+    Route::resource('adminUser', AdminBegalinController::class)->except(['show']);
+
+    // SCANNER MABA
+    Route::get('/presensiMaba', [ClientScannerController::class, 'indexMaba'])->name('indexMaba');
+    Route::post('/presensiMaba/{id}', [ClientScannerController::class, 'presensiMaba']);
+  });
+
+// // CLIENT
 Route::middleware(['auth'])->group(function () {
+
   Route::get('/biodata', [ClientBiodataController::class, 'index'])->name('biodata');
   Route::get('/edit-biodata', [ClientBiodataController::class, 'indexEditBio'])->name('edit-biodata');
   //post scanner
@@ -212,3 +257,7 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/registrasi', function () {  // ===> Registrasi
   return view('registrasi');
 });
+
+
+   
+
