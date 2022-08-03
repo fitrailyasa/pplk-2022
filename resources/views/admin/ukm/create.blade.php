@@ -70,8 +70,8 @@
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">QR-Code</label>
-            <div class="col-sm-9 ">
-              <input type="text" class="form-control" placeholder="Input https://linktr.ee" name="qrCode" id="qrCode" >
+            <div class="col-sm-9">
+              <input type="file" accept="image/*" class="form-control" name="qrCode" id="qrCode" >
             </div>
           </div>
           <div class="mb-3 row">

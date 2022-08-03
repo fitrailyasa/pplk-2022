@@ -92,8 +92,9 @@ body{
     text-align: center;
 }
 .tombol:hover{
-    transform: translate(-35px, 0px);
-    color: #000;
+    transform: translate(65px, 0px);
+    color: #7affff;
+    transition: all 0.3s ease;
 }
 .himpunan {
 padding:0 3%;
@@ -160,3 +161,9 @@ h2{
     align-items: center;
     margin-left: 35%;
 }
+
+@media screen and (max-width:930px) {
+    #terakhir {
+        margin-bottom: 5rem;
+    }
+  }
