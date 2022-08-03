@@ -47,7 +47,7 @@
                                     <img src="{{ asset('assets/logomini.png') }}" alt="logo kecil">
                                 </div>
                             </div><!-- col-2 -->
-                            <button class="btn btn-primary" onclick="window.print()">
+                            <button class="btn btn-primary mb-5" onclick="window.print()">
                                 GENERATE
                             </button>
                         </div>

@@ -4,9 +4,9 @@
     /* body *{
         visibility: hidden;
     } */
-    #mobile-footer-bar, 
+    #mobile-footer-bar,
     #navbar-desktop,
-    footer, .bio-profile, 
+    footer, .bio-profile,
     .edit-profile, button *,
     #biodata, #footer-page *{
         display: none !important;
@@ -23,7 +23,6 @@
 }
 /* CONTENT CSS */
 body{
-    padding-bottom: 90px;
     display: block;
     font-family: var(--font-family-body) !important;
     overflow-x: hidden;

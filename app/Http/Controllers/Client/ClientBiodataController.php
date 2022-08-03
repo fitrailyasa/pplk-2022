@@ -57,7 +57,8 @@ class ClientBiodataController extends Controller
         $nim =$data['nim'];
         $date = Date("m.d.y");
         $time = time();
-        $qrCode = "$date"."$nim"."$date"."$date"."$date"."$date"."$time";
+        $time = $uTime = microtime(true);
+        $qrCode = "$date"."$time"."$date"."$date"."$date"."$date"."$time";
         User::create([
             'nama'=>$request->name,
             'golonganDarah'=>$request->golonganDarah,
@@ -182,24 +183,29 @@ public function updateBiodata(Request $request, $id){
         //
     }
 
+    public function hitunguser(){
+        $user = User::where('id', '<' , 289)->get();
+        $count = $user->count();
+        return $count;
+    }
+
     public function generateAllQrCode()
     {
-        $check = user::get();
-        $checkCount = $check->count();
-
-        for ($x = 0; $x <= $checkCount; $x++ ) {
+        $user = User::all();
+        $count = $user->count();
+        for($n=1;$n<=$count;$n++){
             $date = Date("m.d.y");
-            $time = time();
-            $qrCode = "$time"."$date"."$time"."$date"."$time"."$date"."$time";
-            $users->qrCode = $qrCode;
-            $users->update();
+            $time = microtime(true);
+            $qrCode = "$date"."$time"."$date"."$date"."$date"."$date"."$time";
+            $user = User::where('id',$n)->first();
+            // $user->qrCode = 'kosong';
+            $user->update(['qrCode' => $qrCode]);
             QrCode::format('svg')->margin(2)->size(200)->errorCorrection('H')->generate("$qrCode", "../public/assets/qrcode/"."$qrCode");
         }
-
-        echo "<script>
-        alert('Semua QrCode User Sudah di Generate ');
-        window.location.href='/registrasi'
-         </script>";
+            echo "<script>
+            alert(' Semuaa Data update');
+            window.location.href='/'
+             </script>";
     }
 }
 
