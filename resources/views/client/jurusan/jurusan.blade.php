@@ -102,7 +102,7 @@
                             <h2>Visi</h2>
                             <h6>{{ $JS->visi }}</h6>
                             <h2>Misi</h2>
-                            <h6>{{ $JS->misi }}</h6>
+                            <h6>{{ $JS->misi }}<br><br></h6>
                         </div>
                     </div>
                 </div>
