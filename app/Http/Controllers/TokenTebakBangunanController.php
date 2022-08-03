@@ -2,13 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Tebak_bangunan;
 use App\Models\TokenTebakBangunan;
-use App\Http\Controllers\Client\TokenTebakBangunanHomeController;
-use App\Http\Requests\StoreTebak_bangunanRequest;
-use App\Http\Requests\UpdateTebak_bangunanRequest;
+use App\Http\Requests\StoreTokenTebakBangunanRequest;
+use App\Http\Requests\UpdateTokenTebakBangunanRequest;
 
-class TebakBangunanHomeController extends Controller
+class TokenTebakBangunanController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +15,7 @@ class TebakBangunanHomeController extends Controller
      */
     public function index()
     {
-        $soal=Tebak_bangunan::all();
-        return view('client.games.tebak-bangunan.home',compact('soal'));
+        //
     }
 
     /**
@@ -34,18 +31,21 @@ class TebakBangunanHomeController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreTebak_bangunanRequest  $request
+     * @param  \App\Http\Requests\StoreTokenTebakBangunanRequest  $request
      * @return \Illuminate\Http\Response
      */
-
+    public function store(StoreTokenTebakBangunanRequest $request)
+    {
+        //
+    }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Tebak_bangunan  $tebak_bangunan
+     * @param  \App\Models\TokenTebakBangunan  $tokenTebakBangunan
      * @return \Illuminate\Http\Response
      */
-    public function show(Tebak_bangunan $tebak_bangunan)
+    public function show(TokenTebakBangunan $tokenTebakBangunan)
     {
         //
     }
@@ -53,10 +53,10 @@ class TebakBangunanHomeController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Tebak_bangunan  $tebak_bangunan
+     * @param  \App\Models\TokenTebakBangunan  $tokenTebakBangunan
      * @return \Illuminate\Http\Response
      */
-    public function edit(Tebak_bangunan $tebak_bangunan)
+    public function edit(TokenTebakBangunan $tokenTebakBangunan)
     {
         //
     }
@@ -64,11 +64,11 @@ class TebakBangunanHomeController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateTebak_bangunanRequest  $request
-     * @param  \App\Models\Tebak_bangunan  $tebak_bangunan
+     * @param  \App\Http\Requests\UpdateTokenTebakBangunanRequest  $request
+     * @param  \App\Models\TokenTebakBangunan  $tokenTebakBangunan
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateTebak_bangunanRequest $request, Tebak_bangunan $tebak_bangunan)
+    public function update(UpdateTokenTebakBangunanRequest $request, TokenTebakBangunan $tokenTebakBangunan)
     {
         //
     }
@@ -76,10 +76,10 @@ class TebakBangunanHomeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Tebak_bangunan  $tebak_bangunan
+     * @param  \App\Models\TokenTebakBangunan  $tokenTebakBangunan
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Tebak_bangunan $tebak_bangunan)
+    public function destroy(TokenTebakBangunan $tokenTebakBangunan)
     {
         //
     }

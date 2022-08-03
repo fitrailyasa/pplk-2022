@@ -15,7 +15,7 @@ class TebakBangunanSeeder extends Seeder
     public function run()
     {
         $soal=[
-            ['namaBangunan'=>'Gedung E',
+            ['namaBangunan'=>'GedungE',
              'soal'=>'Apakah nama gedung ini?',
              'jawabanBenar'=>'Gedung E',
              'jawabanA'=>'Gedung A',
@@ -23,7 +23,7 @@ class TebakBangunanSeeder extends Seeder
              'jawabanC'=>'Gedung D',
              'jawabanD'=>'Gedung E'],
 
-             ['namaBangunan'=>'Gedung B',
+             ['namaBangunan'=>'GedungB',
              'soal'=>'Apakah nama gedung ini?',
              'jawabanBenar'=>'Gedung B',
              'jawabanA'=>'Gedung B',
@@ -31,15 +31,7 @@ class TebakBangunanSeeder extends Seeder
              'jawabanC'=>'Gedung Kuliah Umum',
              'jawabanD'=>'Gedung Labtek 2'],
 
-             ['namaBangunan'=>'Gedung E',
-             'soal'=>'Apakah nama gedung ini?',
-             'jawabanBenar'=>'Gedung E',
-             'jawabanA'=>'Gedung A',
-             'jawabanB'=>'Gedung B',
-             'jawabanC'=>'Gedung D',
-             'jawabanD'=>'Gedung E'],
-
-             ['namaBangunan'=>'Asrama TB3',
+             ['namaBangunan'=>'AsramaTB3',
              'soal'=>'Apakah nama gedung ini?',
              'jawabanBenar'=>'Asrama TB3',
              'jawabanA'=>'Asrama TB1',
@@ -47,7 +39,7 @@ class TebakBangunanSeeder extends Seeder
              'jawabanC'=>'Asrama TB3',
              'jawabanD'=>'Asrama TB4'],
 
-             ['namaBangunan'=>'Asrama TB4',
+             ['namaBangunan'=>'AsramaTB4',
              'soal'=>'Apakah nama gedung ini?',
              'jawabanBenar'=>'Asrama TB3',
              'jawabanA'=>'Asrama TB1',
@@ -55,13 +47,6 @@ class TebakBangunanSeeder extends Seeder
              'jawabanC'=>'Asrama TB3',
              'jawabanD'=>'Asrama TB4'],
 
-             ['namaBangunan'=>'RIMA',
-             'soal'=>'Apakah nama gedung ini?',
-             'jawabanBenar'=>'Gedung Rumah Ibadah Multiagama',
-             'jawabanA'=>'Gedung Serba Guna',
-             'jawabanB'=>'Gedung Rumah Ibadah Multiagama',
-             'jawabanC'=>'Gedung Asrama ITERA',
-             'jawabanD'=>'Gedung Bandar Lampung'],
 
              ['namaBangunan'=>'KebunRaya',
              'soal'=>'Dimana tempat ini terletak?',
@@ -144,13 +129,6 @@ class TebakBangunanSeeder extends Seeder
              'jawabanC'=>'Gedung D',
              'jawabanD'=>'Gedung Labtek 5'],
              
-             ['namaBangunan'=>'KebunRaya',
-             'soal'=>'Gambar di atas terletak di .....',
-             'jawabanBenar'=>'Kebun Raya ITERA',
-             'jawabanA'=>'Belakang Embu C',
-             'jawabanB'=>'Samping Gedung Kembar',
-             'jawabanC'=>'Kebun Raya ITERA',
-             'jawabanD'=>'OAIL'],
 
              ['namaBangunan'=>'MasjidAtTanwir',
              'soal'=>'Masjid ini terletak berdekatan dengan ?',
