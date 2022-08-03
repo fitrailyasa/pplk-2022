@@ -168,8 +168,14 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/submitcode/{id}', [ClientKodeGameController::class, 'sumscore'])->name('sumscore');
     Route::get('/tebak-bangunan', function () { return view('client.games.tebak-bangunan.home'); });
     Route::get('/tebak-bangunan-game', function () { return view('client.games.tebak-bangunan.game'); });
-    
+
     // OUR TEAM
     Route::get('/our-team', function () { return view('client.our-team'); });
-    
+
 });
+
+
+// Route::get('/gen', [ClientBiodataController::class, 'generateAllQrCode']);
+// Route::get('/hitung', [ClientBiodataController::class, 'hitunguser']);
+
+
