@@ -721,13 +721,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{ route('adminUser.create') }}" class="nav-link tablinks">
+                <a href="{{ route('dapmenUser.create') }}" class="nav-link tablinks">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah User</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{ route('adminUser.index') }}" class="nav-link tablinks">
+                <a href="{{ route('dapmenUser.index') }}" class="nav-link tablinks">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Kelola Data User</p>
                 </a>
@@ -735,7 +735,7 @@
             </ul>
           </li>
           <!--./User-->
-          
+
           <!--Scanner-->
           <li class="nav-item">
             <a href="/presensiMaba" class="nav-link">

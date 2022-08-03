@@ -171,8 +171,8 @@
                         <tr>
                             {{-- <th scope="row">1</th> --}}
                             <td>{{ $loop->iteration }}</td>
-                            <td>{{ $leaderboard->kelompok }}</td>
-                            <td>{{ $leaderboard->score }}</td>
+                            <td>Kelompok {{ $leaderboard->kelompok }}</td>
+                            <td>{{ $leaderboard->score }} Poin</td>
                         </tr>
                         @endforeach
                     </tbody>

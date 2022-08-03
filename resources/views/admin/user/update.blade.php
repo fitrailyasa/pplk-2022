@@ -11,7 +11,12 @@
       <h4 class="card-title">Edit Data User</h4>
       </div>
       <div class="card-body">
+        @if (auth()->user()->roles_id == 1)
         <form method="POST" action="{{ route('adminUser.update', $user->id) }}" enctype='multipart/form-data'>
+        @elseif (auth()->user()->roles_id == 6)
+        <form method="POST" action="{{ route('dapmenUser.update', $user->id) }}" enctype='multipart/form-data'>
+        @endif
+
         @csrf
         @method('PUT')
         <input type="hidden" value="{{ $user->id }}" name="id">
@@ -96,7 +101,7 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">No Telepon</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="628...." name="telepon" id="telepon" value="{{ $user->nomorHp }}" > 
+              <input type="text" class="form-control" placeholder="628...." name="telepon" id="telepon" value="{{ $user->nomorHp }}" >
             </div>
           </div>
           <div class="mb-3 row">
@@ -127,5 +132,5 @@
       </div>
     </div>
     <!--./Edit User-->
-    
+
 @endsection

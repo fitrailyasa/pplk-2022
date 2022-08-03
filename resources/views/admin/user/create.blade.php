@@ -11,8 +11,12 @@
       <h4 class="card-title">Input Data User</h4>
       </div>
       <div class="card-body">
+        @if (auth()->user()->roles_id == 1)
         <form method="POST" action="{{ route('adminUser.store') }}" enctype='multipart/form-data'>
-        @csrf
+        @elseif (auth()->user()->roles_id == 6)
+        <form method="POST" action="{{ route('dapmenUser.store') }}" enctype='multipart/form-data'>
+        @endif
+            @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Nama User</label>
             <div class="col-sm-9">
