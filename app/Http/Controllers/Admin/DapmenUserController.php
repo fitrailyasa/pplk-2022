@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
+use Illuminate\Support\Facades\Hash;
 use App\Models\User;
+use App\Models\Prodi;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Admin\Controller;
 use Illuminate\Contracts\View\View;
@@ -30,7 +31,8 @@ class DapmenUserController extends Controller
      */
     public function create()
     {
-        return view('admin.user.create');
+        $prodis = Prodi::all();
+        return view('admin.user.create', compact('prodis'));
     }
 
     /**
@@ -41,11 +43,16 @@ class DapmenUserController extends Controller
      */
     public function store(Request $request)
     {
+        $date = Date("m.d.y");
+        $time = time();
+        $time = $uTime = microtime(true);
+        $qrCode = "$date"."$time"."$date"."$date"."$date"."$date"."$time";
+
         User::create([
             'nama' => $request->nama,
             'email' => $request->email,
             'nim' => $request->nim,
-            'password' => $request->password,
+            'password' =>  Hash::make($request->password),
             'roles_id' => '8',
             'prodi' => $request->prodi,
             'kelompok' => auth()->user()->kelompok,
@@ -54,7 +61,7 @@ class DapmenUserController extends Controller
             'riwayatPenyakit' => $request->riwayatPenyakit,
             'nomorHp' => $request->nomorHp,
         ]);
-
+        QrCode::format('svg')->margin(2)->size(200)->errorCorrection('H')->generate("$qrCode", "../public/assets/qrcode/"."$qrCode");
         return redirect('/cms-dapmen')->with('sukses', 'Berhasil Tambah Data!');
     }
 
@@ -80,8 +87,9 @@ class DapmenUserController extends Controller
 
     public function edit($id)
     {
+        $prodis =Prodi::all();
         $user = User::where('id', $id)->first();
-        return view('admin.user.update', compact('user'));
+        return view('admin.user.update', compact('user','prodis'));
     }
 
     /**
@@ -99,7 +107,7 @@ class DapmenUserController extends Controller
                 'nama' => $request->nama,
                 'email' => $request->email,
                 'nim' => $request->nim,
-                'password' => $request->password,
+                'password' =>  Hash::make($request->password),
                 'prodi' => $request->prodi,
                 'kelompok' => auth()->user()->kelompok,
                 'instagram' => $request->instagram,

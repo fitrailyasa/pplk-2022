@@ -51,46 +51,11 @@
           <label class="col-sm-3 col-form-label">Program Studi</label>
             <div class="col-sm-9">
             <select name="prodi">
-            <option selected class="selected"></option>
-            <option value="Teknik Informatika">Teknik Informatika</option>
-            <option value="AB">Teknik Electro</option>
-            <option value="Teknik Telekomunikasi">Teknik Telekomunikasi</option>
-            <option value="Teknik Lingkungan">Teknik Lingkungan</option>
-            <option value="Teknik Industri">Teknik Industri</option>
-            <option value="Teknik Industri Pertanian">Teknik Industri Pertanian</option>
-            <option value="Teknik Geofisika">Teknik Geofisika</option>
-            <option value="Teknik Mesin">Teknik Mesin</option>
-            <option value="Teknik Fisika">Teknik Fisika</option>
-            <option value="Teknik Kimia">Teknik Kimia</option>
-            <option value="Teknik Biosistem">Teknik Biosistem</option>
-            <option value="Teknik Sipil">Teknik Sipil</option>
-            <option value="Teknik Kelautan">Teknik Kelautan</option>
-            <option value="Teknik Geologi">Teknik Geologi</option>
-            <option value="Teknik Geomatika">Teknik Geomatika</option>
-            <option value="Teknik Sistem Energi">Teknik Sistem Energi</option>
-            <option value="Teknik Material">Teknik Material</option>
-            <option value="Tenik Biomedis">Tenik Biomedis</option>
-            <option value="Teknik Perkereta Apian">Teknik Perkereta Apian</option>
-            <option value="Matematika">Matematika</option>
-            <option value="Fisika">Fisika</option>
-            <option value="Kimia">Kimia</option>
-            <option value="Biologi">Biologi</option>
-            <option value="Farmasi">Farmasi</option>
-            <option value="Sains Data">Sains Data</option>
-            <option value="Teknologi Pangan">Teknologi Pangan</option>
-            <option value="Sains Aktuaria">Sains Aktuaria</option>
-            <option value="Sains Atmosfer Dan Keplanetan">Sains Atmosfer Dan Keplanetan</option>
-            <option value="Sains Kelautan">Sains Kelautan</option>
-            <option value="Rekayasa Tata Kelola Air Terpadu">Rekayasa Tata Kelola Air Terpadu</option>
-            <option value="Rekayasa Kosmetik">Rekayasa Kosmetik</option>
-            <option value="Rekayasa Minyak Dan Gas">Rekayasa Minyak Dan Gas</option>
-            <option value="Rekayasa Kehutanan">Rekayasa Kehutanan</option>
-            <option value="Rekayasa Instrumentasi Dan Automasi">Rekayasa Instrumentasi Dan Automasi </option>
-            <option value="Arsitektur">Arsitektur</option>
-            <option value="Perencanaan Wilayah dan Kota">Perencanaan Wilayah dan Kota</option>
-            <option value="Arsitektur Lanskap">Arsitektur Lanskap</option>
-            <option value="Desain Komunikasi Visual">Desain Komunikasi Visual</option>
-            <option value="Industri Pertanian">Industri Pertanian</option>
+                <option selected class="selected"></option>
+                @foreach ($prodis as $prodi )
+                 <option value="{{ $prodi->namaLengkap }}">{{ $prodi->namaLengkap }}</option>
+                @endforeach
+
               </select>
             </div>
           </div>

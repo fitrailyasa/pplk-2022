@@ -90,29 +90,30 @@
           <!--Sama class menu-open supaya dropdown otomatis terbuka di awal load page-->
 
 
-          <!--Dashboard-->
-          <li class="nav-item">
-            <a onclick="openCMS(event, 'dashboard')" class="nav-link tablinks active">
-              <i class="fas fa-rocket nav-icon"></i>
-              <p>
-                Dashboard
-              </p>
-            </a>
-          </li>
-          <!--./Dashboard-->
 
-          <!--Beranda-->
-          <li class="nav-item">
-            <a href="/beranda" class="nav-link">
-              <i class="fa-solid fa-earth-asia nav-icon"></i>
-              <p>
-                Home PPLK 2022
-              </p>
-            </a>
-          </li>
-          <!--./Beranda-->
 
           @if(auth()->user()->roles_id == 1)
+        <!--Dashboard-->
+        <li class="nav-item">
+            <a href="/cms-super" onclick="openCMS(event, 'dashboard')" class="nav-link tablinks ">
+                <i class="fas fa-rocket nav-icon"></i>
+                <p>
+                Dashboard
+                </p>
+            </a>
+            </li>
+            <!--./Dashboard-->
+
+            <!--Beranda-->
+            <li class="nav-item">
+            <a href="/beranda" class="nav-link">
+                <i class="fa-solid fa-earth-asia nav-icon"></i>
+                <p>
+                Home PPLK 2022
+                </p>
+            </a>
+            </li>
+            <!--./Beranda-->
           <!--User-->
           <li class="nav-item">
             <a class="nav-link tabitem">
@@ -710,6 +711,28 @@
           <!--./Scanner-->
 
           @elseif(auth()->user()->roles_id == 6)
+           <!--Dashboard-->
+        <li class="nav-item">
+            <a href="/cms-dapmen" onclick="openCMS(event, 'dashboard')" class="nav-link tablinks ">
+                <i class="fas fa-rocket nav-icon"></i>
+                <p>
+                Dashboard
+                </p>
+            </a>
+            </li>
+            <!--./Dashboard-->
+
+            <!--Beranda-->
+            <li class="nav-item">
+            <a href="/beranda" class="nav-link">
+                <i class="fa-solid fa-earth-asia nav-icon"></i>
+                <p>
+                Home PPLK 2022
+                </p>
+            </a>
+            </li>
+            <!--./Beranda-->
+
           <!--User-->
           <li class="nav-item">
             <a class="nav-link tabitem">
