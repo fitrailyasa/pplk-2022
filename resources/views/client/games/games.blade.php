@@ -55,7 +55,7 @@
                 </div>
             </div>
             <div class="container row justify-content-center pt-4 flex-wrap mx-auto">
-                <a class="p-4 text-light col-md-5 card rounded-4 justify-content-start text-decoration-none" href="" id="choose-games">
+                <a class="p-4 text-light col-md-5 card rounded-4 justify-content-start text-decoration-none" href="/card-list" id="choose-games">
                     <h2 class="fw-bold">Redeem Kode</h2>
                     <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et a diam egestas faucibu</p>
                 </a>
