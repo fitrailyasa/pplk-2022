@@ -22,7 +22,7 @@
         @endif
         <div class="container">
           <div class="container" ng-app="formvalid">
-          <div class="panel" data-ng-controller="validationCtrl">   
+          <div class="panel" data-ng-controller="validationCtrl">
           </div>
         <div class="panel-body">
             <table class="table-responsive table table-bordered bordered table-striped table-condensed datatable dataTable no-footer" ui-jq="dataTable" ui-options="dataTableOpt">
@@ -34,6 +34,7 @@
                     <th>NIM</th>
                     <th>Kelompok</th>
                     <th>Instagram</th>
+                    <th>Nomor HP</th>
                     <th>Golongan Darah</th>
                     <th>Riwayat Penyakit</th>
                     <th>Prodi</th>
@@ -49,16 +50,30 @@
                     <td>{{ $user->email }}</td>
                     <td>{{ $user->nim }}</td>
                     <td>{{ $user->kelompok }}</td>
-                    <td>{{ $user->instagram }}</td>
+                    <td><a style="" href="https://instagram.com/{{ $user->instagram }}">{{ $user->instagram }}</a></td>
+                    <td><a style="" href="https://api.whatsapp.com/send?phone={{ $user->nomorHp }}&text=Halo!">{{ $user->nomorHp }}</a></td>
                     <td>{{ $user->golonganDarah }}</td>
                     <td>{{ $user->riwayatPenyakit }}</td>
                     <td>{{ $user->prodi }}</td>
                     <td>{{ $user->roles_id }}</td>
-                    
+
                     <td class="manage-row">
-                    <a href="{{ route('adminUser.edit', $user->id)}}" class="edit-button">
-                      <i class="fa-solid fa-marker"></i>
-                    </a>
+                        @if (auth()->user()->roles_id == 1 )
+                        <a href="{{ route('adminUser.show', $user->id)}}" class="edit-button">
+                            <i class="fa-solid fa-eye"></i>
+                          </a>
+                          <a href="{{ route('adminUser.edit', $user->id)}}" class="edit-button">
+                            <i class="fa-solid fa-marker"></i>
+                          </a>
+                        @elseif (auth()->user()->roles_id == 6)
+                        <a href="{{ route('dapmenUser.show', $user->id)}}" class="edit-button">
+                            <i class="fa-solid fa-eye"></i>
+                          </a>
+                          <a href="{{ route('dapmenUser.edit', $user->id)}}" class="edit-button">
+                            <i class="fa-solid fa-marker"></i>
+                          </a>
+                          @endif
+
                     <!-- Button trigger modal -->
                     <a role="button"  class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm{{$user->id}}">
                       <i class="fa-solid fa-trash-can"></i>
@@ -75,7 +90,12 @@
                             Anda yakin menghapus data?
                           </div>
                           <div class="modal-footer">
+                            @if (auth()->user()->roles_id == 1)
                             <form action="{{route('adminUser.destroy', $user->id)}}" method="POST">
+                            @elseif (auth()->user()->roles_id == 6)
+                            <form action="{{route('dapmenUser.destroy', $user->id)}}" method="POST">
+                            @endif
+
                               @method('DELETE')
                               @csrf
                                 <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">

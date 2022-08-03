@@ -20,16 +20,17 @@
             {{ session('error') }}
           </div>
           @endif
-          <div class="container" ng-app="formvalid">
-            <div class="panel" data-ng-controller="validationCtrl">
+          <div class="container">
+            <div class="panel">
             <div class="panel-heading border">    
             </div>
           <div class="panel-body">
-                <table class=" table-responsive table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt">
+                <table class=" table-responsive table table-bordered bordered table-striped table-condensed datatable">
                 <thead>
                   <tr>
                     <th>No</th>
                     <th>Deskripsi</th>
+                    <th>More</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -38,6 +39,9 @@
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $funfact->isi }}</td>
                     <td class="manage-row">
+                      <a href="{{ route('adminFunfact.show',$funfact->id) }}" class="edit-button">
+                        <i class="fa-solid fa-eye"></i>
+                      </a>
                       <a href="{{ route('adminFunfact.edit',$funfact->id) }}" class="edit-button">
                         <i class="fa-solid fa-marker"></i>
                       </a>

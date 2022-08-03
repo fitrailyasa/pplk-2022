@@ -25,7 +25,7 @@
         <div class="container-fluid redeem py-3">
             <div class="row justify-content-around">
                 <div class="col-11 text-start">
-                    <p class="text-white title-text">REDEEM CODE</p>
+                    <p class="text-white title-text">REDEEM CODE FAILED</p>
                     <div class="line-indikator"></div>
                 </div>
             </div>
@@ -43,7 +43,7 @@
                                 <p class="fs-4 fw-bold text-kelompok">Kelompok kamu mendapat poin</p>
 
                                 <div class="poin-container rounded-circle mx-auto">
-                                    <p id="poin">0</p>
+                                    <p id="poin">{{ $leaderboards->score }}</p>
                                     <p class="text-poin">poin</p>
                                 </div>
                             </div>
@@ -55,11 +55,13 @@
                         <button type="submit" class="btn btn-redeem">SELESAI</button>
                     </div>
                 </a>
-
-
+                <a href="{{  url('/game-home')}}">
                     <div class="d-flex justify-content-center">
-                        <button type="submit" class="btn btn-redeem">LEADERBOARD</button>
+                    <button type="submit" class="btn btn-redeem">LEADERBOARD</button>
                     </div>
+                </a>
+
+
                 </div>
             </div>
 

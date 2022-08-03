@@ -31,6 +31,26 @@
             return view('admin.Ukm.create');
         }
 
+
+    public function show($id)
+    {
+        $ukm=Ukm::where('id',$id)->first();
+        return view('admin.Ukm.read', compact('ukm'));
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Ukm  $Ukm
+     * @return \Illuminate\Http\Response
+     */
+
+    public function edit($id)
+    {
+        $ukm=Ukm::where('id',$id)->first();
+        return view('admin.Ukm.update', compact('ukm'));
+    }
+
         /**
          * Store a newly created resource in storage.
          *
@@ -41,6 +61,7 @@
         {
             $file = $request->file('qrCode');
             $filename = time() . '_' . $file->getClientOriginalName();
+
 
             // File upload location
             $location = '../public/assets/qrCodeUkm/';

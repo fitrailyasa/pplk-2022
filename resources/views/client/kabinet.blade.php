@@ -29,14 +29,14 @@
             <div class="col-md-6 justify-content-start teks1">
                 <h2 class="fw-bold teks2 " >KABINET KM ITERA</h2>
                 <h3 class="teks3">KELUARGA MAHASISWA</h3>
-                <h3 class="teks4">ITERA 2022-2023</h3>
+                <h3 class="teks3">ITERA 2022-2023</h3>
                 <br>
-                <h5 class="text-start fw-bold teks5">Pembina</h5>
-                <h6 class="text-start teks6">Ir.Muhammad Abi Berkah Nadi.S.T.,M.T</h6>
-                <h5 class="text-start fw-bold teks5">Presiden Mahasiswa KM ITERA</h5>
-                <h6 class="text-start teks6">Arbi Aditnya Ramadhan Asanagi</h6>
-                <h5 class="text-start fw-bold teks5">Dies Natalis</h5>
-                <h6 class="text-start teks6">9 Februari 2020</h6>
+                <h5 class="text-start fw-bold teks4">Pembina</h5>
+                <h6 class="text-start teks5">Ir. Muhammad Abi Berkah Nadi, S.T., M.T</h6>
+                <h5 class="text-start fw-bold teks4">Presiden Mahasiswa KM ITERA</h5>
+                <h6 class="text-start teks5">Arbi Aditnya Ramadhan Asanagi</h6>
+                <h5 class="text-start fw-bold teks4">Dies Natalis</h5>
+                <h6 class="text-start teks5">9 Februari 2020</h6>
             </div>
         </div>
     </div>
@@ -65,14 +65,14 @@
 
 
         <div  style="text-align:center;"class="container justify-content-center mt-3 text-light mt-md-5 mt-sm-2">
-        <h2 class="text-center fw-bold teks2">VISI</h2>
+        <h2 class="text-center fw-bold teks3">VISI</h2>
         <p class="teks5">“Mewujudkan KM ITERA yang harmonis, cerdas, berprestasi dan responsif dengan latar belakang teknologi dan tridharma perguruan tinggi”</p>
-        <h2 class="text-center teks2">MISI</h2>
+        <h2 class="text-center fw-bold teks3">MISI</h2>
         <p class="teks5">1.Mewadahi dan memberikan control untuk menyalurkan karya inovasi mahasiswa</p>
         <p class="teks5">2.Menyediakan edukasi tentang sistem keorganisasian supaya terwujudnya internal organisasi yang baik demi kembalinya minat demokrasi mahasiswa</p>
         <p class="teks5">3.Memaksimalkan penyaluran informasi dan pelayanan advokasi dengan pengawalan yang terstruktur dan terarah Refleksi KM ITERA</p>
-        <h2 class="text-center fw-bold teks2">FILOSOFI LOGO</h2>
-        <h3 class="text-center fw-bold teks2">KABINET KM</h3>
+        <h2 class="text-center fw-bold teks3">FILOSOFI LOGO</h2>
+        <h3 class="text-center fw-bold teks3">KABINET KM</h3>
         <img src="{{ asset('assets/logo/logokabinet.png') }}" class="mx-auto d-block" alt="...">
         </div>
     </div>
@@ -208,8 +208,8 @@
 </div>
 
 <div class="container mt-5 text-light" id="terakhir">
-    <h4 class="text-center teks2"><strong>ORGANIGRAM</strong></h4>
-    <h4 class="text-center teks2"><strong>KM ITERA</strong></h4>
+    <h4 class="text-center teks3"><strong>ORGANIGRAM</strong></h4>
+    <h4 class="text-center teks3"><strong>KM ITERA</strong></h4>
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" >
         <div class="carousel-inner">
         <div class="carousel-item active">
