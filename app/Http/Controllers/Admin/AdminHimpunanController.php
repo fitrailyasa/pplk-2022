@@ -68,6 +68,8 @@ class AdminHimpunanController extends Controller
             return redirect('super/himpunan')->with('sukses', 'Berhasil Tambah Data!');
         } elseif (auth()->user()->roles_id == 2) {
             return redirect('admin/himpunan')->with('sukses', 'Berhasil Tambah Data!');
+        } elseif (auth()->user()->roles_id == 3) {
+            return redirect('himpunan/himpunan')->with('sukses', 'Berhasil Tambah Data!');
         }
     }
 
@@ -130,6 +132,8 @@ class AdminHimpunanController extends Controller
             return redirect('super/himpunan')->with('sukses', 'Berhasil Edit Data!');
         } elseif (auth()->user()->roles_id == 2) {
             return redirect('admin/himpunan')->with('sukses', 'Berhasil Edit Data!');
+        } elseif (auth()->user()->roles_id == 3) {
+            return redirect('himpunan/himpunan')->with('sukses', 'Berhasil Edit Data!');
         }
     }
 
@@ -148,6 +152,8 @@ class AdminHimpunanController extends Controller
             return redirect('super/himpunan')->with('sukses', 'Berhasil Hapus Data!');
         } elseif (auth()->user()->roles_id == 2) {
             return redirect('admin/himpunan')->with('sukses', 'Berhasil Hapus Data!');
+        } elseif (auth()->user()->roles_id == 3) {
+            return redirect('himpunan/himpunan')->with('sukses', 'Berhasil Hapus Data!');
         }
     }
 }

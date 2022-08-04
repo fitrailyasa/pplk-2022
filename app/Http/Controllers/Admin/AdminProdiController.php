@@ -73,6 +73,8 @@ class AdminProdiController extends Controller
             return redirect('super/prodi')->with('sukses', 'Berhasil Tambah Data!');
         } elseif (auth()->user()->roles_id == 2) {
             return redirect('admin/prodi')->with('sukses', 'Berhasil Tambah Data!');
+        } elseif (auth()->user()->roles_id == 3) {
+            return redirect('himpunan/prodi')->with('sukses', 'Berhasil Tambah Data!');
         }
     }
 
@@ -147,6 +149,8 @@ class AdminProdiController extends Controller
             return redirect('super/prodi')->with('sukses', 'Berhasil Edit Data!');
         } elseif (auth()->user()->roles_id == 2) {
             return redirect('admin/prodi')->with('sukses', 'Berhasil Edit Data!');
+        } elseif (auth()->user()->roles_id == 3) {
+            return redirect('himpunan/prodi')->with('sukses', 'Berhasil Edit Data!');
         }
     }
 
@@ -165,6 +169,8 @@ class AdminProdiController extends Controller
             return redirect('super/prodi')->with('sukses', 'Berhasil Hapus Data!');
         } elseif (auth()->user()->roles_id == 2) {
             return redirect('admin/prodi')->with('sukses', 'Berhasil Hapus Data!');
+        } elseif (auth()->user()->roles_id == 3) {
+            return redirect('himpunan/prodi')->with('sukses', 'Berhasil Hapus Data!');
         }
     }
 }
