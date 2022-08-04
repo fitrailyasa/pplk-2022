@@ -25,7 +25,7 @@
         <h2>VISI</h2>
         <p>{{ $ukms->visi }}</p>
         <h2>MISI</h2>
-        <p>{{ $ukms->misi }}</p>
+        <p>{!!nl2br(e($ukms->misi)) !!}</p>
     <div class="container-fluid background-gradient" id="box-in">
         <div class="row justify-content-center" id="code">
             <div class="col-lg-4 col-md-10">
