@@ -44,7 +44,7 @@ class AdminFunfactController extends Controller
             'isi' => $request->isi
         ]);
 
-        return redirect('/adminFunfact')->with('sukses', 'Berhasil Tambah Data!');
+        return redirect('/funfact')->with('sukses', 'Berhasil Tambah Data!');
     }
 
     /**
@@ -88,7 +88,7 @@ class AdminFunfactController extends Controller
                 'isi' => $request->isi
             ]
         );
-        return redirect('/adminFunfact')->with('sukses', 'Berhasil Edit Data!');
+        return redirect('/funfact')->with('sukses', 'Berhasil Edit Data!');
     }
 
     /**
@@ -102,6 +102,6 @@ class AdminFunfactController extends Controller
         $data = Funfact::where('id', $id)->first();
         $data->delete();
 
-        return redirect('/adminFunfact')->with('sukses', 'Berhasil Hapus Data!');
+        return redirect('/funfact')->with('sukses', 'Berhasil Hapus Data!');
     }
 }

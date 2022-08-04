@@ -64,7 +64,7 @@ class AdminHimpunanController extends Controller
         // Upload file
         $file->move($location,$filename);
 
-        return redirect('/adminHimpunan')->with('sukses', 'Berhasil Tambah Data!');
+        return redirect('/himpunan')->with('sukses', 'Berhasil Tambah Data!');
     }
 
     /**
@@ -122,7 +122,7 @@ class AdminHimpunanController extends Controller
                 'logo' => url($request->file('logo')->move('assets/himpunan', $himpunan->namaSingkat . '.' . $request->file('logo')->extension())),
             ]);
         }
-        return redirect('/adminHimpunan')->with('sukses', 'Berhasil Edit Data!');
+        return redirect('/himpunan')->with('sukses', 'Berhasil Edit Data!');
     }
 
     /**
@@ -136,6 +136,6 @@ class AdminHimpunanController extends Controller
         $data = Himpunan::where('id', $id)->first();
         $data->delete();
 
-        return redirect('/adminHimpunan')->with('sukses', 'Berhasil Hapus Data!');
+        return redirect('/himpunan')->with('sukses', 'Berhasil Hapus Data!');
     }
 }

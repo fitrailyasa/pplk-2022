@@ -11,7 +11,11 @@
     <h4 class="card-title">Edit Data UKM/Komunitas</h4>
     </div>
     <div class="card-body">
-      <form method="POST" action="{{ route('adminUkm.update',$ukm->id) }}" enctype='multipart/form-data'>
+    @if(auth()->user()->roles_id == 1)
+        <form method="POST" action="{{ route('super.ukm.update') }}" enctype='multipart/form-data'>
+    @elseif(auth()->user()->roles_id == 2)
+        <form method="POST" action="{{ route('admin.ukm.update') }}" enctype='multipart/form-data'>
+    @endif
         @csrf
         @method('PUT')
         <input type="hidden" value="{{ $ukm->id }}" name="id">

@@ -11,8 +11,12 @@
     <h4 class="card-title">Detail Data Himpunan</h4>
     </div>
     <div class="card-body">
-      <form method="POST" action="{{ route('adminHimpunan.show',$himpunan->id) }}" enctype='multipart/form-data'>
-      @method('PUT')
+    @if(auth()->user()->roles_id == 1)
+        <form method="POST" action="{{ route('super.himpunan.show') }}" enctype='multipart/form-data'>
+    @elseif(auth()->user()->roles_id == 2)
+        <form method="POST" action="{{ route('admin.himpunan.show') }}" enctype='multipart/form-data'>
+    @endif
+    @method('PUT')
       @csrf
       <input type="hidden" name="id" value="{{ $himpunan->id }}">
         <div class="mb-3 row">

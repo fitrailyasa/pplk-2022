@@ -44,7 +44,7 @@ class AdminBegalinController extends Controller
             'isi' => $request->isi
         ]);
 
-        return redirect('/adminBegalin')->with('sukses', 'Berhasil Tambah Data!');
+        return redirect('/begalin')->with('sukses', 'Berhasil Tambah Data!');
     }
 
     /**
@@ -88,7 +88,7 @@ class AdminBegalinController extends Controller
                 'isi' => $request->isi
             ]
         );
-        return redirect('/adminBegalin')->with('sukses', 'Berhasil Edit Data!');
+        return redirect('/begalin')->with('sukses', 'Berhasil Edit Data!');
     }
 
     /**
@@ -102,6 +102,6 @@ class AdminBegalinController extends Controller
         $data = Begalin::where('id', $id)->first();
         $data->delete();
 
-        return redirect('/adminBegalin')->with('sukses', 'Berhasil Hapus Data!');
+        return redirect('/begalin')->with('sukses', 'Berhasil Hapus Data!');
     }
 }

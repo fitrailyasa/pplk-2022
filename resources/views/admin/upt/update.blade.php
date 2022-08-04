@@ -11,8 +11,12 @@
     <h4 class="card-title">Edit Data UPT ITERA</h4>
     </div>
     <div class="card-body">
-      <form method="POST" action="{{ route('adminUpt.update',$upt->id) }}" enctype='multipart/form-data'>
-      @csrf
+    @if(auth()->user()->roles_id == 1)
+        <form method="POST" action="{{ route('super.upt.update') }}" enctype='multipart/form-data'>
+    @elseif(auth()->user()->roles_id == 2)
+        <form method="POST" action="{{ route('admin.upt.update') }}" enctype='multipart/form-data'>
+    @endif
+        @csrf
       @method('PUT')
       <input type="hidden" value="{{ $upt->id }}" name="id">
         <div class="mb-3 row">

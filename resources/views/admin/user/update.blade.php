@@ -11,12 +11,11 @@
       <h4 class="card-title">Edit Data User</h4>
       </div>
       <div class="card-body">
-        @if (auth()->user()->roles_id == 1)
-        <form method="POST" action="{{ route('adminUser.update', $user->id) }}" enctype='multipart/form-data'>
-        @elseif (auth()->user()->roles_id == 6)
-        <form method="POST" action="{{ route('dapmenUser.update', $user->id) }}" enctype='multipart/form-data'>
-        @endif
-
+    @if(auth()->user()->roles_id == 1)
+        <form method="POST" action="{{ route('super.user.update') }}" enctype='multipart/form-data'>
+    @elseif(auth()->user()->roles_id == 2)
+        <form method="POST" action="{{ route('admin.user.update') }}" enctype='multipart/form-data'>
+    @endif
         @csrf
         @method('PUT')
         <input type="hidden" value="{{ $user->id }}" name="id">
