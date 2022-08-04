@@ -19,7 +19,7 @@
             <div class="col-sm-9">
               <input type="text" class="form-control" placeholder="Nama Lengkap" name="namaLengkap" id="namalengkap" required>
             </div>
-          </div>   
+          </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Nama Singkat</label>
             <div class="col-sm-9">
@@ -37,7 +37,7 @@
             <div class="col-sm-9">
               <input type="text" class="form-control" placeholder="Misi" name="misi" id="misi" >
             </div>
-          </div>    
+          </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Pembina</label>
             <div class="col-sm-9">
@@ -60,6 +60,9 @@
             <label class="col-sm-3 col-form-label">Logo</label>
             <div class="col-sm-9">
               <input type="file" accept="image/*" class="form-control" name="logo" id="logo" >
+              @error('logo')
+              <div class="alert alert-danger">{{ $message }}</div>
+              @enderror
             </div>
           </div>
           <div class="mb-3 row">
@@ -70,8 +73,11 @@
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">QR-Code</label>
-            <div class="col-sm-9 ">
-              <input type="text" class="form-control" placeholder="Input https://linktr.ee" name="qrCode" id="qrCode" >
+            <div class="col-sm-9">
+              <input type="file" accept="image/*" class="form-control" name="qrCode" id="qrCode" >
+              @error('qrCode')
+              <div class="alert alert-danger">{{ $message }}</div>
+              @enderror
             </div>
           </div>
           <div class="mb-3 row">
@@ -79,23 +85,33 @@
             <div class="col-sm-9">
               <input type="text" class="form-control" placeholder="Deskripsi" name="deskripsi" id="deskripsi" >
             </div>
-          </div> 
+          </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Dokumentasi 1</label>
             <div class="col-sm-9">
               <input type="file" accept="image/*" class="form-control" name="dokumentasi1" id="dokumentasi1" >
+              @error('dokumentasi1')
+              <div class="alert alert-danger">{{ $message }}</div>
+              @enderror
             </div>
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Dokumentasi 2</label>
             <div class="col-sm-9">
-              <input type="file" accept="image/*" class="form-control" name="dokumentasi2" id="dokumentasi2" >
+
+                <input type="file" accept="image/*" class="form-control" name="dokumentasi2" id="dokumentasi2" >
+                @error('dokumentasi2')
+                <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Dokumentasi 3</label>
             <div class="col-sm-9">
               <input type="file" accept="image/*" class="form-control" name="dokumentasi3" id="dokumentasi3" >
+              @error('dokumentasi3')
+              <div class="alert alert-danger">{{ $message }}</div>
+              @enderror
             </div>
           </div>
           <div class="mb-3 row">

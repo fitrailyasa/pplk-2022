@@ -40,6 +40,14 @@ class AdminProdiController extends Controller
     public function store(Request $request)
     {
 
+        $validatedData = $request->validate([
+            'logo' => 'required|mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
+         ]);
+
+        $file = $validatedData[('logo')];
+        $filename = time() . '_' . $file->getClientOriginalName();
+        $location = '../public/assets/logoProdi/';
+
         Prodi::create(
             [
                 'namaLengkap' => $request->namaLengkap,
@@ -55,12 +63,26 @@ class AdminProdiController extends Controller
                 'prestasi1' => $request->prestasi1,
                 'prestasi2' => $request->prestasi2,
                 'prestasi3' => $request->prestasi3,
-                'logo' => url($request->file('logo')->move('assets/logoProdi', $request->namaSingkat . '.' . $request->file('logo')->extension())),
+                'logo' => $file,
                 'jurusan_id' => $request->jurusan_id,
             ]
         );
+        $file->move($location, $filename);
 
         return redirect('/adminProdi')->with('sukses', 'Berhasil Tambah Data!');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Prodi  $Prodi
+     * @return \Illuminate\Http\Response
+     */
+
+    public function show($id)
+    {
+        $prodi = Prodi::where('id', $id)->first();
+        return view('admin.prodi.read', compact('prodi'));
     }
 
     /**
@@ -86,6 +108,8 @@ class AdminProdiController extends Controller
     public function update(Request $request, $id)
     {
         $prodi = Prodi::where('id', $id)->first();
+
+
         $prodi->update(
             [
                 'namaLengkap' => $request->namaLengkap,
@@ -105,9 +129,15 @@ class AdminProdiController extends Controller
             ]
         );
         if ($request->hasFile('logo')) {
-            $prodi->update([
-                'logo' => url($request->file('logo')->move('assets/logoProdi', $prodi->namaSingkat . '.' . $request->file('logo')->extension())),
-            ]);
+
+            $validatedData = $request->validate([
+                'logo' => 'required|mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
+             ]);
+
+            $file = $validatedData[('logo')];
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $location = '../public/assets/logoProdi/';
+            $file->move($location, $filename);
         }
         return redirect('/adminProdi')->with('sukses', 'Berhasil Edit Data!');
     }

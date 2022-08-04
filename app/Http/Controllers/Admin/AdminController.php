@@ -35,7 +35,23 @@ class AdminController extends Controller
 
     public function index()
     {
-        return view('admin.index');
+        
+        
+        $totalSuperAdmin=User::where('roles_id',1)->get()->count();
+        $totalAdmin=User::where('roles_id',2)->get()->count();
+        $totalHimpunan=User::where('roles_id',3)->get()->count();
+        $totalUkm=User::where('roles_id',4)->get()->count();
+        $totalKedis=User::where('roles_id',5)->get()->count();
+        $totalDapmen=User::where('roles_id',6)->get()->count();
+        $totalStaff=User::where('roles_id',7)->get()->count();
+        $totalMaba=User::where('roles_id',8)->get()->count();
+        $totalPanitia=$totalSuperAdmin+$totalAdmin+$totalKedis+(2*$totalDapmen)+$totalStaff;
+        $akunUser=User::all()->count();
+        $totalAkun=$akunUser+$totalDapmen;
+    
+        
+        return view('admin.index',compact('totalMaba','totalPanitia','totalUkm','totalDapmen','totalHimpunan','totalAkun'));
+        
     }
 
 
@@ -68,7 +84,8 @@ class AdminController extends Controller
      */
     public function show(AdminController $admin)
     {
-        //
+       
+    
     }
 
     /**

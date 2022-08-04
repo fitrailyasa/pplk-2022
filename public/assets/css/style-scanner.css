@@ -31,7 +31,6 @@ body{
     display: block;
     font-family: var(--font-family-body);
     overflow-x: hidden;
-    background: rgb(11,10,60);
     background: linear-gradient(90deg, rgba(11,10,60,1) 0%, rgba(50,25,67,1) 100%);
 }
 
@@ -227,7 +226,6 @@ body{
 body{
     font-size: 10rem;
     font-family: var(--font-family-body);
-    color: var(--font-color-secondary);
 }
 
 /* QR CODE STYLE */

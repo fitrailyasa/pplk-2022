@@ -32,10 +32,7 @@
                     <div class="card rounded-4">
                         <div class="bg-white rounded-4">
                             <div class="ratio ratio-16x9 bg-white rounded-4">
-                                <img src="../assets/space-cat.png" class="card-img-top img-box" alt="...">
-                            </div>
-                            <div class="description text-center pt-3">
-                                <p>Penjelasan Singkat</p>
+                                <img src="{{ asset('assets/space-cat.png') }}" class="card-img-top img-box" alt="...">
                             </div>
                         </div>
                         <div class="card-body">
@@ -49,12 +46,13 @@
 
                 <!-- redeem code -->
                 <div class="col-6 mt-4">
-                    <form method="POST" action="{{ route('sumscore') }}">
+                    <form method="POST" action="/submitcode/{{ auth()->user()->id }}">
                         @csrf
                         <div class="form-group">
                             <div class="mb-3">
                                 <label for="code-redeem" class="form-label text-white">CODE :</label>
-                                <input type="text" name="code" value="{{ $kode_game->code }}" id="code-redeem" class="input-control" placeholder="___">
+                                <input type="text" name="code" value="" id="code-redeem" class="input-control" placeholder="___">
+                                <input type="text" name="nomor" value="{{ $kode_game->no }}" id="code-redeem" style="display: none" class="input-control" placeholder="___">
                             </div>
                         </div>
                         <div class="d-flex justify-content-center">

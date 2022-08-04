@@ -56,13 +56,12 @@
                       <div class="image" name="foto"> </div>
                     <input id="default-btn" type="file" name="bukti" required>
                 </div>
-                <div class="row">
-                    <div class="col-md-12 form-group">
+                <div class="row mb-5">
+                    <div class="col-md-12 form-group ">
                       <input type="submit" class="form-control " name="submit" id="submit"  value="Kirim Keluhan" >
                     </div>
                   </div>
                 </form>
-
               </div>
             </div>
           </div>

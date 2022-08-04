@@ -1,9 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
+@media print{
+    /* body *{
+        visibility: hidden;
+    } */
+    #mobile-footer-bar,
+    #navbar-desktop,
+    footer, .bio-profile,
+    .edit-profile, button *,
+    #biodata, #footer-page *{
+        display: none !important;
+        box-shadow: rgba(0,0,0,0);
+    }
+    .bio-profile{
+        width: 150px;
+        height: 150px;
+    }
+    #qr-section, #qr-section *{
+        justify-content: center;
+        position: absolute;
+    }
+}
 /* CONTENT CSS */
 body{
-    padding-bottom: 90px;
     display: block;
     font-family: var(--font-family-body) !important;
     overflow-x: hidden;
@@ -56,7 +75,6 @@ body{
     width: 60%;
     height: 3rem;
     display:block;
-    box-shadow:0px 4px 6px 2px rgba(0,0,0,0.2);
 }
 
 .btn {
@@ -66,8 +84,6 @@ body{
 }
 .qrCode{
     margin-left:50px !important;
-}
-.qr-code{
     padding-top: 20px;
 }
 
@@ -139,6 +155,10 @@ body{
 }
 
 @media screen and (max-width:930px) {
+    .bio-profile{
+        width: 150px;
+        height: 150px;
+    }
     #navbar-nav-item{
         display: none;
     }

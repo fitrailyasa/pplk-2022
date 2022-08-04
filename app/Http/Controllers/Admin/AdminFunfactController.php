@@ -54,6 +54,19 @@ class AdminFunfactController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+    public function show($id)
+    {
+        $funfact = Funfact::where('id', $id)->first();
+        return view('admin.funfact.read', compact('funfact'));
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Funfact  $Funfact
+     * @return \Illuminate\Http\Response
+     */
+
     public function edit($id)
     {
         $funfact = Funfact::where('id', $id)->first();

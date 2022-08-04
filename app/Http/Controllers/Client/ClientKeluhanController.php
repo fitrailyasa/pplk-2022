@@ -27,11 +27,15 @@ class ClientKeluhanController extends Controller
      */
     public function create(Request $request, $id )
     {
+        $validatedData = $request->validate([
+            'bukti' => 'required|mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
+
+           ]);
+        $file = $validatedData[('bukti')];
         $nim = $request->input('nim');
         $nama = $request->input('nama');
         $kelompok = $request->input('kelompok');
         $keluhan = $request->input('keluhan');
-        $file = $request->file('bukti');
 
         Keluhan::create([
             'userid' => $id,

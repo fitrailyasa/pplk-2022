@@ -1,0 +1,353 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+:root {
+  --primary: #7739a3;
+  --secondary: #1a75ff;
+  --bawaan-gradient-1: rgb(240, 65, 255); /*Base Color*/
+  --bawaan-gradient-2: rgb(119, 57, 163); /*Text Color*/
+  --bawaan-gradient-3: rgb(11, 10, 60);
+  --gradient-1: linear-gradient(90deg, rgb(240, 65, 255) 0%, rgba(130, 165, 234, 1) 100%);
+  --gradient-2: linear-gradient(90deg, rgba(119, 57, 163, 1) 0%, rgba(26, 117, 255, 1) 100%);
+  --gradient-3: linear-gradient(90deg, rgba(11, 10, 60, 1) 0%, rgba(50, 25, 67, 1) 100%);
+  --white: #fff;
+  --black: #000;
+  --grey: #c4c4c4;
+  --primary-color-1: #110f58;
+  --primary-color-2: rgba(91, 207, 197, 0.2);
+  --font-family-title: "Poppins", "open sans";
+  --font-family-body: "Poppins", "open sans";
+  --font-color-primary: #174461;
+  --font-color-primary-2: #ffffff;
+  --font-color-subheadline: #071d2c;
+  --font-color-secondary: #686868;
+  --font-color-call-to-act-2: #4a4a4a;
+  --page-background-1: #f9fafb;
+  --page-background-2: #f6f6f6;
+}
+
+body {
+  background-image: url(../background-2.png);
+  background-size: cover;
+  background-position: 50% 5%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  box-shadow: inset rgba(41, 1, 53, 0.66);
+  width: 100%;
+}
+
+/*Desktop*/
+
+#kasub {
+  width: 1000px;
+  height: 400px;
+  padding: 0;
+  display: flex;
+}
+
+#mobile-cards{
+  display: none;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1em;
+  text-align: center;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+#kadiv h2,
+#kadiv p {
+  color: #eeebe3;
+  font-family: "poppins", sans-serif;
+}
+
+#kasub .col {
+  height: 100%;
+  flex: 1;
+  color: #fff;
+  box-sizing: border-box;
+  padding: 25px;
+  position: relative;
+  transition: 0.6s;
+}
+
+#penjelasan {
+  background-color: rgb(0, 0, 0, 0);
+}
+#kasub .col:nth-child(1) {
+  border-top-left-radius: 20%;
+  border-bottom-left-radius: 20%;
+  background: #020024;
+}
+#kasub .col:nth-child(2) {
+  background: #5c2994;
+}
+#kasub .col:nth-child(3) {
+  background: #8953bb;
+}
+#kasub .col:nth-child(4) {
+  border-top-right-radius: 20%;
+  border-bottom-right-radius: 20%;
+  background: #472281;
+}
+
+#kasub .caption {
+  max-width: 230px;
+  font-size: 12px;
+  margin: 28px 0;
+  display: none;
+}
+
+#kasub .caption .btn {
+  border: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  padding: 8px 18px;
+  color: #fff;
+  border-radius: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+#kasub .col img {
+  width: 200px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+#kasub .col:hover {
+  flex-grow: 2.5;
+}
+
+#kasub .col:hover .caption {
+  display: block;
+}
+.slide-container {
+  max-width: 1120px;
+  width: 100%;
+  height: 100%;
+}
+.slide-content {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  overflow: hidden;
+  border-radius: 25px;
+  height: 100%;
+}
+.row {
+  margin-top: 50px;
+}
+.image-content {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  background: #020024;
+  padding: 30px;
+  border-radius: 50%;
+  box-shadow: 0 0 22px #3336;
+  transition: 0.6s;
+  margin: 0 25px;
+  z-index: 99;
+}
+.image-content:hover {
+  border-radius: 10px;
+  height: 260px;
+  background-color: #5c2994;
+}
+.card-content {
+  text-align: center;
+  transform: translateY(-60px);
+  opacity: 0;
+  transition: 0.6s;
+}
+.image-content:hover .card-content {
+  opacity: 1;
+}
+.card-content h2 {
+  font-size: 21px;
+  color: #ffffff !important;
+}
+.card-content p {
+  font-size: 16px;
+  color: #ffffff !important;
+  margin: 2px 0 9px 0;
+}
+.image-content .card-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: 0.6s;
+  z-index: 99;
+}
+.card.swiper-slide .image-content:hover {
+  box-shadow: 
+  inset 0 0 30px whitesmoke, 
+  inset 20px 0 60px #f0f, 
+  inset -20px 0 60px #0ff, 
+  inset 20px 0 10px #f0f, 
+  inset -20px 0 30px #0ff, 
+  0 0 10px #fff, 
+  -10px 0 30px #f0f, 
+  10px 0 30px #0ff;
+}
+.image-content:hover .card-image {
+  transform: translateY(-60px);
+}
+.card-image .card-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #1a75ff;
+  box-shadow: 0 0 22px #3336;
+  transition: 0.6s;
+}
+.image-content:hover .card-img {
+  border-radius: 10px;
+}
+#judul {
+  background-color: goldenrod;
+  margin-bottom: 50px;
+  border-radius: 10px;
+}
+.h1 {
+  color: white;
+  text-align: center;
+  font-weight: 600;
+}
+.swiper-slide {
+  background: transparent !important;
+  border: rgba(0, 0, 0, 0) !important;
+}
+
+@media screen and (max-width: 1200px) {
+  #kadiv .col p {
+    font-size: 15px;
+  }
+  #kadiv .col.logo-ardhames{
+    z-index: -999;
+    position: absolute;
+    width: 50%;
+  }
+  .logo-ardhames img {
+    text-align: right;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+  }
+  .slide-content {
+    margin: 0 10px;
+  }
+  #greet{
+    display: none;
+  }
+  .swiper-navBtn {
+    display: none;
+  }
+  #kadiv {
+    display: none;
+  }
+  #kasub {
+    display: none;
+  }
+  #staff {
+    display: none !important;
+  }
+  #mobile-cards{
+   display: block; 
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+  }
+  .slide-content {
+    margin: 0 10px;
+  }
+  #greet{
+    display: none;
+  }
+  .swiper-navBtn {
+    display: none;
+  }
+  #kadiv {
+    display: none;
+  }
+  #kasub {
+    display: none;
+  }
+  #staff {
+    display: none !important;
+  }
+  #mobile-cards{
+   display: block; 
+  }
+}
+@media screen and (max-width: 528px) {
+  body {
+    overflow-x: hidden;
+  }
+  #kasub .col img {
+    width: 100%;
+    height: 100%;
+  }
+}
+/* Mobile */
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide-card {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide-card img {
+  display: block;
+  width: 100%;
+}
+
+#card-photo {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  object-fit: none;
+}
+
+#card-img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.card-color {
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-2);
+}

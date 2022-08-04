@@ -15,6 +15,7 @@ class TebakBangunanSeeder extends Seeder
     public function run()
     {
         $soal=[
+
             ['namaBangunan'=>'GedungE',
              'soal'=>'Apakah nama gedung ini?',
              'jawabanBenar'=>'Gedung E',
@@ -22,6 +23,7 @@ class TebakBangunanSeeder extends Seeder
              'jawabanB'=>'Gedung B',
              'jawabanC'=>'Gedung D',
              'jawabanD'=>'Gedung E'],
+
 
              ['namaBangunan'=>'GedungB',
              'soal'=>'Apakah nama gedung ini?',
@@ -31,6 +33,7 @@ class TebakBangunanSeeder extends Seeder
              'jawabanC'=>'Gedung Kuliah Umum',
              'jawabanD'=>'Gedung Labtek 2'],
 
+
              ['namaBangunan'=>'AsramaTB3',
              'soal'=>'Apakah nama gedung ini?',
              'jawabanBenar'=>'Asrama TB3',
@@ -38,6 +41,7 @@ class TebakBangunanSeeder extends Seeder
              'jawabanB'=>'Asrama TB2',
              'jawabanC'=>'Asrama TB3',
              'jawabanD'=>'Asrama TB4'],
+
 
              ['namaBangunan'=>'AsramaTB4',
              'soal'=>'Apakah nama gedung ini?',
@@ -128,7 +132,6 @@ class TebakBangunanSeeder extends Seeder
              'jawabanB'=>'Gedung B',
              'jawabanC'=>'Gedung D',
              'jawabanD'=>'Gedung Labtek 5'],
-             
 
              ['namaBangunan'=>'MasjidAtTanwir',
              'soal'=>'Masjid ini terletak berdekatan dengan ?',
@@ -164,7 +167,7 @@ class TebakBangunanSeeder extends Seeder
         ];
 
 
-        
+
         Tebak_bangunan::query()->insert($soal);
     }
 }

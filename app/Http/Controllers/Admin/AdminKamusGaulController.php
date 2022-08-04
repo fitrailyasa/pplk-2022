@@ -56,6 +56,11 @@ class AdminKamusGaulController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+    public function show($id)
+    {
+        $kamusgaul = KamusGaul::where('id', $id)->first();
+        return view('admin.kamusgaul.read', compact('kamusgaul'));
+    }
 
     /**
      * Show the form for editing the specified resource.
@@ -63,6 +68,7 @@ class AdminKamusGaulController extends Controller
      * @param  \App\Models\kamusgaul  $kamusgaul
      * @return \Illuminate\Http\Response
      */
+
     public function edit($id)
     {
         $kamusgaul = KamusGaul::where('id', $id)->first();

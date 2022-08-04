@@ -16,15 +16,13 @@ class ClientHimpunanController extends Controller
      */
     public function index()
     {
-        $himpunans = Himpunan::get();
+        $himpunans = Himpunan::all();
         return view('client.ormawa.himpunan', compact('himpunans'));
     }
 
     public function show($id)
     {
-        $himpunans = Cache::rememberForever('detail-himpunan' . $id, function () use ($id) {
-            return Himpunan::where('id', $id)->first();
-        });
+        $himpunans = Himpunan::where('id', $id)->first();
         return view('client.ormawa.detail-himpunan', compact('himpunans'));
     }
 }

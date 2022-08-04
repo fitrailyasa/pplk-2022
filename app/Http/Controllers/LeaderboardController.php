@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\DB;
 use App\Models\Leaderboard;
 use App\Http\Requests\StoreLeaderboardRequest;
 use App\Http\Requests\UpdateLeaderboardRequest;
@@ -15,7 +15,11 @@ class LeaderboardController extends Controller
      */
     public function index()
     {
-        //
+        $leaderboards = DB::table('leaderboards')
+        ->orderByRaw('score DESC')
+        ->get()
+        ->take(11);
+        return view('client.games.games', compact('leaderboards'));
     }
 
     /**

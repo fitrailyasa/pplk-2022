@@ -9,6 +9,7 @@ class Table_score extends Model
 {
     use HasFactory;
     protected $table = 'table_scores';
-    protected $fillable = ['token'];
+    protected $fillable = ['token','userid','score','kelompok'];
+
 
 }

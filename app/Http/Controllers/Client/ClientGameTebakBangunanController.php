@@ -3,10 +3,13 @@
 namespace App\Http\Controllers\Client;
 
 use App\Models\Tebak_bangunan;
+use App\Http\Requests\StoreTebak_bangunanRequest;
+use App\Http\Requests\UpdateTebak_bangunanRequest;
 use App\Models\TokenTebakBangunan;
 use App\Http\Requests\StoreTebak_bangunanRequest;
 use App\Http\Requests\UpdateTebak_bangunanRequest;
 use App\Models\ScoreTebakBangunan;
+
 
 class ClientGameTebakBangunanController extends Controller
 {
@@ -37,6 +40,7 @@ class ClientGameTebakBangunanController extends Controller
      * @param  \App\Http\Requests\StoreTebak_bangunanRequest  $request
      * @return \Illuminate\Http\Response
      */
+
     public function store($id,$jawaban)
     {
         $soals=Tebak_bangunan::all();
@@ -82,6 +86,7 @@ class ClientGameTebakBangunanController extends Controller
         $soals=Tebak_bangunan::all();
 
         return view('client.games.games',compact('soals'));
+
     }
 
     /**

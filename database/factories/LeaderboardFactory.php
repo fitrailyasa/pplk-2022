@@ -13,8 +13,10 @@ class LeaderboardFactory extends Factory
      */
     public function definition()
     {
+        static $order = 1;
         return [
-            //
+            'kelompok'   => $order++,
+            'score' => 0
         ];
     }
 }

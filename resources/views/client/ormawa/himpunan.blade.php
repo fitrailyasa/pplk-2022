@@ -13,28 +13,29 @@
         <!-- list card -->
         <div class="container-fluid pt-5 mt-5">
             <div class="title text-center">
-                <p class="h3 fw-bold text-white">HIMPUNAN ITERA</p>
+                <p class="h3 fw-bold text-white">Himpunan ITERA</p>
             </div>
-            <!-- card 1 -->
-            @foreach($himpunans as $himpunan)
-              @if($himpunan->id)
-            <div class="d-flex justify-content-center flex-wrap col">
+            <div class="d-flex justify-content-center flex-wrap col" id="terakhir">
+              @foreach($himpunans as $himpunan)
+                @if($himpunan->id)
               <div class="card m-4">
                     <div class="d-flex justify-content-center box">
                         <div class="ratio ratio-1x1 box-img">
-                            <img src="{{ asset('assets/himpunan/'. $himpunan->namaSingkat.'.svg') }}" class="card-img p-2" alt="...">
+                            <img src="{{ asset('assets/himpunan/')}}/{{ $himpunan->logo }}" class="card-img p-2" alt="...">
                         </div>
                     </div>
                     <div class="card-body pb-5">
                       <h5 class="card-title">{{ $himpunan->namaSingkat }}</h5>
                       <p class="card-text">{{ $himpunan->namaLengkap }}</p>
                     </div>
+                    <a href="/detailHimpunan/{{ $himpunan->id }}">
                     <button href="{{ route('detailHimpunan',$himpunan->id) }}" class="tombol background-gradient">Detail
                     </button>
+                    </a>
                   </div>
+                  @endif
+                  @endforeach
                 </div>
-                @endif
-                @endforeach
         </div>
 
 @endsection

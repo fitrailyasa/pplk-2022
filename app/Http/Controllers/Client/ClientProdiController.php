@@ -17,9 +17,7 @@ class ClientProdiController extends Controller
      */
     public function index()
     {
-        $prodis = Cache::rememberForever('prodis', function () {
-            return Prodi::with('jurusans')->all();
-        });
+        $prodis = Prodi::all();
         return view('client.jurusan.prodi', compact('prodis'));
     }
 
