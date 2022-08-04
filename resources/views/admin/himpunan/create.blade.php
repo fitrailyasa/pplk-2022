@@ -60,6 +60,9 @@
             <label class="col-sm-3 col-form-label">Logo</label>
             <div class="col-sm-9">
               <input type="file" accept="image/*" class="form-control" name="logo" id="logo" >
+              @error('logo')
+              <div class="alert alert-danger">{{ $message }}</div>
+              @enderror
             </div>
           </div>
           <div class="mb-3 row">

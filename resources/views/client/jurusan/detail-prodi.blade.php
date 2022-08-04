@@ -33,7 +33,7 @@
 <div class="container row justify-content-center mx-auto mb-5 mt-4">
     <div class="col-lg-6 col-md-12 mb-sm-4 mb-md-0">
         <div class="ratio ratio-4x3">
-            <img class="gambar-1 animasi" src="{{ asset('assets/logoProdi/'. $prodis->namaSingkat.'.svg') }}" alt="">
+            <img class="gambar-1 animasi" src="{{ asset('assets/logoProdi/') }}/{{ $prodis->logo }}" alt="">
         </div>
     </div>
     <div class="col-lg-6 col-md-12 my-auto text-light g-md-5 animasi">
