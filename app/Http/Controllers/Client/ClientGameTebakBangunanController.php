@@ -5,6 +5,11 @@ namespace App\Http\Controllers\Client;
 use App\Models\Tebak_bangunan;
 use App\Http\Requests\StoreTebak_bangunanRequest;
 use App\Http\Requests\UpdateTebak_bangunanRequest;
+use App\Models\TokenTebakBangunan;
+use App\Http\Requests\StoreTebak_bangunanRequest;
+use App\Http\Requests\UpdateTebak_bangunanRequest;
+use App\Models\ScoreTebakBangunan;
+
 
 class ClientGameTebakBangunanController extends Controller
 {
@@ -35,9 +40,53 @@ class ClientGameTebakBangunanController extends Controller
      * @param  \App\Http\Requests\StoreTebak_bangunanRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreTebak_bangunanRequest $request)
+
+    public function store($id,$jawaban)
     {
-        //
+        $soals=Tebak_bangunan::all();
+        $userid= auth()->user()->id;
+        $player=ScoreTebakBangunan::where('id',$userid)->get()->first();
+        $soal=Tebak_bangunan::where('id',$id)->get()->first();
+        
+        
+        $jawaban_benar=$soal->jawabanBenar;
+        if($player->kesempatan > 5){
+            return view('client.games.tebak-bangunan.success',compact('player'));
+        }
+        else{
+            $player=ScoreTebakBangunan::where('id',$userid)->get()->first();
+            $player->kesempatan= $player->kesempatan + 1;
+            $player->update(['kesempatan'=>$player->kesempatan]);
+    
+
+            if($jawaban_benar == $jawaban){      
+                $id = $id +1;
+                $soal=Tebak_bangunan::where('id',$id)->get()->first();
+                $player->score = $player->score + 1;
+                $player->update(['score'=>$player->score]);
+                return view('client.games.tebak-bangunan.game',compact('id','soal'));
+                
+            }
+            else{
+                $id = $id +1;
+                    $soal=Tebak_bangunan::where('id',$id)->get()->first();
+                    return view('client.games.tebak-bangunan.game',compact('id','soal'));
+            }
+    }
+        
+    }
+
+    public function restart($id){
+        $player=ScoreTebakBangunan::where('id',$id)->get()->first();
+        $current_value= '0';
+        $player->update([
+            'score'=>$current_value,
+            'kesempatan'=>$current_value
+        ]);
+        $soals=Tebak_bangunan::all();
+
+        return view('client.games.games',compact('soals'));
+
     }
 
     /**
