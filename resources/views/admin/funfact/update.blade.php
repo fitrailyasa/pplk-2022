@@ -22,7 +22,7 @@
       </div>
       @endif
       <input type="hidden" name="id" value="{{ $funfact->id }}">
-        
+
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Deskripsi</label>
           <div class="col-sm-9">
@@ -31,7 +31,7 @@
         </div>
         <div class="mb-3 row">
           <div class="col-sm-9">
-            <button type="submit" class="btn btn-primary ">Ubah</button>
+            <button type="submit" class="btn btn-primary ">Simpan</button>
           </div>
         </div>
         </form>

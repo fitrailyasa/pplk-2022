@@ -87,6 +87,7 @@ Route::middleware([SuperAdmin::class])->group(function () {
   Route::resource('adminUkm', AdminUkmController::class);
   Route::resource('adminUser', AdminUserController::class);
   Route::resource('adminUpt', AdminUptController::class);
+  Route::resource('dapmenUser', DapmenUserController::class);
 
   // SCANNER
   Route::get('/scanner', [ClientScannerController::class, 'index'])->name('scanner');
@@ -104,6 +105,7 @@ Route::middleware([Admin::class])->group(function () {
   Route::resource('adminFunfact', AdminFunfactController::class);
   Route::resource('adminKamusgaul', AdminKamusGaulController::class);
   Route::resource('adminUpt', AdminUptController::class);
+  Route::resource('dapmenUser', DapmenUserController::class);
 });
 
 // CMS HIMPUNAN

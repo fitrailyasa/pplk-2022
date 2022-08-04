@@ -55,16 +55,22 @@
                     <td>{{ $user->golonganDarah }}</td>
                     <td>{{ $user->riwayatPenyakit }}</td>
                     <td>{{ $user->prodi }}</td>
-                    <td>{{ $user->roles_id }}</td>
 
                     <td class="manage-row">
                         @if (auth()->user()->roles_id == 1 )
-                        <a href="{{ route('adminUser.show', $user->id)}}" class="edit-button">
+                        <a href="{{ route('dapmenUser.show', $user->id)}}" class="edit-button">
                             <i class="fa-solid fa-eye"></i>
                           </a>
-                          <a href="{{ route('adminUser.edit', $user->id)}}" class="edit-button">
+                          <a href="{{ route('dapmenUser.edit', $user->id)}}" class="edit-button">
                             <i class="fa-solid fa-marker"></i>
                           </a>
+                        @elseif (auth()->user()->roles_id == 2 )
+                          <a href="{{ route('dapmenUser.show', $user->id)}}" class="edit-button">
+                              <i class="fa-solid fa-eye"></i>
+                            </a>
+                            <a href="{{ route('dapmenUser.edit', $user->id)}}" class="edit-button">
+                              <i class="fa-solid fa-marker"></i>
+                            </a>
                         @elseif (auth()->user()->roles_id == 6)
                         <a href="{{ route('dapmenUser.show', $user->id)}}" class="edit-button">
                             <i class="fa-solid fa-eye"></i>

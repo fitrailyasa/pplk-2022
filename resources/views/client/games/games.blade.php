@@ -41,16 +41,14 @@
                         <div class="col-auto">
                             <p class="card rounded-4" id="box-group"><i class="fa-solid fa-chess-queen"></i></p>
                         </div>
-                        @foreach ($juara1 as $g )
                         <div class="col-auto user-info">
-                            <p>Kelompok {{ $g->kelompok }}</p>
+                            <p>Kelompok </p>
                             <p>Peringkat 1</p>
                         </div>
 
                         <div class="col-auto d-flex">
-                            <p style="font-size:1.3rem; text-indent: 10px; color: azure;" class="points-title"><i style="color:yellow" class="fa-solid fa-coins"></i>  {{ $g->score }} Poin</p>
+                            <p style="font-size:1.3rem; text-indent: 10px; color: azure;" class="points-title"><i style="color:yellow" class="fa-solid fa-coins"></i>  Poin</p>
                         </div>
-                        @endforeach
                     </div>
                 </div>
             </div>
@@ -72,7 +70,7 @@
                 <div class="top-3-winner row row-cols-3 pb-4">
                     <div class="winner-2 winner">
                         <div class="profile-winner">
-                            <img src="{{ asset('assets/user-profile.jpg') }}" alt="profile-img" />
+                            <img src="{{ asset('assets/juara2.png') }}" alt="Juara 2" />
                             <div class="winner-patch">
                                 <h1 class="winner-text">
                                     2
@@ -80,21 +78,18 @@
                             </div>
                         </div>
                         <div class="info-winner">
-                            @foreach ($juara2 as $juara2s)
 
                             <div class="nama">
                                 <h2>
-                                    Kelompok {{  $juara2s->kelompok }}
+                                    Kelompok {{  $leaderboards[1]->kelompok }}
                                 </h2>
                             </div>
                             <div class="point">
                                 <h1>
-                                    {{  $juara2s->score }} poin
+                                    {{  $leaderboards[1]->score }} poin
                                 </h1>
                             </div>
                         </div>
-
-                        @endforeach
                     </div>
 
                     <div class="winner-1 winner">
@@ -103,7 +98,7 @@
                                 <!--<a href='https://pngtree.com/so/big'>big png from pngtree.com/</a>-->
                                 <img src="{{ asset('assets/Golden Crown.png') }}" alt="crown" class="crown-img"/>
                             </div>
-                            <img src="{{ asset('assets/user-profile.jpg') }}" alt="profile-img" />
+                            <img src="{{ asset('assets/juara1.png') }}" alt="Juara 1" />
                             <div class="winner-patch">
                                 <h1 class="winner-text">
                                     1
@@ -114,24 +109,22 @@
 
 
                         <div class="info-winner">
-                            @foreach ( $juara1  as $a)
                             <div class="nama">
                                 <h2>
-                                   Kelompok {{  $a->kelompok }}
+                                    Kelompok  {{  $leaderboards[0]->kelompok }}
                                 </h2>
                             </div>
                             <div class="point">
                                 <h1>
-                                    {{  $a->score }} poin
+                                    {{  $leaderboards[0]->score }}  poin
                                 </h1>
                             </div>
-                            @endforeach
                         </div>
                     </div>
 
                     <div class="winner-3 winner">
                         <div class="profile-winner">
-                            <img src="{{ asset('assets/user-profile.jpg') }}" alt="profile-img" />
+                            <img src="{{ asset('assets/juara3.png') }}" alt="Juara 3" />
                             <div class="winner-patch">
                                 <h1 class="winner-text">
                                     3
@@ -139,18 +132,16 @@
                             </div>
                         </div>
                         <div class="info-winner">
-                            @foreach ( $juara3  as $l)
                             <div class="nama">
                                 <h2>
-                                   Kelompok {{  $l->kelompok }}
+                                    {{  $leaderboards[2]->kelompok }} Kelompok
                                 </h2>
                             </div>
                             <div class="point">
                                 <h1>
-                                    {{  $l->score }} poin
+                                    {{  $leaderboards[2]->score }} poin
                                 </h1>
                             </div>
-                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -167,14 +158,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($leaderboards as $leaderboard )
+                        @for ($n=4 ; $n<=10 ; $n++)
                         <tr>
-                            {{-- <th scope="row">1</th> --}}
-                            <td>{{ $loop->iteration }}</td>
-                            <td>Kelompok {{ $leaderboard->kelompok }}</td>
-                            <td>{{ $leaderboard->score }} Poin</td>
+
+                            <td>{{ $n }}</td>
+                            <td>Kelompok {{ $leaderboards[$n]->kelompok }}</td>
+                            <td>{{ $leaderboards[$n]->score }} Poin</td>
                         </tr>
-                        @endforeach
+                        @endfor
                     </tbody>
                 </table>
             </div>

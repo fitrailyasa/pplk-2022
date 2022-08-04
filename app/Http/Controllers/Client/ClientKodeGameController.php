@@ -45,8 +45,6 @@ class ClientKodeGameController extends Controller
         $check = Table_score::where('token', $token)->get();
         $checkCount = $check->count();
 
-
-
         if ($kode->kode == $kodeinput) {
 
         if($checkCount==0){
@@ -61,11 +59,6 @@ class ClientKodeGameController extends Controller
             $current_score= Leaderboard::where('kelompok',$kelompok)->value('score');
 
             $current_score= $current_score + $kode->nilai;
-            $scoreCheck = Leaderboard::where('score', $current_score)->get();
-            $checkScore = $scoreCheck->count();
-
-            if ($checkScore == 0) {
-
 
             Leaderboard::where('kelompok',$kelompok)->update(['score'=>$current_score]);
 
@@ -73,14 +66,7 @@ class ClientKodeGameController extends Controller
 
             return view('client.games.redeem-code.success',compact('leaderboards'));
 
-            }else {
-                $newCurrentScore = $current_score + 1 ;
-                Leaderboard::where('kelompok',$kelompok)->update(['score'=> $newCurrentScore]);
 
-                $leaderboards=Leaderboard::where('kelompok',$kelompok)->first();
-
-                return view('client.games.redeem-code.success',compact('leaderboards'));
-            }
         }
 
         else{

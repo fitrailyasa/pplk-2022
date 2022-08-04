@@ -35,6 +35,9 @@
                             @method('PUT')
                         <input name="fotoProfil" type="file" class="btn btn-primary">
                         <input type="submit" class="btn btn-primary" value="Unggah">
+                        @error('fotoProfil')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                         </form>
                     </div><!-- row -->
                 </div><!-- container -->
