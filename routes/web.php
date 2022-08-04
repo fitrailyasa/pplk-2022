@@ -9,7 +9,6 @@ use App\Http\Middleware\Himpunan;
 use App\Http\Middleware\Ukm;
 use App\Http\Middleware\Kedisiplinan;
 use App\Http\Middleware\DapMen;
-
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\AdminBegalinController;
 use App\Http\Controllers\Admin\AdminController;
@@ -21,7 +20,6 @@ use App\Http\Controllers\Admin\AdminUptController;
 use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\Admin\AdminProdiController;
 use App\Http\Controllers\Admin\DapmenUserController;
-
 use App\Http\Controllers\Client\ClientBegalinController;
 use App\Http\Controllers\Client\ClientBiodataController;
 use App\Http\Controllers\Client\ClientJurusanController;
@@ -29,10 +27,8 @@ use App\Http\Controllers\Client\ClientKabinetController;
 use App\Http\Controllers\Client\ClientKamusgaulController;
 use App\Http\Controllers\Client\ClientKodeGameController;
 use App\Http\Controllers\Client\ClientKeluhanController;
-
 use App\Http\Controllers\Client\ClientHimpunanController;
 use App\Http\Controllers\Client\ClientUkmController;
-
 use App\Http\Controllers\Client\ClientProdiController;
 use App\Http\Controllers\Client\ClientScannerController;
 use App\Http\Controllers\Client\ClientUptController;
@@ -61,20 +57,7 @@ Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/', [LoginController::class, 'login'])->name('loginPost');
 Route::get('/guest', [guestController::class, 'login'])->name('guest');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
-
-
 Route::get('/admin', [AdminController::class, 'index'])->name('cms'); //===> cms admin
-
-//ROUTE CREATE
-Route::post('/admin/Ukm', [AdminController::class, 'storeUkm'])->name('createUkm');
-Route::post('/admin/Himpunan', [AdminController::class, 'storeHimpunan'])->name('createHimpunan');
-Route::post('/admin/Funfact', [AdminController::class, 'storefunFact'])->name('createfunFact');
-Route::post('/admin/User', [AdminController::class, 'storeUser'])->name('createUser');
-Route::post('/admin/Upt', [AdminController::class, 'storeUpt'])->name('createUpt');
-Route::post('/admin/Begalin', [AdminController::class, 'storeBegalin'])->name('createBegalin');
-Route::post('/admin/Kamusgaul', [AdminController::class, 'storeKamusgaul'])->name('createKamusgaul');
-Route::post('/admin/Prodi', [AdminController::class, 'storeProdi'])->name('createProdi');
-Route::post('/registrasi/{create}', [ClientBiodataController::class, 'store'])->name('regist_staff');
 
 // CMS SUPER ADMIN
 Route::middleware([SuperAdmin::class])->group(function () {
@@ -123,7 +106,6 @@ Route::middleware([Ukm::class])->group(function () {
   Route::post('/polling/{id}', [ClientScannerController::class, 'polling']);
 });
 
-
 // CMS KEDISIPLISAN
 Route::middleware([Kedisiplinan::class])->group(function () {
   Route::get('/cms-kedis', [AdminController::class, 'index'])->name('index');
@@ -139,7 +121,6 @@ Route::middleware([DapMen::class])->group(function () {
   Route::get('/cms-dapmen', [AdminController::class, 'index'])->name('index');
   Route::resource('dapmenUser', DapmenUserController::class);
 
-
   // SCANNER MABA
   Route::get('/presensiMaba', [ClientScannerController::class, 'indexMaba'])->name('indexMaba');
   Route::post('/presensiMaba/{id}', [ClientScannerController::class, 'presensiMaba']);
@@ -147,7 +128,6 @@ Route::middleware([DapMen::class])->group(function () {
 
 // // CLIENT
 Route::middleware(['auth'])->group(function () {
-
 
     // UTAMA
     Route::get('/', [ClientBegalinController::class, 'index']);
