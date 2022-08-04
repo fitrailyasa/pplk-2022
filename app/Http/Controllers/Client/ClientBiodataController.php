@@ -192,23 +192,23 @@ public function updateBiodata(Request $request, $id){
     }
 
     // public function hitunguser(){
-    //     $user = User::where('id', '<' , 289)->get();
+
+    //     $user = User::where('id', '<' , 8000)->get();
     //     $count = $user->count();
     //     return $count;
     // }
 
     // public function generateAllQrCode()
     // {
-    //     $user = User::all();
-    //     $count = $user->count();
-    //     for($n=1;$n<=$count;$n++){
+    //     for($n=6001;$n<=6634;$n++){
     //         $date = Date("m.d.y");
     //         $time = microtime(true);
     //         $qrCode = "$date"."$time"."$date"."$date"."$date"."$date"."$time";
-    //         $user = User::where('id',$n)->first();
+    //         $user = User::where('id',1)->first();
     //         // $user->qrCode = 'kosong';
     //         $user->update(['qrCode' => $qrCode]);
     //         QrCode::format('svg')->margin(2)->size(200)->errorCorrection('H')->generate("$qrCode", "../public/assets/qrcode/"."$qrCode");
+
     //     }
     //         echo "<script>
     //         alert(' Semuaa Data update');
