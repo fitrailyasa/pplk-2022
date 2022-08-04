@@ -18,9 +18,6 @@
 
 @section('content')
     <!-- CONTENT -->
-    <!-- Landing Page -->
-    <div id="landingPageJurusan" class="ratio ratio-16x9">
-        </div>
     <!-- nav&tabs -->
     <!-- pills -->
     <ul class="nav nav-pills mt-4 flex-nowrap  justify-content-center" id="pills-tab" role="tablist">
@@ -108,17 +105,17 @@
             <div class="container-fluid d-flex flex-wrap justify-content-around" id="terakhir">
                 @foreach($prodis as $prodi)
                 @if($prodi->jurusan_id == 1)
-                {{-- <a style="text-decoration:none;" href="/detail-prodi/{{ $prodi->id }}"> --}}
+                <a style="text-decoration:none;" href="/detail-prodi/{{ $prodi->id }}">
                 <button type="button" href="/detail-prodi/{{ $prodi->id }}" class="btn my-4 prodi-card">
                     <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/'. $prodi->namaSingkat.'.svg') }}" class="card-img-top rounded-5" alt="...">
+                        <img src="{{ asset('assets/logoProdi'}}/{{ $prodi->logo }}" class="card-img-top rounded-5" alt="...">
                         <div class="card-body">
                             <p class="card-text pt-2 rounded-3 text-center text-light">{{ $prodi->namaLengkap }}</p>
                             <a href="{{ route('detailProdi',$prodi->id) }}"></a>
                         </div>
                     </div>
                 </button>
-                {{-- </a> --}}
+                </a>
                 @endif
                 @endforeach
         </div>
@@ -130,12 +127,13 @@
             <div class="container-fluid d-flex flex-wrap justify-content-around" id="terakhir">
                 @foreach($prodis as $prodi)
                 @if($prodi->jurusan_id == 2)
-                {{-- <a style="text-decoration:none;" href="/detail-prodi/{{ $prodi->id }}"> --}}
+                <a style="text-decoration:none;" href="/detail-prodi/{{ $prodi->id }}">
                 <button type="button" href="/detail-prodi/{{ $prodi->id }}" class="btn my-4 prodi-card">
                     <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/'. $prodi->namaSingkat.'.svg') }}" class="card-img-top rounded-5" alt="...">
+                        <img src="{{ asset('assets/logoProdi') }}/{{ $prodi->logo }}" class="card-img-top rounded-5" alt="...">
                         <div class="card-body">
                             <p class="card-text pt-2 rounded-3 text-center text-light">{{ $prodi->namaLengkap }}</p>
+                            <a href="{{ route('detailProdi',$prodi->id) }}"></a>
                         </div>
                     </div>
                 </button>

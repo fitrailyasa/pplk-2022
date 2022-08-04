@@ -28,10 +28,10 @@ class ClientKeluhanController extends Controller
     public function create(Request $request, $id )
     {
         $validatedData = $request->validate([
-            'fotoProfil' => 'required|mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
+            'bukti' => 'required|mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
 
            ]);
-        $file = $validatedData[('fotoProfil')];
+        $file = $validatedData[('bukti')];
         $nim = $request->input('nim');
         $nama = $request->input('nama');
         $kelompok = $request->input('kelompok');

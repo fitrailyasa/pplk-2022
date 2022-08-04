@@ -17,7 +17,7 @@
 @section('content')
     <!-- CONTENT -->
     <div class="himpunan p-0 justify-content-center">
-        <img src="{{ asset('assets/ukm/logo/'. $ukms->namaSingkat.'.svg') }}" class="hmp-img" alt="..." height="500" width="500">
+        <img src="{{ asset('assets/ukm/logo')}}/{{ $ukms->logo }}" class="hmp-img" alt="..." height="500" width="500">
         <h2>{{ $ukms->namaSingkat }}</h2>
         <h5>DIES NATALIS : {{ $ukms->tahunBerdiri }}</h5>
         <h5>PEMBINA HIMPUNAN : {{ $ukms->pembina }}</h5>
@@ -25,13 +25,13 @@
         <h2>VISI</h2>
         <p>{{ $ukms->visi }}</p>
         <h2>MISI</h2>
-        <p>{{ $ukms->misi }}</p>
+        <p>{!!nl2br(e($ukms->misi)) !!}</p>
     <div class="container-fluid background-gradient" id="box-in">
         <div class="row justify-content-center" id="code">
             <div class="col-lg-4 col-md-10">
                 <h2>SCAN CODE HERE</h2>
                 <div class="gambar" id="icon">
-                    <img src="{{ asset('assets/qrCodeUkm/'. $ukms->qrCode)}}" alt="...">
+                    <img src="{{ asset('assets/qrCodeUkm')}}/{{ $ukms->qrCode }} " alt="...">
                 </div>
             </div>
             <div class="col-lg-8 col-md-11">
@@ -47,8 +47,8 @@
     </div>
     <div class="himpunan-2 justify-content-center">
         <h2 > FILOSOFI LOGO</h2>
-        <h2 >HMP MANDALANATA</h2>
-        <img src="../assets/logo-contoh.png " class="hmp-img2" alt="..."></div>
+        <h2 >{{ $ukms->namaSingkat }}</h2>
+        <img src="{{ asset('assets/ukm/logo')}}/{{ $ukms->logo }}" class="hmp-img2" alt="..."></div>
     </div>
 
 </div>
@@ -141,19 +141,19 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="card-content-gm">
-                            <img src="../assets/logo-contoh.png" alt="">
+                            <img src="{{ asset('assets/ukm/dokumentasi1')}}/{{ $ukms->dokumentasi1 }}" alt="">
                         </div>
                     </div>
 
                     <div class="swiper-slide">
                         <div class="card-content-gm">
-                            <img src="../assets/logo-contoh.png" alt="">
+                            <img src="{{ asset('assets/ukm/dokumentasi2')}}/{{ $ukms->dokumentasi2 }}" alt="">
                         </div>
                     </div>
 
                     <div class="swiper-slide">
                         <div class="card-content-gm">
-                            <img src="../assets/logo-contoh.png" alt="">
+                            <img src="{{ asset('assets/ukm/dokumentasi3')}}/{{ $ukms->dokumentasi3 }}" alt="">
                         </div>
                     </div>
                     <!-- <div class="swiper-slide">

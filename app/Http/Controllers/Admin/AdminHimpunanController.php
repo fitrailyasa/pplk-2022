@@ -39,6 +39,12 @@ class AdminHimpunanController extends Controller
      */
     public function store(Request $request)
     {
+        $validatedData = $request->validate([
+            'logo' => 'required|mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
+
+           ]);
+        $file = $validatedData[('logo')];
+
         Himpunan::create([
             'namaLengkap' => $request->namaLengkap,
             'namaSingkat' => $request->namaSingkat,
@@ -48,9 +54,15 @@ class AdminHimpunanController extends Controller
             'pembina' => $request->pembina,
             'ketuaHimpunan' => $request->ketuaHimpunan,
             'tahunBerdiri' => $request->tahunBerdiri,
-            'logo'  => url($request->file('logo')->move('assets/himpunan', $request->namaSingkat . '.' . $request->file('logo')->extension())),
+            'logo'  =>  $file,
             'filosofiLogo' => $request->filosofiLogo
         ]);
+
+        $filename = time().'_'.$file->getClientOriginalName();
+        // File upload location
+        $location = '../public/assets/logoProdi/';
+        // Upload file
+        $file->move($location,$filename);
 
         return redirect('/adminHimpunan')->with('sukses', 'Berhasil Tambah Data!');
     }
