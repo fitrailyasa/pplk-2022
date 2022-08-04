@@ -11,8 +11,11 @@
     <h4 class="card-title">Detail Kamus Gaul</h4>
     </div>
     <div class="card-body">
-      <form method="POST" action="{{ route('adminKamusgaul.show',$kamusgaul->id) }}" enctype='multipart/form-data'>
-      @csrf
+    @if(auth()->user()->roles_id == 1)
+        <form method="POST" action="{{ route('super.kamusgaul.show') }}" enctype='multipart/form-data'>
+    @elseif(auth()->user()->roles_id == 2)
+        <form method="POST" action="{{ route('admin.kamusgaul.show') }}" enctype='multipart/form-data'>
+    @endif@csrf
       @method('PUT')
       <input type="hidden" name="id" value="$kamusgaul->id">
         <div class="mb-3 row">

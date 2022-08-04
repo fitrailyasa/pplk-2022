@@ -8,9 +8,8 @@ use App\Http\Middleware\Admin;
 use App\Http\Middleware\Himpunan;
 use App\Http\Middleware\Ukm;
 use App\Http\Middleware\Kedisiplinan;
+
 use App\Http\Middleware\DapMen;
-use App\Http\Middleware\Staff;
-use App\Http\Middleware\Maba;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\AdminBegalinController;
 use App\Http\Controllers\Admin\AdminController;
@@ -21,6 +20,7 @@ use App\Http\Controllers\Admin\AdminUkmController;
 use App\Http\Controllers\Admin\AdminUptController;
 use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\Admin\AdminProdiController;
+use App\Http\Controllers\Admin\DapmenUserController;
 use App\Http\Controllers\Client\ClientBegalinController;
 use App\Http\Controllers\Client\ClientBiodataController;
 use App\Http\Controllers\Client\ClientJurusanController;
@@ -28,10 +28,14 @@ use App\Http\Controllers\Client\ClientKabinetController;
 use App\Http\Controllers\Client\ClientKamusgaulController;
 use App\Http\Controllers\Client\ClientKodeGameController;
 use App\Http\Controllers\Client\ClientKeluhanController;
+use App\Http\Controllers\Client\ClientHimpunanController;
+use App\Http\Controllers\Client\ClientUkmController;
 use App\Http\Controllers\Client\ClientProdiController;
 use App\Http\Controllers\Client\ClientScannerController;
 use App\Http\Controllers\Client\ClientUptController;
 use App\Http\Controllers\Leaderboardcontroller;
+
+
 
 
 /*
@@ -46,7 +50,7 @@ use App\Http\Controllers\Leaderboardcontroller;
 */
 
 // REGISTRASI
-Route::get('/registrasi', function () { return view('registrasi'); });
+Route::get('/registrasi', [ClientBiodataController::class, 'ViewRegister'])->name('ViewRegister');
 Route::post('/registrasi/{create}', [ClientBiodataController::class, 'store'])->name('regist_staff');
 
 // LOGIN
@@ -57,16 +61,17 @@ Route::get('/guest', [guestController::class, 'login'])->name('guest');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 // CMS SUPER ADMIN
-Route::middleware([SuperAdmin::class])->group(function () {
-  Route::get('/cms-super', [AdminController::class, 'index'])->name('index');
-  Route::resource('adminBegalin', AdminBegalinController::class);
-  Route::resource('adminFunfact', AdminFunfactController::class);
-  Route::resource('adminHimpunan', AdminHimpunanController::class);
-  Route::resource('adminKamusgaul', AdminKamusGaulController::class);
-  Route::resource('adminProdi', AdminProdiController::class);
-  Route::resource('adminUkm', AdminUkmController::class);
-  Route::resource('adminUser', AdminUserController::class);
-  Route::resource('adminUpt', AdminUptController::class);
+Route::middleware([SuperAdmin::class])->name('super.')->prefix('super')->group(function () {
+  Route::get('/', [AdminController::class, 'index'])->name('index');
+  Route::resource('begalin', AdminBegalinController::class);
+  Route::resource('funfact', AdminFunfactController::class);
+  Route::resource('himpunan', AdminHimpunanController::class);
+  Route::resource('kamusgaul', AdminKamusGaulController::class);
+  Route::resource('prodi', AdminProdiController::class);
+  Route::resource('ukm', AdminUkmController::class);
+  Route::resource('user', AdminUserController::class);
+  Route::resource('upt', AdminUptController::class);
+  Route::resource('dapmenUser', DapmenUserController::class);
 
   // SCANNER
   Route::get('/scanner', [ClientScannerController::class, 'index'])->name('scanner');
@@ -78,32 +83,33 @@ Route::middleware([SuperAdmin::class])->group(function () {
 });
 
 // CMS ADMIN
-Route::middleware([Admin::class])->group(function () {
-  Route::get('/cms-admin', [AdminController::class, 'index'])->name('index');
-  Route::resource('adminBegalin', AdminBegalinController::class);
-  Route::resource('adminFunfact', AdminFunfactController::class);
-  Route::resource('adminKamusgaul', AdminKamusGaulController::class);
-  Route::resource('adminUpt', AdminUptController::class);
+Route::middleware([Admin::class])->name('admin.')->prefix('admin')->group(function () {
+  Route::get('/', [AdminController::class, 'index'])->name('index');
+  Route::resource('begalin', AdminBegalinController::class);
+  Route::resource('funfact', AdminFunfactController::class);
+  Route::resource('kamusgaul', AdminKamusGaulController::class);
+  Route::resource('upt', AdminUptController::class);
+  Route::resource('dapmenUser', DapmenUserController::class);
 });
 
 // CMS HIMPUNAN
-Route::middleware([Himpunan::class])->group(function () {
-  Route::get('/cms-himpunan', [AdminController::class, 'index'])->name('index');
-  Route::resource('adminHimpunan', AdminHimpunanController::class);
-  Route::resource('adminProdi', AdminProdiController::class);
+Route::middleware([Himpunan::class])->name('himpunan.')->prefix('himpunan')->group(function () {
+  Route::get('/', [AdminController::class, 'index'])->name('index');
+  Route::resource('himpunan', AdminHimpunanController::class);
+  Route::resource('prodi', AdminProdiController::class);
 });
 
 // CMS UKM
-Route::middleware([Ukm::class])->group(function () {
-  Route::get('/cms-ukm', [AdminController::class, 'index'])->name('index');
-  Route::resource('adminUkm', AdminUkmController::class);
+Route::middleware([Ukm::class])->name('ukm.')->prefix('ukm')->group(function () {
+  Route::get('/', [AdminController::class, 'index'])->name('index');
+  Route::resource('ukm', AdminUkmController::class);
   Route::get('/polling', [ClientScannerController::class, 'indexPolling'])->name('polling');
   Route::post('/polling/{id}', [ClientScannerController::class, 'polling']);
 });
 
 // CMS KEDISIPLISAN
-Route::middleware([Kedisiplinan::class])->group(function () {
-  Route::get('/cms-kedis', [AdminController::class, 'index'])->name('index');
+Route::middleware([Kedisiplinan::class])->name('kedis.')->prefix('kedis')->group(function () {
+  Route::get('/', [AdminController::class, 'index'])->name('index');
   // Route::resource('adminForm', AdminBegalinController::class);
 
   // SCANNER STAFF
@@ -112,9 +118,9 @@ Route::middleware([Kedisiplinan::class])->group(function () {
 });
 
 // CMS DAPMEN
-Route::middleware([DapMen::class])->group(function () {
-  Route::get('/cms-dapmen', [AdminController::class, 'index'])->name('index');
-  Route::resource('adminUser', AdminUserController::class);
+Route::middleware([DapMen::class])->name('dapmen.')->prefix('dapmen')->group(function () {
+  Route::get('/', [AdminController::class, 'index'])->name('index');
+  Route::resource('dapmenUser', DapmenUserController::class);
 
   // SCANNER MABA
   Route::get('/presensiMaba', [ClientScannerController::class, 'indexMaba'])->name('indexMaba');
@@ -166,10 +172,15 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/redeem-failed', function () { return view('client.games.redeem-code.failed'); });
     Route::get('/redeem-success', function () { return view('client.games.redeem-code.success'); });
     Route::post('/submitcode/{id}', [ClientKodeGameController::class, 'sumscore'])->name('sumscore');
-    Route::get('/tebak-bangunan', function () { return view('client.games.tebak-bangunan.home'); });
-    Route::get('/tebak-bangunan-game', function () { return view('client.games.tebak-bangunan.game'); });
-    
+    Route::get('/tebak-bangunan',[ClientGameTebakBangunanController::class,'index']);
+    Route::get('/tebak-bangunan-game/{id}',[ClientGameTebakBangunanController::class,'show']);
+    Route::get('/tebak-bangunan-game/{id}/{jawaban}',[ClientGameTebakBangunanController::class,'store']);
+    Route::get('/tebak-bangunan-selesai/{id}',[ClientGameTebakBangunanController::class,'restart']);
+
     // OUR TEAM
     Route::get('/our-team', function () { return view('client.our-team'); });
-    
+
 });
+
+// Route::get('/gen', [ClientBiodataController::class, 'generateAllQrCode']);
+// Route::get('/hitung', [ClientBiodataController::class, 'hitunguser']);

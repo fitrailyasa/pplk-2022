@@ -45,8 +45,6 @@ class ClientKodeGameController extends Controller
         $check = Table_score::where('token', $token)->get();
         $checkCount = $check->count();
 
-
-
         if ($kode->kode == $kodeinput) {
 
         if($checkCount==0){
@@ -67,6 +65,8 @@ class ClientKodeGameController extends Controller
             $leaderboards=Leaderboard::where('kelompok',$kelompok)->first();
 
             return view('client.games.redeem-code.success',compact('leaderboards'));
+
+
         }
 
         else{

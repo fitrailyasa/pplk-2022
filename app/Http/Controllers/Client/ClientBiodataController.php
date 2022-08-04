@@ -5,6 +5,7 @@ use Illuminate\Support\HtmlString;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use SimpleSoftwareIO\QrCode\Facades\Storage;
 use App\Models\User;
+use App\Models\Prodi;
 use Illuminate\Http\Request;
 use App\Http\Requests\Admin\StoreClientRequest;
 use App\Http\Requests\Client\UpdateBiodataRequest;
@@ -24,10 +25,17 @@ class ClientBiodataController extends Controller
         return view('client.biodata.biodata', compact('biodata'));
     }
 
+    public function ViewRegister()
+    {
+        $prodis = Prodi::all();
+        return view('registrasi', compact('prodis'));
+    }
+
     public function indexEditBio()
     {
+        $prodis = Prodi::all();
         $viewbiodata = User::where('id', auth()->user()->id)->firstOrFail();;
-        return view('client.biodata.edit-biodata', compact('viewbiodata'));
+        return view('client.biodata.edit-biodata', compact('viewbiodata','prodis'));
     }
 
     /**
@@ -57,7 +65,8 @@ class ClientBiodataController extends Controller
         $nim =$data['nim'];
         $date = Date("m.d.y");
         $time = time();
-        $qrCode = "$date"."$nim"."$date"."$date"."$date"."$date"."$time";
+        $time = $uTime = microtime(true);
+        $qrCode = "$date"."$time"."$date"."$date"."$date"."$date"."$time";
         User::create([
             'nama'=>$request->name,
             'golonganDarah'=>$request->golonganDarah,
@@ -84,7 +93,7 @@ class ClientBiodataController extends Controller
     public function editProfil($id)
     {
         $viewbiodata = User::find($id);
-        return view('Client.biodata.edit-biodata', compact('viewbiodata'));
+        return view('Client.biodata.edit-biodata', compact('viewbiodata',));
     }
 
     public function editBiodata($id)
@@ -95,7 +104,13 @@ class ClientBiodataController extends Controller
 
     public function updateProfil(Request $request, $id)
     {
-        $file = $request->file('fotoProfil');
+        $validatedData = $request->validate([
+            'fotoProfil' => 'required|mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
+
+           ]);
+
+
+        $file = $validatedData[('fotoProfil')];
         $viewbiodata = User::find($id);
         $viewbiodata->fotoProfil = time().'_'.$file->getClientOriginalName();
         $viewbiodata->update();
@@ -182,25 +197,30 @@ public function updateBiodata(Request $request, $id){
         //
     }
 
-    public function generateAllQrCode()
-    {
-        $check = user::get();
-        $checkCount = $check->count();
+    // public function hitunguser(){
 
-        for ($x = 0; $x <= $checkCount; $x++ ) {
-            $date = Date("m.d.y");
-            $time = time();
-            $qrCode = "$time"."$date"."$time"."$date"."$time"."$date"."$time";
-            $users->qrCode = $qrCode;
-            $users->update();
-            QrCode::format('svg')->margin(2)->size(200)->errorCorrection('H')->generate("$qrCode", "../public/assets/qrcode/"."$qrCode");
-        }
+    //     $user = User::where('id', '<' , 8000)->get();
+    //     $count = $user->count();
+    //     return $count;
+    // }
 
-        echo "<script>
-        alert('Semua QrCode User Sudah di Generate ');
-        window.location.href='/registrasi'
-         </script>";
-    }
+    // public function generateAllQrCode()
+    // {
+    //     for($n=6001;$n<=6634;$n++){
+
+    //         $date = Date("m.d.y");
+    //         $time = microtime(true);
+    //         $qrCode = "$date"."$time"."$date"."$date"."$date"."$date"."$time";
+    //         $user = User::where('id',$n)->first();
+    //         // $user->qrCode = 'kosong';
+    //         $user->update(['qrCode' => $qrCode]);
+    //         QrCode::format('svg')->margin(2)->size(200)->errorCorrection('H')->generate("$qrCode", "../public/assets/qrcode/"."$qrCode");
+    //     }
+    //         echo "<script>
+    //         alert(' Semuaa Data update');
+    //         window.location.href='/hitung'
+    //          </script>";
+    // }
 }
 
 

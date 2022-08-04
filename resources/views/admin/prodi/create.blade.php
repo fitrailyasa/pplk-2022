@@ -11,7 +11,11 @@
       <h4 class="card-title">Input Data Prodi</h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="{{ route('adminProdi.store') }}" enctype='multipart/form-data'>
+    @if(auth()->user()->roles_id == 1)
+        <form method="POST" action="{{ route('super.prodi.store') }}" enctype='multipart/form-data'>
+    @elseif(auth()->user()->roles_id == 2)
+        <form method="POST" action="{{ route('admin.prodi.store') }}" enctype='multipart/form-data'>
+    @endif
         @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Nama Prodi</label>
@@ -71,6 +75,9 @@
             <label class="col-sm-3 col-form-label">Logo</label>
             <div class="col-sm-9">
               <input type="file" accept="image/*" class="form-control" name="logo" id="logo" >
+              @error('logo')
+              <div class="alert alert-danger">{{ $message }}</div>
+              @enderror
             </div>
           </div>
           <div class="mb-3 row">
@@ -96,7 +103,7 @@
             <option value="2" >JTPI</option>
             <option value="3" >JS</option>
           </select>
-        </div> 
+        </div>
       </div>
           <div class="mb-3 row">
             <div class="col-sm-9">

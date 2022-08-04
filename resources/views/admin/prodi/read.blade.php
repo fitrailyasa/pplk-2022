@@ -11,8 +11,12 @@
     <h4 class="card-title">Detail Data Prodi</h4>
     </div>
     <div class="card-body">
-      <form method="POST" action="{{ route('adminProdi.show', $prodi->id) }}" enctype='multipart/form-data'>
-      @csrf
+    @if(auth()->user()->roles_id == 1)
+        <form method="POST" action="{{ route('super.prodi.show') }}" enctype='multipart/form-data'>
+    @elseif(auth()->user()->roles_id == 2)
+        <form method="POST" action="{{ route('admin.prodi.show') }}" enctype='multipart/form-data'>
+    @endif
+        @csrf
       @method('PUT')
       <input type="hidden" value="{{ $prodi->id }}" name="id">
         <div class="mb-3 row">
@@ -90,7 +94,7 @@
             </div>
           </div>
           <div class="mb-3 row">
-      
+
             <label class="col-sm-3 col-form-label">Jurusan</label>
               <div class="col-sm-9">
               <select style="width:100px;" selected class="selected" name="jurusan_id" value="{{ $prodi->jurusan_id }}">
@@ -98,8 +102,8 @@
                 <option value="2">JTIP</option>
                 <option value="3">JS</option>
               </select>
-            </div> 
-        
+            </div>
+
           </div>
         </form>
       </div>

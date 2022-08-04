@@ -39,6 +39,12 @@ class AdminHimpunanController extends Controller
      */
     public function store(Request $request)
     {
+        $validatedData = $request->validate([
+            'logo' => 'required|mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
+
+           ]);
+        $file = $validatedData[('logo')];
+
         Himpunan::create([
             'namaLengkap' => $request->namaLengkap,
             'namaSingkat' => $request->namaSingkat,
@@ -48,11 +54,23 @@ class AdminHimpunanController extends Controller
             'pembina' => $request->pembina,
             'ketuaHimpunan' => $request->ketuaHimpunan,
             'tahunBerdiri' => $request->tahunBerdiri,
-            'logo'  => url($request->file('logo')->move('assets/himpunan', $request->namaSingkat . '.' . $request->file('logo')->extension())),
+            'logo'  =>  $file,
             'filosofiLogo' => $request->filosofiLogo
         ]);
 
-        return redirect('/adminHimpunan')->with('sukses', 'Berhasil Tambah Data!');
+        $filename = time().'_'.$file->getClientOriginalName();
+        // File upload location
+        $location = '../public/assets/logoProdi/';
+        // Upload file
+        $file->move($location,$filename);
+
+        if (auth()->user()->roles_id == 1) {
+            return redirect('super/himpunan')->with('sukses', 'Berhasil Tambah Data!');
+        } elseif (auth()->user()->roles_id == 2) {
+            return redirect('admin/himpunan')->with('sukses', 'Berhasil Tambah Data!');
+        } elseif (auth()->user()->roles_id == 3) {
+            return redirect('himpunan/himpunan')->with('sukses', 'Berhasil Tambah Data!');
+        }
     }
 
     /**
@@ -110,7 +128,13 @@ class AdminHimpunanController extends Controller
                 'logo' => url($request->file('logo')->move('assets/himpunan', $himpunan->namaSingkat . '.' . $request->file('logo')->extension())),
             ]);
         }
-        return redirect('/adminHimpunan')->with('sukses', 'Berhasil Edit Data!');
+        if (auth()->user()->roles_id == 1) {
+            return redirect('super/himpunan')->with('sukses', 'Berhasil Edit Data!');
+        } elseif (auth()->user()->roles_id == 2) {
+            return redirect('admin/himpunan')->with('sukses', 'Berhasil Edit Data!');
+        } elseif (auth()->user()->roles_id == 3) {
+            return redirect('himpunan/himpunan')->with('sukses', 'Berhasil Edit Data!');
+        }
     }
 
     /**
@@ -124,6 +148,12 @@ class AdminHimpunanController extends Controller
         $data = Himpunan::where('id', $id)->first();
         $data->delete();
 
-        return redirect('/adminHimpunan')->with('sukses', 'Berhasil Hapus Data!');
+        if (auth()->user()->roles_id == 1) {
+            return redirect('super/himpunan')->with('sukses', 'Berhasil Hapus Data!');
+        } elseif (auth()->user()->roles_id == 2) {
+            return redirect('admin/himpunan')->with('sukses', 'Berhasil Hapus Data!');
+        } elseif (auth()->user()->roles_id == 3) {
+            return redirect('himpunan/himpunan')->with('sukses', 'Berhasil Hapus Data!');
+        }
     }
 }
