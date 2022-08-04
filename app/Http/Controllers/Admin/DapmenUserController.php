@@ -62,13 +62,20 @@ class DapmenUserController extends Controller
             'nomorHp' => $request->nomorHp,
         ]);
         QrCode::format('svg')->margin(2)->size(200)->errorCorrection('H')->generate("$qrCode", "../public/assets/qrcode/"."$qrCode");
-        return redirect('/cms-dapmen')->with('sukses', 'Berhasil Tambah Data!');
+
+        if (auth()->user()->roles_id == 1) {
+            return redirect('super/adminUser')->with('sukses', 'Berhasil Tambah Data!');
+        } elseif (auth()->user()->roles_id == 2) {
+            return redirect('admin/adminUser')->with('sukses', 'Berhasil Tambah Data!');
+        } elseif (auth()->user()->roles_id == 6) {
+            return redirect('dapmen/adminUser')->with('sukses', 'Berhasil Tambah Data!');
+        }
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\himpunan $himpunan
+     * @param  \App\Models\dapmenUser $dapmenUser
      * @return \Illuminate\Http\Response
      */
 
@@ -81,7 +88,7 @@ class DapmenUserController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\himpunan $himpunan
+     * @param  \App\Models\dapmenUser $dapmenUser
      * @return \Illuminate\Http\Response
      */
 
@@ -95,8 +102,8 @@ class DapmenUserController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdatehimpunanRequest  $request
-     * @param  \App\Models\himpuan $himpunan
+     * @param  \App\Http\Requests\UpdatedapmenUserRequest  $request
+     * @param  \App\Models\himpuan $dapmenUser
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -116,13 +123,20 @@ class DapmenUserController extends Controller
                 'nomorHp' => $request->nomorHp,
             ]
         );
-        return redirect('/cms-dapmen')->with('sukses', 'Berhasil Edit Data!');
+
+        if (auth()->user()->roles_id == 1) {
+            return redirect('super/begalin')->with('sukses', 'Berhasil Edit Data!');
+        } elseif (auth()->user()->roles_id == 2) {
+            return redirect('admin/begalin')->with('sukses', 'Berhasil Edit Data!');
+        } elseif (auth()->user()->roles_id == 6) {
+            return redirect('dapmen/adminUser')->with('sukses', 'Berhasil Edit Data!');
+        }
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\himpunan  $himpunan
+     * @param  \App\Models\dapmenUser  $dapmenUser
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
@@ -130,6 +144,12 @@ class DapmenUserController extends Controller
         $data = User::where('id', $id)->first();
         $data->delete();
 
-        return redirect('/cms-dapmen')->with('sukses', 'Berhasil Hapus Data!');
+        if (auth()->user()->roles_id == 1) {
+            return redirect('super/begalin')->with('sukses', 'Berhasil Hapus Data!');
+        } elseif (auth()->user()->roles_id == 2) {
+            return redirect('admin/begalin')->with('sukses', 'Berhasil Hapus Data!');
+        } elseif (auth()->user()->roles_id == 6) {
+            return redirect('dapmen/adminUser')->with('sukses', 'Berhasil Hapus Data!');
+        }
     }
 }

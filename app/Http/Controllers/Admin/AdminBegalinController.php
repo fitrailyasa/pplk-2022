@@ -44,7 +44,11 @@ class AdminBegalinController extends Controller
             'isi' => $request->isi
         ]);
 
-        return redirect('/begalin')->with('sukses', 'Berhasil Tambah Data!');
+        if (auth()->user()->roles_id == 1) {
+            return redirect('super/begalin')->with('sukses', 'Berhasil Tambah Data!');
+        } elseif (auth()->user()->roles_id == 2) {
+            return redirect('admin/begalin')->with('sukses', 'Berhasil Tambah Data!');
+        }
     }
 
     /**
@@ -88,7 +92,11 @@ class AdminBegalinController extends Controller
                 'isi' => $request->isi
             ]
         );
-        return redirect('/begalin')->with('sukses', 'Berhasil Edit Data!');
+        if (auth()->user()->roles_id == 1) {
+            return redirect('super/begalin')->with('sukses', 'Berhasil Edit Data!');
+        } elseif (auth()->user()->roles_id == 2) {
+            return redirect('admin/begalin')->with('sukses', 'Berhasil Edit Data!');
+        }
     }
 
     /**
@@ -102,6 +110,10 @@ class AdminBegalinController extends Controller
         $data = Begalin::where('id', $id)->first();
         $data->delete();
 
-        return redirect('/begalin')->with('sukses', 'Berhasil Hapus Data!');
+        if (auth()->user()->roles_id == 1) {
+            return redirect('super/begalin')->with('sukses', 'Berhasil Hapus Data!');
+        } elseif (auth()->user()->roles_id == 2) {
+            return redirect('admin/begalin')->with('sukses', 'Berhasil Hapus Data!');
+        }
     }
 }

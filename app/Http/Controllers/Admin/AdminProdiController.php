@@ -69,7 +69,11 @@ class AdminProdiController extends Controller
         );
         $file->move($location, $filename);
 
-        return redirect('/adminProdi')->with('sukses', 'Berhasil Tambah Data!');
+        if (auth()->user()->roles_id == 1) {
+            return redirect('super/prodi')->with('sukses', 'Berhasil Tambah Data!');
+        } elseif (auth()->user()->roles_id == 2) {
+            return redirect('admin/prodi')->with('sukses', 'Berhasil Tambah Data!');
+        }
     }
 
     /**
@@ -139,7 +143,11 @@ class AdminProdiController extends Controller
             $location = '../public/assets/logoProdi/';
             $file->move($location, $filename);
         }
-        return redirect('/adminProdi')->with('sukses', 'Berhasil Edit Data!');
+        if (auth()->user()->roles_id == 1) {
+            return redirect('super/prodi')->with('sukses', 'Berhasil Edit Data!');
+        } elseif (auth()->user()->roles_id == 2) {
+            return redirect('admin/prodi')->with('sukses', 'Berhasil Edit Data!');
+        }
     }
 
     /**
@@ -153,6 +161,10 @@ class AdminProdiController extends Controller
         $data = Prodi::where('id', $id)->first();
         $data->delete();
 
-        return redirect('/adminProdi')->with('sukses', 'Berhasil Hapus Data!');
+        if (auth()->user()->roles_id == 1) {
+            return redirect('super/prodi')->with('sukses', 'Berhasil Hapus Data!');
+        } elseif (auth()->user()->roles_id == 2) {
+            return redirect('admin/prodi')->with('sukses', 'Berhasil Hapus Data!');
+        }
     }
 }
