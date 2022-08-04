@@ -89,56 +89,28 @@
           <!--Pakai class active utk mengaktifkan button-->
           <!--Sama class menu-open supaya dropdown otomatis terbuka di awal load page-->
 
-
-
-
           @if(auth()->user()->roles_id == 1)
-        <!--Dashboard-->
-        <li class="nav-item">
-            <a href="/cms-super" onclick="openCMS(event, 'dashboard')" class="nav-link tablinks ">
-                <i class="fas fa-rocket nav-icon"></i>
-                <p>
-                Dashboard
-                </p>
-            </a>
+          <!--Dashboard-->
+            <li class="nav-item">
+                <a href="/cms-super" onclick="openCMS(event, 'dashboard')" class="nav-link tablinks ">
+                    <i class="fas fa-rocket nav-icon"></i>
+                    <p>
+                    Dashboard
+                    </p>
+                </a>
             </li>
             <!--./Dashboard-->
 
             <!--Beranda-->
             <li class="nav-item">
-            <a href="/beranda" class="nav-link">
-                <i class="fa-solid fa-earth-asia nav-icon"></i>
-                <p>
-                Home PPLK 2022
-                </p>
-            </a>
+                <a href="/beranda" class="nav-link">
+                    <i class="fa-solid fa-earth-asia nav-icon"></i>
+                    <p>
+                    Home PPLK 2022
+                    </p>
+                </a>
             </li>
             <!--./Beranda-->
-          <!--User-->
-          <li class="nav-item">
-            <a class="nav-link tabitem">
-              <i class="nav-icon fa-solid fa-user-astronaut"></i>
-              <p>
-                User
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{ route('adminUser.create') }}" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Tambah User</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{ route('adminUser.index') }}" class="nav-link tablinks">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Kelola Data User</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <!--./User-->
 
           <!--UPT ITERA-->
           <li class="nav-item">
@@ -419,6 +391,28 @@
           <!--./Scanner-->
 
           @elseif(auth()->user()->roles_id == 2)
+          <!--Dashboard-->
+          <li class="nav-item">
+            <a href="/cms-dapmen" onclick="openCMS(event, 'dashboard')" class="nav-link tablinks ">
+                <i class="fas fa-rocket nav-icon"></i>
+                <p>
+                Dashboard
+                </p>
+            </a>
+          </li>
+          <!--./Dashboard-->
+
+          <!--Beranda-->
+          <li class="nav-item">
+            <a href="/beranda" class="nav-link">
+                <i class="fa-solid fa-earth-asia nav-icon"></i>
+                <p>
+                Home PPLK 2022
+                </p>
+            </a>
+          </li>
+          <!--./Beranda-->
+
           <!--UPT ITERA-->
           <li class="nav-item">
             <a class="nav-link tabitem">
@@ -588,6 +582,28 @@
           <!--./Booklet-->
 
           @elseif(auth()->user()->roles_id == 3)
+          <!--Dashboard-->
+          <li class="nav-item">
+            <a href="/cms-dapmen" onclick="openCMS(event, 'dashboard')" class="nav-link tablinks ">
+                <i class="fas fa-rocket nav-icon"></i>
+                <p>
+                Dashboard
+                </p>
+            </a>
+          </li>
+          <!--./Dashboard-->
+
+          <!--Beranda-->
+          <li class="nav-item">
+            <a href="/beranda" class="nav-link">
+                <i class="fa-solid fa-earth-asia nav-icon"></i>
+                <p>
+                Home PPLK 2022
+                </p>
+            </a>
+          </li>
+          <!--./Beranda-->
+
           <!--Prodi-->
           <li class="nav-item">
             <a class="nav-link tabitem">
@@ -679,6 +695,28 @@
           <!--./Scanner-->
 
           @elseif(auth()->user()->roles_id == 5)
+          <!--Dashboard-->
+          <li class="nav-item">
+            <a href="/cms-dapmen" onclick="openCMS(event, 'dashboard')" class="nav-link tablinks ">
+                <i class="fas fa-rocket nav-icon"></i>
+                <p>
+                Dashboard
+                </p>
+            </a>
+           </li>
+           <!--./Dashboard-->
+
+          <!--Beranda-->
+          <li class="nav-item">
+            <a href="/beranda" class="nav-link">
+                <i class="fa-solid fa-earth-asia nav-icon"></i>
+                <p>
+                Home PPLK 2022
+                </p>
+            </a>
+          </li>
+          <!--./Beranda-->
+
           <!--Gform-->
           <li class="nav-item">
             <a class="nav-link tabitem">
@@ -712,26 +750,26 @@
 
           @elseif(auth()->user()->roles_id == 6)
            <!--Dashboard-->
-        <li class="nav-item">
+           <li class="nav-item">
             <a href="/cms-dapmen" onclick="openCMS(event, 'dashboard')" class="nav-link tablinks ">
                 <i class="fas fa-rocket nav-icon"></i>
                 <p>
                 Dashboard
                 </p>
             </a>
-            </li>
-            <!--./Dashboard-->
+           </li>
+           <!--./Dashboard-->
 
-            <!--Beranda-->
-            <li class="nav-item">
+          <!--Beranda-->
+          <li class="nav-item">
             <a href="/beranda" class="nav-link">
                 <i class="fa-solid fa-earth-asia nav-icon"></i>
                 <p>
                 Home PPLK 2022
                 </p>
             </a>
-            </li>
-            <!--./Beranda-->
+          </li>
+          <!--./Beranda-->
 
           <!--User-->
           <li class="nav-item">
