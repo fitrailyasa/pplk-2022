@@ -18,11 +18,6 @@
 
 @section('content')
     <!-- CONTENT -->
-    <!-- Landing Page -->
-    <div id="landingPageJurusan" class="ratio ratio-16x9">
-        
-    </div>
-
     <!-- nav&tabs -->
     <!-- pills -->
     <ul class="nav nav-pills mt-4 flex-nowrap  justify-content-center" id="pills-tab" role="tablist">
@@ -86,86 +81,21 @@
         <div class="tab-pane fade show active  justify-content-center" id="pills-home" role="tabpanel"
             aria-labelledby="pills-home-tab" tabindex="0">
             <div class="container-fluid d-flex flex-wrap justify-content-around" id="terakhir">
-                <button type="button" class="btn my-4 prodi-card">
+                @foreach($prodis as $prodi)
+                @if($prodi->jurusan_id == 3)
+                <a style="text-decoration:none;" href="/detail-prodi/{{ $prodi->id }}">
+                    <button type="button" href="/detail-prodi/{{ $prodi->id }}" class="btn my-4 prodi-card">
                     <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/Fisika.svg') }}" class="card-img-top rounded-5" alt="...">
+                        <img src="{{ asset('assets/logoProdi/'. $prodi->namaSingkat.'.svg') }}" class="card-img-top rounded-5" alt="...">
                         <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Fisika</p>
+                            <p class="card-text pt-2 rounded-3 text-center text-light">{{ $prodi->namaLengkap }}</p>
+                            <a href="{{ route('detailProdi',$prodi->id) }}"></a>
                         </div>
                     </div>
                 </button>
-
-                <button type="button" class="btn my-4 prodi-card">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/Matematika.svg') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Matematika</p>
-                        </div>
-                    </div>
-                </button>
-
-                <button type="button" class="btn my-4 prodi-card">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/Biologi.svg') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Biologi</p>
-                        </div>
-                    </div>
-                </button>
-
-                <button type="button" class="btn my-4 prodi-card">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/Kimia.svg') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Kimia</p>
-                        </div>
-                    </div>
-                </button>
-
-                <button type="button" class="btn my-4 prodi-card">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/Farmasi.svg') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Farmasi</p>
-                        </div>
-                    </div>
-                </button>
-
-                <button type="button" class="btn my-4 prodi-card scroll-reveal">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/Atmosfer Keplanetan.svg') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Atmosfer dan Keplanetan</p>
-                        </div>
-                    </div>
-                </button>
-
-                <button type="button" class="btn my-4 prodi-card scroll-reveal">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/Aktuaria.svg') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Sains Aktuaria</p>
-                        </div>
-                    </div>
-                </button>
-
-                <button type="button" class="btn my-4 prodi-card scroll-reveal">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/lingkungan kelautan.svg') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Sains Lingkungan Kelautan</p>
-                        </div>
-                    </div>
-                </button>
-
-                <button type="button" class="btn my-4 prodi-card scroll-reveal">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/sains data.svg') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Sains Data</p>
-                        </div>
-                    </div>
-                </button>
+                </a>
+                @endif
+                @endforeach
             </div>
         </div>
 
@@ -173,300 +103,49 @@
         <div class="tab-pane fade justify-content-center" id="pills-profile" role="tabpanel"
             aria-labelledby="pills-profile-tab" tabindex="0">
             <div class="container-fluid d-flex flex-wrap justify-content-around" id="terakhir">
-                <button type="button" class="btn my-4 prodi-card scroll-reveal">
+                @foreach($prodis as $prodi)
+                @if($prodi->jurusan_id == 1)
+                <a style="text-decoration:none;" href="/detail-prodi/{{ $prodi->id }}">
+                <button type="button" href="/detail-prodi/{{ $prodi->id }}" class="btn my-4 prodi-card">
                     <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/Perencanaan Wilayah Dan Kota .svg') }}" class="card-img-top rounded-5" alt="...">
+                        <img src="{{ asset('assets/logoProdi'}}/{{ $prodi->logo }}" class="card-img-top rounded-5" alt="...">
                         <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Perencanaan Wilayah dan Kota</p>
+                            <p class="card-text pt-2 rounded-3 text-center text-light">{{ $prodi->namaLengkap }}</p>
+                            <a href="{{ route('detailProdi',$prodi->id) }}"></a>
                         </div>
                     </div>
                 </button>
-
-                <button type="button" class="btn my-4 prodi-card scroll-reveal">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/Teknik Geomatika .svg') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Teknik Geomatika</p>
-                        </div>
-                    </div>
-                </button>
-
-                <button type="button" class="btn my-4 prodi-card scroll-reveal">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/Teknik sipil .svg') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Teknik Sipil</p>
-                        </div>
-                    </div>
-                </button>
-
-                <button type="button" class="btn my-4 prodi-card scroll-reveal">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/Teknik Arsitektur .svg') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Arsitektur</p>
-                        </div>
-                    </div>
-                </button>
-
-                <button type="button" class="btn my-4 prodi-card scroll-reveal">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/Teknik Lingkungan .svg') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Teknik Lingkungan</p>
-                        </div>
-                    </div>
-                </button>
-
-                <button type="button" class="btn my-4 prodi-card scroll-reveal">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/Teknik Kelautan .svg') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Teknik Kelautan</p>
-                        </div>
-                    </div>
-                </button>
-
-                <button type="button" class="btn my-4 prodi-card scroll-reveal">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/DKV.svg') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Desain Komunikasi Visual</p>
-                        </div>
-                    </div>
-                </button>
-
-                <button type="button" class="btn my-4 prodi-card scroll-reveal">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/rsitektur Lanskap .svg') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Arsitektur Lanskap</p>
-                        </div>
-                    </div>
-                </button>
-
-                <button type="button" class="btn my-4 prodi-card scroll-reveal">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/Perkretapian .svg') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Teknik Perkretapian</p>
-                        </div>
-                    </div>
-                </button>
-
-                <button type="button" class="btn my-4 prodi-card scroll-reveal">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/2.svg') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Tata Kelola Air Terpadu</p>
-                        </div>
-                    </div>
-                </button>
-            </div>
+                </a>
+                @endif
+                @endforeach
+        </div>
         </div>
 
         <!-- tab jurusan JTIP -->
         <div class="tab-pane fade justify-content-center" id="pills-contact" role="tabpanel"
             aria-labelledby="pills-contact-tab" tabindex="0">
             <div class="container-fluid d-flex flex-wrap justify-content-around" id="terakhir">
-                <button type="button" class="btn my-4 prodi-card">
+                @foreach($prodis as $prodi)
+                @if($prodi->jurusan_id == 2)
+                <a style="text-decoration:none;" href="/detail-prodi/{{ $prodi->id }}">
+                <button type="button" href="/detail-prodi/{{ $prodi->id }}" class="btn my-4 prodi-card">
                     <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/Teknik Elektro.svg') }}" class="card-img-top rounded-5" alt="...">
+                        <img src="{{ asset('assets/logoProdi') }}/{{ $prodi->logo }}" class="card-img-top rounded-5" alt="...">
                         <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Teknik Elektro</p>
+                            <p class="card-text pt-2 rounded-3 text-center text-light">{{ $prodi->namaLengkap }}</p>
+                            <a href="{{ route('detailProdi',$prodi->id) }}"></a>
                         </div>
                     </div>
                 </button>
-
-                <button type="button" class="btn my-4 prodi-card">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/Teknik Fisika.svg') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Teknik Fisika</p>
-                        </div>
-                    </div>
-                </button>
-
-                <button type="button" class="btn my-4 prodi-card">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/Teknik Informatika.svg') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Teknik Informatika</p>
-                        </div>
-                    </div>
-                </button>
-
-                <button type="button" class="btn my-4 prodi-card scroll-reveal">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/Teknik Geologi.svg') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Teknik Geologi</p>
-                        </div>
-                    </div>
-                </button>
-
-                <button type="button" class="btn my-4 prodi-card scroll-reveal">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/Teknik Geofisika.svg') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Teknik Geofisika</p>
-                        </div>
-                    </div>
-                </button>
-
-                <button type="button" class="btn my-4 prodi-card scroll-reveal">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/Teknik Mesin.svg') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Teknik Mesin</p>
-                        </div>
-                    </div>
-                </button>
-
-                <button type="button" class="btn my-4 prodi-card scroll-reveal">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/Teknik Kimia.svg') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Teknik Kimia</p>
-                        </div>
-                    </div>
-                </button>
-
-                <button type="button" class="btn my-4 prodi-card scroll-reveal">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/Teknik Material.svg') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Teknik Material</p>
-                        </div>
-                    </div>
-                </button>
-
-                <button type="button" class="btn my-4 prodi-card scroll-reveal">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/Teknik Sistem Energi.svg') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Teknik Sistem Energi</p>
-                        </div>
-                    </div>
-                </button>
-
-                <button type="button" class="btn my-4 prodi-card scroll-reveal">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/industri.png') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Teknik Industri</p>
-                        </div>
-                    </div>
-                </button>
-
-                <button type="button" class="btn my-4 prodi-card scroll-reveal">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/telekomunikasi.png') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Teknik Telekomunikasi</p>
-                        </div>
-                    </div>
-                </button>
-
-                <button type="button" class="btn my-4 prodi-card scroll-reveal">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/pertambangan.png') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Teknik Pertambangan</p>
-                        </div>
-                    </div>
-                </button>
-
-                <button type="button" class="btn my-4 prodi-card scroll-reveal">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/biosistem.png') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Teknik Biosistem</p>
-                        </div>
-                    </div>
-                </button>
-
-                <button type="button" class="btn my-4 prodi-card scroll-reveal">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/biomedik.png') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Teknik Biomedik</p>
-                        </div>
-                    </div>
-                </button>
-
-                <button type="button" class="btn my-4 prodi-card scroll-reveal">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/pangan.png') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Teknologi Pangan</p>
-                        </div>
-                    </div>
-                </button>
-
-                <button type="button" class="btn my-4 prodi-card scroll-reveal">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/tip.png') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Teknologi Industri Pertanian</p>
-                        </div>
-                    </div>
-                </button>
-
-                <button type="button" class="btn my-4 prodi-card scroll-reveal">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/rekhut.png') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Rekayasa Kehutanan</p>
-                        </div>
-                    </div>
-                </button>
-
-                <button type="button" class="btn my-4 prodi-card scroll-reveal">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/1.svg') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Rekayasa Kosmetik</p>
-                        </div>
-                    </div>
-                </button>
-
-                <button type="button" class="btn my-4 prodi-card scroll-reveal">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/3.svg') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Rekayasa Minyak dan Gas</p>
-                        </div>
-                    </div>
-                </button>
-
-                <button type="button" class="btn my-4 prodi-card scroll-reveal">
-                    <div class="card rounded-5">
-                        <img src="{{ asset('assets/logoProdi/instrumentasiDanAutomasi.png') }}" class="card-img-top rounded-5" alt="...">
-                        <div class="card-body">
-                            <p class="card-text pt-2 rounded-3 text-center text-light">Instrumentasi dan Automasi</p>
-                        </div>
-                    </div>
-                </button>
+            </a>
+                @endif
+                @endforeach
             </div>
-        </div>
+    </div>
     </div>
 @endsection
 
 @section('script')
     <!-- SCRIPTS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-    <!-- scrollReveal -->
-    {{-- <script src="{{ asset('assets/node_modules/scrollreveal/dist/scrollreveal.min.js') }}"></script>
-    <script>
-        ScrollReveal().reveal('.prodi-card', {
-            delay: 100,
-            interval: 300,
-            distance: '10rem',
-            origin: 'bottom',
-            reset: true,
-        });
-    </script> --}}
-
 @endsection

@@ -19,9 +19,9 @@
             {{ session('error') }}
           </div>
           @endif
-          <div class="container" ng-app="formvalid">
+          <div class="container">
+            <div class="container" ng-app="formvalid">
             <div class="panel" data-ng-controller="validationCtrl">
-            <div class="panel-heading border">    
             </div>
           <div class="panel-body">
                 <table class=" table-responsive table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt">
@@ -30,16 +30,6 @@
                     <th>No</th>
                     <th>Nama Lengkap</th>
                     <th>Nama Singkat</th>
-                    <th>visi </th>
-                    <th>misi</th>
-                    <th>pembina</th>
-                    <th>Ketua Umum</th>
-                    <th>Dies Natalis</th>
-                    <th>Logo</th>
-                    <th>Filosofi Logo</th>
-                    <th>Dokumentasi1</th>
-                    <th>Dokumentasi2</th>
-                    <th>Dokumentasi3</th>
                     <th>More</th>
                   </tr>
                 </thead>
@@ -49,25 +39,22 @@
                     <td>{{$loop->iteration}}</td>
                     <td>{{ $ukm->namaLengkap}}</td>
                     <td>{{ $ukm->namaSingkat}}</td>
-                    <td>{{ $ukm->visi}}</td>
-                    <td>{{ $ukm->misi}}</td>
-                    <td>{{ $ukm->pembina}}</td>
-                    <td>{{ $ukm->ketuaUmum}}</td>
-                    <td>{{ $ukm->tahunBerdiri}}</td>
-                    <td>{{ $ukm->logo }}</td>
-                    <td>{{ $ukm->filosofiLogo}}</td>
-                    <td>{{ $ukm->dokumentasi1 }}</td>
-                    <td>{{ $ukm->dokumentasi2 }}</td>
-                    <td>{{ $ukm->dokumentasi3 }}</td>
-                 
                     <td class="manage-row">
-                      <a href="{{ route('adminUkm.edit',$ukm->id) }}" class="edit-button">
-                        <i class="fa-solid fa-marker"></i>
-                      </a>
-                      <!-- Button trigger modal -->
-                      <a role="button"  class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm{{$ukm->id}}">
-                        <i class="fa-solid fa-trash-can"></i>
-                      </a>
+                    @if(auth()->user()->roles_id == 1)
+                        <a href="{{ route('super.ukm.show',$ukm->id) }}" class="edit-button">
+                          <i class="fa-solid fa-eye"></i>
+                        </a>
+                        <a href="{{ route('super.ukm.edit',$ukm->id) }}" class="edit-button">
+                          <i class="fa-solid fa-marker"></i>
+                        </a>
+                    @elseif(auth()->user()->roles_id == 2)
+                        <a href="{{ route('admin.ukm.show',$ukm->id) }}" class="edit-button">
+                          <i class="fa-solid fa-eye"></i>
+                        </a>
+                        <a href="{{ route('admin.ukm.edit',$ukm->id) }}" class="edit-button">
+                          <i class="fa-solid fa-marker"></i>
+                        </a>
+                    @endif
                       <!-- Modal -->
                       <div class="modal fade bd-example-modal-sm{{$ukm->id}}" tabindex="-1" role="dialog" aria-hidden="true">
                         <div class="modal-dialog ">
@@ -79,8 +66,12 @@
                                 </div>
                                 <div class="modal-body">Apakah anda yakin ingin menghapus data?</div>
                                 <div class="modal-footer">
-                                  <form action="{{route('adminUkm.destroy', $ukm->id)}}" method="POST">
-                                    @method('DELETE')
+                                @if(auth()->user()->roles_id == 1)
+                                    <form action="{{route('super.ukm.destroy', $ukm->id)}}" method="POST">
+                                @elseif(auth()->user()->roles_id == 2)
+                                    <form action="{{route('admin.ukm.destroy', $ukm->id)}}" method="POST">
+                                @endif
+                                @method('DELETE')
                                     @csrf
                                     <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
                                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>

@@ -20,16 +20,17 @@
             {{ session('error') }}
           </div>
           @endif
-          <div class="container" ng-app="formvalid">
-            <div class="panel" data-ng-controller="validationCtrl">
-            <div class="panel-heading border">    
+          <div class="container">
+            <div class="panel">
+            <div class="panel-heading border">
             </div>
           <div class="panel-body">
-                <table class=" table-responsive table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt">
+                <table class=" table-responsive table table-bordered bordered table-striped table-condensed datatable">
                 <thead>
                   <tr>
                     <th>No</th>
                     <th>Deskripsi</th>
+                    <th>More</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -38,9 +39,21 @@
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $funfact->isi }}</td>
                     <td class="manage-row">
-                      <a href="{{ route('adminFunfact.edit',$funfact->id) }}" class="edit-button">
-                        <i class="fa-solid fa-marker"></i>
-                      </a>
+                    @if(auth()->user()->roles_id == 1)
+                        <a href="{{ route('super.funfact.show',$funfact->id) }}" class="edit-button">
+                          <i class="fa-solid fa-eye"></i>
+                        </a>
+                        <a href="{{ route('super.funfact.edit',$funfact->id) }}" class="edit-button">
+                          <i class="fa-solid fa-marker"></i>
+                        </a>
+                    @elseif(auth()->user()->roles_id == 2)
+                        <a href="{{ route('admin.funfact.show',$funfact->id) }}" class="edit-button">
+                          <i class="fa-solid fa-eye"></i>
+                        </a>
+                        <a href="{{ route('admin.funfact.edit',$funfact->id) }}" class="edit-button">
+                          <i class="fa-solid fa-marker"></i>
+                        </a>
+                    @endif
                       <!-- Button trigger modal -->
                       <a role="button"  class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm{{$funfact->id}}">
                         <i class="fa-solid fa-trash-can"></i>
@@ -57,7 +70,11 @@
                                 </div>
                                 <div class="modal-body">Apakah anda yakin ingin menghapus data?</div>
                                 <div class="modal-footer">
-                                  <form action="{{route('adminFunfact.destroy', $funfact->id)}}" method="POST">
+                                @if(auth()->user()->roles_id == 1)
+                                    <form action="{{route('super.funfact.destroy', $funfact->id)}}" method="POST">
+                                @elseif(auth()->user()->roles_id == 2)
+                                    <form action="{{route('admin.funfact.destroy', $funfact->id)}}" method="POST">
+                                @endif
                                     @method('DELETE')
                                     @csrf
                                     <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">

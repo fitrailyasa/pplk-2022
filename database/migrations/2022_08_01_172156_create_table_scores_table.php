@@ -15,6 +15,7 @@ class CreateTableScoresTable extends Migration
     {
         Schema::create('table_scores', function (Blueprint $table) {
             $table->id();
+            $table->string('userid');
             $table->string('token')->unique();
             $table->integer('score');
             $table->string('kelompok');

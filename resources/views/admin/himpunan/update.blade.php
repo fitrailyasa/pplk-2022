@@ -11,7 +11,11 @@
     <h4 class="card-title">Edit Data Himpunan</h4>
     </div>
     <div class="card-body">
-      <form method="POST" action="{{ route('adminHimpunan.update',$himpunan->id) }}" enctype='multipart/form-data'>
+    @if(auth()->user()->roles_id == 1)
+        <form method="POST" action="{{ route('super.himpunan.update') }}" enctype='multipart/form-data'>
+    @elseif(auth()->user()->roles_id == 2)
+        <form method="POST" action="{{ route('admin.himpunan.update') }}" enctype='multipart/form-data'>
+    @endif
       @method('PUT')
       @csrf
       <input type="hidden" name="id" value="{{ $himpunan->id }}">
@@ -77,7 +81,7 @@
         </div>
         <div class="mb-3 row">
           <div class="col-sm-9">
-            <button type="submit" class="btn btn-primary ">Ubah</button>
+            <button type="submit" class="btn btn-primary ">Simpan</button>
           </div>
         </div>
         </form>

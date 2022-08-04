@@ -22,9 +22,9 @@
             {{ session('error') }}
           </div>
           @endif
-          <div class="container" ng-app="formvalid">
-            <div class="panel" data-ng-controller="validationCtrl">
-            <div class="panel-heading border">    
+          <div class="container">
+            <div class="panel">
+            <div class="panel-heading border">
             </div>
           <div class="panel-body">
                 <table class=" table-responsive table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt">
@@ -32,7 +32,7 @@
                   <tr>
                     <th>No</th>
                     <th>judul</th>
-                    <th>isi</th>
+                    <th>More</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -40,11 +40,22 @@
                   <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $begalin->judul }}</td>
-                    <td>{{ $begalin->isi }}</td>
                     <td class="manage-row">
-                      <a href="{{ route('adminBegalin.edit',$begalin->id) }}" class="edit-button">
+                    @if(auth()->user()->roles_id == 1)
+                      <a href="{{ route('super.begalin.show',$begalin->id) }}" class="edit-button">
+                        <i class="fa-solid fa-eye"></i>
+                      </a>
+                      <a href="{{ route('super.begalin.edit',$begalin->id) }}" class="edit-button">
                         <i class="fa-solid fa-marker"></i>
                       </a>
+                    @elseif(auth()->user()->roles_id == 2)
+                      <a href="{{ route('admin.begalin.show',$begalin->id) }}" class="edit-button">
+                        <i class="fa-solid fa-eye"></i>
+                      </a>
+                      <a href="{{ route('admin.begalin.edit',$begalin->id) }}" class="edit-button">
+                        <i class="fa-solid fa-marker"></i>
+                      </a>
+                    @endif
                       <!-- Button trigger modal -->
                       <a role="button"  class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm{{$begalin->id}}">
                         <i class="fa-solid fa-trash-can"></i>
@@ -61,7 +72,11 @@
                                 </div>
                                 <div class="modal-body">Apakah anda yakin ingin menghapus data?</div>
                                 <div class="modal-footer">
-                                  <form action="{{route('adminBegalin.destroy', $begalin->id)}}" method="POST">
+                                @if(auth()->user()->roles_id == 1)
+                                    <form action="{{route('super.begalin.destroy', $begalin->id)}}" method="POST">
+                                @elseif(auth()->user()->roles_id == 2)
+                                    <form action="{{route('admin.begalin.destroy', $begalin->id)}}" method="POST">
+                                @endif
                                     @method('DELETE')
                                     @csrf
                                     <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">

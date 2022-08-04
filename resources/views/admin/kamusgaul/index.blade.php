@@ -22,7 +22,7 @@
           @endif
           <div class="container" ng-app="formvalid">
             <div class="panel" data-ng-controller="validationCtrl">
-            <div class="panel-heading border">    
+            <div class="panel-heading border">
             </div>
           <div class="panel-body">
                 <table class=" table-responsive table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt">
@@ -30,8 +30,6 @@
                   <tr>
                     <th>No</th>
                     <th>Kamus Gaul</th>
-                    <th>Arti Kamus</th>
-                    <th>Contoh Penggunaan</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -39,12 +37,22 @@
                   <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $kamusgaul->gaul }}</td>
-                    <td>{{ $kamusgaul->asli }}</td>
-                    <td>{{ $kamusgaul->contohPenggunaan }}</td>
                     <td class="manage-row">
-                      <a href="{{ route('adminKamusgaul.edit',$kamusgaul->id) }}" class="edit-button">
-                        <i class="fa-solid fa-marker"></i>
-                      </a>
+                    @if(auth()->user()->roles_id == 1)
+                        <a href="{{ route('super.kamusgaul.show',$kamusgaul->id) }}" class="edit-button">
+                          <i class="fa-solid fa-eye"></i>
+                        </a>
+                        <a href="{{ route('super.kamusgaul.edit',$kamusgaul->id) }}" class="edit-button">
+                          <i class="fa-solid fa-marker"></i>
+                        </a>
+                    @elseif(auth()->user()->roles_id == 2)
+                        <a href="{{ route('admin.kamusgaul.show',$kamusgaul->id) }}" class="edit-button">
+                          <i class="fa-solid fa-eye"></i>
+                        </a>
+                        <a href="{{ route('admin.kamusgaul.edit',$kamusgaul->id) }}" class="edit-button">
+                          <i class="fa-solid fa-marker"></i>
+                        </a>
+                    @endif
                       <!-- Button trigger modal -->
                       <a role="button"  class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm{{$kamusgaul->id}}">
                         <i class="fa-solid fa-trash-can"></i>
@@ -61,8 +69,12 @@
                                 </div>
                                 <div class="modal-body">Apakah anda yakin ingin menghapus data?</div>
                                 <div class="modal-footer">
-                                  <form action="{{route('adminKamusgaul.destroy', $kamusgaul->id)}}" method="POST">
-                                    @method('DELETE')
+                                @if(auth()->user()->roles_id == 1)
+                                    <form action="{{route('super.kamusgaul.destroy', $kamusgaul->id)}}" method="POST">
+                                @elseif(auth()->user()->roles_id == 2)
+                                    <form action="{{route('admin.kamusgaul.destroy', $kamusgaul->id)}}" method="POST">
+                                @endif
+                                @method('DELETE')
                                     @csrf
                                     <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
                                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>

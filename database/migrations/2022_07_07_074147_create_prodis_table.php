@@ -15,11 +15,11 @@ class CreateProdisTable extends Migration
     {
         Schema::create('prodis', function (Blueprint $table) {
             $table->id();
-            $table->string('namaLengkap')->unique();
-            $table->string('namaSingkat')->unique();
-            $table->text('visi');
-            $table->text('misi');
-            $table->text('deskripsi');
+            $table->string('namaLengkap')->unique()->nullable();
+            $table->string('namaSingkat')->unique()->nullable();
+            $table->text('visi')->nullable();
+            $table->text('misi')->nullable();
+            $table->text('deskripsi')->nullable();
             $table->string('kepalaProdi')->nullable();
             $table->string('akreditasi')->nullable();
             $table->integer('tahunBerdiri')->nullable();
@@ -29,8 +29,8 @@ class CreateProdisTable extends Migration
             $table->string('prestasi1')->nullable();
             $table->string('prestasi2')->nullable();
             $table->string('prestasi3')->nullable();
-            $table->foreignId('jurusan_id');
-            $table->foreign('jurusan_id')->references('id')->on('jurusans');
+            $table->foreignId('jurusan_id')->nullable();
+            $table->foreign('jurusan_id')->references('id')->on('jurusans')->nullable();
             $table->timestamps();
         });
     }

@@ -44,7 +44,24 @@ class AdminUptController extends Controller
             'deskripsi' => $request->deskripsi
         ]);
 
-        return redirect('/adminUpt')->with('sukses', 'Berhasil Tambah Data!');
+        if (auth()->user()->roles_id == 1) {
+            return redirect('super/ukm')->with('sukses', 'Berhasil Tambah Data!');
+        } elseif (auth()->user()->roles_id == 2) {
+            return redirect('admin/ukm')->with('sukses', 'Berhasil Tambah Data!');
+        }
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Upt  $Upt
+     * @return \Illuminate\Http\Response
+     */
+
+    public function show($id)
+    {
+        $upt = Upt::where('id', $id)->first();
+        return view('admin.upt.read', compact('upt'));
     }
 
     /**
@@ -76,7 +93,11 @@ class AdminUptController extends Controller
                 'deskripsi' => $request->deskripsi
             ]
         );
-        return redirect('/adminUpt')->with('sukses', 'Berhasil Edit Data!');
+        if (auth()->user()->roles_id == 1) {
+            return redirect('super/upt')->with('sukses', 'Berhasil Edit Data!');
+        } elseif (auth()->user()->roles_id == 2) {
+            return redirect('admin/upt')->with('sukses', 'Berhasil Edit Data!');
+        }
     }
 
     /**
@@ -90,6 +111,10 @@ class AdminUptController extends Controller
         $data = Upt::where('id', $id)->first();
         $data->delete();
 
-        return redirect('/adminUpt')->with('sukses', 'Berhasil Hapus Data!');
+        if (auth()->user()->roles_id == 1) {
+            return redirect('super/upt')->with('sukses', 'Berhasil Hapus Data!');
+        } elseif (auth()->user()->roles_id == 2) {
+            return redirect('admin/upt')->with('sukses', 'Berhasil Hapus Data!');
+        }
     }
 }

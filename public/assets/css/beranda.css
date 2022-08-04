@@ -383,10 +383,11 @@ body {
         transform: translateY(0px);
     }
 
-
-
     .maskot {
-        width: 100%;
+        width: 200%;
+    }
+    .maskot2 {
+        width: 120%;
     }
 
 }
@@ -450,8 +451,10 @@ body {
         height: 220px;
     }
 
-
     .maskot {
+        display: none;
+    }
+    .maskot2 {
         display: none;
     }
 

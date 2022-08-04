@@ -20,9 +20,9 @@
             {{ session('error') }}
           </div>
           @endif
-          <div class="container" ng-app="formvalid">
+          <div class="container">
+            <div class="container" ng-app="formvalid">
             <div class="panel" data-ng-controller="validationCtrl">
-            <div class="panel-heading border">    
             </div>
           <div class="panel-body">
           <table class=" table-responsive table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt">
@@ -31,15 +31,6 @@
                     <th>No</th>
                     <th>Nama Singkat</th>
                     <th>Nama Lengkap</th>
-                    <th>Visi</th>
-                    <th>Misi</th>
-                    <th>Deskripsi</th>
-                    <th>Kode Warna</th>
-                    <th>Pembina</th>
-                    <th>Ketua Himpunan</th>
-                    <th>Logo</th>
-                    <th>Filosofi Logo</th>
-                    <th>Tahun Berdiri</th>
                     <th>More</th>
                   </tr>
                 </thead>
@@ -49,19 +40,22 @@
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $himpunan->namaSingkat }}</td>
                     <td>{{ $himpunan->namaLengkap }}</td>
-                    <td>{{ $himpunan->visi }}</td>
-                    <td>{{ $himpunan->misi }}</td>
-                    <td>{{ $himpunan->deskripsi }}</td>
-                    <td>{{ $himpunan->kodeWarna }}</td>
-                    <td>{{ $himpunan->pembina }}</td>
-                    <td>{{ $himpunan->ketuaHimpunan }}</td>
-                    <td>{{ $himpunan->logo }}</td>
-                    <td>{{ $himpunan->filosofiLogo }}</td>
-                    <td>{{ $himpunan->tahunBerdiri }}</td>
                     <td class="manage-row">
-                      <a href="{{ route('adminHimpunan.edit', $himpunan->id)}}" class="edit-button">
-                        <i class="fa-solid fa-marker"></i>
-                      </a>
+                    @if(auth()->user()->roles_id == 1)
+                        <a href="{{ route('super.himpunan.show',$himpunan->id) }}" class="edit-button">
+                          <i class="fa-solid fa-eye"></i>
+                        </a>
+                        <a href="{{ route('super.himpunan.edit',$himpunan->id) }}" class="edit-button">
+                          <i class="fa-solid fa-marker"></i>
+                        </a>
+                    @elseif(auth()->user()->roles_id == 2)
+                        <a href="{{ route('admin.himpunan.show',$himpunan->id) }}" class="edit-button">
+                          <i class="fa-solid fa-eye"></i>
+                        </a>
+                        <a href="{{ route('admin.himpunan.edit',$himpunan->id) }}" class="edit-button">
+                          <i class="fa-solid fa-marker"></i>
+                        </a>
+                    @endif
                       <!-- Button trigger modal -->
                       <a role="button"  class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm{{$himpunan->id}}">
                         <i class="fa-solid fa-trash-can"></i>
@@ -78,8 +72,12 @@
                               Anda yakin menghapus data?
                             </div>
                             <div class="modal-footer">
-                              <form action="{{route('adminHimpunan.destroy', $himpunan->id)}}" method="POST">
-                                @method('DELETE')
+                            @if(auth()->user()->roles_id == 1)
+                                <form action="{{route('super.himpunan.destroy', $himpunan->id)}}" method="POST">
+                            @elseif(auth()->user()->roles_id == 2)
+                                <form action="{{route('admin.himpunan.destroy', $himpunan->id)}}" method="POST">
+                            @endif
+                            @method('DELETE')
                                 @csrf
                                   <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
                                   <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>

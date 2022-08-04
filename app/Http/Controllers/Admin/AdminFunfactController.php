@@ -44,7 +44,24 @@ class AdminFunfactController extends Controller
             'isi' => $request->isi
         ]);
 
-        return redirect('/adminFunfact')->with('sukses', 'Berhasil Tambah Data!');
+        if (auth()->user()->roles_id == 1) {
+            return redirect('super/funfact')->with('sukses', 'Berhasil Tambah Data!');
+        } elseif (auth()->user()->roles_id == 2) {
+            return redirect('admin/funfact')->with('sukses', 'Berhasil Tambah Data!');
+        }
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Funfact  $Funfact
+     * @return \Illuminate\Http\Response
+     */
+
+    public function show($id)
+    {
+        $funfact = Funfact::where('id', $id)->first();
+        return view('admin.funfact.read', compact('funfact'));
     }
 
     /**
@@ -75,7 +92,11 @@ class AdminFunfactController extends Controller
                 'isi' => $request->isi
             ]
         );
-        return redirect('/adminFunfact')->with('sukses', 'Berhasil Edit Data!');
+        if (auth()->user()->roles_id == 1) {
+            return redirect('super/funfact')->with('sukses', 'Berhasil Edit Data!');
+        } elseif (auth()->user()->roles_id == 2) {
+            return redirect('admin/funfact')->with('sukses', 'Berhasil Edit Data!');
+        }
     }
 
     /**
@@ -89,6 +110,10 @@ class AdminFunfactController extends Controller
         $data = Funfact::where('id', $id)->first();
         $data->delete();
 
-        return redirect('/adminFunfact')->with('sukses', 'Berhasil Hapus Data!');
+        if (auth()->user()->roles_id == 1) {
+            return redirect('super/funfact')->with('sukses', 'Berhasil Hapus Data!');
+        } elseif (auth()->user()->roles_id == 2) {
+            return redirect('admin/funfact')->with('sukses', 'Berhasil Hapus Data!');
+        }
     }
 }

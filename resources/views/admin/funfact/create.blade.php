@@ -11,8 +11,11 @@
       <h4 class="card-title">Input Data Funfact</h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="{{ route('createfunFact') }}" enctype='multipart/form-data'>
-
+    @if(auth()->user()->roles_id == 1)
+        <form method="POST" action="{{ route('super.funfact.store') }}" enctype='multipart/form-data'>
+    @elseif(auth()->user()->roles_id == 2)
+        <form method="POST" action="{{ route('admin.funfact.store') }}" enctype='multipart/form-data'>
+    @endif
         @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Deskripsi</label>

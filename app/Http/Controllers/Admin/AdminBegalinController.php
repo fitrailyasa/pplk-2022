@@ -44,7 +44,23 @@ class AdminBegalinController extends Controller
             'isi' => $request->isi
         ]);
 
-        return redirect('/adminBegalin')->with('sukses', 'Berhasil Tambah Data!');
+        if (auth()->user()->roles_id == 1) {
+            return redirect('super/begalin')->with('sukses', 'Berhasil Tambah Data!');
+        } elseif (auth()->user()->roles_id == 2) {
+            return redirect('admin/begalin')->with('sukses', 'Berhasil Tambah Data!');
+        }
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Admin  $admin
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        $begalin = Begalin::where('id', $id)->first();
+        return view('admin.begalin.read', compact('begalin'));
     }
 
     /**
@@ -76,7 +92,11 @@ class AdminBegalinController extends Controller
                 'isi' => $request->isi
             ]
         );
-        return redirect('/adminBegalin')->with('sukses', 'Berhasil Edit Data!');
+        if (auth()->user()->roles_id == 1) {
+            return redirect('super/begalin')->with('sukses', 'Berhasil Edit Data!');
+        } elseif (auth()->user()->roles_id == 2) {
+            return redirect('admin/begalin')->with('sukses', 'Berhasil Edit Data!');
+        }
     }
 
     /**
@@ -90,6 +110,10 @@ class AdminBegalinController extends Controller
         $data = Begalin::where('id', $id)->first();
         $data->delete();
 
-        return redirect('/adminBegalin')->with('sukses', 'Berhasil Hapus Data!');
+        if (auth()->user()->roles_id == 1) {
+            return redirect('super/begalin')->with('sukses', 'Berhasil Hapus Data!');
+        } elseif (auth()->user()->roles_id == 2) {
+            return redirect('admin/begalin')->with('sukses', 'Berhasil Hapus Data!');
+        }
     }
 }

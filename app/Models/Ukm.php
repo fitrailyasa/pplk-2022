@@ -10,6 +10,5 @@ class Ukm extends Model
     use HasFactory;
 
     protected $table = 'ukms';
-    protected $fillable = ['namaLengkap','namaSingkat','visi','misi','pembina','ketuaUmum','tahunBerdiri','logo','filosofiLogo','qrCode','deskripsi','dokumentasi1','dokumentasi2','dokumentasi3'];
-
+    protected $fillable = ['namaLengkap', 'namaSingkat', 'visi', 'misi', 'pembina', 'ketuaUmum', 'tahunBerdiri', 'logo', 'filosofiLogo', 'qrCode', 'deskripsi', 'dokumentasi1', 'dokumentasi2', 'dokumentasi3'];
 }

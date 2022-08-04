@@ -46,7 +46,11 @@ class AdminKamusGaulController extends Controller
             'contohPenggunaan' => $request->contohPenggunaan
         ]);
 
-        return redirect('/adminKamusgaul')->with('sukses', 'Berhasil Tambah Data!');
+        if (auth()->user()->roles_id == 1) {
+            return redirect('super/kamusgaul')->with('sukses', 'Berhasil Tambah Data!');
+        } elseif (auth()->user()->roles_id == 2) {
+            return redirect('admin/kamusgaul')->with('sukses', 'Berhasil Tambah Data!');
+        }
     }
 
     /**
@@ -56,6 +60,11 @@ class AdminKamusGaulController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+    public function show($id)
+    {
+        $kamusgaul = KamusGaul::where('id', $id)->first();
+        return view('admin.kamusgaul.read', compact('kamusgaul'));
+    }
 
     /**
      * Show the form for editing the specified resource.
@@ -63,6 +72,7 @@ class AdminKamusGaulController extends Controller
      * @param  \App\Models\kamusgaul  $kamusgaul
      * @return \Illuminate\Http\Response
      */
+
     public function edit($id)
     {
         $kamusgaul = KamusGaul::where('id', $id)->first();
@@ -86,7 +96,11 @@ class AdminKamusGaulController extends Controller
                 'contohPenggunaan' => $request->contohPenggunaan
             ]
         );
-        return redirect('/adminKamusgaul')->with('sukses', 'Berhasil Edit Data!');
+        if (auth()->user()->roles_id == 1) {
+            return redirect('super/kamusgaul')->with('sukses', 'Berhasil Edit Data!');
+        } elseif (auth()->user()->roles_id == 2) {
+            return redirect('admin/kamusgaul')->with('sukses', 'Berhasil Edit Data!');
+        }
     }
 
     /**
@@ -100,6 +114,10 @@ class AdminKamusGaulController extends Controller
         $data = KamusGaul::where('id', $id)->first();
         $data->delete();
 
-        return redirect('/adminKamusgaul')->with('sukses', 'Berhasil Hapus Data!');
+        if (auth()->user()->roles_id == 1) {
+            return redirect('super/kamusgaul')->with('sukses', 'Berhasil Hapus Data!');
+        } elseif (auth()->user()->roles_id == 2) {
+            return redirect('admin/kamusgaul')->with('sukses', 'Berhasil Hapus Data!');
+        }
     }
 }

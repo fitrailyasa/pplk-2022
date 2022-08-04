@@ -7,9 +7,9 @@
     <!-- STYLES -->
 
     <link rel="stylesheet" href="{{ asset('assets/css/main-style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/games-fix.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ asset('assets/css/games.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -18,8 +18,8 @@
 @endsection
 
 @section('content')
-    <!-- CONTENT -->
-    <div class="content-wrapper">
+     <!-- CONTENT -->
+     <div class="content-wrapper">
         <div class="container-fluid">
             <div class="row justify-content-center pt-5 pb-1">
                 <svg id="games-bounce" width="250" height="250" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -42,21 +42,22 @@
                             <p class="card rounded-4" id="box-group"><i class="fa-solid fa-chess-queen"></i></p>
                         </div>
                         <div class="col-auto user-info">
-                            <p>Kelompok 82</p>
+                            <p>Kelompok </p>
                             <p>Peringkat 1</p>
                         </div>
+
                         <div class="col-auto d-flex">
-                            <p style="font-size:1.3rem; text-indent: 10px; color: azure;" class="points-title"><i style="color:yellow" class="fa-solid fa-coins"></i>  11563 Poin</p>
+                            <p style="font-size:1.3rem; text-indent: 10px; color: azure;" class="points-title"><i style="color:yellow" class="fa-solid fa-coins"></i>  Poin</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="container row justify-content-center pt-4 flex-wrap mx-auto">
-                <a class="p-4 text-light col-md-5 card rounded-4 justify-content-start text-decoration-none" href="" id="choose-games">
+                <a class="p-4 text-light col-md-5 card rounded-4 justify-content-start text-decoration-none" href="/card-list" id="choose-games">
                     <h2 class="fw-bold">Redeem Kode</h2>
                     <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et a diam egestas faucibu</p>
                 </a>
-                <a class="p-4 text-light col-md-5 card rounded-4 justify-content-start text-decoration-none" href="" id="choose-games">
+                <a class="p-4 text-light col-md-5 card rounded-4 justify-content-start text-decoration-none" href="/tebak-bangunan-game/{{ 1 }}" id="choose-games">
                     <h2 class="fw-bold">Tebak Bangunan</h2>
                     <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et a diam egestas faucibu</p>
                 </a>
@@ -69,7 +70,7 @@
                 <div class="top-3-winner row row-cols-3 pb-4">
                     <div class="winner-2 winner">
                         <div class="profile-winner">
-                            <img src="{{ asset('assets/user-profile.jpg') }}" alt="profile-img" />
+                            <img src="{{ asset('assets/juara2.png') }}" alt="Juara 2" />
                             <div class="winner-patch">
                                 <h1 class="winner-text">
                                     2
@@ -77,14 +78,15 @@
                             </div>
                         </div>
                         <div class="info-winner">
+
                             <div class="nama">
                                 <h2>
-                                    Kelompok 82
+                                    Kelompok {{  $leaderboards[1]->kelompok }}
                                 </h2>
                             </div>
                             <div class="point">
                                 <h1>
-                                    34523 Poin
+                                    {{  $leaderboards[1]->score }} poin
                                 </h1>
                             </div>
                         </div>
@@ -96,22 +98,25 @@
                                 <!--<a href='https://pngtree.com/so/big'>big png from pngtree.com/</a>-->
                                 <img src="{{ asset('assets/Golden Crown.png') }}" alt="crown" class="crown-img"/>
                             </div>
-                            <img src="{{ asset('assets/user-profile.jpg') }}" alt="profile-img" />
+                            <img src="{{ asset('assets/juara1.png') }}" alt="Juara 1" />
                             <div class="winner-patch">
                                 <h1 class="winner-text">
                                     1
                                 </h1>
                             </div>
                         </div>
+
+
+
                         <div class="info-winner">
                             <div class="nama">
                                 <h2>
-                                    Kelompok 38
+                                    Kelompok  {{  $leaderboards[0]->kelompok }}
                                 </h2>
                             </div>
                             <div class="point">
                                 <h1>
-                                    559381 Poin
+                                    {{  $leaderboards[0]->score }}  poin
                                 </h1>
                             </div>
                         </div>
@@ -119,7 +124,7 @@
 
                     <div class="winner-3 winner">
                         <div class="profile-winner">
-                            <img src="{{ asset('assets/user-profile.jpg') }}" alt="profile-img" />
+                            <img src="{{ asset('assets/juara3.png') }}" alt="Juara 3" />
                             <div class="winner-patch">
                                 <h1 class="winner-text">
                                     3
@@ -129,20 +134,20 @@
                         <div class="info-winner">
                             <div class="nama">
                                 <h2>
-                                    Kelompok 22
+                                    {{  $leaderboards[2]->kelompok }} Kelompok
                                 </h2>
                             </div>
                             <div class="point">
                                 <h1>
-                                    12938 Poin
+                                    {{  $leaderboards[2]->score }} poin
                                 </h1>
                             </div>
                         </div>
                     </div>
                 </div>
-            @foreach ($leaderboards as $leaderboard )
 
-            @endforeach
+
+
             <div class="container card table-bknd">
                 <table class="table table-bordered table-striped my-3">
                     <thead>
@@ -153,12 +158,14 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @for ($n=4 ; $n<=10 ; $n++)
                         <tr>
-                            <th scope="row">1</th>
-                            <td>{{ $leaderboard -> userid }}</td>
-                            <td>{{ $leaderboard -> score }}</td>
-                        </tr>
 
+                            <td>{{ $n }}</td>
+                            <td>Kelompok {{ $leaderboards[$n]->kelompok }}</td>
+                            <td>{{ $leaderboards[$n]->score }} Poin</td>
+                        </tr>
+                        @endfor
                     </tbody>
                 </table>
             </div>

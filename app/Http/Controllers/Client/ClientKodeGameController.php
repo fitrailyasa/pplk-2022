@@ -34,28 +34,52 @@ class ClientKodeGameController extends Controller
     }
 
 
-    public function sumscore(Request $request){
+    public function sumscore(Request $request, $id){
 
-        $kode=Kode_game::where('kode',$request->code)->first();
+        $nomor = $request->input('nomor');
+        $kodeinput = $request->input('code');
+        $kode=Kode_game::where('no',$nomor)->first();
         $kelompok=auth()->user()->kelompok;
         $token="$kelompok"."$kode->kode";
-
+        $userid = $id ;
         $check = Table_score::where('token', $token)->get();
         $checkCount = $check->count();
 
-        if($checkCount<1){
+        if ($kode->kode == $kodeinput) {
+
+        if($checkCount==0){
+
             Table_score::create([
                 'token' => $token,
+                'userid' => $userid,
+                'score' => $kode->nilai,
+                'kelompok' => $kelompok
             ]);
 
-            $current_score=Leaderboard::where('id',auth()->user()->id)->value('score');
-            $current_score=$current_score+$kode->nilai;
-            Leaderboard::where('id','1')->update(['score'=>$current_score]);
-        }
-        else{
-            return 'Kode sudah pernah dimasukan';
+            $current_score= Leaderboard::where('kelompok',$kelompok)->value('score');
+
+            $current_score= $current_score + $kode->nilai;
+
+            Leaderboard::where('kelompok',$kelompok)->update(['score'=>$current_score]);
+
+            $leaderboards=Leaderboard::where('kelompok',$kelompok)->first();
+
+            return view('client.games.redeem-code.success',compact('leaderboards'));
+
+
         }
 
+        else{
+            $leaderboards=Leaderboard::where('kelompok',$kelompok)->first();
+
+            return view('client.games.redeem-code.failed',compact('leaderboards'));
+        }
+    }else {
+        echo "<script>
+        alert('Kode Tidak Valid ');
+        window.location.href='/card-list'
+         </script>";
+    }
 
 
 
