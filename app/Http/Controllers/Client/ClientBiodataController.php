@@ -207,18 +207,18 @@ public function updateBiodata(Request $request, $id){
     // public function generateAllQrCode()
     // {
     //     for($n=6001;$n<=6634;$n++){
+
     //         $date = Date("m.d.y");
     //         $time = microtime(true);
     //         $qrCode = "$date"."$time"."$date"."$date"."$date"."$date"."$time";
-    //         $user = User::where('id',1)->first();
+    //         $user = User::where('id',$n)->first();
     //         // $user->qrCode = 'kosong';
     //         $user->update(['qrCode' => $qrCode]);
     //         QrCode::format('svg')->margin(2)->size(200)->errorCorrection('H')->generate("$qrCode", "../public/assets/qrcode/"."$qrCode");
-
     //     }
     //         echo "<script>
     //         alert(' Semuaa Data update');
-    //         window.location.href='/'
+    //         window.location.href='/hitung'
     //          </script>";
     // }
 }
