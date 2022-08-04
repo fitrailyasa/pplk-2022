@@ -33,6 +33,7 @@ use App\Http\Controllers\Client\ClientUkmController;
 use App\Http\Controllers\Client\ClientProdiController;
 use App\Http\Controllers\Client\ClientScannerController;
 use App\Http\Controllers\Client\ClientUptController;
+use App\Http\Controllers\Client\ClientGameTebakBangunanController;
 use App\Http\Controllers\Leaderboardcontroller;
 
 
@@ -59,7 +60,6 @@ Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/', [LoginController::class, 'login'])->name('loginPost');
 Route::get('/guest', [guestController::class, 'login'])->name('guest');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
-Route::get('/admin', [AdminController::class, 'index'])->name('cms'); //===> cms admin
 
 // CMS SUPER ADMIN
 Route::middleware([SuperAdmin::class])->group(function () {
@@ -173,9 +173,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/redeem-failed', function () { return view('client.games.redeem-code.failed'); });
     Route::get('/redeem-success', function () { return view('client.games.redeem-code.success'); });
     Route::post('/submitcode/{id}', [ClientKodeGameController::class, 'sumscore'])->name('sumscore');
-    Route::get('/tebak-bangunan',[ClientGameTebakBangunanController::class,'index']);
     Route::get('/tebak-bangunan-game/{id}',[ClientGameTebakBangunanController::class,'show']);
-    Route::get('/tebak-bangunan-game/{id}/{jawaban}',[ClientGameTebakBangunanController::class,'store']);
+    Route::get('/tebak-bangunan-game/{id}/{jawaban}',[ClientGameTebakBangunanController::class,'store'])->name('soalTebakBangunan');
     Route::get('/tebak-bangunan-selesai/{id}',[ClientGameTebakBangunanController::class,'restart']);
 
     // OUR TEAM
