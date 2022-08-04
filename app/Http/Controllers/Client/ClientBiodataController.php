@@ -104,7 +104,13 @@ class ClientBiodataController extends Controller
 
     public function updateProfil(Request $request, $id)
     {
-        $file = $request->file('fotoProfil');
+        $validatedData = $request->validate([
+            'fotoProfil' => 'required|mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
+
+           ]);
+
+
+        $file = $validatedData[('fotoProfil')];
         $viewbiodata = User::find($id);
         $viewbiodata->fotoProfil = time().'_'.$file->getClientOriginalName();
         $viewbiodata->update();
