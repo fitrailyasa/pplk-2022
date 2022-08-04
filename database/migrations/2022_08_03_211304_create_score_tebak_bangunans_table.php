@@ -18,6 +18,7 @@ class CreateScoreTebakBangunansTable extends Migration
             $table->string('user_id');
             $table->string('score');
             $table->string('kelompok');
+            $table->string('kesempatan');
             $table->timestamps();
         });
     }

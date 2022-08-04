@@ -56,7 +56,7 @@
                     <h2 class="fw-bold">Redeem Kode</h2>
                     <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et a diam egestas faucibu</p>
                 </a>
-                <a class="p-4 text-light col-md-5 card rounded-4 justify-content-start text-decoration-none" href="" id="choose-games">
+                <a class="p-4 text-light col-md-5 card rounded-4 justify-content-start text-decoration-none" href="/tebak-bangunan/1" id="choose-games">
                     <h2 class="fw-bold">Tebak Bangunan</h2>
                     <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et a diam egestas faucibu</p>
                 </a>

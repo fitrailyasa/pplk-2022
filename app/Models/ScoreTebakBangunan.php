@@ -9,5 +9,5 @@ class ScoreTebakBangunan extends Model
 {
     use HasFactory;
     protected $table='score_tebak_bangunans';
-    protected $fillable=['user_id','score','kelompok'];
+    protected $fillable=['user_id','score','kelompok','kesempatan'];
 }

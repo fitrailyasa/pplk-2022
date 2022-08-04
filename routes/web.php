@@ -243,10 +243,11 @@ Route::middleware(['auth'])->group(function () {
   });
 
 
-  //TEBAK BANGUNAN
+//TEBAK BANGUNAN
   Route::get('/tebak-bangunan',[ClientGameTebakBangunanController::class,'index']);     // ===> tebak bangunan home
   Route::get('/tebak-bangunan-game/{id}',[ClientGameTebakBangunanController::class,'show']);
   Route::get('/tebak-bangunan-game/{id}/{jawaban}',[ClientGameTebakBangunanController::class,'store']);
+  Route::get('/tebak-bangunan-selesai/{id}',[ClientGameTebakBangunanController::class,'restart']);
 
 
 

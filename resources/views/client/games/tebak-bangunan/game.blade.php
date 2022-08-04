@@ -26,7 +26,7 @@
           <div class="card rounded-5 ap-cd w-100">
             <img src="{{ asset('assets/tebakBangunan/'. $soal->namaBangunan.'.png') }}" alt="" class="card-img-top bg-secondary rounded-5 ratio ratio-16x9" />
             <div class="card-body">
-              <h3 class="card-title text-center text-white">Soal {{ $soal->id }}</h3>
+              <h3 class="card-title text-center text-white"> {{ $soal->soal }}</h3>
             </div>
           </div>
         </div>
