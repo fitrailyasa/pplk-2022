@@ -70,7 +70,7 @@
                 <div class="top-3-winner row row-cols-3 pb-4">
                     <div class="winner-2 winner">
                         <div class="profile-winner">
-                            <img src="{{ asset('assets/user-profile.jpg') }}" alt="profile-img" />
+                            <img src="{{ asset('assets/juara2.png') }}" alt="Juara 2" />
                             <div class="winner-patch">
                                 <h1 class="winner-text">
                                     2
@@ -98,7 +98,7 @@
                                 <!--<a href='https://pngtree.com/so/big'>big png from pngtree.com/</a>-->
                                 <img src="{{ asset('assets/Golden Crown.png') }}" alt="crown" class="crown-img"/>
                             </div>
-                            <img src="{{ asset('assets/user-profile.jpg') }}" alt="profile-img" />
+                            <img src="{{ asset('assets/juara1.png') }}" alt="Juara 1" />
                             <div class="winner-patch">
                                 <h1 class="winner-text">
                                     1
@@ -111,7 +111,7 @@
                         <div class="info-winner">
                             <div class="nama">
                                 <h2>
-                                    {{  $leaderboards[0]->kelompok }} Kelompok
+                                    Kelompok  {{  $leaderboards[0]->kelompok }}
                                 </h2>
                             </div>
                             <div class="point">
@@ -124,7 +124,7 @@
 
                     <div class="winner-3 winner">
                         <div class="profile-winner">
-                            <img src="{{ asset('assets/user-profile.jpg') }}" alt="profile-img" />
+                            <img src="{{ asset('assets/juara3.png') }}" alt="Juara 3" />
                             <div class="winner-patch">
                                 <h1 class="winner-text">
                                     3
@@ -158,7 +158,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @for ($n=3 ; $n<10 ; $n++)
+                        @for ($n=4 ; $n<=10 ; $n++)
                         <tr>
 
                             <td>{{ $n }}</td>
