@@ -18,7 +18,7 @@ class LeaderboardController extends Controller
         $leaderboards = DB::table('leaderboards')
         ->orderByRaw('score DESC')
         ->get()
-        ->take(10);
+        ->take(11);
         return view('client.games.games', compact('leaderboards'));
     }
 

@@ -18,15 +18,15 @@ class LeaderboardSeeder extends Seeder
 
         $roles = [
             [
-                'kelompok' => 'juara1',
+                'kelompok' => 'Juara 1',
                 'score' => '3'
             ],
             [
-                'kelompok' => 'juara2',
+                'kelompok' => 'Juara 2',
                 'score' => '2'
             ],
             [
-                'kelompok' => 'juara3',
+                'kelompok' => 'Juara 3',
                 'score' => '1'
             ],
 
