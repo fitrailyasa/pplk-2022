@@ -8,6 +8,7 @@ use App\Http\Middleware\Admin;
 use App\Http\Middleware\Himpunan;
 use App\Http\Middleware\Ukm;
 use App\Http\Middleware\Kedisiplinan;
+
 use App\Http\Middleware\DapMen;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\AdminBegalinController;
@@ -33,6 +34,7 @@ use App\Http\Controllers\Client\ClientProdiController;
 use App\Http\Controllers\Client\ClientScannerController;
 use App\Http\Controllers\Client\ClientUptController;
 use App\Http\Controllers\Leaderboardcontroller;
+
 
 
 
@@ -171,14 +173,15 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/redeem-failed', function () { return view('client.games.redeem-code.failed'); });
     Route::get('/redeem-success', function () { return view('client.games.redeem-code.success'); });
     Route::post('/submitcode/{id}', [ClientKodeGameController::class, 'sumscore'])->name('sumscore');
-    Route::get('/tebak-bangunan', function () { return view('client.games.tebak-bangunan.home'); });
-    Route::get('/tebak-bangunan-game', function () { return view('client.games.tebak-bangunan.game'); });
+    Route::get('/tebak-bangunan',[ClientGameTebakBangunanController::class,'index']);
+    Route::get('/tebak-bangunan-game/{id}',[ClientGameTebakBangunanController::class,'show']);
+    Route::get('/tebak-bangunan-game/{id}/{jawaban}',[ClientGameTebakBangunanController::class,'store']);
+    Route::get('/tebak-bangunan-selesai/{id}',[ClientGameTebakBangunanController::class,'restart']);
 
     // OUR TEAM
     Route::get('/our-team', function () { return view('client.our-team'); });
 
 });
-
 
 // Route::get('/gen', [ClientBiodataController::class, 'generateAllQrCode']);
 // Route::get('/hitung', [ClientBiodataController::class, 'hitunguser']);
