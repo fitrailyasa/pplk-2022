@@ -19,35 +19,7 @@ class LeaderboardController extends Controller
         ->orderByRaw('score DESC')
         ->get()
         ->take(10);
-
-        $juara1 = DB::table('leaderboards')
-        ->orderByRaw('score DESC')
-        ->get()
-        ->take(1);
-
-        foreach ($juara1 as $b)
-            {
-                $c =  $b->score;
-            }
-
-        $juara2 = DB::table('leaderboards')
-        ->where('score', '<' , $c)
-        ->orderByRaw('score DESC')
-        ->get()
-        ->take(1);
-
-        foreach ($juara2 as $j)
-        {
-            $p =  $j->score;
-        }
-
-        $juara3 = DB::table('leaderboards')
-        ->where('score', '<' , $p)
-        ->orderByRaw('score DESC')
-        ->get()
-        ->take(1);
-
-        return view('client.games.games', compact('leaderboards','juara1','juara2','juara3'));
+        return view('client.games.games', compact('leaderboards'));
     }
 
     /**
