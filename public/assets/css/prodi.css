@@ -1,17 +1,18 @@
-#landingPageJurusan {
-  background-image: url(../pplk.png);
-  background-size: 100% 100%;
-  background-position: center;
+body {
+  background-image: url(../background-2.png) !important;
+  background-size: cover;
+  background-position: 50% 5%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-#landingPageJurusan #pills-tabContent {
+#pills-tabContent {
   background: rgb(11, 10, 60) !important;
   background: linear-gradient(90deg, rgba(11, 10, 60, 1) 0%, rgba(50, 25, 67, 1) 100%) !important;
 }
 
 #pills-tab {
-  background: rgb(11, 10, 60);
-  background: linear-gradient(90deg, rgba(11, 10, 60, 1) 0%, rgba(50, 25, 67, 1) 100%);
+  background: rgba(11, 10, 60, 0);
 }
 
 #pills-tab .nav-item .active {

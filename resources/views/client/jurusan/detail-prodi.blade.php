@@ -24,6 +24,7 @@
 @section('content')
     <!-- CONTENT -->
     <!-- Nama Prodi -->
+    <div>
     <h1 class="text-center text-light display-3 py-4 fw-bold flex-wrap my-3"><strong>{{ $prodis->namaLengkap }}</strong>
 </h1>
 
@@ -32,7 +33,7 @@
 <div class="container row justify-content-center mx-auto mb-5 mt-4">
     <div class="col-lg-6 col-md-12 mb-sm-4 mb-md-0">
         <div class="ratio ratio-4x3">
-            <img class="gambar-1 animasi" src="{{ asset('assets/logoProdi/'. $prodis->namaSingkat.'.svg') }}" alt="" srcset="">
+            <img class="gambar-1 animasi" src="{{ asset('assets/logoProdi/'. $prodis->namaSingkat.'.svg') }}" alt="">
         </div>
     </div>
     <div class="col-lg-6 col-md-12 my-auto text-light g-md-5 animasi">
@@ -50,22 +51,15 @@
 <!-- tentang kami, visi, misi -->
 <div class=" container">
     <div class="row text-center pt-4 text-light">
-        <h3 class="animasi">tentang kami</h3>
-        <p class="animasi">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, hic adipisci fuga ipsa
-            at,
-            illo
-            provident
-            perferendis officia, laudantium doloribus sed eligendi assumenda possimus dolores minus consectetur
-            animi. Corrupti, temporibus?</p>
-        <h3 class="animasi">Visi</h3>
+        <h3 class="animasi"><strong>Visi</strong></h3>
         <p class="animasi">{{ $prodis->visi }}</p>
-        <h3 class="animasi">Misi</h3>
-        <p class="animasi">{{ $prodis->misi }}</p>
+        <h3 class="animasi"><strong>Misi</strong></h3>
+        <p class="animasi">{!!nl2br(e($prodis->misi)) !!}</p>
     </div>
 </div>
 
 <div class="container justify-content-center" id="prestasi">
-    <h3 class="text-center text-light animasi">Prestasi</h3>
+    <h3 class="text-center text-light animasi"><strong>Prestasi</strong></h3>
     <div class="carousel owl-carousel justify-content-center animasi text-light mt-4">
         <div class="card card-1 prestasi-card mx-auto text-center overflow-auto" data-merge='3'>
             <h4 class="fs-3 fw-bold pt-3">2019</h4>
@@ -81,6 +75,7 @@
         </div>
     </div>
 </div>
+    </div>
 @endsection
 
 @section('script')

@@ -18,31 +18,31 @@
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Nama Lengkap</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Nama Pembina" name="namaLengkap" id="namalengkap" value="{{ $ukm->namaLengkap }}" required>
+            <input type="text" class="form-control" placeholder="Nama Lengkap" name="namaLengkap" id="namalengkap" value="{{ $ukm->namaLengkap }}" required>
           </div>
-        </div>   
+        </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Nama Singkat</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Nama Pembina" name="namaSingkat" id="namasingkat" value="{{ $ukm->namaSingkat }}"required>
+            <input type="text" class="form-control" placeholder="Nama Singkat" name="namaSingkat" id="namasingkat" value="{{ $ukm->namaSingkat }}"required>
           </div>
         </div>
         <div class=" mb-3 row" >
           <label class=" col-sm-3 col-form-label" >Visi</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Nama Pembina" name="visi" id="visi" value="{{ $ukm->visi }}"required>
+            <input type="text" class="form-control" placeholder="Visi" name="visi" id="visi" value="{{ $ukm->visi }}"required>
           </div>
         </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Misi</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Nama Pembina" name="misi" id="misi" misivalue="{{ $ukm->namaSingkat }}" required>
+            <input type="text" class="form-control" placeholder="Misi" name="misi" id="misi" misivalue="{{ $ukm->misi }}" required>
           </div>
-        </div>    
+        </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Pembina</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Nama Pembina" name="pembina" id="namapembina" value="{{ $ukm->pembiina }}" required>
+            <input type="text" class="form-control" placeholder="Nama Pembina" name="pembina" id="namapembina" value="{{ $ukm->pembina }}" required>
           </div>
         </div>
         <div class="mb-3 row">
@@ -80,7 +80,7 @@
           <div class="col-sm-9">
             <input type="text" class="form-control" placeholder="Nama Pembina" name="deskripsi" id="deskripsi" value="{{ $ukm->deskripsi }}"required>
           </div>
-        </div> 
+        </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Dokumentasi 1</label>
           <div class="col-sm-9">
@@ -101,7 +101,7 @@
         </div>
         <div class="mb-3 row">
           <div class="col-sm-9">
-            <button type="submit" class="btn btn-primary ">Ubah</button>
+            <button type="submit" class="btn btn-primary ">Simpan</button>
           </div>
         </div>
         </form>
