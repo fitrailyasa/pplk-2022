@@ -81,7 +81,7 @@ class ClientGameTebakBangunanController extends Controller
         ]);
         $soals=Tebak_bangunan::all();
 
-        return view('client.games.tebak-bangunan.home',compact('soals'));
+        return view('client.games.games',compact('soals'));
     }
 
     /**
