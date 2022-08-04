@@ -6,8 +6,6 @@ use App\Models\Tebak_bangunan;
 use App\Http\Requests\StoreTebak_bangunanRequest;
 use App\Http\Requests\UpdateTebak_bangunanRequest;
 use App\Models\TokenTebakBangunan;
-use App\Http\Requests\StoreTebak_bangunanRequest;
-use App\Http\Requests\UpdateTebak_bangunanRequest;
 use App\Models\ScoreTebakBangunan;
 
 

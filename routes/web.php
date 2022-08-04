@@ -11,7 +11,7 @@ use App\Http\Middleware\SuperAdmin;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Middleware\Kedisiplinan;
 
-use App\Http\Middleware\DapMen;
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Auth\LoginController;
@@ -35,20 +35,13 @@ use App\Http\Controllers\Client\ClientJurusanController;
 use App\Http\Controllers\Client\ClientKabinetController;
 use App\Http\Controllers\Client\ClientKeluhanController;
 use App\Http\Controllers\Client\ClientScannerController;
-
 use App\Http\Controllers\Client\ClientHimpunanController;
-
-use App\Http\Controllers\Client\ClientUkmController;
-
-use App\Http\Controllers\Client\ClientProdiController;
-use App\Http\Controllers\Client\ClientScannerController;
-use App\Http\Controllers\Client\ClientUptController;
 use App\Http\Controllers\Leaderboardcontroller;
 
 use App\Http\Controllers\Client\ClientKodeGameController;
 use App\Http\Controllers\Client\ClientKamusgaulController;
 use App\Http\Controllers\Client\ClientGameTebakBangunanController;
-
+use SimpleSoftwareIO\QrCode\QrCodeServiceProvider;
 
 
 
@@ -236,7 +229,7 @@ Route::middleware(['auth'])->group(function () {
     return view('client.our-team');
 
 
-
+  });
 //TEBAK BANGUNAN
   Route::get('/tebak-bangunan',[ClientGameTebakBangunanController::class,'index']);     // ===> tebak bangunan home
   Route::get('/tebak-bangunan-game/{id}',[ClientGameTebakBangunanController::class,'show']);
@@ -253,10 +246,9 @@ Route::middleware(['auth'])->group(function () {
   });
   Route::get('/senat', function () {  // ===> Registrasi
     return view('client.senat');
-
   });
 
-
+  
 Route::get('/prodi', [ClientProdiController::class, 'index'])->name('prodis'); // ===> prodi
 Route::get('/himpunan', [ClientHimpunanController::class, 'index'])->name('himpunans'); // ===> himpunan
 Route::get('/ukm', [ClientUkmController::class, 'index'])->name('ukms'); // ===> ukm
@@ -265,6 +257,7 @@ Route::get('/detail-prodi/{id}', [ClientProdiController::class, 'show'])->name('
 Route::get('/detailHimpunan/{id}', [ClientHimpunanController::class, 'show'])->name('detailHimpunan');
 Route::get('/detailUkm/{id}', [ClientUkmController::class, 'show'])->name('detailUkm');
 
+});
 
 // Route::get('/gen', [ClientBiodataController::class, 'generateAllQrCode']);
 // Route::get('/hitung', [ClientBiodataController::class, 'hitunguser']);
