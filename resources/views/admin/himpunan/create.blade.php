@@ -12,9 +12,11 @@
       </div>
       <div class="card-body">
     @if(auth()->user()->roles_id == 1)
-        <form method="POST" action="{{ route('super.himpunan.store') }}" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('super.himpunan.store',$himpunan->id) }}" enctype='multipart/form-data'>
     @elseif(auth()->user()->roles_id == 2)
-        <form method="POST" action="{{ route('admin.himpunan.store') }}" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('admin.himpunan.store',$himpunan->id) }}" enctype='multipart/form-data'>
+    @elseif(auth()->user()->roles_id == 3)
+        <form method="POST" action="{{ route('himpunans.himpunan.store',$himpunan->id) }}" enctype='multipart/form-data'>
     @endif
         @csrf
           <div class="mb-3 row">

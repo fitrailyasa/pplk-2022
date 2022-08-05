@@ -112,6 +112,58 @@
             </li>
             <!--./Beranda-->
 
+            <!-- All User-->
+            <li class="nav-item">
+                <a class="nav-link tabitem">
+                <i class="nav-icon fa-solid fa-user-astronaut"></i>
+                <p>
+                    All User
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+                </a>
+                <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="{{ route('super.user.create') }}" class="nav-link tablinks">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Tambah User</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('super.user.index') }}" class="nav-link tablinks">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Kelola Data User</p>
+                    </a>
+                </li>
+                </ul>
+            </li>
+            <!--./All User-->
+
+            <!--User-->
+            <li class="nav-item">
+                <a class="nav-link tabitem">
+                <i class="nav-icon fa-solid fa-user-astronaut"></i>
+                <p>
+                    User
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+                </a>
+                <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="{{ route('super.dapmenUser.create') }}" class="nav-link tablinks">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Tambah User</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('super.dapmenUser.index') }}" class="nav-link tablinks">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Kelola Data User</p>
+                    </a>
+                </li>
+                </ul>
+            </li>
+            <!--./User-->
+
             <!--UPT ITERA-->
             <li class="nav-item">
                 <a class="nav-link tabitem">
@@ -369,19 +421,19 @@
                 </a>
                 <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="/polling" class="nav-link">
+                    <a href="/super/polling" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Scanner Polling</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/scanner" class="nav-link">
+                    <a href="/super/scanner" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Scanner Panitia</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/presensiMaba" class="nav-link">
+                    <a href="/super/presensiMaba" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Scanner Maba</p>
                     </a>
@@ -610,7 +662,7 @@
             @elseif(auth()->user()->roles_id == 3)
             <!--Dashboard-->
             <li class="nav-item">
-                <a href="/himpunan" class="nav-link tablinks ">
+                <a href="/himpunans" class="nav-link tablinks ">
                     <i class="fas fa-rocket nav-icon"></i>
                     <p>
                     Dashboard
@@ -641,13 +693,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="{{ route('himpunan.prodi.create') }}" class="nav-link tablinks">
+                    <a href="{{ route('himpunans.prodi.create') }}" class="nav-link tablinks">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Tambah Prodi</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('himpunan.prodi.index') }}" class="nav-link tablinks">
+                    <a href="{{ route('himpunans.prodi.index') }}" class="nav-link tablinks">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Kelola Data Prodi</p>
                     </a>
@@ -667,13 +719,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="{{ route('himpunan.himpunan.create') }}" class="nav-link tablinks">
+                    <a href="{{ route('himpunans.himpunan.create') }}" class="nav-link tablinks">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Tambah Himpunan</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('himpunan.himpunan.index') }}" class="nav-link tablinks">
+                    <a href="{{ route('himpunans.himpunan.index') }}" class="nav-link tablinks">
                     <i class="far fa-circle nav-icon"></i>
                     <p style="font-size:0.9rem;">Kelola Data Himpunan</p>
                     </a>
@@ -685,7 +737,7 @@
         @elseif(auth()->user()->roles_id == 4)
             <!--Dashboard-->
             <li class="nav-item">
-                <a href="/ukm" class="nav-link tablinks ">
+                <a href="/ukms" class="nav-link tablinks ">
                     <i class="fas fa-rocket nav-icon"></i>
                     <p>
                     Dashboard
@@ -716,13 +768,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="{{ route('ukm.ukm.create') }}" class="nav-link tablinks">
+                    <a href="{{ route('ukms.ukm.create') }}" class="nav-link tablinks">
                     <i class="far fa-circle nav-icon"></i>
                     <p style="font-size:0.8rem;">Tambah UKM/Komunitas</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('ukm.ukm.index') }}" class="nav-link tablinks">
+                    <a href="{{ route('ukms.ukm.index') }}" class="nav-link tablinks">
                     <i class="far fa-circle nav-icon"></i>
                     <p style="font-size:0.8rem;">Kelola UKM/Komunitas</p>
                     </a>
@@ -733,7 +785,7 @@
 
             <!--Scanner-->
             <li class="nav-item">
-                <a href="/polling" class="nav-link">
+                <a href="/ukms/polling" class="nav-link">
                 <i class="nav-icon fa-solid fa-camera"></i>
                 <p>
                     Scanner Polling
@@ -787,7 +839,7 @@
 
             <!--Scanner-->
             <li class="nav-item">
-                <a href="/scanner" class="nav-link">
+                <a href="/kedis/scanner" class="nav-link">
                 <i class="nav-icon fa-solid fa-camera"></i>
                 <p>
                     Scanner Staff
@@ -847,7 +899,7 @@
 
             <!--Scanner-->
             <li class="nav-item">
-                <a href="/presensiMaba" class="nav-link">
+                <a href="/dapmen/presensiMaba" class="nav-link">
                 <i class="nav-icon fa-solid fa-camera"></i>
                 <p>
                     Scanner Maba

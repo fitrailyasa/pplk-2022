@@ -12,9 +12,9 @@
       </div>
       <div class="card-body">
     @if(auth()->user()->roles_id == 1)
-        <form method="POST" action="{{ route('super.kamusgaul.store') }}" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('super.kamusgaul.store',$kamusgaul->id) }}" enctype='multipart/form-data'>
     @elseif(auth()->user()->roles_id == 2)
-        <form method="POST" action="{{ route('admin.kamusgaul.store') }}" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('admin.kamusgaul.store',$kamusgaul->id) }}" enctype='multipart/form-data'>
     @endif
         @csrf
           <div class="mb-3 row">

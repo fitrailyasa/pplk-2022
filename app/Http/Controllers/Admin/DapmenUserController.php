@@ -64,11 +64,11 @@ class DapmenUserController extends Controller
         QrCode::format('svg')->margin(2)->size(200)->errorCorrection('H')->generate("$qrCode", "../public/assets/qrcode/"."$qrCode");
 
         if (auth()->user()->roles_id == 1) {
-            return redirect('super/adminUser')->with('sukses', 'Berhasil Tambah Data!');
+            return redirect('super/dapmenUser')->with('sukses', 'Berhasil Tambah Data!');
         } elseif (auth()->user()->roles_id == 2) {
-            return redirect('admin/adminUser')->with('sukses', 'Berhasil Tambah Data!');
+            return redirect('admin/dapmenUser')->with('sukses', 'Berhasil Tambah Data!');
         } elseif (auth()->user()->roles_id == 6) {
-            return redirect('dapmen/adminUser')->with('sukses', 'Berhasil Tambah Data!');
+            return redirect('dapmen/dapmenUser')->with('sukses', 'Berhasil Tambah Data!');
         }
     }
 
@@ -125,11 +125,11 @@ class DapmenUserController extends Controller
         );
 
         if (auth()->user()->roles_id == 1) {
-            return redirect('super/begalin')->with('sukses', 'Berhasil Edit Data!');
+            return redirect('super/dapmenUser')->with('sukses', 'Berhasil Edit Data!');
         } elseif (auth()->user()->roles_id == 2) {
-            return redirect('admin/begalin')->with('sukses', 'Berhasil Edit Data!');
+            return redirect('admin/dapmenUser')->with('sukses', 'Berhasil Edit Data!');
         } elseif (auth()->user()->roles_id == 6) {
-            return redirect('dapmen/adminUser')->with('sukses', 'Berhasil Edit Data!');
+            return redirect('dapmen/dapmenUser')->with('sukses', 'Berhasil Edit Data!');
         }
     }
 
@@ -145,11 +145,11 @@ class DapmenUserController extends Controller
         $data->delete();
 
         if (auth()->user()->roles_id == 1) {
-            return redirect('super/begalin')->with('sukses', 'Berhasil Hapus Data!');
+            return redirect('super/dapmenUser')->with('sukses', 'Berhasil Hapus Data!');
         } elseif (auth()->user()->roles_id == 2) {
-            return redirect('admin/begalin')->with('sukses', 'Berhasil Hapus Data!');
+            return redirect('admin/dapmenUser')->with('sukses', 'Berhasil Hapus Data!');
         } elseif (auth()->user()->roles_id == 6) {
-            return redirect('dapmen/adminUser')->with('sukses', 'Berhasil Hapus Data!');
+            return redirect('dapmen/dapmenUser')->with('sukses', 'Berhasil Hapus Data!');
         }
     }
 }

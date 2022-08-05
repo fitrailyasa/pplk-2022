@@ -12,9 +12,11 @@
     </div>
     <div class="card-body">
     @if(auth()->user()->roles_id == 1)
-        <form method="POST" action="{{ route('super.ukm.show') }}" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('super.ukm.show',$ukm->id) }}" enctype='multipart/form-data'>
     @elseif(auth()->user()->roles_id == 2)
-        <form method="POST" action="{{ route('admin.ukm.show') }}" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('admin.ukm.show',$ukm->id) }}" enctype='multipart/form-data'>
+    @elseif(auth()->user()->roles_id == 4)
+        <form method="POST" action="{{ route('ukms.ukm.show',$ukm->id) }}" enctype='multipart/form-data'>
     @endif
         @csrf
         @method('PUT')

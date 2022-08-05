@@ -12,9 +12,9 @@
       </div>
       <div class="card-body">
     @if(auth()->user()->roles_id == 1)
-        <form method="POST" action="{{ route('super.funfact.store') }}" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('super.funfact.store',$funfact->id) }}" enctype='multipart/form-data'>
     @elseif(auth()->user()->roles_id == 2)
-        <form method="POST" action="{{ route('admin.funfact.store') }}" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('admin.funfact.store',$funfact->id) }}" enctype='multipart/form-data'>
     @endif
         @csrf
           <div class="mb-3 row">

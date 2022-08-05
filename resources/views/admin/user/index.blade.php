@@ -38,7 +38,6 @@
                     <th>Golongan Darah</th>
                     <th>Riwayat Penyakit</th>
                     <th>Prodi</th>
-                    <th>Roles ID</th>
                     <th>More</th>
                 </tr>
               </thead>
@@ -97,9 +96,11 @@
                           </div>
                           <div class="modal-footer">
                             @if(auth()->user()->roles_id == 1)
-                                <form action="{{route('super.user.destroy', $user->id)}}" method="POST">
+                                <form action="{{route('super.dapmenUser.destroy', $user->id)}}" method="POST">
                             @elseif(auth()->user()->roles_id == 2)
-                                <form action="{{route('admin.user.destroy', $user->id)}}" method="POST">
+                                <form action="{{route('admin.dapmenUser.destroy', $user->id)}}" method="POST">
+                            @elseif(auth()->user()->roles_id == 6)
+                                <form action="{{route('dapmen.dapmenUser.destroy', $user->id)}}" method="POST">
                             @endif
                               @method('DELETE')
                               @csrf

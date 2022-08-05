@@ -54,6 +54,13 @@
                         <a href="{{ route('admin.ukm.edit',$ukm->id) }}" class="edit-button">
                           <i class="fa-solid fa-marker"></i>
                         </a>
+                        @elseif(auth()->user()->roles_id == 4)
+                        <a href="{{ route('ukms.ukm.show',$ukm->id) }}" class="edit-button">
+                          <i class="fa-solid fa-eye"></i>
+                        </a>
+                        <a href="{{ route('ukms.ukm.edit',$ukm->id) }}" class="edit-button">
+                          <i class="fa-solid fa-marker"></i>
+                        </a>
                     @endif
                       <!-- Modal -->
                       <div class="modal fade bd-example-modal-sm{{$ukm->id}}" tabindex="-1" role="dialog" aria-hidden="true">

@@ -55,6 +55,13 @@
                         <a href="{{ route('admin.prodi.edit',$prodi->id) }}" class="edit-button">
                           <i class="fa-solid fa-marker"></i>
                         </a>
+                    @elseif(auth()->user()->roles_id == 3)
+                        <a href="{{ route('himpunans.prodi.show',$prodi->id) }}" class="edit-button">
+                          <i class="fa-solid fa-eye"></i>
+                        </a>
+                        <a href="{{ route('himpunans.prodi.edit',$prodi->id) }}" class="edit-button">
+                          <i class="fa-solid fa-marker"></i>
+                        </a>
                     @endif
                     <!-- Button trigger modal -->
                     <a role="button"  class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm{{$prodi->id}}">
@@ -76,6 +83,8 @@
                                     <form action="{{route('super.prodi.destroy', $prodi->id)}}" method="POST">
                                 @elseif(auth()->user()->roles_id == 2)
                                     <form action="{{route('admin.prodi.destroy', $prodi->id)}}" method="POST">
+                                @elseif(auth()->user()->roles_id == 3)
+                                    <form action="{{route('himpunans.prodi.destroy', $prodi->id)}}" method="POST">
                                 @endif
                                 @method('DELETE')
                                     @csrf
