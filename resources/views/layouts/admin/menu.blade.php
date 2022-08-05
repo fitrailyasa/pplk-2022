@@ -346,44 +346,6 @@
             </li>
             <!--./Kamus Gaul-->
 
-            <!--Games-->
-            <li class="nav-item">
-                <a class="nav-link tabitem">
-                <i class="nav-icon fa-solid fa-gamepad"></i>
-                <p>
-                    Games
-                    <i class="right fas fa-angle-left"></i>
-                </p>
-                </a>
-                <ul class="nav nav-treeview">
-                <li class="nav-item">
-                    <a class="nav-link tablinks">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p style="font-size:0.8rem;">Tambah Redeem Code</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link tablinks">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p style="font-size:0.8rem;">Kelola Redeem Code</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link tablinks">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p style="font-size:0.8rem;">Tambah Tebak Bangunan</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link tablinks">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p style="font-size:0.8rem;">Kelola Tebak Bangunan</p>
-                    </a>
-                </li>
-                </ul>
-            </li>
-            <!--./Games-->
-
             <!--Booklet-->
             <li class="nav-item">
                 <a class="nav-link tabitem">
@@ -594,44 +556,6 @@
                 </ul>
             </li>
             <!--./Kamus Gaul-->
-
-            <!--Games-->
-            <li class="nav-item">
-                <a class="nav-link tabitem">
-                <i class="nav-icon fa-solid fa-gamepad"></i>
-                <p>
-                    Games
-                    <i class="right fas fa-angle-left"></i>
-                </p>
-                </a>
-                <ul class="nav nav-treeview">
-                <li class="nav-item">
-                    <a class="nav-link tablinks">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p style="font-size:0.8rem;">Tambah Redeem Code</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link tablinks">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p style="font-size:0.8rem;">Kelola Redeem Code</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link tablinks">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p style="font-size:0.8rem;">Tambah Tebak Bangunan</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link tablinks">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p style="font-size:0.8rem;">Kelola Tebak Bangunan</p>
-                    </a>
-                </li>
-                </ul>
-            </li>
-            <!--./Games-->
 
             <!--Booklet-->
             <li class="nav-item">

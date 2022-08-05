@@ -40,7 +40,7 @@
                 <img class="object_earth" src="../assets/Planet 20.png" width="120px">
                 <img class="object_moon" src="../assets/earth.png" width="40px">
             </div>
-            <div class="box_astronaut">
+            <div class="box_astronaut" onclick="window.location.href='https://instagram.com/fitrailyasa'" style="cursor: pointer;">
                 <img src="../assets/Maskot2.png" class="object_astronaut" width="200px">
             </div>
         </div>
