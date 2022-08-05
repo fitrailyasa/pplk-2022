@@ -38,7 +38,6 @@
                     <th>Golongan Darah</th>
                     <th>Riwayat Penyakit</th>
                     <th>Prodi</th>
-                    <th>Roles ID</th>
                     <th>More</th>
                 </tr>
               </thead>
@@ -58,27 +57,27 @@
 
                     <td class="manage-row">
                         @if (auth()->user()->roles_id == 1 )
-                        <a href="{{ route('dapmenUser.show', $user->id)}}" class="edit-button">
+                          <a href="{{ route('super.user.show', $user->id)}}" class="edit-button">
                             <i class="fa-solid fa-eye"></i>
                           </a>
-                          <a href="{{ route('dapmenUser.edit', $user->id)}}" class="edit-button">
+                          <a href="{{ route('super.user.edit', $user->id)}}" class="edit-button">
                             <i class="fa-solid fa-marker"></i>
                           </a>
                         @elseif (auth()->user()->roles_id == 2 )
-                          <a href="{{ route('dapmenUser.show', $user->id)}}" class="edit-button">
+                          <a href="{{ route('admin.dapmenUser.show', $user->id)}}" class="edit-button">
                               <i class="fa-solid fa-eye"></i>
                             </a>
-                            <a href="{{ route('dapmenUser.edit', $user->id)}}" class="edit-button">
+                            <a href="{{ route('admin.dapmenUser.edit', $user->id)}}" class="edit-button">
                               <i class="fa-solid fa-marker"></i>
                             </a>
                         @elseif (auth()->user()->roles_id == 6)
-                        <a href="{{ route('dapmenUser.show', $user->id)}}" class="edit-button">
+                        <a href="{{ route('dapmen.dapmenUser.show', $user->id)}}" class="edit-button">
                             <i class="fa-solid fa-eye"></i>
                           </a>
-                          <a href="{{ route('dapmenUser.edit', $user->id)}}" class="edit-button">
+                          <a href="{{ route('dapmen.dapmenUser.edit', $user->id)}}" class="edit-button">
                             <i class="fa-solid fa-marker"></i>
                           </a>
-                          @endif
+                        @endif
 
                     <!-- Button trigger modal -->
                     <a role="button"  class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm{{$user->id}}">
@@ -96,12 +95,13 @@
                             Anda yakin menghapus data?
                           </div>
                           <div class="modal-footer">
-                            @if (auth()->user()->roles_id == 1)
-                            <form action="{{route('adminUser.destroy', $user->id)}}" method="POST">
-                            @elseif (auth()->user()->roles_id == 6)
-                            <form action="{{route('dapmenUser.destroy', $user->id)}}" method="POST">
+                            @if(auth()->user()->roles_id == 1)
+                                <form action="{{route('super.dapmenUser.destroy', $user->id)}}" method="POST">
+                            @elseif(auth()->user()->roles_id == 2)
+                                <form action="{{route('admin.dapmenUser.destroy', $user->id)}}" method="POST">
+                            @elseif(auth()->user()->roles_id == 6)
+                                <form action="{{route('dapmen.dapmenUser.destroy', $user->id)}}" method="POST">
                             @endif
-
                               @method('DELETE')
                               @csrf
                                 <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
