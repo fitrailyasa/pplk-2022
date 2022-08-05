@@ -14,6 +14,6 @@ class ScoreTebakBangunanSeeder extends Seeder
      */
     public function run()
     {
-        ScoreTebakBangunan::factory(5)->create();
+        ScoreTebakBangunan::factory(6634)->create();
     }
 }

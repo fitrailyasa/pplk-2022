@@ -181,20 +181,7 @@ class TebakBangunanSeeder extends Seeder
              'jawabanC'=>'Teknik Elektro',
              'jawabanD'=>'Teknik Material'],
 
-             ['namaBangunan'=>'Dummy1',
-             'soal'=>'Gambar di atas terletak di … ',
-             'jawabanBenar'=>'Dummy1',
-             'jawabanA'=>'Belakang GKU',
-             'jawabanB'=>'Depan GSG ITERA',
-             'jawabanC'=>'Dekat Masjid Baitul Ilmi',
-             'jawabanD'=>'Dekat OAIL']
-
-
-
-
         ];
-
-
 
         Tebak_bangunan::query()->insert($soal);
     }
