@@ -63,11 +63,7 @@ class AdminUserController extends Controller
 
         QrCode::format('svg')->margin(2)->size(200)->errorCorrection('H')->generate("$qrCode", "../public/assets/qrcode/"."$qrCode");
 
-        if (auth()->user()->roles_id == 1) {
-            return redirect('super/user')->with('sukses', 'Berhasil Tambah Data!');
-        } elseif (auth()->user()->roles_id == 2) {
-            return redirect('admin/user')->with('sukses', 'Berhasil Tambah Data!');
-        }
+        return redirect('super/user')->with('sukses', 'Berhasil Tambah Data!');
     }
 
     /**
@@ -122,11 +118,7 @@ class AdminUserController extends Controller
             ]
         );
 
-        if (auth()->user()->roles_id == 1) {
-            return redirect('super/user')->with('sukses', 'Berhasil Edit Data!');
-        } elseif (auth()->user()->roles_id == 2) {
-            return redirect('admin/user')->with('sukses', 'Berhasil Edit Data!');
-        }
+        return redirect('super/user')->with('sukses', 'Berhasil Edit Data!');
     }
 
     /**
@@ -140,10 +132,6 @@ class AdminUserController extends Controller
         $data = User::where('id', $id)->first();
         $data->delete();
 
-        if (auth()->user()->roles_id == 1) {
-            return redirect('super/user')->with('sukses', 'Berhasil Hapus Data!');
-        } elseif (auth()->user()->roles_id == 2) {
-            return redirect('admin/user')->with('sukses', 'Berhasil Hapus Data!');
-        }
+        return redirect('super/user')->with('sukses', 'Berhasil Hapus Data!');
     }
 }

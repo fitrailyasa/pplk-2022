@@ -45,9 +45,9 @@ class AdminUptController extends Controller
         ]);
 
         if (auth()->user()->roles_id == 1) {
-            return redirect('super/ukm')->with('sukses', 'Berhasil Tambah Data!');
+            return redirect('super/upt')->with('sukses', 'Berhasil Tambah Data!');
         } elseif (auth()->user()->roles_id == 2) {
-            return redirect('admin/ukm')->with('sukses', 'Berhasil Tambah Data!');
+            return redirect('admin/upt')->with('sukses', 'Berhasil Tambah Data!');
         }
     }
 
