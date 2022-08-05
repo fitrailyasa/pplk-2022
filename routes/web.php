@@ -171,8 +171,25 @@ Route::middleware(['auth'])->group(function () {
   // });
   Route::get('/jurusan', [ClientJurusanController::class, 'index'])->name('jurusan');
 
+
   Route::get('/himpunan', [ClientHimpunanController::class, 'index'])->name('himpunans');
   Route::get('/detail-himpunan/{id}', [ClientHimpunanController::class, 'show'])->name('himpunans');
+
+  // GAMES
+  Route::get('/game-home', [LeaderboardController::class, 'index']);
+  Route::get('/card-list', [ClientKodeGameController::class, 'index']);
+  Route::get('/redeem/{no}', [ClientKodeGameController::class, 'show']);
+  Route::get('/redeem-failed', function () {
+    return view('client.games.redeem-code.failed');
+  });
+  Route::get('/redeem-success', function () {
+    return view('client.games.redeem-code.success');
+  });
+  Route::post('/submitcode/{id}', [ClientKodeGameController::class, 'sumscore'])->name('sumscore');
+  Route::get('/tebak-bangunan-game/{id}', [ClientGameTebakBangunanController::class, 'show']);
+  Route::get('/tebak-bangunan-game/{id}/{jawaban}', [ClientGameTebakBangunanController::class, 'store'])->name('soalTebakBangunan');
+  Route::get('/tebak-bangunan-selesai/{id}', [ClientGameTebakBangunanController::class, 'restart']);
+
 
   Route::get('/ukm', [ClientUkmController::class, 'index'])->name('ukms');
   Route::get('/detail-ukm/{id}', [ClientUkmController::class, 'show'])->name('ukms');
