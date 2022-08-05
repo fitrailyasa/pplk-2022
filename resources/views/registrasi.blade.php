@@ -4,8 +4,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="UTF-8" />
         <meta name="theme-color" content="#09f" />
-        <meta name="description" content="DESKRIPSI" />
-        <meta name="keywords" content="KATA KUNCI" />
+        <meta name="description" content="Program Pengenalan Lingkungan Kampus (PPLK) merupakan acara pesta penyambutan terbesar untuk mahasiswa baru yang diselenggarakan setiap tahunnya di Institut Teknologi Sumatera (ITERA). PPLK ITERA hadir sebagai akses utama bagi mahasiswa baru untuk mengawali gerbang perkuliahan, yang berupa kaderisasi awal terpusat yang diselenggarakan oleh Keluarga Mahasiswa Institut Teknologi Sumatera (KM ITERA) untuk menyambut mahasiswa baru." />
+        <meta name="keywords" content="PPLK, Program Pengenalan Lingkungan Kampus, PPLK ITERA 2022, KM-ITERA" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="author" content="Fitra Ilyasa" />
         <meta name="copyright" content="PPLK 2022" />
@@ -196,45 +196,9 @@
                  <div class="row justify-content-center align-items-center">
                   <div class="col mb-3 d-flex justify-content-center align-items-center">
                     <select placeholder="prodi" name="prodi" class="form-select rounded input-size text-secondary" aria-label="Default select example">
-                      <option value="Teknik Informatika">Teknik Informatika</option>
-                      <option value="Teknik Elektro">Teknik Elektro</option>
-                      <option value="Teknik Telekomunikasi">Teknik Telekomunikasi</option>
-                      <option value="Teknik Lingkungan">Teknik Lingkungan</option>
-                      <option value="Teknik Industri">Teknik Industri</option>
-                      <option value="Teknik Industri Pertanian">Teknik Industri Pertanian</option>
-                      <option value="Teknik Geofisika">Teknik Geofisika</option>
-                      <option value="Teknik Mesin">Teknik Mesin</option>
-                      <option value="Teknik Fisika">Teknik Fisika</option>
-                      <option value="Teknik Kimia">Teknik Kimia</option>
-                      <option value="Teknik Biosistem">Teknik Biosistem</option>
-                      <option value="Teknik Sipil">Teknik Sipil</option>
-                      <option value="Teknik Kelautan">Teknik Kelautan</option>
-                      <option value="Teknik Geologi">Teknik Geologi</option>
-                      <option value="Teknik Geomatika">Teknik Geomatika</option>
-                      <option value="Teknik Sistem Energi">Teknik Sistem Energi</option>
-                      <option value="Teknik Material">Teknik Material</option>
-                      <option value="Teknik Biomedis">Teknik Biomedis</option>
-                      <option value="Teknik Perkeretaapian">Teknik Perkeretaapian</option>
-                      <option value="Matematika">Matematika</option>
-                      <option value="Fisika">Fisika</option>
-                      <option value="Kimia">Kimia</option>
-                      <option value="Biologi">Biologi</option>
-                      <option value="Farmasi">Farmasi</option>
-                      <option value="Sains Data">Sains Data</option>
-                      <option value="Teknologi Pangan">Teknologi Pangan</option>
-                      <option value="Sains Aktuaria">Sains Aktuaria</option>
-                      <option value="Sains Atmosfer dan Keplanetan">Sains Atmosfer dan Keplanetan</option>
-                      <option value="Sains Kelautan">Sains Kelautan</option>
-                      <option value="Rekayasa Tata Kelola Air Terpadu">Rekayasa Tata Kelola Air Terpadu</option>
-                      <option value="Rekayasa Kosmetik">Rekayasa Kosmetik</option>
-                      <option value="Rekayasa Minyak dan Gas">Rekayasa Minyak dan Gas</option>
-                      <option value="Rekayasa Kehutanan">Rekayasa Kehutanan</option>
-                      <option value="Rekayasa Instrumentasi dan Automasi">Rekayasa Instrumentasi dan Automasi </option>
-                      <option value="Arsitektur">Arsitektur</option>
-                      <option value="Perencanaan Wilayah dan Kota">Perencanaan Wilayah dan Kota</option>
-                      <option value="Arsitektur Lanskap">Arsitektur Lanskap</option>
-                      <option value="Desain Komunikasi Visual">Desain Komunikasi Visual</option>
-                      <option value="Industri Pertanian">Industri Pertanian</option>
+                        @foreach ($prodis as $prodi )
+                        <option selected value="{{ $prodi->namaLengkap }}">{{ $prodi->namaLengkap }}</option>
+                    @endforeach
                   </select>
               </div>
                 <!-- prodi -->

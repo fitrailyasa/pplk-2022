@@ -22,7 +22,7 @@
           @endif
           <div class="container">
             <div class="container" ng-app="formvalid">
-            <div class="panel" data-ng-controller="validationCtrl">   
+            <div class="panel" data-ng-controller="validationCtrl">
             </div>
           <div class="panel-body">
           <table class=" table-responsive table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt">
@@ -41,12 +41,28 @@
                     <td>{{ $himpunan->namaSingkat }}</td>
                     <td>{{ $himpunan->namaLengkap }}</td>
                     <td class="manage-row">
-                      <a href="{{ route('adminHimpunan.show', $himpunan->id)}}" class="edit-button">
-                        <i class="fa-solid fa-eye"></i>
-                      </a>
-                      <a href="{{ route('adminHimpunan.edit', $himpunan->id)}}" class="edit-button">
-                        <i class="fa-solid fa-marker"></i>
-                      </a>
+                    @if(auth()->user()->roles_id == 1)
+                        <a href="{{ route('super.himpunan.show',$himpunan->id) }}" class="edit-button">
+                          <i class="fa-solid fa-eye"></i>
+                        </a>
+                        <a href="{{ route('super.himpunan.edit',$himpunan->id) }}" class="edit-button">
+                          <i class="fa-solid fa-marker"></i>
+                        </a>
+                    @elseif(auth()->user()->roles_id == 2)
+                        <a href="{{ route('admin.himpunan.show',$himpunan->id) }}" class="edit-button">
+                          <i class="fa-solid fa-eye"></i>
+                        </a>
+                        <a href="{{ route('admin.himpunan.edit',$himpunan->id) }}" class="edit-button">
+                          <i class="fa-solid fa-marker"></i>
+                        </a>
+                    @elseif(auth()->user()->roles_id == 3)
+                        <a href="{{ route('himpunans.himpunan.show',$himpunan->id) }}" class="edit-button">
+                          <i class="fa-solid fa-eye"></i>
+                        </a>
+                        <a href="{{ route('himpunans.himpunan.edit',$himpunan->id) }}" class="edit-button">
+                          <i class="fa-solid fa-marker"></i>
+                        </a>
+                    @endif
                       <!-- Button trigger modal -->
                       <a role="button"  class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm{{$himpunan->id}}">
                         <i class="fa-solid fa-trash-can"></i>
@@ -63,8 +79,14 @@
                               Anda yakin menghapus data?
                             </div>
                             <div class="modal-footer">
-                              <form action="{{route('adminHimpunan.destroy', $himpunan->id)}}" method="POST">
-                                @method('DELETE')
+                            @if(auth()->user()->roles_id == 1)
+                                <form action="{{route('super.himpunan.destroy', $himpunan->id)}}" method="POST">
+                            @elseif(auth()->user()->roles_id == 2)
+                                <form action="{{route('admin.himpunan.destroy', $himpunan->id)}}" method="POST">
+                            @elseif(auth()->user()->roles_id == 3)
+                                <form action="{{route('himpunans.himpunan.destroy', $himpunan->id)}}" method="POST">
+                            @endif
+                            @method('DELETE')
                                 @csrf
                                   <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
                                   <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>

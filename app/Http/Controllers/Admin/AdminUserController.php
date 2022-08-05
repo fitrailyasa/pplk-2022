@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
+use Illuminate\Support\Facades\Hash;
 use App\Models\User;
+use App\Models\Prodi;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Admin\Controller;
 use Illuminate\Contracts\View\View;
@@ -17,6 +18,7 @@ class AdminUserController extends Controller
      */
     public function index()
     {
+
         $users = User::all();
         return view('admin.user.index', compact('users'));
     }
@@ -28,7 +30,8 @@ class AdminUserController extends Controller
      */
     public function create()
     {
-        return view('admin.user.create');
+        $prodis = Prodi::all();
+        return view('admin.user.create', compact('prodis'));
     }
 
     /**
@@ -39,11 +42,16 @@ class AdminUserController extends Controller
      */
     public function store(Request $request)
     {
+        $date = Date("m.d.y");
+        $time = time();
+        $time = $uTime = microtime(true);
+        $qrCode = "$date"."$time"."$date"."$date"."$date"."$date"."$time";
+
         User::create([
             'nama' => $request->nama,
             'email' => $request->email,
             'nim' => $request->nim,
-            'password' => $request->password,
+            'password' =>  Hash::make($request->password),
             'roles_id' => $request->roles_id,
             'prodi' => $request->prodi,
             'kelompok' => $request->kelompok,
@@ -53,7 +61,9 @@ class AdminUserController extends Controller
             'nomorHp' => $request->nomorHp,
         ]);
 
-        return redirect('/adminUser')->with('sukses', 'Berhasil Tambah Data!');
+        QrCode::format('svg')->margin(2)->size(200)->errorCorrection('H')->generate("$qrCode", "../public/assets/qrcode/"."$qrCode");
+
+        return redirect('super/user')->with('sukses', 'Berhasil Tambah Data!');
     }
 
     /**
@@ -78,8 +88,9 @@ class AdminUserController extends Controller
 
     public function edit($id)
     {
+        $prodis = Prodi::all();
         $user = User::where('id', $id)->first();
-        return view('admin.user.update', compact('user'));
+        return view('admin.user.update', compact('user','prodis'));
     }
 
     /**
@@ -97,7 +108,7 @@ class AdminUserController extends Controller
                 'nama' => $request->nama,
                 'email' => $request->email,
                 'nim' => $request->nim,
-                'password' => $request->password,
+                'password' => Hash::make($request->password),
                 'prodi' => $request->prodi,
                 'kelompok' => $request->kelompok,
                 'instagram' => $request->instagram,
@@ -106,7 +117,8 @@ class AdminUserController extends Controller
                 'nomorHp' => $request->nomorHp,
             ]
         );
-        return redirect('/adminUser')->with('sukses', 'Berhasil Edit Data!');
+
+        return redirect('super/user')->with('sukses', 'Berhasil Edit Data!');
     }
 
     /**
@@ -120,6 +132,6 @@ class AdminUserController extends Controller
         $data = User::where('id', $id)->first();
         $data->delete();
 
-        return redirect('/adminUser')->with('sukses', 'Berhasil Hapus Data!');
+        return redirect('super/user')->with('sukses', 'Berhasil Hapus Data!');
     }
 }

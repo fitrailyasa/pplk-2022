@@ -40,6 +40,14 @@ class AdminProdiController extends Controller
     public function store(Request $request)
     {
 
+        $validatedData = $request->validate([
+            'logo' => 'required|mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
+         ]);
+
+        $file = $validatedData[('logo')];
+        $filename = time() . '_' . $file->getClientOriginalName();
+        $location = '../public/assets/logoProdi/';
+
         Prodi::create(
             [
                 'namaLengkap' => $request->namaLengkap,
@@ -52,15 +60,22 @@ class AdminProdiController extends Controller
                 'tahunBerdiri' => $request->tahunBerdiri,
                 'ruangProdi' => $request->ruangProdi,
                 'jumlahMahasiswa' => $request->jumlahMahasiswa,
-                'logo' => url($request->file('logo')->move('assets/logoProdi', $request->namaSingkat . '.' . $request->file('logo')->extension())),
                 'prestasi1' => $request->prestasi1,
                 'prestasi2' => $request->prestasi2,
                 'prestasi3' => $request->prestasi3,
+                'logo' => $file,
                 'jurusan_id' => $request->jurusan_id,
             ]
         );
+        $file->move($location, $filename);
 
-        return redirect('/adminProdi')->with('sukses', 'Berhasil Tambah Data!');
+        if (auth()->user()->roles_id == 1) {
+            return redirect('super/prodi')->with('sukses', 'Berhasil Tambah Data!');
+        } elseif (auth()->user()->roles_id == 2) {
+            return redirect('admin/prodi')->with('sukses', 'Berhasil Tambah Data!');
+        } elseif (auth()->user()->roles_id == 3) {
+            return redirect('himpunans/prodi')->with('sukses', 'Berhasil Tambah Data!');
+        }
     }
 
     /**
@@ -99,6 +114,8 @@ class AdminProdiController extends Controller
     public function update(Request $request, $id)
     {
         $prodi = Prodi::where('id', $id)->first();
+
+
         $prodi->update(
             [
                 'namaLengkap' => $request->namaLengkap,
@@ -111,7 +128,6 @@ class AdminProdiController extends Controller
                 'tahunBerdiri' => $request->tahunBerdiri,
                 'ruangProdi' => $request->ruangProdi,
                 'jumlahMahasiswa' => $request->jumlahMahasiswa,
-
                 'prestasi1' => $request->prestasi1,
                 'prestasi2' => $request->prestasi2,
                 'prestasi3' => $request->prestasi3,
@@ -119,11 +135,23 @@ class AdminProdiController extends Controller
             ]
         );
         if ($request->hasFile('logo')) {
-            $prodi->update([
-                'logo' => url($request->file('logo')->move('assets/logoProdi', $prodi->namaSingkat . '.' . $request->file('logo')->extension())),
-            ]);
+
+            $validatedData = $request->validate([
+                'logo' => 'required|mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
+             ]);
+
+            $file = $validatedData[('logo')];
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $location = '../public/assets/logoProdi/';
+            $file->move($location, $filename);
         }
-        return redirect('/adminProdi')->with('sukses', 'Berhasil Edit Data!');
+        if (auth()->user()->roles_id == 1) {
+            return redirect('super/prodi')->with('sukses', 'Berhasil Edit Data!');
+        } elseif (auth()->user()->roles_id == 2) {
+            return redirect('admin/prodi')->with('sukses', 'Berhasil Edit Data!');
+        } elseif (auth()->user()->roles_id == 3) {
+            return redirect('himpunans/prodi')->with('sukses', 'Berhasil Edit Data!');
+        }
     }
 
     /**
@@ -137,6 +165,12 @@ class AdminProdiController extends Controller
         $data = Prodi::where('id', $id)->first();
         $data->delete();
 
-        return redirect('/adminProdi')->with('sukses', 'Berhasil Hapus Data!');
+        if (auth()->user()->roles_id == 1) {
+            return redirect('super/prodi')->with('sukses', 'Berhasil Hapus Data!');
+        } elseif (auth()->user()->roles_id == 2) {
+            return redirect('admin/prodi')->with('sukses', 'Berhasil Hapus Data!');
+        } elseif (auth()->user()->roles_id == 3) {
+            return redirect('himpunans/prodi')->with('sukses', 'Berhasil Hapus Data!');
+        }
     }
 }

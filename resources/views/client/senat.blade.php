@@ -20,18 +20,18 @@
 @section('content')
     <!--Content web mulai dari sini-->
 
-    <div class="container-fluid text-light justify-content-center">
+    <div class="container-fluid text-light justify-content-center mt-4">
         <div class="">
             <div class="row">
             <div class="" style="text-align-last: center;">
-                <h2 class="fw-bold teks2 " >SENAT KM ITERA</h2>
+                <h3 class="fw-bold teks2 mt-4 " >SENAT KM ITERA</h3>
                 <h3 class="teks3">KELUARGA MAHASISWA</h3>
-                <h3 class="teks4">ITERA 2022-2023</h3>
+                <h3 class="teks3">ITERA 2022-2023</h3>
                 <br>
-                <h5 class="text-start fw-bold teks5">Ketua Senator KM ITERA</h5>
-                <h6 class="text-start teks6">Rahmat Ramadhan</h6>
-                <h5 class="text-start fw-bold teks5">Wakil Ketua Senator KM ITERA</h5>
-                <h6 class="text-start teks6">Reza Kusuma </h6>
+                <h5 class="text-start fw-bold teks4">Ketua Senator KM ITERA</h5>
+                <h6 class="text-start teks5">Rahmat Ramadhan</h6>
+                <h5 class="text-start fw-bold teks4">Wakil Ketua Senator KM ITERA</h5>
+                <h6 class="text-start teks5">Reza Kusuma </h6>
             </div>
         </div>
     </div>
@@ -59,13 +59,13 @@
 
     </div>
 
-        <div style="text-align: center;" class="container justify-content-center mt-3 text-light mt-md-5 mt-sm-2">
-        <h2 class="text-center fw-bold teks2">VISI</h2>
+        <div style="text-align: center;" class="container justify-content-center mt-3 text-light mt-md-5 mt-sm-2 mb-sm-5" id="visiMisi">
+        <h2 class="text-center fw-bold teks3">VISI</h2>
         <p class="teks5">"Terwujudnya senat KM ITERA yang amanah, komunikatif, dan intelektual guna mempersatukan elemen yang ada di KM ITERA agar dapat bersinergi baik internal maupun eksternal"</p>
-        <h2 class="text-center teks2">MISI</h2>
-        <p class="teks5">1.Mewujudkan penyelenggaraan fungsi legislasi yang efektif dan efisien</p>
-        <p class="teks5">2.Mewujudkan fungsi anggaran organisasi yang transparant dan akuntabel</p>
-        <p class="teks5">3.Mewujudkan penyelenggaraan fungsi pengawasan yang efektif dan transparant</p>
+        <h2 class="text-center fw-bold teks3">MISI</h2>
+        <p class="teks5">1. Mewujudkan penyelenggaraan fungsi legislasi yang efektif dan efisien</p>
+        <p class="teks5">2. Mewujudkan fungsi anggaran organisasi yang transparant dan akuntabel</p>
+        <p class="teks5">3. Mewujudkan penyelenggaraan fungsi pengawasan yang efektif dan transparant</p>
         </div>
     </div>
 </div><br><br>

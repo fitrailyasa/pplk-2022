@@ -4,8 +4,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="UTF-8" />
         <meta name="theme-color" content="#09f" />
-        <meta name="description" content="DESKRIPSI" />
-        <meta name="keywords" content="KATA KUNCI" />
+        <meta name="description" content="Program Pengenalan Lingkungan Kampus (PPLK) merupakan acara pesta penyambutan terbesar untuk mahasiswa baru yang diselenggarakan setiap tahunnya di Institut Teknologi Sumatera (ITERA). PPLK ITERA hadir sebagai akses utama bagi mahasiswa baru untuk mengawali gerbang perkuliahan, yang berupa kaderisasi awal terpusat yang diselenggarakan oleh Keluarga Mahasiswa Institut Teknologi Sumatera (KM ITERA) untuk menyambut mahasiswa baru." />
+        <meta name="keywords" content="PPLK, Program Pengenalan Lingkungan Kampus, PPLK ITERA 2022, KM-ITERA" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="author" content="Fitra Ilyasa" />
         <meta name="copyright" content="PPLK 2022" />
@@ -44,7 +44,7 @@
         <div class="content-header">
           <div class="container-fluid">
             <div class="row mb-2">
-              
+
             </div><!-- /.row -->
           </div><!-- /.container-fluid -->
         </div>
@@ -104,7 +104,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-utils/0.1.1/angular-ui-utils.min.js" integrity="sha512-pGKhFBs4i3bMt4VGtmtCexI/LVANKvWSswVWJfBt7GNnlRTIqTPR6t8sO4U35zpGsUTkf+OaW6Wmf9aVQ4rP0g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables.net/1.12.1/jquery.dataTables.min.js" integrity="sha512-MOsicOaJyNWPgwMOE1q4sTPZK6KuUQTMBhkmzb0tFVSRxgx3VnGTwIyRme/IhBJQdWJkfTcIKozchO11ILrmSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables.net-bs5/1.12.1/dataTables.bootstrap5.min.js" integrity="sha512-nfoMMJ2SPcUdaoGdaRVA1XZpBVyDGhKQ/DCedW2k93MTRphPVXgaDoYV1M/AJQLCiw/cl2Nbf9pbISGqIEQRmQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-      
+
       <!-- AdminLTE App js-->
       <script src="{{ asset('assets/js/adminlte.js') }}"></script>
       <script src="{{ asset('assets/js/adminlte.js.map') }}"></script>
