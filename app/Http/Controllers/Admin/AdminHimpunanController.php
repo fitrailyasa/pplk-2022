@@ -46,7 +46,6 @@ class AdminHimpunanController extends Controller
 
         ]);
         $file = $validatedData[('logo')];
-
         $filename = time() . '_' . $file->getClientOriginalName();
         // File upload location
         $location = '../public/assets/himpunan/';

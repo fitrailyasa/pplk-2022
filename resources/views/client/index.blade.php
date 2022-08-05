@@ -340,7 +340,7 @@
                             <span class="h1 text-style text-white">KNOW MORE <br> ABOUT <span class=" text-gradien">PPLK 2022</span></span>
                         </div>
 
-                        <div class="mt-5 p-3 col-10 g-3 carousel-container owl-carousel" >
+                        <div class="mt-5 p-3 col-10 g-3 carousel-container" >
 
                             <div class="item img-fit">
                                 <button  data-bs-toggle="modal" data-bs-target="#you" >
@@ -374,7 +374,7 @@
         </div>
         <!-- ./Youtube -->
 
-        {{-- <!-- Modal Youtube-->
+        <!-- Modal Youtube-->
         <div class="modal modal-xl fade" id="you" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -392,7 +392,7 @@
                 </div>
             </div>
         </div>
-        <!-- ./Modal Youtube--> --}}
+        <!-- ./Modal Youtube-->
 
         <div class="modal modal-xl fade" id="me" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">

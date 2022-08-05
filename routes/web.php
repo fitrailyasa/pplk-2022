@@ -166,14 +166,16 @@ Route::middleware(['auth'])->group(function () {
   Route::post('/form-keluhan/{id}', [ClientKeluhanController::class, 'create'])->name('create-keluhan');
 
   // ORMAWA
-  // Route::get('/ukm', function () {
-  //   return view('client.ormawa.ukm');
-  // });
   Route::get('/jurusan', [ClientJurusanController::class, 'index'])->name('jurusan');
-
 
   Route::get('/himpunan', [ClientHimpunanController::class, 'index'])->name('himpunans');
   Route::get('/detail-himpunan/{id}', [ClientHimpunanController::class, 'show'])->name('himpunans');
+
+  Route::get('/ukm', [ClientUkmController::class, 'index'])->name('ukms');
+  Route::get('/detail-ukm/{id}', [ClientUkmController::class, 'show'])->name('ukms');
+
+  Route::get('/prodi', [ClientProdiController::class, 'index'])->name('prodis');
+  Route::get('/detail-prodi/{id}', [ClientProdiController::class, 'show'])->name('prodis');
 
   // GAMES
   Route::get('/game-home', [LeaderboardController::class, 'index']);
@@ -191,11 +193,6 @@ Route::middleware(['auth'])->group(function () {
   Route::get('/tebak-bangunan-selesai/{id}', [ClientGameTebakBangunanController::class, 'restart']);
 
 
-  Route::get('/ukm', [ClientUkmController::class, 'index'])->name('ukms');
-  Route::get('/detail-ukm/{id}', [ClientUkmController::class, 'show'])->name('ukms');
-
-  Route::get('/prodi', [ClientProdiController::class, 'index'])->name('prodis');
-  Route::get('/detail-prodi/{id}', [ClientProdiController::class, 'show'])->name('prodis');
   // Route::get('/prodi', function () {
   //   return view('client.jurusan.prodi');
   // });

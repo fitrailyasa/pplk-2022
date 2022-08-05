@@ -23,9 +23,7 @@ class ClientProdiController extends Controller
 
     public function show($id)
     {
-        $prodis = Cache::rememberForever('detail-prodi' . $id, function () use ($id) {
-            return Prodi::where('id', $id)->first();
-        });
+        $prodis = Prodi::where('id', $id)->first();
         return view('client.jurusan.detail-prodi', compact('prodis'));
     }
 }
