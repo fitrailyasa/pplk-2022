@@ -112,12 +112,12 @@
             </li>
             <!--./Beranda-->
 
-            <!-- All User-->
+            <!--Panitia-->
             <li class="nav-item">
                 <a class="nav-link tabitem">
                 <i class="nav-icon fa-solid fa-user-astronaut"></i>
                 <p>
-                    All User
+                    Panitia
                     <i class="right fas fa-angle-left"></i>
                 </p>
                 </a>
@@ -125,18 +125,18 @@
                 <li class="nav-item">
                     <a href="{{ route('super.user.create') }}" class="nav-link tablinks">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Tambah User</p>
+                    <p>Tambah Panitia</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('super.user.index') }}" class="nav-link tablinks">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Kelola Data User</p>
+                    <p>Kelola Data Panitia</p>
                     </a>
                 </li>
                 </ul>
             </li>
-            <!--./All User-->
+            <!--./Panitia-->
 
             <!--User-->
             <li class="nav-item">

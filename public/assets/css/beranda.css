@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
@@ -7,7 +7,7 @@
     --primary: #7739A3;
     --secondary: #1A75FF;
     --bawaan-gradient-1:rgb(240,65,255); /*Base Color*/
-    --bawaan-gradient-2: rgb(119,57,163); /*Text Color*/
+    --bawaan-gradient-2: rgb(119, 57, 163); /*Text Color*/
     --gradient-1: linear-gradient(90deg, rgb(240, 65, 255) 0%, rgba(130,165,234,1) 100%);
     --gradient-2: linear-gradient(90deg, rgba(119,57,163,1) 0%, rgba(26,117,255,1) 100%);
     --white: #fff;
@@ -17,9 +17,9 @@
     --primary-color-2: rgba(91, 207, 197, 0.2);
     --font-family-title: Poppins, 'open sans';
     --font-family-body: Poppins, 'open sans';
-    --font-color-primary: #174461;
+    --font-color-primary: #174461; 
     --font-color-primary-2: #FFFFFF;
-    --font-color-subheadline: #071D2C;
+    --font-color-subheadline: #071D2C; 
     --font-color-secondary: #686868;
     --font-color-call-to-act-2:#4a4a4a;
     --page-background-1: #F9FAFB;
@@ -38,7 +38,7 @@ body {
     box-shadow: inset rgba(41, 1, 53, 0.66) 0px 1000rem 100px;
     width: 100%;
     padding-bottom: 0px;
-
+    
 }
 
 
@@ -60,7 +60,7 @@ body {
     background-position: 50% 0%;
     transform: translateY(-4.5rem);
     /* box-shadow:rgba(50,25,67,1) 0px 50px 10px; */
-
+    
 }
 
 .box{
@@ -107,7 +107,7 @@ body {
 }
 
 .gambar-1{
-    max-width: 150px;
+    max-width: 150px;   
 }
 
 
@@ -118,7 +118,7 @@ body {
     background: var(--bawaan-gradient-1);
     background: var(--gradient-1);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; 
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
     transform: translateY(20px);
@@ -186,7 +186,7 @@ body {
     background: var(--bawaan-gradient-1);
     background: var(--gradient-1);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; 
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
 }
@@ -206,7 +206,7 @@ body {
     background: var(--bawaan-gradient-1);
     background: var(--gradient-1);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; 
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
 }
@@ -216,7 +216,7 @@ body {
     padding: 0px;
     box-shadow: #000000 0px 0px 10px;
     background: var(--bawaan-gradient-1);
-    background: var(--gradient-1);
+    background: linear-gradient(90deg, rgba(240, 65, 255,0.2) 0%, rgba(130,165,234,0.2) 100%);
 }
 
 
@@ -296,10 +296,10 @@ body {
 }
 
 
-.owl-theme .owl-nav i{
+.owl-theme .owl-nav i{ 
     font-size: 2rem;
     color: var(--white);
-
+    
 }
 .owl-theme .owl-nav .owl-prev{
     position: absolute;
@@ -382,14 +382,13 @@ body {
         font-weight: bold;
         transform: translateY(0px);
     }
+    
+
 
     .maskot {
-        width: 200%;
+        width: 100%;
     }
-    .maskot2 {
-        width: 120%;
-    }
-
+    
 }
 
 @media screen and (max-width: 700px) {
@@ -451,10 +450,8 @@ body {
         height: 220px;
     }
 
+
     .maskot {
-        display: none;
-    }
-    .maskot2 {
         display: none;
     }
 
@@ -463,12 +460,12 @@ body {
         padding: 0px 10px;
         text-align: center;
     }
-
+    
     .truncate {
         display: -webkit-box;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
     }
-
+    
 }
 

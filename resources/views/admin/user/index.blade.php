@@ -30,7 +30,6 @@
                 <tr>
                     <th>No</th>
                     <th>Nama Lengkap</th>
-                    <th>Email</th>
                     <th>NIM</th>
                     <th>Kelompok</th>
                     <th>Instagram</th>
@@ -46,11 +45,10 @@
                 <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $user->nama }}</td>
-                    <td>{{ $user->email }}</td>
                     <td>{{ $user->nim }}</td>
                     <td>{{ $user->kelompok }}</td>
-                    <td><a style="" href="https://instagram.com/{{ $user->instagram }}">{{ $user->instagram }}</a></td>
-                    <td><a style="" href="https://api.whatsapp.com/send?phone={{ $user->nomorHp }}&text=Halo!">{{ $user->nomorHp }}</a></td>
+                    <td><a style="color:black; text-decoration: none;" href="https://instagram.com/{{ $user->instagram }}">{{ $user->instagram }}</a></td>
+                    <td><a style="color:black; text-decoration: none;" href="https://api.whatsapp.com/send?phone={{ $user->nomorHp }}">{{ $user->nomorHp }}</a></td>
                     <td>{{ $user->golonganDarah }}</td>
                     <td>{{ $user->riwayatPenyakit }}</td>
                     <td>{{ $user->prodi }}</td>
