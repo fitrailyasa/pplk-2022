@@ -12,7 +12,7 @@
       </div>
       <div class="card-body">
     @if(auth()->user()->roles_id == 1)
-        <form method="POST" action="{{ route('super.dapmenUser.update', $user->id) }}" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('super.user.update', $user->id) }}" enctype='multipart/form-data'>
     @elseif(auth()->user()->roles_id == 2)
         <form method="POST" action="{{ route('admin.dapmenUser.update', $user->id) }}" enctype='multipart/form-data'>
     @elseif(auth()->user()->roles_id == 6)
