@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\ScoreTebakBangunan;
 use Illuminate\Database\Seeder;
 
 class ScoreTebakBangunanSeeder extends Seeder
@@ -13,6 +14,6 @@ class ScoreTebakBangunanSeeder extends Seeder
      */
     public function run()
     {
-        //
+        ScoreTebakBangunan::factory(5)->create();
     }
 }

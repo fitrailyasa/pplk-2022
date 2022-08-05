@@ -35,6 +35,12 @@ body {
     font-size: larger;
   }
 
+  @media screen and (max-width:930px) {
+    #terakhir {
+        margin-bottom: 5rem;
+    }
+  }
+
   @media only screen and (max-width: 500px) {
     .jurusan-item-icon {
       display: block;

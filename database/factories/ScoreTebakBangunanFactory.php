@@ -13,8 +13,12 @@ class ScoreTebakBangunanFactory extends Factory
      */
     public function definition()
     {
+        static $order=1;
         return [
-            
+            'user_id'=>$order++,
+            'score'=>'0',
+            'kesempatan'=>'0'
+
 
         ];
     }

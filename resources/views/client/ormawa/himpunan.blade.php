@@ -21,15 +21,15 @@
               <div class="card m-4">
                     <div class="d-flex justify-content-center box">
                         <div class="ratio ratio-1x1 box-img">
-                            <img src="{{ asset('assets/himpunan/')}}/{{ $himpunan->logo }}" class="card-img p-2" alt="...">
+                            <img src="{{ asset('assets/himpunan')}}/{{ $himpunan->logo }}" class="card-img p-2" alt="...">
                         </div>
                     </div>
                     <div class="card-body pb-5">
                       <h5 class="card-title">{{ $himpunan->namaSingkat }}</h5>
                       <p class="card-text">{{ $himpunan->namaLengkap }}</p>
                     </div>
-                    <a href="/detailHimpunan/{{ $himpunan->id }}">
-                    <button href="{{ route('detailHimpunan',$himpunan->id) }}" class="tombol background-gradient">Detail
+                    <a href="/detail-himpunan/{{ $himpunan->id }}">
+                    <button  class="tombol background-gradient">Detail
                     </button>
                     </a>
                   </div>
