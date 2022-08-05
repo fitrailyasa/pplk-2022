@@ -115,7 +115,7 @@
             } elseif (auth()->user()->roles_id == 2) {
                 return redirect('admin/ukm')->with('sukses', 'Berhasil Tambah Data!');
             } elseif (auth()->user()->roles_id == 4) {
-                return redirect('ukm/ukm')->with('sukses', 'Berhasil Tambah Data!');
+                return redirect('ukms/ukm')->with('sukses', 'Berhasil Tambah Data!');
             }
         }
 
@@ -252,7 +252,7 @@
                 } elseif (auth()->user()->roles_id == 2) {
                     return redirect('admin/ukm')->with('sukses', 'Berhasil Edit Data!');
                 } elseif (auth()->user()->roles_id == 4) {
-                    return redirect('ukm/ukm')->with('sukses', 'Berhasil Edit Data!');
+                    return redirect('ukms/ukm')->with('sukses', 'Berhasil Edit Data!');
                 }
             }
         }
@@ -273,7 +273,7 @@
             } elseif (auth()->user()->roles_id == 2) {
                 return redirect('admin/ukm')->with('sukses', 'Berhasil Hapus Data!');
             } elseif (auth()->user()->roles_id == 4) {
-                return redirect('ukm/ukm')->with('sukses', 'Berhasil Hapus Data!');
+                return redirect('ukms/ukm')->with('sukses', 'Berhasil Hapus Data!');
             }
         }
     }

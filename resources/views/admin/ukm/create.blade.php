@@ -15,6 +15,8 @@
         <form method="POST" action="{{ route('super.ukm.store') }}" enctype='multipart/form-data'>
     @elseif(auth()->user()->roles_id == 2)
         <form method="POST" action="{{ route('admin.ukm.store') }}" enctype='multipart/form-data'>
+    @elseif(auth()->user()->roles_id == 4)
+        <form method="POST" action="{{ route('ukms.ukm.store') }}" enctype='multipart/form-data'>
     @endif
         @csrf
           <div class="mb-3 row">

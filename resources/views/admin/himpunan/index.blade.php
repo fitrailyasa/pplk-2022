@@ -55,6 +55,13 @@
                         <a href="{{ route('admin.himpunan.edit',$himpunan->id) }}" class="edit-button">
                           <i class="fa-solid fa-marker"></i>
                         </a>
+                    @elseif(auth()->user()->roles_id == 3)
+                        <a href="{{ route('himpunans.himpunan.show',$himpunan->id) }}" class="edit-button">
+                          <i class="fa-solid fa-eye"></i>
+                        </a>
+                        <a href="{{ route('himpunans.himpunan.edit',$himpunan->id) }}" class="edit-button">
+                          <i class="fa-solid fa-marker"></i>
+                        </a>
                     @endif
                       <!-- Button trigger modal -->
                       <a role="button"  class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm{{$himpunan->id}}">
@@ -76,6 +83,8 @@
                                 <form action="{{route('super.himpunan.destroy', $himpunan->id)}}" method="POST">
                             @elseif(auth()->user()->roles_id == 2)
                                 <form action="{{route('admin.himpunan.destroy', $himpunan->id)}}" method="POST">
+                            @elseif(auth()->user()->roles_id == 3)
+                                <form action="{{route('himpunans.himpunan.destroy', $himpunan->id)}}" method="POST">
                             @endif
                             @method('DELETE')
                                 @csrf

@@ -12,9 +12,11 @@
       </div>
       <div class="card-body">
     @if(auth()->user()->roles_id == 1)
-        <form method="POST" action="{{ route('super.user.show') }}" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('super.dapmenUser.show', $user->id) }}" enctype='multipart/form-data'>
     @elseif(auth()->user()->roles_id == 2)
-        <form method="POST" action="{{ route('admin.user.show') }}" enctype='multipart/form-data'>
+        <form method="POST" action="{{ route('admin.dapmenUser.show', $user->id) }}" enctype='multipart/form-data'>
+    @elseif(auth()->user()->roles_id == 6)
+        <form method="POST" action="{{ route('dapmen.dapmenUser.show', $user->id) }}" enctype='multipart/form-data'>
     @endif
     @csrf
         @method('PUT')

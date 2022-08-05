@@ -93,14 +93,14 @@ Route::middleware([Admin::class])->name('admin.')->prefix('admin')->group(functi
 });
 
 // CMS HIMPUNAN
-Route::middleware([Himpunan::class])->name('himpunan.')->prefix('himpunan')->group(function () {
+Route::middleware([Himpunan::class])->name('himpunans.')->prefix('himpunans')->group(function () {
   Route::get('/', [AdminController::class, 'index'])->name('index');
   Route::resource('himpunan', AdminHimpunanController::class);
   Route::resource('prodi', AdminProdiController::class);
 });
 
 // CMS UKM
-Route::middleware([Ukm::class])->name('ukm.')->prefix('ukm')->group(function () {
+Route::middleware([Ukm::class])->name('ukms.')->prefix('ukms')->group(function () {
   Route::get('/', [AdminController::class, 'index'])->name('index');
   Route::resource('ukm', AdminUkmController::class);
   Route::get('/polling', [ClientScannerController::class, 'indexPolling'])->name('polling');
