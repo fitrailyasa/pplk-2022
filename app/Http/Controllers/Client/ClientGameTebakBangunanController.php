@@ -5,15 +5,10 @@ namespace App\Http\Controllers\Client;
 use App\Models\Leaderboard;
 use App\Models\Tebak_bangunan;
 use App\Models\ScoreTebakBangunan;
-use App\Models\TokenTebakBangunan;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Crypt;
 use App\Http\Requests\StoreTebak_bangunanRequest;
 use App\Http\Requests\UpdateTebak_bangunanRequest;
-use App\Models\TokenTebakBangunan;
-
-
-use App\Models\ScoreTebakBangunan;
 
 class ClientGameTebakBangunanController extends Controller
 {
