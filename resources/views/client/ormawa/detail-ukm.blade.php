@@ -17,7 +17,7 @@
 @section('content')
     <!-- CONTENT -->
     <div class="himpunan p-0 justify-content-center">
-        <img src="{{ asset('assets/ukm/logo/'. $ukms->namaSingkat.'.svg') }}" class="hmp-img" alt="..." height="500" width="500">
+        <img src="{{ asset('assets/ukm/logo')}}/{{ $ukms->logo }}" class="hmp-img" alt="..." height="500" width="500">
         <h2>{{ $ukms->namaSingkat }}</h2>
         <h5>DIES NATALIS : {{ $ukms->tahunBerdiri }}</h5>
         <h5>PEMBINA HIMPUNAN : {{ $ukms->pembina }}</h5>
@@ -48,7 +48,7 @@
     <div class="himpunan-2 justify-content-center">
         <h2 > FILOSOFI LOGO</h2>
         <h2 >{{ $ukms->namaSingkat }}</h2>
-        <img src="{{ asset('assets/ukm/logo/'. $ukms->namaSingkat.'.svg') }}" class="hmp-img2" alt="..."></div>
+        <img src="{{ asset('assets/ukm/logo')}}/{{ $ukms->logo }}" class="hmp-img2" alt="..."></div>
     </div>
 
 </div>
@@ -141,19 +141,19 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="card-content-gm">
-                            <img src="{{ $ukms->dokumentasi1 }}" alt="">
+                            <img src="{{ asset('assets/ukm/dokumentasi1')}}/{{ $ukms->dokumentasi1 }}" alt="">
                         </div>
                     </div>
 
                     <div class="swiper-slide">
                         <div class="card-content-gm">
-                            <img src="{{ $ukms->dokumentasi2 }}" alt="">
+                            <img src="{{ asset('assets/ukm/dokumentasi2')}}/{{ $ukms->dokumentasi2 }}" alt="">
                         </div>
                     </div>
 
                     <div class="swiper-slide">
                         <div class="card-content-gm">
-                            <img src="{{ $ukms->dokumentasi3 }}" alt="">
+                            <img src="{{ asset('assets/ukm/dokumentasi3')}}/{{ $ukms->dokumentasi3 }}" alt="">
                         </div>
                     </div>
                     <!-- <div class="swiper-slide">

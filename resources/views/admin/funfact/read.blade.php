@@ -11,7 +11,11 @@
     <h4 class="card-title">Detail Data Funfact</h4>
     </div>
     <div class="card-body">
-      <form method="POST" action="{{ route('adminFunfact.show',$funfact->id) }}" enctype='multipart/form-data'>
+    @if(auth()->user()->roles_id == 1)
+        <form method="POST" action="{{ route('super.funfact.show',$funfact->id) }}" enctype='multipart/form-data'>
+    @elseif(auth()->user()->roles_id == 2)
+        <form method="POST" action="{{ route('admin.funfact.show',$funfact->id) }}" enctype='multipart/form-data'>
+    @endif
       @method('PUT')
       @csrf
       @if (\Session::has('success'))
@@ -22,7 +26,7 @@
       </div>
       @endif
       <input type="hidden" name="id" value="{{ $funfact->id }}">
-        
+
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Deskripsi</label>
           <div class="col-sm-9">

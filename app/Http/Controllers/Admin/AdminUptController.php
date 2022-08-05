@@ -44,7 +44,11 @@ class AdminUptController extends Controller
             'deskripsi' => $request->deskripsi
         ]);
 
-        return redirect('/adminUpt')->with('sukses', 'Berhasil Tambah Data!');
+        if (auth()->user()->roles_id == 1) {
+            return redirect('super/upt')->with('sukses', 'Berhasil Tambah Data!');
+        } elseif (auth()->user()->roles_id == 2) {
+            return redirect('admin/upt')->with('sukses', 'Berhasil Tambah Data!');
+        }
     }
 
     /**
@@ -89,7 +93,11 @@ class AdminUptController extends Controller
                 'deskripsi' => $request->deskripsi
             ]
         );
-        return redirect('/adminUpt')->with('sukses', 'Berhasil Edit Data!');
+        if (auth()->user()->roles_id == 1) {
+            return redirect('super/upt')->with('sukses', 'Berhasil Edit Data!');
+        } elseif (auth()->user()->roles_id == 2) {
+            return redirect('admin/upt')->with('sukses', 'Berhasil Edit Data!');
+        }
     }
 
     /**
@@ -103,6 +111,10 @@ class AdminUptController extends Controller
         $data = Upt::where('id', $id)->first();
         $data->delete();
 
-        return redirect('/adminUpt')->with('sukses', 'Berhasil Hapus Data!');
+        if (auth()->user()->roles_id == 1) {
+            return redirect('super/upt')->with('sukses', 'Berhasil Hapus Data!');
+        } elseif (auth()->user()->roles_id == 2) {
+            return redirect('admin/upt')->with('sukses', 'Berhasil Hapus Data!');
+        }
     }
 }

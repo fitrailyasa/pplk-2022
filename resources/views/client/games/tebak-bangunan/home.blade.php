@@ -40,180 +40,27 @@
       <div class="row">
         <div class="col d-flex justify-content-center align-items-start"></div>
       </div>
+        
       <div class="row d-flex justify-content-around">
+        @foreach ($soals as $soal) 
+        
         <div class="col-6 col-sm-4 rounded-5 p-0 my-3 d-flex justify-content-center card-bangunan">
+          
           <div class="card rounded-5 m-1 ap-cd">
-            <img src="" alt="" class="card-img-top bg-secondary rounded-5 ratio ratio-4x3" />
+            <img src="{{ asset('assets/Logo-PPLK.png') }}" alt="" class="card-img-top bg-secondary rounded-5 ratio ratio-4x3" />
+            <a class="btn my-lg-4" href="/tebak-bangunan-game/{{ $soal->id }}" >
             <div class="card-body">
-              <p class="card-text text-center">Lorem ipsum dolor sit amet.</p>
-              <h5 class="card-title text-center">Bangunan A</h5>
+              <p class="card-text text-center">SOAL {{ $soal->id }}</p>
+              <h5 class="card-title text-center">Buka</h5>
             </div>
+          </a>
           </div>
+        
         </div>
-
-        <div class="col-6 col-sm-4 rounded-5 p-0 my-3 d-flex justify-content-center card-bangunan">
-          <div class="card rounded-5 m-1 ap-cd">
-            <img src="" alt="" class="card-img-top bg-secondary rounded-5 ratio ratio-4x3" />
-            <div class="card-body">
-              <p class="card-text text-center">Lorem ipsum dolor sit amet.</p>
-              <h5 class="card-title text-center">Bangunan A</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 col-sm-4 rounded-5 p-0 my-3 d-flex justify-content-center card-bangunan">
-          <div class="card rounded-5 m-1 ap-cd">
-            <img src="" alt="" class="card-img-top bg-secondary rounded-5 ratio ratio-4x3" />
-            <div class="card-body">
-              <p class="card-text text-center">Lorem ipsum dolor sit amet.</p>
-              <h5 class="card-title text-center">Bangunan A</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 col-sm-4 rounded-5 p-0 my-3 d-flex justify-content-center card-bangunan">
-          <div class="card rounded-5 m-1 ap-cd">
-            <img src="" alt="" class="card-img-top bg-secondary rounded-5 ratio ratio-4x3" />
-            <div class="card-body">
-              <p class="card-text text-center">Lorem ipsum dolor sit amet.</p>
-              <h5 class="card-title text-center">Bangunan A</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 col-sm-4 rounded-5 p-0 my-3 d-flex justify-content-center card-bangunan">
-          <div class="card rounded-5 m-1 ap-cd">
-            <img src="" alt="" class="card-img-top bg-secondary rounded-5 ratio ratio-4x3" />
-            <div class="card-body">
-              <p class="card-text text-center">Lorem ipsum dolor sit amet.</p>
-              <h5 class="card-title text-center">Bangunan A</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 col-sm-4 rounded-5 p-0 my-3 d-flex justify-content-center card-bangunan">
-          <div class="card rounded-5 m-1 ap-cd">
-            <img src="" alt="" class="card-img-top bg-secondary rounded-5 ratio ratio-4x3" />
-            <div class="card-body">
-              <p class="card-text text-center">Lorem ipsum dolor sit amet.</p>
-              <h5 class="card-title text-center">Bangunan A</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 col-sm-4 rounded-5 p-0 my-3 d-flex justify-content-center card-bangunan">
-          <div class="card rounded-5 m-1 ap-cd">
-            <img src="" alt="" class="card-img-top bg-secondary rounded-5 ratio ratio-4x3" />
-            <div class="card-body">
-              <p class="card-text text-center">Lorem ipsum dolor sit amet.</p>
-              <h5 class="card-title text-center">Bangunan A</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 col-sm-4 rounded-5 p-0 my-3 d-flex justify-content-center card-bangunan">
-          <div class="card rounded-5 m-1 ap-cd">
-            <img src="" alt="" class="card-img-top bg-secondary rounded-5 ratio ratio-4x3" />
-            <div class="card-body">
-              <p class="card-text text-center">Lorem ipsum dolor sit amet.</p>
-              <h5 class="card-title text-center">Bangunan A</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 col-sm-4 rounded-5 p-0 my-3 d-flex justify-content-center card-bangunan">
-          <div class="card rounded-5 m-1 ap-cd">
-            <img src="" alt="" class="card-img-top bg-secondary rounded-5 ratio ratio-4x3" />
-            <div class="card-body">
-              <p class="card-text text-center">Lorem ipsum dolor sit amet.</p>
-              <h5 class="card-title text-center">Bangunan A</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 col-sm-4 rounded-5 p-0 my-3 d-flex justify-content-center card-bangunan">
-          <div class="card rounded-5 m-1 ap-cd">
-            <img src="" alt="" class="card-img-top bg-secondary rounded-5 ratio ratio-4x3" />
-            <div class="card-body">
-              <p class="card-text text-center">Lorem ipsum dolor sit amet.</p>
-              <h5 class="card-title text-center">Bangunan A</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 col-sm-4 rounded-5 p-0 my-3 d-flex justify-content-center card-bangunan">
-          <div class="card rounded-5 m-1 ap-cd">
-            <img src="" alt="" class="card-img-top bg-secondary rounded-5 ratio ratio-4x3" />
-            <div class="card-body">
-              <p class="card-text text-center">Lorem ipsum dolor sit amet.</p>
-              <h5 class="card-title text-center">Bangunan A</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 col-sm-4 rounded-5 p-0 my-3 d-flex justify-content-center card-bangunan">
-          <div class="card rounded-5 m-1 ap-cd">
-            <img src="" alt="" class="card-img-top bg-secondary rounded-5 ratio ratio-4x3" />
-            <div class="card-body">
-              <p class="card-text text-center">Lorem ipsum dolor sit amet.</p>
-              <h5 class="card-title text-center">Bangunan A</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 col-sm-4 rounded-5 p-0 my-3 d-flex justify-content-center card-bangunan">
-          <div class="card rounded-5 m-1 ap-cd">
-            <img src="" alt="" class="card-img-top bg-secondary rounded-5 ratio ratio-4x3" />
-            <div class="card-body">
-              <p class="card-text text-center">Lorem ipsum dolor sit amet.</p>
-              <h5 class="card-title text-center">Bangunan A</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 col-sm-4 rounded-5 p-0 my-3 d-flex justify-content-center card-bangunan">
-          <div class="card rounded-5 m-1 ap-cd">
-            <img src="" alt="" class="card-img-top bg-secondary rounded-5 ratio ratio-4x3" />
-            <div class="card-body">
-              <p class="card-text text-center">Lorem ipsum dolor sit amet.</p>
-              <h5 class="card-title text-center">Bangunan A</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 col-sm-4 rounded-5 p-0 my-3 d-flex justify-content-center card-bangunan">
-          <div class="card rounded-5 m-1 ap-cd">
-            <img src="" alt="" class="card-img-top bg-secondary rounded-5 ratio ratio-4x3" />
-            <div class="card-body">
-              <p class="card-text text-center">Lorem ipsum dolor sit amet.</p>
-              <h5 class="card-title text-center">Bangunan A</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 col-sm-4 rounded-5 p-0 my-3 d-flex justify-content-center card-bangunan">
-          <div class="card rounded-5 m-1 ap-cd">
-            <img src="" alt="" class="card-img-top bg-secondary rounded-5 ratio ratio-4x3" />
-            <div class="card-body">
-              <p class="card-text text-center">Lorem ipsum dolor sit amet.</p>
-              <h5 class="card-title text-center">Bangunan A</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 col-sm-4 rounded-5 p-0 my-3 d-flex justify-content-center card-bangunan">
-          <div class="card rounded-5 m-1 ap-cd">
-            <img src="" alt="" class="card-img-top bg-secondary rounded-5 ratio ratio-4x3" />
-            <div class="card-body">
-              <p class="card-text text-center">Lorem ipsum dolor sit amet.</p>
-              <h5 class="card-title text-center">Bangunan A</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 col-sm-4 rounded-5 p-0 my-3 d-flex justify-content-center card-bangunan">
-          <div class="card rounded-5 m-1 ap-cd">
-            <img src="" alt="" class="card-img-top bg-secondary rounded-5 ratio ratio-4x3" />
-            <div class="card-body">
-              <p class="card-text text-center">Lorem ipsum dolor sit amet.</p>
-              <h5 class="card-title text-center">Bangunan A</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 col-sm-4 rounded-5 p-0 my-3 d-flex justify-content-center card-bangunan">
-          <div class="card rounded-5 m-1 ap-cd">
-            <img src="" alt="" class="card-img-top bg-secondary rounded-5 ratio ratio-4x3" />
-            <div class="card-body">
-              <p class="card-text text-center">Lorem ipsum dolor sit amet.</p>
-              <h5 class="card-title text-center">Bangunan A</h5>
-            </div>
-          </div>
-        </div>
+      
+        @endforeach
       </div>
+      
     </div>
   </div>
   <!--Content web selesai dari sini-->
