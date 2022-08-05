@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
+
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -43,7 +44,7 @@ class AdminHimpunanController extends Controller
         $validatedData = $request->validate([
             'logo' => 'required|mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
 
-           ]);
+        ]);
         $file = $validatedData[('logo')];
 
         Himpunan::create([
@@ -59,11 +60,11 @@ class AdminHimpunanController extends Controller
             'filosofiLogo' => $request->filosofiLogo
         ]);
 
-        $filename = time().'_'.$file->getClientOriginalName();
+        $filename = time() . '_' . $file->getClientOriginalName();
         // File upload location
         $location = '../public/assets/logoProdi/';
         // Upload file
-        $file->move($location,$filename);
+        $file->move($location, $filename);
 
         if (auth()->user()->roles_id == 1) {
             return redirect('super/himpunan')->with('sukses', 'Berhasil Tambah Data!');
@@ -123,8 +124,7 @@ class AdminHimpunanController extends Controller
                 'filosofiLogo' => $request->filosofiLogo
             ]
         );
-        if ($request->hasFile('logo'))
-           {
+        if ($request->hasFile('logo')) {
             $himpunan->update([
                 'logo' => url($request->file('logo')->move('assets/himpunan', $himpunan->namaSingkat . '.' . $request->file('logo')->extension())),
             ]);
