@@ -8,7 +8,6 @@ use App\Http\Middleware\Admin;
 use App\Http\Middleware\Himpunan;
 use App\Http\Middleware\Ukm;
 use App\Http\Middleware\Kedisiplinan;
-
 use App\Http\Middleware\DapMen;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\AdminBegalinController;
@@ -177,8 +176,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/tebak-bangunan-game/{id}/{jawaban}',[ClientGameTebakBangunanController::class,'store']);
     Route::get('/tebak-bangunan-selesai/{id}',[ClientGameTebakBangunanController::class,'restart']);
 
-    // OUR TEAM
-    Route::get('/our-team', function () { return view('client.our-team'); });
+    // DEVELOPMENT TEAM
+    Route::get('/dev-team', function () { return view('client.dev-team'); });
 
 });
 
