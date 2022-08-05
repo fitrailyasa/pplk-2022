@@ -143,36 +143,35 @@ class ClientBiodataController extends Controller
         window.location.href='/edit-biodata'
          </script>";
 
-}
+    }
+
+    public function updateBiodata(Request $request, $id){
+
+        // mencari row user yang ingin di update
+            $viewbiodata = User::find($id);
+
+                    // memberikan nilai baru ke column
+                $nim = $request->input('nim');
+                $viewbiodata->nama = $request->input('name');
+                $viewbiodata->golonganDarah = $request->input('golonganDarah');
+                $viewbiodata->nim = $nim;
+                $viewbiodata->password = Hash::make($request->input('password'));
+                $viewbiodata->email = $request->input('email');
+                $viewbiodata->instagram = $request->input('instagram');
+                $viewbiodata->nomorHp = $request->input('nomorHp');
+                $viewbiodata->riwayatPenyakit = $request->input('riwayatPenyakit');
+                $viewbiodata->prodi = $request->input('prodi');
+
+                // eksekusi proses update
+                $viewbiodata->update();
+
+                echo "<script>
+                alert('Data update');
+                window.location.href='/edit-biodata'
+                </script>";
 
 
-public function updateBiodata(Request $request, $id){
-
-    // mencari row user yang ingin di update
-        $viewbiodata = User::find($id);
-
-                // memberikan nilai baru ke column
-            $nim = $request->input('nim');
-            $viewbiodata->nama = $request->input('name');
-            $viewbiodata->golonganDarah = $request->input('golonganDarah');
-            $viewbiodata->nim = $nim;
-            $viewbiodata->password = Hash::make($request->input('password'));
-            $viewbiodata->email = $request->input('email');
-            $viewbiodata->instagram = $request->input('instagram');
-            $viewbiodata->nomorHp = $request->input('nomorHp');
-            $viewbiodata->riwayatPenyakit = $request->input('riwayatPenyakit');
-            $viewbiodata->prodi = $request->input('prodi');
-
-            // eksekusi proses update
-            $viewbiodata->update();
-
-            echo "<script>
-            alert('Data update');
-            window.location.href='/edit-biodata'
-            </script>";
-
-
-}
+    }
 
     // public function hitunguser(){
 
