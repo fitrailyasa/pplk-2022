@@ -28,8 +28,8 @@
                       <h5 class="card-title">{{ $ukm->namaSingkat }}</h5>
                       <p class="card-text">{{ $ukm->namaLengkap }}</p>
                     </div>
-                    <a href="/detailUkm/{{ $ukm->id }}">
-                      <button href="{{ route('detailUkm',$ukm->id) }}" class="tombol background-gradient">Detail
+                    <a href="/detail-ukm/{{ $ukm->id }}">
+                      <button class="tombol background-gradient">Detail
                       </button>
                       </a>
                   </div>

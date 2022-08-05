@@ -47,6 +47,9 @@ class AdminHimpunanController extends Controller
         ]);
         $file = $validatedData[('logo')];
 
+        $filename = time() . '_' . $file->getClientOriginalName();
+        // File upload location
+        $location = '../public/assets/himpunan/';
         Himpunan::create([
             'namaLengkap' => $request->namaLengkap,
             'namaSingkat' => $request->namaSingkat,
@@ -56,13 +59,10 @@ class AdminHimpunanController extends Controller
             'pembina' => $request->pembina,
             'ketuaHimpunan' => $request->ketuaHimpunan,
             'tahunBerdiri' => $request->tahunBerdiri,
-            'logo'  =>  $file,
+            'logo'  =>  $filename,
             'filosofiLogo' => $request->filosofiLogo
         ]);
 
-        $filename = time() . '_' . $file->getClientOriginalName();
-        // File upload location
-        $location = '../public/assets/logoProdi/';
         // Upload file
         $file->move($location, $filename);
 

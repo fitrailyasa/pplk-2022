@@ -16,7 +16,7 @@
 @section('content')
     <!-- CONTENT -->
     <div class="himpunan">
-        <img src="{{ asset('assets/himpunan/'. $himpunans->namaSingkat.'.svg') }}" class="hmp-img" alt="image" height="500" width="500">
+        <img src="{{ asset('assets/himpunan')}}/{{ $himpunans->logo }}" class="hmp-img" alt="image" height="500" width="500">
         <h2>{{ $himpunans->namaSingkat }}</h2>
         <h5>DIES NATALIS : {{ $himpunans->tahunBerdiri }}</h5>
         <h5>PEMBINA HIMPUNAN : {{ $himpunans->pembina }}</h5>
@@ -27,7 +27,7 @@
         <p>{{ $himpunans->misi }}</p>
         <h2> FILOSOFI LOGO</h2>
         <h2>{{ $himpunans->namaSingkat }}</h2>
-        <img src="{{ asset('assets/himpunan/'. $himpunans->namaSingkat.'.svg') }}" class="hmp-img2" alt="image" height="250" width="250">
+        <img src="{{ asset('assets/himpunan')}}/{{ $himpunans->logo }}" class="hmp-img2" alt="image" height="250" width="250">
     </div>
 </div>
 <br><br>
