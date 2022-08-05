@@ -8,7 +8,6 @@ use App\Http\Middleware\Admin;
 use App\Http\Middleware\Himpunan;
 use App\Http\Middleware\Ukm;
 use App\Http\Middleware\Kedisiplinan;
-
 use App\Http\Middleware\DapMen;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\AdminBegalinController;

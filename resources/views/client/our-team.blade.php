@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#09f" />
+    <meta name="description" content="Program Pengenalan Lingkungan Kampus (PPLK) merupakan acara pesta penyambutan terbesar untuk mahasiswa baru yang diselenggarakan setiap tahunnya di Institut Teknologi Sumatera (ITERA). PPLK ITERA hadir sebagai akses utama bagi mahasiswa baru untuk mengawali gerbang perkuliahan, yang berupa kaderisasi awal terpusat yang diselenggarakan oleh Keluarga Mahasiswa Institut Teknologi Sumatera (KM ITERA) untuk menyambut mahasiswa baru." />
+    <meta name="keywords" content="PPLK, Program Pengenalan Lingkungan Kampus, PPLK ITERA 2022, KM-ITERA" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="author" content="Fitra Ilyasa" />
+    <meta name="copyright" content="PPLK 2022" />
+    <meta name="robots" content="follow" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Website PPLK 2022" />
+    <meta property="og:url" content="URL" />
+
     <title>Our Team - PPLK 2022</title>
     <link rel="stylesheet" href="{{ asset('assets/css/our-team.css') }}">
     {{-- SWIPER CSS --}}
