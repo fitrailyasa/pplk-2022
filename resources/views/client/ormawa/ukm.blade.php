@@ -21,15 +21,15 @@
               <div class="card m-4">
                     <div class="d-flex justify-content-center box">
                         <div class="ratio ratio-1x1 box-img">
-                            <img src="{{ asset('assets/ukm/logo/'. $ukm->namaSingkat.'.svg') }}" class="card-img p-2" alt="image">
+                            <img src="{{ asset('assets/ukm/logo')}}/{{ $ukm->logo }}" class="card-img p-2" alt="image">
                         </div>
                     </div>
                     <div class="card-body pb-5">
                       <h5 class="card-title">{{ $ukm->namaSingkat }}</h5>
                       <p class="card-text">{{ $ukm->namaLengkap }}</p>
                     </div>
-                    <a href="/detailUkm/{{ $ukm->id }}">
-                      <button href="{{ route('detailUkm',$ukm->id) }}" class="tombol background-gradient">Detail
+                    <a href="/detail-ukm/{{ $ukm->id }}">
+                      <button class="tombol background-gradient">Detail
                       </button>
                       </a>
                   </div>

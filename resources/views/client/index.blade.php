@@ -8,7 +8,7 @@
 @endsection
 
 @section('content')
-    <!-- sponsor modal -->
+    <!-- Sponsor modal -->
     <div class="modal fade" id="modal-sponsor" tabindex="-1" aria-labelledby="sponsor-modal" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
@@ -41,17 +41,15 @@
           </div>
         </div>
       </div>
-    <!-- end sponsor modal -->
+    <!-- ./Sponsor modal -->
 
     <div class="conten">
-           <!-- jumbotron -->
-           <div class="container-fluid landing-page">
+        <!-- Jumbotron -->
+        <div class="container-fluid landing-page">
             <div class="row justify-content-center">
                 <div class="box ratio ratio-1x1 mt-5">
                     <img src="../assets/Logo-PPLK.png" alt="">
                 </div>
-                <!-- <div class="col-lg-4 justify-content-center">
-                </div> -->
             </div>
             <div class="row text-center text-white">
                 <div class="text-nama">
@@ -61,11 +59,11 @@
                     <p>Ayo Menjelajah, Sekarang!</p>
                 </div>
             </div>
-
         </div>
+        <!-- ./Jumbotron -->
 
 
-        <!--under landing page dekctop -->
+        <!-- Under landing page dekstop -->
         <div class="container-fluid under-landing-page p-3">
             <div class="row justify-content-between p-4">
                 <div class="col-lg-5 col-md-4 align-self-center">
@@ -199,12 +197,12 @@
                             KAMUS GAUL
                         </div>
                     </a>
-
                 </div>
             </div>
         </div>
+        <!-- ./Under landing page dekstop -->
 
-        <!-- under landing page mobile -->
+        <!-- Under landing page mobile -->
         <div class="container-fluid under-landing-page-mobile">
             <div class="mobile-wrapper owl-carousel owl-theme">
                 <a href="/jurusan" class="card text-center mt-4 mb-1" >
@@ -272,7 +270,7 @@
                                 </svg>
 
 
-                            <h1 class="link-tilte">HIMPUANAN</h1>
+                            <h1 class="link-tilte">HIMPUNAN</h1>
                     </div>
                 </a>
                 <a href="/ukm" class="card text-center mt-4 mb-1" >
@@ -331,8 +329,9 @@
                 </div>
             </div>
         </div>
+        <!-- ./Under landing page mobile -->
 
-                <!-- fun fact -->
+        <!-- Youtube -->
         <div class="container-fluid fun-fact">
             <div class="row justify-content-around p-3">
                 <div class="col-md-5 col-sm-11 justify-content-center">
@@ -341,8 +340,8 @@
                             <span class="h1 text-style text-white">KNOW MORE <br> ABOUT <span class=" text-gradien">PPLK 2022</span></span>
                         </div>
 
-                        <div class="mt-5 p-3 col-10 g-3 carousel-container owl-carousel" >
-                        
+                        <div class="mt-5 p-3 col-10 g-3 carousel-container" >
+
                             <div class="item img-fit">
                                 <button  data-bs-toggle="modal" data-bs-target="#you" >
                                     <i class="bi bi-play-btn-fill play-icon text-danger"></i>
@@ -356,24 +355,26 @@
                                     <img src="http://img.youtube.com/vi/Z6w_5ST34UQ/0.jpg" class="thumbnail" alt="">
                                 </button>
                             </div>
-                        
+
                             <div class="item img-fit">
                                 <button  data-bs-toggle="modal" data-bs-target="#me" >
                                     <i class="bi bi-play-btn-fill play-icon text-danger"></i>
                                     <img src="http://img.youtube.com/vi/6gZ9WFwxRNY/0.jpg" class="thumbnail" alt="">
                                 </button>
                             </div>
-                        
+
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <img class="maskot2"src="../assets/Maskot2.png" alt="">
-                    
+
                 </div>
             </div>
         </div>
-        <!-- Modal  youtube-->
+        <!-- ./Youtube -->
+
+        <!-- Modal Youtube-->
         <div class="modal modal-xl fade" id="you" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -382,7 +383,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="modal modal-xl fade" id="and" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -391,6 +392,7 @@
                 </div>
             </div>
         </div>
+        <!-- ./Modal Youtube-->
 
         <div class="modal modal-xl fade" id="me" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
@@ -401,10 +403,10 @@
                 </div>
             </div>
         </div>
-  <!-- begalin -->
 
-  <div class="container-fluid begalin pt-5">
-    <div class="begalin-container">
+    <!-- Begalin -->
+    <div class="container-fluid begalin pt-5">
+        <div class="begalin-container">
             <div class="title text-center pt-3">
                 <p>BEGALIN</p>
                 <p class="akronim-begalin">BELAJAR GALI INFORMASI</p>
@@ -423,36 +425,37 @@
             </div>@endforeach
         </div>
     </div>
+    <!-- ./Begalin -->
 
 
-<!-- modal begalin -->
+<!-- Modal Begalin -->
 @foreach ($begalins as $begalin )
-<div class="modal modal-xl fade" id="begalin{{ $begalin->id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-    <div class="modal-content">
-        <div class="modal-header">
-            <!-- <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5> -->
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <div class="content-modal text-start m-2">
-                <p>{{ $begalin->isi }}
-                </p>
+    <div class="modal modal-xl fade" id="begalin{{ $begalin->id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!-- <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5> -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="content-modal text-start m-2">
+                    <p>{{ $begalin->isi }}
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-start">
+                <div class="text-start">
+                    <strong >Copyright &copy; 2022 <a href="#" class=" text-decoration-none">IMTEK PPLK-2022</a>.</strong> All rights reserved.
+                </div>
             </div>
         </div>
-        <div class="modal-footer justify-content-start">
-            <div class="text-start">
-                <strong >Copyright &copy; 2022 <a href="#" class=" text-decoration-none">IMTEK PPLK-2022</a>.</strong> All rights reserved.
-            </div>
         </div>
     </div>
-    </div>
-</div>
 @endforeach
 </div>
-<!-- end modal begalin -->
+<!-- ./Modal Begalin -->
 
-        <!-- medpatr -->
+        <!-- Medpart -->
         <div class="container-fluid medpart padding-top-bottom" id="terakhir">
             <div class="wrapper">
                 <div class="carousel owl-carousel">
@@ -492,13 +495,14 @@
                 </div>
              </div>
         </div>
+        <!-- ./Medpart -->
 
     </div>
 @endsection
 
 @section('script')
 
-<script>
+    <script>
 
             $(".modal-carousel").owlCarousel({
             item:1,
@@ -592,5 +596,6 @@
            }
 
          });
-        </script>
+    </script>
+
 @endsection

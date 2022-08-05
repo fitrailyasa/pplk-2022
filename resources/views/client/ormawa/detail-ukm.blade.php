@@ -17,7 +17,7 @@
 @section('content')
     <!-- CONTENT -->
     <div class="himpunan p-0 justify-content-center">
-        <img src="{{ asset('assets/ukm/logo')}}/{{ $ukms->logo }}" class="hmp-img" alt="..." height="500" width="500">
+        <img src="{{ asset('assets/ukm/logo')}}/{{ $ukms->logo }}" class="hmp-img" alt="..." height="250px" width="250px">
         <h2>{{ $ukms->namaSingkat }}</h2>
         <h5>DIES NATALIS : {{ $ukms->tahunBerdiri }}</h5>
         <h5>PEMBINA HIMPUNAN : {{ $ukms->pembina }}</h5>
@@ -48,7 +48,7 @@
     <div class="himpunan-2 justify-content-center">
         <h2 > FILOSOFI LOGO</h2>
         <h2 >{{ $ukms->namaSingkat }}</h2>
-        <img src="{{ asset('assets/ukm/logo')}}/{{ $ukms->logo }}" class="hmp-img2" alt="..."></div>
+        <img src="{{ asset('assets/ukm/logo')}}/{{ $ukms->logo }}" class="hmp-img2" alt="..." width="250px" height="250px"></div>
     </div>
 
 </div>

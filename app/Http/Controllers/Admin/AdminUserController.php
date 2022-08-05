@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Admin\Controller;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\DB;
 
 class AdminUserController extends Controller
 {
@@ -19,8 +20,12 @@ class AdminUserController extends Controller
     public function index()
     {
 
-        $users = User::all();
-        return view('admin.user.index', compact('users'));
+        // $users = User::all();
+        // return view('admin.user.index', compact('users'));
+
+        return view('admin.user.index', [
+            'users' => DB::table('users')->paginate(859)
+        ]);
     }
 
     /**
