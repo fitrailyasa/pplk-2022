@@ -11,6 +11,13 @@
     <link rel="stylesheet" href="{{ asset('assets/css/swiper-bundle-ot.min.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/favicon.ico') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/favicon-16x16.png') }}">
+
 </head>
 <body>
     <div></div>
@@ -46,7 +53,7 @@
 
     <!-- Kasub container -->
     <div class="container w-100" id="kasub">
-        
+
         <!-- FE -->
         <div class="col">
             <h2>Front End</h2>
@@ -101,10 +108,10 @@
                 <a class="btn btn-primary" href="#cr" role="button" type="button">Staff</a>
             </div>
             <img src="../assets/our-team/sinta.png" alt="">
-        </div>    
+        </div>
         <!-- closing tag desktop container -->
     </div>
-    
+
     <!-- STAFF-->
     <div id="staff">
     <div class="container mt-5">
@@ -344,7 +351,7 @@
                         </div>
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
-                                 <div class="card-image"> 
+                                 <div class="card-image">
                                      <img src="../assets/our-team/yulia.png" alt="" class="card-img">
                                  </div>
                                  <div class="card-content">
@@ -366,7 +373,7 @@
                         </div>
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
-                                 <div class="card-image"> 
+                                 <div class="card-image">
                                      <img src="../assets/our-team/rei.png" alt="" class="card-img">
                                  </div>
                                  <div class="card-content">
@@ -374,7 +381,7 @@
                                      <p class="description">Arsitektur'21</p>
                                  </div>
                              </div>
-     
+
                         </div>
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
@@ -388,8 +395,8 @@
                              </div>
                         </div>
                         <div class="card swiper-slide">
-                            <div class="image-content mx-auto"> 
-                                 <div class="card-image"> 
+                            <div class="image-content mx-auto">
+                                 <div class="card-image">
                                      <img src="../assets/our-team/ica.png" alt="" class="card-img">
                                  </div>
                                  <div class="card-content">
@@ -425,7 +432,7 @@
                 <div class="slide-content">
                     <div class="card-wrapper swiper-wrapper">
                         <div class="card swiper-slide">
-                            <div class="image-content mx-auto">  
+                            <div class="image-content mx-auto">
                                 <div class="card-image">
                                     <img src="../assets/our-team/dila.png" alt="" class="card-img">
                                 </div>
@@ -436,7 +443,7 @@
                             </div>
                         </div>
                         <div class="card swiper-slide">
-                            <div class="image-content mx-auto">  
+                            <div class="image-content mx-auto">
                                 <div class="card-image">
                                     <img src="../assets/our-team/nopri.png" alt="" class="card-img">
                                 </div>
@@ -447,7 +454,7 @@
                              </div>
                         </div>
                         <div class="card swiper-slide">
-                            <div class="image-content mx-auto"> 
+                            <div class="image-content mx-auto">
                                  <div class="card-image">
                                      <img src="../assets/our-team/denissa.png" alt="" class="card-img">
                                  </div>
@@ -458,7 +465,7 @@
                              </div>
                         </div>
                         <div class="card swiper-slide">
-                            <div class="image-content mx-auto">   
+                            <div class="image-content mx-auto">
                                  <div class="card-image">
                                      <img src="../assets/our-team/murli.png" alt="" class="card-img">
                                  </div>
@@ -469,8 +476,8 @@
                              </div>
                         </div>
                         <div class="card swiper-slide">
-                            <div class="image-content mx-auto"> 
-                                 <div class="card-image"> 
+                            <div class="image-content mx-auto">
+                                 <div class="card-image">
                                      <img src="../assets/our-team/raja.png" alt="" class="card-img">
                                  </div>
                                  <div class="card-content">
@@ -480,7 +487,7 @@
                              </div>
                         </div>
                         <div class="card swiper-slide">
-                            <div class="image-content mx-auto">    
+                            <div class="image-content mx-auto">
                                  <div class="card-image">
                                      <img src="../assets/our-team/zahra.png" alt="" class="card-img">
                                  </div>
@@ -491,8 +498,8 @@
                              </div>
                         </div>
                         <div class="card swiper-slide">
-                            <div class="image-content mx-auto">  
-                                 <div class="card-image"> 
+                            <div class="image-content mx-auto">
+                                 <div class="card-image">
                                      <img src="../assets/our-team/alya.png" alt="" class="card-img">
                                  </div>
                                  <div class="card-content">
@@ -502,8 +509,8 @@
                              </div>
                         </div>
                         <div class="card swiper-slide">
-                            <div class="image-content mx-auto">  
-                                 <div class="card-image"> 
+                            <div class="image-content mx-auto">
+                                 <div class="card-image">
                                      <img src="../assets/our-team/sephia.png" alt="" class="card-img">
                                  </div>
                                  <div class="card-content">
@@ -520,7 +527,7 @@
         </div>
     </div>
 </div>
-    
+
     <!-- Mobile -->
 <div class="flex-column container" id="mobile-cards">
     <div class="row m-0 p-0" id="kadiv-mobile">
@@ -541,12 +548,12 @@
         <div class="row">
             <img class="mx-auto" style="justify-content: center; width: 30rem;" src="../assets/our-team/Uls.png" alt="">
         </div>
-        
+
         <p class="text-light">
             Ardhames merupakan gabungan dari kata Ardha yaitu bumi dalam bahasa Arab yang artinya pusat informasi dari makhluk hidup dan Hermes adalah dewa pembawa informasi. Sehingga Ardhames diharapkan menjadi tempat pusat informasi yang didalamnya terdapat mahasiswa yang siap mencari dan juga memberikan informasi dan pengetahuan yang dimiliki
         </p>
     </div>
-    <!--Front-End--> 
+    <!--Front-End-->
     <div class="row container pt-5 mb-5">
         <div class="swiper mySwiper" style="width: 180px; height: 300px;">
             <div class="swiper-wrapper">
@@ -628,7 +635,7 @@
             <div class="swiper-pagination"></div>
           </div>
         </div>
-    
+
         <!-- Back End -->
         <div class="row container mb-5">
         <div class="swiper mySwiper" style="width: 180px; height: 300px;">
@@ -698,7 +705,7 @@
           </div>
         </div>
         <!-- Akhir Back End -->
-        
+
     <!-- VVD -->
     <div class="row container mb-5">
         <div class="swiper mySwiper" style="width: 180px; height: 300px;">
@@ -796,7 +803,7 @@
           </div>
         </div>
         <!-- Akhir VVD -->
-        
+
         <!-- Content Research -->
         <div class="row container mb-5">
             <div class="swiper mySwiper" style="width: 180px; height: 300px;">
