@@ -32,6 +32,7 @@ use App\Http\Controllers\Client\ClientUkmController;
 use App\Http\Controllers\Client\ClientProdiController;
 use App\Http\Controllers\Client\ClientScannerController;
 use App\Http\Controllers\Client\ClientUptController;
+use App\Http\Controllers\Client\ClientGameTebakBangunanController;
 use App\Http\Controllers\Leaderboardcontroller;
 
 

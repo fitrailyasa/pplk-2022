@@ -40,19 +40,19 @@
     <div class="row justify-content-center">
       
       <div class="col-6 col-sm-6 col-md-3 col-lg-3 d-flex justify-content-center align-items-start p-0 my-2">
-        <button type="button" class="rounded b-rat px-1 d-flex align-items-center justify-content-center bg-white"><span class="chc-rest fs-3 fw-bold"><a href="/tebak-bangunan-game/{{ $soal->id }}/{{ $soal->jawabanA }}">{{ $soal->jawabanA }}</a></span></button>
+        <button type="button" class="rounded border-0 b-rat p-0 d-flex align-items-center justify-content-center chc-1"><span class="chc-rest fs-3 fw-bold"><a href="/tebak-bangunan-game/{{ $soal->id }}/{{ $soal->jawabanA }}">{{ $soal->jawabanA }}</a></span></button>
       </div>
     
       <div class="col-6 col-sm-6 col-md-3 col-lg-3 d-flex justify-content-center align-items-start p-0 my-2">
-        <button type="button" class="rounded b-rat px-1 d-flex align-items-center justify-content-center bg-white"><span class="chc-rest fs-3 fw-bold"><a href="/tebak-bangunan-game/{{ $soal->id}}/{{ $soal->jawabanB }}">{{ $soal->jawabanB }}</a></span></button>
+        <button type="button" class="rounded border-0 b-rat p-0 d-flex align-items-center justify-content-center chc-1"><span class="chc-rest fs-3 fw-bold"><a href="/tebak-bangunan-game/{{ $soal->id}}/{{ $soal->jawabanB }}">{{ $soal->jawabanB }}</a></span></button>
       </div>
     </div>
     <div class="row justify-content-center">
       <div class="col-6 col-sm-6 col-md-3 col-lg-3 d-flex justify-content-center align-items-start p-0 my-2">
-        <button type="button"class="rounded b-rat px-1 d-flex align-items-center justify-content-center bg-white"><span class="chc-rest fs-3 fw-bold"><a href="/tebak-bangunan-game/{{ $soal->id}}/{{ $soal->jawabanC }}">{{ $soal->jawabanC }}</a></span></button>
+        <button type="button"class="rounded border-0 b-rat p-0 d-flex align-items-center justify-content-center chc-1"><span class="chc-rest fs-3 fw-bold"><a href="/tebak-bangunan-game/{{ $soal->id}}/{{ $soal->jawabanC }}">{{ $soal->jawabanC }}</a></span></button>
       </div>
       <div class="col-6 col-sm-6 col-md-3 col-lg-3 d-flex justify-content-center align-items-start p-0 my-2">
-        <button type="button" class="rounded b-rat px-1 d-flex align-items-center justify-content-center bg-white"><span class="chc-rest fs-3 fw-bold"><a href="/tebak-bangunan-game/{{ $soal->id}}/{{ $soal->jawabanD }}">{{ $soal->jawabanD }}</a></span></button>
+        <button type="button" class="rounded border-0 b-rat p-0 d-flex align-items-center justify-content-center chc-1"><span class="chc-rest fs-3 fw-bold"><a href="/tebak-bangunan-game/{{ $soal->id}}/{{ $soal->jawabanD }}">{{ $soal->jawabanD }}</a></span></button>
       </div>
     </div>
     <div class="row justify-content-center">
