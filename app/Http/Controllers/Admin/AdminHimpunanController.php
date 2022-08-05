@@ -64,7 +64,13 @@ class AdminHimpunanController extends Controller
         // Upload file
         $file->move($location,$filename);
 
-        return redirect('/adminHimpunan')->with('sukses', 'Berhasil Tambah Data!');
+        if (auth()->user()->roles_id == 1) {
+            return redirect('super/himpunan')->with('sukses', 'Berhasil Tambah Data!');
+        } elseif (auth()->user()->roles_id == 2) {
+            return redirect('admin/himpunan')->with('sukses', 'Berhasil Tambah Data!');
+        } elseif (auth()->user()->roles_id == 3) {
+            return redirect('himpunans/himpunan')->with('sukses', 'Berhasil Tambah Data!');
+        }
     }
 
     /**
@@ -122,7 +128,13 @@ class AdminHimpunanController extends Controller
                 'logo' => url($request->file('logo')->move('assets/himpunan', $himpunan->namaSingkat . '.' . $request->file('logo')->extension())),
             ]);
         }
-        return redirect('/adminHimpunan')->with('sukses', 'Berhasil Edit Data!');
+        if (auth()->user()->roles_id == 1) {
+            return redirect('super/himpunan')->with('sukses', 'Berhasil Edit Data!');
+        } elseif (auth()->user()->roles_id == 2) {
+            return redirect('admin/himpunan')->with('sukses', 'Berhasil Edit Data!');
+        } elseif (auth()->user()->roles_id == 3) {
+            return redirect('himpunans/himpunan')->with('sukses', 'Berhasil Edit Data!');
+        }
     }
 
     /**
@@ -136,6 +148,12 @@ class AdminHimpunanController extends Controller
         $data = Himpunan::where('id', $id)->first();
         $data->delete();
 
-        return redirect('/adminHimpunan')->with('sukses', 'Berhasil Hapus Data!');
+        if (auth()->user()->roles_id == 1) {
+            return redirect('super/himpunan')->with('sukses', 'Berhasil Hapus Data!');
+        } elseif (auth()->user()->roles_id == 2) {
+            return redirect('admin/himpunan')->with('sukses', 'Berhasil Hapus Data!');
+        } elseif (auth()->user()->roles_id == 3) {
+            return redirect('himpunans/himpunan')->with('sukses', 'Berhasil Hapus Data!');
+        }
     }
 }

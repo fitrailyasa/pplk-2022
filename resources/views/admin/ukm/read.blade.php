@@ -11,7 +11,13 @@
     <h4 class="card-title">Detail UKM/Komunitas</h4>
     </div>
     <div class="card-body">
-      <form method="POST" action="{{ route('adminUkm.show',$ukm->id) }}" enctype='multipart/form-data'>
+    @if(auth()->user()->roles_id == 1)
+        <form method="POST" action="{{ route('super.ukm.show',$ukm->id) }}" enctype='multipart/form-data'>
+    @elseif(auth()->user()->roles_id == 2)
+        <form method="POST" action="{{ route('admin.ukm.show',$ukm->id) }}" enctype='multipart/form-data'>
+    @elseif(auth()->user()->roles_id == 4)
+        <form method="POST" action="{{ route('ukms.ukm.show',$ukm->id) }}" enctype='multipart/form-data'>
+    @endif
         @csrf
         @method('PUT')
         <input type="hidden" value="{{ $ukm->id }}" name="id">
@@ -20,7 +26,7 @@
           <div class="col-sm-9">
             <input type="text" class="form-control" placeholder="Nama Pembina" name="namaLengkap" id="namalengkap" value="{{ $ukm->namaLengkap }}" disabled>
           </div>
-        </div>   
+        </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Nama Singkat</label>
           <div class="col-sm-9">
@@ -38,7 +44,7 @@
           <div class="col-sm-9">
             <input type="text" class="form-control" placeholder="Nama Pembina" name="misi" id="misi" misivalue="{{ $ukm->namaSingkat }}" disabled>
           </div>
-        </div>    
+        </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Pembina</label>
           <div class="col-sm-9">
@@ -80,7 +86,7 @@
           <div class="col-sm-9">
             <input type="text" class="form-control" placeholder="Nama Pembina" name="deskripsi" id="deskripsi" value="{{ $ukm->deskripsi }}"disabled>
           </div>
-        </div> 
+        </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Dokumentasi 1</label>
           <div class="col-sm-9">

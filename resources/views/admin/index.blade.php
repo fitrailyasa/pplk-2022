@@ -1,4 +1,3 @@
-@extends('layouts.admin.modal')
 @extends('layouts.admin.app')
 
 @section('title', 'CMS')

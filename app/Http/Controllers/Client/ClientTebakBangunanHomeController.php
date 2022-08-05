@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Tebak_bangunan;
+use App\Models\TokenTebakBangunan;
+use App\Http\Controllers\Client\TokenTebakBangunanHomeController;
 use App\Http\Requests\StoreTebak_bangunanRequest;
 use App\Http\Requests\UpdateTebak_bangunanRequest;
 
@@ -35,10 +37,7 @@ class TebakBangunanHomeController extends Controller
      * @param  \App\Http\Requests\StoreTebak_bangunanRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreTebak_bangunanRequest $request)
-    {
-        //
-    }
+
 
     /**
      * Display the specified resource.

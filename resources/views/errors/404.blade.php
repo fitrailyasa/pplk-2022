@@ -10,7 +10,7 @@
 </head>
 
 <body class="bg-purple">
-        
+
     <div class="stars">
         <div class="central-body">
             <img class="image-404" src="../assets/404.png" width="400px">
@@ -40,7 +40,7 @@
                 <img class="object_earth" src="../assets/earth.png" width="120px">
                 <img class="object_moon" src="../assets/moon.png" width="40px">
             </div>
-            <div class="box_astronaut" onclick="window.location.href='https://instagram.com/adislksn'" style="cursor: pointer;" target="blank">
+            <div class="box_astronaut" onclick="window.location.href='https://instagram.com/adislksn'" style="cursor: pointer;">
                 <img class="object_astronaut" src="../assets/astronaut.svg" width="120px">
             </div>
         </div>
