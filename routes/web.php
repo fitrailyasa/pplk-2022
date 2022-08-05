@@ -176,8 +176,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/tebak-bangunan-game/{id}/{jawaban}',[ClientGameTebakBangunanController::class,'store']);
     Route::get('/tebak-bangunan-selesai/{id}',[ClientGameTebakBangunanController::class,'restart']);
 
-    // OUR TEAM
-    Route::get('/our-team', function () { return view('client.our-team'); });
+    // DEVELOPMENT TEAM
+    Route::get('/dev-team', function () { return view('client.dev-team'); });
 
 });
 

@@ -15,7 +15,7 @@
     <meta property="og:title" content="Website PPLK 2022" />
     <meta property="og:url" content="URL" />
 
-    <title>Our Team - PPLK 2022</title>
+    <title>Development Team - PPLK 2022</title>
     <link rel="stylesheet" href="{{ asset('assets/css/our-team.css') }}">
     {{-- SWIPER CSS --}}
     <link rel="stylesheet" href="{{ asset('assets/css/swiper.bundle.min.css') }}">
@@ -40,7 +40,7 @@
             </a>
         </div>
         <div class="row justify-content-center">
-            <h2 class="fw-bold">Meet Our Team</h2>
+            <h2 class="fw-bold">MEET OUR TEAM</h2>
         </div>
     </div>
 
