@@ -22,7 +22,7 @@
         @endif
         <div class="container" ng-app="formvalid">
           <div class="panel" data-ng-controller="validationCtrl">
-          <div class="panel-heading border">    
+          <div class="panel-heading border">
           </div>
         <div class="panel-body">
             <table class=" table-responsive table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt">
@@ -39,12 +39,21 @@
                   <td>{{$loop->iteration}}</td>
                   <td>{{$upt->nama}}</td>
                   <td class="manage-row">
-                    <a href="{{ route('adminUpt.show',$upt->id) }}" class="edit-button">
-                      <i class="fa-solid fa-eye"></i>
-                    </a>
-                    <a href="{{ route('adminUpt.edit',$upt->id) }}" class="edit-button">
-                      <i class="fa-solid fa-marker"></i>
-                    </a>
+                    @if(auth()->user()->roles_id == 1)
+                        <a href="{{ route('super.upt.show',$upt->id) }}" class="edit-button">
+                          <i class="fa-solid fa-eye"></i>
+                        </a>
+                        <a href="{{ route('super.upt.edit',$upt->id) }}" class="edit-button">
+                          <i class="fa-solid fa-marker"></i>
+                        </a>
+                    @elseif(auth()->user()->roles_id == 2)
+                        <a href="{{ route('admin.upt.show',$upt->id) }}" class="edit-button">
+                          <i class="fa-solid fa-eye"></i>
+                        </a>
+                        <a href="{{ route('admin.upt.edit',$upt->id) }}" class="edit-button">
+                          <i class="fa-solid fa-marker"></i>
+                        </a>
+                    @endif
                     <!-- Button trigger modal -->
                     <a role="button"  class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm{{$upt->id}}">
                       <i class="fa-solid fa-trash-can"></i>
@@ -61,8 +70,12 @@
                               </div>
                               <div class="modal-body">Apakah anda yakin ingin menghapus data?</div>
                               <div class="modal-footer">
-                                <form action="{{route('adminUpt.destroy',$upt->id)}}" method="POST">
-                                  @method('DELETE')
+                                @if(auth()->user()->roles_id == 1)
+                                    <form action="{{route('super.upt.destroy', $upt->id)}}" method="POST">
+                                @elseif(auth()->user()->roles_id == 2)
+                                    <form action="{{route('admin.upt.destroy', $upt->id)}}" method="POST">
+                                @endif
+                                @method('DELETE')
                                   @csrf
                                   <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
                                   <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tidak</button>

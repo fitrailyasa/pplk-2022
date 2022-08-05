@@ -12,8 +12,12 @@
       <h4 class="card-title">Input Data Begalin</h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="{{ route('adminBegalin.store') }}" enctype='multipart/form-data'>
-        @csrf
+        @if(auth()->user()->roles_id == 1)
+        <form method="POST" action="{{ route('super.begalin.store') }}" enctype='multipart/form-data'>
+        @elseif(auth()->user()->roles_id == 2)
+        <form method="POST" action="{{ route('admin.begalin.store') }}" enctype='multipart/form-data'>
+        @endif
+            @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Artikel Singkat</label>
             <div class="col-sm-9">

@@ -10,11 +10,11 @@
 </head>
 
 <body class="bg-purple">
-        
+
     <div class="stars">
         <div class="central-body">
             <img class="image-404" src="../assets/500.png" width="450px">
-            <a href="#" class="btn-go-home" target="_blank">Kembali!!</a>
+            <a href="#" class="btn-go-home">Kembali!!</a>
         </div>
         <div class="objects">
             <svg class="object_rocket" width="40px" height="43" viewBox="0 0 54 43" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,8 +40,8 @@
                 <img class="object_earth" src="../assets/Planet 20.png" width="120px">
                 <img class="object_moon" src="../assets/earth.png" width="40px">
             </div>
-            <div class="box_astronaut">
-                <img src="../assets/Maskot2.png" class="object_astronaut" width="200px">                   
+            <div class="box_astronaut" onclick="window.location.href='https://instagram.com/fitrailyasa'" style="cursor: pointer;">
+                <img src="../assets/Maskot2.png" class="object_astronaut" width="200px">
             </div>
         </div>
         <div class="glowing_stars">

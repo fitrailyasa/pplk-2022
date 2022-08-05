@@ -13,8 +13,12 @@
     <h4 class="card-title">Edit Data Begalin</h4>
     </div>
     <div class="card-body">
-      <form method="POST" action="{{ route('adminBegalin.update',$begalin->id) }}" enctype='multipart/form-data'>
-      @csrf
+    @if(auth()->user()->roles_id == 1)
+        <form method="POST" action="{{ route('super.begalin.update',$begalin->id) }}" enctype='multipart/form-data'>
+    @elseif(auth()->user()->roles_id == 2)
+        <form method="POST" action="{{ route('admin.begalin.update',$begalin->id) }}" enctype='multipart/form-data'>
+    @endif
+        @csrf
       @method('PUT')
       <input type="hidden" value="$begalin->id" name="id">
         <div class="mb-3 row">

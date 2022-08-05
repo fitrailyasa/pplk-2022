@@ -63,7 +63,7 @@ class AdminUserController extends Controller
 
         QrCode::format('svg')->margin(2)->size(200)->errorCorrection('H')->generate("$qrCode", "../public/assets/qrcode/"."$qrCode");
 
-        return redirect('/adminUser')->with('sukses', 'Berhasil Tambah Data!');
+        return redirect('super/user')->with('sukses', 'Berhasil Tambah Data!');
     }
 
     /**
@@ -117,7 +117,8 @@ class AdminUserController extends Controller
                 'nomorHp' => $request->nomorHp,
             ]
         );
-        return redirect('/adminUser')->with('sukses', 'Berhasil Edit Data!');
+
+        return redirect('super/user')->with('sukses', 'Berhasil Edit Data!');
     }
 
     /**
@@ -131,6 +132,6 @@ class AdminUserController extends Controller
         $data = User::where('id', $id)->first();
         $data->delete();
 
-        return redirect('/adminUser')->with('sukses', 'Berhasil Hapus Data!');
+        return redirect('super/user')->with('sukses', 'Berhasil Hapus Data!');
     }
 }

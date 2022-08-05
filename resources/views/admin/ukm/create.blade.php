@@ -11,9 +11,14 @@
       <h4 class="card-title">Input Data UKM/Komunitas</h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="{{ route('adminUkm.store') }}" enctype='multipart/form-data'>
-
-          @csrf
+    @if(auth()->user()->roles_id == 1)
+        <form method="POST" action="{{ route('super.ukm.store') }}" enctype='multipart/form-data'>
+    @elseif(auth()->user()->roles_id == 2)
+        <form method="POST" action="{{ route('admin.ukm.store') }}" enctype='multipart/form-data'>
+    @elseif(auth()->user()->roles_id == 4)
+        <form method="POST" action="{{ route('ukms.ukm.store') }}" enctype='multipart/form-data'>
+    @endif
+        @csrf
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Nama Lengkap</label>
             <div class="col-sm-9">
