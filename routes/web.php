@@ -212,10 +212,7 @@ Route::middleware(['auth'])->group(function () {
     return view('client.games.redeem-code.success');
   });
   Route::post('/submitcode/{id}', [ClientKodeGameController::class, 'sumscore'])->name('sumscore');
-  Route::get('/tebak-bangunan', [ClientGameTebakBangunanController::class, 'index']);
-  Route::get('/tebak-bangunan-game/{id}', [ClientGameTebakBangunanController::class, 'show']);
-  Route::get('/tebak-bangunan-game/{id}/{jawaban}', [ClientGameTebakBangunanController::class, 'store']);
-  Route::get('/tebak-bangunan-selesai/{id}', [ClientGameTebakBangunanController::class, 'restart']);
+
 
   // DEVELOPMENT TEAM
   Route::get('/dev-team', function () {
