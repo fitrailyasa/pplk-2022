@@ -257,7 +257,6 @@
                                  </div>
                              </div>
                         </div>
-                        <a href="https://www.instagram.com/khalilfaza._/" class="text-decoration-none">
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                  <div class="card-image">
@@ -269,7 +268,7 @@
                                  </div>
                              </div>
                         </div>
-                        </a>
+
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                  <div class="card-image">
@@ -499,7 +498,6 @@
                                  </div>
                              </div>
                         </div>
-                        <a href="https://www.instagram.com/zhrannta_/" class="text-decoration-none">
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                  <div class="card-image">
@@ -511,7 +509,6 @@
                                  </div>
                              </div>
                         </div>
-                        </a>
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                  <div class="card-image">
@@ -673,11 +670,11 @@
                     </div>
                 </div>
               </div>
-              <div class="swiper-slide text-center rounded-4 text-white">
-                <div class="card-color rounded-4 pt-2 px-2">
+              <div class="swiper-slide text-center rounded-4 text-white" >
+                <div class="card-color rounded-4 pt-2 px-2" >
                     <h3 class="mb-0">M Khalil Razan Faza</h3>
                     <p>Teknik Informatika'21</p>
-                    <img src="../assets/our-team/faza.png" alt="" id="card-img" class="rounded-4">
+                    <img src="../assets/our-team/faza.png" alt="" id="card-img" class="rounded-4" >
                 </div>
               </div>
               <div class="swiper-slide text-center rounded-4 text-white">
