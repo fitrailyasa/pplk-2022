@@ -35,25 +35,26 @@ class ClientKeluhanController extends Controller
         $validatedData = $request->validate([
             'bukti' => 'required|mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
            ]);
+
         $file = $validatedData[('bukti')];
+        $filename = time().'_'.$file->getClientOriginalName();
+        // File upload location
+        $location = '../public/assets/buktiKeluhan/';
+
         $nim = $request->input('nim');
-        $nama = $request->input('nama');
         $kelompok = $request->input('kelompok');
         $keluhan = $request->input('keluhan');
 
         // mengisi table keluhan
         Keluhan::create([
             'userid' => $id,
-           'nama' => $nama,
            'nim' => $nim,
            'kelompok' => $kelompok,
-           'keluhan' => $keluhan
+           'keluhan' => $keluhan,
+           'bukti' => $filename
 
         ]);
 
-        $filename = time().'_'.$file->getClientOriginalName();
-        // File upload location
-        $location = '../public/assets/buktiKeluhan/';
         // Upload file
         $file->move($location,$filename);
 

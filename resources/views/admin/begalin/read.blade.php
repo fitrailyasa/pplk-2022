@@ -33,6 +33,17 @@
             <textarea class="form-control custom-txt-area" placeholder="Artikel Lengkap" name="isi" id="lengkap" value="{{  $begalin->isi  }}" disabled>{{ $begalin->isi }}</textarea>
           </div>
         </div>
+        <div class="mb-3 row">
+            <div class="col-sm-9">
+              <a>
+                @if(auth()->user()->roles_id == 1)
+                    <a class="btn btn-primary" href="{{ route('super.begalin.index') }}">Kembali</a>
+                @elseif(auth()->user()->roles_id == 2)
+                    <a class="btn btn-primary" href="{{ route('admin.begalin.index') }}">Kembali</a>
+                @endif
+              </a>
+            </div>
+        </div><br><br><br>
         </form>
       </div>
     </div>

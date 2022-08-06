@@ -346,6 +346,27 @@
             </li>
             <!--./Kamus Gaul-->
 
+
+            <!--Keluhan-->
+            <li class="nav-item">
+                <a class="nav-link tabitem">
+                <i class="nav-icon fa-solid fa-receipt"></i>
+                <p>
+                    Keluhan
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+                </a>
+                <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="{{ route('super.keluhan.index') }}" class="nav-link tablinks">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Kelola Keluhan</p>
+                    </a>
+                </li>
+                </ul>
+            </li>
+            <!--./Keluhan-->
+
             <!--Booklet-->
             <li class="nav-item">
                 <a class="nav-link tabitem">
@@ -741,25 +762,25 @@
             </li>
             <!--./Beranda-->
 
-            <!--Gform-->
+            <!--Keluhan-->
             <li class="nav-item">
                 <a class="nav-link tabitem">
                 <i class="nav-icon fa-solid fa-receipt"></i>
                 <p>
-                    Link Gform
+                    Keluhan
                     <i class="right fas fa-angle-left"></i>
                 </p>
                 </a>
                 <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a class="nav-link tablinks">
+                    <a href="{{ route('kedis.keluhan.index') }}" class="nav-link tablinks">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Kelola Link Gform</p>
+                    <p>Kelola Keluhan</p>
                     </a>
                 </li>
                 </ul>
             </li>
-            <!--./Gform-->
+            <!--./Keluhan-->
 
             <!--Scanner-->
             <li class="nav-item">
