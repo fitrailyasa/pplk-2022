@@ -35,7 +35,18 @@
             <div class="col-sm-9">
               <textarea class="form-control custom-txt-area" placeholder="Contoh Penggunaan" name="contohPenggunaan" id="contohPenggunaan" value="{{ $kamusgaul->contohPenggunaan }}">{{ $kamusgaul->contohPenggunaan }}</textarea>
             </div>
-          </div>
+        </div>
+        <div class="mb-3 row">
+            <div class="col-sm-9">
+              <a>
+                @if(auth()->user()->roles_id == 1)
+                    <a class="btn btn-primary" href="{{ route('super.kamusgaul.index') }}">Kembali</a>
+                @elseif(auth()->user()->roles_id == 2)
+                    <a class="btn btn-primary" href="{{ route('admin.kamusgaul.index') }}">Kembali</a>
+                @endif
+              </a>
+            </div>
+        </div><br><br><br>
         </form>
       </div>
     </div>
