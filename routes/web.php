@@ -137,23 +137,15 @@ Route::middleware(['auth'])->group(function () {
   Route::get('/beranda', [ClientBegalinController::class, 'index']);
   Route::get('/upt', [ClientUptController::class, 'index'])->name('upt');
   Route::get('/kabinet', [ClientKabinetController::class, 'index'])->name('kabinet');
-  Route::get('/senat', function () {
-    return view('client.senat');
-  });
+  Route::get('/senat', function () { return view('client.senat'); });
   Route::get('/kamus-gaul', [ClientKamusgaulController::class, 'index'])->name('kamus-gaul');
 
   // BOOKLET
-  Route::get('/booklet', function () {
-    return view('client.booklet');
-  });
+  Route::get('/booklet', function () { return view('client.booklet'); });
 
   // PPLK
-  Route::get('/pplk', function () {
-    return view('client.pplk');
-  });
-  Route::get('/div-pplk', function () {
-    return view('client.div-pplk');
-  });
+  Route::get('/pplk', function () { return view('client.pplk'); });
+  Route::get('/div-pplk', function () { return view('client.div-pplk'); });
 
   // BIODATA
   Route::get('/biodata', [ClientBiodataController::class, 'index'])->name('biodata');
@@ -183,12 +175,8 @@ Route::middleware(['auth'])->group(function () {
   Route::get('/game-home', [LeaderboardController::class, 'index']);
   Route::get('/card-list', [ClientKodeGameController::class, 'index']);
   Route::get('/redeem/{no}', [ClientKodeGameController::class, 'show']);
-  Route::get('/redeem-failed', function () {
-    return view('client.games.redeem-code.failed');
-  });
-  Route::get('/redeem-success', function () {
-    return view('client.games.redeem-code.success');
-  });
+  Route::get('/redeem-failed', function () { return view('client.games.redeem-code.failed'); });
+  Route::get('/redeem-success', function () { return view('client.games.redeem-code.success'); });
   Route::post('/submitcode/{id}', [ClientKodeGameController::class, 'sumscore'])->name('sumscore');
   Route::get('/tebak-bangunan', [ClientGameTebakBangunanController::class, 'index']);
   Route::get('/tebak-bangunan-game/{id}', [ClientGameTebakBangunanController::class, 'show']);
