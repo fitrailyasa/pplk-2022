@@ -7,7 +7,7 @@
         </li>
         <li class="nav-item d-sm-inline-block">
           <div href="#" class="brand-link text-decoration-none d-flex align-items-center p-1" id="logo-dan-judul">
-            <img src="../assets/logo-pplk-minified.png" alt="Logo PPLK" class="pplk-logo">
+            <img src="{{ asset('assets/logo-pplk-minified.png') }}" class="pplk-logo">
             <div>
               <span class="brand-link" id="judul-pplk">PPLK 2022</span>
             </div>
