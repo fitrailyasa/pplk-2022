@@ -81,6 +81,19 @@
             <textarea class="form-control custom-txt-area" placeholder="Deskripsi" name="deskripsi" id="deskripsi" value="{{ $himpunan->deskripsi }}" >{{ $himpunan->deskripsi }}</textarea>
           </div>
         </div>
+        <div class="mb-3 row">
+            <div class="col-sm-9">
+              <a>
+                @if(auth()->user()->roles_id == 1)
+                    <a class="btn btn-primary" href="{{ route('super.himpunan.index') }}">Kembali</a>
+                @elseif(auth()->user()->roles_id == 2)
+                    <a class="btn btn-primary" href="{{ route('admin.himpunan.index') }}">Kembali</a>
+                @elseif(auth()->user()->roles_id == 3)
+                    <a class="btn btn-primary" href="{{ route('himpunans.himpunan.index') }}">Kembali</a>
+                @endif
+              </a>
+            </div>
+        </div><br><br><br>
         </form>
       </div>
     </div>

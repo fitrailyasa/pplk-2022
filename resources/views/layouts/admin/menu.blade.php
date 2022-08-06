@@ -7,7 +7,7 @@
         </li>
         <li class="nav-item d-sm-inline-block">
           <div href="#" class="brand-link text-decoration-none d-flex align-items-center p-1" id="logo-dan-judul">
-            <img src="../assets/logo-pplk-minified.png" alt="Logo PPLK" class="pplk-logo">
+            <img src="{{ asset('assets/logo-pplk-minified.png') }}" class="pplk-logo">
             <div>
               <span class="brand-link" id="judul-pplk">PPLK 2022</span>
             </div>
@@ -345,6 +345,27 @@
                 </ul>
             </li>
             <!--./Kamus Gaul-->
+
+
+            <!--Keluhan-->
+            <li class="nav-item">
+                <a class="nav-link tabitem">
+                <i class="nav-icon fa-solid fa-receipt"></i>
+                <p>
+                    Keluhan
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+                </a>
+                <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="{{ route('super.keluhan.index') }}" class="nav-link tablinks">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Kelola Keluhan</p>
+                    </a>
+                </li>
+                </ul>
+            </li>
+            <!--./Keluhan-->
 
             <!--Booklet-->
             <li class="nav-item">
@@ -741,25 +762,25 @@
             </li>
             <!--./Beranda-->
 
-            <!--Gform-->
+            <!--Keluhan-->
             <li class="nav-item">
                 <a class="nav-link tabitem">
                 <i class="nav-icon fa-solid fa-receipt"></i>
                 <p>
-                    Link Gform
+                    Keluhan
                     <i class="right fas fa-angle-left"></i>
                 </p>
                 </a>
                 <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a class="nav-link tablinks">
+                    <a href="{{ route('kedis.keluhan.index') }}" class="nav-link tablinks">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Kelola Link Gform</p>
+                    <p>Kelola Keluhan</p>
                     </a>
                 </li>
                 </ul>
             </li>
-            <!--./Gform-->
+            <!--./Keluhan-->
 
             <!--Scanner-->
             <li class="nav-item">

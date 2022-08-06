@@ -33,6 +33,17 @@
             <textarea class="form-control custom-txt-area" placeholder="Deskripsi" name="isi" id="" value="{{ $funfact->isi }}" disabled>{{ $funfact->isi }}</textarea>
           </div>
         </div>
+        <div class="mb-3 row">
+            <div class="col-sm-9">
+              <a>
+                @if(auth()->user()->roles_id == 1)
+                    <a class="btn btn-primary" href="{{ route('super.funfact.index') }}">Kembali</a>
+                @elseif(auth()->user()->roles_id == 2)
+                    <a class="btn btn-primary" href="{{ route('admin.funfact.index') }}">Kembali</a>
+                @endif
+              </a>
+            </div>
+        </div>
         </form>
       </div>
     </div>

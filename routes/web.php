@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AdminFunfactController;
 use App\Http\Controllers\Admin\AdminHimpunanController;
 use App\Http\Controllers\Admin\AdminKamusGaulController;
+use App\Http\Controllers\Admin\AdminKeluhanController;
 use App\Http\Controllers\Admin\AdminUkmController;
 use App\Http\Controllers\Admin\AdminUptController;
 use App\Http\Controllers\Admin\AdminUserController;
@@ -71,6 +72,7 @@ Route::middleware([SuperAdmin::class])->name('super.')->prefix('super')->group(f
   Route::resource('ukm', AdminUkmController::class);
   Route::resource('user', AdminUserController::class);
   Route::resource('upt', AdminUptController::class);
+  Route::resource('keluhan', AdminKeluhanController::class);
   Route::resource('dapmenUser', DapmenUserController::class);
 
   // SCANNER
@@ -110,7 +112,7 @@ Route::middleware([Ukm::class])->name('ukms.')->prefix('ukms')->group(function (
 // CMS KEDISIPLISAN
 Route::middleware([Kedisiplinan::class])->name('kedis.')->prefix('kedis')->group(function () {
   Route::get('/', [AdminController::class, 'index'])->name('index');
-  // Route::resource('adminForm', AdminBegalinController::class);
+  Route::resource('keluhan', AdminKeluhanController::class);
 
   // SCANNER STAFF
   Route::get('/scanner', [ClientScannerController::class, 'index'])->name('scanner');
@@ -176,27 +178,6 @@ Route::middleware(['auth'])->group(function () {
 
   Route::get('/prodi', [ClientProdiController::class, 'index'])->name('prodis');
   Route::get('/detail-prodi/{id}', [ClientProdiController::class, 'show'])->name('prodis');
-
-  // GAMES
-  Route::get('/game-home', [LeaderboardController::class, 'index']);
-  Route::get('/card-list', [ClientKodeGameController::class, 'index']);
-  Route::get('/redeem/{no}', [ClientKodeGameController::class, 'show']);
-  Route::get('/redeem-failed', function () {
-    return view('client.games.redeem-code.failed');
-  });
-  Route::get('/redeem-success', function () {
-    return view('client.games.redeem-code.success');
-  });
-  Route::post('/submitcode/{id}', [ClientKodeGameController::class, 'sumscore'])->name('sumscore');
-  Route::get('/tebak-bangunan-game/{id}', [ClientGameTebakBangunanController::class, 'show']);
-  Route::get('/tebak-bangunan-game/{id}/{jawaban}', [ClientGameTebakBangunanController::class, 'store'])->name('soalTebakBangunan');
-  Route::get('/tebak-bangunan-selesai/{id}', [ClientGameTebakBangunanController::class, 'restart']);
-
-
-  // Route::get('/prodi', function () {
-  //   return view('client.jurusan.prodi');
-  // });
-  // Route::get('/detail-prodi',)->name('detailprodi');
 
   // GAMES
   Route::get('/game-home', [LeaderboardController::class, 'index']);
