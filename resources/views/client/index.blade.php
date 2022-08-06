@@ -455,14 +455,6 @@
 </div>
 <!-- ./Modal Begalin -->
 
-    <div class="glowing_stars" onclick="window.location.href='https://instagram.com/fitrailyasa'" style="cursor: pointer;">
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-    </div>
-
         <!-- Medpart -->
         <div class="container-fluid medpart padding-top-bottom" id="terakhir">
             <div class="wrapper">
