@@ -44,7 +44,7 @@
             <div class="col-sm-9">
             <img class="img-thumbnail" src="{{ asset('assets/buktiKeluhan') }}/{{ $keluhan->bukti }}" alt="" height="300" width="300" style="object-fit: none;">
             <a href="{{ asset('assets/buktiKeluhan') }}/{{ $keluhan->bukti }}" download="Gambar Keluhan 1">
-            <button class="btn"><i class="fa fa-download"></i>Download</button>
+            {{-- <button class="btn" onclick="window.print()"><i class="fa fa-download"></i>Download</button> --}}
             </a>
           </div>
         </div>

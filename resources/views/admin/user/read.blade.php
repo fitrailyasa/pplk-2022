@@ -17,7 +17,7 @@
     @csrf
         @method('PUT')
         <div class="image">
-            @if (auth()->user()->fotoProfil == Null)
+            @if ($user->fotoProfil == Null)
               <img src="{{ asset('assets/profile') }}/default.png" style="width:200px !important; height:200px !important; align-item: center;" class="img-circle elevation-2" alt="User Image">
             @else
               <img src="{{ asset('assets/profile') }}/{{ $user->fotoProfil }}" style="width:200px !important; height:200px !important; align-item: center;" class="img-circle elevation-2" alt="User Image">
