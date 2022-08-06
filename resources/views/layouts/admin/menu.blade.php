@@ -384,7 +384,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link tablinks">
+                    <a class="nav-link tablinks" href="{{ route('super.booklet.index') }}">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Kelola Data Booklet</p>
                     </a>

@@ -17,11 +17,12 @@ class ClientFunfactController extends Controller
      */
     public function index()
     {
-            $i = random_int(1, 29);
+        $booklet=Funfact::where('id',1)->get()->first();
+        $i = random_int(1, 29);
         $funfacts = DB::table('funfacts')
         ->orderByRaw('id ASC')
         ->get()
         ->take(29);
-        return view('client.booklet', compact('funfacts','i'));
+        return view('client.booklet', compact('funfacts','i','booklet'));
     }
 }

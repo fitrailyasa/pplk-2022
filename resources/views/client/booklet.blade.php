@@ -39,7 +39,7 @@
             <div class="card-body justify-content-center border" id="card-body">
             <div class="col">
                 <h3 class="card-title pt-2">KEBUTUHAN MABA</h3>
-                <p class="card-text mb-5" style="color: black;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur culpa quidem facilis placeat porro voluptatibus quia quod iste voluptates, ipsam quaerat amet harum sit officia odit blanditiis? Facilis consectetur aut quia, natus laudantium ex pariatur assumenda, neque magnam, asperiores est adipisci error deleniti dolorum laborum tenetur omnis molestiae sunt voluptas.</p>
+                <p class="card-text mb-5" style="color: black;">{{ $booklet->booklet }}</p>
             </div>
         </div>
     </div>
