@@ -48,12 +48,12 @@
         <div class="container-fluid landing-page">
             <div class="row justify-content-center">
                 <div class="box ratio ratio-1x1 mt-5">
-                    <img src="{{ asset('assets/logo-pplk-minified.png') }}" alt="">
+                    <img src="{{ asset('assets/Logo-PPLK.png') }}" alt="">
                 </div>
             </div>
             <div class="row text-center text-white">
                 <div class="text-nama">
-                    <p>HELLO, <span class="nama">{{ auth()->user()->nama }}</span></p>
+                    <p>Hello, <span class="nama">{{ auth()->user()->nama }}</span></p>
                 </div>
                 <div class="text-qoute">
                     <p>Ayo Menjelajah, Sekarang!</p>
@@ -455,6 +455,14 @@
 </div>
 <!-- ./Modal Begalin -->
 
+    <div class="glowing_stars" onclick="window.location.href='https://instagram.com/fitrailyasa'" style="cursor: pointer;">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+    </div>
+
         <!-- Medpart -->
         <div class="container-fluid medpart padding-top-bottom" id="terakhir">
             <div class="wrapper">
@@ -496,6 +504,10 @@
              </div>
         </div>
         <!-- ./Medpart -->
+
+        <div class="box_astronaut" onclick="window.location.href='https://instagram.com/fitrailyasa'" style="cursor: pointer;">
+            <img class="object_astronaut" src="{{ asset('assets/astronaut.svg') }}" width="120px">
+        </div>
 
     </div>
 @endsection

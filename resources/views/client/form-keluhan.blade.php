@@ -24,7 +24,7 @@
               <div class="col-md-6">
               <br><h3 style="color: #FFF;" class="heading mb-4" ></p>PPLK 2022 </h3>
                 <h6 style="color: #FFF;" >Program Pengenalan Lingkungan Kampus <br> Institut Teknologi Sumatera <br><br><br>
-                <img src="{{ asset('assets/Logo-form.png') }}" alt="Image" class="img-fluid"></h6> <br><br><br>
+                <img src="{{ asset('assets/Maskot1.png') }}" alt="Image" class="img-fluid"></h6> <br><br><br>
               </div>
 
               <div class="col-md-6">
@@ -68,6 +68,9 @@
         </div>
       </div>
     </div>
+    </div>
+    <div class="box_astronaut" onclick="window.location.href='https://instagram.com/fitrailyasa'" style="cursor: pointer;">
+        <img class="object_astronaut" src="{{ asset('assets/astronaut.svg') }}" width="120px">
     </div>
 @endsection
 
