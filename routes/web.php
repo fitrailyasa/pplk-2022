@@ -23,6 +23,7 @@ use App\Http\Controllers\Admin\AdminProdiController;
 use App\Http\Controllers\Admin\DapmenUserController;
 use App\Http\Controllers\Client\ClientBegalinController;
 use App\Http\Controllers\Client\ClientBiodataController;
+use App\Http\Controllers\Client\ClientFunfactController;
 use App\Http\Controllers\Client\ClientJurusanController;
 use App\Http\Controllers\Client\ClientKabinetController;
 use App\Http\Controllers\Client\ClientKamusgaulController;
@@ -141,7 +142,7 @@ Route::middleware(['auth'])->group(function () {
   Route::get('/kamus-gaul', [ClientKamusgaulController::class, 'index'])->name('kamus-gaul');
 
   // BOOKLET
-  Route::get('/booklet', function () { return view('client.booklet'); });
+  Route::get('/booklet', [ClientFunfactController::class, 'index'])->name('funfact');
 
   // PPLK
   Route::get('/pplk', function () { return view('client.pplk'); });

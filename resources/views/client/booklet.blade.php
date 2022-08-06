@@ -45,59 +45,24 @@
     </div>
 </div>
 
-<div id="carouselExampleCaptions" class="carousel slide p-5" data-bs-ride="carousel">
+<div id="carouselExampleCaptions" class="carousel slide pt-5 pb-5 ps-3 pe-3 mx-auto" data-bs-ride="carousel">
     <div class="carousel-inner" id="carouselExampleCaption">
-
-        <div class="carousel-item  active">
-            <div class="card fun-fact-card">
-                <div class="card-body-ff">
+        <div class="carousel-item active">
+            <div class="card fun-fact-card p-0">
+                <div class="card-body-ff ">
                     <h2 class="card-title">
                         Fun Fact
                     </h2>
-                    <p class="card-text">
-                        Segi empat menggabarkan stabilitas, kedamaian, soliditas, dan kesetaraan.
+                    <p class="card-text mx-auto pb-4">
+                        {{ $funfacts[$i]->isi }}
                     </p>
                 </div>
             </div>
         </div>
-
-    <div class="carousel-item ">
-        <div class="card fun-fact-card">
-            <div class="card-body-ff">
-                <h2 class="card-title">
-                    Fun Fact
-                </h2>
-                <p class="card-text">
-                    Segi empat menggabarkan stabilitas, kedamaian, soliditas, dan kesetaraan.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="carousel-item">
-        <div class="card fun-fact-card">
-            <div class="card-body-ff">
-                <h2 class="card-title">
-                    Fun Fact
-                </h2>
-                <p class="card-text">
-                    Segi empat menggabarkan stabilitas, kedamaian, soliditas, dan kesetaraan.
-                </p>
-            </div>
-        </div>
-
-    </div>
-</div>
-<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-<span class="visually-hidden">Previous</span>
-</button>
-<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-<span class="carousel-control-next-icon" aria-hidden="true"></span>
-<span class="visually-hidden">Next</span>
-</button>
 </div>
 </div>
+</div>
+
 @endsection
 
 @section('script')
