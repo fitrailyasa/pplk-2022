@@ -20,7 +20,7 @@
     <!-- CONTENT -->
     <div class="container-fluid booklet">
 
-        <div class="row justify-content-around">   
+        <div class="row justify-content-around">
             <div class="col-8">
                 <div class="card-booklet text-center mx-auto" >
                     <svg id="bounce" class="none-booklet mt-5" width="20" height="20"  viewBox="0 0 27 29" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -29,7 +29,7 @@
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
 
 <!-- carousel -->
 <div class="container-fluid booklet-text">
@@ -47,7 +47,7 @@
 
 <div id="carouselExampleCaptions" class="carousel slide p-5" data-bs-ride="carousel">
     <div class="carousel-inner" id="carouselExampleCaption">
-    
+
         <div class="carousel-item  active">
             <div class="card fun-fact-card">
                 <div class="card-body-ff">
@@ -73,7 +73,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="carousel-item">
         <div class="card fun-fact-card">
             <div class="card-body-ff">
