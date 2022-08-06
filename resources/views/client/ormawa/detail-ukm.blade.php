@@ -48,7 +48,7 @@
     <div class="himpunan-2 justify-content-center">
         <h2 > FILOSOFI LOGO</h2>
         <h2 >{{ $ukms->namaSingkat }}</h2>
-        <img src="{{ asset('assets/ukm/logo')}}/{{ $ukms->logo }}" class="hmp-img2" alt="..."></div>
+        <img src="{{ asset('assets/ukm/logo')}}/{{ $ukms->logo }}" class="hmp-img2" alt="..." width="250px" height="250px"></div>
     </div>
 
 </div>

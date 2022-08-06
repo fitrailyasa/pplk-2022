@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AdminFunfactController;
 use App\Http\Controllers\Admin\AdminHimpunanController;
 use App\Http\Controllers\Admin\AdminKamusGaulController;
+use App\Http\Controllers\Admin\AdminKeluhanController;
 use App\Http\Controllers\Admin\AdminUkmController;
 use App\Http\Controllers\Admin\AdminUptController;
 use App\Http\Controllers\Admin\AdminUserController;
@@ -22,6 +23,7 @@ use App\Http\Controllers\Admin\AdminProdiController;
 use App\Http\Controllers\Admin\DapmenUserController;
 use App\Http\Controllers\Client\ClientBegalinController;
 use App\Http\Controllers\Client\ClientBiodataController;
+use App\Http\Controllers\Client\ClientFunfactController;
 use App\Http\Controllers\Client\ClientJurusanController;
 use App\Http\Controllers\Client\ClientKabinetController;
 use App\Http\Controllers\Client\ClientKamusgaulController;
@@ -71,6 +73,7 @@ Route::middleware([SuperAdmin::class])->name('super.')->prefix('super')->group(f
   Route::resource('ukm', AdminUkmController::class);
   Route::resource('user', AdminUserController::class);
   Route::resource('upt', AdminUptController::class);
+  Route::resource('keluhan', AdminKeluhanController::class);
   Route::resource('dapmenUser', DapmenUserController::class);
 
   // SCANNER
@@ -110,7 +113,7 @@ Route::middleware([Ukm::class])->name('ukms.')->prefix('ukms')->group(function (
 // CMS KEDISIPLISAN
 Route::middleware([Kedisiplinan::class])->name('kedis.')->prefix('kedis')->group(function () {
   Route::get('/', [AdminController::class, 'index'])->name('index');
-  // Route::resource('adminForm', AdminBegalinController::class);
+  Route::resource('keluhan', AdminKeluhanController::class);
 
   // SCANNER STAFF
   Route::get('/scanner', [ClientScannerController::class, 'index'])->name('scanner');
@@ -135,23 +138,15 @@ Route::middleware(['auth'])->group(function () {
   Route::get('/beranda', [ClientBegalinController::class, 'index']);
   Route::get('/upt', [ClientUptController::class, 'index'])->name('upt');
   Route::get('/kabinet', [ClientKabinetController::class, 'index'])->name('kabinet');
-  Route::get('/senat', function () {
-    return view('client.senat');
-  });
+  Route::get('/senat', function () { return view('client.senat'); });
   Route::get('/kamus-gaul', [ClientKamusgaulController::class, 'index'])->name('kamus-gaul');
 
   // BOOKLET
-  Route::get('/booklet', function () {
-    return view('client.booklet');
-  });
+  Route::get('/booklet', [ClientFunfactController::class, 'index'])->name('funfact');
 
   // PPLK
-  Route::get('/pplk', function () {
-    return view('client.pplk');
-  });
-  Route::get('/div-pplk', function () {
-    return view('client.div-pplk');
-  });
+  Route::get('/pplk', function () { return view('client.pplk'); });
+  Route::get('/div-pplk', function () { return view('client.div-pplk'); });
 
   // BIODATA
   Route::get('/biodata', [ClientBiodataController::class, 'index'])->name('biodata');
@@ -166,51 +161,23 @@ Route::middleware(['auth'])->group(function () {
   Route::post('/form-keluhan/{id}', [ClientKeluhanController::class, 'create'])->name('create-keluhan');
 
   // ORMAWA
-  // Route::get('/ukm', function () {
-  //   return view('client.ormawa.ukm');
-  // });
   Route::get('/jurusan', [ClientJurusanController::class, 'index'])->name('jurusan');
-
 
   Route::get('/himpunan', [ClientHimpunanController::class, 'index'])->name('himpunans');
   Route::get('/detail-himpunan/{id}', [ClientHimpunanController::class, 'show'])->name('himpunans');
-
-  // GAMES
-  Route::get('/game-home', [LeaderboardController::class, 'index']);
-  Route::get('/card-list', [ClientKodeGameController::class, 'index']);
-  Route::get('/redeem/{no}', [ClientKodeGameController::class, 'show']);
-  Route::get('/redeem-failed', function () {
-    return view('client.games.redeem-code.failed');
-  });
-  Route::get('/redeem-success', function () {
-    return view('client.games.redeem-code.success');
-  });
-  Route::post('/submitcode/{id}', [ClientKodeGameController::class, 'sumscore'])->name('sumscore');
-  Route::get('/tebak-bangunan-game/{id}', [ClientGameTebakBangunanController::class, 'show']);
-  Route::get('/tebak-bangunan-game/{id}/{jawaban}', [ClientGameTebakBangunanController::class, 'store'])->name('soalTebakBangunan');
-  Route::get('/tebak-bangunan-selesai/{id}', [ClientGameTebakBangunanController::class, 'restart']);
-
 
   Route::get('/ukm', [ClientUkmController::class, 'index'])->name('ukms');
   Route::get('/detail-ukm/{id}', [ClientUkmController::class, 'show'])->name('ukms');
 
   Route::get('/prodi', [ClientProdiController::class, 'index'])->name('prodis');
   Route::get('/detail-prodi/{id}', [ClientProdiController::class, 'show'])->name('prodis');
-  // Route::get('/prodi', function () {
-  //   return view('client.jurusan.prodi');
-  // });
-  // Route::get('/detail-prodi',)->name('detailprodi');
 
   // GAMES
   Route::get('/game-home', [LeaderboardController::class, 'index']);
   Route::get('/card-list', [ClientKodeGameController::class, 'index']);
   Route::get('/redeem/{no}', [ClientKodeGameController::class, 'show']);
-  Route::get('/redeem-failed', function () {
-    return view('client.games.redeem-code.failed');
-  });
-  Route::get('/redeem-success', function () {
-    return view('client.games.redeem-code.success');
-  });
+  Route::get('/redeem-failed', function () { return view('client.games.redeem-code.failed'); });
+  Route::get('/redeem-success', function () { return view('client.games.redeem-code.success'); });
   Route::post('/submitcode/{id}', [ClientKodeGameController::class, 'sumscore'])->name('sumscore');
 
 

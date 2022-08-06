@@ -268,6 +268,7 @@
                                  </div>
                              </div>
                         </div>
+
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                  <div class="card-image">
@@ -669,11 +670,11 @@
                     </div>
                 </div>
               </div>
-              <div class="swiper-slide text-center rounded-4 text-white">
-                <div class="card-color rounded-4 pt-2 px-2">
+              <div class="swiper-slide text-center rounded-4 text-white" >
+                <div class="card-color rounded-4 pt-2 px-2" >
                     <h3 class="mb-0">M Khalil Razan Faza</h3>
                     <p>Teknik Informatika'21</p>
-                    <img src="../assets/our-team/faza.png" alt="" id="card-img" class="rounded-4">
+                    <img src="../assets/our-team/faza.png" alt="" id="card-img" class="rounded-4" >
                 </div>
               </div>
               <div class="swiper-slide text-center rounded-4 text-white">
@@ -839,6 +840,13 @@
                   </div>
                   <div class="swiper-slide text-center rounded-4 text-white">
                     <div class="card-color rounded-4 pt-2 px-2">
+                        <h3 class="mb-0">Zahra Areefa Ananta</h3>
+                        <p>Teknik Informatika'21</p>
+                        <img src="../assets/our-team/zahra.png" alt="" id="card-img" class="rounded-4">
+                    </div>
+                  </div>
+                  <div class="swiper-slide text-center rounded-4 text-white">
+                    <div class="card-color rounded-4 pt-2 px-2">
                         <h3 class="mb-0">Dila Ayu Prastita</h4>
                         <p>Teknik Informatika'21</p>
                         <img src="../assets/our-team/dila.png" alt="" id="card-img" class="rounded-4">
@@ -870,13 +878,6 @@
                         <h3 class="mb-0">Shah Raja A. Al Turtusi</h3>
                         <p>Teknik Informatika'20</p>
                         <img src="../assets/our-team/raja.png" alt="" id="card-img" class="rounded-4">
-                    </div>
-                  </div>
-                  <div class="swiper-slide text-center rounded-4 text-white">
-                    <div class="card-color rounded-4 pt-2 px-2">
-                        <h3 class="mb-0">Zahra Areefa Ananta</h3>
-                        <p>Teknik Informatika'21</p>
-                        <img src="../assets/our-team/zahra.png" alt="" id="card-img" class="rounded-4">
                     </div>
                   </div>
                   <div class="swiper-slide text-center rounded-4 text-white">

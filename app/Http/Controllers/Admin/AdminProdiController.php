@@ -42,10 +42,11 @@ class AdminProdiController extends Controller
 
         $validatedData = $request->validate([
             'logo' => 'required|mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
-         ]);
+        ]);
 
         $file = $validatedData[('logo')];
         $filename = time() . '_' . $file->getClientOriginalName();
+        // File upload location
         $location = '../public/assets/logoProdi/';
 
         Prodi::create(
@@ -63,7 +64,7 @@ class AdminProdiController extends Controller
                 'prestasi1' => $request->prestasi1,
                 'prestasi2' => $request->prestasi2,
                 'prestasi3' => $request->prestasi3,
-                'logo' => $file,
+                'logo' => $filename,
                 'jurusan_id' => $request->jurusan_id,
             ]
         );
@@ -138,7 +139,7 @@ class AdminProdiController extends Controller
 
             $validatedData = $request->validate([
                 'logo' => 'required|mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
-             ]);
+            ]);
 
             $file = $validatedData[('logo')];
             $filename = time() . '_' . $file->getClientOriginalName();
