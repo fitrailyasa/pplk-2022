@@ -48,12 +48,12 @@
         <div class="container-fluid landing-page">
             <div class="row justify-content-center">
                 <div class="box ratio ratio-1x1 mt-5">
-                    <img src="../assets/Logo-PPLK.png" alt="">
+                    <img src="{{ asset('assets/Logo-PPLK.png') }}" alt="">
                 </div>
             </div>
             <div class="row text-center text-white">
                 <div class="text-nama">
-                    <p>HELLO, <span class="nama">{{ auth()->user()->nama }}</span></p>
+                    <p>Hello, <span class="nama">{{ auth()->user()->nama }}</span></p>
                 </div>
                 <div class="text-qoute">
                     <p>Ayo Menjelajah, Sekarang!</p>
@@ -68,7 +68,7 @@
             <div class="row justify-content-between p-4">
                 <div class="col-lg-5 col-md-4 align-self-center">
                     <div class="d-flex justify-content-center">
-                        <img class="mt-md-5 maskot maskot-awal" src="../assets/Maskot1.png" alt="">
+                        <img class="mt-md-5 maskot maskot-awal" src="{{ asset('assets/Maskot1.png') }}" alt="">
                     </div>
 
                 </div>
@@ -367,7 +367,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <img class="maskot2"src="../assets/Maskot2.png" alt="">
+                    <img class="maskot2"src="{{ asset('assets/Maskot2.png') }}" alt="">
 
                 </div>
             </div>
@@ -434,7 +434,6 @@
         <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <!-- <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5> -->
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -496,6 +495,10 @@
              </div>
         </div>
         <!-- ./Medpart -->
+
+        <div class="box_astronaut" onclick="window.location.href='https://instagram.com/fitrailyasa'" style="cursor: pointer;">
+            <img class="object_astronaut" src="{{ asset('assets/astronaut.svg') }}" width="120px">
+        </div>
 
     </div>
 @endsection

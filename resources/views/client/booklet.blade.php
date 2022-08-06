@@ -20,7 +20,7 @@
     <!-- CONTENT -->
     <div class="container-fluid booklet">
 
-        <div class="row justify-content-around">   
+        <div class="row justify-content-around">
             <div class="col-8">
                 <div class="card-booklet text-center mx-auto" >
                     <svg id="bounce" class="none-booklet mt-5" width="20" height="20"  viewBox="0 0 27 29" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -29,7 +29,7 @@
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
 
 <!-- carousel -->
 <div class="container-fluid booklet-text">
@@ -39,65 +39,30 @@
             <div class="card-body justify-content-center border" id="card-body">
             <div class="col">
                 <h3 class="card-title pt-2">KEBUTUHAN MABA</h3>
-                <p class="card-text mb-5" style="color: black;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur culpa quidem facilis placeat porro voluptatibus quia quod iste voluptates, ipsam quaerat amet harum sit officia odit blanditiis? Facilis consectetur aut quia, natus laudantium ex pariatur assumenda, neque magnam, asperiores est adipisci error deleniti dolorum laborum tenetur omnis molestiae sunt voluptas.</p>
+                <p class="card-text mb-5" style="color: black;">{{ $booklet->booklet }}</p>
             </div>
         </div>
     </div>
 </div>
 
-<div id="carouselExampleCaptions" class="carousel slide p-5" data-bs-ride="carousel">
+<div id="carouselExampleCaptions" class="carousel slide pt-5 pb-5 ps-3 pe-3 mx-auto" data-bs-ride="carousel">
     <div class="carousel-inner" id="carouselExampleCaption">
-    
-        <div class="carousel-item  active">
-            <div class="card fun-fact-card">
-                <div class="card-body-ff">
+        <div class="carousel-item active">
+            <div class="card fun-fact-card p-0">
+                <div class="card-body-ff ">
                     <h2 class="card-title">
                         Fun Fact
                     </h2>
-                    <p class="card-text">
-                        Segi empat menggabarkan stabilitas, kedamaian, soliditas, dan kesetaraan.
+                    <p class="card-text mx-auto pb-4">
+                        {{ $funfacts[$i]->isi }}
                     </p>
                 </div>
             </div>
         </div>
+</div>
+</div>
+</div>
 
-    <div class="carousel-item ">
-        <div class="card fun-fact-card">
-            <div class="card-body-ff">
-                <h2 class="card-title">
-                    Fun Fact
-                </h2>
-                <p class="card-text">
-                    Segi empat menggabarkan stabilitas, kedamaian, soliditas, dan kesetaraan.
-                </p>
-            </div>
-        </div>
-    </div>
-    
-    <div class="carousel-item">
-        <div class="card fun-fact-card">
-            <div class="card-body-ff">
-                <h2 class="card-title">
-                    Fun Fact
-                </h2>
-                <p class="card-text">
-                    Segi empat menggabarkan stabilitas, kedamaian, soliditas, dan kesetaraan.
-                </p>
-            </div>
-        </div>
-
-    </div>
-</div>
-<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-<span class="visually-hidden">Previous</span>
-</button>
-<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-<span class="carousel-control-next-icon" aria-hidden="true"></span>
-<span class="visually-hidden">Next</span>
-</button>
-</div>
-</div>
 @endsection
 
 @section('script')

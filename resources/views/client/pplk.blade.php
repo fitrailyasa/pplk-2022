@@ -31,7 +31,7 @@
                 </p>
             <h3>FILOSOFI LOGO</h3>
             <a href="#" class="ratio ratio-1x1 pplk-logo">
-                <img src="../assets/Logo-PPLK.png" alt="">
+                <img src="{{ asset('assets/logo-pplk-minified.png') }}" alt="">
             </a>
         </div>
         <!-- Carousel Deskripsi-->

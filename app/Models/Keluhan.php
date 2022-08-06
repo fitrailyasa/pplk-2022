@@ -22,7 +22,8 @@ class Keluhan extends Model
         'userid',
         'kelompok',
         'nim',
-        'keluhan'
+        'keluhan',
+        'bukti'
     ];
 
 }

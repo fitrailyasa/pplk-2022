@@ -29,7 +29,6 @@
 </h1>
 
 <!-- gambar -->
-<!-- <img id="img-prodi" class="img-fluid" src="../assets/Logo_Mockup_125.jpg" alt=""> -->
 <div class="container row justify-content-center mx-auto mb-5 mt-4">
     <div class="col-lg-6 col-md-12 mb-sm-4 mb-md-0">
         <div class="ratio ratio-4x3">
