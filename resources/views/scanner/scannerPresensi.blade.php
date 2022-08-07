@@ -22,9 +22,9 @@
                 </div>
                 <div>
                 @if(auth()->user()->roles_id == 1)
-                    <form action="super/presensi/{{ $users->id }}" method="POST">
+                    <form action="/super/presensi/{{ $users->id }}" method="POST">
                 @elseif(auth()->user()->roles_id == 5)
-                    <form action="kedis/presensi/{{ $users->id }}" method="POST">
+                    <form action="/kedis/presensi/{{ $users->id }}" method="POST">
                 @endif
 
                     @csrf

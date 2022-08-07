@@ -22,10 +22,11 @@
                 </div>
                 <div>
                 @if(auth()->user()->roles_id == 1)
-                    <form action="super/polling/{{ $ukms->id }}" method="POST">
+                    <form action="/super/polling/{{ $ukms->id }}" method="POST">
                 @elseif(auth()->user()->roles_id == 4)
-                    <form action="ukms/polling/{{ $ukms->id }}" method="POST">
+                    <form action="/super/polling/{{ $ukms->id }}" method="POST">
                 @endif
+
                     @csrf
                 <div class="col-scanner justify-content-center" id="ganti">
                     <div id="reader"  class="justify-content-center"></div>
