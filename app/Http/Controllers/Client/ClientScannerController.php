@@ -63,12 +63,12 @@ class ClientScannerController extends Controller
                   if (auth()->user()->roles_id == 1) {
                         echo "<script>
                         alert('Anda sudah melakukan presensi hari ini!');
-                        window.location.href='super/scanner'
+                        window.location.href='/super/scanner'
                         </script>";
                     } elseif (auth()->user()->roles_id == 5) {
                         echo "<script>
                         alert('Anda sudah melakukan presensi hari ini!');
-                        window.location.href='kedis/scanner'
+                        window.location.href='/kedis/scanner'
                         </script>";
                     }
 
@@ -84,12 +84,12 @@ class ClientScannerController extends Controller
                     if (auth()->user()->roles_id == 1) {
                         echo "<script>
                         alert('Presensi Berhasil!');
-                        window.location.href='super/scanner'
+                        window.location.href='/super/scanner'
                         </script>";
                     } elseif (auth()->user()->roles_id == 5) {
                         echo "<script>
                         alert('Presensi Berhasil!');
-                        window.location.href='kedis/scanner'
+                        window.location.href='/kedis/scanner'
                         </script>";
                     }
 
@@ -98,12 +98,12 @@ class ClientScannerController extends Controller
             if (auth()->user()->roles_id == 1) {
                 echo "<script>
                 alert('Qr-Code yang discan tidak cocok!');
-                window.location.href='super/scanner'
+                window.location.href='/super/scanner'
                 </script>";
             } elseif (auth()->user()->roles_id == 5) {
                 echo "<script>
                 alert('Qr-Code yang discan tidak cocok!');
-                window.location.href='kedis/scanner'
+                window.location.href='/kedis/scanner'
                 </script>";
             }
 
@@ -141,12 +141,12 @@ public function presensiMaba(Request $request,  $id)
             if (auth()->user()->roles_id == 1) {
                 echo "<script>
                 alert('Anda sudah melakukan presensi hari ini!');
-                window.location.href='super/presensiMaba'
+                window.location.href='/super/presensiMaba'
                 </script>";
             } elseif (auth()->user()->roles_id == 6) {
                 echo "<script>
                 alert('Anda sudah melakukan presensi hari ini!');
-                window.location.href='dapmen/presensiMaba'
+                window.location.href='/dapmen/presensiMaba'
                 </script>";
             }
             }else {
@@ -160,12 +160,12 @@ public function presensiMaba(Request $request,  $id)
                 if (auth()->user()->roles_id == 1) {
                     echo "<script>
                     alert('Presensi Berhasil!');
-                    window.location.href='super/presensiMaba'
+                    window.location.href='/super/presensiMaba'
                     </script>";
                 } elseif (auth()->user()->roles_id == 6) {
                     echo "<script>
                     alert('Presensi Berhasil!');
-                    window.location.href='dapmen/presensiMaba'
+                    window.location.href='/dapmen/presensiMaba'
                     </script>";
                 }
             }
@@ -173,12 +173,12 @@ public function presensiMaba(Request $request,  $id)
             if (auth()->user()->roles_id == 1) {
                 echo "<script>
                 alert('Maba Bukan Anggota Kelompok Anda!');
-                window.location.href='super/presensiMaba'
+                window.location.href='/super/presensiMaba'
                 </script>";
             } elseif (auth()->user()->roles_id == 6) {
                 echo "<script>
                 alert('Maba Bukan Anggota Kelompok Anda!');
-                window.location.href='dapmen/presensiMaba'
+                window.location.href='/dapmen/presensiMaba'
                 </script>";
             }
         }
@@ -186,12 +186,12 @@ public function presensiMaba(Request $request,  $id)
         if (auth()->user()->roles_id == 1) {
             echo "<script>
             alert('Qr-Code tidak cocok dengan data manapun!');
-            window.location.href='super/presensiMaba'
+            window.location.href='/super/presensiMaba'
             </script>";
         } elseif (auth()->user()->roles_id == 6) {
             echo "<script>
             alert('Qr-Code tidak cocok dengan data manapun!');
-            window.location.href='dapmen/presensiMaba'
+            window.location.href='/dapmen/presensiMaba'
             </script>";
         }
     }
@@ -233,12 +233,12 @@ public function polling(Request $request,  $id)
                 if (auth()->user()->roles_id == 1) {
                     echo "<script>
                     alert('Maba sudah pernah anda scan!');
-                    window.location.href='super/polling'
+                    window.location.href='/super/polling'
                     </script>";
                 } elseif (auth()->user()->roles_id == 4) {
                     echo "<script>
                     alert('Maba sudah pernah anda scan!');
-                    window.location.href='ukms/polling'
+                    window.location.href='/ukms/polling'
                     </script>";
                 }
 
@@ -253,12 +253,12 @@ public function polling(Request $request,  $id)
                 if (auth()->user()->roles_id == 1) {
                     echo "<script>
                     alert('Berhasil scan!');
-                    window.location.href='super/polling'
+                    window.location.href='/super/polling'
                     </script>";
                 } elseif (auth()->user()->roles_id == 4) {
                     echo "<script>
                     alert('Berhasil scan!');
-                    window.location.href='ukms/polling'
+                    window.location.href='/ukms/polling'
                     </script>";
                 }
 

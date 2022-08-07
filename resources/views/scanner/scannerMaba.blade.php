@@ -22,9 +22,9 @@
                 </div>
                 <div>
                 @if(auth()->user()->roles_id == 1)
-                    <form action="super/presensiMaba/{{ $users->id }}" method="POST">
+                    <form action="/super/presensiMaba/{{ $users->id }}" method="POST">
                 @elseif(auth()->user()->roles_id == 6)
-                    <form action="dapmen/presensiMaba/{{ $users->id }}" method="POST">
+                    <form action="/dapmen/presensiMaba/{{ $users->id }}" method="POST">
                 @endif
                     @csrf
                 <div class="col-scanner justify-content-center" id="ganti">
