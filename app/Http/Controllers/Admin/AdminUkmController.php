@@ -18,7 +18,7 @@ class AdminUkmController extends Controller
     public function index()
     {
         $ukms = Ukm::all();
-        return view('admin.Ukm.index', compact('ukms'));
+        return view('admin.ukm.index', compact('ukms'));
     }
 
     /**
