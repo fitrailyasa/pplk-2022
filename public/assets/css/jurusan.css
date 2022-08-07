@@ -1,6 +1,6 @@
 body {
     background-image: url(../background-2.png) !important;
-    background-size: cover;
+    background-size: cover !important;
     background-position: 50% 5%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -12,42 +12,50 @@ body {
     object-fit: cover;
     object-position: 50% 0%;
     border-radius: 20px;
-  }
+}
 
-  #pills-tab {
+#pills-tab {
     background: rgba(11, 10, 60, 0);
-  }
+}
 
-  #pills-tab .nav-item .active {
-    background: linear-gradient(90deg, rgb(240, 65, 255) 0%, rgba(130, 165, 234, 1) 100%) !important;
-  }
-  .btn .card {
-    background: linear-gradient(90deg, rgb(240, 65, 255) 0%, rgba(130, 165, 234, 1) 100%) !important;
+#pills-tab .nav-item .active {
+    background: linear-gradient(
+        90deg,
+        rgb(240, 65, 255) 0%,
+        rgba(130, 165, 234, 1) 100%
+    ) !important;
+}
+.btn .card {
+    background: linear-gradient(
+        90deg,
+        rgb(240, 65, 255) 0%,
+        rgba(130, 165, 234, 1) 100%
+    ) !important;
     width: 20rem;
-  }
+}
 
-  .jurusan-item-icon {
+.jurusan-item-icon {
     display: none;
-  }
+}
 
-  .animasi-nav:hover {
+.animasi-nav:hover {
     transform: translate(0, -5px);
     font-size: larger;
-  }
+}
 
-  @media screen and (max-width:930px) {
+@media screen and (max-width: 930px) {
     #terakhir {
         margin-bottom: 5rem;
     }
-  }
+}
 
-  @media only screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
     .jurusan-item-icon {
-      display: block;
-      width: 5rem;
-      height: 5rem;
+        display: block;
+        width: 5rem;
+        height: 5rem;
     }
     #pills-tab .nav-item .nav-link {
-      height: 10rem;
+        height: 10rem;
     }
-  }
+}

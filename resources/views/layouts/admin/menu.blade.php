@@ -384,7 +384,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link tablinks">
+                    <a class="nav-link tablinks" href="{{ route('super.booklet.index') }}">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Kelola Data Booklet</p>
                     </a>
@@ -827,12 +827,6 @@
                 </a>
                 <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="{{ route('dapmen.dapmenUser.create') }}" class="nav-link tablinks">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Tambah User</p>
-                    </a>
-                </li>
-                <li class="nav-item">
                     <a href="{{ route('dapmen.dapmenUser.index') }}" class="nav-link tablinks">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Kelola Data User</p>
@@ -854,6 +848,10 @@
             <!--./Scanner-->
 
           @endif
+
+          <div class="box_astronaut" onclick="window.location.href='https://instagram.com/fitrailyasa'" style="cursor: pointer;">
+            <img class="object_astronaut" src="{{ asset('assets/astronaut.svg') }}" width="120px">
+        </div>
 
         </ul>
       </nav>
