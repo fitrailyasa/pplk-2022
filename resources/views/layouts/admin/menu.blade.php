@@ -827,12 +827,6 @@
                 </a>
                 <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="{{ route('dapmen.dapmenUser.create') }}" class="nav-link tablinks">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Tambah User</p>
-                    </a>
-                </li>
-                <li class="nav-item">
                     <a href="{{ route('dapmen.dapmenUser.index') }}" class="nav-link tablinks">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Kelola Data User</p>
