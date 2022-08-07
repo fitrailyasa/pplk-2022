@@ -49,7 +49,7 @@
         <div class="container-fluid landing-page">
             <div class="row justify-content-center " >
                 <div class="box ratio ratio-1x1 mt-5">
-                    <img src="{{ asset('assets/Logo-PPLK.png') }}" alt="" id="container-landing-page-logo">
+                    <img class="ratio ratio-1x1" src="{{ asset('assets/Logo-PPLK.png') }}" alt="" id="container-landing-page-logo">
                 </div>
             </div>
             <div class="row text-center text-white mt-xs-5 mt-md-3" id="container-landing-page-text">
