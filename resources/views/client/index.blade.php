@@ -68,7 +68,7 @@
             <div class="row justify-content-between p-4">
                 <div class="col-lg-5 col-md-4 align-self-center">
                     <div class="d-flex justify-content-center">
-                        <img class="mt-md-5 maskot maskot-awal" src="{{ asset('assets/Maskot-boots.png') }}" alt="" height="1000px" width="500px">
+                        <img class="mt-md-5 maskot maskot-awal" src="{{ asset('assets/Maskot-Orang Utan-1.png') }}" alt="">
                     </div>
 
                 </div>
@@ -367,7 +367,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <img class="maskot2"src="{{ asset('assets/Maskot-Kelinci.png') }}" alt="">
+                    <img class="maskot"src="{{ asset('assets/Maskot-Kelinci-1.png') }}" alt="">
 
                 </div>
             </div>
