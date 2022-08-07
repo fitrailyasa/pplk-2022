@@ -27,7 +27,7 @@
             <h2>VISI</h2>
             <p>{{ $himpunans->visi }}</p>
             <h2>MISI</h2>
-            <p>{{ $himpunans->misi }}</p>
+        <p>{!!nl2br(e($himpunans->misi)) !!}</p>
         </div>
     </div>
     <div class="himpunan-2 justify-content-center mb-5 text-light"> 
@@ -36,88 +36,12 @@
         <img src="{{ asset('assets/himpunan')}}/{{ $himpunans->logo }}" class="hmp-img2" alt="image">
     </div>
 
-<div class="slide-container swiper mb-5" id="terakhir">
-    <div class="slide-content">
-        <div class="card-wrapper swiper-wrapper">
-            <div class="card-rr swiper-slide">
-
-                <div class="card-content">
+    <div class="container">
+                <div class="card-content swiper mb-5  rounded-5 overflow-auto" id="terakhir">
                     <h2 class="name">Filosofi Logo</h2>
                     <p class="description">{{ $himpunans->filosofiLogo }}.</p>
-
                 </div>
             </div>
-            <div class="card-rr swiper-slide">
-
-                <div class="card-content">
-                    <h2 class="name">Filosofi Logo</h2>
-                    <p class="description">{{ $himpunans->filosofiLogo }}.</p>
-
-                </div>
-            </div>
-            <div class="card-rr swiper-slide">
-
-                <div class="card-content">
-                    <h2 class="name">Filosofi Logo</h2>
-                    <p class="description">{{ $himpunans->filosofiLogo }}.</p>
-
-                </div>
-            </div>
-            <div class="card-rr swiper-slide">
-
-                <div class="card-content">
-                    <h2 class="name">Filosofi Logo</h2>
-                    <p class="description">{{ $himpunans->filosofiLogo }}.</p>
-
-                </div>
-            </div>
-            <div class="card-rr swiper-slide">
-
-                <div class="card-content">
-                    <h2 class="name">Filosofi Logo</h2>
-                    <p class="description">{{ $himpunans->filosofiLogo }}.</p>
-
-                </div>
-            </div>
-            <div class="card-rr swiper-slide">
-
-                <div class="card-content">
-                    <h2 class="name">Filosofi Logo</h2>
-                    <p class="description">{{ $himpunans->filosofiLogo }}.</p>
-
-                </div>
-            </div>
-            <div class="card-rr swiper-slide">
-
-                <div class="card-content">
-                    <h2 class="name">Filosofi Logo</h2>
-                    <p class="description">{{ $himpunans->filosofiLogo }}.</p>
-
-                </div>
-            </div>
-            <div class="card-rr swiper-slide">
-
-                <div class="card-content">
-                    <h2 class="name">Filosofi Logo</h2>
-                    <p class="description">{{ $himpunans->filosofiLogo }}.</p>
-
-                </div>
-            </div>
-            <div class="card-rr swiper-slide">
-
-                <div class="card-content">
-                    <h2 class="name">Filosofi Logo</h2>
-                    <p class="description">{{ $himpunans->filosofiLogo }}.</p>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="swiper-button-next swiper-navBtn text-white" id="btn-swip"></div>
-    <div class="swiper-button-prev swiper-navBtn text-white" id="btn-swip"></div>
-    <div class="swiper-pagination"></div>
-</div>
 
 @endsection
 
