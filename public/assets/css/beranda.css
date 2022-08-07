@@ -300,11 +300,10 @@ body {
     text-align: center;
 }
 
-.owl-theme .owl-nav i {
-    font-size: 2rem;
-    color: var(--white);
+.owl-theme .owl-nav {
+    display: none;
 }
-.owl-theme .owl-nav .owl-prev {
+/* .owl-theme .owl-nav .owl-prev {
     position: absolute;
     top: 10%;
     left: 10px;
@@ -316,7 +315,7 @@ body {
     top: 10%;
     right: 10px;
     transform: translateY(-50%);
-}
+} */
 
 .owl-dots {
     text-align: center;
