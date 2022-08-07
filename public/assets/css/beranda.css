@@ -303,19 +303,6 @@ body {
 .owl-theme .owl-nav {
     display: none;
 }
-/* .owl-theme .owl-nav .owl-prev {
-    position: absolute;
-    top: 10%;
-    left: 10px;
-    transform: translateY(-50%);
-}
-
-.owl-theme .owl-nav .owl-next {
-    position: absolute;
-    top: 10%;
-    right: 10px;
-    transform: translateY(-50%);
-} */
 
 .owl-dots {
     text-align: center;
@@ -364,6 +351,14 @@ body {
     -webkit-box-orient: vertical;
 }
 
+#container-landing-page-text {
+    margin-top: 40px;
+}
+
+#container-landing-page-logo {
+    margin-top: 40px;
+}
+
 @media screen and (max-width: 1400px) {
     .card {
         width: 100%;
@@ -388,10 +383,6 @@ body {
 @media screen and (max-width: 700px) {
     body {
         padding-bottom: 4rem;
-    }
-    .landing-page {
-        aspect-ratio: 1/1;
-        /* height: 23rem; */
     }
 
     .box {

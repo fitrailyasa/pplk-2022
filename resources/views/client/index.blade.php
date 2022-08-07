@@ -44,14 +44,15 @@
     <!-- ./Sponsor modal -->
 
     <div class="conten">
+
         <!-- Jumbotron -->
         <div class="container-fluid landing-page">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center " >
                 <div class="box ratio ratio-1x1 mt-5">
-                    <img src="{{ asset('assets/Logo-PPLK.png') }}" alt="">
+                    <img src="{{ asset('assets/Logo-PPLK.png') }}" alt="" id="container-landing-page-logo">
                 </div>
             </div>
-            <div class="row text-center text-white">
+            <div class="row text-center text-white mt-xs-5 mt-md-3" id="container-landing-page-text">
                 <div class="text-nama">
                     <p>Hello, <span class="nama">{{ auth()->user()->nama }}</span></p>
                 </div>
@@ -62,16 +63,18 @@
         </div>
         <!-- ./Jumbotron -->
 
-
         <!-- Under landing page dekstop -->
         <div class="container-fluid under-landing-page p-3">
             <div class="row justify-content-between p-4">
+
                 <div class="col-lg-5 col-md-4 align-self-center">
+                    <!--maskot-awal-->
                     <div class="d-flex justify-content-center">
                         <img class="mt-md-5 maskot maskot-awal" src="{{ asset('assets/Maskot-Orang Utan-1.png') }}" alt="">
                     </div>
-
+                    <!--maskot-awal-->
                 </div>
+                
                 <div class="col-lg-6 col-md-7">
                     <div class="row g-2 gap-md-2 gap-lg-5 justify-content-center">
                         <div class="col-5">
@@ -84,7 +87,6 @@
                                         <path d="M65.819 169.505C46.8919 169.505 31.5013 154.109 31.5013 135.182C31.5013 133.073 29.793 131.37 27.6836 131.37C25.5794 131.37 23.8711 133.073 23.8711 135.182C23.8711 158.312 42.6888 177.13 65.819 177.13C67.9232 177.13 69.6315 175.427 69.6315 173.318C69.6315 171.208 67.9232 169.505 65.819 169.505Z" fill="black"/>
                                         <path d="M65.819 192.38C50.5378 192.38 36.1732 186.427 25.3711 175.625C14.569 164.823 8.61589 150.458 8.62109 135.182C8.62109 133.078 6.91276 131.37 4.80859 131.37C2.70443 131.37 0.996094 133.073 0.996094 135.182C0.996094 152.5 7.73568 168.776 19.9805 181.021C32.2253 193.265 48.5013 200.005 65.819 200.005C67.9232 200.005 69.6315 198.302 69.6315 196.193C69.6315 194.083 67.9232 192.38 65.819 192.38Z" fill="black"/>
                                         </svg>
-
 
                                     <h1 class="link-tilte">JURUSAN</h1>
                                 </div>
