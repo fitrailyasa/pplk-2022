@@ -82,7 +82,7 @@ class DapmenUserController extends Controller
 
     public function show($id)
     {
-        $user = User::where('kelompok', $kelompok)->first();
+        $user = User::where('id', $id)->first();
         return view('admin.user.read', compact('user'));
     }
 
