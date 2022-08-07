@@ -56,7 +56,7 @@ class TebakBangunanSeeder extends Seeder
              'soal'=>'Dimana tempat ini terletak?',
              'jawabanBenar'=>'Kebun Raya ITERA',
              'jawabanA'=>'Belakang Gedung C',
-             'jawabanB'=>'Samping Gedung Kembar',
+             'jawabanB'=>'Dekat GSG ITERA',
              'jawabanC'=>'Kebun Raya ITERA',
              'jawabanD'=>'OAIL'],
 
@@ -78,20 +78,20 @@ class TebakBangunanSeeder extends Seeder
 
              ['namaBangunan'=>'MasjidBaitulIlmi',
              'soal'=>'Masjid ini berdekatan dengan ?',
-             'jawabanBenar'=>'Gedung C dan Gedung D',
+             'jawabanBenar'=>'Gedung C dan D',
              'jawabanA'=>'Asrama TPB ITERA',
-             'jawabanB'=>'Gedung C dan Gedung D',
+             'jawabanB'=>'Gedung C dan D',
              'jawabanC'=>'Labirin Kuning',
              'jawabanD'=>'Galeri ITERA'],
 
 
              ['namaBangunan'=>'RIMA',
              'soal'=>'Gedung apakah ini ?',
-             'jawabanBenar'=>'Gedung Rumah Ibadah multiagama',
+             'jawabanBenar'=>'Gedung RIMA',
              'jawabanA'=>'Gedung Serbaguna',
-             'jawabanB'=>'Gedung Rumah Ibadah Multiagama',
+             'jawabanB'=>'Gedung RIMA',
              'jawabanC'=>'Gedung Asrama ITERA',
-             'jawabanD'=>'Gedung Bandar Lampung'],
+             'jawabanD'=>'Gedung E'],
 
              ['namaBangunan'=>'Labtek1',
              'soal'=>'Apa nama gedung ini?',
@@ -150,10 +150,10 @@ class TebakBangunanSeeder extends Seeder
              'jawabanD'=>'Gedung F'],
 
              ['namaBangunan'=>'Kantin1',
-             'soal'=>'Gedung ini terletak di dekat OAIL,gedung apakah ini? ',
-             'jawabanBenar'=>'Belakang Gedung GKU',
+             'soal'=>'Dimana gambar tersebut terletak ? ',
+             'jawabanBenar'=>'Dekat Masjid Baitul Ilmi',
              'jawabanA'=>'Belakang Gedung GKU',
-             'jawabanB'=>'Dekat Lapangan Bola ITERA',
+             'jawabanB'=>'Dekat GSG ITERA',
              'jawabanC'=>'Dekat Masjid Baitul Ilmi',
              'jawabanD'=>'Belakang OAIL'],
 
@@ -163,10 +163,25 @@ class TebakBangunanSeeder extends Seeder
              'jawabanA'=>'Gedung GKU',
              'jawabanB'=>'Gedung Labtek 1',
              'jawabanC'=>'Gedung Labtek 3',
-             'jawabanD'=>'Gedung Labtek 2']
+             'jawabanD'=>'Gedung Labtek 2'],
+
+             ['namaBangunan'=>'AsramaTB2',
+             'soal'=>'Gedung ini berfungsi sebagai asrama yang dikhususkan untuk? ',
+             'jawabanBenar'=>'Mahasiswa Perempuan',
+             'jawabanA'=>'Mahasiswa Laki-laki',
+             'jawabanB'=>'Mahasiswa Perempuan',
+             'jawabanC'=>'Dosen',
+             'jawabanD'=>'Tendik'],
+
+             ['namaBangunan'=>'OAIL',
+             'soal'=>'Gambar di atas merupakan salah satu fasilitas yang disediakan oleh pihak ITERA untuk menunjang kegiatan observasi untuk program studi … ',
+             'jawabanBenar'=>'Sains Atmosfer & Keplanetan',
+             'jawabanA'=>'SAK ',
+             'jawabanB'=>'Teknik Informatika',
+             'jawabanC'=>'Teknik Elektro',
+             'jawabanD'=>'Teknik Material'],
+
         ];
-
-
 
         Tebak_bangunan::query()->insert($soal);
     }

@@ -48,12 +48,12 @@
         <div class="container-fluid landing-page">
             <div class="row justify-content-center">
                 <div class="box ratio ratio-1x1 mt-5">
-                    <img src="../assets/Logo-PPLK.png" alt="">
+                    <img src="{{ asset('assets/Logo-PPLK.png') }}" alt="">
                 </div>
             </div>
             <div class="row text-center text-white">
                 <div class="text-nama">
-                    <p>HELLO, <span class="nama">{{ auth()->user()->nama }}</span></p>
+                    <p>Hello, <span class="nama">{{ auth()->user()->nama }}</span></p>
                 </div>
                 <div class="text-qoute">
                     <p>Ayo Menjelajah, Sekarang!</p>
@@ -68,7 +68,7 @@
             <div class="row justify-content-between p-4">
                 <div class="col-lg-5 col-md-4 align-self-center">
                     <div class="d-flex justify-content-center">
-                        <img class="mt-md-5 maskot maskot-awal" src="../assets/Maskot1.png" alt="">
+                        <img class="mt-md-5 maskot maskot-awal" src="{{ asset('assets/Maskot-boots.png') }}" alt="" height="1000px" width="500px">
                     </div>
 
                 </div>
@@ -340,7 +340,7 @@
                             <span class="h1 text-style text-white">KNOW MORE <br> ABOUT <span class=" text-gradien">PPLK 2022</span></span>
                         </div>
 
-                        <div class="mt-5 p-3 col-10 g-3 carousel-container owl-carousel" >
+                        <div class="begalin-wraper owl-carousel owl-theme mt-5 p-3 col-10 g-3 carousel-container" >
 
                             <div class="item img-fit">
                                 <button  data-bs-toggle="modal" data-bs-target="#you" >
@@ -367,14 +367,14 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <img class="maskot2"src="../assets/Maskot2.png" alt="">
+                    <img class="maskot2"src="{{ asset('assets/Maskot-Kelinci.png') }}" alt="">
 
                 </div>
             </div>
         </div>
         <!-- ./Youtube -->
 
-        {{-- <!-- Modal Youtube-->
+        <!-- Modal Youtube-->
         <div class="modal modal-xl fade" id="you" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -392,7 +392,7 @@
                 </div>
             </div>
         </div>
-        <!-- ./Modal Youtube--> --}}
+        <!-- ./Modal Youtube-->
 
         <div class="modal modal-xl fade" id="me" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
@@ -434,7 +434,6 @@
         <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <!-- <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5> -->
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -495,8 +494,6 @@
                 </div>
              </div>
         </div>
-        <!-- ./Medpart -->
-
     </div>
 @endsection
 

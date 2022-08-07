@@ -5,7 +5,11 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Keluhan;
 
-use Illuminate\Support\Facades\Hash;
+/**
+ * Controller Form Keluhan
+ * Dev by KhalilFaza
+ * PPLK 2022 Ardhames
+ */
 
 class ClientKeluhanController extends Controller
 {
@@ -27,91 +31,36 @@ class ClientKeluhanController extends Controller
      */
     public function create(Request $request, $id )
     {
+        // memvalidasi file bukti harus berupa gambar
         $validatedData = $request->validate([
             'bukti' => 'required|mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
-
            ]);
+
         $file = $validatedData[('bukti')];
-        $nim = $request->input('nim');
-        $nama = $request->input('nama');
-        $kelompok = $request->input('kelompok');
-        $keluhan = $request->input('keluhan');
-
-        Keluhan::create([
-            'userid' => $id,
-           'nama' => $nama,
-           'nim' => $nim,
-           'kelompok' => $kelompok,
-           'keluhan' => $keluhan
-
-        ]);
-
         $filename = time().'_'.$file->getClientOriginalName();
         // File upload location
         $location = '../public/assets/buktiKeluhan/';
+
+        $nim = $request->input('nim');
+        $kelompok = $request->input('kelompok');
+        $keluhan = $request->input('keluhan');
+
+        // mengisi table keluhan
+        Keluhan::create([
+            'userid' => $id,
+           'nim' => $nim,
+           'kelompok' => $kelompok,
+           'keluhan' => $keluhan,
+           'bukti' => $filename
+
+        ]);
+
         // Upload file
         $file->move($location,$filename);
 
         echo "<script>
         alert('Keluhan Anda sudah Terkirim ke Kedisiplinan');
         window.location.href='/form-keluhan'
-    </script>";
-;
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreKeluhanRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreKeluhanRequest $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Keluhan  $Keluhan
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Keluhan $Keluhan)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Keluhan  $Keluhan
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Keluhan $Keluhan)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateKeluhanRequest  $request
-     * @param  \App\Models\Keluhan  $Keluhan
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateKeluhanRequest $request, Keluhan $Keluhan)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Keluhan  $Keluhan
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Keluhan $Keluhan)
-    {
-        //
+        </script>";
     }
 }

@@ -1,7 +1,7 @@
 @extends('layouts.client.app')
 
 <!-- TITLE -->
-@section('title', 'Divisi PPLK')
+@section('title', 'Divisi')
 
 @section('style')
     <!-- STYLES -->
@@ -47,6 +47,14 @@
                     </div>
                 </div>
               </div> --}}
+
+            <div class="glowing_stars" onclick="window.location.href='https://instagram.com/fitrailyasa'" style="cursor: pointer;">
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+            </div>
 
             <div class="card rounded-5  m-5">
                 <div class="d-flex justify-content-center box">

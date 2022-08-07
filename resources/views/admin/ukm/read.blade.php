@@ -105,6 +105,19 @@
             <input type="file" accept="image/*" class="form-control" name="dokumentasi3" id="dokumentasi3">
           </div>
         </div>
+        <div class="mb-3 row">
+            <div class="col-sm-9">
+              <a>
+                @if(auth()->user()->roles_id == 1)
+                    <a class="btn btn-primary" href="{{ route('super.ukm.index') }}">Kembali</a>
+                @elseif(auth()->user()->roles_id == 2)
+                    <a class="btn btn-primary" href="{{ route('admin.ukm.index') }}">Kembali</a>
+                @elseif(auth()->user()->roles_id == 4)
+                    <a class="btn btn-primary" href="{{ route('ukms.ukm.index') }}">Kembali</a>
+                @endif
+              </a>
+            </div>
+        </div><br><br><br>
         </form>
       </div>
     </div>

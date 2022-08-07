@@ -7,7 +7,7 @@
         </li>
         <li class="nav-item d-sm-inline-block">
           <div href="#" class="brand-link text-decoration-none d-flex align-items-center p-1" id="logo-dan-judul">
-            <img src="../assets/logo-pplk-minified.png" alt="Logo PPLK" class="pplk-logo">
+            <img src="{{ asset('assets/logo-pplk-minified.png') }}" class="pplk-logo">
             <div>
               <span class="brand-link" id="judul-pplk">PPLK 2022</span>
             </div>
@@ -112,12 +112,12 @@
             </li>
             <!--./Beranda-->
 
-            <!-- All User-->
+            <!--Panitia-->
             <li class="nav-item">
                 <a class="nav-link tabitem">
                 <i class="nav-icon fa-solid fa-user-astronaut"></i>
                 <p>
-                    All User
+                    Panitia
                     <i class="right fas fa-angle-left"></i>
                 </p>
                 </a>
@@ -125,18 +125,18 @@
                 <li class="nav-item">
                     <a href="{{ route('super.user.create') }}" class="nav-link tablinks">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Tambah User</p>
+                    <p>Tambah Panitia</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('super.user.index') }}" class="nav-link tablinks">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Kelola Data User</p>
+                    <p>Kelola Data Panitia</p>
                     </a>
                 </li>
                 </ul>
             </li>
-            <!--./All User-->
+            <!--./Panitia-->
 
             <!--User-->
             <li class="nav-item">
@@ -346,6 +346,27 @@
             </li>
             <!--./Kamus Gaul-->
 
+
+            <!--Keluhan-->
+            <li class="nav-item">
+                <a class="nav-link tabitem">
+                <i class="nav-icon fa-solid fa-receipt"></i>
+                <p>
+                    Keluhan
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+                </a>
+                <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="{{ route('super.keluhan.index') }}" class="nav-link tablinks">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Kelola Keluhan</p>
+                    </a>
+                </li>
+                </ul>
+            </li>
+            <!--./Keluhan-->
+
             <!--Booklet-->
             <li class="nav-item">
                 <a class="nav-link tabitem">
@@ -363,7 +384,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link tablinks">
+                    <a class="nav-link tablinks" href="{{ route('super.booklet.index') }}">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Kelola Data Booklet</p>
                     </a>
@@ -741,25 +762,25 @@
             </li>
             <!--./Beranda-->
 
-            <!--Gform-->
+            <!--Keluhan-->
             <li class="nav-item">
                 <a class="nav-link tabitem">
                 <i class="nav-icon fa-solid fa-receipt"></i>
                 <p>
-                    Link Gform
+                    Keluhan
                     <i class="right fas fa-angle-left"></i>
                 </p>
                 </a>
                 <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a class="nav-link tablinks">
+                    <a href="{{ route('kedis.keluhan.index') }}" class="nav-link tablinks">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Kelola Link Gform</p>
+                    <p>Kelola Keluhan</p>
                     </a>
                 </li>
                 </ul>
             </li>
-            <!--./Gform-->
+            <!--./Keluhan-->
 
             <!--Scanner-->
             <li class="nav-item">
@@ -833,6 +854,10 @@
             <!--./Scanner-->
 
           @endif
+
+          <div class="box_astronaut" onclick="window.location.href='https://instagram.com/fitrailyasa'" style="cursor: pointer;">
+            <img class="object_astronaut" src="{{ asset('assets/astronaut.svg') }}" width="120px">
+        </div>
 
         </ul>
       </nav>

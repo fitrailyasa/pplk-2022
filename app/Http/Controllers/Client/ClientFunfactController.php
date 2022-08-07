@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Client;
 
 use App\Models\Funfact;
+use Illuminate\Http\Request;
 use App\Http\Requests\StoreFunfactRequest;
+use App\Http\Controllers\Client\Controller;
 use App\Http\Requests\UpdateFunfactRequest;
-
+use Illuminate\Support\Facades\DB;
 class ClientFunfactController extends Controller
 {
     /**
@@ -15,72 +17,12 @@ class ClientFunfactController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreFunfactRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreFunfactRequest $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Funfact  $funfact
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Funfact $funfact)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Funfact  $funfact
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Funfact $funfact)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateFunfactRequest  $request
-     * @param  \App\Models\Funfact  $funfact
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateFunfactRequest $request, Funfact $funfact)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Funfact  $funfact
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Funfact $funfact)
-    {
-        //
+        $booklet=Funfact::where('id',1)->get()->first();
+        $i = random_int(1, 29);
+        $funfacts = DB::table('funfacts')
+        ->orderByRaw('id ASC')
+        ->get()
+        ->take(29);
+        return view('client.booklet', compact('funfacts','i','booklet'));
     }
 }

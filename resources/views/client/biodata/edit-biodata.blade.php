@@ -1,7 +1,7 @@
 @extends('layouts.client.app')
 
 <!-- TITLE -->
-@section('title', 'Edit - Biodata')
+@section('title', 'Edit Biodata')
 
 @section('style')
     <!-- STYLES -->
