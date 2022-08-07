@@ -69,9 +69,6 @@
       </div>
     </div>
     </div>
-    <div class="box_astronaut" onclick="window.location.href='https://instagram.com/fitrailyasa'" style="cursor: pointer;">
-        <img class="object_astronaut" src="{{ asset('assets/astronaut.svg') }}" width="120px">
-    </div>
 @endsection
 
 @section('script')
