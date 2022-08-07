@@ -59,10 +59,18 @@ class ClientScannerController extends Controller
         if  ($users->qrCode == $request->input('nim')){
             // mengecek apakah token sudah pernah digunakan
                 if ($checkCount >= 1) {
-                    echo "<script>
-                    alert('Anda sudah absen hari ini');
-                    window.location.href='/scanner'
-                  </script>";
+
+                  if (auth()->user()->roles_id == 1) {
+                        echo "<script>
+                        alert('Anda sudah melakukan presensi hari ini!');
+                        window.location.href='super/scanner'
+                        </script>";
+                    } elseif (auth()->user()->roles_id == 5) {
+                        echo "<script>
+                        alert('Anda sudah melakukan presensi hari ini!');
+                        window.location.href='kedis/scanner'
+                        </script>";
+                    }
 
                 }else {
                     // melakukan upload data ke table presensi
@@ -72,16 +80,33 @@ class ClientScannerController extends Controller
                         'hari'=>$date,
                         'token' => $token
                     ]);
-                    echo "<script>
-                    alert('Anda Sudah Berhasil absen');
-                    window.location.href='/scanner'
-                  </script>";
+
+                    if (auth()->user()->roles_id == 1) {
+                        echo "<script>
+                        alert('Presensi Berhasil!');
+                        window.location.href='super/scanner'
+                        </script>";
+                    } elseif (auth()->user()->roles_id == 5) {
+                        echo "<script>
+                        alert('Presensi Berhasil!');
+                        window.location.href='kedis/scanner'
+                        </script>";
+                    }
+
                 }
         }else{
-            echo "<script>
-        alert('Qr Code yang discan tidak cocok');
-        window.location.href='/scanner'
-      </script>";
+            if (auth()->user()->roles_id == 1) {
+                echo "<script>
+                alert('Qr-Code yang discan tidak cocok!');
+                window.location.href='super/scanner'
+                </script>";
+            } elseif (auth()->user()->roles_id == 5) {
+                echo "<script>
+                alert('Qr-Code yang discan tidak cocok!');
+                window.location.href='kedis/scanner'
+                </script>";
+            }
+
 }
 
 }
@@ -113,10 +138,17 @@ public function presensiMaba(Request $request,  $id)
         if ($dapmen->kelompok == $maba->kelompok){
             //mengecek apakah token sudah pernah digunakan
             if ($countToken >= 1) {
+            if (auth()->user()->roles_id == 1) {
                 echo "<script>
-                alert('Anda Hari Ini Sudah Absen');
-                window.location.href='/presensiMaba'
-            </script>";
+                alert('Anda sudah melakukan presensi hari ini!');
+                window.location.href='super/presensiMaba'
+                </script>";
+            } elseif (auth()->user()->roles_id == 6) {
+                echo "<script>
+                alert('Anda sudah melakukan presensi hari ini!');
+                window.location.href='dapmen/presensiMaba'
+                </script>";
+            }
             }else {
                 // upload data presensi
                 Presensi::create([
@@ -125,22 +157,43 @@ public function presensiMaba(Request $request,  $id)
                     'hari'=>$date,
                     'token' => $token
                 ]);
-                echo "<script>
-                alert('Anda Sudah Berhasil absen');
-                window.location.href='/presensiMaba'
-              </script>";
+                if (auth()->user()->roles_id == 1) {
+                    echo "<script>
+                    alert('Presensi Berhasil!');
+                    window.location.href='super/presensiMaba'
+                    </script>";
+                } elseif (auth()->user()->roles_id == 6) {
+                    echo "<script>
+                    alert('Presensi Berhasil!');
+                    window.location.href='dapmen/presensiMaba'
+                    </script>";
+                }
             }
         }else{
-            echo "<script>
-            alert('Maba Bukan Anggota Kelompok Anda');
-            window.location.href='/presensiMaba'
-          </script>";
+            if (auth()->user()->roles_id == 1) {
+                echo "<script>
+                alert('Maba Bukan Anggota Kelompok Anda!');
+                window.location.href='super/presensiMaba'
+                </script>";
+            } elseif (auth()->user()->roles_id == 6) {
+                echo "<script>
+                alert('Maba Bukan Anggota Kelompok Anda!');
+                window.location.href='dapmen/presensiMaba'
+                </script>";
+            }
         }
     }else{
-        echo "<script>
-        alert('QrCode Tidak Cocok Dengan Data Manapun');
-        window.location.href='/presensiMaba'
-      </script>";
+        if (auth()->user()->roles_id == 1) {
+            echo "<script>
+            alert('Qr-Code tidak cocok dengan data manapun!');
+            window.location.href='super/presensiMaba'
+            </script>";
+        } elseif (auth()->user()->roles_id == 6) {
+            echo "<script>
+            alert('Qr-Code tidak cocok dengan data manapun!');
+            window.location.href='dapmen/presensiMaba'
+            </script>";
+        }
     }
 
 
@@ -177,10 +230,17 @@ public function polling(Request $request,  $id)
             // mengecek apakan token unik || untuk cek apakah user/maba sudah pernah divote oleh ukm yang sama
             if ($checkCount >= 1){
 
-                echo "<script>
-                alert('Maba Sudah Pernah Anda Scan');
-                window.location.href='/polling'
-            </script>";
+                if (auth()->user()->roles_id == 1) {
+                    echo "<script>
+                    alert('Maba sudah pernah anda scan!');
+                    window.location.href='super/polling'
+                    </script>";
+                } elseif (auth()->user()->roles_id == 4) {
+                    echo "<script>
+                    alert('Maba sudah pernah anda scan!');
+                    window.location.href='ukms/polling'
+                    </script>";
+                }
 
             }else {
                 // upload data polling
@@ -190,10 +250,17 @@ public function polling(Request $request,  $id)
                     'token' => $token
                 ]);
 
-                echo "<script>
-                alert('berhasil scan');
-                window.location.href='/polling'
-            </script>";
+                if (auth()->user()->roles_id == 1) {
+                    echo "<script>
+                    alert('Berhasil scan!');
+                    window.location.href='super/polling'
+                    </script>";
+                } elseif (auth()->user()->roles_id == 4) {
+                    echo "<script>
+                    alert('Berhasil scan!');
+                    window.location.href='ukms/polling'
+                    </script>";
+                }
 
             }
 
