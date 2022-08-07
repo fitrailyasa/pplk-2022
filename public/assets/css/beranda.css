@@ -301,21 +301,7 @@ body {
 }
 
 .owl-theme .owl-nav i {
-    font-size: 2rem;
-    color: var(--white);
-}
-.owl-theme .owl-nav .owl-prev {
-    position: absolute;
-    top: 10%;
-    left: 10px;
-    transform: translateY(-50%);
-}
-
-.owl-theme .owl-nav .owl-next {
-    position: absolute;
-    top: 10%;
-    right: 10px;
-    transform: translateY(-50%);
+    display: none;p
 }
 
 .owl-dots {
