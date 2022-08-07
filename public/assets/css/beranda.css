@@ -351,12 +351,12 @@ body {
     -webkit-box-orient: vertical;
 }
 
-#container-landing-page-text {
-    margin-top: 40px;
+#container-landing-page-text .text-nama {
+    margin-top: 5%;
 }
 
 #container-landing-page-logo {
-    margin-top: 40px;
+    margin-top: 10%;
 }
 
 @media screen and (max-width: 1400px) {
