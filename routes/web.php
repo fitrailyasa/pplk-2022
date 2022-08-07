@@ -11,7 +11,7 @@ use App\Http\Middleware\Kedisiplinan;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\AdminController;
-use App\Http\Controllers\Leaderboardcontroller;
+use App\Http\Controllers\LeaderboardController;
 use App\Http\Controllers\Admin\AdminUkmController;
 use App\Http\Controllers\Admin\AdminUptController;
 use App\Http\Controllers\Admin\AdminUserController;
