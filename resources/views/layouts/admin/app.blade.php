@@ -63,6 +63,7 @@
         <!-- /.Control Sidebar -->
 
         <!-- Footer -->
+        <br><br><br>
         <footer class="main-footer fixed-bottom">
           <!-- Tagline PPLK 2022 -->
           <div class="float-right d-none d-sm-inline">
