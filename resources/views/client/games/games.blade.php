@@ -1,7 +1,7 @@
 @extends('layouts.client.app')
 
 <!-- TITLE -->
-@section('title', 'Home - Game')
+@section('title', 'Game')
 
 @section('style')
     <!-- STYLES -->
@@ -170,6 +170,9 @@
                 </table>
             </div>
         </div>
+    </div>
+    <div class="box_astronaut" onclick="window.location.href='https://instagram.com/fitrailyasa'" style="cursor: pointer;">
+        <img class="object_astronaut" src="{{ asset('assets/astronaut.svg') }}" width="120px">
     </div>
 
     <!--Content web selesai dari sini-->

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Admin\Controller;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Storage;
 
 class AdminKeluhanController extends Controller
 {
@@ -19,6 +20,13 @@ class AdminKeluhanController extends Controller
     {
         $keluhans = Keluhan::all();
         return view('admin.keluhan.index', compact('keluhans'));
+    }
+
+    public function download()
+    {
+        $url = Storage::temporaryUrl(
+            'file.jpg', now()->addMinutes(5)
+        );
     }
 
     /**

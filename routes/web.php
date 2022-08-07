@@ -1,40 +1,42 @@
 <?php
 
-use Illuminate\Routing\Controller;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Route;
-use App\Http\Middleware\SuperAdmin;
-use App\Http\Middleware\Admin;
-use App\Http\Middleware\Himpunan;
 use App\Http\Middleware\Ukm;
-use App\Http\Middleware\Kedisiplinan;
+use App\Http\Middleware\Admin;
 use App\Http\Middleware\DapMen;
+use App\Http\Middleware\Himpunan;
+use Illuminate\Routing\Controller;
+use App\Http\Middleware\SuperAdmin;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Middleware\Kedisiplinan;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\Admin\AdminBegalinController;
 use App\Http\Controllers\Admin\AdminController;
-use App\Http\Controllers\Admin\AdminFunfactController;
-use App\Http\Controllers\Admin\AdminHimpunanController;
-use App\Http\Controllers\Admin\AdminKamusGaulController;
-use App\Http\Controllers\Admin\AdminKeluhanController;
+use App\Http\Controllers\Leaderboardcontroller;
 use App\Http\Controllers\Admin\AdminUkmController;
 use App\Http\Controllers\Admin\AdminUptController;
 use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\Admin\AdminProdiController;
 use App\Http\Controllers\Admin\DapmenUserController;
+use App\Http\Controllers\Client\ClientUkmController;
+use App\Http\Controllers\Client\ClientUptController;
+use App\Http\Controllers\Admin\AdminBegalinController;
+use App\Http\Controllers\Admin\AdminBookletController;
+use App\Http\Controllers\Admin\AdminFunfactController;
+use App\Http\Controllers\Admin\AdminKeluhanController;
+use App\Http\Controllers\Client\ClientProdiController;
+use App\Http\Controllers\Admin\AdminHimpunanController;
+use App\Http\Controllers\Admin\AdminKamusGaulController;
 use App\Http\Controllers\Client\ClientBegalinController;
 use App\Http\Controllers\Client\ClientBiodataController;
+use App\Http\Controllers\Client\ClientFunfactController;
 use App\Http\Controllers\Client\ClientJurusanController;
 use App\Http\Controllers\Client\ClientKabinetController;
-use App\Http\Controllers\Client\ClientKamusgaulController;
-use App\Http\Controllers\Client\ClientKodeGameController;
 use App\Http\Controllers\Client\ClientKeluhanController;
-use App\Http\Controllers\Client\ClientHimpunanController;
-use App\Http\Controllers\Client\ClientUkmController;
-use App\Http\Controllers\Client\ClientProdiController;
 use App\Http\Controllers\Client\ClientScannerController;
-use App\Http\Controllers\Client\ClientUptController;
+use App\Http\Controllers\Client\ClientHimpunanController;
+use App\Http\Controllers\Client\ClientKodeGameController;
+use App\Http\Controllers\Client\ClientKamusgaulController;
 use App\Http\Controllers\Client\ClientGameTebakBangunanController;
-use App\Http\Controllers\Leaderboardcontroller;
 
 
 
@@ -66,6 +68,7 @@ Route::middleware([SuperAdmin::class])->name('super.')->prefix('super')->group(f
   Route::get('/', [AdminController::class, 'index'])->name('index');
   Route::resource('begalin', AdminBegalinController::class);
   Route::resource('funfact', AdminFunfactController::class);
+  Route::resource('booklet', AdminBookletController::class);
   Route::resource('himpunan', AdminHimpunanController::class);
   Route::resource('kamusgaul', AdminKamusGaulController::class);
   Route::resource('prodi', AdminProdiController::class);
@@ -137,23 +140,15 @@ Route::middleware(['auth'])->group(function () {
   Route::get('/beranda', [ClientBegalinController::class, 'index']);
   Route::get('/upt', [ClientUptController::class, 'index'])->name('upt');
   Route::get('/kabinet', [ClientKabinetController::class, 'index'])->name('kabinet');
-  Route::get('/senat', function () {
-    return view('client.senat');
-  });
+  Route::get('/senat', function () { return view('client.senat'); });
   Route::get('/kamus-gaul', [ClientKamusgaulController::class, 'index'])->name('kamus-gaul');
 
   // BOOKLET
-  Route::get('/booklet', function () {
-    return view('client.booklet');
-  });
+  Route::get('/booklet', [ClientFunfactController::class, 'index'])->name('funfact');
 
   // PPLK
-  Route::get('/pplk', function () {
-    return view('client.pplk');
-  });
-  Route::get('/div-pplk', function () {
-    return view('client.div-pplk');
-  });
+  Route::get('/pplk', function () { return view('client.pplk'); });
+  Route::get('/div-pplk', function () { return view('client.div-pplk'); });
 
   // BIODATA
   Route::get('/biodata', [ClientBiodataController::class, 'index'])->name('biodata');
@@ -183,17 +178,10 @@ Route::middleware(['auth'])->group(function () {
   Route::get('/game-home', [LeaderboardController::class, 'index']);
   Route::get('/card-list', [ClientKodeGameController::class, 'index']);
   Route::get('/redeem/{no}', [ClientKodeGameController::class, 'show']);
-  Route::get('/redeem-failed', function () {
-    return view('client.games.redeem-code.failed');
-  });
-  Route::get('/redeem-success', function () {
-    return view('client.games.redeem-code.success');
-  });
+  Route::get('/redeem-failed', function () { return view('client.games.redeem-code.failed'); });
+  Route::get('/redeem-success', function () { return view('client.games.redeem-code.success'); });
   Route::post('/submitcode/{id}', [ClientKodeGameController::class, 'sumscore'])->name('sumscore');
-  Route::get('/tebak-bangunan', [ClientGameTebakBangunanController::class, 'index']);
-  Route::get('/tebak-bangunan-game/{id}', [ClientGameTebakBangunanController::class, 'show']);
-  Route::get('/tebak-bangunan-game/{id}/{jawaban}', [ClientGameTebakBangunanController::class, 'store']);
-  Route::get('/tebak-bangunan-selesai/{id}', [ClientGameTebakBangunanController::class, 'restart']);
+
 
   // DEVELOPMENT TEAM
   Route::get('/dev-team', function () {

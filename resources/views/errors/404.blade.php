@@ -1,22 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 Not Found</title>
-    <link rel="stylesheet" href="{{ asset('assets/css/error-page.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+        <meta name="theme-color" content="#09f" />
+        <meta name="description" content="Program Pengenalan Lingkungan Kampus (PPLK) merupakan acara pesta penyambutan terbesar untuk mahasiswa baru yang diselenggarakan setiap tahunnya di Institut Teknologi Sumatera (ITERA). PPLK ITERA hadir sebagai akses utama bagi mahasiswa baru untuk mengawali gerbang perkuliahan, yang berupa kaderisasi awal terpusat yang diselenggarakan oleh Keluarga Mahasiswa Institut Teknologi Sumatera (KM ITERA) untuk menyambut mahasiswa baru." />
+        <meta name="keywords" content="PPLK, Program Pengenalan Lingkungan Kampus, PPLK ITERA 2022, KM-ITERA" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="author" content="Fitra Ilyasa" />
+        <meta name="copyright" content="PPLK 2022" />
+        <meta name="robots" content="follow" />
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <meta property="og:type" content="cms website" />
+        <meta property="og:title" content="CMS Website PPLK 2022" />
+        <meta property="og:url" content="URL" />
+        <link rel="manifest" href="./manifest.webmanifest" />
+        <title>404 Not Found</title>
+        <link rel="stylesheet" href="{{ asset('assets/css/error-page.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}">
 </head>
 
 <body class="bg-purple">
 
     <div class="stars">
-        <div class="central-body" >
-            <img class="image-404" src="../assets/404.png" width="400px">
+        <div class="central-body">
+            <img class="image-404" src="{{ asset('assets/404.png') }}" width="400px">
             <a href="/beranda" class="btn-go-home">Kembali!!</a>
         </div>
-        <div class="objects" onclick="window.location.href='https://instagram.com/fitrailyasa'" style="cursor: pointer;">
+        <div class="objects">
+
             <svg class="object_rocket" width="40px" height="43" viewBox="0 0 54 43" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M18.2148 39.9168C18.8494 39.6885 16.4699 39.2865 17.0191 38.895C18.6508 37.7813 19.8729 36.1638 20.4985 34.2899C21.124 32.416 21.1186 30.3888 20.4831 28.5182C19.8476 26.6476 18.6169 25.0367 16.9792 23.9317C15.3416 22.8267 13.3871 22.2885 11.4147 22.3993C9.77297 22.5025 8.18765 23.0374 6.81902 23.9499C6.26505 24.3392 6.53869 22.9504 6.53886 21.5493C7.56498 19.7457 6.07166 22.0163 7.16809 20.332C8.12732 18.8278 9.38772 17.5385 10.8699 16.5455C12.352 15.5525 14.0238 14.8773 15.7799 14.5624C17.5359 14.2474 19.3381 14.2997 21.073 14.7157C22.8078 15.1318 24.4377 15.9027 25.8599 16.9799C27.2821 18.0571 28.4657 19.4171 29.3362 20.9744C30.2067 22.5317 30.7452 24.2524 30.9178 26.028C31.0904 27.8037 30.8933 29.5959 30.339 31.2917C29.4404 33.963 27.6834 36.2619 25.3417 37.8302C23.8951 38.8609 22.2458 39.5722 20.5034 39.9168C18.7609 40.2614 19.9448 40.3193 18.2148 39.9168Z" fill="#B2E8E8"/>
                 <path d="M53.9991 3.19466C53.99 3.03985 53.9392 2.89039 53.852 2.76212C53.7649 2.63385 53.6446 2.53156 53.5041 2.46609C50.3778 1.2104 46.9884 0.751876 43.6409 1.13179C40.2934 1.51171 37.0929 2.71814 34.3275 4.64248C30.4792 7.25788 20.9049 15.1975 12.0406 23.0904C11.4195 23.6472 11.0214 24.4102 10.9201 25.2381C10.8187 26.066 11.021 26.9025 11.4895 27.5926L15.2725 33.141C15.7453 33.8268 16.4504 34.3182 17.2575 34.5242C18.0645 34.7303 18.9189 34.6371 19.6626 34.2619C30.2456 28.9003 41.1463 22.8756 44.976 20.2508C47.776 18.3787 50.0666 15.8397 51.6417 12.8624C53.2168 9.88504 54.0269 6.56282 53.9991 3.19466V3.19466Z" fill="#FFCB39"/>
@@ -37,11 +49,11 @@
                 <path d="M16.2873 40.8816C15.718 41.2706 14.6572 41.2706 14.6572 41.2706C14.848 40.7347 15.1789 40.2597 15.6155 39.8951C15.7458 39.806 15.9062 39.7723 16.0614 39.8015C16.2166 39.8307 16.3538 39.9203 16.4429 40.0507C16.532 40.181 16.5656 40.3414 16.5364 40.4966C16.5073 40.6518 16.4176 40.789 16.2873 40.8781V40.8816Z" fill="#FFCB39"/>
             </svg>
             <div class="earth-moon">
-                <img class="object_earth" src="../assets/earth.png" width="120px">
-                <img class="object_moon" src="../assets/moon.png" width="40px">
+                <img class="object_earth" src="{{ asset('assets/earth.png') }}" width="120px">
+                <img class="object_moon" src="{{ asset('assets/moon.png') }}" width="40px">
             </div>
             <div class="box_astronaut" onclick="window.location.href='https://instagram.com/adislksn'" style="cursor: pointer;">
-                <img class="object_astronaut" src="../assets/astronaut.svg" width="120px">
+                <img class="object_astronaut" src="{{ asset('assets/astronaut.svg') }}" width="120px">
             </div>
         </div>
         <div class="glowing_stars" onclick="window.location.href='https://instagram.com/fitrailyasa'" style="cursor: pointer;">
@@ -51,6 +63,9 @@
             <div class="star"></div>
             <div class="star"></div>
         </div>
+
     </div>
+    <div onclick="window.location.href='https://instagram.com/khalilfaza._'">
+    <img class="" src="{{ asset('assets/planet.png') }}" width="60px"></div>
 </body>
 </html>

@@ -9,5 +9,5 @@ class Funfact extends Model
 {
     use HasFactory;
     protected $table = 'funfacts';
-    protected $fillable = ['isi'];
+    protected $fillable = ['isi','booklet'];
 }
