@@ -381,7 +381,7 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
 
-                    <iframe class="youtube-size" src="https://www.youtube.com/embed/C2e22o8xIpQ?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="youtube-size" src="https://www.youtube.com/embed/Z6w_5ST34UQ?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -389,8 +389,7 @@
         <div class="modal modal-xl fade" id="and" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
-
-                    <iframe class="youtube-size" src="https://www.youtube.com/embed/Z6w_5ST34UQ?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="youtube-size" src="https://www.youtube.com/embed/Sctref1MCI8?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -399,9 +398,7 @@
         <div class="modal modal-xl fade" id="me" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
-                <!-- https://youtu.be/6gZ9WFwxRNY -->
-
-                    <iframe class="youtube-size" src="https://www.youtube.com/embed/6gZ9WFwxRNY?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="youtube-size" src="https://www.youtube.com/embed/S25dWb1-ntc?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
