@@ -92,6 +92,7 @@ Route::middleware([Admin::class])->name('admin.')->prefix('admin')->group(functi
   Route::get('/', [AdminController::class, 'index'])->name('index');
   Route::resource('begalin', AdminBegalinController::class);
   Route::resource('funfact', AdminFunfactController::class);
+  Route::resource('booklet', AdminBookletController::class);
   Route::resource('kamusgaul', AdminKamusGaulController::class);
   Route::resource('upt', AdminUptController::class);
   Route::resource('dapmenUser', DapmenUserController::class);

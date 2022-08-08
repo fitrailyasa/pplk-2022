@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Funfact;
+use App\Models\Booklet;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Admin\Controller;
 use Illuminate\Contracts\View\View;
@@ -17,7 +17,7 @@ class AdminBookletController extends Controller
      */
     public function index()
     {
-        $booklet = Funfact::get()->first();
+        $booklet = Booklet::get()->first();
         return view('admin.booklet.index', compact('booklet'));
     }
 
@@ -34,59 +34,59 @@ class AdminBookletController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreFunfactRequest  $request
+     * @param  \App\Http\Requests\StorebookletRequest  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        Funfact::create([
+        booklet::create([
             'judul' => $request->judul,
             'isi' => $request->isi
         ]);
 
         if (auth()->user()->roles_id == 1) {
-            return redirect('super/funfact')->with('sukses', 'Berhasil Tambah Data!');
+            return redirect('super/booklet')->with('sukses', 'Berhasil Tambah Data!');
         } elseif (auth()->user()->roles_id == 2) {
-            return redirect('admin/funfact')->with('sukses', 'Berhasil Tambah Data!');
+            return redirect('admin/booklet')->with('sukses', 'Berhasil Tambah Data!');
         }
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Funfact  $Funfact
+     * @param  \App\Models\Booklet  $booklet
      * @return \Illuminate\Http\Response
      */
 
     public function show($id)
     {
-        $booklet = Funfact::where('id', 1)->first();
+        $booklet = Booklet::where('id', 1)->first();
         return view('admin.booklet.read', compact('booklet'));
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Funfact  $Funfact
+     * @param  \App\Models\booklet  $booklet
      * @return \Illuminate\Http\Response
      */
 
     public function edit($id)
     {
-        $booklet = Funfact::get()->first();
+        $booklet = Booklet::get()->first();
         return view('admin.booklet.update', compact('booklet'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateFunfactRequest  $request
-     * @param  \App\Models\Funfact  $Funfact
+     * @param  \App\Http\Requests\UpdatebookletRequest  $request
+     * @param  \App\Models\booklet  $booklet
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        $data=Funfact::where('id',1)->get()->first();
+        $data=Booklet::where('id',1)->get()->first();
         $data->update(
             [
                 'booklet' => $request->booklet
@@ -102,18 +102,18 @@ class AdminBookletController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Funfact  $Funfact
+     * @param  \App\Models\Booklet  $booklet
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        $data = Funfact::where('id', $id)->first();
+        $data = Booklet::where('id', $id)->first();
         $data->delete();
 
         if (auth()->user()->roles_id == 1) {
-            return redirect('super/funfact')->with('sukses', 'Berhasil Hapus Data!');
+            return redirect('super/booklet')->with('sukses', 'Berhasil Hapus Data!');
         } elseif (auth()->user()->roles_id == 2) {
-            return redirect('admin/funfact')->with('sukses', 'Berhasil Hapus Data!');
+            return redirect('admin/booklet')->with('sukses', 'Berhasil Hapus Data!');
         }
     }
 }
