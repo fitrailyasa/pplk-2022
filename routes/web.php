@@ -77,6 +77,8 @@ Route::middleware([SuperAdmin::class])->name('super.')->prefix('super')->group(f
   Route::resource('upt', AdminUptController::class);
   Route::resource('keluhan', AdminKeluhanController::class);
   Route::resource('dapmenUser', DapmenUserController::class);
+  Route::get('/detail-presensi/{id}',[DapmenUserController::class,'detailPresensi'])->name('presensiUser');
+  Route::get('/polling-ukm/{id}',[AdminUkmController::class,'lihatPolling'])->name('pollingUkm');
 
   // SCANNER
   Route::get('/scanner', [ClientScannerController::class, 'index'])->name('scanner');
@@ -90,11 +92,15 @@ Route::middleware([SuperAdmin::class])->name('super.')->prefix('super')->group(f
 // CMS ADMIN
 Route::middleware([Admin::class])->name('admin.')->prefix('admin')->group(function () {
   Route::get('/', [AdminController::class, 'index'])->name('index');
+  Route::resource('booklet', AdminBookletController::class);
   Route::resource('begalin', AdminBegalinController::class);
   Route::resource('funfact', AdminFunfactController::class);
+  Route::resource('booklet', AdminBookletController::class);
   Route::resource('kamusgaul', AdminKamusGaulController::class);
   Route::resource('upt', AdminUptController::class);
   Route::resource('dapmenUser', DapmenUserController::class);
+  Route::get('/detail-presensi/{id}',[DapmenUserController::class,'detailPresensi'])->name('presensiUser');
+  Route::get('/polling-ukm/{id}',[AdminUkmController::class,'lihatPolling'])->name('pollingUkm');
 });
 
 // CMS HIMPUNAN
@@ -110,6 +116,7 @@ Route::middleware([Ukm::class])->name('ukms.')->prefix('ukms')->group(function (
   Route::resource('ukm', AdminUkmController::class);
   Route::get('/polling', [ClientScannerController::class, 'indexPolling'])->name('polling');
   Route::post('/polling/{id}', [ClientScannerController::class, 'polling']);
+  Route::get('/polling-ukm/{id}',[AdminUkmController::class,'lihatPolling'])->name('pollingUkm');
 });
 
 // CMS KEDISIPLISAN
@@ -126,6 +133,7 @@ Route::middleware([Kedisiplinan::class])->name('kedis.')->prefix('kedis')->group
 Route::middleware([DapMen::class])->name('dapmen.')->prefix('dapmen')->group(function () {
   Route::get('/', [AdminController::class, 'index'])->name('index');
   Route::resource('dapmenUser', DapmenUserController::class);
+  Route::get('/detail-presensi/{id}',[DapmenUserController::class,'detailPresensi'])->name('presensiUser');
 
   // SCANNER MABA
   Route::get('/presensiMaba', [ClientScannerController::class, 'indexMaba'])->name('indexMaba');

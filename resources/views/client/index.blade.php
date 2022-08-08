@@ -74,7 +74,7 @@
                     </div>
                     <!--maskot-awal-->
                 </div>
-                
+
                 <div class="col-lg-6 col-md-7">
                     <div class="row g-2 gap-md-2 gap-lg-5 justify-content-center">
                         <div class="col-5">
@@ -347,21 +347,21 @@
                             <div class="item img-fit">
                                 <button  data-bs-toggle="modal" data-bs-target="#you" >
                                     <i class="bi bi-play-btn-fill play-icon text-danger"></i>
-                                    <img src="http://img.youtube.com/vi/C2e22o8xIpQ/0.jpg" class="thumbnail" alt="">
+                                    <img src="http://img.youtube.com/vi/Z6w_5ST34UQ/0.jpg" class="thumbnail" alt="">
                                 </button>
                             </div>
 
                             <div class="item img-fit">
                                 <button  data-bs-toggle="modal" data-bs-target="#and" >
                                     <i class="bi bi-play-btn-fill play-icon text-danger"></i>
-                                    <img src="http://img.youtube.com/vi/Z6w_5ST34UQ/0.jpg" class="thumbnail" alt="">
+                                    <img src="http://img.youtube.com/vi/Sctref1MCI8/0.jpg" class="thumbnail" alt="">
                                 </button>
                             </div>
 
                             <div class="item img-fit">
                                 <button  data-bs-toggle="modal" data-bs-target="#me" >
                                     <i class="bi bi-play-btn-fill play-icon text-danger"></i>
-                                    <img src="http://img.youtube.com/vi/6gZ9WFwxRNY/0.jpg" class="thumbnail" alt="">
+                                    <img src="http://img.youtube.com/vi/S25dWb1-ntc/0.jpg" class="thumbnail" alt="">
                                 </button>
                             </div>
 
