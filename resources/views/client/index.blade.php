@@ -463,36 +463,178 @@
                    <div class="medpatr-card">
                         <div class="d-flex justify-content-center">
                             <div class="ratio ratio-1x1">
-                                <img src="{{ asset('assets/space-cat.png') }}" alt="">
+                                <img src="{{ asset('assets/logoMedpart/acara_mahasiswa.jpeg') }}" alt="">
                             </div>
                         </div>
-
                    </div>
                    <div class="medpatr-card">
                         <div class="d-flex justify-content-center">
                             <div class="ratio ratio-1x1">
-                                <img src="{{ asset('assets/space-cat.png') }}" alt="">
+                                <img src="{{ asset('assets/logoMedpart/andalas_fm.jpg') }}" alt="">
                             </div>
                         </div>
-
+                    </div>
+                   <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/arealomba_id.jpeg') }}" alt="">
+                            </div>
+                        </div>
                    </div>
                    <div class="medpatr-card">
                         <div class="d-flex justify-content-center">
                             <div class="ratio ratio-1x1">
-                                <img src="{{ asset('assets/space-cat.png') }}" alt="">
+                                <img src="{{ asset('assets/logoMedpart/event_alert.jpg') }}" alt="">
                             </div>
                         </div>
-
-                   </div>
-                   <div class="medpatr-card">
+                    </div>
+                    <div class="medpatr-card">
                         <div class="d-flex justify-content-center">
                             <div class="ratio ratio-1x1">
-                                <img src="{{ asset('assets/space-cat.png') }}" alt="">
+                                <img src="{{ asset('assets/logoMedpart/event_center_id.png') }}" alt="">
                             </div>
                         </div>
-
-                   </div>
-
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/info_lomba.jpg') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/info_lomba_beasiswa.png') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/jogja_punya_acara.png') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/lampung_geh.png') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/logo_black.png') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/logo_tvri.png') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/lomba_lomba.png') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/mandala.jpg') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/monv.png') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/point_campus.jpeg') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/radio_mandala.jpg') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/radio_sai.jpg') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/radio_sonora.jpeg') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/rajawali_fm.png') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/ruang_mahasiswa.png') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/siger_tv.jpg') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/suara_kreativitas.png') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/urban_jabar.png') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/webinar_kuy.jpeg') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/webinar_nasional.jpeg') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
                 </div>
              </div>
         </div>
