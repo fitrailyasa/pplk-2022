@@ -6,7 +6,6 @@
 @section('style')
     <!-- STYLES -->
     <link rel="stylesheet" href="{{ asset('assets/css/perhimpunan.css') }}">
-
 @endsection
 
 @section('content')
