@@ -37,19 +37,6 @@ class AdminBookletController extends Controller
      * @param  \App\Http\Requests\StorebookletRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        booklet::create([
-            'judul' => $request->judul,
-            'isi' => $request->isi
-        ]);
-
-        if (auth()->user()->roles_id == 1) {
-            return redirect('super/booklet')->with('sukses', 'Berhasil Tambah Data!');
-        } elseif (auth()->user()->roles_id == 2) {
-            return redirect('admin/booklet')->with('sukses', 'Berhasil Tambah Data!');
-        }
-    }
 
     /**
      * Display the specified resource.
