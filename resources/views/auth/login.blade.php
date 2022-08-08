@@ -39,7 +39,7 @@
 <!-- Splash Screen -->
 <body>
 <div class="launch-logo fade" id="splash-screen">
-  <img src="assets/logo-pplk-minified.png" alt="launch-logo-pplk" class="launch-logo-image" />
+  <img src="{{ asset('assets/logo-pplk-minified.png') }}" alt="launch-logo-pplk" class="launch-logo-image" />
 </div>
 
 <div class="d-flex align-items-center min-vh-100 show-up" id="login-container">
@@ -50,7 +50,7 @@
       <!-- Image row and column -->
       <div class="row justify-content-center">
         <div class="col-sm-6 col-md-5 text-center text-wrap" id="image">
-          <img class="img-fluid" src="assets/logo-pplk-minified.png" alt="logo-pplk-minified" />
+          <img class="img-fluid" src="{{ asset('assets/logo-pplk-minified.png') }}" alt="logo-pplk-minified" />
         </div>
       </div>
     </div>
