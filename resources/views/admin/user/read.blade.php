@@ -23,8 +23,6 @@
               <img src="{{ asset('assets/profile') }}/{{ $user->fotoProfil }}" style="width:200px !important; height:200px !important; align-item: center;" class="img-circle elevation-2" alt="User Image">
             @endif
         </div><br><br>
-        <input type="hidden" value="{{ $user->id }}" name="id">
-          <input type="hidden" value="{{$user->password}}" name="password">
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Nama User</label>
             <div class="col-sm-9">

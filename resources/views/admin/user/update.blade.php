@@ -20,7 +20,6 @@
     @endif
         @csrf
         @method('PUT')
-        <input type="hidden" value="{{ $user->id }}" name="id">
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Nama User</label>
             <div class="col-sm-9">

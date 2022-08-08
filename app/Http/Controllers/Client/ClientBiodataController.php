@@ -114,7 +114,7 @@ class ClientBiodataController extends Controller
     {
          // mengirim data user ke halaman edit biodata untuk
         $viewbiodata = User::find($id);
-        return view('Client.biodata.edit-biodata', compact('viewbiodata'));
+        return view('client.biodata.edit-biodata', compact('viewbiodata'));
     }
 
     public function updateProfil(Request $request, $id)

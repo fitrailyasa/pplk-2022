@@ -34,27 +34,27 @@ class AdminBookletController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreFunfactRequest  $request
+     * @param  \App\Http\Requests\StorebookletRequest  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        Funfact::create([
+        booklet::create([
             'judul' => $request->judul,
             'isi' => $request->isi
         ]);
 
         if (auth()->user()->roles_id == 1) {
-            return redirect('super/funfact')->with('sukses', 'Berhasil Tambah Data!');
+            return redirect('super/booklet')->with('sukses', 'Berhasil Tambah Data!');
         } elseif (auth()->user()->roles_id == 2) {
-            return redirect('admin/funfact')->with('sukses', 'Berhasil Tambah Data!');
+            return redirect('admin/booklet')->with('sukses', 'Berhasil Tambah Data!');
         }
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Funfact  $Funfact
+     * @param  \App\Models\Funfact  $funfact
      * @return \Illuminate\Http\Response
      */
 
@@ -67,7 +67,7 @@ class AdminBookletController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Funfact  $Funfact
+     * @param  \App\Models\Funfact  $funfact
      * @return \Illuminate\Http\Response
      */
 
@@ -80,8 +80,8 @@ class AdminBookletController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateFunfactRequest  $request
-     * @param  \App\Models\Funfact  $Funfact
+     * @param  \App\Http\Requests\UpdatebookletRequest  $request
+     * @param  \App\Models\Funfact  $funfact
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -102,7 +102,7 @@ class AdminBookletController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Funfact  $Funfact
+     * @param  \App\Models\Funfact  $funfact
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
@@ -111,9 +111,9 @@ class AdminBookletController extends Controller
         $data->delete();
 
         if (auth()->user()->roles_id == 1) {
-            return redirect('super/funfact')->with('sukses', 'Berhasil Hapus Data!');
+            return redirect('super/booklet')->with('sukses', 'Berhasil Hapus Data!');
         } elseif (auth()->user()->roles_id == 2) {
-            return redirect('admin/funfact')->with('sukses', 'Berhasil Hapus Data!');
+            return redirect('admin/booklet')->with('sukses', 'Berhasil Hapus Data!');
         }
     }
 }

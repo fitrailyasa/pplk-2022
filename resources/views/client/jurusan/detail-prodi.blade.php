@@ -25,25 +25,25 @@
     <!-- CONTENT -->
     <!-- Nama Prodi -->
     <div>
-    <h1 class="text-center text-light display-3 py-4 fw-bold flex-wrap my-3"><strong>{{ $prodis->namaLengkap }}</strong>
+    <h1 class="text-center text-light display-3 py-md-4 fw-bold flex-wrap my-md-3"><strong>{{ $prodis->namaLengkap }}</strong>
 </h1>
 
 <!-- gambar -->
 <div class="container row justify-content-center mx-auto mb-5 mt-4">
     <div class="col-lg-6 col-md-12 mb-sm-4 mb-md-0">
-        <div class="ratio ratio-4x3">
+        <div class="ratio ratio-1x1">
             <img class="gambar-1 animasi" src="{{ asset('assets/logoProdi/') }}/{{ $prodis->logo }}" alt="">
         </div>
     </div>
     <div class="col-lg-6 col-md-12 my-auto text-light g-md-5 animasi">
-        <h4><strong>Kepala Program Studi</strong></h4>
-        <h4>{{ $prodis->kepalaProdi }}</h4>
-        <h4><strong>Akreditasi</strong></h4>
-        <h4>{{  $prodis->akreditasi }}</h4>
-        <h4><strong>Ruangan Program Studi</strong></h4>
-        <h4>{{ $prodis->ruangProdi }}</h4>
-        <h4><strong>Tahun Berdiri</strong></h4>
-        <h4>{{ $prodis->tahunBerdiri }}</h4>
+        <h4 class="fs-3 lh-lg"><strong>Kepala Program Studi</strong></h4>
+        <h4 class="fs-4">{{ $prodis->kepalaProdi }}</h4>
+        <h4 class="fs-3 lh-lg"><strong>Akreditasi</strong></h4>
+        <h4 class="fs-4">{{  $prodis->akreditasi }}</h4>
+        <h4 class="fs-3 lh-lg"><strong>Ruangan Program Studi</strong></h4>
+        <h4 class="fs-4">{{ $prodis->ruangProdi }}</h4>
+        <h4 class="fs-3 lh-lg"><strong>Tahun Berdiri</strong></h4>
+        <h4 class="fs-4">{{ $prodis->tahunBerdiri }}</h4>
     </div>
 </div>
 
@@ -61,15 +61,15 @@
     <h3 class="text-center text-light animasi"><strong>Prestasi</strong></h3>
     <div class="carousel owl-carousel justify-content-center animasi text-light mt-4">
         <div class="card card-1 prestasi-card mx-auto text-center overflow-auto" data-merge='3'>
-            <h4 class="fs-3 fw-bold pt-3">2019</h4>
+            <h4 class="fs-3 lh-lg fw-bold pt-3">2019</h4>
             <p>{{ $prodis->prestasi1 }}</p>
         </div>
         <div class="card card-2 prestasi-card mx-auto text-center overflow-auto" data-merge='3'>
-            <h4 class="fs-3 fw-bold pt-3">2020</h4>
+            <h4 class="fs-3 lh-lg fw-bold pt-3">2020</h4>
             <p>{{ $prodis->prestasi2 }}</p>
         </div>
         <div class="card card-3 prestasi-card mx-auto text-center overflow-auto" data-merge='3'>
-            <h4 class="fs-3 fw-bold pt-3">2021</h4>
+            <h4 class="fs-3 lh-lg fw-bold pt-3">2021</h4>
             <p>{{ $prodis->prestasi3 }}</p>
         </div>
     </div>

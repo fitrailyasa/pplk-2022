@@ -18,7 +18,7 @@ class AdminUkmController extends Controller
     public function index()
     {
         $ukms = Ukm::all();
-        return view('admin.Ukm.index', compact('ukms'));
+        return view('admin.ukm.index', compact('ukms'));
     }
 
     /**
@@ -28,14 +28,14 @@ class AdminUkmController extends Controller
      */
     public function create()
     {
-        return view('admin.Ukm.create');
+        return view('admin.ukm.create');
     }
 
 
     public function show($id)
     {
         $ukm = Ukm::where('id', $id)->first();
-        return view('admin.Ukm.read', compact('ukm'));
+        return view('admin.ukm.read', compact('ukm'));
     }
 
     /**
@@ -48,7 +48,7 @@ class AdminUkmController extends Controller
     public function edit($id)
     {
         $ukm = Ukm::where('id', $id)->first();
-        return view('admin.Ukm.update', compact('ukm'));
+        return view('admin.ukm.update', compact('ukm'));
     }
 
     /**

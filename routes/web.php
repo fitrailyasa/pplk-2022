@@ -11,7 +11,7 @@ use App\Http\Middleware\Kedisiplinan;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\AdminController;
-use App\Http\Controllers\Leaderboardcontroller;
+use App\Http\Controllers\LeaderboardController;
 use App\Http\Controllers\Admin\AdminUkmController;
 use App\Http\Controllers\Admin\AdminUptController;
 use App\Http\Controllers\Admin\AdminUserController;
@@ -92,6 +92,7 @@ Route::middleware([Admin::class])->name('admin.')->prefix('admin')->group(functi
   Route::get('/', [AdminController::class, 'index'])->name('index');
   Route::resource('begalin', AdminBegalinController::class);
   Route::resource('funfact', AdminFunfactController::class);
+  Route::resource('booklet', AdminBookletController::class);
   Route::resource('kamusgaul', AdminKamusGaulController::class);
   Route::resource('upt', AdminUptController::class);
   Route::resource('dapmenUser', DapmenUserController::class);
