@@ -159,3 +159,12 @@ body {
         margin-bottom: 4rem;
     }
 }
+
+#ukuran {
+    width: 250px;
+    height: 250px;
+}
+
+#swipppp {
+    overflow-x: hidden;
+}

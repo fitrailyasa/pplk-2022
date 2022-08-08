@@ -74,13 +74,11 @@ body {
 }
 
 #box-in {
-    background-color: var(--gradient-1);
-    background-color: var(--bawaan-gradient-1);
+    background: var(--gradient-1);
     align-items: center;
 }
 #box-content-qr-ukm {
-    background-color: var(--gradient-1);
-    background-color: var(--bawaan-gradient-1);
+    background: var(--gradient-1);
 }
 
 .text-1 {
