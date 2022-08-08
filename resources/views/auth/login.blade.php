@@ -94,6 +94,7 @@
       <div class="row justify-content-center">
         <div class="col-12 d-flex justify-content-center text-center">
           <p class="text-muted text-size">
+            <a href="{{ route('guest') }}" style="text-decoration: none;">Masuk sebagai <strong>Guest</strong></a><br>
             <small class="text-white-50">Lupa Password? <a href="" class="text-decoration-none text-light fw-light">Lapor Daplok!</a></small>
           </p>
         </div>
