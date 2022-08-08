@@ -14,6 +14,6 @@ class FunfactSeeder extends Seeder
      */
     public function run()
     {
-        Funfact::factory(5)->create();
+        Funfact::factory(30)->create();
     }
 }

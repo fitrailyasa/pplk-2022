@@ -45,8 +45,9 @@ class DapmenUserController extends Controller
     {
         $date = Date("m.d.y");
         $time = time();
-        $time = $uTime = microtime(true);
+        $time = microtime(true);
         $qrCode = "$date"."$time"."$date"."$date"."$date"."$date"."$time";
+
 
         User::create([
             'nama' => $request->nama,
@@ -81,7 +82,7 @@ class DapmenUserController extends Controller
 
     public function show($id)
     {
-        $user = User::where('kelompok', auth()->user()->kelompok)->first();
+        $user = User::where('id', $id)->first();
         return view('admin.user.read', compact('user'));
     }
 
@@ -109,12 +110,19 @@ class DapmenUserController extends Controller
     public function update(Request $request, $id)
     {
         $user = User::where('id', $id)->first();
+
+        if ($request->input('password') ==  $user->password) {
+            $password = $user->password;
+        }else {
+            $password =  Hash::make($request->password) ;
+        }
+
         $user->update(
             [
                 'nama' => $request->nama,
                 'email' => $request->email,
                 'nim' => $request->nim,
-                'password' =>  Hash::make($request->password),
+                'password' =>  $password,
                 'prodi' => $request->prodi,
                 'kelompok' => auth()->user()->kelompok,
                 'instagram' => $request->instagram,

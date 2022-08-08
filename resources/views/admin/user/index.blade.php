@@ -30,7 +30,6 @@
                 <tr>
                     <th>No</th>
                     <th>Nama Lengkap</th>
-                    <th>Email</th>
                     <th>NIM</th>
                     <th>Kelompok</th>
                     <th>Instagram</th>
@@ -46,11 +45,10 @@
                 <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $user->nama }}</td>
-                    <td>{{ $user->email }}</td>
                     <td>{{ $user->nim }}</td>
                     <td>{{ $user->kelompok }}</td>
-                    <td><a style="" href="https://instagram.com/{{ $user->instagram }}">{{ $user->instagram }}</a></td>
-                    <td><a style="" href="https://api.whatsapp.com/send?phone={{ $user->nomorHp }}&text=Halo!">{{ $user->nomorHp }}</a></td>
+                    <td><a style="color:black; text-decoration: none;" href="https://instagram.com/{{ $user->instagram }}">{{ $user->instagram }}</a></td>
+                    <td><a style="color:black; text-decoration: none;" href="https://api.whatsapp.com/send?phone={{ $user->nomorHp }}">{{ $user->nomorHp }}</a></td>
                     <td>{{ $user->golonganDarah }}</td>
                     <td>{{ $user->riwayatPenyakit }}</td>
                     <td>{{ $user->prodi }}</td>
@@ -78,7 +76,7 @@
                             <i class="fa-solid fa-marker"></i>
                           </a>
                         @endif
-
+                    @if(auth()->user()->roles_id == 1)
                     <!-- Button trigger modal -->
                     <a role="button"  class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm{{$user->id}}">
                       <i class="fa-solid fa-trash-can"></i>
@@ -95,13 +93,7 @@
                             Anda yakin menghapus data?
                           </div>
                           <div class="modal-footer">
-                            @if(auth()->user()->roles_id == 1)
                                 <form action="{{route('super.dapmenUser.destroy', $user->id)}}" method="POST">
-                            @elseif(auth()->user()->roles_id == 2)
-                                <form action="{{route('admin.dapmenUser.destroy', $user->id)}}" method="POST">
-                            @elseif(auth()->user()->roles_id == 6)
-                                <form action="{{route('dapmen.dapmenUser.destroy', $user->id)}}" method="POST">
-                            @endif
                               @method('DELETE')
                               @csrf
                                 <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
@@ -111,6 +103,7 @@
                         </div>
                       </div>
                     </div>
+                    @endif
                   </td>
                 </tr>
                 @endforeach

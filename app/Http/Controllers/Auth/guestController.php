@@ -12,7 +12,7 @@ class guestController extends Controller
     public function login()
     {
         if (!Auth::check()) {
-            Auth::loginUsingId(5440);
+            Auth::loginUsingId(6635);
         }
         return redirect()->route('/beranda');
     }

@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>500 Server Error</title>
-    <link rel="stylesheet" href="{{ asset('assets/css/error-page.css') }}">
-    <link rel="stylesheet" href="../css/bootstrap.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+        <meta name="theme-color" content="#09f" />
+        <meta name="description" content="Program Pengenalan Lingkungan Kampus (PPLK) merupakan acara pesta penyambutan terbesar untuk mahasiswa baru yang diselenggarakan setiap tahunnya di Institut Teknologi Sumatera (ITERA). PPLK ITERA hadir sebagai akses utama bagi mahasiswa baru untuk mengawali gerbang perkuliahan, yang berupa kaderisasi awal terpusat yang diselenggarakan oleh Keluarga Mahasiswa Institut Teknologi Sumatera (KM ITERA) untuk menyambut mahasiswa baru." />
+        <meta name="keywords" content="PPLK, Program Pengenalan Lingkungan Kampus, PPLK ITERA 2022, KM-ITERA" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="author" content="Fitra Ilyasa" />
+        <meta name="copyright" content="PPLK 2022" />
+        <meta name="robots" content="follow" />
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <meta property="og:type" content="cms website" />
+        <meta property="og:title" content="CMS Website PPLK 2022" />
+        <meta property="og:url" content="URL" />
+        <link rel="manifest" href="./manifest.webmanifest" />
+        <title>500 Server Error</title>
+        <link rel="stylesheet" href="{{ asset('assets/css/error-page.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}">
 </head>
 
 <body class="bg-purple">
 
     <div class="stars">
         <div class="central-body">
-            <img class="image-404" src="../assets/500.png" width="450px">
+            <img class="image-404" src="{{ asset('assets/500.png') }}" width="450px">
             <a href="#" class="btn-go-home">Kembali!!</a>
         </div>
         <div class="objects" onclick="window.location.href='https://instagram.com/fitrailyasa'" style="cursor: pointer;">
@@ -37,11 +48,11 @@
                 <path d="M16.2873 40.8816C15.718 41.2706 14.6572 41.2706 14.6572 41.2706C14.848 40.7347 15.1789 40.2597 15.6155 39.8951C15.7458 39.806 15.9062 39.7723 16.0614 39.8015C16.2166 39.8307 16.3538 39.9203 16.4429 40.0507C16.532 40.181 16.5656 40.3414 16.5364 40.4966C16.5073 40.6518 16.4176 40.789 16.2873 40.8781V40.8816Z" fill="#FFCB39"/>
             </svg>
             <div class="earth-moon" onclick="window.location.href='https://instagram.com/fitrailyasa'" style="cursor: pointer;">
-                <img class="object_earth" src="../assets/Planet 20.png" width="120px">
-                <img class="object_moon" src="../assets/earth.png" width="40px">
+                <img class="object_earth" src="{{ asset('assets/Planet 20.png') }}" width="120px">
+                <img class="object_moon" src="{{ asset('assets/earth.png') }}" width="40px">
             </div>
             <div class="box_astronaut" onclick="window.location.href='https://instagram.com/fitrailyasa'" style="cursor: pointer;">
-                <img src="../assets/Maskot2.png" class="object_astronaut" width="200px">
+                <img src="{{ asset('assets/Maskot2.png') }}" class="object_astronaut" width="200px">
             </div>
         </div>
         <div class="glowing_stars" onclick="window.location.href='https://instagram.com/fitrailyasa'" style="cursor: pointer;">
