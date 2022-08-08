@@ -41,9 +41,21 @@
                     <td>{{ $ukm->namaLengkap}}</td>
                     <td>{{ $ukm->namaSingkat}}</td>
                     <td>
-                      <a href="{{ route('super.pollingUkm',$ukm->id) }}" class="edit-button">
+                    @if(auth()->user()->roles_id == 1)
+                    <a href="{{ route('super.pollingUkm',$ukm->id) }}" class="edit-button">
                       <i class="fa-solid fa-eye"></i>
-                    </a></td>
+                    </a>
+                    @elseif(auth()->user()->roles_id == 2)
+                    <a href="{{ route('admin.pollingUkm',$ukm->id) }}" class="edit-button">
+                      <i class="fa-solid fa-eye"></i>
+                    </a>
+                    @elseif(auth()->user()->roles_id == 4)
+                    <a href="{{ route('ukm.pollingUkm',$ukm->id) }}" class="edit-button">
+                      <i class="fa-solid fa-eye"></i>
+                    </a>
+
+                    @endif
+                  </td>
                     <td class="manage-row">
                     @if(auth()->user()->roles_id == 1)
                         <a href="{{ route('super.ukm.show',$ukm->id) }}" class="edit-button">

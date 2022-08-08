@@ -99,6 +99,8 @@ Route::middleware([Admin::class])->name('admin.')->prefix('admin')->group(functi
   Route::resource('kamusgaul', AdminKamusGaulController::class);
   Route::resource('upt', AdminUptController::class);
   Route::resource('dapmenUser', DapmenUserController::class);
+  Route::get('/detail-presensi/{id}',[DapmenUserController::class,'detailPresensi'])->name('presensiUser');
+  Route::get('/polling-ukm/{id}',[AdminUkmController::class,'lihatPolling'])->name('pollingUkm');
 });
 
 // CMS HIMPUNAN
@@ -114,6 +116,7 @@ Route::middleware([Ukm::class])->name('ukms.')->prefix('ukms')->group(function (
   Route::resource('ukm', AdminUkmController::class);
   Route::get('/polling', [ClientScannerController::class, 'indexPolling'])->name('polling');
   Route::post('/polling/{id}', [ClientScannerController::class, 'polling']);
+  Route::get('/polling-ukm/{id}',[AdminUkmController::class,'lihatPolling'])->name('pollingUkm');
 });
 
 // CMS KEDISIPLISAN

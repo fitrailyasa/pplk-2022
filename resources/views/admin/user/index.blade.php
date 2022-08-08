@@ -60,7 +60,12 @@
                     @elseif (auth()->user()->roles_id == 6 )
                     <td><a href="{{ route('dapmen.presensiUser', $user->id)}}" class="edit-button">
                       <i class="fa-solid fa-eye"></i>
-                    </a></td>
+                    </a>
+                    @elseif (auth()->user()->roles_id == 2 )
+                    <td><a href="{{ route('admin.presensiUser', $user->id)}}" class="edit-button">
+                      <i class="fa-solid fa-eye"></i>
+                    </a>
+                  </td>
                     @endif
                     <td class="manage-row">
                         @if (auth()->user()->roles_id == 1 )
