@@ -421,8 +421,7 @@
                         Buka
                     </button>
                     </div>
-            </div>
-            @endforeach
+            </div>@endforeach
         </div>
     </div>
     <!-- ./Begalin -->
