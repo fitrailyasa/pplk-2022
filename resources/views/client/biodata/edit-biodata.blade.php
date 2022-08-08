@@ -34,7 +34,7 @@
                             @csrf
                             @method('PUT')
                         <input name="fotoProfil" type="file" class="btn btn-primary" @if(auth()->user()->roles_id == 9) disabled @endif>
-                        <input type="submit" class="btn btn-primary" value="Unggah">
+                        <input type="submit" class="btn btn-primary" value="Unggah" @if(auth()->user()->roles_id == 9) disabled @endif>
                         @error('fotoProfil')
                         <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
@@ -72,7 +72,7 @@
                             <div class="row bio-input">
                                 <label  class="form-label" for="golongan darah">Program Studi</label>
                                 <select name="prodi">
-                                    <option selected class="selected">{{ $viewbiodata->prodi }}</option>
+                                    <option selected class="selected" @if(auth()->user()->roles_id == 9) disabled @endif>{{ $viewbiodata->prodi }}</option>
                                   @foreach ($prodis as $prodi )
                                   <option value="{{ $prodi->namaLengkap }}">{{ $prodi->namaLengkap }}</option>
                                   @endforeach
@@ -97,7 +97,7 @@
                             <div class="row bio-input">
                                 <label placeholder="belum dinamis" class="form-label" for="golongan darah">Golongan Darah</label>
                                 <select name="golonganDarah">
-                                    <option selected class="selected" value="-">{{ $viewbiodata->golonganDarah }}</option>
+                                    <option selected class="selected" value="-" @if(auth()->user()->roles_id == 9) disabled @endif>{{ $viewbiodata->golonganDarah }}</option>
                                     <option value="A">A</option>
                                     <option value="AB">AB</option>
                                     <option value="B">B</option>
