@@ -50,7 +50,7 @@
                       <i class="fa-solid fa-eye"></i>
                     </a>
                     @elseif(auth()->user()->roles_id == 4)
-                    <a href="{{ route('ukm.pollingUkm',$ukm->id) }}" class="edit-button">
+                    <a href="{{ route('ukms.pollingUkm',$ukm->id) }}" class="edit-button">
                       <i class="fa-solid fa-eye"></i>
                     </a>
 
