@@ -172,12 +172,12 @@ public function presensiMaba(Request $request,  $id)
         }else{
             if (auth()->user()->roles_id == 1) {
                 echo "<script>
-                alert('Maba Bukan Anggota Kelompok Anda!');
+                alert('Bukan Anggota Kelompok Anda!');
                 window.location.href='/super/presensiMaba'
                 </script>";
             } elseif (auth()->user()->roles_id == 6) {
                 echo "<script>
-                alert('Maba Bukan Anggota Kelompok Anda!');
+                alert('Bukan Anggota Kelompok Anda!');
                 window.location.href='/dapmen/presensiMaba'
                 </script>";
             }
