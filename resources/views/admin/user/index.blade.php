@@ -37,6 +37,7 @@
                     <th>Golongan Darah</th>
                     <th>Riwayat Penyakit</th>
                     <th>Prodi</th>
+                    <th>Status Kehadiran</th>
                     <th>More</th>
                 </tr>
               </thead>
@@ -52,12 +53,18 @@
                     <td>{{ $user->golonganDarah }}</td>
                     <td>{{ $user->riwayatPenyakit }}</td>
                     <td>{{ $user->prodi }}</td>
-
+                    @if (auth()->user()->roles_id == 1 )
+                    <td><a href="{{ route('super.presensiUser', $user->id)}}" class="edit-button">
+                      <i class="fa-solid fa-eye"></i>
+                    </a></td>
+                    @elseif (auth()->user()->roles_id == 6 )
+                    <td><a href="{{ route('dapmen.presensiUser', $user->id)}}" class="edit-button">
+                      <i class="fa-solid fa-eye"></i>
+                    </a></td>
+                    @endif
                     <td class="manage-row">
                         @if (auth()->user()->roles_id == 1 )
-                          <a href="{{ route('super.user.show', $user->id)}}" class="edit-button">
-                            <i class="fa-solid fa-eye"></i>
-                          </a>
+                          
                           <a href="{{ route('super.user.edit', $user->id)}}" class="edit-button">
                             <i class="fa-solid fa-marker"></i>
                           </a>

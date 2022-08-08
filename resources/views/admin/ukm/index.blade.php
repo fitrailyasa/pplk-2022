@@ -30,6 +30,7 @@
                     <th>No</th>
                     <th>Nama Lengkap</th>
                     <th>Nama Singkat</th>
+                    <th>Hasil Polling</th>
                     <th>More</th>
                   </tr>
                 </thead>
@@ -39,6 +40,10 @@
                     <td>{{$loop->iteration}}</td>
                     <td>{{ $ukm->namaLengkap}}</td>
                     <td>{{ $ukm->namaSingkat}}</td>
+                    <td>
+                      <a href="{{ route('super.pollingUkm',$ukm->id) }}" class="edit-button">
+                      <i class="fa-solid fa-eye"></i>
+                    </a></td>
                     <td class="manage-row">
                     @if(auth()->user()->roles_id == 1)
                         <a href="{{ route('super.ukm.show',$ukm->id) }}" class="edit-button">
