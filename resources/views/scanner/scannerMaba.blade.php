@@ -18,7 +18,7 @@
         <div class="qr-code mx-auto justify-content-center">
             <div class="row row-scanner justify-content-center ms-auto me-auto">
                 <div class="col-top-scanner justify-content-center">
-                    <h5>SCANNER PRESENSI MABA</h5>
+                    <h5>SCANNER PRESENSI</h5>
                 </div>
                 <div>
                 @if(auth()->user()->roles_id == 1)

@@ -378,12 +378,6 @@
                 </a>
                 <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a class="nav-link tablinks">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Tambah Booklet</p>
-                    </a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link tablinks" href="{{ route('super.booklet.index') }}">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Kelola Data Booklet</p>
@@ -500,31 +494,25 @@
             </li>
             <!--./UPT ITERA-->
 
-            <!--Funfact-->
+            <!--Booklet-->
             <li class="nav-item">
                 <a class="nav-link tabitem">
-                <i class="nav-icon fa-solid fa-newspaper"></i>
+                <i class="nav-icon fa-solid fa-book-open"></i>
                 <p>
-                    Funfact
+                    Booklet
                     <i class="right fas fa-angle-left"></i>
                 </p>
                 </a>
                 <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="{{ route('admin.funfact.create') }} " class="nav-link tablinks">
+                    <a class="nav-link tablinks" href="{{ route('admin.booklet.index') }}">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Tambah Funfact</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ route('admin.funfact.index') }} " class="nav-link tablinks">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Kelola Data funfact</p>
+                    <p>Kelola Data Booklet</p>
                     </a>
                 </li>
                 </ul>
             </li>
-            <!--./Funfact-->
+            <!--./Booklet-->
 
             <!--Begalin-->
             <li class="nav-item">
@@ -577,32 +565,6 @@
                 </ul>
             </li>
             <!--./Kamus Gaul-->
-
-            <!--Booklet-->
-            <li class="nav-item">
-                <a class="nav-link tabitem">
-                <i class="nav-icon fa-solid fa-book-open"></i>
-                <p>
-                    Booklet
-                    <i class="right fas fa-angle-left"></i>
-                </p>
-                </a>
-                <ul class="nav nav-treeview">
-                <li class="nav-item">
-                    <a class="nav-link tablinks">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Tambah Booklet</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link tablinks">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Kelola Data Booklet</p>
-                    </a>
-                </li>
-                </ul>
-            </li>
-            <!--./Booklet-->
 
             @elseif(auth()->user()->roles_id == 3)
             <!--Dashboard-->
