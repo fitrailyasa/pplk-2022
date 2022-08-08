@@ -148,17 +148,14 @@ body {
     padding: 50px 0;
 }
 
-@media screen and (max-width: 930px) {
-    #terakhir {
-        margin-bottom: 4.7rem;
-    }
-}
-
 @media screen and (max-width: 768px) {
     .slide-content {
         margin: 0 10px;
     }
     .swiper-navBtn {
         display: none;
+    }
+    #container__filosofi-logo {
+        margin-bottom: 3.5rem;
     }
 }
