@@ -36,13 +36,13 @@
         <img src="{{ asset('assets/himpunan')}}/{{ $himpunans->logo }}" class="hmp-img2" alt="image">
     </div>
 
-    <div class="container">
-                <div class="card-content swiper mb-5  rounded-5 overflow-auto" id="terakhir">
-                    <h2 class="name">Filosofi Logo</h2>
-                    <p class="description">{{ $himpunans->filosofiLogo }}.</p>
-                </div>
-            </div>
-
+    <div class="container" id="container__filosofi-logo">
+        <div class="card-content rounded-5">
+            <h2 class="name">Filosofi Logo</h2>
+            <p class="description">{{ $himpunans->filosofiLogo }}.</p>
+        </div>
+    </div>
+<br><br><br>
 @endsection
 
 @section('script')

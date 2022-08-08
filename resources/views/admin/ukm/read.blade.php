@@ -24,25 +24,25 @@
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Nama Lengkap</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Nama Pembina" name="namaLengkap" id="namalengkap" value="{{ $ukm->namaLengkap }}" disabled>
+            <input type="text" class="form-control" placeholder="Nama Lengkap" name="namaLengkap" id="namalengkap" value="{{ $ukm->namaLengkap }}" disabled>
           </div>
         </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Nama Singkat</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Nama Pembina" name="namaSingkat" id="namasingkat" value="{{ $ukm->namaSingkat }}"disabled>
+            <input type="text" class="form-control" placeholder="Nama Singkat" name="namaSingkat" id="namasingkat" value="{{ $ukm->namaSingkat }}"disabled>
           </div>
         </div>
         <div class=" mb-3 row" >
           <label class=" col-sm-3 col-form-label" >Visi</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Nama Pembina" name="visi" id="visi" value="{{ $ukm->visi }}"disabled>
+            <input type="text" class="form-control" placeholder="Visi" name="visi" id="visi" value="{{ $ukm->visi }}"disabled>
           </div>
         </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Misi</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Nama Pembina" name="misi" id="misi" misivalue="{{ $ukm->namaSingkat }}" disabled>
+            <input type="text" class="form-control" placeholder="Miai" name="misi" id="misi" misivalue="{{ $ukm->namaSingkat }}" disabled>
           </div>
         </div>
         <div class="mb-3 row">

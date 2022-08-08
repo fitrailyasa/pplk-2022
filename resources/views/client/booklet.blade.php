@@ -45,21 +45,22 @@
     </div>
 </div>
 
-<div id="carouselExampleCaptions" class="carousel slide pt-5 pb-5 ps-3 pe-3 mx-auto" data-bs-ride="carousel">
-    <div class="carousel-inner" id="carouselExampleCaption">
-        <div class="carousel-item active">
-            <div class="card fun-fact-card p-0">
-                <div class="card-body-ff ">
-                    <h2 class="card-title">
-                        Fun Fact
-                    </h2>
-                    <p class="card-text mx-auto pb-4">
-                        {{ $funfacts[$i]->isi }}
-                    </p>
-                </div>
-            </div>
+<div class="container-fluid funfact pt-5" id="terakhir">
+    <div class="funfact-container">
+        <div class="card-title pt-2">
+            <h3 class="fw-bolder">Fun Fact</h3>
         </div>
-</div>
+        <div class="funfact-wraper owl-carousel owl-nav owl-theme" id="contents">
+         @foreach ($funfacts as $funfact )
+         <div class="funfact-card">
+            <div class="funfact-content mx-5">
+                <p class="truncate">
+                    {{ $funfact->isi }}
+                </p>
+                </div>
+        </div>
+        @endforeach
+    </div>
 </div>
 </div>
 
@@ -67,6 +68,23 @@
 
 @section('script')
     <!-- SCRIPTS -->
+    <script>
+    $(".funfact-wraper").owlCarousel({
+        item:1,
+        items:1,
+        margin: 10,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        nav: true,
+        navText: [
+            "<i class='bi bi-caret-left-fill'></i>",
+            "<i class='bi bi-caret-right-fill'></i>",
+        ],
+        dots:0,
+     });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 @endsection
