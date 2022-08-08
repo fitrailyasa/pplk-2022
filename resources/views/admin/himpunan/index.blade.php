@@ -63,6 +63,7 @@
                           <i class="fa-solid fa-marker"></i>
                         </a>
                     @endif
+                    @if(auth()->user()->roles_id == 1)
                       <!-- Button trigger modal -->
                       <a role="button"  class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm{{$himpunan->id}}">
                         <i class="fa-solid fa-trash-can"></i>
@@ -79,13 +80,7 @@
                               Anda yakin menghapus data?
                             </div>
                             <div class="modal-footer">
-                            @if(auth()->user()->roles_id == 1)
                                 <form action="{{route('super.himpunan.destroy', $himpunan->id)}}" method="POST">
-                            @elseif(auth()->user()->roles_id == 2)
-                                <form action="{{route('admin.himpunan.destroy', $himpunan->id)}}" method="POST">
-                            @elseif(auth()->user()->roles_id == 3)
-                                <form action="{{route('himpunans.himpunan.destroy', $himpunan->id)}}" method="POST">
-                            @endif
                             @method('DELETE')
                                 @csrf
                                   <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
@@ -96,6 +91,7 @@
                         </div>
                       </div>
                     </td>
+                    @endif
                   </tr>
                   @endforeach
                 </tbody>

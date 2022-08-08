@@ -21,7 +21,7 @@
               <div class="card m-4">
                     <div class="d-flex justify-content-center box">
                         <div class="ratio ratio-1x1 box-img">
-                            <img src="{{ asset('assets/ukm/logo/'. $ukm->namaSingkat.'.svg') }}" class="card-img p-2" alt="image">
+                            <img src="{{ asset('assets/ukm/logo')}}/{{ $ukm->logo }}" class="card-img p-2" alt="image">
                         </div>
                     </div>
                     <div class="card-body pb-5">

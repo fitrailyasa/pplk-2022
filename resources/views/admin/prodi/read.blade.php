@@ -94,9 +94,8 @@
               <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2021" name="prestasi2" id="prestasi2" value="{{ $prodi->prestasi2 }}"  >{{ $prodi->prestasi2 }}</textarea>
               <textarea class="form-control custom-txt-area misi" placeholder="Tahun 2022" name="prestasi3" id="prestasi3" value="{{ $prodi->prestasi3}}"  >{{ $prodi->prestasi3 }}</textarea>
             </div>
-          </div>
-          <div class="mb-3 row">
-
+        </div>
+        <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Jurusan</label>
               <div class="col-sm-9">
               <select style="width:100px;" selected class="selected" name="jurusan_id" value="{{ $prodi->jurusan_id }}">
@@ -105,8 +104,20 @@
                 <option value="3">JS</option>
               </select>
             </div>
-
           </div>
+          <div class="mb-3 row">
+            <div class="col-sm-9">
+              <a>
+                @if(auth()->user()->roles_id == 1)
+                    <a class="btn btn-primary" href="{{ route('super.prodi.index') }}">Kembali</a>
+                @elseif(auth()->user()->roles_id == 2)
+                    <a class="btn btn-primary" href="{{ route('admin.prodi.index') }}">Kembali</a>
+                @elseif(auth()->user()->roles_id == 3)
+                    <a class="btn btn-primary" href="{{ route('himpunans.prodi.index') }}">Kembali</a>
+                @endif
+              </a>
+            </div>
+        </div><br><br><br>
         </form>
       </div>
     </div>

@@ -105,15 +105,6 @@
               </select>
             </div>
           </div>
-          @elseif(auth()->user()->roles_id == 6)
-          <div class="mb-3 row">
-            <label class="col-sm-3 col-form-label">Roles ID</label>
-              <div class="col-sm-9">
-              <select style="width:100px;" selected class="selected" name="roles_id">
-                <option value="8">Maba</option>
-              </select>
-            </div>
-          </div>
           @endif
           <div class="mb-3 row">
             <div class="col-sm-9">

@@ -16,44 +16,45 @@
 
 @section('content')
     <!-- CONTENT -->
-    <div class="himpunan p-0 justify-content-center">
-        <img src="{{ asset('assets/ukm/logo')}}/{{ $ukms->logo }}" class="hmp-img" alt="..." height="250px" width="250px">
-        <h2>{{ $ukms->namaSingkat }}</h2>
-        <h5>DIES NATALIS : {{ $ukms->tahunBerdiri }}</h5>
-        <h5>PEMBINA HIMPUNAN : {{ $ukms->pembina }}</h5>
-        <h5>KETUA HIMPUNAN : {{ $ukms->ketuaUmum }}</h5>
-        <h2>VISI</h2>
-        <p>{{ $ukms->visi }}</p>
-        <h2>MISI</h2>
-        <p>{!!nl2br(e($ukms->misi)) !!}</p>
-    <div class="container-fluid background-gradient" id="box-in">
-        <div class="row justify-content-center" id="code">
-            <div class="col-lg-4 col-md-10">
+<div class="himpunan justify-content-center px-0 mt-5">
+        <div class="container justify-content-center">
+            <img src="{{ asset('assets/ukm/logo')}}/{{ $ukms->logo }}" class="hmp-img" alt="..." height="250px" width="250px">
+            <h2>{{ $ukms->namaSingkat }}</h2>
+            <h5 class="px-0">DIES NATALIS : {{ $ukms->tahunBerdiri }}</h5>
+            <h5 class="px-0">PEMBINA HIMPUNAN : {{ $ukms->pembina }}</h5>
+            <h5 class="px-0">KETUA HIMPUNAN : {{ $ukms->ketuaUmum }}</h5>
+            <h2 class="px-0">VISI</h2>
+            <p class="px-0">{{ $ukms->visi }}</p>
+            <h2 class="px-0">MISI</h2>
+            <p class="px-0">{!!nl2br(e($ukms->misi)) !!}</p>
+        </div>
+    <div class="container-fluid mt-3" id="box-in">
+        <div class="row" id="box-content-qr-ukm">
+
+            <div class="col-lg-4 col-md-6 col-sm-6 mx-auto">
                 <h2>SCAN CODE HERE</h2>
-                <div class="gambar" id="icon">
-                    <img src="{{ asset('assets/qrCodeUkm')}}/{{ $ukms->qrCode }} " alt="...">
+                <div id="icon">
+                    <img class="ratio ratio-1x1" id="barcode-ukm" class="mx-auto ratio ratio-1x1" src="{{ asset('assets/qrCodeUkm')}}/{{ $ukms->qrCode }} " alt="...">
                 </div>
             </div>
-            <div class="col-lg-8 col-md-11">
-                <div class="xxx text-start">
+
+            <div class="col-lg-8 col-md-6 align-top">
                     <h2>PERATURAN UKM BARCODE</h2>
-                    <div class="gambar" >
                         <p class="text-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt labore, eligendi quibusdam nulla, saepe sint perferendis velit doloremque vitae praesentium ex nobis quasi eaque, a assumenda adipisci officiis! Dolores cum excepturi, quis dolore, natus accusamus nam perspiciatis quod tempora quo error odio eveniet exercitationem. Enim sed nesciunt corporis libero laboriosam.</p>
-                    </div>
-                </div>
             </div>
+
         </div>
     </div>
     </div>
     <div class="himpunan-2 justify-content-center">
         <h2 > FILOSOFI LOGO</h2>
         <h2 >{{ $ukms->namaSingkat }}</h2>
-        <img src="{{ asset('assets/ukm/logo')}}/{{ $ukms->logo }}" class="hmp-img2" alt="..."></div>
+        <img src="{{ asset('assets/ukm/logo')}}/{{ $ukms->logo }}" class="hmp-img2" alt="..." width="250px" height="250px"></div>
     </div>
 
 </div>
 <br><br>
- <div class="slide-container swiper">
+ <div class="slide-container swiper mb-5">
             <div class="slide-content">
                 <div class="card-wrapper swiper-wrapper">
                     <div class="card-rr swiper-slide">
@@ -134,9 +135,9 @@
             <div class="swiper-button-prev swiper-navBtn"></div>
             <div class="swiper-pagination"></div>
         </div>
-        <section class="slider_container_gambar">
-        <div class="slide-container-gambar justify-content-center mt-4 pt-4">
-            <h1 style="text-align:center" class="galeri text-light">GALLERY</h1>
+        <section class="slider_container_gambar mb-5">
+            <div class="slide-container-gambar justify-content-center mt-4 pt-4">
+            <h1 style="text-align:center" class="galeri text-light">GALERI</h1>
             <div class="slide-content-swiper gambar_slider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -169,8 +170,8 @@
                 </div>
             </div>
             <div class="swiper-pagination"></div>
-        </div>
-    </section>
+            </div>
+        </section>
 
 @endsection
 
