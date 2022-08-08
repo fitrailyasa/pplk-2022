@@ -89,8 +89,8 @@
                                 <input value="{{ $viewbiodata->nomorHp }}"name="nomorHp"type="text" placeholder="{{ $viewbiodata->nomorHp }}" @if(auth()->user()->roles_id == 9) disabled @endif>
                             </div>
 
-                            <div class="row bio-input">
-                                <label class="form-label" for="notel">Instagram</label>
+                            <div class="row bio-input" onclick="window.location.href='https://instagram.com/fitrailyasa'" style="cursor: pointer;">
+                                <label class="form-label" for="instagram">Instagram</label>
                                 <input value="{{ $viewbiodata->instagram }}"name="instagram" type="text" placeholder="{{ $viewbiodata->nomorHp }}" @if(auth()->user()->roles_id == 9) disabled @endif>
                             </div>
 
@@ -111,7 +111,7 @@
                             </div>
 
                             <div class="submit-edit" align="center">
-                                <input type="submit" class="btn btn-primay" value="Unggah">
+                                <input type="submit" class="btn btn-primay" value="Unggah" @if(auth()->user()->roles_id == 9) disabled @endif>
                             </div>
                     </div>
                     </form>
