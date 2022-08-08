@@ -71,7 +71,7 @@
 
                             <div class="row bio-input">
                                 <label  class="form-label" for="golongan darah">Program Studi</label>
-                                <select name="prodi">
+                                <select name="prodi" @if(auth()->user()->roles_id == 9) disabled @endif>
                                     <option selected class="selected" @if(auth()->user()->roles_id == 9) disabled @endif>{{ $viewbiodata->prodi }}</option>
                                   @foreach ($prodis as $prodi )
                                   <option value="{{ $prodi->namaLengkap }}">{{ $prodi->namaLengkap }}</option>
@@ -96,7 +96,7 @@
 
                             <div class="row bio-input">
                                 <label placeholder="belum dinamis" class="form-label" for="golongan darah">Golongan Darah</label>
-                                <select name="golonganDarah">
+                                <select name="golonganDarah" @if(auth()->user()->roles_id == 9) disabled @endif>
                                     <option selected class="selected" value="-" @if(auth()->user()->roles_id == 9) disabled @endif>{{ $viewbiodata->golonganDarah }}</option>
                                     <option value="A">A</option>
                                     <option value="AB">AB</option>
