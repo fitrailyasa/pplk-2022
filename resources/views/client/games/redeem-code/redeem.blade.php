@@ -32,7 +32,7 @@
                     <div class="card rounded-4">
                         <div class="bg-white rounded-4">
                             <div class="ratio ratio-16x9 bg-white rounded-4">
-                                <img src="{{ asset('assets/space-cat.png') }}" class="card-img-top img-box" alt="...">
+                                <img src="{{ asset('assets/logoCard/card.png') }}" class="card-img-top img-box" alt="...">
                             </div>
                         </div>
                         <div class="card-body">
