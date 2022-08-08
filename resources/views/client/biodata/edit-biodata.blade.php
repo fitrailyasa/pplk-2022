@@ -33,7 +33,7 @@
                         <form action="{{ url('update-fotoProfil/'.$viewbiodata->id) }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
-                        <input name="fotoProfil" type="file" class="btn btn-primary">
+                        <input name="fotoProfil" type="file" class="btn btn-primary" @if(auth()->user()->roles_id == 9) disabled @endif>
                         <input type="submit" class="btn btn-primary" value="Unggah">
                         @error('fotoProfil')
                         <div class="alert alert-danger">{{ $message }}</div>
