@@ -378,12 +378,6 @@
                 </a>
                 <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a class="nav-link tablinks">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Tambah Booklet</p>
-                    </a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link tablinks" href="{{ route('super.booklet.index') }}">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Kelola Data Booklet</p>
@@ -835,6 +829,26 @@
                 </ul>
             </li>
             <!--./User-->
+
+            <!--Booklet-->
+            <li class="nav-item">
+                <a class="nav-link tabitem">
+                <i class="nav-icon fa-solid fa-book-open"></i>
+                <p>
+                    Booklet
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+                </a>
+                <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a class="nav-link tablinks" href="{{ route('dapmen.booklet.index') }}">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Kelola Data Booklet</p>
+                    </a>
+                </li>
+                </ul>
+            </li>
+            <!--./Booklet-->
 
             <!--Scanner-->
             <li class="nav-item">
