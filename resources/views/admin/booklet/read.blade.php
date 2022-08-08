@@ -30,7 +30,7 @@
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Deskripsi</label>
           <div class="col-sm-9">
-            <textarea class="form-control custom-txt-area" placeholder="Deskripsi" name="isi" id="" value="{{ $booklet->booklet }}" disabled>{{ $booklet->booklet }}</textarea>
+            <textarea class="form-control custom-txt-area" placeholder="Deskripsi" name="booklet" id="" value="{{ $booklet->booklet }}" disabled>{{ $booklet->booklet }}</textarea>
           </div>
         </div>
         <div class="mb-3 row">

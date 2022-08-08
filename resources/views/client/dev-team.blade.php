@@ -104,7 +104,7 @@
                 </p>
                 <a class="btn btn-primary" href="#vvd" role="button" type="button">Staff</a>
             </div>
-            <img src="../assets/our-team/adiws.png" alt="">
+            <img src="../assets/our-team/Adiws.PNG" alt="">
         </div>
 
         <!-- CR -->
@@ -331,7 +331,7 @@
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                 <div class="card-image">
-                                    <img src="../assets/our-team/Rafael.png" alt="" class="card-img">
+                                    <img src="../assets/our-team/rafael.png" alt="" class="card-img">
                                 </div>
                                 <div class="card-content">
                                      <h2 class="name" style="font-size: 16px;">Rafael Panjaitan</h2>
@@ -751,7 +751,7 @@
                 <div class="card-color rounded-4 pt-2 px-2">
                     <h3 class="mb-0">Rafael Panjaitan</h3>
                     <p>Teknik Lingkungan'21</p>
-                    <img src="../assets/our-team/Rafael.png" alt="" id="card-img" class="rounded-4">
+                    <img src="../assets/our-team/rafael.png" alt="" id="card-img" class="rounded-4">
                 </div>
               </div>
               <div class="swiper-slide text-center rounded-4 text-white">
