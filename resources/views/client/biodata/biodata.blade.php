@@ -43,7 +43,7 @@
                     <div class="mx-auto qrCode Justify-content-center row container qr-code py-md-4" style=" width: 250px; height:250px;" >
                         <div class="w-100">
                             <div class="ratio ratio-1x1 content rounded">
-                                    <iframe id="qrCode" src="https://pplk2022.com/{{ asset('assets/qrCode')}}/{{ $biodata->qrCode }} "></iframe>
+                                    <iframe id="qrCode" src="{{ asset('assets/qrCode')}}/{{ $biodata->qrCode }} "></iframe>
                                     <img src="{{ asset('assets/logomini.png') }}" alt="logo kecil">
                                 </div>
                             </div><!-- col-2 -->
