@@ -5,7 +5,6 @@
 
 @section('style')
     <!-- STYLES -->
-    <link rel="stylesheet" href="">
     <link rel="stylesheet" href="{{ asset('assets/css/pplk.css') }}">
 @endsection
 
