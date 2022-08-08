@@ -17,7 +17,7 @@ class AdminBookletController extends Controller
      */
     public function index()
     {
-        $booklet = Booklet::get()->first();
+        $booklet = Funfact::get()->first();
         return view('admin.booklet.index', compact('booklet'));
     }
 
@@ -54,26 +54,26 @@ class AdminBookletController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Booklet  $booklet
+     * @param  \App\Models\Funfact  $funfact
      * @return \Illuminate\Http\Response
      */
 
     public function show($id)
     {
-        $booklet = Booklet::where('id', 1)->first();
+        $booklet = Funfact::where('id', 1)->first();
         return view('admin.booklet.read', compact('booklet'));
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\booklet  $booklet
+     * @param  \App\Models\Funfact  $funfact
      * @return \Illuminate\Http\Response
      */
 
     public function edit($id)
     {
-        $booklet = Booklet::get()->first();
+        $booklet = Funfact::get()->first();
         return view('admin.booklet.update', compact('booklet'));
     }
 
@@ -81,12 +81,12 @@ class AdminBookletController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \App\Http\Requests\UpdatebookletRequest  $request
-     * @param  \App\Models\booklet  $booklet
+     * @param  \App\Models\Funfact  $funfact
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        $data=Booklet::where('id',1)->get()->first();
+        $data=Funfact::where('id',1)->get()->first();
         $data->update(
             [
                 'booklet' => $request->booklet
@@ -102,12 +102,12 @@ class AdminBookletController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Booklet  $booklet
+     * @param  \App\Models\Funfact  $funfact
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        $data = Booklet::where('id', $id)->first();
+        $data = Funfact::where('id', $id)->first();
         $data->delete();
 
         if (auth()->user()->roles_id == 1) {
