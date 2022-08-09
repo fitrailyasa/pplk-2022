@@ -130,6 +130,75 @@ class AdminUkmController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $validatedData = $request->validate([
+            'qrCode' => 'mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
+            'logo' => 'mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
+            'dokumentasi1' => 'mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
+            'dokumentasi2' => 'mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
+            'dokumentasi3' => 'mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
+        ]);
+
+        $fileqrCode = $validatedData[('qrCode')];
+        $filenameqrCode = time() . '_' . $fileqrCode->getClientOriginalName();
+
+        $filelogo = $validatedData[('logo')];
+        $filenamelogo = time() . '_' . $filelogo->getClientOriginalName();
+
+        $filedokumentasi1 = $validatedData[('dokumentasi1')];
+        $filenamedokumentasi1 = time() . '_' . $filedokumentasi1->getClientOriginalName();
+
+        $filedokumentasi2 = $validatedData[('dokumentasi2')];
+        $filenamedokumentasi2 = time() . '_' . $filedokumentasi2->getClientOriginalName();
+
+        $filedokumentasi3 = $validatedData[('dokumentasi3')];
+        $filenamedokumentasi3 = time() . '_' . $filedokumentasi3->getClientOriginalName();
+
+        if ($request->hasFile('qrCode')) {
+            $ukms = Ukm::find($id);
+            $ukms->qrCode =  $filenameqrCode;
+            $ukms->update();
+            // File upload location
+            $location = '../public/assets/qrCodeUkm/';
+            // Upload file
+            $fileqrCode->move($location, $filenameqrCode);
+        }
+        if ($request->hasFile('logo')) {
+            $ukms = Ukm::find($id);
+            $ukms->logo = $filenamelogo;
+            $ukms->update();
+            // File upload location
+            $location = '../public/assets/ukm/logo/';
+            // Upload file
+            $filelogo->move($location, $filenamelogo);
+        }
+        if ($request->hasFile('dokumentasi1')) {
+            $ukms = Ukm::find($id);
+            $ukms->dokumentasi1 = $filenamedokumentasi1;
+            $ukms->update();
+            // File upload location
+            $location = '../public/assets/ukm/dokumentasi1';
+            // Upload file
+            $filedokumentasi1->move($location, $filenamedokumentasi1);
+        }
+        if ($request->hasFile('dokumentasi2')) {
+            $ukms = Ukm::find($id);
+            $ukms->dokumentasi2 = $filenamedokumentasi2;
+            $ukms->update();
+            // File upload location
+            $location = '../public/assets/ukm/dokumentasi2';
+            // Upload file
+            $filedokumentasi2->move($location, $filenamedokumentasi2);
+        }
+        if ($request->hasFile('dokumentasi3')) {
+            $ukms = Ukm::find($id);
+            $ukms->dokumentasi3 = $filenamedokumentasi3;
+            $ukms->update();
+            // File upload location
+            $location = '../public/assets/ukm/dokumentasi3';
+            // Upload file
+            $filedokumentasi3->move($location, $filenamedokumentasi3);
+        }
+
         $ukm = Ukm::where('id', $id)->first();
         $ukm->update(
             [
@@ -141,108 +210,9 @@ class AdminUkmController extends Controller
                 'ketuaUmum' => $request->ketuaUmum,
                 'tahunBerdiri' => $request->tahunBerdiri,
                 'filosofiLogo' => $request->filosofiLogo,
-                'deskripsi' => $request->deskripsi,
-                'dokumentasi1'  => $request->dokumentasi1,
-                'dokumentasi2'  => $request->dokumentasi2,
-                'dokumentasi3'  => $request->dokumentasi3,
+                'deskripsi' => $request->deskripsi
             ]
-        );
-
-        if ($request->hasFile('qrCode')) { {
-
-                $validatedData = $request->validate([
-                    'qrCode' => 'required|mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
-                ]);
-
-                $file = $validatedData[('qrCode')];
-
-                $ukms = Ukm::find($id);
-                $ukms->qrCode = time() . '_' . $file->getClientOriginalName();
-                $ukms->update();
-                $filename = time() . '_' . $file->getClientOriginalName();
-
-                // File upload location
-                $location = '../public/assets/qrCodeUkm/';
-
-                // Upload file
-                $file->move($location, $filename);
-            }
-
-            if ($request->hasFile('logo')) {
-                $validatedData = $request->validate([
-                    'qrCode' => 'required|mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
-                ]);
-
-                $file = $validatedData[('logo')];
-
-                $ukms = Ukm::find($id);
-                $ukms->logo = time() . '_' . $file->getClientOriginalName();
-                $ukms->update();
-                $filename = time() . '_' . $file->getClientOriginalName();
-
-                // File upload location
-                $location = '../public/assets/ukm/logo/';
-
-                // Upload file
-                $file->move($location, $filename);
-            }
-
-            if ($request->hasFile('dokumentasi1')) {
-                $validatedData = $request->validate([
-                    'dokumentasi1' => 'required|mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
-                ]);
-
-                $file = $validatedData[('dokumentasi1')];
-
-                $ukms = Ukm::find($id);
-                $ukms->dokumentasi1 = time() . '_' . $file->getClientOriginalName();
-                $ukms->update();
-                $filename = time() . '_' . $file->getClientOriginalName();
-
-                // File upload location
-                $location = '../public/assets/ukm/dokumentasi1';
-
-                // Upload file
-                $file->move($location, $filename);
-            }
-
-            if ($request->hasFile('dokumentasi2')) {
-                $validatedData = $request->validate([
-                    'dokumentasi2' => 'required|mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
-                ]);
-
-                $file = $validatedData[('dokumentasi2')];
-
-                $ukms = Ukm::find($id);
-                $ukms->dokumentasi2 = time() . '_' . $file->getClientOriginalName();
-                $ukms->update();
-                $filename = time() . '_' . $file->getClientOriginalName();
-
-                // File upload location
-                $location = '../public/assets/ukm/dokumentasi2';
-
-                // Upload file
-                $file->move($location, $filename);
-            }
-
-            if ($request->hasFile('dokumentasi3')) {
-                $validatedData = $request->validate([
-                    'dokumentasi3' => 'required|mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
-                ]);
-
-                $file = $validatedData[('dokumentasi3')];
-
-                $ukms = Ukm::find($id);
-                $ukms->dokumentasi3 = time() . '_' . $file->getClientOriginalName();
-                $ukms->update();
-                $filename = time() . '_' . $file->getClientOriginalName();
-
-                // File upload location
-                $location = '../public/assets/ukm/dokumentasi3';
-
-                // Upload file
-                $file->move($location, $filename);
-            }
+            );
 
             if (auth()->user()->roles_id == 1) {
                 return redirect('super/ukm')->with('sukses', 'Berhasil Edit Data!');
@@ -251,8 +221,9 @@ class AdminUkmController extends Controller
             } elseif (auth()->user()->roles_id == 4) {
                 return redirect('ukms/ukm')->with('sukses', 'Berhasil Edit Data!');
             }
+
         }
-    }
+
 
     /**
      * Remove the specified resource from storage.

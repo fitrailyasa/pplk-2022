@@ -24,37 +24,37 @@
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Nama Lengkap</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Nama Lengkap" name="namaLengkap" id="namalengkap" value="{{ $ukm->namaLengkap }}" required>
+            <input type="text" class="form-control" placeholder="Nama Lengkap" name="namaLengkap" id="namalengkap" value="{{ $ukm->namaLengkap }}" >
           </div>
         </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Nama Singkat</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Nama Singkat" name="namaSingkat" id="namasingkat" value="{{ $ukm->namaSingkat }}"required>
+            <input type="text" class="form-control" placeholder="Nama Singkat" name="namaSingkat" id="namasingkat" value="{{ $ukm->namaSingkat }}">
           </div>
         </div>
         <div class=" mb-3 row" >
           <label class=" col-sm-3 col-form-label" >Visi</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Visi" name="visi" id="visi" value="{{ $ukm->visi }}"required>
+            <input type="text" class="form-control" placeholder="Visi" name="visi" id="visi" value="{{ $ukm->visi }}">
           </div>
         </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Misi</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Misi" name="misi" id="misi" misivalue="{{ $ukm->misi }}" required>
+            <input type="text" class="form-control" placeholder="Misi" name="misi" id="misi" value="{{ $ukm->misi }}" >
           </div>
         </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Pembina</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Nama Pembina" name="pembina" id="namapembina" value="{{ $ukm->pembina }}" required>
+            <input type="text" class="form-control" placeholder="Nama Pembina" name="pembina" id="namapembina" value="{{ $ukm->pembina }}" >
           </div>
         </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Ketua Umum</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Ketua Umum" name="ketuaUmum" id="ketuaumum" value="{{ $ukm->ketuaUmum }}" required>
+            <input type="text" class="form-control" placeholder="Ketua Umum" name="ketuaUmum" id="ketuaumum" value="{{ $ukm->ketuaUmum }}" >
           </div>
         </div>
         <div class="mb-3 row">
@@ -66,8 +66,11 @@
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Logo</label>
           <div class="col-sm-9">
-            <input type="text" accept="image/*" class="form-control" name="logo" id="logo" value="{{ $ukm->logo }}">
+            <input type="file" accept="image/*" class="form-control" name="logo" id="logo" value="{{ $ukm->logo }}">
           </div>
+          @error('logo')
+          <div class="alert alert-danger">{{ $message }}</div>
+          @enderror
         </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Filosofi Logo</label>
@@ -80,11 +83,14 @@
           <div class="col-sm-9">
             <input type="file" accept="image/*" class="form-control" name="qrCode" id="qrCode" >
           </div>
+          @error('qrCode')
+          <div class="alert alert-danger">{{ $message }}</div>
+          @enderror
         </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Deskripsi</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Nama Pembina" name="deskripsi" id="deskripsi" value="{{ $ukm->deskripsi }}"required>
+            <input type="text" class="form-control" placeholder="Nama Pembina" name="deskripsi" id="deskripsi" value="{{ $ukm->deskripsi }}">
           </div>
         </div>
         <div class="mb-3 row">
@@ -92,18 +98,27 @@
           <div class="col-sm-9">
             <input type="file" accept="image/*" class="form-control" name="dokumentasi1" id="dokumentasi1" >
           </div>
+          @error('dokumentasi1')
+          <div class="alert alert-danger">{{ $message }}</div>
+          @enderror
         </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Dokumentasi 2</label>
           <div class="col-sm-9">
             <input type="file" accept="image/*" class="form-control" name="dokumentasi2" id="dokumentasi2">
           </div>
+          @error('dokumentasi2')
+          <div class="alert alert-danger">{{ $message }}</div>
+          @enderror
         </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Dokumentasi 3</label>
           <div class="col-sm-9">
             <input type="file" accept="image/*" class="form-control" name="dokumentasi3" id="dokumentasi3">
           </div>
+          @error('dokumentasi3')
+          <div class="alert alert-danger">{{ $message }}</div>
+          @enderror
         </div>
         <div class="mb-3 row">
           <div class="col-sm-9">
