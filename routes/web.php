@@ -200,6 +200,7 @@ Route::middleware(['auth'])->group(function () {
   Route::get('/tebak-bangunan-selesai/{id}',[ClientGameTebakBangunanController::class,'restart']);
 
 
+
   // DEVELOPMENT TEAM
   Route::get('/dev-team', function () {
     return view('client.dev-team');
