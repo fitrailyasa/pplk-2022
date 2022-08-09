@@ -200,7 +200,16 @@ Route::middleware(['auth'])->group(function () {
   Route::get('/dev-team', function () {
     return view('client.dev-team');
   });
+
+  Route::get('/ScannerDisiplin', function () {
+    return view('scanner.scannerDisplin');
+  });
+
+Route::post('/scannerDisiplinCreate', [ClientScannerController::class, 'disiplin']);
+
 });
 
 // Route::get('/gen', [ClientBiodataController::class, 'generateAllQrCode']);
 // Route::get('/hitung', [ClientBiodataController::class, 'hitunguser']);
+
+
