@@ -17,8 +17,8 @@
                 <img src="{{ asset('assets/ukm/logo')}}/{{ $ukms->logo }}" class="hmp-img" alt="..." height="250px" width="250px">
                 <h2>{{ $ukms->namaSingkat }}</h2>
                 <h5 class="px-0">DIES NATALIS : {{ $ukms->tahunBerdiri }}</h5>
-                <h5 class="px-0">PEMBINA HIMPUNAN : {{ $ukms->pembina }}</h5>
-                <h5 class="px-0">KETUA HIMPUNAN : {{ $ukms->ketuaUmum }}</h5>
+                <h5 class="px-0">PEMBINA UKM : {{ $ukms->pembina }}</h5>
+                <h5 class="px-0">KETUA UKM : {{ $ukms->ketuaUmum }}</h5>
                 <h2 class="px-0">VISI</h2>
                 <p class="px-0">{!!nl2br(e($ukms->visi)) !!}</p>
                 <h2 class="px-0">MISI</h2>
