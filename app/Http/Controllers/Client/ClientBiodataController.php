@@ -80,10 +80,10 @@ class ClientBiodataController extends Controller
         ]);
         // deklarasi variable yang dibutuhkan agar lebih mudah di masukan ke dalam query
         $nim =$data['nim'];
-        $date = Date("m.d.y");
+        $date = Date("Ymd");
         $time = time();
         $time = microtime(true);
-        $qrCode = "$date"."$time"."$date"."$date"."$date"."$date"."$time";
+        $qrCode = "$date"."$time"."$date"."$date"."$date"."$date"."$time"."svg";
 
         // proses upload data user ke database
         User::create([
@@ -182,11 +182,11 @@ class ClientBiodataController extends Controller
 
     // public function generateAllQrCode()
     // {
-    //     for($n=6001;$n<=6634;$n++){
+    //     for($n=6501;$n<=6635;$n++){
 
-    //         $date = Date("m.d.y");
+    //         $date = Date("Ymd");
     //         $time = microtime(true);
-    //         $qrCode = "$date"."$time"."$date"."$date"."$date"."$date"."$time";
+    //         $qrCode = "$date"."$time"."$date"."$date"."$date"."$date"."$time".".svg";
     //         $user = User::where('id',$n)->first();
     //         // $user->qrCode = 'kosong';
     //         $user->update(['qrCode' => $qrCode]);
