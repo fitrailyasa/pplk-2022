@@ -56,12 +56,12 @@
                         <i class="fa-solid fa-marker"></i>
                       </a>
                     @endif
+                    @if(auth()->user()->roles_id == 1)
                       <!-- Button trigger modal -->
                       <a role="button"  class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm{{$begalin->id}}">
                         <i class="fa-solid fa-trash-can"></i>
                       </a>
                       <!-- Modal -->
-
                       <div class="modal fade bd-example-modal-sm{{$begalin->id}}" tabindex="-1" role="dialog" aria-hidden="true">
                         <div class="modal-dialog ">
                             <div class="modal-content">
@@ -72,11 +72,7 @@
                                 </div>
                                 <div class="modal-body">Apakah anda yakin ingin menghapus data?</div>
                                 <div class="modal-footer">
-                                @if(auth()->user()->roles_id == 1)
                                     <form action="{{route('super.begalin.destroy', $begalin->id)}}" method="POST">
-                                @elseif(auth()->user()->roles_id == 2)
-                                    <form action="{{route('admin.begalin.destroy', $begalin->id)}}" method="POST">
-                                @endif
                                     @method('DELETE')
                                     @csrf
                                     <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
@@ -87,6 +83,7 @@
                         </div>
                     </div>
                     </td>
+                    @endif
                   </tr>
                   @endforeach
                 </tbody>

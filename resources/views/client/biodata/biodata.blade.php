@@ -83,7 +83,7 @@
                             <input type="text" placeholder="{{ $biodata->nomorHp }}" disabled>
                         </div>
 
-                        <div class="row bio-input">
+                        <div class="row bio-input"  onclick="window.location.href='https://instagram.com/fitrailyasa'">
                             <label class="form-label" for="instagram">Instagram</label>
                             <input type="text" placeholder="{{ $biodata->instagram }}" disabled>
                         </div>
