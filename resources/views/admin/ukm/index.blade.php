@@ -35,9 +35,9 @@
                   </tr>
                 </thead>
                 <tbody>
-                  @for($i =1; $i <= 39; $i++)
+                  @for($i =0; $i <= 39; $i++)
                   <tr>
-                    <td>{{$i}}</td>
+                    <td>{{$i+1}}</td>
                     <td>{{ $ukm[$i]->namaLengkap}}</td>
                     <td>{{ $ukm[$i]->namaSingkat}}</td>
                     <td>
