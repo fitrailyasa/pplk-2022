@@ -36,31 +36,31 @@
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Pembina</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Pembina" name="pembina" id="pembina" value="{{ $himpunan->pembina }}">
+            <input type="text" class="form-control" placeholder="Pembina" name="pembina" id="pembina" disabled value="{{ $himpunan->pembina }}">
           </div>
         </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Ketua Himpunan</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Ketua Himpunan" name="ketuaHimpunan" id="ketuaHimpunan" value="{{ $himpunan->ketuaHimpunan }}" >
+            <input type="text" class="form-control" placeholder="Ketua Himpunan" name="ketuaHimpunan" id="ketuaHimpunan" disabled value="{{ $himpunan->ketuaHimpunan }}" >
           </div>
         </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Tahun Berdiri</label>
           <div class="col-sm-9">
-            <input type="number" class="form-control" name="tahunBerdiri" id="tahunBerdiri" value="{{ $himpunan->tahunBerdiri }}" >
+            <input type="number" class="form-control" name="tahunBerdiri" id="tahunBerdiri" disabled value="{{ $himpunan->tahunBerdiri }}" >
           </div>
         </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Visi</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Visi" name="visi" id="visi" value="{{ $himpunan->visi }}" >
+            <textarea class="form-control custom-txt-area" placeholder="Visi" name="visi" id="visi" disabled value="{{ $himpunan->visi }}">{{ $himpunan->visi }}</textarea>
           </div>
         </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Misi</label>
           <div class="col-sm-9">
-            <textarea class="form-control custom-txt-area misi" placeholder="Misi" name="misi" id="misi" value="{{ $himpunan->misi }}"  >{{ $himpunan->misi }}</textarea>
+            <textarea class="form-control custom-txt-area misi" placeholder="Misi" name="misi" id="misi" disabled value="{{ $himpunan->misi }}">{{ $himpunan->misi }}</textarea>
           </div>
         </div>
         <div class="mb-3 row">
@@ -72,13 +72,13 @@
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Filosofi Logo</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Filosofi Logo" name="filosofiLogo" id="filosofiLogo" value="{{ $himpunan->filosofiLogo}}">
+            <input type="text" class="form-control" placeholder="Filosofi Logo" name="filosofiLogo" id="filosofiLogo" disabled value="{{ $himpunan->filosofiLogo}}">
           </div>
         </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Deskripsi</label>
           <div class="col-sm-9 ">
-            <textarea class="form-control custom-txt-area" placeholder="Deskripsi" name="deskripsi" id="deskripsi" value="{{ $himpunan->deskripsi }}" >{{ $himpunan->deskripsi }}</textarea>
+            <textarea class="form-control custom-txt-area" placeholder="Deskripsi" name="deskripsi" id="deskripsi" disabled value="{{ $himpunan->deskripsi }}" >{{ $himpunan->deskripsi }}</textarea>
           </div>
         </div>
         <div class="mb-3 row">

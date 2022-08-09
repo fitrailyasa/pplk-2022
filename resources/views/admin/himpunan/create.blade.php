@@ -52,7 +52,7 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Visi</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Visi" name="visi" id="visi" >
+              <textarea class="form-control custom-txt-area" placeholder="Visi" name="visi" id="visi"></textarea>
             </div>
           </div>
           <div class="mb-3 row">

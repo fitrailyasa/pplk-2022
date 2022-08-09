@@ -22,7 +22,7 @@
         </div>
         <div class="container mb-5 mt-5 text-light">
             <h2>VISI</h2>
-            <p>{{ $himpunans->visi }}</p>
+            <p>{!!nl2br(e($himpunans->visi)) !!}</p>
             <h2>MISI</h2>
         <p>{!!nl2br(e($himpunans->misi)) !!}</p>
         </div>
