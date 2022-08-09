@@ -110,6 +110,15 @@ class AdminHimpunanController extends Controller
     public function update(Request $request, $id)
     {
         $himpunan = Himpunan::where('id', $id)->first();
+        $validatedData = $request->validate([
+            'logo' => 'required|mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
+
+        ]);
+        $file = $validatedData[('logo')];
+        $filename = time() . '_' . $file->getClientOriginalName();
+        // File upload location
+        $location = '../public/assets/himpunan/';
+
         $himpunan->update(
             [
                 'namaLengkap' => $request->namaLengkap,
@@ -125,8 +134,9 @@ class AdminHimpunanController extends Controller
         );
         if ($request->hasFile('logo')) {
             $himpunan->update([
-                'logo' => url($request->file('logo')->move('assets/himpunan', $himpunan->namaSingkat . '.' . $request->file('logo')->extension())),
+                'logo' => $filename,
             ]);
+            $file->move($location, $filename);
         }
         if (auth()->user()->roles_id == 1) {
             return redirect('super/himpunan')->with('sukses', 'Berhasil Edit Data!');
