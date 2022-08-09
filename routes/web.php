@@ -191,12 +191,13 @@ Route::middleware(['auth'])->group(function () {
   Route::get('/game-home', [LeaderboardController::class, 'index']);
   Route::get('/card-list', [ClientKodeGameController::class, 'index']);
   Route::get('/redeem/{no}', [ClientKodeGameController::class, 'show']);
-//   Route::get('/redeem-failed', [ClientKodeGameController::class,]);
-  Route::get('/redeem-failed', function () {
-    return view('client.games.redeem-code.failed');
-  });
+  Route::get('/redeem-failed', function () { return view('client.games.redeem-code.failed');});
   Route::get('/redeem-success', function () { return view('client.games.redeem-code.success'); });
   Route::post('/submitcode/{id}', [ClientKodeGameController::class, 'sumscore'])->name('sumscore');
+  Route::get('/tebak-bangunan',[ClientGameTebakBangunanController::class,'index']);
+  Route::get('/tebak-bangunan-game/{id}',[ClientGameTebakBangunanController::class,'show']);
+  Route::get('/tebak-bangunan-game/{id}/{jawaban}',[ClientGameTebakBangunanController::class,'store'])->name('soalTebakBangunan');
+  Route::get('/tebak-bangunan-selesai/{id}',[ClientGameTebakBangunanController::class,'restart']);
 
 
 

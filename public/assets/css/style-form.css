@@ -6,6 +6,7 @@ body{
     background-attachment: fixed;
     box-shadow: inset rgba(41, 1, 53, 0.66) 0px 1000rem 100px;
     font-family: var(--font-family-body) !important;
+    overflow-x: hidden;
 }
 
 /*Navbar CSS*/
@@ -242,7 +243,7 @@ body{
         height: 3rem;
     }
     #search-width{
-        width: 20rem;
+        /* width: 20rem; */
         height: 1.5rem;
     }
     #navbar-nav-item{
@@ -304,10 +305,18 @@ body{
         color: var(--white) !important;
         font-size: 10px;
     }  
-}
 
-@media screen and (max-width:930px) {
     #terakhir {
         margin-bottom: 4rem;
+    }
+}
+
+@media screen and (max-width:530px) {
+    .img-size {
+        position: relative;
+        width: 12rem;
+        left:50%;
+        transform: translateX(-50%);
+
     }
 }
