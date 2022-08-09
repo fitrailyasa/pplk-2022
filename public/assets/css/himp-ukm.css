@@ -149,6 +149,12 @@ body {
 
 .hmp-img {
     max-width: 250px;
+    border-radius: 15px;
+}
+
+#barcode-ukm {
+    max-width: 250px;
+    border-radius: 15px;
 }
 
 @media screen and (max-width: 768px) {
