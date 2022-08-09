@@ -18,8 +18,6 @@
                 <h2>KAMUS GAUL<br>PPLK 2022</h2>
             </div>
     <!-- CARD Kamus -->
-
-
                 <div class="d-flex justify-content-center flex-wrap">
                     @foreach($kamus_gauls as $kamus_gaul)
                     <div class="card rounded-4" id="btn-kamus">

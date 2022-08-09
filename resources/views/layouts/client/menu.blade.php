@@ -258,5 +258,4 @@
 
         </ul>
     </div>
-</div>
 <!--./Mobile Footer Bar-->

@@ -175,9 +175,6 @@ class DapmenUserController extends Controller
         $status7=Presensi::where('hari','08.19.22')->value('status');
         $status8=Presensi::where('hari','08.20.22')->value('status');
 
-
-
-
         return view('admin.user.presensi',['status1'=>$status1,'status2'=>$status2,'status3'=>$status3,'status4'=>$status4,'status5'=>$status5,'status6'=>$status6,'status7'=>$status7,'status8'=>$status8],compact('user','dataPresensi','jumlahHadir'));
 
     }
