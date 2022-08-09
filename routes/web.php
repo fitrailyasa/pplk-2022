@@ -2,7 +2,7 @@
 
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Routes;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\guestController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Middleware\SuperAdmin;
@@ -197,6 +197,7 @@ Route::middleware(['auth'])->group(function () {
   });
   Route::get('/redeem-success', function () { return view('client.games.redeem-code.success'); });
   Route::post('/submitcode/{id}', [ClientKodeGameController::class, 'sumscore'])->name('sumscore');
+
 
 
   // DEVELOPMENT TEAM
