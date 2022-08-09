@@ -5,21 +5,12 @@
 
 @section('style')
     <!-- STYLES -->
-    <link rel="stylesheet" href="{{ asset('assets/css/main-style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/styling.css') }}">
-    <!-- b5 -->
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 @endsection
 
 @section('content')
     <!-- CONTENT -->
     <div class="container-fluid booklet">
-
         <div class="row justify-content-around">
             <div class="col-8">
                 <div class="card-booklet text-center mx-auto" >
@@ -37,36 +28,55 @@
         <div class="col-9 text-center">
             <h1 class="text-white fw-bold mt-3" id="teks1">BOOKLET</h1>
             <div class="card-body justify-content-center border" id="card-body">
-            <div class="col">
-                <h3 class="card-title pt-2">KEBUTUHAN MABA</h3>
-                <p class="card-text mb-5" style="color: black;">{{ $booklet->booklet }}</p>
+                <div class="col">
+                    <h3 class="card-title pt-2">KEBUTUHAN MABA</h3>
+                    <p class="card-text mb-5" style="color: black;">{{ $booklet->booklet }}</p>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<div id="carouselExampleCaptions" class="carousel slide pt-5 pb-5 ps-3 pe-3 mx-auto" data-bs-ride="carousel">
-    <div class="carousel-inner" id="carouselExampleCaption">
-        <div class="carousel-item active">
-            <div class="card fun-fact-card p-0">
-                <div class="card-body-ff ">
-                    <h2 class="card-title">
-                        Fun Fact
-                    </h2>
-                    <p class="card-text mx-auto pb-4">
-                        {{ $funfacts[$i]->isi }}
-                    </p>
-                </div>
+<div class="container-fluid funfact pt-5" id="terakhir">
+    <div class="funfact-container">
+        <div class="card-title pt-2">
+            <h3 class="fw-bolder">Fun Fact</h3>
+        </div>
+        <div class="funfact-wraper owl-carousel owl-nav owl-theme" id="contents">
+         @foreach ($funfacts as $funfact )
+         <div class="funfact-card">
+            <div class="funfact-content mx-5">
+                <p class="truncate">
+                    {{ $funfact->isi }}
+                </p>
             </div>
         </div>
-</div>
-</div>
+        @endforeach
+    </div>
+    </div>
 </div>
 
 @endsection
 
 @section('script')
     <!-- SCRIPTS -->
+    <script>
+    $(".funfact-wraper").owlCarousel({
+        item:1,
+        items:1,
+        margin: 10,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        nav: true,
+        navText: [
+            "<i class='bi bi-caret-left-fill'></i>",
+            "<i class='bi bi-caret-right-fill'></i>",
+        ],
+        dots:0,
+     });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 @endsection

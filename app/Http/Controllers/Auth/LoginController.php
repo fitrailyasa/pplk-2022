@@ -22,37 +22,37 @@ class LoginController extends Controller
     use AuthenticatesUsers;
 
     /**
-     * Where to redirect users after login.
+     * Show the application's login form.
      *
-     * @var string
+     * @return \Illuminate\View\View
      */
-    /* protected $redirectTo = RouteServiceProvider::HOME; */
+    protected $redirectTo;
 
     public function redirectTo()
     {
         switch(auth()->user()->roles_id){
             case 1:
-                $this->redirectTo = '/cms-super';
+                $this->redirectTo = '/super';
                 return $this->redirectTo;
                 break;
             case 2:
-                $this->redirectTo = '/cms-admin';
+                $this->redirectTo = '/admin';
                 return $this->redirectTo;
                 break;
             case 3:
-                $this->redirectTo = '/cms-himpunan';
+                $this->redirectTo = '/himpunans';
                 return $this->redirectTo;
                 break;
             case 4:
-                $this->redirectTo = '/cms-ukm';
+                $this->redirectTo = '/ukms';
                 return $this->redirectTo;
                 break;
             case 5:
-                $this->redirectTo = '/cms-kedis';
+                $this->redirectTo = '/kedis';
                 return $this->redirectTo;
                 break;
             case 6:
-                $this->redirectTo = '/cms-dapmen';
+                $this->redirectTo = '/dapmen';
                 return $this->redirectTo;
                 break;
             case 7:

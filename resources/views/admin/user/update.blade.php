@@ -20,7 +20,6 @@
     @endif
         @csrf
         @method('PUT')
-        <input type="hidden" value="{{ $user->id }}" name="id">
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Nama User</label>
             <div class="col-sm-9">
@@ -36,7 +35,7 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Password</label>
             <div class="col-sm-9">
-              <input type="password" class="form-control" placeholder="fitra@gabut.com" value="{{ $user->password }}" name="password" id="password" enabled>
+              <input type="password" class="form-control" placeholder="fitrailyasa12" value="{{ $user->password }}" name="password" id="password" enabled>
             </div>
           </div>
           <div class="mb-3 row">

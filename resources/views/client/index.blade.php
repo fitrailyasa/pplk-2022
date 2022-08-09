@@ -44,14 +44,15 @@
     <!-- ./Sponsor modal -->
 
     <div class="conten">
+
         <!-- Jumbotron -->
         <div class="container-fluid landing-page">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center " >
                 <div class="box ratio ratio-1x1 mt-5">
-                    <img src="{{ asset('assets/Logo-PPLK.png') }}" alt="">
+                    <img class="ratio ratio-1x1" src="{{ asset('assets/Logo-PPLK.png') }}" alt="" id="container-landing-page-logo">
                 </div>
             </div>
-            <div class="row text-center text-white">
+            <div class="row text-center text-white mt-xs-5 mt-md-3" id="container-landing-page-text">
                 <div class="text-nama">
                     <p>Hello, <span class="nama">{{ auth()->user()->nama }}</span></p>
                 </div>
@@ -62,16 +63,18 @@
         </div>
         <!-- ./Jumbotron -->
 
-
         <!-- Under landing page dekstop -->
         <div class="container-fluid under-landing-page p-3">
             <div class="row justify-content-between p-4">
-                <div class="col-lg-5 col-md-4 align-self-center">
-                    <div class="d-flex justify-content-center">
-                        <img class="mt-md-5 maskot maskot-awal" src="{{ asset('assets/Maskot1.png') }}" alt="">
-                    </div>
 
+                <div class="col-lg-5 col-md-4 align-self-center">
+                    <!--maskot-awal-->
+                    <div class="d-flex justify-content-center">
+                        <img class="mt-md-5 maskot maskot-awal" src="{{ asset('assets/Maskot-Orang Utan-1.png') }}" alt="">
+                    </div>
+                    <!--maskot-awal-->
                 </div>
+
                 <div class="col-lg-6 col-md-7">
                     <div class="row g-2 gap-md-2 gap-lg-5 justify-content-center">
                         <div class="col-5">
@@ -84,7 +87,6 @@
                                         <path d="M65.819 169.505C46.8919 169.505 31.5013 154.109 31.5013 135.182C31.5013 133.073 29.793 131.37 27.6836 131.37C25.5794 131.37 23.8711 133.073 23.8711 135.182C23.8711 158.312 42.6888 177.13 65.819 177.13C67.9232 177.13 69.6315 175.427 69.6315 173.318C69.6315 171.208 67.9232 169.505 65.819 169.505Z" fill="black"/>
                                         <path d="M65.819 192.38C50.5378 192.38 36.1732 186.427 25.3711 175.625C14.569 164.823 8.61589 150.458 8.62109 135.182C8.62109 133.078 6.91276 131.37 4.80859 131.37C2.70443 131.37 0.996094 133.073 0.996094 135.182C0.996094 152.5 7.73568 168.776 19.9805 181.021C32.2253 193.265 48.5013 200.005 65.819 200.005C67.9232 200.005 69.6315 198.302 69.6315 196.193C69.6315 194.083 67.9232 192.38 65.819 192.38Z" fill="black"/>
                                         </svg>
-
 
                                     <h1 class="link-tilte">JURUSAN</h1>
                                 </div>
@@ -340,26 +342,26 @@
                             <span class="h1 text-style text-white">KNOW MORE <br> ABOUT <span class=" text-gradien">PPLK 2022</span></span>
                         </div>
 
-                        <div class="mt-5 p-3 col-10 g-3 carousel-container" >
+                        <div class="begalin-wraper owl-carousel owl-theme mt-5 p-3 col-10 g-3 carousel-container" >
 
                             <div class="item img-fit">
                                 <button  data-bs-toggle="modal" data-bs-target="#you" >
-                                    <i class="bi bi-play-btn-fill play-icon text-danger"></i>
-                                    <img src="http://img.youtube.com/vi/C2e22o8xIpQ/0.jpg" class="thumbnail" alt="">
-                                </button>
-                            </div>
-
-                            <div class="item img-fit">
-                                <button  data-bs-toggle="modal" data-bs-target="#and" >
                                     <i class="bi bi-play-btn-fill play-icon text-danger"></i>
                                     <img src="http://img.youtube.com/vi/Z6w_5ST34UQ/0.jpg" class="thumbnail" alt="">
                                 </button>
                             </div>
 
                             <div class="item img-fit">
+                                <button  data-bs-toggle="modal" data-bs-target="#and" >
+                                    <i class="bi bi-play-btn-fill play-icon text-danger"></i>
+                                    <img src="http://img.youtube.com/vi/Sctref1MCI8/0.jpg" class="thumbnail" alt="">
+                                </button>
+                            </div>
+
+                            <div class="item img-fit">
                                 <button  data-bs-toggle="modal" data-bs-target="#me" >
                                     <i class="bi bi-play-btn-fill play-icon text-danger"></i>
-                                    <img src="http://img.youtube.com/vi/6gZ9WFwxRNY/0.jpg" class="thumbnail" alt="">
+                                    <img src="http://img.youtube.com/vi/S25dWb1-ntc/0.jpg" class="thumbnail" alt="">
                                 </button>
                             </div>
 
@@ -367,7 +369,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <img class="maskot2"src="{{ asset('assets/Maskot2.png') }}" alt="">
+                    <img class="maskot"src="{{ asset('assets/Maskot-Kelinci-1.png') }}" alt="">
 
                 </div>
             </div>
@@ -379,7 +381,7 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
 
-                    <iframe class="youtube-size" src="https://www.youtube.com/embed/C2e22o8xIpQ?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="youtube-size" src="https://www.youtube.com/embed/Z6w_5ST34UQ?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -387,8 +389,7 @@
         <div class="modal modal-xl fade" id="and" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
-
-                    <iframe class="youtube-size" src="https://www.youtube.com/embed/Z6w_5ST34UQ?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="youtube-size" src="https://www.youtube.com/embed/Sctref1MCI8?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -397,9 +398,7 @@
         <div class="modal modal-xl fade" id="me" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
-                <!-- https://youtu.be/6gZ9WFwxRNY -->
-
-                    <iframe class="youtube-size" src="https://www.youtube.com/embed/6gZ9WFwxRNY?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="youtube-size" src="https://www.youtube.com/embed/S25dWb1-ntc?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -461,45 +460,181 @@
                    <div class="medpatr-card">
                         <div class="d-flex justify-content-center">
                             <div class="ratio ratio-1x1">
-                                <img src="{{ asset('assets/space-cat.png') }}" alt="">
+                                <img src="{{ asset('assets/logoMedpart/acara_mahasiswa.jpeg') }}" alt="">
                             </div>
                         </div>
-
                    </div>
                    <div class="medpatr-card">
                         <div class="d-flex justify-content-center">
                             <div class="ratio ratio-1x1">
-                                <img src="{{ asset('assets/space-cat.png') }}" alt="">
+                                <img src="{{ asset('assets/logoMedpart/andalas_fm.jpg') }}" alt="">
                             </div>
                         </div>
-
+                    </div>
+                   <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/arealomba_id.jpeg') }}" alt="">
+                            </div>
+                        </div>
                    </div>
                    <div class="medpatr-card">
                         <div class="d-flex justify-content-center">
                             <div class="ratio ratio-1x1">
-                                <img src="{{ asset('assets/space-cat.png') }}" alt="">
+                                <img src="{{ asset('assets/logoMedpart/event_alert.jpg') }}" alt="">
                             </div>
                         </div>
-
-                   </div>
-                   <div class="medpatr-card">
+                    </div>
+                    <div class="medpatr-card">
                         <div class="d-flex justify-content-center">
                             <div class="ratio ratio-1x1">
-                                <img src="{{ asset('assets/space-cat.png') }}" alt="">
+                                <img src="{{ asset('assets/logoMedpart/event_center_id.png') }}" alt="">
                             </div>
                         </div>
-
-                   </div>
-
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/info_lomba.jpg') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/info_lomba_beasiswa.png') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/jogja_punya_acara.png') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/lampung_geh.png') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/logo_black.png') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/logo_tvri.png') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/lomba_lomba.png') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/mandala.jpg') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/monv.png') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/point_campus.jpeg') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/radio_mandala.jpg') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/radio_sai.jpg') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/radio_sonora.jpeg') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/rajawali_fm.png') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/ruang_mahasiswa.png') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/siger_tv.jpg') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/suara_kreativitas.png') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/urban_jabar.png') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/webinar_kuy.jpeg') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medpatr-card">
+                        <div class="d-flex justify-content-center">
+                            <div class="ratio ratio-1x1">
+                                <img src="{{ asset('assets/logoMedpart/webinar_nasional.jpeg') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
                 </div>
              </div>
         </div>
-        <!-- ./Medpart -->
-
-        <div class="box_astronaut" onclick="window.location.href='https://instagram.com/fitrailyasa'" style="cursor: pointer;">
-            <img class="object_astronaut" src="{{ asset('assets/astronaut.svg') }}" width="120px">
-        </div>
-
     </div>
 @endsection
 
