@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Ukm;
 use App\Models\Presensi;
 use App\Models\polling;
+use App\Models\Disiplin;
 
 /**
  * Controller Scanner || system Presensi Staff || System Presensi Maba || System Polling
@@ -265,6 +266,25 @@ public function polling(Request $request,  $id)
             }
 
          }
+    }
+
+    public function disiplin(Request $request)
+    {
+        $qrCode = $request->input('qrCode');
+        $users =  User::where('qrCode', $qrCode)->first();
+
+        Disiplin::create([
+            'user_id'=>$users->id,
+            'nim'=>$users->nim,
+            'kelompok'=>$users->kelompok,
+            'status' => 'Bermasalah'
+        ]);
+
+        echo "<script>
+        alert('Data Maba Terkirim!');
+        window.location.href='/scannerDisiplin'
+        </script>";
+
     }
 
 }
