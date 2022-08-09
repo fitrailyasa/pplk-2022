@@ -30,6 +30,7 @@
                     <th>No</th>
                     <th>Nama Lengkap</th>
                     <th>Nama Singkat</th>
+                    <th>Hasil Polling</th>
                     <th>More</th>
                   </tr>
                 </thead>
@@ -39,6 +40,22 @@
                     <td>{{$loop->iteration}}</td>
                     <td>{{ $ukm->namaLengkap}}</td>
                     <td>{{ $ukm->namaSingkat}}</td>
+                    <td>
+                    @if(auth()->user()->roles_id == 1)
+                    <a href="{{ route('super.pollingUkm',$ukm->id) }}" class="edit-button">
+                      <i class="fa-solid fa-eye"></i>
+                    </a>
+                    @elseif(auth()->user()->roles_id == 2)
+                    <a href="{{ route('admin.pollingUkm',$ukm->id) }}" class="edit-button">
+                      <i class="fa-solid fa-eye"></i>
+                    </a>
+                    @elseif(auth()->user()->roles_id == 4)
+                    <a href="{{ route('ukms.pollingUkm',$ukm->id) }}" class="edit-button">
+                      <i class="fa-solid fa-eye"></i>
+                    </a>
+
+                    @endif
+                  </td>
                     <td class="manage-row">
                     @if(auth()->user()->roles_id == 1)
                         <a href="{{ route('super.ukm.show',$ukm->id) }}" class="edit-button">
@@ -62,6 +79,7 @@
                           <i class="fa-solid fa-marker"></i>
                         </a>
                     @endif
+                    @if(auth()->user()->roles_id == 1)
                       <!-- Modal -->
                       <div class="modal fade bd-example-modal-sm{{$ukm->id}}" tabindex="-1" role="dialog" aria-hidden="true">
                         <div class="modal-dialog ">
@@ -73,11 +91,7 @@
                                 </div>
                                 <div class="modal-body">Apakah anda yakin ingin menghapus data?</div>
                                 <div class="modal-footer">
-                                @if(auth()->user()->roles_id == 1)
-                                    <form action="{{route('super.ukm.destroy', $ukm->id)}}" method="POST">
-                                @elseif(auth()->user()->roles_id == 2)
-                                    <form action="{{route('admin.ukm.destroy', $ukm->id)}}" method="POST">
-                                @endif
+                                <form action="{{route('super.ukm.destroy', $ukm->id)}}" method="POST">
                                 @method('DELETE')
                                     @csrf
                                     <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
@@ -88,6 +102,7 @@
                         </div>
                     </div>
                     </td>
+                    @endif
                   </tr>
                   @endforeach
                 </tbody>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Ukm;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Admin\Controller;
+use App\Models\polling;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 
@@ -18,7 +19,7 @@ class AdminUkmController extends Controller
     public function index()
     {
         $ukms = Ukm::all();
-        return view('admin.Ukm.index', compact('ukms'));
+        return view('admin.ukm.index', compact('ukms'));
     }
 
     /**
@@ -28,14 +29,14 @@ class AdminUkmController extends Controller
      */
     public function create()
     {
-        return view('admin.Ukm.create');
+        return view('admin.ukm.create');
     }
 
 
     public function show($id)
     {
         $ukm = Ukm::where('id', $id)->first();
-        return view('admin.Ukm.read', compact('ukm'));
+        return view('admin.ukm.read', compact('ukm'));
     }
 
     /**
@@ -48,7 +49,7 @@ class AdminUkmController extends Controller
     public function edit($id)
     {
         $ukm = Ukm::where('id', $id)->first();
-        return view('admin.Ukm.update', compact('ukm'));
+        return view('admin.ukm.update', compact('ukm'));
     }
 
     /**
@@ -243,5 +244,13 @@ class AdminUkmController extends Controller
         } elseif (auth()->user()->roles_id == 4) {
             return redirect('ukms/ukm')->with('sukses', 'Berhasil Hapus Data!');
         }
+    }
+
+    public function lihatPolling($id){
+        $ukm=Ukm::where('id',$id)->get()->first();
+        $polling=polling::where('ukmsid',$ukm->id)->get();
+        $hasilPolling=$polling->count();
+
+        return view('admin.ukm.polling',['hasilPolling'=>$hasilPolling]);
     }
 }

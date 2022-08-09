@@ -4,11 +4,8 @@
 @section('title', 'Form Keluhan')
 
 @section('style')
-    <link rel="stylesheet" href="{{ asset('assets/css/main-style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style-form.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 @endsection
 
 @section('content')
@@ -24,7 +21,7 @@
               <div class="col-md-6">
               <br><h3 style="color: #FFF;" class="heading mb-4" ></p>PPLK 2022 </h3>
                 <h6 style="color: #FFF;" >Program Pengenalan Lingkungan Kampus <br> Institut Teknologi Sumatera <br><br><br>
-                <img src="{{ asset('assets/Maskot1.png') }}" alt="Image" class="img-fluid"></h6> <br><br><br>
+                <img src="{{ asset('assets/Maskot-Orang Utan-1.png') }}" alt="Image" class="img-fluid"></h6> <br><br><br>
               </div>
 
               <div class="col-md-6">
@@ -68,9 +65,6 @@
         </div>
       </div>
     </div>
-    </div>
-    <div class="box_astronaut" onclick="window.location.href='https://instagram.com/fitrailyasa'" style="cursor: pointer;">
-        <img class="object_astronaut" src="{{ asset('assets/astronaut.svg') }}" width="120px">
     </div>
 @endsection
 

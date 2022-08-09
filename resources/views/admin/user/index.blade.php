@@ -37,6 +37,7 @@
                     <th>Golongan Darah</th>
                     <th>Riwayat Penyakit</th>
                     <th>Prodi</th>
+                    <th>Status Kehadiran</th>
                     <th>More</th>
                 </tr>
               </thead>
@@ -52,12 +53,23 @@
                     <td>{{ $user->golonganDarah }}</td>
                     <td>{{ $user->riwayatPenyakit }}</td>
                     <td>{{ $user->prodi }}</td>
-
+                    @if (auth()->user()->roles_id == 1 )
+                    <td><a href="{{ route('super.presensiUser', $user->id)}}" class="edit-button">
+                      <i class="fa-solid fa-eye"></i>
+                    </a></td>
+                    @elseif (auth()->user()->roles_id == 6 )
+                    <td><a href="{{ route('dapmen.presensiUser', $user->id)}}" class="edit-button">
+                      <i class="fa-solid fa-eye"></i>
+                    </a>
+                    @elseif (auth()->user()->roles_id == 2 )
+                    <td><a href="{{ route('admin.presensiUser', $user->id)}}" class="edit-button">
+                      <i class="fa-solid fa-eye"></i>
+                    </a>
+                  </td>
+                    @endif
                     <td class="manage-row">
                         @if (auth()->user()->roles_id == 1 )
-                          <a href="{{ route('super.user.show', $user->id)}}" class="edit-button">
-                            <i class="fa-solid fa-eye"></i>
-                          </a>
+                          
                           <a href="{{ route('super.user.edit', $user->id)}}" class="edit-button">
                             <i class="fa-solid fa-marker"></i>
                           </a>
@@ -76,7 +88,7 @@
                             <i class="fa-solid fa-marker"></i>
                           </a>
                         @endif
-
+                    @if(auth()->user()->roles_id == 1)
                     <!-- Button trigger modal -->
                     <a role="button"  class="delete-button" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm{{$user->id}}">
                       <i class="fa-solid fa-trash-can"></i>
@@ -93,13 +105,7 @@
                             Anda yakin menghapus data?
                           </div>
                           <div class="modal-footer">
-                            @if(auth()->user()->roles_id == 1)
                                 <form action="{{route('super.dapmenUser.destroy', $user->id)}}" method="POST">
-                            @elseif(auth()->user()->roles_id == 2)
-                                <form action="{{route('admin.dapmenUser.destroy', $user->id)}}" method="POST">
-                            @elseif(auth()->user()->roles_id == 6)
-                                <form action="{{route('dapmen.dapmenUser.destroy', $user->id)}}" method="POST">
-                            @endif
                               @method('DELETE')
                               @csrf
                                 <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
@@ -109,6 +115,7 @@
                         </div>
                       </div>
                     </div>
+                    @endif
                   </td>
                 </tr>
                 @endforeach

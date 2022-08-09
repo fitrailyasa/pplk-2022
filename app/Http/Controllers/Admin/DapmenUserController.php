@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Prodi;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Admin\Controller;
+use App\Models\Presensi;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 
@@ -82,7 +83,7 @@ class DapmenUserController extends Controller
 
     public function show($id)
     {
-        $user = User::where('kelompok', auth()->user()->kelompok)->first();
+        $user = User::where('id', $id)->first();
         return view('admin.user.read', compact('user'));
     }
 
@@ -159,5 +160,22 @@ class DapmenUserController extends Controller
         } elseif (auth()->user()->roles_id == 6) {
             return redirect('dapmen/dapmenUser')->with('sukses', 'Berhasil Hapus Data!');
         }
+    }
+
+    public function detailPresensi($id){
+        $user=User::where('id',$id)->get()->first();
+        $dataPresensi=Presensi::where('user_id',$user->id)->where('status','hadir')->get();
+        $jumlahHadir=$dataPresensi->count();
+        $status1=Presensi::where('hari','08.12.22')->value('status');
+        $status2=Presensi::where('hari','08.13.22')->value('status');
+        $status3=Presensi::where('hari','08.15.22')->value('status');
+        $status4=Presensi::where('hari','08.16.22')->value('status');
+        $status5=Presensi::where('hari','08.17.22')->value('status');
+        $status6=Presensi::where('hari','08.18.22')->value('status');
+        $status7=Presensi::where('hari','08.19.22')->value('status');
+        $status8=Presensi::where('hari','08.20.22')->value('status');
+
+        return view('admin.user.presensi',['status1'=>$status1,'status2'=>$status2,'status3'=>$status3,'status4'=>$status4,'status5'=>$status5,'status6'=>$status6,'status7'=>$status7,'status8'=>$status8],compact('user','dataPresensi','jumlahHadir'));
+
     }
 }

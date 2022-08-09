@@ -346,7 +346,6 @@
             </li>
             <!--./Kamus Gaul-->
 
-
             <!--Keluhan-->
             <li class="nav-item">
                 <a class="nav-link tabitem">
@@ -377,12 +376,6 @@
                 </p>
                 </a>
                 <ul class="nav nav-treeview">
-                <li class="nav-item">
-                    <a class="nav-link tablinks">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Tambah Booklet</p>
-                    </a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link tablinks" href="{{ route('super.booklet.index') }}">
                     <i class="far fa-circle nav-icon"></i>
@@ -500,31 +493,103 @@
             </li>
             <!--./UPT ITERA-->
 
-            <!--Funfact-->
+            <!--Prodi-->
             <li class="nav-item">
                 <a class="nav-link tabitem">
-                <i class="nav-icon fa-solid fa-newspaper"></i>
+                <i class="nav-icon fa-solid fa-satellite"></i>
                 <p>
-                    Funfact
+                    Prodi
                     <i class="right fas fa-angle-left"></i>
                 </p>
                 </a>
                 <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="{{ route('admin.funfact.create') }} " class="nav-link tablinks">
+                    <a href="{{ route('admin.prodi.create') }}" class="nav-link tablinks">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Tambah Funfact</p>
+                    <p>Tambah Prodi</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('admin.funfact.index') }} " class="nav-link tablinks">
+                    <a href="{{ route('admin.prodi.index') }}" class="nav-link tablinks">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Kelola Data funfact</p>
+                    <p>Kelola Data Prodi</p>
                     </a>
                 </li>
                 </ul>
             </li>
-            <!--./Funfact-->
+            <!--./Prodi-->
+
+            <!--Himpunan-->
+            <li class="nav-item">
+                <a class="nav-link tabitem">
+                <i class="nav-icon fa-solid fa-people-roof"></i>
+                <p>
+                    Himpunan
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+                </a>
+                <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="{{ route('admin.himpunan.create') }}" class="nav-link tablinks">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Tambah Himpunan</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.himpunan.index') }}" class="nav-link tablinks">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p style="font-size:0.9rem;">Kelola Data Himpunan</p>
+                    </a>
+                </li>
+                </ul>
+            </li>
+            <!--./Himpunan-->
+
+            <!--UKM/Komunitas-->
+            <li class="nav-item">
+                <a class="nav-link tabitem">
+                <i class="nav-icon fa-solid fa-people-carry-box"></i>
+                <p>
+                    UKM/Komunitas
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+                </a>
+                <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="{{ route('admin.ukm.create') }}" class="nav-link tablinks">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p style="font-size:0.8rem;">Tambah UKM/Komunitas</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.ukm.index') }}" class="nav-link tablinks">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p style="font-size:0.8rem;">Kelola UKM/Komunitas</p>
+                    </a>
+                </li>
+                </ul>
+            </li>
+            <!--./UKM/Komunitas-->
+
+            <!--Booklet-->
+            <li class="nav-item">
+                <a class="nav-link tabitem">
+                <i class="nav-icon fa-solid fa-book-open"></i>
+                <p>
+                    Booklet
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+                </a>
+                <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a class="nav-link tablinks" href="{{ route('admin.booklet.index') }}">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Kelola Data Booklet</p>
+                    </a>
+                </li>
+                </ul>
+            </li>
+            <!--./Booklet-->
 
             <!--Begalin-->
             <li class="nav-item">
@@ -577,32 +642,6 @@
                 </ul>
             </li>
             <!--./Kamus Gaul-->
-
-            <!--Booklet-->
-            <li class="nav-item">
-                <a class="nav-link tabitem">
-                <i class="nav-icon fa-solid fa-book-open"></i>
-                <p>
-                    Booklet
-                    <i class="right fas fa-angle-left"></i>
-                </p>
-                </a>
-                <ul class="nav nav-treeview">
-                <li class="nav-item">
-                    <a class="nav-link tablinks">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Tambah Booklet</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link tablinks">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Kelola Data Booklet</p>
-                    </a>
-                </li>
-                </ul>
-            </li>
-            <!--./Booklet-->
 
             @elseif(auth()->user()->roles_id == 3)
             <!--Dashboard-->
@@ -826,12 +865,6 @@
                 </p>
                 </a>
                 <ul class="nav nav-treeview">
-                <li class="nav-item">
-                    <a href="{{ route('dapmen.dapmenUser.create') }}" class="nav-link tablinks">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Tambah User</p>
-                    </a>
-                </li>
                 <li class="nav-item">
                     <a href="{{ route('dapmen.dapmenUser.index') }}" class="nav-link tablinks">
                     <i class="far fa-circle nav-icon"></i>

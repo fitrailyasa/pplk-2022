@@ -111,6 +111,9 @@ body{
     padding-top: 0.5rem;
 }
 
+#generate {
+    margin-bottom: 10rem;
+}
 /*Navbar mobile alias footbar CSS*/
 
 @media screen and (min-width: 931px) {

@@ -42,7 +42,8 @@
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Misi</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Misi" name="misi" id="misi" value="{{ $ukm->misi }}" >
+            <input type="text" class="form-control" placeholder="Misi" name="misi" id="misi" value="{{ $ukm->misi }}" required>
+
           </div>
         </div>
         <div class="mb-3 row">
