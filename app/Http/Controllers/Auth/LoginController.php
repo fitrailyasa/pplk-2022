@@ -22,11 +22,11 @@ class LoginController extends Controller
     use AuthenticatesUsers;
 
     /**
-     * Where to redirect users after login.
+     * Show the application's login form.
      *
-     * @var string
+     * @return \Illuminate\View\View
      */
-    /* protected $redirectTo = RouteServiceProvider::HOME; */
+    protected $redirectTo;
 
     public function redirectTo()
     {

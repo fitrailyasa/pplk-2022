@@ -252,7 +252,6 @@
                 <span class="text-white">&copy;ARDHAMES PPLK 2022</span>
             </div>
             <ul class="nav col-md-4 justify-content-center list-unstyled d-flex">
-                {{-- <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-twitter"></i></a></li> --}}
                 <li class="ms-3"><a class="text-muted" href="https://www.instagram.com/pplkitera/"><i class="fa-brands fa-instagram"></i></a></li>
                 <li class="ms-3"><a class="text-muted" href="https://www.facebook.com/iterapplk"><i class="fa-brands fa-facebook"></i></a></li>
                 <li class="ms-3"><a class="text-muted" href="https://www.youtube.com/channel/UC09qEyEDNG1U_l4u41LTpTw"><i class="fa-brands fa-youtube"></i></a></li>
