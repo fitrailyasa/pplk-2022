@@ -27,10 +27,6 @@ body {
     width: 20rem;
 }
 
-.dashboard-item-icon {
-    display: none;
-}
-
 .btn {
     border: none !important;
 }

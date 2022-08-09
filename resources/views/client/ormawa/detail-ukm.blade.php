@@ -13,17 +13,17 @@
 @section('content')
     <!-- CONTENT -->
 <div class="himpunan justify-content-center px-0 mt-5">
-        <div class="container justify-content-center">
-            <img src="{{ asset('assets/ukm/logo')}}/{{ $ukms->logo }}" class="hmp-img" alt="..." height="250px" width="250px">
-            <h2>{{ $ukms->namaSingkat }}</h2>
-            <h5 class="px-0">DIES NATALIS : {{ $ukms->tahunBerdiri }}</h5>
-            <h5 class="px-0">PEMBINA HIMPUNAN : {{ $ukms->pembina }}</h5>
-            <h5 class="px-0">KETUA HIMPUNAN : {{ $ukms->ketuaUmum }}</h5>
-            <h2 class="px-0">VISI</h2>
-            <p class="px-0">{{ $ukms->visi }}</p>
-            <h2 class="px-0">MISI</h2>
-            <p class="px-0">{!!nl2br(e($ukms->misi)) !!}</p>
-        </div>
+            <div class="container justify-content-center">
+                <img src="{{ asset('assets/ukm/logo')}}/{{ $ukms->logo }}" class="hmp-img" alt="..." height="250px" width="250px">
+                <h2>{{ $ukms->namaSingkat }}</h2>
+                <h5 class="px-0">DIES NATALIS : {{ $ukms->tahunBerdiri }}</h5>
+                <h5 class="px-0">PEMBINA HIMPUNAN : {{ $ukms->pembina }}</h5>
+                <h5 class="px-0">KETUA HIMPUNAN : {{ $ukms->ketuaUmum }}</h5>
+                <h2 class="px-0">VISI</h2>
+                <p class="px-0">{{ $ukms->visi }}</p>
+                <h2 class="px-0">MISI</h2>
+                <p class="px-0">{!!nl2br(e($ukms->misi)) !!}</p>
+            </div>
     <div class="container-fluid mt-3" id="box-in">
         <div class="row" id="box-content-qr-ukm">
 
@@ -41,16 +41,16 @@
 
         </div>
     </div>
-    </div>
+</div>
     <div class="himpunan-2 justify-content-center">
         <h2 > FILOSOFI LOGO</h2>
         <h2 >{{ $ukms->namaSingkat }}</h2>
         <img src="{{ asset('assets/ukm/logo')}}/{{ $ukms->logo }}" class="hmp-img2" alt="..." width="250px" height="250px"></div>
     </div>
 
-</div>
-<br><br>
- <div class="slide-container swiper mb-5">
+
+    <br><br>
+        <div class="slide-container swiper mb-5">
             <div class="slide-content">
                 <div class="card-wrapper swiper-wrapper">
                     <div class="card-rr swiper-slide">
@@ -127,45 +127,45 @@
                 </div>
             </div>
 
-            <div class="swiper-button-next swiper-navBtn"></div>
-            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-button-next swiper-navBtn text-light"></div>
+            <div class="swiper-button-prev swiper-navBtn text-light"></div>
             <div class="swiper-pagination"></div>
         </div>
-        <section class="slider_container_gambar mb-5">
+        <section class="slider_container_gambar mb-5" id="swipppp">
             <div class="slide-container-gambar justify-content-center mt-4 pt-4">
-            <h1 style="text-align:center" class="galeri text-light">GALERI</h1>
-            <div class="slide-content-swiper gambar_slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="card-content-gm">
-                            <img src="{{ asset('assets/ukm/dokumentasi1')}}/{{ $ukms->dokumentasi1 }}" alt="">
-                        </div>
-                    </div>
+                <h1 style="text-align:center" class="galeri text-light">GALERI</h1>
+                    <div class="slide-content-swiper gambar_slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="card-content-gm">
+                                    <img src="{{ asset('assets/ukm/dokumentasi1')}}/{{ $ukms->dokumentasi1 }}" alt="" id="ukuran">
+                                </div>
+                            </div>
 
-                    <div class="swiper-slide">
-                        <div class="card-content-gm">
-                            <img src="{{ asset('assets/ukm/dokumentasi2')}}/{{ $ukms->dokumentasi2 }}" alt="">
-                        </div>
-                    </div>
+                            <div class="swiper-slide">
+                                <div class="card-content-gm">
+                                    <img src="{{ asset('assets/ukm/dokumentasi2')}}/{{ $ukms->dokumentasi2 }}" alt="" id="ukuran">
+                                </div>
+                            </div>
 
-                    <div class="swiper-slide">
-                        <div class="card-content-gm">
-                            <img src="{{ asset('assets/ukm/dokumentasi3')}}/{{ $ukms->dokumentasi3 }}" alt="">
+                            <div class="swiper-slide">
+                                <div class="card-content-gm">
+                                    <img src="{{ asset('assets/ukm/dokumentasi3')}}/{{ $ukms->dokumentasi3 }}" alt="" id="ukuran">
+                                </div>
+                            </div>
+                            <!-- <div class="swiper-slide">
+                                <div class="card-content-gm">
+                                    <img src="/assets/logo-contoh.png" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card-content-gm">
+                                    <img src="/assets/logo-contoh.png" alt="">
+                                </div>
+                            </div> -->
                         </div>
                     </div>
-                    <!-- <div class="swiper-slide">
-                        <div class="card-content-gm">
-                            <img src="/assets/logo-contoh.png" alt="">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card-content-gm">
-                            <img src="/assets/logo-contoh.png" alt="">
-                        </div>
-                    </div> -->
-                </div>
-            </div>
-            <div class="swiper-pagination"></div>
+                <div class="swiper-pagination"></div>
             </div>
         </section>
 
