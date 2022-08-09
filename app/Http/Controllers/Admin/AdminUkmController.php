@@ -20,9 +20,12 @@ class AdminUkmController extends Controller
     {
         $ukm = Ukm::all();
 
-        $hasilPolling=[39];
-        for($i=1;$i<=39;$i++){
-            $ukms=Ukm::where('id',$i)->get()->first();
+        $jumlahUkm=$ukm->count();
+
+        $hasilPolling=[$jumlahUkm];
+        for($i=0;$i<=$jumlahUkm-1;$i++){
+            $userid=$i+1;
+            $ukms=Ukm::where('id',$userid)->get()->first();
             $polling=polling::where('ukmsid',$ukms->id)->get();
             $hasilPolling[$i]=$polling->count();
         } 
