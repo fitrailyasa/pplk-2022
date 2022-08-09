@@ -2,7 +2,7 @@
 
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Routes;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\guestController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Middleware\SuperAdmin;
@@ -197,6 +197,10 @@ Route::middleware(['auth'])->group(function () {
   });
   Route::get('/redeem-success', function () { return view('client.games.redeem-code.success'); });
   Route::post('/submitcode/{id}', [ClientKodeGameController::class, 'sumscore'])->name('sumscore');
+  Route::get('/tebak-bangunan',[ClientGameTebakBangunanController::class,'index']);
+  Route::get('/tebak-bangunan-game/{id}',[ClientGameTebakBangunanController::class,'show']);
+  Route::get('/tebak-bangunan-game/{id}/{jawaban}',[ClientGameTebakBangunanController::class,'store'])->name('soalTebakBangunan');
+  Route::get('/tebak-bangunan-selesai/{id}',[ClientGameTebakBangunanController::class,'restart']);
 
 
   // DEVELOPMENT TEAM
