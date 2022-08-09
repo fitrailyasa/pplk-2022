@@ -144,6 +144,9 @@ class AdminProdiController extends Controller
             $file = $validatedData[('logo')];
             $filename = time() . '_' . $file->getClientOriginalName();
             $location = '../public/assets/logoProdi/';
+            $prodi->logo = $filename;
+            $prodi->update();
+
             $file->move($location, $filename);
         }
         if (auth()->user()->roles_id == 1) {

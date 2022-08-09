@@ -24,19 +24,19 @@
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Nama Prodi</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Nama Prodi" name="namaLengkap" id="namaprodi" value="{{ $prodi->namaLengkap }}" required>
+            <input type="text" class="form-control" placeholder="Nama Prodi" name="namaLengkap" id="namaprodi" value="{{ $prodi->namaLengkap }}" >
           </div>
         </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Nama Singkat</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Nama Prodi" name="namaSingkat" id="namaprodi" value="{{ $prodi->namaSingkat }}" required>
+            <input type="text" class="form-control" placeholder="Nama Prodi" name="namaSingkat" id="namaprodi" value="{{ $prodi->namaSingkat }}" >
           </div>
         </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Kepala Prodi</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Nama Kepala Prodi" name="kepalaProdi" id="namakaprodi" value="{{ $prodi->kepalaProdi }}" required>
+            <input type="text" class="form-control" placeholder="Nama Kepala Prodi" name="kepalaProdi" id="namakaprodi" value="{{ $prodi->kepalaProdi }}" >
           </div>
         </div>
         <div class="mb-3 row">
@@ -78,7 +78,7 @@
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Logo</label>
           <div class="col-sm-9">
-            <input type="file" accept="image/*" class="form-control" name="logo" id="logo">
+            <input type="file" class="form-control" name="logo" id="logo">
           </div>
         </div>
         <div class="mb-3 row">
