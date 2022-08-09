@@ -310,6 +310,49 @@ h2 {
     left: 0.5em;
     margin-right: -50%;
 }
+.owl-theme .owl-nav {
+    display: none;
+}
+.funfact-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background: var(--primary);
+}
+
+#contents {
+    height: fit-content !important;
+}
+
+.title .akronim-begalin {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--white);
+    opacity: 0.5;
+    text-align: center;
+    transform: translateY(-25px);
+    margin-bottom: 10px;
+}
+
+.begalin-card {
+    border-radius: 20px;
+    background-color: var(--primary);
+}
+.begalin-content {
+    margin: 0px 40px;
+    padding: 0px 20px;
+    color: var(--white);
+    text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+.begalin-content {
+    margin: 0px 20px;
+    padding: 0px 10px;
+    text-align: center;
+}
+}
+
 
 #bounce {
     animation: bounce 0.5s alternate infinite ease-in;
@@ -335,5 +378,11 @@ h2 {
     #barcode-ukm {
         width: 330px;
         height: 300px;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    #terakhir {
+        margin-bottom: 2rem;
     }
 }

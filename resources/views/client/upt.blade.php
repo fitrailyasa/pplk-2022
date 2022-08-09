@@ -5,7 +5,8 @@
 
 @section('style')
     <!-- STYLES -->
-    <link rel="stylesheet" href="{{ asset('assets/css/UPT.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/upt.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 @endsection
 
 @section('content')

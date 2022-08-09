@@ -64,10 +64,12 @@ class ClientKodeGameController extends Controller
                     return view('client.games.redeem-code.failed',compact('leaderboards'));
                 }
             }else {
-                echo "<script>
-                alert('Kode Tidak Valid ');
-                window.location.href='/card-list'
-                </script>";
+                // echo "<script>
+                // alert('Kode Tidak Valid ');
+                // window.location.href='/redeem-failed';
+                // </script>";
+                $leaderboards=Leaderboard::where('kelompok',$kelompok)->first();
+                return view('client.games.redeem-code.failed',compact('leaderboards'));
             }
 
     }

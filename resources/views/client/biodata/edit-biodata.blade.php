@@ -5,14 +5,7 @@
 
 @section('style')
     <!-- STYLES -->
-        <!--CSS-->
-        <link rel="stylesheet" href="{{ asset('assets/css/edit-biodata.css') }}">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-        <!--icon-->
-        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/css/favicon.ico') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/edit-biodata.css') }}">
 @endsection
 
 @section('content')
@@ -33,8 +26,8 @@
                         <form action="{{ url('update-fotoProfil/'.$viewbiodata->id) }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
-                        <input name="fotoProfil" type="file" class="btn btn-primary">
-                        <input type="submit" class="btn btn-primary" value="Unggah">
+                        <input name="fotoProfil" type="file" class="btn btn-primary" @if(auth()->user()->roles_id == 9) disabled @endif>
+                        <input type="submit" class="btn btn-primary" value="Unggah" @if(auth()->user()->roles_id == 9) disabled @endif>
                         @error('fotoProfil')
                         <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
@@ -51,28 +44,28 @@
                             @method('PUT')
                             <div class="row bio-input">
                                 <label class="form-label" for="nama">Nama</label>
-                                <input value="{{ $viewbiodata->nama }}"name="name" type="text" placeholder="{{ $viewbiodata->nama }}" enabled>
+                                <input value="{{ $viewbiodata->nama }}"name="name" type="text" placeholder="{{ $viewbiodata->nama }}" @if(auth()->user()->roles_id == 9) disabled @endif>
                             </div>
 
                             <div class="row bio-input">
                                 <label class="form-label" for="email">Email</label>
-                                <input value="{{ $viewbiodata->email }}" name="email" type="email" placeholder="{{ $viewbiodata->email }}" enabled>
+                                <input value="{{ $viewbiodata->email }}" name="email" type="email" placeholder="{{ $viewbiodata->email }}" @if(auth()->user()->roles_id == 9) disabled @endif>
                             </div>
 
                             <div class="row bio-input">
                                 <label class="form-label" for="password">Password</label>
-                                <input  name="password" type="text" placeholder="Password Baru"  enabled>
+                                <input  name="password" type="text" placeholder="Password Baru"  @if(auth()->user()->roles_id == 9) disabled @endif>
                             </div>
 
                             <div class="row bio-input">
                                 <label class="form-label" for="nim">NIM</label>
-                                <input value="{{ $viewbiodata->nim }}" name="nim" type="text" placeholder="{{ $viewbiodata->nim }}" enabled>
+                                <input value="{{ $viewbiodata->nim }}" name="nim" type="text" placeholder="{{ $viewbiodata->nim }}" @if(auth()->user()->roles_id == 9) disabled @endif>
                             </div>
 
                             <div class="row bio-input">
                                 <label  class="form-label" for="golongan darah">Program Studi</label>
-                                <select name="prodi">
-                                    <option selected class="selected">{{ $viewbiodata->prodi }}</option>
+                                <select name="prodi" @if(auth()->user()->roles_id == 9) disabled @endif>
+                                    <option selected class="selected" @if(auth()->user()->roles_id == 9) disabled @endif>{{ $viewbiodata->prodi }}</option>
                                   @foreach ($prodis as $prodi )
                                   <option value="{{ $prodi->namaLengkap }}">{{ $prodi->namaLengkap }}</option>
                                   @endforeach
@@ -86,18 +79,18 @@
 
                             <div class="row bio-input">
                                 <label class="form-label" for="notel">Nomor Telepon</label>
-                                <input value="{{ $viewbiodata->nomorHp }}"name="nomorHp"type="text" placeholder="{{ $viewbiodata->nomorHp }}" enabled>
+                                <input value="{{ $viewbiodata->nomorHp }}"name="nomorHp"type="text" placeholder="{{ $viewbiodata->nomorHp }}" @if(auth()->user()->roles_id == 9) disabled @endif>
                             </div>
 
-                            <div class="row bio-input">
-                                <label class="form-label" for="notel">Instagram</label>
-                                <input value="{{ $viewbiodata->instagram }}"name="instagram" type="text" placeholder="{{ $viewbiodata->nomorHp }}" enabled>
+                            <div class="row bio-input" @if(auth()->user()->roles_id == 9) onclick="window.location.href='https://instagram.com/fitrailyasa'" @endif style="cursor: pointer;">
+                                <label class="form-label" for="instagram">Instagram</label>
+                                <input value="{{ $viewbiodata->instagram }}"name="instagram" type="text" placeholder="{{ $viewbiodata->nomorHp }}" @if(auth()->user()->roles_id == 9) disabled @endif>
                             </div>
 
                             <div class="row bio-input">
                                 <label placeholder="belum dinamis" class="form-label" for="golongan darah">Golongan Darah</label>
-                                <select name="golonganDarah">
-                                    <option selected class="selected" value="-">{{ $viewbiodata->golonganDarah }}</option>
+                                <select name="golonganDarah" @if(auth()->user()->roles_id == 9) disabled @endif>
+                                    <option selected class="selected" value="-" @if(auth()->user()->roles_id == 9) disabled @endif>{{ $viewbiodata->golonganDarah }}</option>
                                     <option value="A">A</option>
                                     <option value="AB">AB</option>
                                     <option value="B">B</option>
@@ -107,11 +100,11 @@
 
                             <div class="row bio-input">
                                 <label class="form-label" for="riwayat">Riwayat Penyakit</label>
-                                <input value="{{ $viewbiodata->riwayatPenyakit }}" name="riwayatPenyakit"  type="text" placeholder="{{ $viewbiodata->riwayatPenyakit }}" enabled>
+                                <input value="{{ $viewbiodata->riwayatPenyakit }}" name="riwayatPenyakit"  type="text" placeholder="{{ $viewbiodata->riwayatPenyakit }}" @if(auth()->user()->roles_id == 9) disabled @endif>
                             </div>
 
                             <div class="submit-edit" align="center">
-                                <input type="submit" class="btn btn-primay" value="Unggah">
+                                <input type="submit" class="btn btn-primay" value="Unggah" @if(auth()->user()->roles_id == 9) disabled @endif>
                             </div>
                     </div>
                     </form>
