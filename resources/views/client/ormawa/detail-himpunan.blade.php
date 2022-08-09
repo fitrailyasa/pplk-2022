@@ -30,13 +30,13 @@
     <div class="himpunan-2 justify-content-center mb-5 text-light">
         <h2> FILOSOFI LOGO</h2>
         <h2>{{ $himpunans->namaSingkat }}</h2>
-        <img src="{{ asset('assets/himpunan')}}/{{ $himpunans->logo }}" class="hmp-img2" alt="image">
+        <img src="{{ asset('assets/himpunan')}}/{{ $himpunans->logo }}" class="hmp-img" alt="image">
     </div>
 
     <div class="container" id="container__filosofi-logo">
-        <div class="card-content rounded-5">
+        <div class="card-content rounded-3">
             <h2 class="name">Filosofi Logo</h2>
-            <p class="description">{{ $himpunans->filosofiLogo }}.</p>
+            <p class="description">{{ $himpunans->filosofiLogo }}</p>
         </div>
     </div>
 <br><br><br>

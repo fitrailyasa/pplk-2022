@@ -28,6 +28,10 @@
 body{
     margin: 0;
     padding: 0;
+    background-image: url(../background-2.png) !important;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     display: block;
     font-family: var(--font-family-body);
     overflow-x: hidden;

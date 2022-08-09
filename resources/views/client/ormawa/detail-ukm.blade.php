@@ -20,7 +20,7 @@
                 <h5 class="px-0">PEMBINA HIMPUNAN : {{ $ukms->pembina }}</h5>
                 <h5 class="px-0">KETUA HIMPUNAN : {{ $ukms->ketuaUmum }}</h5>
                 <h2 class="px-0">VISI</h2>
-                <p class="px-0">{{ $ukms->visi }}</p>
+                <p class="px-0">{!!nl2br(e($ukms->visi)) !!}</p>
                 <h2 class="px-0">MISI</h2>
                 <p class="px-0">{!!nl2br(e($ukms->misi)) !!}</p>
             </div>
@@ -50,82 +50,13 @@
 
 
     <br><br>
-        <div class="slide-container swiper mb-5">
-            <div class="slide-content">
-                <div class="card-wrapper swiper-wrapper">
-                    <div class="card-rr swiper-slide">
-
-                        <div class="card-content">
-                            <h2 class="name">David Dell</h2>
-                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-
-                        </div>
-                    </div>
-                    <div class="card-rr swiper-slide">
-
-                        <div class="card-content">
-                            <h2 class="name">David Dell</h2>
-                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-
-                        </div>
-                    </div>
-                    <div class="card-rr swiper-slide">
-
-                        <div class="card-content">
-                            <h2 class="name">David Dell</h2>
-                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-
-                        </div>
-                    </div>
-                    <div class="card-rr swiper-slide">
-
-                        <div class="card-content">
-                            <h2 class="name">David Dell</h2>
-                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-
-                        </div>
-                    </div>
-                    <div class="card-rr swiper-slide">
-
-                        <div class="card-content">
-                            <h2 class="name">David Dell</h2>
-                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-
-                        </div>
-                    </div>
-                    <div class="card-rr swiper-slide">
-
-                        <div class="card-content">
-                            <h2 class="name">David Dell</h2>
-                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-
-                        </div>
-                    </div>
-                    <div class="card-rr swiper-slide">
-
-                        <div class="card-content">
-                            <h2 class="name">David Dell</h2>
-                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-
-                        </div>
-                    </div>
-                    <div class="card-rr swiper-slide">
-
-                        <div class="card-content">
-                            <h2 class="name">David Dell</h2>
-                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-
-                        </div>
-                    </div>
-                    <div class="card-rr swiper-slide">
-
-                        <div class="card-content">
-                            <h2 class="name">David Dell</h2>
-                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="container" id="container__filosofi-logo">
+        <div class="card-content rounded-3">
+            <h2 class="name">Filosofi Logo</h2>
+            <p class="description">{{ $ukms->filosofiLogo }}</p>
+        </div>
+    </div>
+<br><br><br>
 
             <div class="swiper-button-next swiper-navBtn text-light"></div>
             <div class="swiper-button-prev swiper-navBtn text-light"></div>
