@@ -346,7 +346,6 @@
             </li>
             <!--./Kamus Gaul-->
 
-
             <!--Keluhan-->
             <li class="nav-item">
                 <a class="nav-link tabitem">
@@ -493,6 +492,84 @@
                 </ul>
             </li>
             <!--./UPT ITERA-->
+
+            <!--Prodi-->
+            <li class="nav-item">
+                <a class="nav-link tabitem">
+                <i class="nav-icon fa-solid fa-satellite"></i>
+                <p>
+                    Prodi
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+                </a>
+                <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="{{ route('admin.prodi.create') }}" class="nav-link tablinks">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Tambah Prodi</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.prodi.index') }}" class="nav-link tablinks">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Kelola Data Prodi</p>
+                    </a>
+                </li>
+                </ul>
+            </li>
+            <!--./Prodi-->
+
+            <!--Himpunan-->
+            <li class="nav-item">
+                <a class="nav-link tabitem">
+                <i class="nav-icon fa-solid fa-people-roof"></i>
+                <p>
+                    Himpunan
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+                </a>
+                <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="{{ route('admin.himpunan.create') }}" class="nav-link tablinks">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Tambah Himpunan</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.himpunan.index') }}" class="nav-link tablinks">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p style="font-size:0.9rem;">Kelola Data Himpunan</p>
+                    </a>
+                </li>
+                </ul>
+            </li>
+            <!--./Himpunan-->
+
+            <!--UKM/Komunitas-->
+            <li class="nav-item">
+                <a class="nav-link tabitem">
+                <i class="nav-icon fa-solid fa-people-carry-box"></i>
+                <p>
+                    UKM/Komunitas
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+                </a>
+                <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="{{ route('admin.ukm.create') }}" class="nav-link tablinks">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p style="font-size:0.8rem;">Tambah UKM/Komunitas</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.ukm.index') }}" class="nav-link tablinks">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p style="font-size:0.8rem;">Kelola UKM/Komunitas</p>
+                    </a>
+                </li>
+                </ul>
+            </li>
+            <!--./UKM/Komunitas-->
 
             <!--Booklet-->
             <li class="nav-item">

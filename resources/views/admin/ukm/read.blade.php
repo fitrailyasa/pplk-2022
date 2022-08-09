@@ -24,49 +24,49 @@
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Nama Lengkap</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Nama Lengkap" name="namaLengkap" id="namalengkap" value="{{ $ukm->namaLengkap }}" disabled>
+            <input type="text" class="form-control" placeholder="{{ $ukm->namaLengkap }}" name="namaLengkap" id="namalengkap" disabled>
           </div>
         </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Nama Singkat</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Nama Singkat" name="namaSingkat" id="namasingkat" value="{{ $ukm->namaSingkat }}"disabled>
+            <input type="text" class="form-control" placeholder="{{ $ukm->namaSingkat }}" name="namaSingkat" id="namasingkat" disabled>
           </div>
         </div>
         <div class=" mb-3 row" >
           <label class=" col-sm-3 col-form-label" >Visi</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Visi" name="visi" id="visi" value="{{ $ukm->visi }}"disabled>
+            <input type="text" class="form-control" placeholder="{{ $ukm->visi }}" name="visi" id="visi" disabled>
           </div>
         </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Misi</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Miai" name="misi" id="misi" misivalue="{{ $ukm->namaSingkat }}" disabled>
+            <input type="text" class="form-control" placeholder="{{ $ukm->misi }}" name="misi" id="misi" disabled>
           </div>
         </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Pembina</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Nama Pembina" name="pembina" id="namapembina" value="{{ $ukm->pembiina }}" disabled>
+            <input type="text" class="form-control" placeholder="{{ $ukm->pembina }}" name="pembina" id="namapembina"  disabled>
           </div>
         </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Ketua Umum</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Ketua Umum" name="ketuaUmum" id="ketuaumum" value="{{ $ukm->ketuaUmum }}" disabled>
+            <input type="text" class="form-control" placeholder="{{ $ukm->ketuaUmum }}" name="ketuaUmum" id="ketuaumum" disabled>
           </div>
         </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Dies Natalis</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Dies Natalis" name="tahunBerdiri" id="diesnatalis" value="{{ $ukm->tahunBerdiri }}">
+            <input type="text" class="form-control" placeholder="{{ $ukm->tahunBerdiri }}" name="tahunBerdiri" id="diesnatalis" disabled>
           </div>
         </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Logo</label>
           <div class="col-sm-9">
-            <input type="text" accept="image/*" class="form-control" name="logo" id="logo" value="{{ $ukm->logo }}">
+            <img src="{{ asset('assets/ukm/logo') }}/{{ $ukm->logo }}" alt="logo ukm" width="75px">
           </div>
         </div>
         <div class="mb-3 row">
@@ -78,31 +78,31 @@
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">QR-Code</label>
           <div class="col-sm-9 ">
-            <input type="text" class="form-control" placeholder="Input https://linktr.ee" name="qrCode" id="qrcode" value="{{ $ukm->qrCode }}" >
+            <img src="{{ asset('assets/ukm/logo') }}/{{ $ukm->qrCode }}" alt="logo ukm" width="75px">
           </div>
         </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Deskripsi</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Nama Pembina" name="deskripsi" id="deskripsi" value="{{ $ukm->deskripsi }}"disabled>
+            <input type="text" class="form-control" placeholder="{{ $ukm->deskripsi }}" name="deskripsi" id="deskripsi" disabled>
           </div>
         </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Dokumentasi 1</label>
           <div class="col-sm-9">
-            <input type="file" accept="image/*" class="form-control" name="dokumentasi1" id="dokumentasi1" >
+            <img src="{{ asset('assets/ukm/dokumentasi1') }}/{{ $ukm->dokumentasi1 }}" alt="dokumentasi1 ukm" width="75px">
           </div>
         </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Dokumentasi 2</label>
           <div class="col-sm-9">
-            <input type="file" accept="image/*" class="form-control" name="dokumentasi2" id="dokumentasi2">
+            <img src="{{ asset('assets/ukm/dokumentasi2') }}/{{ $ukm->dokumentasi2 }}" alt="dokumentasi2 ukm" width="75px">
           </div>
         </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Dokumentasi 3</label>
           <div class="col-sm-9">
-            <input type="file" accept="image/*" class="form-control" name="dokumentasi3" id="dokumentasi3">
+            <img src="{{ asset('assets/ukm/dokumentasi13') }}/{{ $ukm->dokumentasi13 }}" alt="dokumentasi13 ukm" width="75px">
           </div>
         </div>
         <div class="mb-3 row">
