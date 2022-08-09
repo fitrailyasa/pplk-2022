@@ -78,7 +78,7 @@
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Logo</label>
           <div class="col-sm-9">
-            <input type="file" accept="image/*" class="form-control" name="logo" id="logo">
+           <img src="{{ asset('assets/logoProdi/') }}/{{ $prodi->logo }}" alt="logo" width="75px">
           </div>
         </div>
         <div class="mb-3 row">
