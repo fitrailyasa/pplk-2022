@@ -191,10 +191,7 @@ Route::middleware(['auth'])->group(function () {
   Route::get('/game-home', [LeaderboardController::class, 'index']);
   Route::get('/card-list', [ClientKodeGameController::class, 'index']);
   Route::get('/redeem/{no}', [ClientKodeGameController::class, 'show']);
-//   Route::get('/redeem-failed', [ClientKodeGameController::class,]);
-  Route::get('/redeem-failed', function () {
-    return view('client.games.redeem-code.failed');
-  });
+  Route::get('/redeem-failed', function () { return view('client.games.redeem-code.failed');});
   Route::get('/redeem-success', function () { return view('client.games.redeem-code.success'); });
   Route::post('/submitcode/{id}', [ClientKodeGameController::class, 'sumscore'])->name('sumscore');
   Route::get('/tebak-bangunan',[ClientGameTebakBangunanController::class,'index']);

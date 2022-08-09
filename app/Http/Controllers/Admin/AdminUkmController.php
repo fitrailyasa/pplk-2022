@@ -18,8 +18,15 @@ class AdminUkmController extends Controller
      */
     public function index()
     {
-        $ukms = Ukm::all();
-        return view('admin.ukm.index', compact('ukms'));
+        $ukm = Ukm::all();
+
+        $hasilPolling=[39];
+        for($i=1;$i<=39;$i++){
+            $ukms=Ukm::where('id',$i)->get()->first();
+            $polling=polling::where('ukmsid',$ukms->id)->get();
+            $hasilPolling[$i]=$polling->count();
+        } 
+        return view('admin.ukm.index',['hasilPolling'=>$hasilPolling], compact('ukm'));
     }
 
     /**
@@ -247,10 +254,16 @@ class AdminUkmController extends Controller
     }
 
     public function lihatPolling($id){
-        $ukm=Ukm::where('id',$id)->get()->first();
-        $polling=polling::where('ukmsid',$ukm->id)->get();
-        $hasilPolling=$polling->count();
 
+        $hasilPolling=[39];
+
+        for($i=1;$i<=39;$i++){
+            $ukm=Ukm::where('id',$i)->get()->first();
+            $polling=polling::where('ukmsid',$ukm->id)->get();
+            $hasilPolling[$i]=$polling->count();
+        } 
+
+        
         return view('admin.ukm.polling',['hasilPolling'=>$hasilPolling]);
     }
 }
