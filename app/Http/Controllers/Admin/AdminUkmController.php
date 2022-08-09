@@ -131,11 +131,11 @@ class AdminUkmController extends Controller
     public function update(Request $request, $id)
     {
         $validatedData = $request->validate([
-            'qrCode' => 'mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
-            'logo' => 'mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
-            'dokumentasi1' => 'mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
-            'dokumentasi2' => 'mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
-            'dokumentasi3' => 'mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
+            'qrCode' => 'required|mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
+            'logo' => 'required|mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
+            'dokumentasi1' => 'required|mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
+            'dokumentasi2' => 'required|mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
+            'dokumentasi3' => 'required|mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
         ]);
 
         $fileqrCode = $validatedData[('qrCode')];
