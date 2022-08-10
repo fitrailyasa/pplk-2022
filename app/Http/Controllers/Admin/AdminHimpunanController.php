@@ -110,14 +110,15 @@ class AdminHimpunanController extends Controller
     public function update(Request $request, $id)
     {
         $himpunan = Himpunan::where('id', $id)->first();
-        $validatedData = $request->validate([
-            'logo' => 'required|mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
+        //tidak terpakai
+        // $validatedData = $request->validate([
+        //     'logo' => 'required|mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
 
-        ]);
-        $file = $validatedData[('logo')];
-        $filename = time() . '_' . $file->getClientOriginalName();
-        // File upload location
-        $location = '../public/assets/himpunan/';
+        // ]);
+        // $file = $validatedData[('logo')];
+        // $filename = time() . '_' . $file->getClientOriginalName();
+        // // File upload location
+        // $location = '../public/assets/himpunan/';
 
         $himpunan->update(
             [
@@ -133,9 +134,15 @@ class AdminHimpunanController extends Controller
             ]
         );
         if ($request->hasFile('logo')) {
-            $himpunan->update([
-                'logo' => $filename,
+            $validatedData = $request->validate([
+                'logo' => 'required|mimes:jpg,bmp,png,svg,jpeg|max:5120 ',
+
             ]);
+            $file = $validatedData[('logo')];
+            $filename = time() . '_' . $file->getClientOriginalName();
+            // File upload location
+            $location = '../public/assets/himpunan/';
+            $himpunan->logo = $filename;
             $file->move($location, $filename);
         }
         if (auth()->user()->roles_id == 1) {

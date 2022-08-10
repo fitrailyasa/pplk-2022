@@ -69,7 +69,6 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 10px 14px;
-    height: 250px;
     background: var(--gradient-1);
 }
 .image-content {
@@ -109,7 +108,7 @@ body {
     font-size: 16px;
     color: #fff;
     text-align: center;
-    padding-top: 5%;
+    padding-top: 15px;
 }
 .swiper-navBtn {
     color: #6e93f7;
@@ -148,6 +147,16 @@ body {
     padding: 50px 0;
 }
 
+.hmp-img {
+    max-width: 250px;
+    border-radius: 15px;
+}
+
+#barcode-ukm {
+    max-width: 250px;
+    border-radius: 15px;
+}
+
 @media screen and (max-width: 768px) {
     .slide-content {
         margin: 0 10px;
@@ -158,4 +167,13 @@ body {
     #container__filosofi-logo {
         margin-bottom: 4rem;
     }
+}
+
+#ukuran {
+    width: 250px;
+    height: 250px;
+}
+
+#swipppp {
+    overflow-x: hidden;
 }

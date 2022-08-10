@@ -24,7 +24,7 @@
                 @if(auth()->user()->roles_id == 1)
                     <form action="/super/polling/{{ $ukms->id }}" method="POST">
                 @elseif(auth()->user()->roles_id == 4)
-                    <form action="/super/polling/{{ $ukms->id }}" method="POST">
+                    <form action="/ukms/polling/{{ $ukms->id }}" method="POST">
                 @endif
 
                     @csrf
