@@ -42,8 +42,8 @@
 <!-- tentang kami, visi, misi -->
 <div class=" container">
     <div class="row text-center pt-4 text-light">
-    <h3 class="animasi"><strong>Deskrisi</strong></h3>
-        <p class="animasi pb-5">{!!nl2br(e($prodis->visi)) !!}</p>
+    <h3 class="animasi"><strong>Deskripsi</strong></h3>
+        <p class="animasi pb-5">{!!nl2br(e($prodis->deskripsi)) !!}</p>
 
         <h3 class="animasi"><strong>Visi</strong></h3>
         <p class="animasi">{!!nl2br(e($prodis->visi)) !!}</p>
