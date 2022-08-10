@@ -10,7 +10,9 @@
 @endsection
 
 @section('content')
+
     <!-- CONTENT -->
+
     <!-- start conten -->
     <div class="start-content">
         <div class="container-fluid redeem py-3 mt-4">

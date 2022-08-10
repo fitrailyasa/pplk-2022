@@ -106,7 +106,7 @@
                         <img src="{{ asset('assets/pplklogo/siger.png') }}" class="card-img p-1" alt="">
                     </div>
                 </div>
-                <p class="text-light" style="font-size: 12px">
+                <p class="text-light">
                     Siger melambangkan tentang bentuk keseluruhan dari logo. Siger merupakan mahkota di atas kepala yang berarti mahasiswa baru diharapkan menjadi pribadi yang bijaksana dan berpikir kritis dalam setiap keputusan yang dibuat. Siger sendiri merupakan ikon Lampung yang terletak secara geografis di Institut Teknologi Sumatera.
                 </p>
                </div>
