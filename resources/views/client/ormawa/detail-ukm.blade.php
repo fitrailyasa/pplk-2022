@@ -67,7 +67,6 @@
     </div>
 <br><br><br>
 
-        </div>
         <section class="slider_container_gambar mb-5" id="swipppp">
             <div class="slide-container-gambar justify-content-center mt-4 pt-4">
                 <h1 style="text-align:center" class="galeri text-light">GALERI</h1>
