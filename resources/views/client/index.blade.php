@@ -342,7 +342,7 @@
                             <span class="h1 text-style text-white">KNOW MORE <br> ABOUT <span class=" text-gradien">PPLK 2022</span></span>
                         </div>
 
-                        <div class="begalin-wraper owl-carousel owl-theme mt-5 p-3 col-10 g-3 carousel-container" >
+                        <div class="youtube_carousel owl-carousel owl-theme mt-5 p-3 col-10 g-3 carousel-container" >
 
                             <div class="item img-fit">
                                 <button  data-bs-toggle="modal" data-bs-target="#you" >
@@ -377,60 +377,58 @@
         <!-- ./Youtube -->
 
         <!-- Modal Youtube-->
-        <div class="modal modal-xl fade" id="you" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
+        <div class="modal fade" id="you" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
                 <div class="modal-content">
-
                     <iframe class="youtube-size" src="https://www.youtube.com/embed/Z6w_5ST34UQ?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
 
-        <div class="modal modal-xl fade" id="and" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
+        <div class="modal fade" id="and" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
                 <div class="modal-content">
                     <iframe class="youtube-size" src="https://www.youtube.com/embed/Sctref1MCI8?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
-        <!-- ./Modal Youtube-->
 
-        <div class="modal modal-xl fade" id="me" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
+        <div class="modal fade" id="me" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
                 <div class="modal-content">
                     <iframe class="youtube-size" src="https://www.youtube.com/embed/S25dWb1-ntc?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
 
-    <!-- Begalin -->
-    <div class="container-fluid begalin pt-5">
-        <div class="begalin-container">
-            <div class="title text-center pt-3">
-                <p>BEGALIN</p>
-                <p class="akronim-begalin">BELAJAR GALI INFORMASI</p>
+        <!-- Begalin -->
+        <div class="container-fluid begalin pt-5">
+            <div class="begalin-container">
+                <div class="title text-center pt-3">
+                    <p>BEGALIN</p>
+                    <p class="akronim-begalin">BELAJAR GALI INFORMASI</p>
+                </div>
+                <div class="begalin-wraper owl-carousel owl-theme">
+                @foreach ($begalins as $begalin )
+                <div class="begalin-card">
+                    <div class="begalin-content mx-5">
+                        <p class="truncate">
+                            {{ $begalin->judul }}
+                        </p>
+                        <button type="button" class="btn background-gradient mx-auto my-4" data-bs-toggle="modal" data-bs-target="#begalin{{ $begalin->id }}">
+                            Buka
+                        </button>
+                        </div>
+                </div>@endforeach
+                </div>
             </div>
-            <div class="begalin-wraper owl-carousel owl-theme">
-             @foreach ($begalins as $begalin )
-             <div class="begalin-card">
-                <div class="begalin-content mx-5">
-                    <p class="truncate">
-                        {{ $begalin->judul }}
-                    </p>
-                    <button type="button" class="btn background-gradient mx-auto my-4" data-bs-toggle="modal" data-bs-target="#begalin{{ $begalin->id }}">
-                        Buka
-                    </button>
-                    </div>
-            </div>@endforeach
         </div>
-    </div>
-    <!-- ./Begalin -->
+        <!-- ./Begalin -->
 
-
-<!-- Modal Begalin -->
+        <!-- Modal Begalin -->
 @foreach ($begalins as $begalin )
-    <div class="modal modal-xl fade" id="begalin{{ $begalin->id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
+    <div class="modal fade" id="begalin{{ $begalin->id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -450,9 +448,10 @@
         </div>
     </div>
 @endforeach
-</div>
 <!-- ./Modal Begalin -->
 
+
+        
         <!-- Medpart -->
         <div class="container-fluid medpart padding-top-bottom" id="terakhir">
             <div class="wrapper">
@@ -488,7 +487,7 @@
                     <div class="medpatr-card">
                         <div class="d-flex justify-content-center">
                             <div class="ratio ratio-1x1">
-                                <img src="{{ asset('assets/logoMedpart/event_center_id.png') }}" alt="">
+                                <img src="{{ asset('assets/logoMedpart/event_center_id.PNG') }}" alt="">
                             </div>
                         </div>
                     </div>
@@ -636,6 +635,9 @@
              </div>
         </div>
     </div>
+
+
+   
 @endsection
 
 @section('script')
@@ -675,7 +677,7 @@
             });
 
 
-            $(".carousel-contaner").owlCarousel({
+            $(".youtube_carousel").owlCarousel({
             loop: true,
             autoplay: true,
             autoplayTimeout: 5000,

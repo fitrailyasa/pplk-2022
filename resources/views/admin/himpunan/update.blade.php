@@ -54,13 +54,13 @@
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Visi</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Visi" name="visi" id="visi" value="{{ $himpunan->visi }}" >
+            <textarea class="form-control custom-txt-area" placeholder="Visi" name="visi" id="visi" value="{{ $himpunan->visi }}" >{{ $himpunan->visi }}</textarea>
           </div>
         </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Misi</label>
           <div class="col-sm-9">
-            <textarea class="form-control custom-txt-area misi" placeholder="Misi" name="misi" id="misi" value="{{ $himpunan->misi }}"  >{{ $himpunan->misi }}</textarea>
+            <textarea class="form-control custom-txt-area misi" placeholder="Misi" name="misi" id="misi" value="{{ $himpunan->misi }}">{{ $himpunan->misi }}</textarea>
           </div>
         </div>
         <div class="mb-3 row">

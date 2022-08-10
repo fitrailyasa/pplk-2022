@@ -23,13 +23,13 @@ class AdminUkmController extends Controller
         $jumlahUkm=$ukm->count();
 
         $hasilPolling=[$jumlahUkm];
-        for($i=0;$i<=$jumlahUkm-1;$i++){
-            $userid=$i+1;
+        for($i=0;$i<$jumlahUkm;$i++){
+            $userid=$i+245;
             $ukms=Ukm::where('id',$userid)->get()->first();
             $polling=polling::where('ukmsid',$ukms->id)->get();
             $hasilPolling[$i]=$polling->count();
         } 
-        return view('admin.ukm.index',['hasilPolling'=>$hasilPolling], compact('ukm'));
+        return view('admin.ukm.index',['hasilPolling'=>$hasilPolling,'jumlahUkm'=>$jumlahUkm], compact('ukm'));
     }
 
     /**

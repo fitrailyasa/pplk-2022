@@ -35,7 +35,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  @for($i =0; $i <= 39; $i++)
+                  @for($i =0; $i < $jumlahUkm; $i++)
                   <tr>
                     <td>{{$i+1}}</td>
                     <td>{{ $ukm[$i]->namaLengkap}}</td>

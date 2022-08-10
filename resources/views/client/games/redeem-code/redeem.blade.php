@@ -10,7 +10,9 @@
 @endsection
 
 @section('content')
+
     <!-- CONTENT -->
+
     <!-- start conten -->
     <div class="start-content">
         <div class="container-fluid redeem py-3 mt-4">
@@ -53,8 +55,7 @@
                         </div>
                         <div class="d-flex justify-content-center">
                             <!-- Button trigger modal -->>
-                            <button type="submit" class="btn btn-redeem" data-bs-toggle="modal"
-                                data-bs-target=".bd-example-modal-sm{{ $kode_game->code }}">
+                            <button type="submit" class="btn btn-redeem" data-bs-toggle="modal">
                                 <strong>REDEEM</strong>
                             </button>
                         </div>
