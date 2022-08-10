@@ -20,17 +20,17 @@
                             <div class="modal-carousel owl-carousel">
                                 <div class="modal-carousel-item justify-content-center w-100">
                                     <div class="ratio ratio-1x1">
-                                        <img class="opacity-100 rounded-3" src="{{ asset('assets/media/alley 5.png') }}" alt="">
+                                        <img class="opacity-100 rounded-3" src="{{ asset('assets/logoSponsorship/1.webp') }}" alt="">
                                     </div>
                                 </div>
                                 <div class="modal-carousel-item justify-content-center w-100">
                                     <div class="ratio ratio-1x1">
-                                        <img class="opacity-100 rounded-3" src="{{ asset('assets/media/alley 5.png') }}" alt="">
+                                        <img class="opacity-100 rounded-3" src="{{ asset('assets/logoSponsorship/goodDay.jfif') }}" alt="">
                                     </div>
                                 </div>
                                 <div class="modal-carousel-item justify-content-center w-100">
                                     <div class="ratio ratio-1x1">
-                                        <img class="opacity-100 rounded-3" src="{{ asset('assets/media/alley 5.png') }}" alt="">
+                                        <img class="opacity-100 rounded-3" src="{{ asset('assets/logoSponsorship/2.webp') }}" alt="">
                                     </div>
                                 </div>
                             </div>
