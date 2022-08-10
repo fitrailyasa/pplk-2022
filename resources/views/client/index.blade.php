@@ -487,7 +487,7 @@
                     <div class="medpatr-card">
                         <div class="d-flex justify-content-center">
                             <div class="ratio ratio-1x1">
-                                <img src="{{ asset('assets/logoMedpart/event_center_id.png') }}" alt="">
+                                <img src="{{ asset('assets/logoMedpart/event_center_id.PNG') }}" alt="">
                             </div>
                         </div>
                     </div>

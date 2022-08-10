@@ -22,7 +22,7 @@
         </div>
         <div class="container mb-5 mt-5 text-light">
             <h2>VISI</h2>
-            <p>{{ $himpunans->visi }}</p>
+            <p>{!!nl2br(e($himpunans->visi)) !!}</p>
             <h2>MISI</h2>
         <p>{!!nl2br(e($himpunans->misi)) !!}</p>
         </div>
@@ -34,9 +34,9 @@
     </div>
 
     <div class="container" id="container__filosofi-logo">
-        <div class="card-content rounded-5">
+        <div class="card-content rounded-3">
             <h2 class="name">Filosofi Logo</h2>
-            <p class="description">{{ $himpunans->filosofiLogo }}.</p>
+            <p class="description">{{ $himpunans->filosofiLogo }}</p>
         </div>
     </div>
 <br><br><br>
