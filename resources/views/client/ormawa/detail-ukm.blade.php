@@ -12,6 +12,11 @@
 
 @section('content')
     <!-- CONTENT -->
+    <div class="container-fluid mt-3 mt-md-5">
+        <a class="m-md-5" href="/ukm" title="Close">
+            <i class="fa-solid fa-2x bi bi-arrow-left-circle-fill close-button" style="color: white;"></i>
+        </a>
+    </div>
 <div class="himpunan justify-content-center px-0 mt-5">
             <div class="container justify-content-center">
                 <img src="{{ asset('assets/ukm/logo')}}/{{ $ukms->logo }}" class="hmp-img" alt="..." height="250px" width="250px">
@@ -19,13 +24,17 @@
                 <h5 class="px-0">DIES NATALIS : {{ $ukms->tahunBerdiri }}</h5>
                 <h5 class="px-0">PEMBINA UKM : {{ $ukms->pembina }}</h5>
                 <h5 class="px-0">KETUA UKM : {{ $ukms->ketuaUmum }}</h5>
+                
+                <h2 class="pt-5">DESKIRPSI</h2>
+                <p class="pb-5">{!!nl2br(e($ukms->deskripsi)) !!}</p>
+
                 <h2 class="px-0">VISI</h2>
                 <p class="px-0">{!!nl2br(e($ukms->visi)) !!}</p>
                 <h2 class="px-0">MISI</h2>
-                <p class="px-0">{!!nl2br(e($ukms->misi)) !!}</p>
+                <p class="pb-5">{!!nl2br(e($ukms->misi)) !!}</p>
             </div>
     <div class="container-fluid mt-3" id="box-in">
-        <div class="row" id="box-content-qr-ukm">
+        <div class="row py-4" id="box-content-qr-ukm">
 
             <div class="col-lg-4 col-md-6 col-sm-6 mx-auto">
                 <h2>SCAN CODE HERE</h2>
@@ -42,7 +51,7 @@
         </div>
     </div>
 </div>
-    <div class="himpunan-2 justify-content-center">
+    <div class="himpunan-2 justify-content-center mt-4">
         <h2 > FILOSOFI LOGO</h2>
         <h2 >{{ $ukms->namaSingkat }}</h2>
         <img src="{{ asset('assets/ukm/logo')}}/{{ $ukms->logo }}" class="hmp-img2" alt="..." width="250px" height="250px"></div>
@@ -58,9 +67,7 @@
     </div>
 <br><br><br>
 
-            <div class="swiper-button-next swiper-navBtn text-light"></div>
-            <div class="swiper-button-prev swiper-navBtn text-light"></div>
-            <div class="swiper-pagination"></div>
+            
         </div>
         <section class="slider_container_gambar mb-5" id="swipppp">
             <div class="slide-container-gambar justify-content-center mt-4 pt-4">
@@ -96,7 +103,7 @@
                             </div> -->
                         </div>
                     </div>
-                <div class="swiper-pagination"></div>
+                <!-- <div class="swiper-pagination"></div> -->
             </div>
         </section>
 

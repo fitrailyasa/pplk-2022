@@ -10,6 +10,11 @@
 
 @section('content')
     <!-- CONTENT -->
+    <div class="container-fluid mt-3 mt-md-5">
+        <a class="m-md-5" href="/prodi" title="Close">
+            <i class="fa-solid fa-2x bi bi-arrow-left-circle-fill close-button" style="color: white;"></i>
+        </a>
+    </div>
     <!-- Nama Prodi -->
     <div>
     <h1 class="text-center text-light display-3 py-md-4 fw-bold flex-wrap my-md-3"><strong>{{ $prodis->namaLengkap }}</strong>
@@ -37,6 +42,9 @@
 <!-- tentang kami, visi, misi -->
 <div class=" container">
     <div class="row text-center pt-4 text-light">
+    <h3 class="animasi"><strong>Deskrisi</strong></h3>
+        <p class="animasi pb-5">{!!nl2br(e($prodis->visi)) !!}</p>
+
         <h3 class="animasi"><strong>Visi</strong></h3>
         <p class="animasi">{!!nl2br(e($prodis->visi)) !!}</p>
         <h3 class="animasi"><strong>Misi</strong></h3>
