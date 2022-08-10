@@ -53,9 +53,9 @@
                         </div>
                         <div class="d-flex justify-content-center">
                             <!-- Button trigger modal -->>
-                            <button type="submit" class="btn btn-redeem" data-bs-toggle="modal"
+                            <button type="submit" class="btn btn-redeem text-light d-flex justify-content-center" data-bs-toggle="modal"
                                 data-bs-target=".bd-example-modal-sm{{ $kode_game->code }}">
-                                <strong>REDEEM</strong>
+                                <strong class="btn-tz">REDEEM</strong>
                             </button>
                         </div>
                     </form>

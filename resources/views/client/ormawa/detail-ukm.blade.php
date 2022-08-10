@@ -58,8 +58,8 @@
     </div>
 <br><br><br>
 
-            <div class="swiper-button-next swiper-navBtn text-light"></div>
-            <div class="swiper-button-prev swiper-navBtn text-light"></div>
+            <div class="swiper-button-next swiper-navBtn text-light d-none"></div>
+            <div class="swiper-button-prev swiper-navBtn text-light d-none"></div>
             <div class="swiper-pagination"></div>
         </div>
         <section class="slider_container_gambar mb-5" id="swipppp">

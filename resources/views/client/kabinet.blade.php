@@ -76,7 +76,7 @@
     <div class="slide-content">
         <div class="card-wrapper swiper-wrapper">
 
-            <div class="card swiper-slide">
+            <div class="card swiper-slide" style="height: 270px">
                 <div class="image-content">
                     <span class="overlay background-gradient"></span>
                     <div class="card-image">
@@ -84,12 +84,12 @@
                     </div>
                     </div>
                     <div class="card-content">
-                        <h2 class="name teks2">Lumba-Lumba</h2>
-                        <p class="description teks4">Merepresentasikan Kecerdasan</p>
+                        <h2 class="name">Lumba-Lumba</h2>
+                        <p class="description">Merepresentasikan Kecerdasan</p>
                     </div>
             </div>
 
-            <div class="card swiper-slide">
+            <div class="card swiper-slide" style="height: 270px">
                 <div class="image-content">
                     <span class="overlay background-gradient"></span>
                     <div class="card-image">
@@ -102,7 +102,7 @@
                 </div>
             </div>
 
-            <div class="card swiper-slide">
+            <div class="card swiper-slide" style="height: 270px">
                 <div class="image-content">
                     <span class="overlay background-gradient"></span>
                     <div class="card-image">
@@ -115,7 +115,7 @@
                 </div>
             </div>
 
-            <div class="card swiper-slide">
+            <div class="card swiper-slide" style="height: 270px">
                 <div class="image-content">
                     <span class="overlay background-gradient"></span>
                     <div class="card-image">
@@ -128,7 +128,7 @@
                 </div>
             </div>
 
-            <div class="card swiper-slide">
+            <div class="card swiper-slide" style="height: 270px">
                 <div class="image-content">
                     <span class="overlay background-gradient"></span>
 
@@ -142,7 +142,7 @@
                 </div>
             </div>
 
-            <div class="card swiper-slide">
+            <div class="card swiper-slide" style="height: 270px">
                 <div class="image-content">
                     <span class="overlay background-gradient"></span>
                     <div class="card-image">
@@ -155,7 +155,7 @@
                 </div>
             </div>
 
-            <div class="card swiper-slide">
+            <div class="card swiper-slide" style="height: 270px">
                 <div class="image-content">
                     <span class="overlay background-gradient"></span>
                     <div class="card-image">
@@ -168,7 +168,7 @@
                 </div>
             </div>
 
-            <div class="card swiper-slide">
+            <div class="card swiper-slide" style="height: 270px">
                 <div class="image-content">
                     <span class="overlay background-gradient"></span>
                     <div class="card-image">
@@ -181,7 +181,7 @@
                 </div>
             </div>
 
-            <div class="card swiper-slide">
+            <div class="card swiper-slide" style="height: 270px">
                 <div class="image-content">
                     <span class="overlay background-gradient"></span>
                     <div class="card-image">
