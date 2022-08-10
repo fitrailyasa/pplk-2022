@@ -32,9 +32,8 @@ class ClientKodeGameController extends Controller
     }
 
     public function sumscore(Request $request, $id){
-
-        $nomor = $request->input('nomor');
-        $kodeinput = $request->input('code');
+        $nomor = $request->nomor;
+        $kodeinput = $request->code;
         $kode=Kode_game::where('no',$nomor)->first();
         $kelompok=auth()->user()->kelompok;
         $token="$kelompok"."$kode->kode";
