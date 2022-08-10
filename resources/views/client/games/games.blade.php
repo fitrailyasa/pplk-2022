@@ -46,16 +46,16 @@
             <div class="container row justify-content-center pt-4 flex-wrap mx-auto">
                 <a class="p-4 text-light col-md-5 card rounded-4 justify-content-start text-decoration-none" href="/card-list" id="choose-games">
                     <h2 class="fw-bold">Redeem Kode</h2>
-                    <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et a diam egestas faucibu</p>
+                    <p class="">Redeem code nantinya dapat digunakan oleh para penjelajah angkasa untuk menukarkan point dari misi yang telah diselesaikan.</p>
                 </a>
                 <a class="p-4 text-light col-md-5 card rounded-4 justify-content-start text-decoration-none" href="/tebak-bangunan-game/{{ 1 }}" id="choose-games">
                     <h2 class="fw-bold">Tebak Bangunan</h2>
-                    <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et a diam egestas faucibu</p>
+                    <p class="">Tebak bangunan adalah permainan yang mengharuskan penjelajah angkasa untuk menebak nama-nama gedung atau bangunan yang ada di sekitar ITERA.</p>
                 </a>
             </div>
 
             <div class="row container-fluid justify-content-center p-5" id="leaderboard-tittle">
-               RANKING 3 TERTINGGI
+                3 RANKING TERTINGGI
             </div>
 
                 <div class="top-3-winner row row-cols-3 pb-4">
