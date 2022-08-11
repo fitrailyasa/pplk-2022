@@ -35,53 +35,43 @@
                   </tr>
                 </thead>
                 <tbody>
-                  @foreach ($ukms as $ukm)
+                  @for($i =0; $i < $jumlahUkm; $i++)
                   <tr>
-                    <td>{{$loop->iteration}}</td>
-                    <td>{{ $ukm->namaLengkap}}</td>
-                    <td>{{ $ukm->namaSingkat}}</td>
+                    <td>{{$i+1}}</td>
+                    <td>{{ $ukm[$i]->namaLengkap}}</td>
+                    <td>{{ $ukm[$i]->namaSingkat}}</td>
                     <td>
                     @if(auth()->user()->roles_id == 1)
-                    <a href="{{ route('super.pollingUkm',$ukm->id) }}" class="edit-button">
-                      <i class="fa-solid fa-eye"></i>
-                    </a>
-                    @elseif(auth()->user()->roles_id == 2)
-                    <a href="{{ route('admin.pollingUkm',$ukm->id) }}" class="edit-button">
-                      <i class="fa-solid fa-eye"></i>
-                    </a>
-                    @elseif(auth()->user()->roles_id == 4)
-                    <a href="{{ route('ukms.pollingUkm',$ukm->id) }}" class="edit-button">
-                      <i class="fa-solid fa-eye"></i>
-                    </a>
+                    {{ $hasilPolling[$i] }}
 
                     @endif
                   </td>
                     <td class="manage-row">
                     @if(auth()->user()->roles_id == 1)
-                        <a href="{{ route('super.ukm.show',$ukm->id) }}" class="edit-button">
+                        <a href="{{ route('super.ukm.show',$ukm[$i]->id) }}" class="edit-button">
                           <i class="fa-solid fa-eye"></i>
                         </a>
-                        <a href="{{ route('super.ukm.edit',$ukm->id) }}" class="edit-button">
+                        <a href="{{ route('super.ukm.edit',$ukm[$i]->id) }}" class="edit-button">
                           <i class="fa-solid fa-marker"></i>
                         </a>
                     @elseif(auth()->user()->roles_id == 2)
-                        <a href="{{ route('admin.ukm.show',$ukm->id) }}" class="edit-button">
+                        <a href="{{ route('admin.ukm.show',$ukm[$i]->id) }}" class="edit-button">
                           <i class="fa-solid fa-eye"></i>
                         </a>
-                        <a href="{{ route('admin.ukm.edit',$ukm->id) }}" class="edit-button">
+                        <a href="{{ route('admin.ukm.edit',$ukm[$i]->id) }}" class="edit-button">
                           <i class="fa-solid fa-marker"></i>
                         </a>
                         @elseif(auth()->user()->roles_id == 4)
-                        <a href="{{ route('ukms.ukm.show',$ukm->id) }}" class="edit-button">
+                        <a href="{{ route('ukms.ukm.show',$ukm[$i]->id) }}" class="edit-button">
                           <i class="fa-solid fa-eye"></i>
                         </a>
-                        <a href="{{ route('ukms.ukm.edit',$ukm->id) }}" class="edit-button">
+                        <a href="{{ route('ukms.ukm.edit',$ukm[$i]->id) }}" class="edit-button">
                           <i class="fa-solid fa-marker"></i>
                         </a>
                     @endif
                     @if(auth()->user()->roles_id == 1)
                       <!-- Modal -->
-                      <div class="modal fade bd-example-modal-sm{{$ukm->id}}" tabindex="-1" role="dialog" aria-hidden="true">
+                      <div class="modal fade bd-example-modal-sm{{$ukm[$i]->id}}" tabindex="-1" role="dialog" aria-hidden="true">
                         <div class="modal-dialog ">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -91,7 +81,7 @@
                                 </div>
                                 <div class="modal-body">Apakah anda yakin ingin menghapus data?</div>
                                 <div class="modal-footer">
-                                <form action="{{route('super.ukm.destroy', $ukm->id)}}" method="POST">
+                                <form action="{{route('super.ukm.destroy', $ukm[$i]->id)}}" method="POST">
                                 @method('DELETE')
                                     @csrf
                                     <input type="submit" class="btn btn-danger light" name="" id="" value="Hapus">
@@ -104,7 +94,7 @@
                     </td>
                     @endif
                   </tr>
-                  @endforeach
+                  @endfor
                 </tbody>
                 {{-- link paginate --}}
             </table>

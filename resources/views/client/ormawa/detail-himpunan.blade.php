@@ -12,6 +12,11 @@
 
 @section('content')
     <!-- CONTENT -->
+    <div class="container-fluid mt-3 mt-md-5">
+        <a class="m-md-5" href="/himpunan" title="Close">
+            <i class="fa-solid fa-2x bi bi-arrow-left-circle-fill close-button" style="color: white;"></i>
+        </a>
+    </div>
     <div class="himpunan p-0 justify-content-center">
         <img src="{{ asset('assets/himpunan')}}/{{ $himpunans->logo }}" class="hmp-img mt-4" alt="image">
         <h2 class="text-light">{{ $himpunans->namaSingkat }}</h2>
@@ -21,22 +26,24 @@
             <h5 class="px-0">KETUA HIMPUNAN : {{ $himpunans->ketuaHimpunan }}</h5>
         </div>
         <div class="container mb-5 mt-5 text-light">
-            <h2>VISI</h2>
-            <p>{{ $himpunans->visi }}</p>
+            <h2>DESKRIPSI</h2>
+            <p> {!!nl2br(e($himpunans->deskripsi)) !!} </p>
+            <h2 class="pt-5">VISI</h2>
+            <p>{!!nl2br(e($himpunans->visi)) !!}</p>
             <h2>MISI</h2>
-        <p>{!!nl2br(e($himpunans->misi)) !!}</p>
+            <p>{!!nl2br(e($himpunans->misi)) !!}</p>
         </div>
     </div>
     <div class="himpunan-2 justify-content-center mb-5 text-light">
         <h2> FILOSOFI LOGO</h2>
         <h2>{{ $himpunans->namaSingkat }}</h2>
-        <img src="{{ asset('assets/himpunan')}}/{{ $himpunans->logo }}" class="hmp-img2" alt="image">
+        <img src="{{ asset('assets/himpunan')}}/{{ $himpunans->logo }}" class="hmp-img" alt="image">
     </div>
 
     <div class="container" id="container__filosofi-logo">
-        <div class="card-content rounded-5">
+        <div class="card-content rounded-3">
             <h2 class="name">Filosofi Logo</h2>
-            <p class="description">{{ $himpunans->filosofiLogo }}.</p>
+            <p class="description">{{ $himpunans->filosofiLogo }}</p>
         </div>
     </div>
 <br><br><br>

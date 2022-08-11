@@ -34,13 +34,13 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Visi</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Visi" name="visi" id="visi" >
+              <textarea class="form-control custom-txt-area" placeholder="Visi" name="visi" id="visi"></textarea>
             </div>
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Misi</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Misi" name="misi" id="misi" >
+              <textarea class="form-control custom-txt-area" placeholder="Misi" name="misi" id="misi"></textarea>
             </div>
           </div>
           <div class="mb-3 row">
@@ -58,7 +58,7 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Dies Natalis</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Dies Natalis" name="tahunBerdiri" id="tahunBerdiri" >
+              <input type="number" class="form-control" placeholder="Dies Natalis" name="tahunBerdiri" id="tahunBerdiri" >
             </div>
           </div>
           <div class="mb-3 row">
@@ -73,7 +73,7 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Filosofi Logo</label>
             <div class="col-sm-9">
-              <textarea class="form-control custom-txt-area" placeholder="Filosofi Logo" name="filosofiLogo" id="filosofiLogo"  ></textarea>
+              <textarea class="form-control custom-txt-area" placeholder="Filosofi Logo" name="filosofiLogo" id="filosofiLogo"></textarea>
             </div>
           </div>
           <div class="mb-3 row">

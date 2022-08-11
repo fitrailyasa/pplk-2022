@@ -10,7 +10,9 @@
 @endsection
 
 @section('content')
+
     <!-- CONTENT -->
+
     <!-- start conten -->
     <div class="start-content">
         <div class="container-fluid redeem py-3 mt-4">
@@ -28,7 +30,7 @@
                     <div class="card rounded-4">
                         <div class="bg-white rounded-4">
                             <div class="ratio ratio-16x9 bg-white rounded-4">
-                                <img src="{{ asset('assets/logoCard/card.png') }}" class="card-img-top img-box" alt="...">
+                                <img src="{{ asset('assets/logoCard/card.webp') }}" class="card-img-top img-box" alt="...">
                             </div>
                         </div>
                         <div class="card-body">
@@ -53,9 +55,9 @@
                         </div>
                         <div class="d-flex justify-content-center">
                             <!-- Button trigger modal -->>
-                            <button type="submit" class="btn btn-redeem" data-bs-toggle="modal"
+                            <button type="submit" class="btn btn-redeem text-light d-flex justify-content-center" data-bs-toggle="modal"
                                 data-bs-target=".bd-example-modal-sm{{ $kode_game->code }}">
-                                <strong>REDEEM</strong>
+                                <strong class="btn-tz">REDEEM</strong>
                             </button>
                         </div>
                     </form>

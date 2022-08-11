@@ -191,10 +191,7 @@ Route::middleware(['auth'])->group(function () {
   Route::get('/game-home', [LeaderboardController::class, 'index']);
   Route::get('/card-list', [ClientKodeGameController::class, 'index']);
   Route::get('/redeem/{no}', [ClientKodeGameController::class, 'show']);
-//   Route::get('/redeem-failed', [ClientKodeGameController::class,]);
-  Route::get('/redeem-failed', function () {
-    return view('client.games.redeem-code.failed');
-  });
+  Route::get('/redeem-failed', function () { return view('client.games.redeem-code.failed');});
   Route::get('/redeem-success', function () { return view('client.games.redeem-code.success'); });
   Route::post('/submitcode/{id}', [ClientKodeGameController::class, 'sumscore'])->name('sumscore');
   Route::get('/tebak-bangunan',[ClientGameTebakBangunanController::class,'index']);
@@ -203,11 +200,21 @@ Route::middleware(['auth'])->group(function () {
   Route::get('/tebak-bangunan-selesai/{id}',[ClientGameTebakBangunanController::class,'restart']);
 
 
+
   // DEVELOPMENT TEAM
   Route::get('/dev-team', function () {
     return view('client.dev-team');
   });
+
+  Route::get('/ScannerDisiplin', function () {
+    return view('scanner.scannerDisplin');
+  });
+
+Route::post('/scannerDisiplinCreate', [ClientScannerController::class, 'disiplin']);
+
 });
 
 // Route::get('/gen', [ClientBiodataController::class, 'generateAllQrCode']);
 // Route::get('/hitung', [ClientBiodataController::class, 'hitunguser']);
+
+

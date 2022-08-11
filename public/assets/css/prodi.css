@@ -1,5 +1,5 @@
 body {
-    background-image: url(../background-2.png) !important;
+    background-image: url(../background-2.webp) !important;
     background-size: cover !important;
     background-position: 50% 5%;
     background-repeat: no-repeat;
@@ -25,10 +25,6 @@ body {
         rgba(130, 165, 234, 1) 100%
     ) !important;
     width: 20rem;
-}
-
-.dashboard-item-icon {
-    display: none;
 }
 
 .btn {

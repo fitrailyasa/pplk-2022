@@ -36,13 +36,13 @@
         <div class=" mb-3 row" >
           <label class=" col-sm-3 col-form-label" >Visi</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="{{ $ukm->visi }}" name="visi" id="visi" disabled>
+            <textarea class="form-control custom-txt-area" placeholder="{{ $ukm->visi }}" name="visi" id="visi" disabled value="{{ $ukm->visi }}" >{{ $ukm->visi }}</textarea>
           </div>
         </div>
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Misi</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="{{ $ukm->misi }}" name="misi" id="misi" disabled>
+            <textarea class="form-control custom-txt-area" placeholder="{{ $ukm->misi }}" name="misi" id="misi" disabled value="{{ $ukm->misi }}" >{{ $ukm->misi }}</textarea>
           </div>
         </div>
         <div class="mb-3 row">
@@ -72,7 +72,7 @@
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Filosofi Logo</label>
           <div class="col-sm-9">
-            <textarea class="form-control custom-txt-area" placeholder="Filosofi Logo" name="filosofiLogo" id="filosofiLogo" value="{{ $ukm->filosofiLogo }}" >{{ $ukm->filosofiLogo }}</textarea>
+            <textarea class="form-control custom-txt-area" placeholder="{{ $ukm->filosofiLogo }}" name="filosofiLogo" id="filosofiLogo" disabled value="{{ $ukm->filosofiLogo }}" >{{ $ukm->filosofiLogo }}</textarea>
           </div>
         </div>
         <div class="mb-3 row">
