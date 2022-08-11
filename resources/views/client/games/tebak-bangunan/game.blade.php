@@ -24,7 +24,7 @@
       <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
         <div class="card-border w-100 rounded-5">
           <div class="card rounded-5 ap-cd w-100">
-            <img src="{{ asset('assets/tebakBangunan/'. $soal->namaBangunan.'.png') }}" alt="" class="card-img-top bg-secondary rounded-5 ratio ratio-16x9" />
+            <img src="{{ asset('assets/tebakBangunan/'. $soal->namaBangunan.'.webp') }}" alt="" class="card-img-top bg-secondary rounded-5 ratio ratio-16x9" />
             <div class="card-body">
               <h3 class="card-title text-center text-white"> {{ $soal->soal }}</h3>
             </div>
@@ -55,7 +55,7 @@
     </div>
     <div class="row justify-content-center">
       <div class="col-2 d-flex justify-content-center align-items-start p-0 my-2">
-        <button type="button" class="rounded d-flex align-items-center justify-content-center text-white w-100 chc-1">Pilih</button>
+        <!-- <button type="button" class="btn-pilih rounded d-flex align-items-center justify-content-center text-gray about-senat w-100 chc-1">Pilih</button> -->
       </div>
     </div>
   </div>

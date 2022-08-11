@@ -38,7 +38,7 @@ a {
 }
 
 body {
-    background-image: url(../background-2.png);
+    background-image: url(../background-2.webp);
     background-size: cover;
     background-position: 50% 5%;
     background-repeat: no-repeat;
@@ -60,7 +60,7 @@ body {
 .landing-page {
     aspect-ratio: 16/9;
     height: 30%;
-    background-image: url(../Rectangle.png);
+    background-image: url(../Rectangle.webp);
     background-size: cover;
     background-position: 50% 0%;
     transform: translateY(-4.5rem);
@@ -300,7 +300,7 @@ body {
 }
 
 .owl-theme .owl-nav i {
-    display: none;p
+    display: none;
 }
 
 .owl-dots {
@@ -337,9 +337,14 @@ body {
     color: #fff;
     text-align: center;
     margin: 20px 0;
-    border: #000 solid 1px;
+    /* border: #000 solid 1px; */
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.medpatr-card div .ratio img {
+    border-radius: 10px;
+    object-fit: contain;
 }
 
 .truncate {

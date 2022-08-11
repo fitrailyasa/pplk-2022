@@ -47,12 +47,12 @@
                     </div>
                     <a href ="{{ url('/card-list') }}" >
                         <div class="d-flex justify-content-center">
-                        <button type="submit" class="btn btn-redeem">SELESAI</button>
+                        <button type="submit" class="btn btn-redeem pt-4">SELESAI</button>
                     </div>
                 </a>
                 <a href="{{ url('/game-home') }}">
                     <div class="d-flex justify-content-center">
-                        <button type="submit" class="btn btn-redeem">LEADERBOARD</button>
+                        <button type="submit" class="btn btn-redeem pt-3">LEADERBOARD</button>
                     </div>
                 </a>
 

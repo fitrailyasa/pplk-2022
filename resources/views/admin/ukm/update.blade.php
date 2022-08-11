@@ -67,7 +67,7 @@
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Logo</label>
           <div class="col-sm-9">
-            <input type="file" accept="image/*" class="form-control" name="logo" id="logo" value="{{ $ukm->logo }}">
+            <input type="file" accept="image/*" class="form-control" name="logo" id="logo">
           </div>
           @error('logo')
           <div class="alert alert-danger">{{ $message }}</div>
@@ -91,7 +91,7 @@
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Deskripsi</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Nama Pembina" name="deskripsi" id="deskripsi" value="{{ $ukm->deskripsi }}">
+            <input type="text" class="form-control" placeholder="Deskripsi" name="deskripsi" id="deskripsi" value="{{ $ukm->deskripsi }}">
           </div>
         </div>
         <div class="mb-3 row">

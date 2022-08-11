@@ -46,22 +46,22 @@
             <div class="container row justify-content-center pt-4 flex-wrap mx-auto">
                 <a class="p-4 text-light col-md-5 card rounded-4 justify-content-start text-decoration-none" href="/card-list" id="choose-games">
                     <h2 class="fw-bold">Redeem Kode</h2>
-                    <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et a diam egestas faucibu</p>
+                    <p class="">Redeem code nantinya dapat digunakan oleh para penjelajah angkasa untuk menukarkan point dari misi yang telah diselesaikan.</p>
                 </a>
                 <a class="p-4 text-light col-md-5 card rounded-4 justify-content-start text-decoration-none" href="/tebak-bangunan-game/{{ 1 }}" id="choose-games">
                     <h2 class="fw-bold">Tebak Bangunan</h2>
-                    <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et a diam egestas faucibu</p>
+                    <p class="">Tebak bangunan adalah permainan yang mengharuskan penjelajah angkasa untuk menebak nama-nama gedung atau bangunan yang ada di sekitar ITERA.</p>
                 </a>
             </div>
 
             <div class="row container-fluid justify-content-center p-5" id="leaderboard-tittle">
-               RANKING 3 TERTINGGI
+                3 RANKING TERTINGGI
             </div>
 
                 <div class="top-3-winner row row-cols-3 pb-4">
                     <div class="winner-2 winner">
                         <div class="profile-winner">
-                            <img src="{{ asset('assets/juara2.png') }}" alt="Juara 2" />
+                            <img src="{{ asset('assets/juara2.webp') }}" alt="Juara 2" />
                             <div class="winner-patch">
                                 <h1 class="winner-text">
                                     2
@@ -87,9 +87,9 @@
                         <div class="profile-winner">
                             <div class="crown">
                                 <!--<a href='https://pngtree.com/so/big'>big png from pngtree.com/</a>-->
-                                <img src="{{ asset('assets/Golden Crown.png') }}" alt="crown" class="crown-img"/>
+                                <img src="{{ asset('assets/Golden Crown.webp') }}" alt="crown" class="crown-img"/>
                             </div>
-                            <img src="{{ asset('assets/juara1.png') }}" alt="Juara 1" />
+                            <img src="{{ asset('assets/juara1.webp') }}" alt="Juara 1" />
                             <div class="winner-patch">
                                 <h1 class="winner-text">
                                     1
@@ -115,7 +115,7 @@
 
                     <div class="winner-3 winner">
                         <div class="profile-winner">
-                            <img src="{{ asset('assets/juara3.png') }}" alt="Juara 3" />
+                            <img src="{{ asset('assets/juara3.webp') }}" alt="Juara 3" />
                             <div class="winner-patch">
                                 <h1 class="winner-text">
                                     3

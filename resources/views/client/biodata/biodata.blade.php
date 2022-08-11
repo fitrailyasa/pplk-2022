@@ -19,7 +19,7 @@
 
                     <div class="bio-profile mx-auto">
                         @if ($biodata->fotoProfil == null)
-                        <img class="ratio ratio-1x1 profile" src="{{ asset('assets/profile') }}/default.png" alt="fotoprofil">
+                        <img class="ratio ratio-1x1 profile" src="{{ asset('assets/profile') }}/default.webp" alt="fotoprofil">
                         @elseif($biodata->fotoProfil != null)
                         <img class="ratio ratio-1x1 profile" src="{{ asset('assets/profile') }}/{{ $biodata->fotoProfil }}" alt="fotoprofil">
                         @endif
@@ -39,7 +39,7 @@
                         <div class="w-100">
                             <div class="ratio ratio-1x1 content rounded">
                                     <iframe id="qrCode" src="{{ asset('assets/qrCode')}}/{{ $biodata->qrCode }} "></iframe>
-                                    <img src="{{ asset('assets/logomini.png') }}" alt="logo kecil">
+                                    <img src="{{ asset('assets/logomini.webp') }}" alt="logo kecil">
                                 </div>
                             </div><!-- col-2 -->
                             <button class="btn btn-primary mb-5" onclick="window.print()">

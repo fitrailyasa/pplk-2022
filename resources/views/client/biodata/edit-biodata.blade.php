@@ -17,7 +17,7 @@
                 <div class="col-lg-3 col-md-10 col-sm-12 justify-content-center">
                     <div class="center">
                         @if ($viewbiodata->fotoProfil == null)
-                        <img class="ratio ratio-1x1 profile" style="" src="{{ asset('assets/profile') }}/default.png" alt="fotoprofil">
+                        <img class="ratio ratio-1x1 profile" style="" src="{{ asset('assets/profile') }}/default.webp" alt="fotoprofil">
                         @elseif($viewbiodata->fotoProfil != null)
                         <img class="ratio ratio-1x1 profile" style="" src="{{ asset('assets/profile') }}/{{ $viewbiodata->fotoProfil }}" alt="fotoprofil">
                         @endif
@@ -82,7 +82,7 @@
                                 <input value="{{ $viewbiodata->nomorHp }}"name="nomorHp"type="text" placeholder="{{ $viewbiodata->nomorHp }}" @if(auth()->user()->roles_id == 9) disabled @endif>
                             </div>
 
-                            <div class="row bio-input" @if(auth()->user()->roles_id == 9) onclick="window.location.href='https://instagram.com/fitrailyasa'" @endif style="cursor: pointer;">
+                            <div class="row bio-input">
                                 <label class="form-label" for="instagram">Instagram</label>
                                 <input value="{{ $viewbiodata->instagram }}"name="instagram" type="text" placeholder="{{ $viewbiodata->nomorHp }}" @if(auth()->user()->roles_id == 9) disabled @endif>
                             </div>

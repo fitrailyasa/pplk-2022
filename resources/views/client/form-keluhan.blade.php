@@ -17,15 +17,19 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-10">
-            <div class="row justify-content-center">
-              <div class="col-md-6">
-              <br><h3 style="color: #FFF;" class="heading mb-4" ></p>PPLK 2022 </h3>
-                <h6 style="color: #FFF;" >Program Pengenalan Lingkungan Kampus <br> Institut Teknologi Sumatera <br><br><br>
-                <img src="{{ asset('assets/Maskot-Orang Utan-1.png') }}" alt="Image" class="img-fluid"></h6> <br><br><br>
+            <div class="row justify-content-start">
+              <div class="col-md-6 col-sm-11">
+              <br><h3 style="color: #FFF;" class="heading mb-4 justify-content-center" ></p>PPLK 2022 </h3>
+                <h6 style="color: #FFF;" >laporkan Keluhanmu terkait pelaksanaan <br>PPlk 2022 Institut Teknologi Sumatera <br><br><br></h6>
               </div>
 
+            </div>
+              
+            <div class="row">
+              <div class="col-md-6 col-sm-12 justify-content-center">
+                  <img src="{{ asset('assets/Maskot-Orang Utan-1.webp') }}" alt="Image" class="img-size">
+              </div>
               <div class="col-md-6">
-                <br><br>
                   <form class="mb-5" enctype="multipart/form-data" method="post" action="/form-keluhan/{{ $users->id }}" id="contactForm" name="contactForm">
                   @csrf
                     <div class="row">
@@ -48,7 +52,7 @@
                       <textarea class="form-control" name="keluhan" id="keluhan" cols="30" rows="7" placeholder="Tuliskan keluhan anda"></textarea>
                     </div>
                   </div>
-                  <div class="row">
+                  <div class="row"style="overflow-x : hidden;">
                     <div class="col-md-12 form-group ">
                       <div class="image" name="foto"> </div>
                     <input id="default-btn" type="file" name="bukti" required>

@@ -18,7 +18,7 @@
         <div class="col-md-12">
             <div class="row">
             <div class="col-md-2 my-5 ms-md-auto" style="text-align-last: center;">
-                <img src="{{ asset('assets/logo/logokabinet.png') }}" alt="Image" class="logo1" >
+                <img src="{{ asset('assets/logo/logokabinet.webp') }}" alt="Image" class="logo1" >
             </div>
             <div class="col-md-6 justify-content-start teks1">
                 <h2 class="fw-bold teks2 " >KABINET KM ITERA</h2>
@@ -67,7 +67,7 @@
         <p class="teks5">3.Memaksimalkan penyaluran informasi dan pelayanan advokasi dengan pengawalan yang terstruktur dan terarah Refleksi KM ITERA</p>
         <h2 class="text-center fw-bold teks3">FILOSOFI LOGO</h2>
         <h3 class="text-center fw-bold teks3">KABINET KM</h3>
-        <img src="{{ asset('assets/logo/logokabinet.png') }}" class="mx-auto d-block" alt="...">
+        <img src="{{ asset('assets/logo/logokabinet.webp') }}" class="mx-auto d-block" alt="...">
         </div>
     </div>
 </div>
@@ -76,24 +76,24 @@
     <div class="slide-content">
         <div class="card-wrapper swiper-wrapper">
 
-            <div class="card swiper-slide">
+            <div class="card swiper-slide" style="height: 270px">
                 <div class="image-content">
                     <span class="overlay background-gradient"></span>
                     <div class="card-image">
-                        <img src="{{ asset('assets/logo/lumbalumba.png') }}" alt="lumba lumba" class="card-img">
+                        <img src="{{ asset('assets/logo/lumbalumba.webp') }}" alt="lumba lumba" class="card-img">
                     </div>
                     </div>
                     <div class="card-content">
-                        <h2 class="name teks2">Lumba-Lumba</h2>
-                        <p class="description teks4">Merepresentasikan Kecerdasan</p>
+                        <h2 class="name">Lumba-Lumba</h2>
+                        <p class="description">Merepresentasikan Kecerdasan</p>
                     </div>
             </div>
 
-            <div class="card swiper-slide">
+            <div class="card swiper-slide" style="height: 270px">
                 <div class="image-content">
                     <span class="overlay background-gradient"></span>
                     <div class="card-image">
-                        <img src="{{ asset('assets/logo/Lingkaran.png') }}" alt="lingkaran" class="card-img">
+                        <img src="{{ asset('assets/logo/Lingkaran.webp') }}" alt="lingkaran" class="card-img">
                     </div>
                 </div>
                 <div class="card-content">
@@ -102,11 +102,11 @@
                 </div>
             </div>
 
-            <div class="card swiper-slide">
+            <div class="card swiper-slide" style="height: 270px">
                 <div class="image-content">
                     <span class="overlay background-gradient"></span>
                     <div class="card-image">
-                        <img src="{{ asset('assets/logo/Tunasapikal.png') }}" alt="Tunasapikal" class="card-img">
+                        <img src="{{ asset('assets/logo/Tunasapikal.webp') }}" alt="Tunasapikal" class="card-img">
                     </div>
                 </div>
                 <div class="card-content">
@@ -115,11 +115,11 @@
                 </div>
             </div>
 
-            <div class="card swiper-slide">
+            <div class="card swiper-slide" style="height: 270px">
                 <div class="image-content">
                     <span class="overlay background-gradient"></span>
                     <div class="card-image">
-                        <img src="{{ asset('assets/logo/ombak.png') }}" alt="ombak" class="card-img">
+                        <img src="{{ asset('assets/logo/ombak.webp') }}" alt="ombak" class="card-img">
                     </div>
                 </div>
                 <div class="card-content">
@@ -128,12 +128,12 @@
                 </div>
             </div>
 
-            <div class="card swiper-slide">
+            <div class="card swiper-slide" style="height: 270px">
                 <div class="image-content">
                     <span class="overlay background-gradient"></span>
 
                     <div class="card-image">
-                        <img src="{{ asset('assets/logo/daunfotosintesis.png') }}" alt="daunfotosintesis" class="card-img">
+                        <img src="{{ asset('assets/logo/daunfotosintesis.webp') }}" alt="daunfotosintesis" class="card-img">
                     </div>
                 </div>
                 <div class="card-content">
@@ -142,11 +142,11 @@
                 </div>
             </div>
 
-            <div class="card swiper-slide">
+            <div class="card swiper-slide" style="height: 270px">
                 <div class="image-content">
                     <span class="overlay background-gradient"></span>
                     <div class="card-image">
-                        <img src="{{ asset('assets/logo/daun7.png') }}" alt="daun7" class="card-img">
+                        <img src="{{ asset('assets/logo/daun7.webp') }}" alt="daun7" class="card-img">
                     </div>
                 </div>
                 <div class="card-content">
@@ -155,11 +155,11 @@
                 </div>
             </div>
 
-            <div class="card swiper-slide">
+            <div class="card swiper-slide" style="height: 270px">
                 <div class="image-content">
                     <span class="overlay background-gradient"></span>
                     <div class="card-image">
-                        <img src="{{ asset('assets/logo/gerigi.png') }}" alt="gerigi" class="card-img">
+                        <img src="{{ asset('assets/logo/gerigi.webp') }}" alt="gerigi" class="card-img">
                     </div>
                 </div>
                 <div class="card-content">
@@ -168,11 +168,11 @@
                 </div>
             </div>
 
-            <div class="card swiper-slide">
+            <div class="card swiper-slide" style="height: 270px">
                 <div class="image-content">
                     <span class="overlay background-gradient"></span>
                     <div class="card-image">
-                        <img src="{{ asset('assets/logo/lidahapi.png') }}" alt="lidahapi" class="card-img">
+                        <img src="{{ asset('assets/logo/lidahapi.webp') }}" alt="lidahapi" class="card-img">
                     </div>
                 </div>
                 <div class="card-content">
@@ -181,11 +181,11 @@
                 </div>
             </div>
 
-            <div class="card swiper-slide">
+            <div class="card swiper-slide" style="height: 270px">
                 <div class="image-content">
                     <span class="overlay background-gradient"></span>
                     <div class="card-image">
-                        <img src="{{ asset('assets/logo/tangan.png') }}" alt="tangan" class="card-img">
+                        <img src="{{ asset('assets/logo/tangan.webp') }}" alt="tangan" class="card-img">
                     </div>
                 </div>
                 <div class="card-content">
@@ -207,28 +207,28 @@
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" >
         <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="{{ asset('assets/organigram/akspro.png') }}" class="d-block w-100" alt="...">
+            <img src="{{ asset('assets/organigram/akspro.webp') }}" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="{{ asset('assets/organigram/kesekre.png') }}" class="d-block w-100" alt="...">
+            <img src="{{ asset('assets/organigram/kesekre.webp') }}" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="{{ asset('assets/organigram/keuangan.png') }}" class="d-block w-100" alt="...">
+            <img src="{{ asset('assets/organigram/keuangan.webp') }}" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="{{ asset('assets/organigram/eksternal.png') }}" class="d-block w-100" alt="...">
+            <img src="{{ asset('assets/organigram/eksternal.webp') }}" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="{{ asset('assets/organigram/kominfo.png') }}" class="d-block w-100" alt="...">
+            <img src="{{ asset('assets/organigram/kominfo.webp') }}" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="{{ asset('assets/organigram/internal.png') }}" class="d-block w-100" alt="...">
+            <img src="{{ asset('assets/organigram/internal.webp') }}" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="{{ asset('assets/organigram/ppm.png') }}" class="d-block w-100" alt="...">
+            <img src="{{ asset('assets/organigram/ppm.webp') }}" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="{{ asset('assets/organigram/presmasekjen.png') }}" class="d-block w-100" alt="...">
+            <img src="{{ asset('assets/organigram/presmasekjen.webp') }}" class="d-block w-100" alt="...">
         </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

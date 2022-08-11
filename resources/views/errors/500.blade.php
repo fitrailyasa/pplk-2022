@@ -24,8 +24,8 @@
 
     <div class="stars">
         <div class="central-body">
-            <img class="image-404" src="{{ asset('assets/500.png') }}" width="450px">
-            <a href="#" class="btn-go-home">Kembali!!</a>
+            <img class="image-404" src="{{ asset('assets/500.webp') }}" width="450px">
+            <a href="/beranda" class="btn-go-home">Kembali!!</a>
         </div>
         <div class="objects" onclick="window.location.href='https://instagram.com/fitrailyasa'" style="cursor: pointer;">
             <svg class="object_rocket" width="40px" height="43" viewBox="0 0 54 43" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -48,11 +48,11 @@
                 <path d="M16.2873 40.8816C15.718 41.2706 14.6572 41.2706 14.6572 41.2706C14.848 40.7347 15.1789 40.2597 15.6155 39.8951C15.7458 39.806 15.9062 39.7723 16.0614 39.8015C16.2166 39.8307 16.3538 39.9203 16.4429 40.0507C16.532 40.181 16.5656 40.3414 16.5364 40.4966C16.5073 40.6518 16.4176 40.789 16.2873 40.8781V40.8816Z" fill="#FFCB39"/>
             </svg>
             <div class="earth-moon" onclick="window.location.href='https://instagram.com/fitrailyasa'" style="cursor: pointer;">
-                <img class="object_earth" src="{{ asset('assets/Planet 20.png') }}" width="120px">
-                <img class="object_moon" src="{{ asset('assets/earth.png') }}" width="40px">
+                <img class="object_earth" src="{{ asset('assets/Planet 20.webp') }}" width="120px">
+                <img class="object_moon" src="{{ asset('assets/earth.webp') }}" width="40px">
             </div>
             <div class="box_astronaut" onclick="window.location.href='https://instagram.com/fitrailyasa'" style="cursor: pointer;">
-                <img src="{{ asset('assets/Maskot2.png') }}" class="object_astronaut" width="200px">
+                <img src="{{ asset('assets/Maskot2.webp') }}" class="object_astronaut" width="200px">
             </div>
         </div>
         <div class="glowing_stars" onclick="window.location.href='https://instagram.com/fitrailyasa'" style="cursor: pointer;">
