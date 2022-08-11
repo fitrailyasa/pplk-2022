@@ -151,10 +151,10 @@ class ClientBiodataController extends Controller
             $viewbiodata = User::find($id);
             $password = 'password';
 
-            if ($request->input('password') == 'kosong') {
+            if ($request->input('password') ==  $viewbiodata->password) {
                 $password = $viewbiodata->password;
-            }else{
-                $password =Hash::make($request->password);
+            }else {
+                $password =  Hash::make($request->password) ;
             }
                     // memberikan nilai baru ke column
                 $nim = $request->input('nim');

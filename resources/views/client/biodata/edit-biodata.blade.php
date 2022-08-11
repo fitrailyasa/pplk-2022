@@ -54,7 +54,7 @@
 
                             <div class="row bio-input">
                                 <label class="form-label" for="password">Password</label>
-                                <input  value="kosong" name="password" type="text" placeholder="Password Baru"  @if(auth()->user()->roles_id == 9) disabled @endif>
+                                <input  value="{{ $viewbiodata->password }}" name="password" type="text" placeholder="Password Baru"  @if(auth()->user()->roles_id == 9) disabled @endif>
                             </div>
 
                             <div class="row bio-input">
