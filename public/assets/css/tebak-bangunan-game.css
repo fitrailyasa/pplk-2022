@@ -508,3 +508,13 @@ body {
     right: 0;
     transform: translate(-100%, 100%);
 }
+
+.btn-pilih{
+    color: gray !important;;
+    border: none !important;
+    border-radius: 10px !important;
+    padding: 10px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    cursor: pointer!important;
+}

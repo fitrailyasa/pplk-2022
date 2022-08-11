@@ -101,7 +101,7 @@
               <div class="col-sm-9">
               <select style="width:100px;" selected class="selected" name="jurusan_id" value="{{ $prodi->jurusan_id }}">
                 <option value="1" >JTIK</option>
-                <option value="2">JTIP</option>
+                <option value="2">JTPI</option>
                 <option value="3">JS</option>
               </select>
             </div>
