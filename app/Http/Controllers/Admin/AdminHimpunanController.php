@@ -143,6 +143,7 @@ class AdminHimpunanController extends Controller
             // File upload location
             $location = '../public/assets/himpunan/';
             $himpunan->logo = $filename;
+            $himpunan->update();
             $file->move($location, $filename);
         }
         if (auth()->user()->roles_id == 1) {
