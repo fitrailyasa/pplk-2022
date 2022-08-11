@@ -69,7 +69,7 @@
                     @endif
                     <td class="manage-row">
                         @if (auth()->user()->roles_id == 1 )
-                          <a href="{{ route('admin.dapmenUser.show', $user->id)}}" class="edit-button">
+                          <a href="{{ route('super.dapmenUser.show', $user->id)}}" class="edit-button">
                             <i class="fa-solid fa-eye"></i>
                           </a>
                           <a href="{{ route('super.user.edit', $user->id)}}" class="edit-button">
