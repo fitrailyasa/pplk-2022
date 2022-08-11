@@ -54,10 +54,10 @@
                 </p>
             </div>
             <div class="col d-flex" >
-                <img class="mx-auto" style="justify-content: center; height:400px;" src="../assets/our-team/Uls.png" alt="">
+                <img class="mx-auto" style="justify-content: center; height:400px;" src="../assets/our-team/Uls.webp" alt="">
             </div>
             <div class="col caption logo-ardhames">
-                <img class="mx-auto" style="justify-content: flex; height:400px;" src="../assets/Ardhames-logo.png" alt="">
+                <img class="mx-auto" style="justify-content: flex; height:400px;" src="../assets/Ardhames-logo.webp" alt="">
             </div>
         </div>
     </div>
@@ -76,7 +76,7 @@
                 </p>
                 <a class="btn btn-primary" href="#frontend" role="button" type="button">Staff</a>
             </div>
-            <img src="../assets/our-team/adi.png" alt="">
+            <img src="../assets/our-team/adi.webp" alt="">
         </div>
 
         <!-- BE -->
@@ -90,7 +90,7 @@
                 </p>
                 <a class="btn btn-primary" href="#backend" role="button" type="button">Staff</a>
             </div>
-            <img src="../assets/our-team/fitra.png" alt="">
+            <img src="../assets/our-team/fitra.webp" alt="">
         </div>
 
         <!-- VVD -->
@@ -104,7 +104,7 @@
                 </p>
                 <a class="btn btn-primary" href="#vvd" role="button" type="button">Staff</a>
             </div>
-            <img src="../assets/our-team/Adiws.PNG" alt="">
+            <img src="../assets/our-team/Adiws.webp" alt="">
         </div>
 
         <!-- CR -->
@@ -118,7 +118,7 @@
                 </p>
                 <a class="btn btn-primary" href="#cr" role="button" type="button">Staff</a>
             </div>
-            <img src="../assets/our-team/sinta.png" alt="">
+            <img src="../assets/our-team/sinta.webp" alt="">
         </div>
         <!-- closing tag desktop container -->
     </div>
@@ -135,7 +135,7 @@
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                  <div class="card-image">
-                                     <img src="../assets/our-team/yondi.png" alt="" class="card-img">
+                                     <img src="../assets/our-team/yondi.webp" alt="" class="card-img">
                                  </div>
                                  <div class="card-content">
                                      <h2 class="name" style="font-size: 17px;">Yondika Vio Landa</h2>
@@ -146,7 +146,7 @@
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                 <div class="card-image">
-                                    <img src="../assets/our-team/fujita.png" alt="" class="card-img">
+                                    <img src="../assets/our-team/fujita.webp" alt="" class="card-img">
                                 </div>
                                 <div class="card-content">
                                     <h2 class="name">Fujita Rahmah</h2>
@@ -157,7 +157,7 @@
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                 <div class="card-image">
-                                    <img src="../assets/our-team/alvin.png" alt="" class="card-img">
+                                    <img src="../assets/our-team/alvin.webp" alt="" class="card-img">
                                 </div>
                                 <div class="card-content">
                                     <h2 class="name" style="font-size: 16px;">Alvin Yoga Kesuma</h2>
@@ -168,7 +168,7 @@
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                 <div class="card-image">
-                                    <img src="../assets/our-team/kris.png" alt="" class="card-img">
+                                    <img src="../assets/our-team/kris.webp" alt="" class="card-img">
                                 </div>
                                 <div class="card-content">
                                     <h2 class="name">Christian A.N Biran</h2>
@@ -179,7 +179,7 @@
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                  <div class="card-image">
-                                     <img src="../assets/our-team/nurbaiti.png" alt="" class="card-img">
+                                     <img src="../assets/our-team/nurbaiti.webp" alt="" class="card-img">
                                  </div>
                                  <div class="card-content">
                                      <h2 class="name">Nurbaiti</h2>
@@ -190,7 +190,7 @@
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                  <div class="card-image">
-                                     <img src="../assets/our-team/qomar.png" alt="" class="card-img">
+                                     <img src="../assets/our-team/qomar.webp" alt="" class="card-img">
                                  </div>
                                  <div class="card-content">
                                      <h2 class="name" style="font-size: 16px;">Muhammad Qomarudin</h2>
@@ -201,7 +201,7 @@
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                  <div class="card-image">
-                                     <img src="../assets/our-team/bilhaq.png" alt="" class="card-img">
+                                     <img src="../assets/our-team/bilhaq.webp" alt="" class="card-img">
                                  </div>
                                  <div class="card-content">
                                      <h2 class="name" style="font-size: 16px;">Bilhaq Avi Dewantara</h2>
@@ -212,7 +212,7 @@
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                  <div class="card-image">
-                                     <img src="../assets/our-team/nuroni.png" alt="" class="card-img">
+                                     <img src="../assets/our-team/nuroni.webp" alt="" class="card-img">
                                  </div>
                                  <div class="card-content">
                                      <h2 class="name">Nurroni</h2>
@@ -238,7 +238,7 @@
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                 <div class="card-image">
-                                    <img src="../assets/our-team/aldi.png" alt="" class="card-img">
+                                    <img src="../assets/our-team/aldi.webp" alt="" class="card-img">
                                 </div>
                                 <div class="card-content">
                                     <h2 class="name" style="font-size: 16px;">Rivaldi Y. Nainggolan</h2>
@@ -249,7 +249,7 @@
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                 <div class="card-image">
-                                    <img src="../assets/our-team/hans.png" alt="" class="card-img">
+                                    <img src="../assets/our-team/hans.webp" alt="" class="card-img">
                                 </div>
                                 <div class="card-content">
                                      <h2 class="name" style="font-size: 16px;">Hans Bonatua Batubara</h2>
@@ -260,7 +260,7 @@
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                  <div class="card-image">
-                                     <img src="../assets/our-team/faza.png" alt="" class="card-img">
+                                     <img src="../assets/our-team/faza.webp" alt="" class="card-img">
                                  </div>
                                  <div class="card-content">
                                      <h2 class="name">M.Khalil R. Faza</h2>
@@ -272,7 +272,7 @@
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                  <div class="card-image">
-                                     <img src="../assets/our-team/ibnu.png" alt="" class="card-img">
+                                     <img src="../assets/our-team/ibnu.webp" alt="" class="card-img">
                                  </div>
                                  <div class="card-content">
                                      <h2 class="name">M Ibnu Prayogi</h2>
@@ -283,7 +283,7 @@
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                  <div class="card-image">
-                                     <img src="../assets/our-team/ata.png" alt="" class="card-img">
+                                     <img src="../assets/our-team/ata.webp" alt="" class="card-img">
                                  </div>
                                  <div class="card-content">
                                      <h2 class="name" style="font-size: 16px;">Athallah Ahza Falah </h2>
@@ -294,7 +294,7 @@
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                  <div class="card-image">
-                                     <img src="../assets/our-team/kevin.png" alt="" class="card-img">
+                                     <img src="../assets/our-team/kevin.webp" alt="" class="card-img">
                                  </div>
                                  <div class="card-content">
                                      <h2 class="name" style="font-size: 16px;">Kevin Simorangkir</h2>
@@ -320,7 +320,7 @@
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                 <div class="card-image">
-                                    <img src="../assets/our-team/hariando.png" alt="" class="card-img">
+                                    <img src="../assets/our-team/hariando.webp" alt="" class="card-img">
                                 </div>
                                 <div class="card-content">
                                     <h2 class="name" style="font-size: 16px;">Hariando Muthi</h2>
@@ -331,7 +331,7 @@
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                 <div class="card-image">
-                                    <img src="../assets/our-team/rafael.png" alt="" class="card-img">
+                                    <img src="../assets/our-team/rafael.webp" alt="" class="card-img">
                                 </div>
                                 <div class="card-content">
                                      <h2 class="name" style="font-size: 16px;">Rafael Panjaitan</h2>
@@ -342,7 +342,7 @@
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                  <div class="card-image">
-                                     <img src="../assets/our-team/ines.png" alt="" class="card-img">
+                                     <img src="../assets/our-team/ines.webp" alt="" class="card-img">
                                  </div>
                                  <div class="card-content">
                                      <h2 class="name">Anisa Kurnia Putri</h2>
@@ -353,7 +353,7 @@
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                  <div class="card-image">
-                                     <img src="../assets/our-team/titys.png" alt="" class="card-img">
+                                     <img src="../assets/our-team/titys.webp" alt="" class="card-img">
                                  </div>
                                  <div class="card-content">
                                      <h2 class="name">Titys Alfatika Setyorini</h2>
@@ -364,7 +364,7 @@
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                  <div class="card-image">
-                                     <img src="../assets/our-team/yulia.png" alt="" class="card-img">
+                                     <img src="../assets/our-team/yulia.webp" alt="" class="card-img">
                                  </div>
                                  <div class="card-content">
                                      <h2 class="name">Yulia Elvionita </h2>
@@ -375,7 +375,7 @@
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                  <div class="card-image">
-                                     <img src="../assets/our-team/fajar.png" alt="" class="card-img">
+                                     <img src="../assets/our-team/fajar.webp" alt="" class="card-img">
                                  </div>
                                  <div class="card-content">
                                      <h2 class="name">Fajar Mustakim</h2>
@@ -386,7 +386,7 @@
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                  <div class="card-image">
-                                     <img src="../assets/our-team/rei.png" alt="" class="card-img">
+                                     <img src="../assets/our-team/rei.webp" alt="" class="card-img">
                                  </div>
                                  <div class="card-content">
                                      <h2 class="name">Reizaldy M. Arsyan</h2>
@@ -398,7 +398,7 @@
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                  <div class="card-image">
-                                     <img src="../assets/our-team/arif.png" alt="" class="card-img">
+                                     <img src="../assets/our-team/arif.webp" alt="" class="card-img">
                                  </div>
                                  <div class="card-content">
                                      <h2 class="name">Arif Kurnia Ramadhan</h2>
@@ -409,7 +409,7 @@
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                  <div class="card-image">
-                                     <img src="../assets/our-team/ica.png" alt="" class="card-img">
+                                     <img src="../assets/our-team/ica.webp" alt="" class="card-img">
                                  </div>
                                  <div class="card-content">
                                      <h2 class="name">Khaysa Nur Azima</h2>
@@ -420,7 +420,7 @@
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                  <div class="card-image">
-                                     <img src="../assets/our-team/teddy.png" alt="" class="card-img">
+                                     <img src="../assets/our-team/teddy.webp" alt="" class="card-img">
                                  </div>
                                  <div class="card-content">
                                      <h2 class="name" style="font-size: 16px;">Teddy Rahmadi Nursin</h2>
@@ -446,7 +446,7 @@
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                 <div class="card-image">
-                                    <img src="../assets/our-team/dila.png" alt="" class="card-img">
+                                    <img src="../assets/our-team/dila.webp" alt="" class="card-img">
                                 </div>
                                 <div class="card-content">
                                     <h2 class="name" style="font-size: 16px ;">Dila Ayu Prastita</h2>
@@ -457,7 +457,7 @@
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                 <div class="card-image">
-                                    <img src="../assets/our-team/nopri.png" alt="" class="card-img">
+                                    <img src="../assets/our-team/nopri.webp" alt="" class="card-img">
                                 </div>
                                 <div class="card-content">
                                      <h2 class="name" style="font-size: 16px ;">M. Rizzky Nopriansyah</h2>
@@ -468,7 +468,7 @@
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                  <div class="card-image">
-                                     <img src="../assets/our-team/denissa.png" alt="" class="card-img">
+                                     <img src="../assets/our-team/denissa.webp" alt="" class="card-img">
                                  </div>
                                  <div class="card-content">
                                      <h2 class="name">Denissa Cahya Sabrina</h2>
@@ -479,7 +479,7 @@
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                  <div class="card-image">
-                                     <img src="../assets/our-team/murli.png" alt="" class="card-img">
+                                     <img src="../assets/our-team/murli.webp" alt="" class="card-img">
                                  </div>
                                  <div class="card-content">
                                      <h2 class="name">Murliana</h2>
@@ -490,7 +490,7 @@
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                  <div class="card-image">
-                                     <img src="../assets/our-team/raja.png" alt="" class="card-img">
+                                     <img src="../assets/our-team/raja.webp" alt="" class="card-img">
                                  </div>
                                  <div class="card-content">
                                      <h2 class="name" style="font-size: 16px;">Shah Raja A. Al Turtusi </h2>
@@ -501,7 +501,7 @@
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                  <div class="card-image">
-                                     <img src="../assets/our-team/zahra.png" alt="" class="card-img">
+                                     <img src="../assets/our-team/zahra.webp" alt="" class="card-img">
                                  </div>
                                  <div class="card-content">
                                      <h2 class="name" style="font-size: 16px;">Zahra Areefa Ananta</h2>
@@ -512,7 +512,7 @@
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                  <div class="card-image">
-                                     <img src="../assets/our-team/alya.png" alt="" class="card-img">
+                                     <img src="../assets/our-team/alya.webp" alt="" class="card-img">
                                  </div>
                                  <div class="card-content">
                                      <h2 class="name">Alya Salsabila</h2>
@@ -523,7 +523,7 @@
                         <div class="card swiper-slide">
                             <div class="image-content mx-auto">
                                  <div class="card-image">
-                                     <img src="../assets/our-team/sephia.png" alt="" class="card-img">
+                                     <img src="../assets/our-team/sephia.webp" alt="" class="card-img">
                                  </div>
                                  <div class="card-content">
                                      <h2 class="name" style="font-size: 16px;">Sephia Wulandari</h2>
@@ -554,11 +554,11 @@
         </div>
         <div class="position-relative justify-content-center">
             <div class="row p-5 pt-0 justify-content-center " style="position: absolute;">
-                <img class="mx-auto mt-4 p-0" style="justify-content: center; z-index: -2; width: 32rem;" src="../assets/Ardhames-logo.png" alt="">
+                <img class="mx-auto mt-4 p-0" style="justify-content: center; z-index: -2; width: 32rem;" src="../assets/Ardhames-logo.webp" alt="">
             </div>
         </div>
         <div class="row">
-            <img class="mx-auto" style="justify-content: center; width: 30rem;" src="../assets/our-team/Uls.png" alt="">
+            <img class="mx-auto" style="justify-content: center; width: 30rem;" src="../assets/our-team/Uls.webp" alt="">
         </div>
 
         <p class="text-light">
@@ -574,7 +574,7 @@
                     <h3 class="mb-0">Kasub FE</h3>
                     <h4>Adi Sulaksono</h4>
                     <p>Teknik Informatika'20</p>
-                    <img src="../assets/our-team/adi.png" alt="" id="card-img" class="rounded-4">
+                    <img src="../assets/our-team/adi.webp" alt="" id="card-img" class="rounded-4">
                 </div>
               </div>
               <div class="swiper-slide">
@@ -591,56 +591,56 @@
                 <div class="card-color rounded-4 pt-2 px-2">
                     <h3 class="mb-0">Fujita Rahmah</h3>
                     <p>Teknik Informatika'20</p>
-                    <img src="../assets/our-team/fujita.png" alt="" id="card-img" class="rounded-4">
+                    <img src="../assets/our-team/fujita.webp" alt="" id="card-img" class="rounded-4">
                 </div>
               </div>
               <div class="swiper-slide text-center rounded-4 text-white">
                 <div class="card-color rounded-4 pt-2 px-2">
                     <h3 class="mb-0">Yondika Vio Landa</h3>
                     <p>Teknik Informatika'21</p>
-                    <img src="../assets/our-team/yondi.png" alt="" id="card-img" class="rounded-4">
+                    <img src="../assets/our-team/yondi.webp" alt="" id="card-img" class="rounded-4">
                 </div>
               </div>
               <div class="swiper-slide text-center rounded-4 text-white">
                 <div class="card-color rounded-4 pt-2 px-2">
                     <h3 class="mb-0">Christian A.N Biran</h3>
                     <p>Sains Data'21</p>
-                    <img src="../assets/our-team/kris.png" alt="" id="card-img" class="rounded-4">
+                    <img src="../assets/our-team/kris.webp" alt="" id="card-img" class="rounded-4">
                 </div>
               </div>
               <div class="swiper-slide text-center rounded-4 text-white">
                 <div class="card-color rounded-4 pt-2 px-2">
                     <h3 class="mb-0">Nurbaiti</h3>
                     <p>Sains Atmosfer & Keplanetan'21</p>
-                    <img src="../assets/our-team/nurbaiti.png" alt="" id="card-img" class="rounded-4">
+                    <img src="../assets/our-team/nurbaiti.webp" alt="" id="card-img" class="rounded-4">
                 </div>
               </div>
               <div class="swiper-slide text-center rounded-4 text-white">
                 <div class="card-color rounded-4 pt-2 px-2">
                     <h3 class="mb-0">Alvin Yoga Kesuma</h3>
                     <p>Teknik Informatika'21</p>
-                    <img src="../assets/our-team/alvin.png" alt="" id="card-img" class="rounded-4">
+                    <img src="../assets/our-team/alvin.webp" alt="" id="card-img" class="rounded-4">
                 </div>
               </div>
               <div class="swiper-slide text-center rounded-4 text-white">
                 <div class="card-color rounded-4 pt-2 px-2">
                     <h3 class="mb-0">M. Qomarudin</h3>
                     <p>Teknik Informatika'20</p>
-                    <img src="../assets/our-team/qomar.png" alt="" id="card-img" class="rounded-4">
+                    <img src="../assets/our-team/qomar.webp" alt="" id="card-img" class="rounded-4">
                 </div>
               </div>
               <div class="swiper-slide text-center rounded-4 text-white">
                 <div class="card-color rounded-4 pt-2 px-2">
                     <h3 class="mb-0">Bilhaq Avi Dewantara</h3>
                     <p>Teknik Informatika'20</p>
-                    <img src="../assets/our-team/bilhaq.png" alt="" id="card-img" class="rounded-4">
+                    <img src="../assets/our-team/bilhaq.webp" alt="" id="card-img" class="rounded-4">
                 </div>
               </div>
               <div class="swiper-slide text-center rounded-4 text-white">
                 <div class="card-color rounded-4 pt-2 px-2">
                     <h3 class="mb-0">Nurroni</h3>
                     <p>Teknik Informatika'20</p>
-                    <img src="../assets/our-team/nuroni.png" alt="" id="card-img" class="rounded-4">
+                    <img src="../assets/our-team/nuroni.webp" alt="" id="card-img" class="rounded-4">
                 </div>
               </div>
             </div>
@@ -657,7 +657,7 @@
                     <h3 class="mb-0">Kasub BE</h3>
                     <h4>Fitra Ilyasa</h4>
                     <p>Teknik Informatika'20</p>
-                    <img src="../assets/our-team/fitra.png" alt="" id="card-img" class="rounded-4">
+                    <img src="../assets/our-team/fitra.webp" alt="" id="card-img" class="rounded-4">
                 </div>
               </div>
               <div class="swiper-slide">
@@ -674,42 +674,42 @@
                 <div class="card-color rounded-4 pt-2 px-2" >
                     <h3 class="mb-0">M Khalil Razan Faza</h3>
                     <p>Teknik Informatika'21</p>
-                    <img src="../assets/our-team/faza.png" alt="" id="card-img" class="rounded-4" >
+                    <img src="../assets/our-team/faza.webp" alt="" id="card-img" class="rounded-4" >
                 </div>
               </div>
               <div class="swiper-slide text-center rounded-4 text-white">
                 <div class="card-color rounded-4 pt-2 px-2">
                     <h3 class="mb-0">Hans Bonatua Batubara</h3>
                     <p>Teknik Informatika'20</p>
-                    <img src="../assets/our-team/hans.png" alt="" id="card-img" class="rounded-4">
+                    <img src="../assets/our-team/hans.webp" alt="" id="card-img" class="rounded-4">
                 </div>
               </div>
               <div class="swiper-slide text-center rounded-4 text-white">
                 <div class="card-color rounded-4 pt-2 px-2">
                     <h3 class="mb-0">Kevin Simorangkir</h3>
                     <p>Teknik Informatika'21</p>
-                    <img src="../assets/our-team/kevin.png" alt="" id="card-img" class="rounded-4">
+                    <img src="../assets/our-team/kevin.webp" alt="" id="card-img" class="rounded-4">
                 </div>
               </div>
               <div class="swiper-slide text-center rounded-4 text-white">
                 <div class="card-color rounded-4 pt-2 px-2">
                     <h3 class="mb-0">Athallah Ahza Falah</h3>
                     <p>Teknik Informatika'21</p>
-                    <img src="../assets/our-team/ata.png" alt="" id="card-img" class="rounded-4">
+                    <img src="../assets/our-team/ata.webp" alt="" id="card-img" class="rounded-4">
                 </div>
               </div>
               <div class="swiper-slide text-center rounded-4 text-white">
                 <div class="card-color rounded-4 pt-2 px-2">
                     <h3 class="mb-0">Muhammad Ibnu Prayogi</h3>
                     <p>Teknik Informatika'20</p>
-                    <img src="../assets/our-team/ibnu.png" alt="" id="card-img" class="rounded-4">
+                    <img src="../assets/our-team/ibnu.webp" alt="" id="card-img" class="rounded-4">
                 </div>
               </div>
               <div class="swiper-slide text-center rounded-4 text-white">
                 <div class="card-color rounded-4 pt-2 px-2">
                     <h3 class="mb-0">Rivaldi Yonathan Nainggolan</h3>
                     <p>Teknik Informatika'21</p>
-                    <img src="../assets/our-team/aldi.png" alt="" id="card-img" class="rounded-4">
+                    <img src="../assets/our-team/aldi.webp" alt="" id="card-img" class="rounded-4">
                 </div>
               </div>
             </div>
@@ -727,7 +727,7 @@
                     <h3 class="mb-0">Kasub VVD</h3>
                     <h4>M Raihan Adiwidya</h4>
                     <p>Teknik Kimia'20</p>
-                    <img src="../assets/our-team/Adiws.PNG" alt="" id="card-img" class="rounded-4">
+                    <img src="../assets/our-team/Adiws.webp" alt="" id="card-img" class="rounded-4">
                 </div>
               </div>
               <div class="swiper-slide">
@@ -744,70 +744,70 @@
                 <div class="card-color rounded-4 pt-2 px-2">
                     <h3 class="mb-0">Hariando Muthi</h3>
                     <p>Teknik Informatika'20</p>
-                    <img src="../assets/our-team/hariando.png" alt="" id="card-img" class="rounded-4">
+                    <img src="../assets/our-team/hariando.webp" alt="" id="card-img" class="rounded-4">
                 </div>
               </div>
               <div class="swiper-slide text-center rounded-4 text-white">
                 <div class="card-color rounded-4 pt-2 px-2">
                     <h3 class="mb-0">Rafael Panjaitan</h3>
                     <p>Teknik Lingkungan'21</p>
-                    <img src="../assets/our-team/rafael.png" alt="" id="card-img" class="rounded-4">
+                    <img src="../assets/our-team/rafael.webp" alt="" id="card-img" class="rounded-4">
                 </div>
               </div>
               <div class="swiper-slide text-center rounded-4 text-white">
                 <div class="card-color rounded-4 pt-2 px-2">
                     <h3 class="mb-0">Anisa Kurnia Putri</h3>
                     <p>PWK'20</p>
-                    <img src="../assets/our-team/ines.png" alt="" id="card-img" class="rounded-4">
+                    <img src="../assets/our-team/ines.webp" alt="" id="card-img" class="rounded-4">
                 </div>
               </div>
               <div class="swiper-slide text-center rounded-4 text-white">
                 <div class="card-color rounded-4 pt-2 px-2">
                     <h3 class="mb-0">Titys Alfatika Setyorini</h3>
                     <p>Sains Aktuaria'20</p>
-                    <img src="../assets/our-team/titys.png" alt="" id="card-img" class="rounded-4">
+                    <img src="../assets/our-team/titys.webp" alt="" id="card-img" class="rounded-4">
                 </div>
               </div>
               <div class="swiper-slide text-center rounded-4 text-white">
                 <div class="card-color rounded-4 pt-2 px-2">
                     <h3 class="mb-0">Yulia Elvionita</h3>
                     <p>Arsitektur'20</p>
-                    <img src="../assets/our-team/yulia.png" alt="" id="card-img" class="rounded-4">
+                    <img src="../assets/our-team/yulia.webp" alt="" id="card-img" class="rounded-4">
                 </div>
               </div>
               <div class="swiper-slide text-center rounded-4 text-white">
                 <div class="card-color rounded-4 pt-2 px-2">
                     <h3 class="mb-0">Fajar Mustakim</h3>
                     <p>Arsitektur'20</p>
-                    <img src="../assets/our-team/fajar.png" alt="" id="card-img" class="rounded-4">
+                    <img src="../assets/our-team/fajar.webp" alt="" id="card-img" class="rounded-4">
                 </div>
               </div>
               <div class="swiper-slide text-center rounded-4 text-white">
                 <div class="card-color rounded-4 pt-2 px-2">
                     <h3 class="mb-0">Reizaldy M. Arsyan</h3>
                     <p>Arsitektur'21</p>
-                    <img src="../assets/our-team/rei.png" alt="" id="card-img" class="rounded-4">
+                    <img src="../assets/our-team/rei.webp" alt="" id="card-img" class="rounded-4">
                 </div>
               </div>
               <div class="swiper-slide text-center rounded-4 text-white">
                 <div class="card-color rounded-4 pt-2 px-2">
                     <h3 class="mb-0">Arif Kurnia Ramadhan</h3>
                     <p>Teknik Elektro'21</p>
-                    <img src="../assets/our-team/arif.png" alt="" id="card-img" class="rounded-4">
+                    <img src="../assets/our-team/arif.webp" alt="" id="card-img" class="rounded-4">
                 </div>
               </div>
               <div class="swiper-slide text-center rounded-4 text-white">
                 <div class="card-color rounded-4 pt-2 px-2">
                     <h3 class="mb-0">Khaysa Nur Azima</h3>
                     <p>Teknik Kimia'21</p>
-                    <img src="../assets/our-team/ica.png" alt="" id="card-img" class="rounded-4">
+                    <img src="../assets/our-team/ica.webp" alt="" id="card-img" class="rounded-4">
                 </div>
               </div>
               <div class="swiper-slide text-center rounded-4 text-white">
                 <div class="card-color rounded-4 pt-2 px-2">
                     <h3 class="mb-0">Teddy Rahmadi Nursin</h3>
                     <p>Arsitektur'20</p>
-                    <img src="../assets/our-team/teddy.png" alt="" id="card-img" class="rounded-4">
+                    <img src="../assets/our-team/teddy.webp" alt="" id="card-img" class="rounded-4">
                 </div>
               </div>
             </div>
@@ -825,7 +825,7 @@
                         <h3 class="mb-0">Kasub CR</h3>
                         <h4>Sinta Dwi Putri</h4>
                         <p>Teknik Informatika'20</p>
-                        <img src="../assets/our-team/sinta.png" alt="" id="card-img" class="rounded-4">
+                        <img src="../assets/our-team/sinta.webp" alt="" id="card-img" class="rounded-4">
                     </div>
                   </div>
                   <div class="swiper-slide">
@@ -842,56 +842,56 @@
                     <div class="card-color rounded-4 pt-2 px-2">
                         <h3 class="mb-0">Zahra Areefa Ananta</h3>
                         <p>Teknik Informatika'21</p>
-                        <img src="../assets/our-team/zahra.png" alt="" id="card-img" class="rounded-4">
+                        <img src="../assets/our-team/zahra.webp" alt="" id="card-img" class="rounded-4">
                     </div>
                   </div>
                   <div class="swiper-slide text-center rounded-4 text-white">
                     <div class="card-color rounded-4 pt-2 px-2">
                         <h3 class="mb-0">Dila Ayu Prastita</h4>
                         <p>Teknik Informatika'21</p>
-                        <img src="../assets/our-team/dila.png" alt="" id="card-img" class="rounded-4">
+                        <img src="../assets/our-team/dila.webp" alt="" id="card-img" class="rounded-4">
                     </div>
                   </div>
                   <div class="swiper-slide text-center rounded-4 text-white">
                     <div class="card-color rounded-4 pt-2 px-2">
                         <h3 class="mb-0">M Rizzky Nopriansyah</h3>
                         <p>Teknik Informatika'21</p>
-                        <img src="../assets/our-team/nopri.png" alt="" id="card-img" class="rounded-4">
+                        <img src="../assets/our-team/nopri.webp" alt="" id="card-img" class="rounded-4">
                     </div>
                   </div>
                   <div class="swiper-slide text-center rounded-4 text-white">
                     <div class="card-color rounded-4 pt-2 px-2">
                         <h3 class="mb-0">Denissa Cahya Sabrina</h3>
                         <p>PWK'20</p>
-                        <img src="../assets/our-team/denissa.png" alt="" id="card-img" class="rounded-4">
+                        <img src="../assets/our-team/denissa.webp" alt="" id="card-img" class="rounded-4">
                     </div>
                   </div>
                   <div class="swiper-slide text-center rounded-4 text-white">
                     <div class="card-color rounded-4 pt-2 px-2">
                         <h3 class="mb-0">Murliana</h3>
                         <p>Teknik Informatika'20</p>
-                        <img src="../assets/our-team/murli.png" alt="" id="card-img" class="rounded-4">
+                        <img src="../assets/our-team/murli.webp" alt="" id="card-img" class="rounded-4">
                     </div>
                   </div>
                   <div class="swiper-slide text-center rounded-4 text-white">
                     <div class="card-color rounded-4 pt-2 px-2">
                         <h3 class="mb-0">Shah Raja A. Al Turtusi</h3>
                         <p>Teknik Informatika'20</p>
-                        <img src="../assets/our-team/raja.png" alt="" id="card-img" class="rounded-4">
+                        <img src="../assets/our-team/raja.webp" alt="" id="card-img" class="rounded-4">
                     </div>
                   </div>
                   <div class="swiper-slide text-center rounded-4 text-white">
                     <div class="card-color rounded-4 pt-2 px-2">
                         <h3 class="mb-0">Alya Salsabila</h3>
                         <p>Teknik Informatika'21</p>
-                        <img src="../assets/our-team/alya.png" alt="" id="card-img" class="rounded-4">
+                        <img src="../assets/our-team/alya.webp" alt="" id="card-img" class="rounded-4">
                     </div>
                   </div>
                   <div class="swiper-slide text-center rounded-4 text-white">
                     <div class="card-color rounded-4 pt-2 px-2">
                         <h3 class="mb-0">Sephia wulandari</h3>
                         <p>Teknologi Pangan'20</p>
-                        <img src="../assets/our-team/sephia.png" alt="" id="card-img" class="rounded-4">
+                        <img src="../assets/our-team/sephia.webp" alt="" id="card-img" class="rounded-4">
                     </div>
                   </div>
                 </div>

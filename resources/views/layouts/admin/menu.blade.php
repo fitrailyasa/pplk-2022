@@ -7,7 +7,7 @@
         </li>
         <li class="nav-item d-sm-inline-block">
           <div href="#" class="brand-link text-decoration-none d-flex align-items-center p-1" id="logo-dan-judul">
-            <img src="{{ asset('assets/logo-pplk-minified.png') }}" class="pplk-logo">
+            <img src="{{ asset('assets/logo-pplk-minified.webp') }}" class="pplk-logo">
             <div>
               <span class="brand-link" id="judul-pplk">PPLK 2022</span>
             </div>
@@ -60,7 +60,7 @@
       <div class="user-panel mt-3 pb-3 mb-3 d-flex align-items-center">
         <div class="image">
           @if (auth()->user()->fotoProfil == Null)
-            <img src="{{ asset('assets/profile') }}/default.png" class="img-circle elevation-2" alt="User Image">
+            <img src="{{ asset('assets/profile') }}/default.webp" class="img-circle elevation-2" alt="User Image">
           @else
             <img src="{{ asset('assets/profile') }}/{{ auth()->user()->fotoProfil }}" class="img-circle elevation-2" alt="User Image">
           @endif

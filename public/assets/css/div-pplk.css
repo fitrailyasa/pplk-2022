@@ -1,9 +1,9 @@
 /*Content Page CSS*/
 
-body{
+body {
     font-family: var(--font-family-body) !important;
     overflow-x: hidden;
-    background: url(../background-2.png) !important;
+    background: url(../background-2.webp) !important;
     background-position: center;
     background-size: cover !important;
     background-position: 50% 5%;
@@ -19,7 +19,7 @@ body{
 .Div-PPLK {
     margin: 0;
     padding: 0;
-    color: var(--font-color-primary-2)
+    color: var(--font-color-primary-2);
 }
 
 .container {
@@ -27,48 +27,49 @@ body{
     text-align: center;
 }
 
-.card{
-    background-color: rgba(255, 255, 255, 0.225)!important;
-    border-color: #ffffff6c!important;
-    box-shadow: #ffffff6c 0px 20px 60px!important;
+.card {
+    background-color: rgba(255, 255, 255, 0.225) !important;
+    border-color: #ffffff6c !important;
+    box-shadow: #ffffff6c 0px 20px 60px !important;
     color: #000000;
 }
 
-
-.box{
+.box {
     width: 18.75rem;
 }
 
 @media screen and (min-width: 931px) {
-    #mobile-footer-bar, #mobile-footer-bar .container-fluid{
+    #mobile-footer-bar,
+    #mobile-footer-bar .container-fluid {
         display: none;
     }
 }
 
 @media screen and (max-width: 1300px) {
-    #id-pplk{
+    #id-pplk {
         width: 3rem;
         height: 3rem;
     }
-    #search-width{
+    #search-width {
         width: 20rem;
         height: 1.5rem;
     }
-    #navbar-nav-item{
+    #navbar-nav-item {
         font-size: 1.2rem;
         padding: 4px 0px 4px 0px;
     }
-    #nama-maba-navbar a{
+    #nama-maba-navbar a {
         display: none;
     }
-    .profile-img, .profile-img img{
+    .profile-img,
+    .profile-img img {
         width: 2.5rem;
         height: 2.5rem;
     }
 }
 
-@media screen and (max-width:930px) {
-    #navbar-nav-item{
+@media screen and (max-width: 930px) {
+    #navbar-nav-item {
         display: none;
     }
     #mobile-dropdown[data-bs-popper] {
@@ -77,7 +78,7 @@ body{
         left: auto /* rtl:ignore */;
     }
 
-    .footer-bar{
+    .footer-bar {
         z-index: 98;
         background-color: var(--page-background-1);
         bottom: 0;
@@ -95,7 +96,7 @@ body{
         box-shadow: 0 4px 8px 16px rgb(0 0 0 / 10%);
     }
 
-    .footer-bar li{
+    .footer-bar li {
         padding: 0;
         width: 50px;
         height: 30px;
@@ -107,62 +108,59 @@ body{
         align-items: center;
     }
 
-    .footer-bar a{
+    .footer-bar a {
         text-decoration: none;
         text-align: center;
         color: var(--white) !important;
         font-size: 10px;
     }
 
-    body{
+    body {
         padding-bottom: 5rem;
     }
 }
 
-@media screen and (max-width:570px) {
-    #search-width{
+@media screen and (max-width: 570px) {
+    #search-width {
         width: 12rem;
     }
 
-    body{
+    body {
         padding-bottom: 4.5rem;
     }
 
-    .box{
+    .box {
         width: 17.5rem;
     }
-
 }
 
-@media screen and (max-width:370px) {
-    #search-width{
+@media screen and (max-width: 370px) {
+    #search-width {
         width: 11.2rem;
     }
 
-    body{
+    body {
         padding-bottom: 4rem;
     }
 
-    .box{
+    .box {
         width: 15.625rem;
     }
 }
 
-@media screen and (max-width:340px) {
-    #search-width{
+@media screen and (max-width: 340px) {
+    #search-width {
         display: none;
     }
 }
 
-@media screen and (max-width:280px) {
-    .box{
+@media screen and (max-width: 280px) {
+    .box {
         width: 10rem;
     }
-
 }
-@media screen and (max-width:900px) {
-    #terakhir{
+@media screen and (max-width: 900px) {
+    #terakhir {
         padding-bottom: 90px;
     }
-
 }

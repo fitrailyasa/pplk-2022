@@ -17,7 +17,7 @@
                 <div class="col-lg-3 col-md-10 col-sm-12 justify-content-center">
                     <div class="center">
                         @if ($viewbiodata->fotoProfil == null)
-                        <img class="ratio ratio-1x1 profile" style="" src="{{ asset('assets/profile') }}/default.png" alt="fotoprofil">
+                        <img class="ratio ratio-1x1 profile" style="" src="{{ asset('assets/profile') }}/default.webp" alt="fotoprofil">
                         @elseif($viewbiodata->fotoProfil != null)
                         <img class="ratio ratio-1x1 profile" style="" src="{{ asset('assets/profile') }}/{{ $viewbiodata->fotoProfil }}" alt="fotoprofil">
                         @endif

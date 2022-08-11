@@ -27,7 +27,7 @@
               
             <div class="row">
               <div class="col-md-6 col-sm-12 justify-content-center">
-                  <img src="{{ asset('assets/Maskot-Orang Utan-1.png') }}" alt="Image" class="img-size">
+                  <img src="{{ asset('assets/Maskot-Orang Utan-1.webp') }}" alt="Image" class="img-size">
               </div>
               <div class="col-md-6">
                   <form class="mb-5" enctype="multipart/form-data" method="post" action="/form-keluhan/{{ $users->id }}" id="contactForm" name="contactForm">

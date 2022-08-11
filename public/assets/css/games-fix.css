@@ -1,31 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 :root {
-    --primary: #7739A3;
-    --secondary: #1A75FF;
-    --bawaan-gradient-1:rgb(240,65,255); /*Base Color*/
-    --bawaan-gradient-2: rgb(119,57,163); /*Text Color*/
-    --gradient-1: linear-gradient(90deg, rgb(240, 65, 255) 0%, rgba(130,165,234,1) 100%);
-    --gradient-2: linear-gradient(90deg, rgba(119,57,163,1) 0%, rgba(26,117,255,1) 100%);
+    --primary: #7739a3;
+    --secondary: #1a75ff;
+    --bawaan-gradient-1: rgb(240, 65, 255); /*Base Color*/
+    --bawaan-gradient-2: rgb(119, 57, 163); /*Text Color*/
+    --gradient-1: linear-gradient(
+        90deg,
+        rgb(240, 65, 255) 0%,
+        rgba(130, 165, 234, 1) 100%
+    );
+    --gradient-2: linear-gradient(
+        90deg,
+        rgba(119, 57, 163, 1) 0%,
+        rgba(26, 117, 255, 1) 100%
+    );
     --white: #fff;
     --black: #000;
-    --grey: #C4C4C4;
+    --grey: #c4c4c4;
     --primary-color-1: #110f58;
     --primary-color-2: rgba(91, 207, 197, 0.2);
-    --font-family-title: 'Poppins', 'open sans';
-    --font-family-body: 'Poppins', 'open sans';
+    --font-family-title: "Poppins", "open sans";
+    --font-family-body: "Poppins", "open sans";
     --font-color-primary: #174461;
-    --font-color-primary-2: #FFFFFF;
-    --font-color-subheadline: #071D2C;
+    --font-color-primary-2: #ffffff;
+    --font-color-subheadline: #071d2c;
     --font-color-secondary: #686868;
-    --font-color-call-to-act-2:#4a4a4a;
-    --page-background-1: #F9FAFB;
+    --font-color-call-to-act-2: #4a4a4a;
+    --page-background-1: #f9fafb;
     --page-background-2: #f6f6f6;
 }
 
-body{
-    background: url(../background-2.png);
+body {
+    background: url(../background-2.webp);
     background-size: cover;
     background-position: 50% 5%;
     background-repeat: no-repeat;
@@ -37,53 +45,53 @@ body{
 }
 
 /*Bounce Games*/
-    @keyframes move {
-        0%{
+@keyframes move {
+    0% {
         transform: translateZ(-500px) rotate(0deg);
-        }
-        100%{
+    }
+    100% {
         transform: translateZ(500px) rotate(0deg);
-        }
     }
+}
 
-    @keyframes fade {
-        0%{
+@keyframes fade {
+    0% {
         opacity: 0;
-        }
-        25% {
+    }
+    25% {
         opacity: 1;
-        }
-        75% {
+    }
+    75% {
         opacity: 1;
-        }
-        100%{
+    }
+    100% {
         opacity: 0;
-        }
     }
+}
 
-    #games-bounce {
-        animation: bounce .5s alternate infinite ease-in;
+#games-bounce {
+    animation: bounce 0.5s alternate infinite ease-in;
+}
+@keyframes bounce {
+    0% {
+        transform: translateY(-20%);
     }
-    @keyframes bounce {
-        0% {
-            transform: translateY(-20%);
-        }
-        100% {
-            transform: translateY(0%);
-        }
+    100% {
+        transform: translateY(0%);
     }
+}
 
-.row p{
+.row p {
     font-size: 1.5rem;
     font-family: var(--font-family-body);
 }
 
-.container-started{
+.container-started {
     width: 30%;
     height: 80px;
 }
 
-.container-started a{
+.container-started a {
     width: 35%;
     height: 100%;
     border-radius: 35px;
@@ -99,12 +107,12 @@ body{
     opacity: 0.9;
 }
 
-.btn-started:hover{
+.btn-started:hover {
     opacity: 0.8;
     box-shadow: 0px 5px 15px 1px var(--secondary);
 }
 
-.play-game{
+.play-game {
     padding-top: 10px;
     cursor: default;
     color: white;
@@ -114,28 +122,32 @@ body{
     font-weight: bold;
 }
 
-.play-game:hover{
+.play-game:hover {
     background: var(--gradient-1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
-.play-pplk{
-    background: linear-gradient(90deg, rgba(240, 65, 255, 0.765) 0%, rgba(130, 165, 234, 0.85) 100%);
+.play-pplk {
+    background: linear-gradient(
+        90deg,
+        rgba(240, 65, 255, 0.765) 0%,
+        rgba(130, 165, 234, 0.85) 100%
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
-#ranking-card{
+#ranking-card {
     background: var(--gradient-1);
     opacity: 0.9;
     padding: 3 3 3 3;
 }
 
-#box-group{
-    background: url(../background-2.png);
+#box-group {
+    background: url(../background-2.webp);
     background-size: cover;
     background-position: 50% 5%;
     background-repeat: no-repeat;
@@ -145,48 +157,47 @@ body{
     color: whitesmoke;
 }
 
-#no-kelompok{
-    font-size:2.5rem;
+#no-kelompok {
+    font-size: 2.5rem;
     color: white;
 }
 
-#peringkat-kelompok{
-    font-size:1.5rem;
+#peringkat-kelompok {
+    font-size: 1.5rem;
     color: #dbdbdb;
 }
 
-#tittle-points{
-    font-size:20px;
+#tittle-points {
+    font-size: 20px;
     text-indent: 10px;
     color: azure;
 }
 
-.user-info p:first-child{
-    font-size:50px;
+.user-info p:first-child {
+    font-size: 50px;
     color: white;
     padding-bottom: 0 !important;
 }
 
-.user-info p:last-child{
-    font-size:25px;
+.user-info p:last-child {
+    font-size: 25px;
     color: #dbdbdb;
     padding-bottom: 0 !important;
 }
 
-#choose-games{
+#choose-games {
     margin: 5px;
     background: var(--gradient-1);
     opacity: 0.9;
 }
 
-#choose-games:hover{
+#choose-games:hover {
     opacity: 0.8;
     box-shadow: 0px 5px 15px 1px var(--secondary);
 }
 
 
-
-#leaderboard-tittle{
+#leaderboard-tittle {
     font-size: 2.5rem;
     color: white;
     font-family: var(--font-family-title);
@@ -194,18 +205,18 @@ body{
     font-weight: bolder;
 }
 
-.top-3-winner{
+.top-3-winner {
     padding-left: 26px;
     padding-right: 26px;
 }
 
-.title-page{
+.title-page {
     margin-bottom: 40px;
     padding-left: 26px;
     padding-right: 26px;
 }
 
-.winner{
+.winner {
     display: grid;
     place-items: center;
     margin-left: auto;
@@ -214,7 +225,7 @@ body{
     padding-right: 0px;
 }
 
-.profile-winner{
+.profile-winner {
     display: grid;
     place-items: center;
     border-radius: 50%;
@@ -222,26 +233,27 @@ body{
     position: relative;
 }
 
-.winner img{
+.winner img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
 }
 
-.winner-2 .profile-winner, .winner-3 .profile-winner{
+.winner-2 .profile-winner,
+.winner-3 .profile-winner {
     margin-top: 20px;
 }
 
-.winner-1 img{
+.winner-1 img {
     width: 100px;
     height: 100px;
 }
 
-.winner-1 .profile-winner{
+.winner-1 .profile-winner {
     border: 3px solid var(--primary);
 }
 
-.crown{
+.crown {
     width: 100%;
     display: grid;
     place-items: center;
@@ -252,12 +264,12 @@ body{
     margin-right: auto;
 }
 
-.crown img{
-    width:  65px;
+.crown img {
+    width: 65px;
     height: 65px;
 }
 
-.winner-patch{
+.winner-patch {
     width: 100%;
     display: grid;
     place-items: center;
@@ -268,7 +280,7 @@ body{
     margin-right: auto;
 }
 
-.winner-text{
+.winner-text {
     display: grid;
     place-items: center;
     color: var(--white);
@@ -279,34 +291,35 @@ body{
     background-color: var(--primary);
 }
 
-.winner-1 .winner-text{
+.winner-1 .winner-text {
     background: var(--gradient-1);
 }
 
-.info-winner{
+.info-winner {
     margin-top: 20px;
     text-align: center;
 }
 
-.nama h2{
+.nama h2 {
     font-family: var(--font-family-body) !important;
     font-size: 16px;
     font-weight: 600;
     color: var(--font-color-primary-2);
 }
 
-.point h1{
+.point h1 {
     font-family: var(--font-family-body);
     font-size: 16px;
     font-weight: 600;
     color: var(--secondary);
 }
 
-.winner-1 .point h1{
+.winner-1 .point h1 {
     color: rgb(228, 228, 0);
 }
 
-.leaderboard-container{
+.leaderboard-container {
+    /* position: absolute; */
     margin-top: 30px;
     display: flex;
     align-items: center;
@@ -321,14 +334,14 @@ body{
     box-shadow: 0px 5px 10px 4px rgb(0 0 0 / 15%);
 }
 
-.leaderboard-list{
+.leaderboard-list {
     padding-left: 0px;
     padding-right: 0px;
     width: 66.666667%;
     margin-bottom: 80px;
 }
 
-.card-leaderboard{
+.card-leaderboard {
     border-radius: 10px !important;
     height: 90px;
     padding-left: 50px !important;
@@ -340,173 +353,171 @@ body{
     box-shadow: none !important;
 }
 
-.user-data{
+.user-data {
     border: 3px solid var(--primary) !important;
 }
 
-.card-leaderboard:hover{
+.card-leaderboard:hover {
     transform: none !important;
     border: 3px solid var(--primary);
 }
 
-.profile-pic img{
+.profile-pic img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
 }
 
-.number-rank h2{
+.number-rank h2 {
     font-family: var(--font-family-body) !important;
     font-size: 16px;
     font-weight: 600;
     color: var(--font-color-subheadline);
 }
 
-.profile-info{
+.profile-info {
     width: 40%;
 }
 
-.user-data .point{
+.user-data .point {
     width: 15%;
     text-align: center;
 }
 
-.others-data .point{
+.others-data .point {
     width: 15%;
     text-align: center;
 }
 
-.table-bknd{
-    background:rgb(235, 235, 235);
+.table-bknd {
+    background: rgb(235, 235, 235);
 }
 
+@media screen and (max-width: 1280) {
+    #no-kelompok {
+        font-size: 1.5rem !important;
+    }
 
+    #peringkat-kelompok {
+        font-size: 1rem !important;
+    }
 
-    @media screen and (max-width:1280) {
-        #no-kelompok{
-            font-size:1.5rem !important;
+    #tittle-points {
+        font-size: 0.5rem;
+        text-indent: 0px;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .content-wrapper {
+        padding-bottom: 100px !important;
+    }
+    #games-bounce {
+        width: 150px;
+        height: 150px;
+        display: inline-block; /*needed to trigger update */
+    }
+    .container-started a {
+        width: 35%;
+        height: 75%;
+        border-radius: 35px;
+    }
+    .btn-started {
+        text-align: center !important;
+        font-size: 1.5rem !important;
+    }
+    #ranking-card {
+        width: 75% !important;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .play-game {
+        font-size: 35px !important;
+    }
+    .user-info p:first-child {
+        font-size: 30px;
+        color: white;
+        padding-bottom: 0 !important;
+    }
+
+    .user-info p:last-child {
+        font-size: 15px;
+        color: #dbdbdb;
+        padding-bottom: 0 !important;
+    }
+    p.points-tittle {
+        font-size: 5px !important;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .play-game {
+        font-size: 25px !important;
+    }
+    .container-started a {
+        width: 50%;
+        height: 75%;
+        border-radius: 35px;
+    }
+    .btn-started {
+        text-align: center !important;
+        font-size: 1.5rem !important;
+    }
+    .user-info p:first-child {
+        font-size: 20px;
+        color: white;
+        padding-bottom: 0 !important;
+    }
+
+    .user-info p:last-child {
+        font-size: 15px;
+        color: #dbdbdb;
+        padding-bottom: 0 !important;
+    }
+    .winner-1 img {
+        width: 80px;
+        height: 80px;
+    }
+    .crown img {
+        width: 50px;
+        height: 50px;
+    }
+    .nama h2 {
+        font-size: 10px;
+        font-weight: 600;
+    }
+
+    .point h1 {
+        font-size: 10px;
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    @keyframes bounce {
+        0% {
+            transform: translateY(-10%);
         }
-
-        #peringkat-kelompok{
-            font-size:1rem !important;
-        }
-
-        #tittle-points{
-            font-size:0.5rem;
-            text-indent: 0px;
+        100% {
+            transform: translateY(0);
         }
     }
 
-    @media screen and (max-width:930px){
-        .content-wrapper{
-            padding-bottom: 100px !important;
-        }
-        #games-bounce{
-            width: 150px;
-            height: 150px;
-            display: inline-block; /*needed to trigger update */
-        }
-        .container-started a{
-            width: 35%;
-            height: 75%;
-            border-radius: 35px;
-        }
-        .btn-started{
-            text-align: center !important;
-            font-size: 1.5rem !important;
-        }
-        #ranking-card{
-            width: 75% !important;
-        }
+    #games-bounce {
+        width: 100px;
+        height: 100px;
+        display: block; /* needed to trigger update */
     }
-
-    @media screen and (max-width:780px) {
-        .play-game{
-            font-size: 35px !important;
-        }
-        .user-info p:first-child{
-            font-size:30px;
-            color: white;
-            padding-bottom: 0 !important;
-        }
-
-        .user-info p:last-child{
-            font-size:15px;
-            color: #dbdbdb;
-            padding-bottom: 0 !important;
-        }
-        p.points-tittle{
-            font-size:5px !important;
-        }
+    .btn-started {
+        height: 50px !important;
+        text-align: center !important;
+        font-size: 22px !important;
     }
+}
 
-    @media screen and (max-width:550px){
-        .play-game{
-            font-size: 25px !important;
-        }
-        .container-started a{
-            width: 50%;
-            height: 75%;
-            border-radius: 35px;
-        }
-        .btn-started{
-            text-align: center !important;
-            font-size: 1.5rem !important;
-        }
-        .user-info p:first-child{
-            font-size:20px;
-            color: white;
-            padding-bottom: 0 !important;
-        }
-
-        .user-info p:last-child{
-            font-size:15px;
-            color: #dbdbdb;
-            padding-bottom: 0 !important;
-        }
-        .winner-1 img{
-            width: 80px;
-            height: 80px;
-        }
-        .crown img{
-            width:  50px;
-            height: 50px;
-        }
-        .nama h2{
-            font-size: 10px;
-            font-weight: 600;
-        }
-
-        .point h1{
-            font-size: 10px;
-            font-weight: 600;
-        }
+@media screen and (max-width: 340px) {
+    .container-started {
+        display: none !important;
     }
-
-    @media screen and (max-width:370px) {
-        @keyframes bounce {
-            0% {
-                transform: translateY(-10%);
-            }
-            100% {
-                transform: translateY(0);
-            }
-        }
-
-        #games-bounce {
-            width:100px;
-            height:100px;
-            display: block; /* needed to trigger update */
-        }
-        .btn-started{
-            height: 50px !important;
-            text-align: center !important;
-            font-size: 22px !important;
-        }
-    }
-
-    @media screen and (max-width:340px) {
-        .container-started{
-            display: none !important;
-        }
-    }
+}
