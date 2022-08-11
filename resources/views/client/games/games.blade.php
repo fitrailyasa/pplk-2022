@@ -61,7 +61,7 @@
                 <div class="top-3-winner row row-cols-3 pb-4">
                     <div class="winner-2 winner">
                         <div class="profile-winner">
-                            <img src="{{ asset('assets/juara2.png') }}" alt="Juara 2" />
+                            <img src="{{ asset('assets/juara2.webp') }}" alt="Juara 2" />
                             <div class="winner-patch">
                                 <h1 class="winner-text">
                                     2
@@ -87,9 +87,9 @@
                         <div class="profile-winner">
                             <div class="crown">
                                 <!--<a href='https://pngtree.com/so/big'>big png from pngtree.com/</a>-->
-                                <img src="{{ asset('assets/Golden Crown.png') }}" alt="crown" class="crown-img"/>
+                                <img src="{{ asset('assets/Golden Crown.webp') }}" alt="crown" class="crown-img"/>
                             </div>
-                            <img src="{{ asset('assets/juara1.png') }}" alt="Juara 1" />
+                            <img src="{{ asset('assets/juara1.webp') }}" alt="Juara 1" />
                             <div class="winner-patch">
                                 <h1 class="winner-text">
                                     1
@@ -115,7 +115,7 @@
 
                     <div class="winner-3 winner">
                         <div class="profile-winner">
-                            <img src="{{ asset('assets/juara3.png') }}" alt="Juara 3" />
+                            <img src="{{ asset('assets/juara3.webp') }}" alt="Juara 3" />
                             <div class="winner-patch">
                                 <h1 class="winner-text">
                                     3

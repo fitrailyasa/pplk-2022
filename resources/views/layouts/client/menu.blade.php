@@ -5,7 +5,7 @@
                 <div class="pplk-logo-bknd">
                 </div>
                     <a class="pplk_logo" id="id-pplk" href="#">
-                        <img src="{{ asset('assets/Logo-PPLK.png') }}" class="d-inline-block align-top" alt="">
+                        <img src="{{ asset('assets/Logo-PPLK.webp') }}" class="d-inline-block align-top" alt="">
                     </a>
                     <div class="search-bar w-100 ">
                         <div class="search-form" id="search-width">
@@ -49,7 +49,7 @@
                 <div class="btn-group nav-item">
                     @if (auth()->user()->fotoProfil == Null)
                     <a class="profile-img nav-item align-content-center" type="button" class="btn btn-lg dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="{{ asset('assets/profile') }}/default.png" alt="">
+                        <img src="{{ asset('assets/profile') }}/default.webp" alt="">
                     </a>
                     @else
                     <a class="profile-img nav-item align-content-center" type="button" class="btn btn-lg dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">

@@ -26,7 +26,7 @@
                 <div class="col-lg-7 text-center text-container text-white justify-content-center">
                     <p class="title-text">REDEEM CODE</p>
                     <span class="line-indikator mx-auto"></span>
-                    <p class="text-conten mx-auto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam aliquam corporis ad at dicta quia pariatur. Dolores perspiciatis id laboriosam?</p>
+                    <p class="text-conten mx-auto">Redeem code nantinya dapat digunakan oleh para penjelajah angkasa untuk menukarkan point dari misi yang telah diselesaikan.</p>
                 </div>
             </div>
         </div>
@@ -40,7 +40,7 @@
                     <a class="btn my-lg-4" href='{{ url("/redeem/$kode_game->no") }}' role="button">
                         <div class="card rounded-4">
                             <div class="ratio ratio-1x1 bg-grey rounded-4">
-                                <img src="{{ asset('assets/logoCard/card.png') }}" class="card-img-top img-box rounded-5" alt="{{ $kode_game->nama }}">
+                                <img src="{{ asset('assets/logoCard/card.webp') }}" class="card-img-top img-box rounded-5" alt="{{ $kode_game->nama }}">
                             </div>
                             <div class="card-body">
                                 <p class="card-text pt-lg-2 pt-md-1 text-center text-light">{{ $kode_game->nama }}</p>
