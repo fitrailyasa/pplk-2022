@@ -375,7 +375,7 @@ body {
 
 /* background tebak bangunan */
 .bg-tb {
-    background: url(../assets/pplk1.png),
+    background: url(../assets/pplk1.webpg),
         linear-gradient(90deg, #0b0a3c 1.56%, #321943 100%);
     background-repeat: no-repeat, no-repeat;
     background-size: contain, cover;
@@ -384,7 +384,7 @@ body {
 
 @media only screen and (max-width: 768px) {
     .bg-tb {
-        background: url(../assets/pplk1.png),
+        background: url(../assets/pplk1.webpg),
             linear-gradient(90deg, #0b0a3c 1.56%, #321943 100%);
         background-repeat: no-repeat, no-repeat;
         background-size: 1280px, cover;
@@ -507,4 +507,14 @@ body {
     top: 0;
     right: 0;
     transform: translate(-100%, 100%);
+}
+
+.btn-pilih{
+    color: gray !important;;
+    border: none !important;
+    border-radius: 10px !important;
+    padding: 10px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    cursor: pointer!important;
 }

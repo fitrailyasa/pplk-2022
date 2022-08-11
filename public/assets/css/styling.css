@@ -1,5 +1,5 @@
 body {
-    background-image: url(../background-2.png) !important;
+    background-image: url(../background-2.webp) !important;
     background-size: cover;
     background-position: 50% 5%;
     background-repeat: no-repeat;
@@ -346,13 +346,12 @@ h2 {
 }
 
 @media screen and (max-width: 700px) {
-.begalin-content {
-    margin: 0px 20px;
-    padding: 0px 10px;
-    text-align: center;
+    .begalin-content {
+        margin: 0px 20px;
+        padding: 0px 10px;
+        text-align: center;
+    }
 }
-}
-
 
 #bounce {
     animation: bounce 0.5s alternate infinite ease-in;

@@ -58,7 +58,7 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Dies Natalis</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" placeholder="Dies Natalis" name="tahunBerdiri" id="tahunBerdiri" >
+              <input type="number" class="form-control" placeholder="Dies Natalis" name="tahunBerdiri" id="tahunBerdiri" >
             </div>
           </div>
           <div class="mb-3 row">

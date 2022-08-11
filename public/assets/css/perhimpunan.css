@@ -1,31 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 :root {
-    --primary: #7739A3;
-    --secondary: #1A75FF;
-    --bawaan-gradient-1:rgb(240,65,255); /*Base Color*/
-    --bawaan-gradient-2: rgb(119,57,163); /*Text Color*/
-    --gradient-1: linear-gradient(90deg, rgb(240, 65, 255) 0%, rgba(130,165,234,1) 100%);
-    --gradient-2: linear-gradient(90deg, rgba(119,57,163,1) 0%, rgba(26,117,255,1) 100%);
+    --primary: #7739a3;
+    --secondary: #1a75ff;
+    --bawaan-gradient-1: rgb(240, 65, 255); /*Base Color*/
+    --bawaan-gradient-2: rgb(119, 57, 163); /*Text Color*/
+    --gradient-1: linear-gradient(
+        90deg,
+        rgb(240, 65, 255) 0%,
+        rgba(130, 165, 234, 1) 100%
+    );
+    --gradient-2: linear-gradient(
+        90deg,
+        rgba(119, 57, 163, 1) 0%,
+        rgba(26, 117, 255, 1) 100%
+    );
     --white: #fff;
     --black: #000;
-    --grey: #C4C4C4;
+    --grey: #c4c4c4;
     --primary-color-1: #110f58;
     --primary-color-2: rgba(91, 207, 197, 0.2);
-    --font-family-title: Poppins, 'open sans';
-    --font-family-body: Poppins, 'open sans';
-    --font-color-primary: #174461; 
-    --font-color-primary-2: #FFFFFF;
-    --font-color-subheadline: #071D2C; 
+    --font-family-title: Poppins, "open sans";
+    --font-family-body: Poppins, "open sans";
+    --font-color-primary: #174461;
+    --font-color-primary-2: #ffffff;
+    --font-color-subheadline: #071d2c;
     --font-color-secondary: #686868;
-    --font-color-call-to-act-2:#4a4a4a;
-    --page-background-1: #F9FAFB;
+    --font-color-call-to-act-2: #4a4a4a;
+    --page-background-1: #f9fafb;
     --page-background-2: #f6f6f6;
-    
 }
-body{
-    background-image: url(../background-2.png);
+body {
+    background-image: url(../background-2.webp);
     background-size: cover;
     background-position: 50% 5%;
     background-repeat: no-repeat;
@@ -34,34 +41,33 @@ body{
     width: 100%;
     overflow-x: hidden;
 }
-.card{
-    background-color: rgba(255, 255, 255, 0.212)!important;
-    border-color: #ffffff6c!important;
-    box-shadow: #ffffff6c 0px 20px 60px!important;
-    border-radius: 30px!important;
+.card {
+    background-color: rgba(255, 255, 255, 0.212) !important;
+    border-color: #ffffff6c !important;
+    box-shadow: #ffffff6c 0px 20px 60px !important;
+    border-radius: 30px !important;
     width: 20rem;
 }
-.card-title{
-    font-family:"poppins";
+.card-title {
+    font-family: "poppins";
     font-weight: bold;
     color: white;
 }
-.card-text{
+.card-text {
     font-family: sans-serif;
     color: white;
 }
-.box{
+.box {
     height: 10rem;
     width: 100%;
-
 }
-.box .box-img{
+.box .box-img {
     height: 100%;
     width: 10rem;
     object-fit: cover;
     object-position: 50% 0%;
 }
-.tombol{
+.tombol {
     position: inherit;
     border: none;
     border-radius: 15px;
@@ -76,7 +82,7 @@ body{
     bottom: -15px;
     text-align: center;
 }
-.tombol{
+.tombol {
     position: inherit;
     border: none;
     border-radius: 15px;
@@ -91,30 +97,31 @@ body{
     bottom: -15px;
     text-align: center;
 }
-.tombol:hover{
+.tombol:hover {
     transform: translate(65px, 0px);
     color: #7affff;
     transition: all 0.3s ease;
 }
 .himpunan {
-padding:0 3%;
+    padding: 0 3%;
 }
-img{
+img {
     display: block;
     margin: 0 auto;
 }
-p, h5 {
+p,
+h5 {
     line-height: 1em;
     text-align: center;
     color: #fff;
 }
-h2{
+h2 {
     line-height: 1em;
     text-align: center;
     color: #fff;
     padding-top: 20px;
 }
-.details{
+.details {
     background-color: var(--gradient-2);
     background-color: var(--bawaan-gradient-2);
     position: relative;
@@ -124,27 +131,26 @@ h2{
     padding-left: 30px;
     border: 10px solid gray;
     text-align: center;
-    margin: 0;   
+    margin: 0;
 }
-.details h2{
+.details h2 {
     font-size: 22px;
     text-transform: uppercase;
     color: #fff;
 }
-.details p{
+.details p {
     font-size: 16px;
     color: #fff;
 }
-.booklet{
+.booklet {
     width: 100%;
-
 }
-.booklet img{
+.booklet img {
     width: 100%;
     z-index: 6;
     align-items: center;
 }
-.page{
+.page {
     background-color: var(--gradient-2);
     background-color: var(--bawaan-gradient-2);
     position: relative;
@@ -155,15 +161,14 @@ h2{
     padding-left: 30px;
     text-align: center;
     margin: 0;
-    
 }
-.row{
+.row {
     align-items: center;
     margin-left: 35%;
 }
 
-@media screen and (max-width:930px) {
+@media screen and (max-width: 930px) {
     #terakhir {
         margin-bottom: 5rem;
     }
-  }
+}
