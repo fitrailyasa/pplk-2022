@@ -25,7 +25,7 @@
                 <h5 class="px-0">PEMBINA UKM : {{ $ukms->pembina }}</h5>
                 <h5 class="px-0">KETUA UKM : {{ $ukms->ketuaUmum }}</h5>
                 
-                <h2 class="pt-5">DESKIRPSI</h2>
+                <h2 class="pt-5">DESKRIPSI</h2>
                 <p class="pb-5">{!!nl2br(e($ukms->deskripsi)) !!}</p>
 
                 <h2 class="px-0">VISI</h2>
@@ -45,7 +45,7 @@
 
             <div class="col-lg-8 col-md-6 align-top">
                     <h2>PERATURAN UKM BARCODE</h2>
-                        <p class="text-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt labore, eligendi quibusdam nulla, saepe sint perferendis velit doloremque vitae praesentium ex nobis quasi eaque, a assumenda adipisci officiis! Dolores cum excepturi, quis dolore, natus accusamus nam perspiciatis quod tempora quo error odio eveniet exercitationem. Enim sed nesciunt corporis libero laboriosam.</p>
+                        <p class="text-1">QR Barcode dapat discan dan digunakan untuk menghubungkan langsung ke media sosial UKM/Komunitas terkait informasi yang telah disediakan.</p>
             </div>
 
         </div>

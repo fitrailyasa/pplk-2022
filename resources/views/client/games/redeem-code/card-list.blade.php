@@ -26,7 +26,7 @@
                 <div class="col-lg-7 text-center text-container text-white justify-content-center">
                     <p class="title-text">REDEEM CODE</p>
                     <span class="line-indikator mx-auto"></span>
-                    <p class="text-conten mx-auto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam aliquam corporis ad at dicta quia pariatur. Dolores perspiciatis id laboriosam?</p>
+                    <p class="text-conten mx-auto">Redeem code nantinya dapat digunakan oleh para penjelajah angkasa untuk menukarkan point dari misi yang telah diselesaikan.</p>
                 </div>
             </div>
         </div>

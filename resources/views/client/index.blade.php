@@ -20,17 +20,17 @@
                             <div class="modal-carousel owl-carousel">
                                 <div class="modal-carousel-item justify-content-center w-100">
                                     <div class="ratio ratio-1x1">
-                                        <img class="opacity-100 rounded-3" src="{{ asset('assets/media/alley 5.webp') }}" alt="">
+                                        <img class="opacity-100 rounded-3" src="{{ asset('assets/logoSponsorship/1.webp') }}" alt="">
                                     </div>
                                 </div>
                                 <div class="modal-carousel-item justify-content-center w-100">
                                     <div class="ratio ratio-1x1">
-                                        <img class="opacity-100 rounded-3" src="{{ asset('assets/media/alley 5.webp') }}" alt="">
+                                        <img class="opacity-100 rounded-3" src="{{ asset('assets/logoSponsorship/goodDay.jfif') }}" alt="">
                                     </div>
                                 </div>
                                 <div class="modal-carousel-item justify-content-center w-100">
                                     <div class="ratio ratio-1x1">
-                                        <img class="opacity-100 rounded-3" src="{{ asset('assets/media/alley 5.webp') }}" alt="">
+                                        <img class="opacity-100 rounded-3" src="{{ asset('assets/logoSponsorship/2.webp') }}" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -54,7 +54,18 @@
             </div>
             <div class="row text-center text-white mt-xs-5 mt-md-3" id="container-landing-page-text">
                 <div class="text-nama">
-                    <p>Hello, <span class="nama">{{ auth()->user()->nama }}</span></p>
+                    @php
+                        $full_name=auth()->user()->nama;
+                        $name=explode(' ',$full_name);
+                        if(sizeof($name)<3){
+                            $result_name=auth()->user()->nama;
+                        }
+                        else{
+                            $result_name=$name[0]." ".$name[1];
+                        }
+
+                    @endphp
+                    <p>Hello, <span class="nama">{{ $result_name }}</span></p>
                 </div>
                 <div class="text-qoute">
                     <p>Ayo Menjelajah, Sekarang!</p>
@@ -451,7 +462,7 @@
 <!-- ./Modal Begalin -->
 
 
-        
+
         <!-- Medpart -->
         <div class="container-fluid medpart padding-top-bottom" id="terakhir">
             <div class="wrapper">
@@ -637,7 +648,7 @@
     </div>
 
 
-   
+
 @endsection
 
 @section('script')

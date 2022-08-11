@@ -27,9 +27,7 @@
         </div>
         <div class="container mb-5 mt-5 text-light">
             <h2>DESKRIPSI</h2>
-            <!-- <p>{!!nl2br(e($himpunans->deskripsi)) !!}</p> -->
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nobis laborum nemo optio officia asperiores magni, fugiat itaque odit magnam incidunt ducimus officiis consequuntur neque fugit facere illum id aliquid. Quas corrupti ducimus amet illum? Facilis, quibusdam quasi. Facere fugiat reprehenderit vero consequuntur sint enim quaerat quidem doloribus reiciendis, debitis repellat. Illo animi ipsam, id necessitatibus natus sequi voluptate eius, sint, modi expedita beatae. Expedita obcaecati porro fugit nostrum facere. Facilis dolores quos dolorum aliquid nulla expedita non sit beatae repellendus. Repudiandae aliquam dicta nam voluptatibus neque sunt adipisci in molestiae suscipit quisquam iure, aliquid quod inventore deserunt asperiores expedita.
-            </p>
+            <p> {!!nl2br(e($himpunans->deskripsi)) !!} </p>
             <h2 class="pt-5">VISI</h2>
             <p>{!!nl2br(e($himpunans->visi)) !!}</p>
             <h2>MISI</h2>

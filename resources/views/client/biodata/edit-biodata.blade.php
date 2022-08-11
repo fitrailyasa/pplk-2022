@@ -82,7 +82,7 @@
                                 <input value="{{ $viewbiodata->nomorHp }}"name="nomorHp"type="text" placeholder="{{ $viewbiodata->nomorHp }}" @if(auth()->user()->roles_id == 9) disabled @endif>
                             </div>
 
-                            <div class="row bio-input" @if(auth()->user()->roles_id == 9) onclick="window.location.href='https://instagram.com/fitrailyasa'" @endif style="cursor: pointer;">
+                            <div class="row bio-input">
                                 <label class="form-label" for="instagram">Instagram</label>
                                 <input value="{{ $viewbiodata->instagram }}"name="instagram" type="text" placeholder="{{ $viewbiodata->nomorHp }}" @if(auth()->user()->roles_id == 9) disabled @endif>
                             </div>
