@@ -375,7 +375,7 @@ body {
 
 /* background tebak bangunan */
 .bg-tb {
-    background: url(../assets/pplk1.png),
+    background: url(../assets/pplk1.webpg),
         linear-gradient(90deg, #0b0a3c 1.56%, #321943 100%);
     background-repeat: no-repeat, no-repeat;
     background-size: contain, cover;
@@ -384,7 +384,7 @@ body {
 
 @media only screen and (max-width: 768px) {
     .bg-tb {
-        background: url(../assets/pplk1.png),
+        background: url(../assets/pplk1.webpg),
             linear-gradient(90deg, #0b0a3c 1.56%, #321943 100%);
         background-repeat: no-repeat, no-repeat;
         background-size: 1280px, cover;

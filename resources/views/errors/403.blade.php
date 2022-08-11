@@ -24,7 +24,7 @@
 
     <div class="stars">
         <div class="central-body">
-            <img class="image-404" src="{{ asset('assets/403.png') }}" width="400px">
+            <img class="image-404" src="{{ asset('assets/403.webp') }}" width="400px">
             <a href="#" class="btn-go-home">Kembali!!</a>
         </div>
         <div class="objects" >
@@ -48,11 +48,11 @@
                 <path d="M16.2873 40.8816C15.718 41.2706 14.6572 41.2706 14.6572 41.2706C14.848 40.7347 15.1789 40.2597 15.6155 39.8951C15.7458 39.806 15.9062 39.7723 16.0614 39.8015C16.2166 39.8307 16.3538 39.9203 16.4429 40.0507C16.532 40.181 16.5656 40.3414 16.5364 40.4966C16.5073 40.6518 16.4176 40.789 16.2873 40.8781V40.8816Z" fill="#FFCB39"/>
             </svg>
             <div class="earth-moon">
-                <img class="object_earth" src="{{ asset('assets/Planet 21.png') }}" width="120px">
-                <img class="object_moon" src="{{ asset('assets/Mars.png') }}" width="60px">
+                <img class="object_earth" src="{{ asset('assets/Planet 21.webp') }}" width="120px">
+                <img class="object_moon" src="{{ asset('assets/Mars.webp') }}" width="60px">
             </div>
             <div class="box_astronaut" onclick="window.location.href='https://instagram.com/ibnu_prayogie'" style="cursor: pointer;">
-                <img src="{{ asset('assets/Maskot1.png') }}" class="object_astronaut" width="200px">
+                <img src="{{ asset('assets/Maskot1.webp') }}" class="object_astronaut" width="200px">
             </div>
         </div>
         <div class="glowing_stars" onclick="window.location.href='https://instagram.com/fitrailyasa'" style="cursor: pointer;">
