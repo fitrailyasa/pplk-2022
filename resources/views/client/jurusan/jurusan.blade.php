@@ -115,7 +115,7 @@
                 <div class="container p-4">
                     <div class="row justify-content-around mb-4">
                         <div class="col-lg-6 col-md-10 mb-4">
-                            <img class="gambar-1 img-fluid" src="../assets/jurusan-poster3.webp" alt="" srcset="">
+                            <img class="gambar-1 img-fluid" src="../assets/JTIK.webp" alt="" srcset="">
                         </div>
                         <div class="col-lg-6 col-md-10 my-auto">
                             <h2 class="mt-lg-5 mt-md-4"><strong>Kepala Jurusan</strong></h2>
@@ -164,7 +164,7 @@
                     <!-- gambar dan deskripsi jurusan JTPI -->
                     <div class="row justify-content-around mb-4">
                         <div class="col-lg-6 col-md-10 mb-4">
-                            <img class="gambar-1 img-fluid" src="../assets/jurusan-poster2.webp" alt="" srcset="">
+                            <img class="gambar-1 img-fluid" src="../assets/JTPI.webp" alt="" srcset="">
                         </div>
                         <div class="col-lg-6 col-md-10 my-auto">
                             <h2 class="mt-lg-5 mt-md-4"><strong>Kepala Jurusan</strong></h2>
