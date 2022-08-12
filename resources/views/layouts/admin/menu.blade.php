@@ -906,7 +906,7 @@
                 <a href="/dapmen/presensiMaba" class="nav-link">
                 <i class="nav-icon fa-solid fa-camera"></i>
                 <p>
-                    Scanner Maba
+                    Scanner Presensi
                 </p>
                 </a>
             </li>
