@@ -23,17 +23,9 @@ class AdminUserController extends Controller
         // $users = User::all();
         // return view('admin.user.index', compact('users'));
 
-
-
-        if (auth()->user()->roles_id == 1) {
-            return view('admin.user.index', [
-                'users' => DB::table('users')->paginate(6650)
-            ]);
-        } elseif (auth()->user()->roles_id == 2) {
-            return view('admin.user.index', [
-                'users' => DB::table('users')->paginate(859)
-            ]);
-        }
+        return view('admin.user.index', [
+            'users' => DB::table('users')->paginate(859)
+        ]);
     }
 
     /**
