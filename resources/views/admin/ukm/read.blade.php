@@ -102,7 +102,7 @@
         <div class="mb-3 row">
           <label class="col-sm-3 col-form-label">Dokumentasi 3</label>
           <div class="col-sm-9">
-            <img src="{{ asset('assets/ukm/dokumentasi3') }}/{{ $ukm->dokumentasi13 }}" alt="dokumentasi13 ukm" width="75px">
+            <img src="{{ asset('assets/ukm/dokumentasi3') }}/{{ $ukm->dokumentasi3 }}" alt="dokumentasi3 ukm" width="75px">
           </div>
         </div>
         <div class="mb-3 row">
