@@ -711,7 +711,7 @@
             margin: 10,
             loop: true,
             autoplay: true,
-            autoplayTimeout: 2000,
+            autoplayTimeout: 3500,
             autoplayHoverPause: true,
             nav: false,
             dots: true,
