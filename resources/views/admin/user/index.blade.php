@@ -48,7 +48,7 @@
                     <td>{{ $user->nama }}</td>
                     <td>{{ $user->nim }}</td>
                     <td>{{ $user->kelompok }}</td>
-                    <td><a style="color:black; text-decoration: none;" href="https://instagram.com/{{ $user->instagram }}">{{ $user->instagram }}</a></td>
+                    <td><a style="color:black; text-decoration: none;" target="_blank" href="https://instagram.com/{{ $user->instagram }}">{{ $user->instagram }}</a></td>
                     <td><a style="color:black; text-decoration: none;" href="https://api.whatsapp.com/send?phone={{ $user->nomorHp }}">{{ $user->nomorHp }}</a></td>
                     <td>{{ $user->golonganDarah }}</td>
                     <td>{{ $user->riwayatPenyakit }}</td>
