@@ -1,4 +1,4 @@
-body {
+ebody {
     background-image: url(../background-2.webp) !important;
     background-size: cover !important;
     background-position: 50% 5%;
@@ -58,6 +58,14 @@ body {
 
 .animasi-nav {
     margin: 0.5rem 0;
+}
+
+.img-pos{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 @media only screen and (max-width: 500px) {
