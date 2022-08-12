@@ -31,9 +31,16 @@ body {
 
 .gambar-1 {
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    margin: auto 0;
     object-position: 50% 0%;
     border-radius: 20px;
+}
+.img-pos{
+    position: relative;
+    top :50%;
+    transform: translateY(-50%);
+    max-width: 100%;
 }
 
 @media screen and (max-width: 930px) {
