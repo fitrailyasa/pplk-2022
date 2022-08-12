@@ -26,7 +26,7 @@ class AdminUserController extends Controller
 
 
         if (auth()->user()->roles_id == 1) {
-            return view('super.user.index', [
+            return view('admin.user.index', [
                 'users' => DB::table('users')->paginate(6650)
             ]);
         } elseif (auth()->user()->roles_id == 2) {
