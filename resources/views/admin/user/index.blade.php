@@ -29,6 +29,7 @@
               <thead>
                 <tr>
                     <th>No</th>
+                    <th>Profile</th>
                     <th>Nama Lengkap</th>
                     <th>NIM</th>
                     <th>Kelompok</th>
@@ -45,6 +46,13 @@
                 @foreach ($users as $user)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
+                    <td>@if(auth()->user()->roles_id == 1)
+                        @if ($user->fotoProfil == Null)
+                            <img src="{{ asset('assets/profile') }}/default.png" style="width:200px !important; height:200px !important; align-item: center;" class="img-circle elevation-2" alt="User Image">
+                        @else
+                            <img src="{{ asset('assets/profile') }}/{{ $user->fotoProfil }}" style="width:200px !important; height:200px !important; align-item: center;" class="img-circle elevation-2" alt="User Image">
+                        @endif
+                    @endif</td>
                     <td>{{ $user->nama }}</td>
                     <td>{{ $user->nim }}</td>
                     <td>{{ $user->kelompok }}</td>
