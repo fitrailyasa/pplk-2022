@@ -14,7 +14,9 @@
   <div class="container pt-5">
     <div class="row pt-5" style="height: 150px">
       <div class="col-3 col-md-2 d-flex justify-content-start">
-        <i class="fa-solid navbar-bb fa-angle-left text-white rounded d-flex justify-content-center align-items-center"></i>
+        <a href="/game-home" title="Close">
+          <i class="fa-solid navbar-bb fa-angle-left text-white rounded d-flex justify-content-center align-items-center"></i>
+        </a>
       </div>
       <div class="col-6 col-md-8 d-flex justify-content-center align-items-center">
         <h1 class="text-white mb-5 judul-tb text-center">Tebak Bangunan</h1>

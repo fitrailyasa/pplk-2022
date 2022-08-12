@@ -322,10 +322,10 @@ body p{
     text-align: center;
     margin: auto;
     font-size: 0.7rem;
-    font-weight: 600;
-    background-color: rgba(255, 255, 255, 0.212)!important;
-    border-color: #ffffff6c!important;
-    box-shadow: #ffffff6c 0px 20px 20px 10px!important;
+    font-weight: 200;
+    background-color: rgba(0, 0, 0, 40%)!important;
+    border-color: #85838398!important;
+    box-shadow: inset #7602996c 0px 0px 40px 10px!important;
 }
 
 .card p{

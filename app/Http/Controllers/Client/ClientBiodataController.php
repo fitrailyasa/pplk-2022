@@ -149,13 +149,19 @@ class ClientBiodataController extends Controller
 
         // mencari row user yang ingin di update
             $viewbiodata = User::find($id);
+            $password = 'password';
 
+            if ($request->input('password') ==  $viewbiodata->password) {
+                $password = $viewbiodata->password;
+            }else {
+                $password =  Hash::make($request->password) ;
+            }
                     // memberikan nilai baru ke column
                 $nim = $request->input('nim');
                 $viewbiodata->nama = $request->input('name');
                 $viewbiodata->golonganDarah = $request->input('golonganDarah');
                 $viewbiodata->nim = $nim;
-                $viewbiodata->password = Hash::make($request->input('password'));
+                $viewbiodata->password = $password;
                 $viewbiodata->email = $request->input('email');
                 $viewbiodata->instagram = $request->input('instagram');
                 $viewbiodata->nomorHp = $request->input('nomorHp');
