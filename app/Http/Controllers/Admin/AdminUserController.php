@@ -23,9 +23,17 @@ class AdminUserController extends Controller
         // $users = User::all();
         // return view('admin.user.index', compact('users'));
 
-        return view('admin.user.index', [
-            'users' => DB::table('users')->paginate(859)
-        ]);
+
+
+        if (auth()->user()->roles_id == 1) {
+            return view('super.user.index', [
+                'users' => DB::table('users')->paginate(6650)
+            ]);
+        } elseif (auth()->user()->roles_id == 2) {
+            return view('admin.user.index', [
+                'users' => DB::table('users')->paginate(859)
+            ]);
+        }
     }
 
     /**
@@ -73,6 +81,7 @@ class AdminUserController extends Controller
         } elseif (auth()->user()->roles_id == 2) {
             return redirect('admin/user')->with('sukses', 'Berhasil Tambah Data!');
         }
+
     }
 
     /**
