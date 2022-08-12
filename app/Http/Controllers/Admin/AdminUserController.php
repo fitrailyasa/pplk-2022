@@ -107,6 +107,7 @@ class AdminUserController extends Controller
      */
     public function update(Request $request, $id)
     {
+
         $user = User::where('id', $id)->first();
 
         if ($request->input('password') ==  $user->password) {
