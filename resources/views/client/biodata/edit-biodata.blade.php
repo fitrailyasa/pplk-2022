@@ -104,10 +104,11 @@
                                 <label class="form-label" for="riwayat">Riwayat Penyakit</label>
                                 <input value="{{ $viewbiodata->riwayatPenyakit }}" name="riwayatPenyakit"  type="text" placeholder="{{ $viewbiodata->riwayatPenyakit }}" @if(auth()->user()->roles_id == 9) disabled @endif>
                             </div>
-
+                            @if(auth()->user()->roles_id != 9)
                             <div class="submit-edit" align="center">
                                 <input type="submit" class="btn btn-primay" value="Unggah" @if(auth()->user()->roles_id == 9) disabled @endif>
                             </div>
+                            @endif
                     </div>
                     </form>
                 </div>
