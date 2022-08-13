@@ -88,6 +88,8 @@ Route::middleware([SuperAdmin::class])->name('super.')->prefix('super')->group(f
   Route::post('/presensi/{id}', [ClientScannerController::class, 'presensi']);
   Route::post('/polling/{id}', [ClientScannerController::class, 'polling']);
   Route::post('/presensiMaba/{id}', [ClientScannerController::class, 'presensiMaba']);
+
+  Route::get('/edit-biodata', [ClientBiodataController::class, 'indexEditBio'])->name('edit-biodata');
 });
 
 // CMS ADMIN
@@ -106,6 +108,8 @@ Route::middleware([Admin::class])->name('admin.')->prefix('admin')->group(functi
   Route::resource('dapmenUser', DapmenUserController::class);
   Route::get('/detail-presensi/{id}',[DapmenUserController::class,'detailPresensi'])->name('presensiUser');
   Route::get('/polling-ukm/{id}',[AdminUkmController::class,'lihatPolling'])->name('pollingUkm');
+
+  Route::get('/edit-biodata', [ClientBiodataController::class, 'indexEditBio'])->name('edit-biodata');
 });
 
 // CMS HIMPUNAN
@@ -113,6 +117,8 @@ Route::middleware([Himpunan::class])->name('himpunans.')->prefix('himpunans')->g
   Route::get('/', [AdminController::class, 'index'])->name('index');
   Route::resource('himpunan', AdminHimpunanController::class);
   Route::resource('prodi', AdminProdiController::class);
+
+  Route::get('/edit-biodata', [ClientBiodataController::class, 'indexEditBio'])->name('edit-biodata');
 });
 
 // CMS UKM
@@ -122,6 +128,8 @@ Route::middleware([Ukm::class])->name('ukms.')->prefix('ukms')->group(function (
   Route::get('/polling', [ClientScannerController::class, 'indexPolling'])->name('polling');
   Route::post('/polling/{id}', [ClientScannerController::class, 'polling']);
   Route::get('/polling-ukm/{id}',[AdminUkmController::class,'lihatPolling'])->name('pollingUkm');
+
+  Route::get('/edit-biodata', [ClientBiodataController::class, 'indexEditBio'])->name('edit-biodata');
 });
 
 // CMS KEDISIPLISAN
@@ -132,6 +140,8 @@ Route::middleware([Kedisiplinan::class])->name('kedis.')->prefix('kedis')->group
   // SCANNER STAFF
   Route::get('/scanner', [ClientScannerController::class, 'index'])->name('scanner');
   Route::post('/presensi/{id}', [ClientScannerController::class, 'presensi']);
+
+  Route::get('/edit-biodata', [ClientBiodataController::class, 'indexEditBio'])->name('edit-biodata');
 });
 
 // CMS DAPMEN
@@ -143,6 +153,18 @@ Route::middleware([DapMen::class])->name('dapmen.')->prefix('dapmen')->group(fun
   // SCANNER MABA
   Route::get('/presensiMaba', [ClientScannerController::class, 'indexMaba'])->name('indexMaba');
   Route::post('/presensiMaba/{id}', [ClientScannerController::class, 'presensiMaba']);
+
+  Route::get('/edit-biodata', [ClientBiodataController::class, 'indexEditBio'])->name('edit-biodata');
+});
+
+// STAFF
+Route::middleware([Staff::class])->name('staff.')->prefix('staff')->group(function () {
+    Route::get('/edit-biodata', [ClientBiodataController::class, 'indexEditBio'])->name('edit-biodata');
+});
+
+// MABA
+Route::middleware([Maba::class])->name('maba.')->prefix('maba')->group(function () {
+    Route::get('/edit-biodata', [ClientBiodataController::class, 'indexEditBio'])->name('edit-biodata');
 });
 
 // // CLIENT
@@ -163,19 +185,16 @@ Route::middleware(['auth'])->group(function () {
   Route::get('/pplk', function () { return view('client.pplk'); });
   Route::get('/div-pplk', function () { return view('client.div-pplk'); });
 
-  if (auth()->user()->roles_id != 9) {
-    // BIODATA
-    Route::get('/biodata', [ClientBiodataController::class, 'index'])->name('biodata');
-    Route::get('/edit-biodata', [ClientBiodataController::class, 'indexEditBio'])->name('edit-biodata');
-    Route::get('edit-fotoProfil/{id}', [ClientBiodataController::class, 'editProfil']);
-    Route::put('update-fotoProfil/{id}', [ClientBiodataController::class, 'updateProfil']);
-    Route::get('edit-profil/{id}', [ClientBiodataController::class, 'editBiodata']);
-    Route::put('update-profil/{id}', [ClientBiodataController::class, 'updateBiodata']);
+  // BIODATA
+  Route::get('/biodata', [ClientBiodataController::class, 'index'])->name('biodata');
+  Route::get('edit-fotoProfil/{id}', [ClientBiodataController::class, 'editProfil']);
+  Route::put('update-fotoProfil/{id}', [ClientBiodataController::class, 'updateProfil']);
+  Route::get('edit-profil/{id}', [ClientBiodataController::class, 'editBiodata']);
+  Route::put('update-profil/{id}', [ClientBiodataController::class, 'updateBiodata']);
 
-    // FORM KELUHAN
-    Route::get('/form-keluhan ', [ClientKeluhanController::class, 'index'])->name('indexKeluhan');
-    Route::post('/form-keluhan/{id}', [ClientKeluhanController::class, 'create'])->name('create-keluhan');
-  }
+  // FORM KELUHAN
+  Route::get('/form-keluhan ', [ClientKeluhanController::class, 'index'])->name('indexKeluhan');
+  Route::post('/form-keluhan/{id}', [ClientKeluhanController::class, 'create'])->name('create-keluhan');
 
   // ORMAWA
   Route::get('/jurusan', [ClientJurusanController::class, 'index'])->name('jurusan');
