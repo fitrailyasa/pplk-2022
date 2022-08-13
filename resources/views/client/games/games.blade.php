@@ -125,7 +125,7 @@
                         <div class="info-winner">
                             <div class="nama">
                                 <h2>
-                                    {{  $leaderboards[2]->kelompok }} Kelompok
+                                    Kelompok {{  $leaderboards[2]->kelompok }}
                                 </h2>
                             </div>
                             <div class="point">
