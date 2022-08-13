@@ -26,7 +26,7 @@
       <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
         <div class="card-border w-100 rounded-5">
           <div class="card rounded-5 ap-cd w-100">
-            <img src="{{ asset('assets/tebakBangunan/'.$soal->namaBangunan.'.webp') }}" alt="" class="card-img-top bg-secondary rounded-5 ratio ratio-16x9" />
+            <img src="{{ asset('assets/TebakBangunan/'. $soal->namaBangunan.'.webp') }}" alt="" class="card-img-top bg-secondary rounded-5 ratio ratio-16x9" />
             <div class="card-body">
               <h3 class="card-title text-center text-white"> {{ $soal->soal }}</h3>
             </div>
