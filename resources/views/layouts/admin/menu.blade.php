@@ -441,6 +441,32 @@
             </li>
             <!--./Beranda-->
 
+            <!--Panitia-->
+            <li class="nav-item">
+                <a class="nav-link tabitem">
+                <i class="nav-icon fa-solid fa-user-astronaut"></i>
+                <p>
+                    Panitia
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+                </a>
+                <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="{{ route('admin.user.create') }}" class="nav-link tablinks">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Tambah Panitia</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('admin.user.index') }}" class="nav-link tablinks">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Kelola Data Panitia</p>
+                    </a>
+                </li>
+                </ul>
+            </li>
+            <!--./Panitia-->
+
             <!--User-->
             <li class="nav-item">
                 <a class="nav-link tabitem">
@@ -880,7 +906,7 @@
                 <a href="/dapmen/presensiMaba" class="nav-link">
                 <i class="nav-icon fa-solid fa-camera"></i>
                 <p>
-                    Scanner Maba
+                    Scanner Presensi
                 </p>
                 </a>
             </li>

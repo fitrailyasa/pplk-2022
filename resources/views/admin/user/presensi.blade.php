@@ -20,49 +20,43 @@
             </div>
         </div>
         <div class="mb-3 row">
-          <label class="col-sm-3 col-form-label">Hari 1</label>
-            <div class="col-sm-9">
-               <input type="text" class="form-control" placeholder="Tidak Hadir" name="telepon" id="telepon" value="{{ $status1 }}" disabled>
-            </div>
-        </div>
-        <div class="mb-3 row">
-            <label class="col-sm-3 col-form-label">Hari 2</label>
+            <label class="col-sm-3 col-form-label">13 Agustus</label>
             <div class="col-sm-9">
               <input type="text" class="form-control" placeholder="Tidak Hadir" name="telepon" id="telepon" value="{{ $status2 }}" disabled>
             </div>
         </div>
         <div class="mb-3 row">
-            <label class="col-sm-3 col-form-label">Hari 3</label>
+            <label class="col-sm-3 col-form-label">15 Agustus</label>
             <div class="col-sm-9">
               <input type="text" class="form-control" placeholder="Tidak Hadir" name="telepon" id="telepon" value="{{ $status3 }}" disabled>
             </div>
         </div>
         <div class="mb-3 row">
-            <label class="col-sm-3 col-form-label">Hari 4</label>
+            <label class="col-sm-3 col-form-label">16 Agustus</label>
             <div class="col-sm-9">
               <input type="text" class="form-control" placeholder="Tidak Hadir" name="telepon" id="telepon" value="{{ $status4 }}" disabled>
             </div>
         </div>
         <div class="mb-3 row">
-            <label class="col-sm-3 col-form-label">Hari 5</label>
+            <label class="col-sm-3 col-form-label">17 Agustus</label>
             <div class="col-sm-9">
               <input type="text" class="form-control" placeholder="Tidak Hadir" name="telepon" id="telepon" value="{{ $status5 }}" disabled>
             </div>
         </div>
         <div class="mb-3 row">
-            <label class="col-sm-3 col-form-label">Hari 6</label>
+            <label class="col-sm-3 col-form-label">18 Agustus</label>
             <div class="col-sm-9">
               <input type="text" class="form-control" placeholder="Tidak Hadir" name="telepon" id="telepon" value="{{ $status6 }}" disabled>
             </div>
         </div>
         <div class="mb-3 row">
-            <label class="col-sm-3 col-form-label">Hari 7</label>
+            <label class="col-sm-3 col-form-label">19 Agustus</label>
             <div class="col-sm-9">
               <input type="text" class="form-control" placeholder="Tidak Hadir" name="telepon" id="telepon" value="{{ $status7 }}" disabled>
             </div>
         </div>
         <div class="mb-3 row">
-            <label class="col-sm-3 col-form-label">Hari 8</label>
+            <label class="col-sm-3 col-form-label">20 Agustus</label>
             <div class="col-sm-9">
               <input type="text" class="form-control" placeholder="Tidak Hadir" name="telepon" id="telepon" value="{{ $status8 }}" disabled>
             </div>

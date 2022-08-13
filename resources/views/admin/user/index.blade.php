@@ -29,6 +29,9 @@
               <thead>
                 <tr>
                     <th>No</th>
+                    @if(auth()->user()->roles_id == 1)
+                    <th>Profile</th>
+                    @endif
                     <th>Nama Lengkap</th>
                     <th>NIM</th>
                     <th>Kelompok</th>
@@ -45,10 +48,19 @@
                 @foreach ($users as $user)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
+                    @if(auth()->user()->roles_id == 1)
+                    <td>
+                        @if ($user->fotoProfil == Null)
+                            <img src="{{ asset('assets/profile') }}/default.png" style="width:200px !important; height:200px !important; align-item: center;" class="img-circle elevation-2" alt="User Image">
+                        @else
+                            <img src="{{ asset('assets/profile') }}/{{ $user->fotoProfil }}" style="width:200px !important; height:200px !important; align-item: center;" class="img-circle elevation-2" alt="User Image">
+                        @endif
+                    </td>
+                    @endif
                     <td>{{ $user->nama }}</td>
                     <td>{{ $user->nim }}</td>
                     <td>{{ $user->kelompok }}</td>
-                    <td><a style="color:black; text-decoration: none;" href="https://instagram.com/{{ $user->instagram }}">{{ $user->instagram }}</a></td>
+                    <td><a style="color:black; text-decoration: none;" target="_blank" href="https://instagram.com/{{ $user->instagram }}">{{ $user->instagram }}</a></td>
                     <td><a style="color:black; text-decoration: none;" href="https://api.whatsapp.com/send?phone={{ $user->nomorHp }}">{{ $user->nomorHp }}</a></td>
                     <td>{{ $user->golonganDarah }}</td>
                     <td>{{ $user->riwayatPenyakit }}</td>

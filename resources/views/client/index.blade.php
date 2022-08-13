@@ -20,12 +20,12 @@
                             <div class="modal-carousel owl-carousel">
                                 <div class="modal-carousel-item justify-content-center w-100">
                                     <div class="ratio ratio-1x1">
-                                        <img class="opacity-100 rounded-3" src="{{ asset('assets/logoSponsorship/1.webp') }}" alt="">
+                                        <img class="opacity-100 rounded-3" src="{{ asset('assets/logoSponsorship/goodDay.jfif') }}" alt="">
                                     </div>
                                 </div>
                                 <div class="modal-carousel-item justify-content-center w-100">
                                     <div class="ratio ratio-1x1">
-                                        <img class="opacity-100 rounded-3" src="{{ asset('assets/logoSponsorship/goodDay.jfif') }}" alt="">
+                                        <img class="opacity-100 rounded-3" src="{{ asset('assets/logoSponsorship/1.webp') }}" alt="">
                                     </div>
                                 </div>
                                 <div class="modal-carousel-item justify-content-center w-100">
@@ -81,7 +81,9 @@
                 <div class="col-lg-5 col-md-4 align-self-center">
                     <!--maskot-awal-->
                     <div class="d-flex justify-content-center">
-                        <img class="mt-md-5 maskot maskot-awal" src="{{ asset('assets/Maskot-Orang Utan-1.webp') }}" alt="">
+                        <button class="non-decorated" type="button" data-bs-toggle="modal" data-bs-target="#cephabel">
+                            <img class="mt-md-5 maskot maskot-awal" src="{{ asset('assets/Maskot-Orang Utan-1.webp') }}" alt="">
+                        </button>
                     </div>
                     <!--maskot-awal-->
                 </div>
@@ -380,7 +382,9 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <img class="maskot"src="{{ asset('assets/Maskot-Kelinci-1.webp') }}" alt="">
+                    <button class="non-decorated" type="button" data-bs-toggle="modal" data-bs-target="#neyra">
+                        <img class="maskot"src="{{ asset('assets/Maskot-Kelinci-1.webp') }}" alt="">
+                    </button>
 
                 </div>
             </div>
@@ -461,34 +465,80 @@
 @endforeach
 <!-- ./Modal Begalin -->
 
+<!-- modal maskot 1 -->
+    <div class="modal fade" id="cephabel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img src="{{ asset('assets/cephabel.jpg') }}" class="size-img" alt="">
+                <!-- <div class="content-modal text-start m-2">
+                    <p>{{ $begalin->isi }}
+                    </p>
+                </div> -->
+            </div>
+            <div class="modal-footer justify-content-start">
+                <div class="text-start">
+                    <strong >Copyright &copy; 2022 <a href="#" class=" text-decoration-none">IMTEK PPLK-2022</a>.</strong> All rights reserved.
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+<!-- modal maskor 2 -->
+    <div class="modal fade" id="neyra" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img src="{{ asset('assets/neyra.jpg') }}" class="size-img" alt="">
+                <!-- <div class="content-modal text-start m-2">
+                    <p>{{ $begalin->isi }}
+                    </p>
+                </div> -->
+            </div>
+            <div class="modal-footer justify-content-start">
+                <div class="text-start">
+                    <strong >Copyright &copy; 2022 <a href="#" class=" text-decoration-none">IMTEK PPLK-2022</a>.</strong> All rights reserved.
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
 
 
         <!-- Medpart -->
         <div class="container-fluid medpart padding-top-bottom" id="terakhir">
             <div class="wrapper">
                 <div class="carousel owl-carousel">
-                   <div class="medpatr-card">
+                <div class="medpatr-card">
                         <div class="d-flex justify-content-center">
                             <div class="ratio ratio-1x1">
                                 <img src="{{ asset('assets/logoMedpart/acara_mahasiswa.webp') }}" alt="">
                             </div>
                         </div>
-                   </div>
-                   <div class="medpatr-card">
+                </div>
+                <div class="medpatr-card">
                         <div class="d-flex justify-content-center">
                             <div class="ratio ratio-1x1">
                                 <img src="{{ asset('assets/logoMedpart/andalas_fm.webp') }}" alt="">
                             </div>
                         </div>
                     </div>
-                   <div class="medpatr-card">
+                <div class="medpatr-card">
                         <div class="d-flex justify-content-center">
                             <div class="ratio ratio-1x1">
                                 <img src="{{ asset('assets/logoMedpart/arealomba_id.webp') }}" alt="">
                             </div>
                         </div>
-                   </div>
-                   <div class="medpatr-card">
+                </div>
+                <div class="medpatr-card">
                         <div class="d-flex justify-content-center">
                             <div class="ratio ratio-1x1">
                                 <img src="{{ asset('assets/logoMedpart/event_alert.webp') }}" alt="">
@@ -643,7 +693,7 @@
                         </div>
                     </div>
                 </div>
-             </div>
+            </div>
         </div>
     </div>
 
@@ -661,7 +711,7 @@
             margin: 10,
             loop: true,
             autoplay: true,
-            autoplayTimeout: 2000,
+            autoplayTimeout: 3500,
             autoplayHoverPause: true,
             nav: false,
             dots: true,
@@ -722,31 +772,31 @@
                 "<i class='bi bi-caret-right-fill'></i>",
             ],
             dots:0,
-         });
+            });
 
-         $(".carousel").owlCarousel({
-            margin: 20,
-           loop: true,
-           autoplay: true,
-           autoplayTimeout: 2000,
-           autoplayHoverPause: true,
-           dots: 0,
-           responsive: {
-             0:{
-               items:4,
-               nav: false
-             },
-             600:{
-               items:6,
-               nav: false
-             },
-             1000:{
-               items:9,
-               nav: false
-             }
-           }
+            $(".carousel").owlCarousel({
+                margin: 20,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            dots: 0,
+            responsive: {
+                0:{
+                items:4,
+                nav: false
+                },
+                600:{
+                items:6,
+                nav: false
+                },
+                1000:{
+                items:9,
+                nav: false
+                }
+            }
 
-         });
+            });
     </script>
 
 @endsection
