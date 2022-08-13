@@ -166,7 +166,7 @@ class DapmenUserController extends Controller
         $user=User::where('id',$id)->get()->first();
         $dataPresensi=Presensi::where('user_id',$user->id)->where('status','hadir')->get();
         $jumlahHadir=$dataPresensi->count();
-        $status1=Presensi::where('hari','08.12.22')->value('status');
+        $status1=Presensi::where('hari','08.12.22')->where('id',$user->id)->value('status');
         $status2=Presensi::where('hari','08.13.22')->where('id',$user->id)->value('status');
         $status3=Presensi::where('hari','08.15.22')->where('id',$user->id)->value('status');
         $status4=Presensi::where('hari','08.16.22')->where('id',$user->id)->value('status');
