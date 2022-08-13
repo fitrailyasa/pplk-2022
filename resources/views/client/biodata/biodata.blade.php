@@ -23,13 +23,71 @@
                         <img class="ratio ratio-1x1 profile" src="{{ asset('assets/profile') }}/{{ $biodata->fotoProfil }}" alt="fotoprofil">
                         @endif
                     </div>
+                    @if(auth()->user()->roles_id == 1)
                     <div class="edit-profile py-md-4">
-                        <a href="/edit-biodata" class="pt-5">
+                        <a href="/super/edit-biodata" class="pt-5">
                             <label class="btn btn-primary fs-5">
                                 EDIT PROFILE
                             </label>
                         </a>
                     </div>
+                    @elseif(auth()->user()->roles_id == 2)
+                    <div class="edit-profile py-md-4">
+                        <a href="/admin/edit-biodata" class="pt-5">
+                            <label class="btn btn-primary fs-5">
+                                EDIT PROFILE
+                            </label>
+                        </a>
+                    </div>
+                    @elseif(auth()->user()->roles_id == 3)
+                    <div class="edit-profile py-md-4">
+                        <a href="/himpunans/edit-biodata" class="pt-5">
+                            <label class="btn btn-primary fs-5">
+                                EDIT PROFILE
+                            </label>
+                        </a>
+                    </div>
+                    @elseif(auth()->user()->roles_id == 4)
+                    <div class="edit-profile py-md-4">
+                        <a href="/ukms/edit-biodata" class="pt-5">
+                            <label class="btn btn-primary fs-5">
+                                EDIT PROFILE
+                            </label>
+                        </a>
+                    </div>
+                    @elseif(auth()->user()->roles_id == 5)
+                    <div class="edit-profile py-md-4">
+                        <a href="/kedis/edit-biodata" class="pt-5">
+                            <label class="btn btn-primary fs-5">
+                                EDIT PROFILE
+                            </label>
+                        </a>
+                    </div>
+                    @elseif(auth()->user()->roles_id == 6)
+                    <div class="edit-profile py-md-4">
+                        <a href="/dapmen/edit-biodata" class="pt-5">
+                            <label class="btn btn-primary fs-5">
+                                EDIT PROFILE
+                            </label>
+                        </a>
+                    </div>
+                    @elseif(auth()->user()->roles_id == 7)
+                    <div class="edit-profile py-md-4">
+                        <a href="/staff/edit-biodata" class="pt-5">
+                            <label class="btn btn-primary fs-5">
+                                EDIT PROFILE
+                            </label>
+                        </a>
+                    </div>
+                    @elseif(auth()->user()->roles_id == 8)
+                    <div class="edit-profile py-md-4">
+                        <a href="/maba/edit-biodata" class="pt-5">
+                            <label class="btn btn-primary fs-5">
+                                EDIT PROFILE
+                            </label>
+                        </a>
+                    </div>
+                    @endif
 
                     <br><h1 align="center" >QR PRESENSI</h1> <br>
 
