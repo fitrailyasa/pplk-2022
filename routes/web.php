@@ -54,8 +54,8 @@ use App\Http\Controllers\Client\ClientUptController;
 */
 
 // REGISTRASI
-Route::get('/registrasi', [ClientBiodataController::class, 'ViewRegister'])->name('ViewRegister');
-Route::post('/registrasi/{create}', [ClientBiodataController::class, 'store'])->name('regist_staff');
+// Route::get('/registrasi', [ClientBiodataController::class, 'ViewRegister'])->name('ViewRegister');
+// Route::post('/registrasi/{create}', [ClientBiodataController::class, 'store'])->name('regist_staff');
 
 // LOGIN
 Route::get('/', [LoginController::class, 'showLoginForm']);
