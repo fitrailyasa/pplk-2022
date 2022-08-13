@@ -16,7 +16,6 @@
 
             <div class="col-lg-3 col-md-10 col-sm-12 justify-content-center">
                 <div class="center" style="justify-content:center !important;">
-                    @if(auth()->user()->roles_id != 9)
                     <div class="bio-profile mx-auto">
                         @if ($biodata->fotoProfil == null)
                         <img class="ratio ratio-1x1 profile" src="{{ asset('assets/profile') }}/default.webp" alt="fotoprofil">
@@ -24,7 +23,6 @@
                         <img class="ratio ratio-1x1 profile" src="{{ asset('assets/profile') }}/{{ $biodata->fotoProfil }}" alt="fotoprofil">
                         @endif
                     </div>
-                    @endif
                     <div class="edit-profile py-md-4">
                         <a href="/edit-biodata" class="pt-5">
                             <label class="btn btn-primary fs-5">
