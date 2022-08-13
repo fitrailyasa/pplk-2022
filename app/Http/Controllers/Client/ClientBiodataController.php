@@ -138,10 +138,47 @@ class ClientBiodataController extends Controller
         // Upload file
         $file->move($location,$filename);
 
-        return "<script>
-        alert('Daftar update');
-        window.location.href='/edit-biodata'
-         </script>";
+        if (auth()->user()->roles_id == 1) {
+            echo "<script>
+        alert('Data update');
+        window.location.href='/super/edit-biodata'
+        </script>";
+        } elseif (auth()->user()->roles_id == 2) {
+            echo "<script>
+        alert('Data update');
+        window.location.href='/admin/edit-biodata'
+        </script>";
+        } elseif (auth()->user()->roles_id == 3) {
+            echo "<script>
+        alert('Data update');
+        window.location.href='/himpunans/edit-biodata'
+        </script>";
+        } elseif (auth()->user()->roles_id == 4) {
+            echo "<script>
+        alert('Data update');
+        window.location.href='/ukms/edit-biodata'
+        </script>";
+        } elseif (auth()->user()->roles_id == 5) {
+            echo "<script>
+        alert('Data update');
+        window.location.href='/kedis/edit-biodata'
+        </script>";
+        } elseif (auth()->user()->roles_id == 6) {
+            echo "<script>
+        alert('Data update');
+        window.location.href='/dapmen/edit-biodata'
+        </script>";
+        } elseif (auth()->user()->roles_id == 7) {
+            echo "<script>
+        alert('Data update');
+        window.location.href='/staff/edit-biodata'
+        </script>";
+        } elseif (auth()->user()->roles_id == 8) {
+            echo "<script>
+        alert('Data update');
+        window.location.href='/maba/edit-biodata'
+        </script>";
+        }
 
     }
 
@@ -171,10 +208,47 @@ class ClientBiodataController extends Controller
                 // eksekusi proses update
                 $viewbiodata->update();
 
-                echo "<script>
+                if (auth()->user()->roles_id == 1) {
+                    echo "<script>
                 alert('Data update');
-                window.location.href='/edit-biodata'
+                window.location.href='/super/edit-biodata'
                 </script>";
+                } elseif (auth()->user()->roles_id == 2) {
+                    echo "<script>
+                alert('Data update');
+                window.location.href='/admin/edit-biodata'
+                </script>";
+                } elseif (auth()->user()->roles_id == 3) {
+                    echo "<script>
+                alert('Data update');
+                window.location.href='/himpunans/edit-biodata'
+                </script>";
+                } elseif (auth()->user()->roles_id == 4) {
+                    echo "<script>
+                alert('Data update');
+                window.location.href='/ukms/edit-biodata'
+                </script>";
+                } elseif (auth()->user()->roles_id == 5) {
+                    echo "<script>
+                alert('Data update');
+                window.location.href='/kedis/edit-biodata'
+                </script>";
+                } elseif (auth()->user()->roles_id == 6) {
+                    echo "<script>
+                alert('Data update');
+                window.location.href='/dapmen/edit-biodata'
+                </script>";
+                } elseif (auth()->user()->roles_id == 7) {
+                    echo "<script>
+                alert('Data update');
+                window.location.href='/staff/edit-biodata'
+                </script>";
+                } elseif (auth()->user()->roles_id == 8) {
+                    echo "<script>
+                alert('Data update');
+                window.location.href='/maba/edit-biodata'
+                </script>";
+                }
 
 
     }
