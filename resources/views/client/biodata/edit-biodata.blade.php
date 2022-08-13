@@ -22,6 +22,7 @@
                         <img class="ratio ratio-1x1 profile" style="" src="{{ asset('assets/profile') }}/{{ $viewbiodata->fotoProfil }}" alt="fotoprofil">
                         @endif
                     </div><!-- row -->
+                    @if(auth()->user()->roles_id != 9)
                     <div class="center">
                         <form action="{{ url('update-fotoProfil/'.$viewbiodata->id) }}" method="POST" enctype="multipart/form-data">
                             @csrf
@@ -33,6 +34,7 @@
                         @enderror
                         </form>
                     </div><!-- row -->
+                    @endif
                 </div><!-- container -->
 
                 <div class="col-xl-6 col-sm-12">
