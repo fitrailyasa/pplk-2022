@@ -162,14 +162,15 @@ Route::middleware(['auth'])->group(function () {
   // PPLK
   Route::get('/pplk', function () { return view('client.pplk'); });
   Route::get('/div-pplk', function () { return view('client.div-pplk'); });
-
-  // BIODATA
-  Route::get('/biodata', [ClientBiodataController::class, 'index'])->name('biodata');
-  Route::get('/edit-biodata', [ClientBiodataController::class, 'indexEditBio'])->name('edit-biodata');
-  Route::get('edit-fotoProfil/{id}', [ClientBiodataController::class, 'editProfil']);
-  Route::put('update-fotoProfil/{id}', [ClientBiodataController::class, 'updateProfil']);
-  Route::get('edit-profil/{id}', [ClientBiodataController::class, 'editBiodata']);
-  Route::put('update-profil/{id}', [ClientBiodataController::class, 'updateBiodata']);
+  if (auth()->user()->roles_id != 9) {
+    // BIODATA
+    Route::get('/biodata', [ClientBiodataController::class, 'index'])->name('biodata');
+    Route::get('/edit-biodata', [ClientBiodataController::class, 'indexEditBio'])->name('edit-biodata');
+    Route::get('edit-fotoProfil/{id}', [ClientBiodataController::class, 'editProfil']);
+    Route::put('update-fotoProfil/{id}', [ClientBiodataController::class, 'updateProfil']);
+    Route::get('edit-profil/{id}', [ClientBiodataController::class, 'editBiodata']);
+    Route::put('update-profil/{id}', [ClientBiodataController::class, 'updateBiodata']);
+    }
 
   // FORM KELUHAN
   Route::get('/form-keluhan ', [ClientKeluhanController::class, 'index'])->name('indexKeluhan');

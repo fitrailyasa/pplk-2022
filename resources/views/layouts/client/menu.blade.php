@@ -247,7 +247,7 @@
                         Booklet
                     </a>
                 </li>
-
+                @if(auth()->user()->roles_id != 9)
                 <li>
                     <a href="/biodata">
                         <svg width="26" height="24" viewBox="0 0 36 44" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -256,7 +256,7 @@
                         Profile
                     </a>
                 </li>
-
+                @endif
         </ul>
     </div>
 <!--./Mobile Footer Bar-->
