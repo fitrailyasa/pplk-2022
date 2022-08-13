@@ -42,7 +42,7 @@
         <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Gambar</label>
             <div class="col-sm-9">
-            <img class="img-thumbnail" src="{{ asset('assets/buktiKeluhan') }}/{{ $keluhan->bukti }}" alt="" height="300" width="300" style="object-fit: none;">
+            <img class="img-thumbnail ratio ratio-1x1" src="{{ asset('assets/buktiKeluhan') }}/{{ $keluhan->bukti }}" alt="" height="300" width="300" style="object-fit: none;">
             <a class="btn" href="{{URL::to('/assets/buktiKeluhan')}}/{{ $keluhan->bukti }}" download="Gambar Keluhan"><i class="fa fa-download"></i>Download</a>
           </div>
         </div>
