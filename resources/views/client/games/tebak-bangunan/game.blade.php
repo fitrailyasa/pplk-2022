@@ -14,7 +14,9 @@
   <div class="container pt-5">
     <div class="row pt-5" style="height: 150px">
       <div class="col-3 col-md-2 d-flex justify-content-start">
-        <i class="fa-solid navbar-bb fa-angle-left text-white rounded d-flex justify-content-center align-items-center"></i>
+        <a href="/game-home" title="Close">
+          <i class="fa-solid navbar-bb fa-angle-left text-white rounded d-flex justify-content-center align-items-center"></i>
+        </a>
       </div>
       <div class="col-6 col-md-8 d-flex justify-content-center align-items-center">
         <h1 class="text-white mb-5 judul-tb text-center">Tebak Bangunan</h1>
@@ -24,7 +26,7 @@
       <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
         <div class="card-border w-100 rounded-5">
           <div class="card rounded-5 ap-cd w-100">
-            <img src="{{ asset('assets/tebakBangunan/'. $soal->namaBangunan.'.webp') }}" alt="" class="card-img-top bg-secondary rounded-5 ratio ratio-16x9" />
+            <img src="{{ asset('assets/TebakBangunan/'. $soal->namaBangunan.'.webp') }}" alt="" class="card-img-top bg-secondary rounded-5 ratio ratio-16x9" />
             <div class="card-body">
               <h3 class="card-title text-center text-white"> {{ $soal->soal }}</h3>
             </div>
