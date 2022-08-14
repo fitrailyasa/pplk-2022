@@ -65,7 +65,7 @@
                         }
 
                     @endphp
-                    <p>Hello, @elseif(auth()->user()->roles_id != 9)<span class="nama">{{ $result_name }}</span>@endif</p>
+                    <p>Hello, @if(auth()->user()->roles_id != 9)<span class="nama">{{ $result_name }}</span>@endif</p>
                 </div>
                 <div class="text-qoute">
                     <p>Ayo Menjelajah, Sekarang!</p>
