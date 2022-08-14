@@ -138,10 +138,10 @@ class ClientBiodataController extends Controller
         // Upload file
         $file->move($location,$filename);
 
-        return "<script>
-        alert('Daftar update');
+        echo "<script>
+        alert('Data update');
         window.location.href='/edit-biodata'
-         </script>";
+        </script>";
 
     }
 

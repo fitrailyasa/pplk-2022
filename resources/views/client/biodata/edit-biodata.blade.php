@@ -22,6 +22,7 @@
                         <img class="ratio ratio-1x1 profile" style="" src="{{ asset('assets/profile') }}/{{ $viewbiodata->fotoProfil }}" alt="fotoprofil">
                         @endif
                     </div><!-- row -->
+                    @if(auth()->user()->roles_id != 9)
                     <div class="center">
                         <form action="{{ url('update-fotoProfil/'.$viewbiodata->id) }}" method="POST" enctype="multipart/form-data">
                             @csrf
@@ -33,6 +34,7 @@
                         @enderror
                         </form>
                     </div><!-- row -->
+                    @endif
                 </div><!-- container -->
 
                 <div class="col-xl-6 col-sm-12">
@@ -102,10 +104,11 @@
                                 <label class="form-label" for="riwayat">Riwayat Penyakit</label>
                                 <input value="{{ $viewbiodata->riwayatPenyakit }}" name="riwayatPenyakit"  type="text" placeholder="{{ $viewbiodata->riwayatPenyakit }}" @if(auth()->user()->roles_id == 9) disabled @endif>
                             </div>
-
+                            @if(auth()->user()->roles_id != 9)
                             <div class="submit-edit" align="center">
                                 <input type="submit" class="btn btn-primay" value="Unggah" @if(auth()->user()->roles_id == 9) disabled @endif>
                             </div>
+                            @endif
                     </div>
                     </form>
                 </div>

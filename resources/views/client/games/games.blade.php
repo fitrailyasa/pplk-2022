@@ -125,7 +125,7 @@
                         <div class="info-winner">
                             <div class="nama">
                                 <h2>
-                                    {{  $leaderboards[2]->kelompok }} Kelompok
+                                    Kelompok {{  $leaderboards[2]->kelompok }}
                                 </h2>
                             </div>
                             <div class="point">
@@ -149,10 +149,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @for ($n=4 ; $n<=10 ; $n++)
+                        @for ($n=3 ; $n<=9 ; $n++)
                         <tr>
 
-                            <td>{{ $n }}</td>
+                            <td>{{ $n+1 }}</td>
                             <td>Kelompok {{ $leaderboards[$n]->kelompok }}</td>
                             <td>{{ $leaderboards[$n]->score }} Poin</td>
                         </tr>
@@ -162,7 +162,7 @@
             </div>
         </div>
     </div>
-    <div class="box_astronaut" onclick="window.location.href='https://instagram.com/masqomar.21'" style="cursor: pointer;">
+    <div class="box_astronaut" onclick="window.location.href='https://instagram.com/fitrailyasa'" style="cursor: pointer;">
         <img class="object_astronaut" src="{{ asset('assets/astronaut.svg') }}" width="120px">
     </div>
 

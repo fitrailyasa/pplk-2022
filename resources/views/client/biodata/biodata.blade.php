@@ -16,15 +16,16 @@
 
             <div class="col-lg-3 col-md-10 col-sm-12 justify-content-center">
                 <div class="center" style="justify-content:center !important;">
-
                     <div class="bio-profile mx-auto">
                         @if ($biodata->fotoProfil == null)
                         <img class="ratio ratio-1x1 profile" src="{{ asset('assets/profile') }}/default.webp" alt="fotoprofil">
                         @elseif($biodata->fotoProfil != null)
-                        <img class="ratio ratio-1x1 profile" src="{{ asset('assets/profile') }}/{{ $biodata->fotoProfil }}" alt="fotoprofil">
+                        <div class="ratio ratio-1x1">
+                            <img class="profile" src="{{ asset('assets/profile') }}/{{ $biodata->fotoProfil }}" alt="fotoprofil">
+                        </div>
                         @endif
                     </div>
-
+                    @if(auth()->user()->roles_id != 9)
                     <div class="edit-profile py-md-4">
                         <a href="/edit-biodata" class="pt-5">
                             <label class="btn btn-primary fs-5">
@@ -32,6 +33,7 @@
                             </label>
                         </a>
                     </div>
+                    @endif
 
                     <br><h1 align="center" >QR PRESENSI</h1> <br>
 

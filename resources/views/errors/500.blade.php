@@ -52,7 +52,7 @@
                 <img class="object_moon" src="{{ asset('assets/earth.webp') }}" width="40px">
             </div>
             <div class="box_astronaut" onclick="window.location.href='https://instagram.com/fitrailyasa'" style="cursor: pointer;">
-                <img src="{{ asset('assets/Maskot2.webp') }}" class="object_astronaut" width="200px">
+                <img src="{{ asset('assets/astronaut.svg') }}" class="object_astronaut" width="200px">
             </div>
         </div>
         <div class="glowing_stars" onclick="window.location.href='https://instagram.com/fitrailyasa'" style="cursor: pointer;">

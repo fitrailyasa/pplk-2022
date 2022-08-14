@@ -20,12 +20,12 @@
                             <div class="modal-carousel owl-carousel">
                                 <div class="modal-carousel-item justify-content-center w-100">
                                     <div class="ratio ratio-1x1">
-                                        <img class="opacity-100 rounded-3" src="{{ asset('assets/logoSponsorship/1.webp') }}" alt="">
+                                        <img class="opacity-100 rounded-3" src="{{ asset('assets/logoSponsorship/goodDay.jfif') }}" alt="">
                                     </div>
                                 </div>
                                 <div class="modal-carousel-item justify-content-center w-100">
                                     <div class="ratio ratio-1x1">
-                                        <img class="opacity-100 rounded-3" src="{{ asset('assets/logoSponsorship/goodDay.jfif') }}" alt="">
+                                        <img class="opacity-100 rounded-3" src="{{ asset('assets/logoSponsorship/1.webp') }}" alt="">
                                     </div>
                                 </div>
                                 <div class="modal-carousel-item justify-content-center w-100">
@@ -65,7 +65,7 @@
                         }
 
                     @endphp
-                    <p>Hello, <span class="nama">{{ $result_name }}</span></p>
+                    <p>Hello, @if(auth()->user()->roles_id != 9)<span class="nama">{{ $result_name }}</span>@endif</p>
                 </div>
                 <div class="text-qoute">
                     <p>Ayo Menjelajah, Sekarang!</p>
@@ -711,7 +711,7 @@
             margin: 10,
             loop: true,
             autoplay: true,
-            autoplayTimeout: 2000,
+            autoplayTimeout: 3500,
             autoplayHoverPause: true,
             nav: false,
             dots: true,
