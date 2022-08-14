@@ -54,7 +54,6 @@
             </div>
             <div class="row text-center text-white mt-xs-5 mt-md-3" id="container-landing-page-text">
                 <div class="text-nama">
-                    @if(auth()->user()->roles_id != 9)
                     @php
                         $full_name=auth()->user()->nama;
                         $name=explode(' ',$full_name);
@@ -66,7 +65,7 @@
                         }
 
                     @endphp
-                    <p>Hello, <span class="nama">{{ $result_name }}</span>@endif</p>
+                    <p>Hello, @if(auth()->user()->roles_id != 9)<span class="nama">{{ $result_name }}</span>@endif</p>
                 </div>
                 <div class="text-qoute">
                     <p>Ayo Menjelajah, Sekarang!</p>

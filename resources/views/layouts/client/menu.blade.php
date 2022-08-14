@@ -44,7 +44,9 @@
             </ul>
             <div class="d-flex d-inline-flex navbar-brand align-items-center">
                 <div class="fw-bold navbar-nav align-items-center" id="nama-maba-navbar">
+                    @if(auth()->user()->roles_id != 9)
                     <a>{{ auth()->user()->nama }}</a>
+                    @endif
                 </div>
                 <div class="btn-group nav-item">
                     @if (auth()->user()->fotoProfil == Null)
