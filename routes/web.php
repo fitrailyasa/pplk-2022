@@ -165,6 +165,11 @@ Route::middleware(['auth'])->group(function () {
 
   // BIODATA
   Route::get('/biodata', [ClientBiodataController::class, 'index'])->name('biodata');
+  Route::get('/edit-biodata', [ClientBiodataController::class, 'indexEditBio'])->name('edit-biodata');
+  Route::get('edit-fotoProfil/{id}', [ClientBiodataController::class, 'editProfil']);
+  Route::put('update-fotoProfil/{id}', [ClientBiodataController::class, 'updateProfil']);
+  Route::get('edit-profil/{id}', [ClientBiodataController::class, 'editBiodata']);
+  Route::put('update-profil/{id}', [ClientBiodataController::class, 'updateBiodata']);
 
   // FORM KELUHAN
   Route::get('/form-keluhan ', [ClientKeluhanController::class, 'index'])->name('indexKeluhan');
