@@ -20,7 +20,9 @@
                         @if ($biodata->fotoProfil == null)
                         <img class="ratio ratio-1x1 profile" src="{{ asset('assets/profile') }}/default.webp" alt="fotoprofil">
                         @elseif($biodata->fotoProfil != null)
-                        <img class="ratio ratio-1x1 profile" src="{{ asset('assets/profile') }}/{{ $biodata->fotoProfil }}" alt="fotoprofil">
+                        <div class="ratio ratio-1x1">
+                            <img class="profile" src="{{ asset('assets/profile') }}/{{ $biodata->fotoProfil }}" alt="fotoprofil">
+                        </div>
                         @endif
                     </div>
                     @if(auth()->user()->roles_id != 9)
