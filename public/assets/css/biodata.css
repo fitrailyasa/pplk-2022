@@ -90,6 +90,8 @@ body{
 .profile {
     background-color: var(--font-color-primary-2);
     border-radius: 50%;
+    object-fit: cover;
+    object-position: 0 50%;
 }
 
 .col-xl-6{
