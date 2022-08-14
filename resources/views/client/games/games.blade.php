@@ -149,7 +149,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @for ($n=4 ; $n<=10 ; $n++)
+                        @for ($n=3 ; $n<=10 ; $n++)
                         <tr>
 
                             <td>{{ $n }}</td>
