@@ -149,10 +149,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @for ($n=3 ; $n<=10 ; $n++)
+                        @for ($n=3 ; $n<=9 ; $n++)
                         <tr>
 
-                            <td>{{ $n }}</td>
+                            <td>{{ $n+1 }}</td>
                             <td>Kelompok {{ $leaderboards[$n]->kelompok }}</td>
                             <td>{{ $leaderboards[$n]->score }} Poin</td>
                         </tr>
