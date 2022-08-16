@@ -14,8 +14,8 @@
             <div class="card-body p-4">
               <div class="media">
               <div class="media-body text-white text-end">
-                <p class="mb-1">Total Mahasiswa</p>
-                <h3 class="text-white">{{ $totalMaba }}</h3>
+                <p class="mb-1">Total Mahasiswa Baru</p>
+                <h3 class="text-white">4820</h3>
               </div>
             </div>
           </div>
@@ -27,7 +27,7 @@
             <div class="media">
               <div class="media-body text-white text-end">
                 <p class="mb-1">Total Panitia</p>
-                <h3 class="text-white">{{ $totalPanitia }}</h3>
+                <h3 class="text-white">924</h3>
               </div>
             </div>
           </div>
@@ -65,7 +65,7 @@
               <div class="media">
                 <div class="media-body text-white text-end">
                   <p class="mb-1">Total Dapmen</p>
-                  <h3 class="text-white">{{$totalDapmen }}</h3>
+                  <h3 class="text-white">163</h3>
                 </div>
               </div>
             </div>
