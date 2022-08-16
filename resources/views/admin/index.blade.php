@@ -91,7 +91,7 @@
               <div class="media">
                 <div class="media-body text-white text-end">
                   <p class="mb-1">Total Kehadiran Maba</p>
-                  <h3 class="text-white">5423</h3>
+                  <h3 class="text-white">{{ $totalPresensiMaba }}</h3>
                 </div>
               </div>
             </div>
@@ -103,7 +103,7 @@
               <div class="media">
                 <div class="media-body text-white text-end">
                   <p class="mb-1">Total Kehadiran Panitia</p>
-                  <h3 class="text-white">922</h3>
+                  <h3 class="text-white">{{ $totalPresensiPanitia }}</h3>
                 </div>
               </div>
             </div>

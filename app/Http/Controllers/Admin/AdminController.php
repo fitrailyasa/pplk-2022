@@ -35,8 +35,8 @@ class AdminController extends Controller
 
     public function index()
     {
-        
-        
+
+
         $totalSuperAdmin=User::where('roles_id',1)->get()->count();
         $totalAdmin=User::where('roles_id',2)->get()->count();
         $totalHimpunan=User::where('roles_id',3)->get()->count();
@@ -48,10 +48,17 @@ class AdminController extends Controller
         $totalPanitia=$totalSuperAdmin+$totalAdmin+$totalKedis+(2*$totalDapmen)+$totalStaff;
         $akunUser=User::all()->count();
         $totalAkun=$akunUser+$totalDapmen;
-    
-        
-        return view('admin.index',compact('totalMaba','totalPanitia','totalUkm','totalDapmen','totalHimpunan','totalAkun'));
-        
+        $totalPresensi=Presensi::where('hari',date('m.d.y'))->get()->count();
+        $totalPresensiMaba=Presensi::join('users','presensis.user_id','=','users.id')
+                       ->where('hari',date('m.d.y'))
+                       ->where('users.roles_id','8')
+                       ->get()->count();
+        $totalPresensiPanitia=$totalPresensi-$totalPresensiMaba;
+
+
+
+        return view('admin.index',compact('totalMaba','totalPanitia','totalUkm','totalDapmen','totalHimpunan','totalAkun','totalPresensiMaba','totalPresensiPanitia'));
+
     }
 
 
@@ -60,10 +67,7 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
 
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -84,8 +88,8 @@ class AdminController extends Controller
      */
     public function show(AdminController $admin)
     {
-       
-    
+
+
     }
 
     /**
