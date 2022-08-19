@@ -221,7 +221,7 @@ class ClientScannerController extends Controller
         $checkCount2 = $check2->count();
 
         // mengecek apakah user/maba telah discan lebih dari 5 kali
-        if ($checkCount2 <= 4) {
+        if ($checkCount2 < 5) {
             // mengecek apakan token unik || untuk cek apakah user/maba sudah pernah divote oleh ukm yang sama
             if ($checkCount >= 1) {
 
