@@ -257,7 +257,7 @@ class ClientScannerController extends Controller
                 }
             }
         }
-        if ($checkCount2 > 5) {
+        if ($checkCount2 >= 5) {
             echo "<script>
                     alert('Maba sudah melebihi batas scan!');
                     window.location.href='/ukms/polling'
