@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers\Client;
 
 use Illuminate\Http\Request;
@@ -50,52 +51,50 @@ class ClientScannerController extends Controller
 
         // membuat token unik gabungan antara user id dengan hari
         $date = Date("m.d.y");
-        $token = "$users->id"."$date";
+        $token = "$users->id" . "$date";
 
         // mengecek token apakah sudah pernah digunakan
         $check = Presensi::where('token', $token)->get();
         $checkCount = $check->count();
 
-         // membandingkan qrcode yang discan dengan milik user yang ditemukan
-        if  ($users->qrCode == $request->input('nim')){
+        // membandingkan qrcode yang discan dengan milik user yang ditemukan
+        if ($users->qrCode == $request->input('nim')) {
             // mengecek apakah token sudah pernah digunakan
-                if ($checkCount >= 1) {
+            if ($checkCount >= 1) {
 
-                  if (auth()->user()->roles_id == 1) {
-                        echo "<script>
+                if (auth()->user()->roles_id == 1) {
+                    echo "<script>
                         alert('Anda sudah melakukan presensi hari ini!');
                         window.location.href='/super/scanner'
                         </script>";
-                    } elseif (auth()->user()->roles_id == 5) {
-                        echo "<script>
+                } elseif (auth()->user()->roles_id == 5) {
+                    echo "<script>
                         alert('Anda sudah melakukan presensi hari ini!');
                         window.location.href='/kedis/scanner'
                         </script>";
-                    }
-
-                }else {
-                    // melakukan upload data ke table presensi
-                    Presensi::create([
-                        'user_id'=>$users->id,
-                        'status'=>$request->input('status'),
-                        'hari'=>$date,
-                        'token' => $token
-                    ]);
-
-                    if (auth()->user()->roles_id == 1) {
-                        echo "<script>
-                        alert('Presensi Berhasil!');
-                        window.location.href='/super/scanner'
-                        </script>";
-                    } elseif (auth()->user()->roles_id == 5) {
-                        echo "<script>
-                        alert('Presensi Berhasil!');
-                        window.location.href='/kedis/scanner'
-                        </script>";
-                    }
-
                 }
-        }else{
+            } else {
+                // melakukan upload data ke table presensi
+                Presensi::create([
+                    'user_id' => $users->id,
+                    'status' => $request->input('status'),
+                    'hari' => $date,
+                    'token' => $token
+                ]);
+
+                if (auth()->user()->roles_id == 1) {
+                    echo "<script>
+                        alert('Presensi Berhasil!');
+                        window.location.href='/super/scanner'
+                        </script>";
+                } elseif (auth()->user()->roles_id == 5) {
+                    echo "<script>
+                        alert('Presensi Berhasil!');
+                        window.location.href='/kedis/scanner'
+                        </script>";
+                }
+            }
+        } else {
             if (auth()->user()->roles_id == 1) {
                 echo "<script>
                 alert('Qr-Code yang discan tidak cocok!');
@@ -107,117 +106,112 @@ class ClientScannerController extends Controller
                 window.location.href='/kedis/scanner'
                 </script>";
             }
-
-}
-
-}
-
-public function presensiMaba(Request $request,  $id)
-{
-    // menampung data dari scanner
-    $qrCodeScanner = $request->input('nim');
-
-    // mencari user user yang bersangkutan dengan hasil scan
-    $dapmen = User::where('id', $id)->firstOrFail(); // yang melakukan scan
-    $maba = User::where('qrCode', $qrCodeScanner)->firstOrFail(); // User dari QrCode Hasil Scan
-
-    // menghitung data maba
-    $checkMaba = User::where('qrCode', $qrCodeScanner)->get();
-    $countMaba = $checkMaba->count();
-
-    // membuat token unik mengunkan iduser dan hari
-    $date = Date("m.d.y");
-    $token = "$maba->id"."$date";
-
-    // menghingtung jumlah kali token digunakan
-    $checkToken = Presensi::where('token', $token)->get();
-    $countToken = $checkToken->count();
-
-    // mengecek apakah data maba ditemukan atau tidak
-    if ($countMaba >= 1) {
-        // mengcek apakah kelompok 2 pengguna sama
-        if ($dapmen->kelompok == $maba->kelompok){
-            //mengecek apakah token sudah pernah digunakan
-            if ($countToken >= 1) {
-            if (auth()->user()->roles_id == 1) {
-                echo "<script>
-                alert('Anda sudah melakukan presensi hari ini!');
-                window.location.href='/super/presensiMaba'
-                </script>";
-            } elseif (auth()->user()->roles_id == 6) {
-                echo "<script>
-                alert('Anda sudah melakukan presensi hari ini!');
-                window.location.href='/dapmen/presensiMaba'
-                </script>";
-            }
-            }else {
-                // upload data presensi
-                Presensi::create([
-                    'user_id'=>$maba->id,
-                    'status'=>$request->input('status'),
-                    'hari'=>$date,
-                    'token' => $token
-                ]);
-                if (auth()->user()->roles_id == 1) {
-                    echo "<script>
-                    alert('Presensi Berhasil!');
-                    window.location.href='/super/presensiMaba'
-                    </script>";
-                } elseif (auth()->user()->roles_id == 6) {
-                    echo "<script>
-                    alert('Presensi Berhasil!');
-                    window.location.href='/dapmen/presensiMaba'
-                    </script>";
-                }
-            }
-        }else{
-            if (auth()->user()->roles_id == 1) {
-                echo "<script>
-                alert('Bukan Anggota Kelompok Anda!');
-                window.location.href='/super/presensiMaba'
-                </script>";
-            } elseif (auth()->user()->roles_id == 6) {
-                echo "<script>
-                alert('Bukan Anggota Kelompok Anda!');
-                window.location.href='/dapmen/presensiMaba'
-                </script>";
-            }
-        }
-    }else{
-        if (auth()->user()->roles_id == 1) {
-            echo "<script>
-            alert('Qr-Code tidak cocok dengan data manapun!');
-            window.location.href='/super/presensiMaba'
-            </script>";
-        } elseif (auth()->user()->roles_id == 6) {
-            echo "<script>
-            alert('Qr-Code tidak cocok dengan data manapun!');
-            window.location.href='/dapmen/presensiMaba'
-            </script>";
         }
     }
 
+    public function presensiMaba(Request $request,  $id)
+    {
+        // menampung data dari scanner
+        $qrCodeScanner = $request->input('nim');
 
+        // mencari user user yang bersangkutan dengan hasil scan
+        $dapmen = User::where('id', $id)->firstOrFail(); // yang melakukan scan
+        $maba = User::where('qrCode', $qrCodeScanner)->firstOrFail(); // User dari QrCode Hasil Scan
 
-}
+        // menghitung data maba
+        $checkMaba = User::where('qrCode', $qrCodeScanner)->get();
+        $countMaba = $checkMaba->count();
 
-public function polling(Request $request,  $id)
+        // membuat token unik mengunkan iduser dan hari
+        $date = Date("m.d.y");
+        $token = "$maba->id" . "$date";
+
+        // menghingtung jumlah kali token digunakan
+        $checkToken = Presensi::where('token', $token)->get();
+        $countToken = $checkToken->count();
+
+        // mengecek apakah data maba ditemukan atau tidak
+        if ($countMaba >= 1) {
+            // mengcek apakah kelompok 2 pengguna sama
+            if ($dapmen->kelompok == $maba->kelompok) {
+                //mengecek apakah token sudah pernah digunakan
+                if ($countToken >= 1) {
+                    if (auth()->user()->roles_id == 1) {
+                        echo "<script>
+                alert('Anda sudah melakukan presensi hari ini!');
+                window.location.href='/super/presensiMaba'
+                </script>";
+                    } elseif (auth()->user()->roles_id == 6) {
+                        echo "<script>
+                alert('Anda sudah melakukan presensi hari ini!');
+                window.location.href='/dapmen/presensiMaba'
+                </script>";
+                    }
+                } else {
+                    // upload data presensi
+                    Presensi::create([
+                        'user_id' => $maba->id,
+                        'status' => $request->input('status'),
+                        'hari' => $date,
+                        'token' => $token
+                    ]);
+                    if (auth()->user()->roles_id == 1) {
+                        echo "<script>
+                    alert('Presensi Berhasil!');
+                    window.location.href='/super/presensiMaba'
+                    </script>";
+                    } elseif (auth()->user()->roles_id == 6) {
+                        echo "<script>
+                    alert('Presensi Berhasil!');
+                    window.location.href='/dapmen/presensiMaba'
+                    </script>";
+                    }
+                }
+            } else {
+                if (auth()->user()->roles_id == 1) {
+                    echo "<script>
+                alert('Bukan Anggota Kelompok Anda!');
+                window.location.href='/super/presensiMaba'
+                </script>";
+                } elseif (auth()->user()->roles_id == 6) {
+                    echo "<script>
+                alert('Bukan Anggota Kelompok Anda!');
+                window.location.href='/dapmen/presensiMaba'
+                </script>";
+                }
+            }
+        } else {
+            if (auth()->user()->roles_id == 1) {
+                echo "<script>
+            alert('Qr-Code tidak cocok dengan data manapun!');
+            window.location.href='/super/presensiMaba'
+            </script>";
+            } elseif (auth()->user()->roles_id == 6) {
+                echo "<script>
+            alert('Qr-Code tidak cocok dengan data manapun!');
+            window.location.href='/dapmen/presensiMaba'
+            </script>";
+            }
+        }
+    }
+
+    public function polling(Request $request,  $id)
 
     {
         // menampung data dari  hasil scann
-        $qrCode =$request->input('qrCode');
+        $qrCode = $request->input('qrCode');
 
         //mencari data maba yang sesuai dengan hasil scan
         $checkMaba = User::where('qrCode', $qrCode)->firstOrFail();
         // menampung nim maba
-        $nim= $checkMaba->nim;
+        $nim = $checkMaba->nim;
         // menampung id ukm yang melakukan scan
-        $idukm=$id;
+        $idukm = $id;
         // menampung id maba yang discan || sebenernya panitia juga bisa di scan
         $idMaba = $checkMaba->id;
 
         // membuat token unik dengan menggabungkan idukm dan iduser yang discan
-        $token = "$idukm"."$nim";
+        $token = "$idukm" . "$nim";
         // menghitung jumlah token yang ada di tabel polling
         $check = polling::where('token', $token)->get();
         $checkCount = $check->count();
@@ -227,9 +221,9 @@ public function polling(Request $request,  $id)
         $checkCount2 = $check2->count();
 
         // mengecek apakah user/maba telah discan lebih dari 5 kali
-        if ($checkCount2 <= 5) {
+        if ($checkCount2 <= 4) {
             // mengecek apakan token unik || untuk cek apakah user/maba sudah pernah divote oleh ukm yang sama
-            if ($checkCount >= 1){
+            if ($checkCount >= 1) {
 
                 if (auth()->user()->roles_id == 1) {
                     echo "<script>
@@ -242,12 +236,11 @@ public function polling(Request $request,  $id)
                     window.location.href='/ukms/polling'
                     </script>";
                 }
-
-            }else {
+            } else {
                 // upload data polling
                 polling::create([
-                    'ukmsid'=>$idukm,
-                    'usersid'=>$idMaba,
+                    'ukmsid' => $idukm,
+                    'usersid' => $idMaba,
                     'token' => $token
                 ]);
 
@@ -262,10 +255,14 @@ public function polling(Request $request,  $id)
                     window.location.href='/ukms/polling'
                     </script>";
                 }
-
             }
-
-         }
+        }
+        if ($checkCount2 > 5) {
+            echo "<script>
+                    alert('Maba sudah melebihi batas scan!');
+                    window.location.href='/ukms/polling'
+                    </script>";
+        }
     }
 
     public function disiplin(Request $request)
@@ -274,9 +271,9 @@ public function polling(Request $request,  $id)
         $users =  User::where('qrCode', $qrCode)->first();
 
         Disiplin::create([
-            'user_id'=>$users->id,
-            'nim'=>$users->nim,
-            'kelompok'=>$users->kelompok,
+            'user_id' => $users->id,
+            'nim' => $users->nim,
+            'kelompok' => $users->kelompok,
             'status' => 'Bermasalah'
         ]);
 
@@ -284,8 +281,5 @@ public function polling(Request $request,  $id)
         alert('Data Maba Terkirim!');
         window.location.href='/scannerDisiplin'
         </script>";
-
     }
-
 }
-
