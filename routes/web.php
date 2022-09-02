@@ -23,6 +23,7 @@ use App\Http\Controllers\Admin\AdminUkmController;
 use App\Http\Controllers\Admin\AdminUptController;
 use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\Admin\DapmenUserController;
+use App\Http\Controllers\Admin\UserProdiController;
 use App\Http\Controllers\LeaderboardController;
 use App\Http\Controllers\Client\ClientBegalinController;
 use App\Http\Controllers\Client\ClientBiodataController;
@@ -78,6 +79,7 @@ Route::middleware([SuperAdmin::class])->name('super.')->prefix('super')->group(f
   Route::resource('upt', AdminUptController::class);
   Route::resource('keluhan', AdminKeluhanController::class);
   Route::resource('dapmenUser', DapmenUserController::class);
+  Route::resource('userProdi', UserProdiController::class);
   Route::get('/detail-presensi/{id}',[DapmenUserController::class,'detailPresensi'])->name('presensiUser');
   Route::get('/polling-ukm/{id}',[AdminUkmController::class,'lihatPolling'])->name('pollingUkm');
 

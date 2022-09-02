@@ -160,6 +160,12 @@
                     <p>Kelola Data User</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ route('super.userProdi.index') }}" class="nav-link tablinks">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>User by Prodi</p>
+                    </a>
+                </li>
                 </ul>
             </li>
             <!--./User-->
